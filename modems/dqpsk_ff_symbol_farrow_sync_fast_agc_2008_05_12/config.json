@@ -1,0 +1,37 @@
+{
+  "name": "dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12",
+  "family": "psk",
+  "order": 4,
+  "differential": "psk",
+  "sps": 8,
+  "rrc_order": 32,
+  "rolloff": 1.0,
+  "gaussian_bt": 0.3,
+  "constellation": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      6.123233995736766e-17,
+      1.0
+    ],
+    [
+      -1.0,
+      1.2246467991473532e-16
+    ],
+    [
+      -1.8369701987210297e-16,
+      -1.0
+    ]
+  ],
+  "mapping_evidence": "Analytic M-PSK mapping using original M and Ph parameters.",
+  "timing": "feedforward",
+  "carrier": "feedforward",
+  "equalizer": "none",
+  "diversity_branches": 1,
+  "variable_delay": false,
+  "phase_noise": false,
+  "notes": [],
+  "abstraction": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced."
+}

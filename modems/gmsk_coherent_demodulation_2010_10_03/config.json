@@ -1,0 +1,31 @@
+{
+  "name": "gmsk_coherent_demodulation_2010_10_03",
+  "family": "gmsk",
+  "order": 2,
+  "differential": "none",
+  "sps": 8,
+  "rrc_order": 32,
+  "rolloff": 1.0,
+  "gaussian_bt": 0.3,
+  "constellation": [
+    [
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0
+    ]
+  ],
+  "mapping_evidence": "Analytic phase constellation; see source_parameters.json for block evidence.",
+  "timing": "gardner",
+  "carrier": "feedback",
+  "equalizer": "none",
+  "diversity_branches": 1,
+  "variable_delay": false,
+  "phase_noise": false,
+  "notes": [
+    "The original coherent Mengali/Costas receiver is replaced by a Gaussian pulse discriminator receiver in the portable model."
+  ],
+  "abstraction": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced."
+}

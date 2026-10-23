@@ -1,0 +1,31 @@
+{
+  "name": "msk_modulator_2008_06_22",
+  "family": "msk",
+  "order": 2,
+  "differential": "none",
+  "sps": 8,
+  "rrc_order": 32,
+  "rolloff": 1.0,
+  "gaussian_bt": 0.3,
+  "constellation": [
+    [
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0
+    ]
+  ],
+  "mapping_evidence": "Analytic phase constellation; see source_parameters.json for block evidence.",
+  "timing": "gardner",
+  "carrier": "feedback",
+  "equalizer": "none",
+  "diversity_branches": 1,
+  "variable_delay": false,
+  "phase_noise": false,
+  "notes": [
+    "The original is a modulator only; a discriminator receiver is added for loopback verification."
+  ],
+  "abstraction": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced."
+}

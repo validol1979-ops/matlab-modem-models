@@ -1,0 +1,55 @@
+{
+  "name": "dqpsk_19_09_2006",
+  "family": "psk",
+  "order": 8,
+  "differential": "psk",
+  "sps": 8,
+  "rrc_order": 32,
+  "rolloff": 1.0,
+  "gaussian_bt": 0.3,
+  "constellation": [
+    [
+      0.9238795325112867,
+      0.3826834323650898
+    ],
+    [
+      0.38268343236508984,
+      0.9238795325112867
+    ],
+    [
+      -0.3826834323650897,
+      0.9238795325112867
+    ],
+    [
+      -0.9238795325112867,
+      0.3826834323650899
+    ],
+    [
+      -0.9238795325112868,
+      -0.38268343236508967
+    ],
+    [
+      -0.38268343236509034,
+      -0.9238795325112865
+    ],
+    [
+      0.38268343236509,
+      -0.9238795325112866
+    ],
+    [
+      0.9238795325112865,
+      -0.3826834323650904
+    ]
+  ],
+  "mapping_evidence": "Analytic M-PSK mapping using original M and Ph parameters.",
+  "timing": "feedforward",
+  "carrier": "feedback",
+  "equalizer": "none",
+  "diversity_branches": 1,
+  "variable_delay": false,
+  "phase_noise": false,
+  "notes": [
+    "Despite its archive name, the original mapper is 8-PSK with M=8 and Ph=pi/8; this configuration preserves it."
+  ],
+  "abstraction": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "simo_maximal_ratio_combining_2010_08_27",
+  "family": "psk",
+  "order": 4,
+  "differential": "psk",
+  "sps": 8,
+  "rrc_order": 32,
+  "rolloff": 1.0,
+  "gaussian_bt": 0.3,
+  "constellation": [
+    [
+      0.7071067811865476,
+      0.7071067811865475
+    ],
+    [
+      -0.7071067811865475,
+      0.7071067811865476
+    ],
+    [
+      -0.7071067811865477,
+      -0.7071067811865475
+    ],
+    [
+      0.7071067811865474,
+      -0.7071067811865477
+    ]
+  ],
+  "mapping_evidence": "Analytic phase constellation; see source_parameters.json for block evidence.",
+  "timing": "gardner",
+  "carrier": "feedback",
+  "equalizer": "none",
+  "diversity_branches": 2,
+  "variable_delay": false,
+  "phase_noise": false,
+  "notes": [],
+  "abstraction": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced."
+}

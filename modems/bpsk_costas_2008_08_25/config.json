@@ -1,0 +1,29 @@
+{
+  "name": "bpsk_costas_2008_08_25",
+  "family": "psk",
+  "order": 2,
+  "differential": "psk",
+  "sps": 8,
+  "rrc_order": 32,
+  "rolloff": 1.0,
+  "gaussian_bt": 0.3,
+  "constellation": [
+    [
+      0.5,
+      0.5
+    ],
+    [
+      -0.5,
+      -0.5
+    ]
+  ],
+  "mapping_evidence": "Exact data_mapper OutputValues from the original model.",
+  "timing": "gardner",
+  "carrier": "costas",
+  "equalizer": "none",
+  "diversity_branches": 1,
+  "variable_delay": false,
+  "phase_noise": false,
+  "notes": [],
+  "abstraction": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced."
+}

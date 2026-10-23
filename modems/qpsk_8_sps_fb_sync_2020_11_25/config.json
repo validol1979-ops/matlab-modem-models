@@ -1,0 +1,41 @@
+{
+  "name": "qpsk_8_sps_fb_sync_2020_11_25",
+  "family": "psk",
+  "order": 4,
+  "differential": "none",
+  "sps": 8,
+  "rrc_order": 32,
+  "rolloff": 1.0,
+  "gaussian_bt": 0.3,
+  "constellation": [
+    [
+      0.7071067811865476,
+      0.7071067811865475
+    ],
+    [
+      -0.7071067811865475,
+      0.7071067811865476
+    ],
+    [
+      -0.7071067811865477,
+      -0.7071067811865475
+    ],
+    [
+      0.7071067811865474,
+      -0.7071067811865477
+    ]
+  ],
+  "mapping_evidence": "Portable unit-energy QPSK quadrant table; original mapping and scrambling equivalence are not claimed.",
+  "timing": "gardner",
+  "carrier": "costas",
+  "equalizer": "none",
+  "diversity_branches": 1,
+  "variable_delay": false,
+  "phase_noise": false,
+  "notes": [
+    "Eight samples per portable symbol; original multirate scheduling and fixed-point filter arithmetic are not reproduced."
+  ],
+  "abstraction": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced.",
+  "category": "modems",
+  "research_addition": true
+}
