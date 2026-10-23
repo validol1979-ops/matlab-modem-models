@@ -1,0 +1,145 @@
+.MCAD 303010000 1 74 16138 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 1 1 0
+Cg a72.500000,72.625000,277
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 420squ.mcd}{   To compute the
+ average distortion due to uniform quantization
+ of a standard normal random variable. We
+ can, by trial and error, approximate the
+ quantization step size} {\f2 d} that minimizes
+ the average diatortion. The standard normal
+ density function is }
+}
+.EQN 13 16 6 0
+{0:f}NAME({0:y}NAME):({0:exp}NAME((-({0:y}NAME)^(2))/(2)))/(\(2*{0:\p}NAME))
+.TXT 7 -11 2 0
+Cg a50.875000,54.250000,91
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {}{\b 1}{  Set the # of quantization
+ levels, L, and the quantization increment
+ }{\f2 d}{.}}
+}
+.EQN 5 6 3 0
+{0:L}NAME:4
+.EQN 0 11 16138 0
+{0:\d}NAME:0.5
+.EQN 0 14 5 0
+{0:i}NAME:1;(({0:L}NAME)/(2)-1)
+.EQN 0 18 16137 0
+{0:\d}NAME:0.9957
+.TXT 5 -47 16129 0
+Cg a33.250000,66.000000,47
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain Compute the integrals required over
+ the steps.}
+}
+.EQN 7 4 7 0
+({0:Int}NAME)[({0:i}NAME):(({0:i}NAME-1)*{0:\d}NAME&{0:i}NAME*{0:\d}NAME`((({0:i}NAME-0.5)*{0:\d}NAME-{0:y}NAME))^(2)*{0:f}NAME({0:y}NAME)&{0:y}NAME)
+.EQN 0 38 16130 0
+{0:Int}NAME={0}?_n_u_l_l_
+.EQN 10 -38 8 0
+({0:Int}NAME)[(({0:L}NAME)/(2)):((({0:L}NAME)/(2)-1)*{0:\d}NAME&10`((({0:L}NAME-1)*({0:\d}NAME)/(2)-{0:y}NAME))^(2)*{0:f}NAME({0:y}NAME)&{0:y}NAME)
+.EQN 0 38 16131 0
+({0:Int}NAME)[(({0:L}NAME)/(2))={0}?_n_u_l_l_
+.TXT 12 -40 16132 0
+Cg a18.875000,64.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain Now sum up the integrals.}
+}
+.EQN 6 2 11 0
+{0:ix}NAME:1;({0:L}NAME)/(2)
+.EQN 0 16 12 0
+{0:D}NAME:2*{0:ix}NAME$({0:Int}NAME)[({0:ix}NAME)
+.EQN 0 17 13 0
+{0:D}NAME={19001}?_n_u_l_l_
+.EQN 7 -17 16133 0
+{0:SQNR}NAME:({0:D}NAME)^(-1)
+.EQN 0 17 16134 0
+{0:SQNR}NAME={0}?_n_u_l_l_
+.EQN 6 -17 16135 0
+{0:SQNRdb}NAME:10*{0:log}NAME({0:SQNR}NAME)
+.EQN 0 22 16136 0
+{0:SQNRdb}NAME={0}?_n_u_l_l_
+.TXT 7 -40 15 0
+Cg a53.000000,54.875000,89
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain ({Note: a change of the fourth digit
+ of }{\f2 d}{ changes the 8th & 9th digits
+ of D !!})}
+}

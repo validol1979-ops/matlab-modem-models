@@ -1,0 +1,733 @@
+.MCAD 303010000 1 74 16243 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 19 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg b73.000000,73.000000,83
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b DSBTC_AM}{\b .MCD}{  to illustrate
+ conventional AM modulation & demodulation.}}
+}
+.TXT 5 0 16129 0
+Cg a10.625000,73.000000,22
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b \fs24 Modulation}}
+}
+.TXT 4 6 16130 0
+Cg a44.250000,67.000000,71
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {}{\b 1}{  Define a modulating signal,
+ a carrier and the AM waveform.}}
+}
+.EQN 4 4 3 0
+{0:N}NAME:256
+.EQN 0 12 4 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 6 -12 16131 0
+{0:\wm.1}NAME:(2*{0:\p}NAME)/({0:N}NAME)*2
+.EQN 0 13 16142 0
+{0:\wm.2}NAME:(2*{0:\p}NAME)/({0:N}NAME)*4
+.EQN 0 16 16143 0
+{0:\wm.3}NAME:(2*{0:\p}NAME)/({0:N}NAME)*6
+.EQN 7 -29 7 0
+({0:m}NAME)[({0:n}NAME):{0:cos}NAME({0:\wm.1}NAME*{0:n}NAME)+2*{0:cos}NAME({0:\wm.2}NAME*{0:n}NAME)+3*{0:cos}NAME({0:\wm.3}NAME*{0:n}NAME)
+.EQN 6 4 10 0
+&&(-1&1)&({0:m}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 1 0 0 2 0 1 
+0 1 0 5 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 49 18 0 3 Modulation
+.EQN 32 -1 8 0
+{0:\wc}NAME:(2*{0:\p}NAME)/({0:N}NAME)*32
+.EQN 0 15 5 0
+{0:\a}NAME:(0.5)/({0:max}NAME({0:m}NAME))
+.EQN 0 12 16147 0
+{0:\a}NAME={0}?_n_u_l_l_
+.EQN 0 12 9 0
+({0:sc}NAME)[({0:n}NAME):(1+{0:\a}NAME*({0:m}NAME)[({0:n}NAME))*{0:cos}NAME({0:\wc}NAME*{0:n}NAME)
+.EQN 5 -41 11 0
+&&(-1.5&1.5)&({0:sc}NAME)[({0:n}NAME),|(1+{0:\a}NAME*({0:m}NAME)[({0:n}NAME)),-|(1+{0:\a}NAME*({0:m}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 1 0 0 2 0 1 
+0 0 0 5 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 49 19 0 3 DSBTC_AM Wavefrom & Envelopes
+.TXT 30 -2 16140 0
+Cg a59.250000,64.000000,158
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b 2}{  We examine the spectra 
+of these waveforms. We use the FFT fast 
+algorithm to compute the DFT approximating
+ the FT, correcting MathCAD's definition.}}
+}
+.EQN 7 5 14 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 24 13 0
+{0:idft}NAME({0:v}NAME):\((1)/({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 5 -24 15 0
+{0:mft}NAME:{0:dft}NAME({0:m}NAME)
+.EQN 0 13 16 0
+{0:scft}NAME:{0:dft}NAME({0:sc}NAME)
+.EQN 0 16 16141 0
+({0:\w}NAME)[({0:n}NAME):{0:n}NAME*((2*{0:\p}NAME)/({0:N}NAME))
+.EQN 8 -29 17 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:mft}NAME)[({0:n}NAME))@&0&(0&{0:N}NAME)&({0:\w}NAME)[({0:n}NAME)
+0 1 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 5 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 17 0 3 Modulation Spectrum
+.EQN 27 -3 18 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:scft}NAME)[({0:n}NAME))@&0&(0&{0:N}NAME)&({0:\w}NAME)[({0:n}NAME)
+0 1 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 5 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 17 0 3 DSBTC_AM Spectrum
+.TXT 29 -3 16148 0
+Cg a61.250000,65.000000,91
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {The replication of the modulation's
+ spectra (FT) about the carrier frequency
+ is evident.}}
+}
+.TXT 7 -8 16169 0
+Cg a40.500000,73.000000,49
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\fs24 \b Transmission Through the
+ AWGN Channel}}
+}
+.TXT 4 8 16185 0
+Cg a20.375000,65.000000,29
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain The average signal power is }
+}
+.EQN 5 4 16186 0
+{0:PS.ave}NAME:(1)/({0:N}NAME)*{0:n}NAME$((({0:sc}NAME)[({0:n}NAME)))^(2)
+.EQN 0 23 16187 0
+{0:PS.ave}NAME={0}?_n_u_l_l_
+.TXT 6 -27 16170 0
+Cg a50.375000,65.000000,65
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain We now add a sample sequence of 
+thermal noise to the AM waveform}
+}
+.EQN 5 4 16171 0
+{0:var}NAME:0.05243
+.EQN 0 18 16174 0
+({0:sc}NAME)[({0:n}NAME):({0:sc}NAME)[({0:n}NAME)+\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))
+.TXT 5 -22 16188 0
+Cg a48.250000,65.000000,95
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain We can define an {\b average signal-to-noise
+ ratio}{\b0 ,}{\b  SNR}{\b \fs16 \dn6 } 
+as follows.}
+}
+.EQN 5 5 16189 0
+{0:SNR}NAME:({0:PS.ave}NAME)/({0:var}NAME)
+.EQN 0 22 16190 0
+{0:SNR}NAME={0}?_n_u_l_l_
+.EQN 3 -25 16205 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:sc}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 52 15 0 3 Nosiy AM Waveform
+.TXT 25 -10 16149 0
+Cg a27.750000,73.000000,49
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b \fs24 Reception and} {\b \fs24 
+Demodulation}}
+}
+.TXT 5 8 16198 0
+Cg a64.875000,65.000000,186
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain Upon reception, the first stage 
+is typically an RF filter that eliminates
+ the noise outside the signal band. We shall,
+ in effect, assume the RF filter is tuned
+ to the AM signal's band.}
+}
+.EQN 7 3 16201 0
+({0:H.RF}NAME)[({0:n}NAME):0
+.EQN 0 13 16200 0
+({0:H.RF}NAME)[({0:n}NAME):{0:if}NAME(({0:n}NAMEò26)*({0:n}NAMEó38),1,({0:H.RF}NAME)[({0:N}NAME-{0:n}NAME-1))
+.EQN 4 -12 16202 0
+&&(_n_u_l_l_&_n_u_l_l_)&10*({0:H.RF}NAME)[({0:n}NAME),(({0:scft}NAME)[({0:n}NAME))/(10)@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:n}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 50 15 0 3 RF Filter & AM Spectra
+.EQN 25 -2 16199 0
+{0:scft}NAME:{0:dft}NAME({0:sc}NAME)
+.EQN 0 18 16203 0
+({0:scft}NAME)[({0:n}NAME):({0:H.RF}NAME)[({0:n}NAME)*({0:scft}NAME)[({0:n}NAME)
+.EQN 0 22 16204 0
+{0:sc}NAME:{0:idft}NAME({0:scft}NAME)
+.EQN 4 -35 16206 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:sc}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 50 15 0 3 Filtered AM Waveform
+.TXT 25 -7 16150 0
+Cg a62.875000,65.000000,152
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {We demonstrate envelope detection
+ which consists of  (1) squaring, (2) filtering
+ out the "second harmonic", (3) square root
+ and (4) removal of 'DC':}}
+}
+.TXT 8 -7 24 0
+Cg a7.250000,9.250000,19
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b S}{\b quaring}}
+}
+.EQN 0 16 25 0
+({0:e}NAME)[({0:n}NAME):((({0:sc}NAME)[({0:n}NAME)))^(2)
+.TXT 6 -16 27 0
+Cg a8.875000,19.250000,30
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b R}{\b emove\par  Harmonics}{}
+}
+}
+.EQN 1 16 26 0
+{0:eft}NAME:{0:dft}NAME({0:e}NAME)
+.EQN 0 12 28 0
+({0:mcapft}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó12,({0:eft}NAME)[({0:n}NAME),{0:if}NAME({0:n}NAMEò{0:N}NAME-12,({0:eft}NAME)[({0:n}NAME),0))
+.TXT 7 -20 16153 0
+Cg a45.125000,64.000000,88
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b0 }{\b0 Note}{ that [1+}{\f0 
+a}{m(t)]^2 has a bandwidth twice that of
+ m(t) itself. }}
+}
+.TXT 7 -8 30 0
+Cg a9.875000,14.250000,22
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b S}{\b quare Root}}
+}
+.EQN 0 17 31 0
+{0:mcap}NAME:{0:idft}NAME({0:mcapft}NAME)
+.EQN 0 21 32 0
+({0:mcap}NAME)[({0:n}NAME):\(|(({0:mcap}NAME)[({0:n}NAME)))
+.TXT 7 -38 33 0
+Cg a9.250000,12.250000,20
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\b R}{\b emove DC}}
+}
+.EQN 0 17 34 0
+{0:mcapft}NAME:{0:dft}NAME({0:mcap}NAME)
+.EQN 0 21 35 0
+({0:mcapft}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷0,0,({0:mcapft}NAME)[({0:n}NAME))
+.EQN 6 -21 36 0
+{0:mcap}NAME:{0:idft}NAME({0:mcapft}NAME)
+.TXT 7 -18 16192 0
+Cg a12.250000,73.000000,23
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {\fs24 \b Performance}}
+}
+.TXT 5 11 16166 0
+Cg a61.625000,62.000000,328
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain It is convenient to measure the 
+performance of this communication scheme
+ by the criterion of mean-square error, 
+MSE, of the estimate. It can be difficult
+ to define a signal-to-noise ratio at the
+ system output because, if the input signal-to-noise
+ ratio is small, there is no component of
+ the output identifiable as "signal"!}
+}
+.TXT 11 0 16193 0
+Cg a58.125000,62.000000,88
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {We allow a gain constant- "volume
+ control knob"!- to be chosen to minimize
+ this MSE.}}
+}
+.EQN 9 6 16165 0
+{0:MSE}NAME:(1)/({0:N}NAME)*{0:n}NAME$((({0:m}NAME)[({0:n}NAME)-{0:c}NAME*({0:mcap}NAME)[({0:n}NAME)))^(2)
+.TXT 8 -6 16163 0
+Cg a61.500000,62.000000,136
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain We make a best gain adjustment to
+ minimize the mean-square error of our estimate.
+ It is easy to show that the best gain adjustment
+ is }
+}
+.EQN 11 6 16156 0
+{0:c.opt}NAME:({0:n}NAME$({0:m}NAME)[({0:n}NAME)*({0:mcap}NAME)[({0:n}NAME))/({0:n}NAME$((({0:mcap}NAME)[({0:n}NAME)))^(2))
+.EQN 0 21 16157 0
+{0:c.opt}NAME={0}?_n_u_l_l_
+.TXT 8 -28 16167 0
+Cg a41.625000,63.000000,57
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain The MSE, minimized by the best choice
+ of "volume" c, is }
+}
+.EQN 5 7 16164 0
+{0:MMSE}NAME:(1)/({0:N}NAME)*{0:n}NAME$((({0:m}NAME)[({0:n}NAME)-{0:c.opt}NAME*({0:mcap}NAME)[({0:n}NAME)))^(2)
+.EQN 0 33 16162 0
+{0:MMSE}NAME={0}?_n_u_l_l_
+.TXT 6 -40 16178 0
+Cg a59.375000,62.000000,97
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain {Note that we can always take the
+ zero sequence as our estimate, with a resulting
+ MSE which is}}
+}
+.EQN 7 6 16179 0
+{0:MSE.REF}NAME:(1)/({0:N}NAME)*{0:n}NAME$((({0:m}NAME)[({0:n}NAME)))^(2)
+.EQN 0 26 16180 0
+{0:MSE.REF}NAME={0}?_n_u_l_l_
+.TXT 6 -32 16181 0
+Cg a60.500000,63.000000,115
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain So it is reasonable to normalize
+ the MMSE error by this number- it is a 
+more easily understood "figure of merit".}
+}
+.EQN 7 6 16182 0
+{0:FM}NAME:({0:MMSE}NAME)/({0:MSE.REF}NAME)
+.EQN 0 16 16183 0
+{0:FM}NAME={18998}?_n_u_l_l_
+.EQN 0 15 16184 0
+{0:SNR}NAME={0}?_n_u_l_l_
+.EQN 5 -38 37 0
+&&(-1.1&1.1)&{0:c.opt}NAME*({0:mcap}NAME)[({0:n}NAME),({0:m}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 0 0 5 NO-TRACE-STRING
+0 3 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 22 0 3 Modulation & its Estimate
+.EQN 31 -1 16241 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:mcapft}NAME)[({0:n}NAME))@({0:N}NAME)/(4)&&(({0:N}NAME)/(4)&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 23 19 0 3 Modulation Spectrum
+.EQN 0 33 16243 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:mft}NAME)[({0:n}NAME))@({0:N}NAME)/(4)&&(({0:N}NAME)/(4)&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 19 0 3 Estimate Spectrum
+.TXT 30 -33 16168 0
+Cg a62.750000,64.000000,162
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain We do see, that in the absence of
+ noise, the modulation is communicated perfectly
+ by this DSBTC_AM system. Thus, all error
+ is attributable to the thermal noise.}
+}
+.TXT 7 0 16194 0
+Cg a64.625000,65.000000,195
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain It is of interest to increase the
+ thermal noise variance gradually and note
+ the corresponding normalized MMSE, FM. 
+By simply repeatedly running the program
+ we can get the following tabulation.}
+}
+.EQN 10 2 16217 0
+{0:j}NAME:0;6
+.EQN 0 9 16218 0
+({0:snr}NAME)[({0:j}NAME):(10)^({0:j}NAME-1)
+.EQN 0 14 16219 0
+({0:fm}NAME)[(0):0.82
+.EQN 0 11 16220 0
+({0:fm}NAME)[(1):0.7
+.EQN 0 11 16221 0
+({0:fm}NAME)[(2):0.165
+.EQN 5 -35 16222 0
+({0:fm}NAME)[(3):2*(10)^(-2)
+.EQN 0 13 16223 0
+({0:fm}NAME)[(4):2.2*(10)^(-3)
+.EQN 0 12 16224 0
+({0:fm}NAME)[(5):2.1*(10)^(-4)
+.EQN 0 13 16225 0
+({0:fm}NAME)[(6):2.1*(10)^(-5)
+.EQN 5 -49 16226 0
+1&-6&(_n_u_l_l_&0)&{0:log}NAME(({0:fm}NAME)[({0:j}NAME))@&&(0&1)&{0:log}NAME(({0:snr}NAME)[({0:j}NAME))
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 30 0 3 MSE vs SNR
+.TXT 17 -4 16240 0
+Cg a2.750000,68.000000,5
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain (db)}
+}
+.TXT 21 35 16239 0
+Cg a2.750000,33.000000,5
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain (db)}
+}
+.TXT 8 -31 16231 0
+Cg a64.250000,64.000000,370
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Symbol;}
+{\f1\fnil Arial;}
+{\f2\fnil Courier;}
+}
+{\plain Recall that log(FM)=0 (FM=1) is 
+attained by merely always taking the zero
+ sequence as the estimate! Note that, as
+ the SNR decreases from high values, there
+ is a fairly linear decrease in performance
+ until the SNR is about 10 db. Then, in 
+the range 10 db to 0 db,  the performance
+ degenerates to hardly better than guessing
+ zero- that is, shutting off the receiver!!}
+}

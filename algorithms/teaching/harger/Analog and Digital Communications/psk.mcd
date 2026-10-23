@@ -1,0 +1,783 @@
+.MCAD 303010000 1 74 262 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.216667 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Tms^Rmn points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg a65.600000,67.700000,78
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs24 \b Stephanie Slaughter,  
+Padma Nibhanupudy,   Dan Ho,   Bhavesh Patel}}
+}
+.TXT 3 0 2 0
+Cg a6.700000,73.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 3}{\b \fs24 /14/96}}
+}
+.TXT 2 0 3 0
+Cg a19.300000,73.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 ENEE 420 Project #3}}
+}
+.TXT 2 0 4 0
+Cg a60.500000,73.000000,73
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 PHASE AND FREQUENCY MODULATION}{\b 
+\fs24 - PHASE SHIFT KEYING}}
+}
+.TXT 2 0 5 0
+Cg a72.000000,73.000000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs24 \b ============================================================}}
+}
+.TXT 3 0 85 0
+Cg a40.200000,73.000000,56
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs24 \ul \b Phase Shift Keying/Phase
+ Reversal Keying}}
+}
+.TXT 3 0 120 0
+Cg a71.300000,73.000000,361
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Digital information can be transmitted
+ using }{a phase modulation method called
+ }{phase shift keying,  This invloves mapping
+ digital symbols into phase angles.  We 
+are specifically considering phase reversal
+ keying in which a binary sequence is evaluated
+ one bit at a time and each bit is mapped
+ onto phase angles that switch between 0
+ and 180 degrees.   }}
+}
+.TXT 10 0 82 0
+Cg a38.700000,73.000000,56
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs24 \ul \b Define Signal Transmission
+ / Modulation }}
+}
+.TXT 3 0 121 0
+Cg a72.300000,72.000000,424
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The input signal }{\b Seq}{ represents
+ our binary sequence, a pattern of alternating
+ logic 1's and 0's.  This sequence is obtained
+ by randomly picking numbers in the interval
+ (0..X), where X is any number, and testing
+ whether the choosen number is above  X/2
+ or below X/2.  If the choosen }{number}{
+ is below X/2 then we assign this value 
+to be a logic 1 otherwise, it is assigned
+ a logic 0.  Here we choose X to be 5.}}
+}
+.TXT 9 1 193 0
+Cg a36.800000,72.000000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul Digital Sequence and its time
+ domain representation.}}
+}
+.EQN 4 6 8 0
+{0:N}NAME:10
+.EQN 0 8 10 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 3 -8 166 0
+({0:Num}NAME)[({0:n}NAME):{0:rnd}NAME(5)
+.EQN 4 0 168 0
+({0:Seq}NAME)[({0:n}NAME):{0:if}NAME(({0:Num}NAME)[({0:n}NAME)<2.5,1,0)
+.EQN 4 0 180 0
+{0:w}NAME:2
+.EQN 0 12 181 0
+{0:I}NAME({0:t}NAME):{0:\F}NAME({0:t}NAME)-{0:\F}NAME({0:t}NAME-{0:w}NAME)
+.EQN 3 -12 183 0
+{0:p}NAME:2
+.EQN 6 0 187 0
+{0:pulse}NAME({0:t}NAME):((0,{0:N}NAME-1,{0:n}NAME,(({0:Seq}NAME)[({0:n}NAME))*{0:I}NAME({0:t}NAME-{0:n}NAME*{0:p}NAME)){64})
+.EQN 0 27 188 0
+{0:t}NAME:0,(1)/(16);{0:N}NAME*{0:p}NAME
+.EQN 6 -32 190 0
+1.5&-.2&(_n_u_l_l_&_n_u_l_l_)&{0:pulse}NAME({0:t}NAME)@&&((1)/(2)*{0:p}NAME&(3)/(2)*{0:p}NAME)&{0:t}NAME
+0 0 1 1 0 1 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 Digital Sequence Pulse
+.EQN 16 51 191 0
+{0:Seq}NAME={0 0 0 1 10 42 42}?_n_u_l_l_
+.TXT 19 -53 123 0
+Cg a72.700000,73.000000,420
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The carrier signal used to transmit
+ each binary number is shifted in phase 
+depending on whether a logic 1 or 0 is being
+ sent.\par \par                         
+           s(t) =  Ac*cos(}{\f1 w}{c*t) 
+         for logic 1\par                
+                    }{s(t) = -Ac*cos(}{\f1 
+w}{c*t)          for logic 0}{  \par \par 
+Here, we set Ac=1 and determine the coefficient,
+ either +1 or -1, for the carrier signal
+ cos(}{\f1 w}{c*t).}}
+}
+.EQN 16 16 35 0
+({0:coeff}NAME)[({0:n}NAME):{0:if}NAME(({0:Seq}NAME)[({0:n}NAME),1,-1)
+.EQN 6 1 65 0
+({0:coeff}NAME)[({0:n}NAME)=
+.TXT 33 -17 129 0
+Cg a70.300000,73.000000,176
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The N transmitted signals s(t),
+ are sinusiodal with coefficients +1 and
+ -1 for logic 1 and 0 respectively.  Examples
+ of signals for a logic 1 and 0 transmission
+ are shown. }}
+}
+.EQN 9 13 79 0
+{0:K}NAME:101
+.EQN 0 11 34 0
+{0:\wc}NAME:(2*{0:\p}NAME)/(100)
+.EQN 0 10 60 0
+{0:k}NAME:0;{0:K}NAME-1
+.EQN 5 -15 45 0
+({0:s}NAME)[({0:n}NAME,{0:k}NAME):(({0:coeff}NAME)[({0:n}NAME))*{0:cos}NAME({0:\wc}NAME*{0:k}NAME)
+.EQN 8 -17 53 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME({0:\wc}NAME*{0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 LOGIC 1
+.EQN 0 35 67 0
+&&(_n_u_l_l_&_n_u_l_l_)&-{0:cos}NAME({0:\wc}NAME*{0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 LOGIC 0
+.TXT 34 -37 130 0
+Cg a37.400000,73.000000,55
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs24 \ul \b Define Signal Detection
+ / Demodulation }}
+}
+.TXT 4 0 131 0
+Cg a70.500000,73.000000,395
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {To demodulate the signals we use
+ a coherent receiver since the instantaneous
+ frequencies of the two carrier signals 
+are the same, meaning that their envelopes
+ are the same.  Coherent demodulation\par 
+requires that we multiply (or mix) the transmitted
+ signal by cos(}{\f1 w}{c*t) and Low Pass
+ Filter the resulting \par signal.  Examples
+ of the mixed signals r(t) for logic 1 and
+ 0  are shown below.}}
+}
+.EQN 10 24 68 0
+({0:r}NAME)[({0:n}NAME,{0:k}NAME):({0:s}NAME)[({0:n}NAME,{0:k}NAME)*2*{0:cos}NAME({0:\wc}NAME*{0:k}NAME)
+.EQN 3 -18 81 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME({0:\wc}NAME*{0:k}NAME)*2*{0:cos}NAME({0:\wc}NAME*{0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 LOGIC 1
+.EQN 24 0 103 0
+&&(_n_u_l_l_&_n_u_l_l_)&-{0:cos}NAME({0:\wc}NAME*{0:k}NAME)*2*{0:cos}NAME({0:\wc}NAME*{0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 LOGIC 0
+.TXT 28 -6 132 0
+Cg a66.800000,73.000000,119
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Notice that for logic 1, the values
+ of the mixed signal are all positive.  
+And, those for logic 0 are all negative.}}
+}
+.TXT 8 0 133 0
+Cg a73.100000,73.000000,382
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Next, we low pass filter the mixed
+ signal to obtain an estimate of the carrier
+ signal coefficient.  We then run the coefficients
+ through a comparitor.  }{The result is 
+that if our estimated value is positive 
+then we recieved a logic 1 signal.  If it
+ is negative we have recieved a logic 0.
+  By filtering all the demodulated signals
+ we can obtain our original digital sequence.}}
+}
+.EQN 14 17 78 0
+({0:\w}NAME)[({0:k}NAME):{0:k}NAME*({0:\p}NAME)/(101)*2
+.EQN 0 18 69 0
+{0:\wmx}NAME:({0:\p}NAME)/(100)
+.EQN 9 -18 77 0
+{0:dft}NAME({0:v}NAME):\({0:K}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 19 73 0
+{0:R}NAME:{0:dft}NAME({0:r}NAME)
+.EQN 7 -19 74 0
+({0:R}NAME)[({0:n}NAME,{0:k}NAME):((({0:\w}NAME)[({0:k}NAME)ó{0:\wmx}NAME)+(({0:\w}NAME)[({0:k}NAME)ò2*{0:\p}NAME-{0:\wmx}NAME))*({0:R}NAME)[({0:n}NAME,{0:k}NAME)
+.EQN 8 0 75 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:K}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 20 76 0
+{0:x}NAME:{0:idft}NAME({0:R}NAME)
+.TXT 8 -37 258 0
+Cg a69.700000,71.000000,574
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Here is an example of what the 
+estimate for the coefficient looks like.
+  We had to define a new temp demodulation
+ using the absolute value of s}{\fs16 \dn6 
+n,k}{\fs16  }{\fs20 because Mathcad picks
+ a new digital sequence every}{\fs16 \dn6 
+ \par }{\fs20 time you open this file. By
+ doing this, we have altered the amplitude
+ of the estimated coefficient.  The correct
+ amplitude should be near +1 and -1 for 
+logics 1 and 0 respectively.  However, the
+ graphs still illustrate that the estimate
+ coeffecient for logic 1 should be positive
+ and that for logic 0 should be negative.}}
+}
+.TXT 14 0 246 0
+Cg a8.400000,69.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {For Logic 1:}}
+}
+.TXT 0 40 251 0
+Cg a8.400000,69.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {For Logic 0:}}
+}
+.EQN 3 -40 247 0
+({0:temp1}NAME)[({0:n}NAME,{0:k}NAME):|(({0:s}NAME)[({0:n}NAME,{0:k}NAME))*2*{0:cos}NAME({0:\wc}NAME*{0:k}NAME)
+.EQN 0 40 252 0
+({0:temp0}NAME)[({0:n}NAME,{0:k}NAME):-|(({0:s}NAME)[({0:n}NAME,{0:k}NAME))*2*{0:cos}NAME({0:\wc}NAME*{0:k}NAME)
+.EQN 3 -40 248 0
+{0:R1}NAME:{0:dft}NAME({0:temp1}NAME)
+.EQN 0 40 253 0
+{0:R0}NAME:{0:dft}NAME({0:temp0}NAME)
+.EQN 3 -40 249 0
+({0:R1}NAME)[({0:n}NAME,{0:k}NAME):((({0:\w}NAME)[({0:k}NAME)ó{0:\wmx}NAME)+(({0:\w}NAME)[({0:k}NAME)ò2*{0:\p}NAME-{0:\wmx}NAME))*({0:R1}NAME)[({0:n}NAME,{0:k}NAME)
+.EQN 0 40 254 0
+({0:R0}NAME)[({0:n}NAME,{0:k}NAME):((({0:\w}NAME)[({0:k}NAME)ó{0:\wmx}NAME)+(({0:\w}NAME)[({0:k}NAME)ò2*{0:\p}NAME-{0:\wmx}NAME))*({0:R0}NAME)[({0:n}NAME,{0:k}NAME)
+.EQN 4 -40 250 0
+{0:xtemp1}NAME:{0:idft}NAME({0:R1}NAME)
+.EQN 0 40 255 0
+{0:xtemp0}NAME:{0:idft}NAME({0:R0}NAME)
+.EQN 5 -40 109 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:xtemp1}NAME)[(1,{0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 Estimate Coeff. for Logic 1
+.EQN 0 38 224 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:xtemp0}NAME)[(0,{0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 Estimate Coeff. for Logic 0
+.TXT 32 -36 156 0
+Cg a8.600000,71.000000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul \b Comparitor}}
+}
+.TXT 3 0 137 0
+Cg a70.700000,71.000000,113
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Here, we obtain our original signal
+ by comparing each value of the coherently
+ demodulated transmitted\par signal.}}
+}
+.EQN 4 9 118 0
+({0:y}NAME)[({0:n}NAME):{0:if}NAME(({0:r}NAME)[({0:n}NAME,0)>0,1,0)
+.TXT 1 21 196 0
+Cg a10.900000,67.000000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {output squence:}}
+}
+.TXT 0 18 197 0
+Cg a10.000000,37.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {input squence:}}
+}
+.EQN 2 -14 119 0
+({0:y}NAME)[({0:n}NAME)=
+.EQN 16 13 198 0
+{0:Seq}NAME={0 0 0 1 10 42 42}?_n_u_l_l_
+.TXT 14 -47 138 0
+Cg a69.500000,71.000000,122
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {As you can see this is the same
+ as our original digital signal, we have
+ transmitted the digital squence with no
+ error.}}
+}
+.TXT 10 -2 139 0
+Cg a39.900000,65.000000,60
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul \fs24 Consideration of Errors
+ in the Local Oscillator}}
+}
+.TXT 3 2 140 0
+Cg a24.800000,55.000000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul  Errors in the Phase and Frequency:}}
+}
+.EQN 7 5 141 0
+{0:\w\e}NAME:(2*{0:\p}NAME)/({0:N}NAME)*0.40
+.EQN 0 16 142 0
+{0:\wLO}NAME:{0:\wc}NAME+{0:\w\e}NAME
+.EQN 0 17 143 0
+({0:\w\e}NAME)/({0:\wc}NAME)={0}?_n_u_l_l_
+.EQN 0 16 144 0
+{0:\qLO}NAME:({0:\p}NAME)/(100)
+.TXT 8 -54 145 0
+Cg a8.400000,52.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul For Logic 1:}}
+}
+.EQN 4 6 146 0
+({0:xerr}NAME)[({0:n}NAME,{0:k}NAME):|(({0:s}NAME)[({0:n}NAME,{0:k}NAME))*2*{0:cos}NAME({0:\wLO}NAME*{0:n}NAME+{0:\qLO}NAME)
+.EQN 4 0 147 0
+{0:XERR}NAME:{0:dft}NAME({0:xerr}NAME)
+.EQN 4 0 148 0
+({0:XERR}NAME)[({0:n}NAME,{0:k}NAME):((({0:\w}NAME)[({0:n}NAME)ó{0:\wmx}NAME)+(({0:\w}NAME)[({0:n}NAME)ò2*{0:\p}NAME-{0:\wmx}NAME))*({0:XERR}NAME)[({0:n}NAME,{0:k}NAME)
+.EQN 4 22 149 0
+{0:merr}NAME:{0:idft}NAME({0:XERR}NAME)
+.EQN 1 -22 150 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 5 -1 152 0
+.1&-.1&(_n_u_l_l_&_n_u_l_l_)&({0:XERR}NAME)[(1,{0:k}NAME),({0:xtemp1}NAME)[(1,{0:k}NAME)@80&15&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 33 17 0 3 Estimate and Errored Est. for logic 1
+.TXT 36 -7 154 0
+Cg a71.300000,71.000000,571
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {By testing different values for
+ }{\f1 w}{\f1 e}{ and }{\f1 q}{LO we found
+ that:\par \par 1)  For a small and large
+ }{\f1 w}{\f1 e,}{ }{the estimate for the
+ coeffecient is clo}{se to 0 when it should
+ be distinctly            close to 1.  This
+ could cause an error in the estimate for
+ the transmitted digital bit.\par 2)  For
+ small and large phase shift error }{\f1 
+q}{LO, the }{estimate for the coeffecient
+ is clo}{se to 0 when it                
+ should be distinctly close to  1.  }{This
+ could also cause an error in the estimate
+ for the transmitted              digital
+ bit}}
+}
+.TXT 15 1 157 0
+Cg a8.400000,52.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul For Logic 0:}}
+}
+.EQN 4 6 158 0
+({0:xerr0}NAME)[({0:n}NAME,{0:k}NAME):-|(({0:s}NAME)[({0:n}NAME,{0:k}NAME))*2*{0:cos}NAME({0:\wLO}NAME*{0:n}NAME+{0:\qLO}NAME)
+.EQN 4 0 159 0
+{0:XERR0}NAME:{0:dft}NAME({0:xerr0}NAME)
+.EQN 4 0 160 0
+({0:XERR0}NAME)[({0:n}NAME,{0:k}NAME):((({0:\w}NAME)[({0:n}NAME)ó{0:\wmx}NAME)+(({0:\w}NAME)[({0:n}NAME)ò2*{0:\p}NAME-{0:\wmx}NAME))*({0:XERR0}NAME)[({0:n}NAME,{0:k}NAME)
+.EQN 4 22 161 0
+{0:merr}NAME:{0:idft}NAME({0:XERR0}NAME)
+.EQN 1 -22 162 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 5 -1 163 0
+.1&-.1&(_n_u_l_l_&_n_u_l_l_)&({0:XERR0}NAME)[(0,{0:k}NAME),({0:xtemp0}NAME)[(0,{0:k}NAME)@55&45&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 33 17 0 3 Estimate and Errored Est. for logic 0
+.TXT 28 -6 164 0
+Cg a71.200000,71.000000,579
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {By testing different values for
+ }{\f1 w}{\f1 e}{ and }{\f1 q}{LO we found
+ that:\par \par 1)  For a small and large
+ }{\f1 w}{\f1 e,}{ }{the estimate for the
+ coeffecient is clo}{se to 0 when it should
+ be distinctly            close to -1.  
+}{This could cause an error in the estimate
+ for the transmitted digital bit.}{\par 
+2)  For small and large phase shift error
+ }{\f1 q}{LO, the }{estimate for the coeffecient
+ is clo}{se to 0 when it                
+ should be distinctly close to  -1.  }{This
+ could also cause an error in the estimate
+ for the transmitted            digital 
+bit}{  }}
+}
+.TXT 20 2 262 0
+Cg a66.900000,67.000000,682
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs16 Again, in the above analysis
+ we had to use the temp demodulation defined
+ in the }{\b \ul \fs16 Detection/Demodulation}{\b 
+\fs16  section }{\b \fs16 because Mathcad
+ picks a new sequence everytime you open
+ the file. As a result, the y-axis scale
+ of the above graphs is wrong but, the graphs
+ still show that a local oscillator error
+ will cause an error in the estimate for
+ the coefficient. Specificly, the magnitude
+ of the coeffecient is less than it should
+ be in the above graphs.  The correct values
+ for the real estimate will be close to 
+-1 for logic 0 and close to 1 for logic 
+1.  And, the errored estimates will be very
+ close to zero as is shown on the graphs
+ above.}}
+}
+.TXT 14 -1 245 0
+Cg a31.900000,72.000000,53
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul Comparison of errored signal
+ and input signal.}}
+}
+.EQN 4 3 238 0
+({0:serr}NAME)[({0:n}NAME):{0:if}NAME(({0:xerr}NAME)[({0:n}NAME,0)>0,1,0)
+.TXT 6 -2 241 0
+Cg a17.100000,66.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Errored output sequence}}
+}
+.TXT 0 21 242 0
+Cg a10.400000,34.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Input sequence}}
+}
+.EQN 2 -15 239 0
+({0:serr}NAME)[({0:n}NAME)=
+.EQN 0 18 240 0
+({0:Seq}NAME)[({0:n}NAME)=
+.TXT 27 -25 243 0
+Cg a57.100000,70.000000,152
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {As you can see with a Local Oscillator
+ error, the output sequence does not match
+ \par the input sequence resulting in an
+ improperly trasmitted signal.  }}
+}

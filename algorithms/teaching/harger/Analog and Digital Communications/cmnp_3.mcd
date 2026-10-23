@@ -1,0 +1,630 @@
+.MCAD 303010000 1 74 335 0
+.CMD PLOTFORMAT
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.216667 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 1 1 0
+Cg a52.400000,73.000000,206
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs28 Angela Cheung            
+    cheungas@wam.umd.edu\par Hayden Metz
+                    henley@wam.umd.edu\par 
+Joanna Nickerson           queen@wam.umd.edu\par 
+Steve Payne                    spayne@wam.umd.edu}}
+}
+.TXT 13 0 2 0
+Cg a66.000000,73.000000,113
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs24 ENEE 425     Project 3\par 
+Frequency Modulation (FM) with Phase-Locked
+ Loop (PLL) Demodulation\par Due 3/14/96}}
+}
+.TXT 10 0 175 0
+Cg a71.100000,73.000000,310
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {An alternative to modulating a 
+signal by varying the amplitude of the carrier,
+ amplitude modulation, is varying the frequency
+ of the carrier, frequency modulation.  
+One popular method of demodulating an FM
+ signal is the phase-locked loop.  Such 
+a modulation-demodulation scheme is what
+ we will study here.}}
+}
+.TXT 11 0 143 0
+Cg a42.700000,69.000000,69
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {First we d}{efine the signal in
+ time and its frequency modulation.}}
+}
+.EQN 6 10 144 0
+{0:N}NAME:128
+.EQN 0 12 145 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 6 -12 146 0
+{0:\wm1}NAME:(2*{0:\p}NAME)/({0:N}NAME)*2
+.EQN 0 17 147 0
+{0:\wm2}NAME:(2*{0:\p}NAME)/({0:N}NAME)*5
+.EQN 5 -17 178 0
+{0:m}NAME({0:t}NAME):{0:sin}NAME({0:\wm1}NAME*{0:t}NAME)+1*{0:cos}NAME({0:\wm2}NAME*{0:t}NAME)
+.EQN 0 31 180 0
+({0:ms}NAME)[({0:n}NAME):{0:m}NAME({0:n}NAME)
+.EQN 5 -31 181 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 message m(t) sampled
+.EQN 26 0 183 0
+{0:Ac}NAME:1
+.EQN 0 15 184 0
+{0:\wc}NAME:(2*{0:\p}NAME)/({0:N}NAME)*128
+.EQN 0 20 185 0
+{0:cf}NAME:1
+.EQN 6 -35 188 0
+{0:intm}NAME({0:t}NAME):(-{0:cos}NAME({0:\wm1}NAME*{0:t}NAME))/({0:\wm1}NAME)+1*({0:sin}NAME({0:\wm2}NAME*{0:t}NAME))/({0:\wm2}NAME)
+.TXT 0 35 193 0
+Cg a15.800000,28.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Integral of m(t) w.r.t. t}}
+}
+.EQN 7 -35 194 0
+{0:sfm}NAME({0:t}NAME):{0:Ac}NAME*{0:cos}NAME({0:\wc}NAME*{0:t}NAME+{0:cf}NAME*{0:intm}NAME({0:t}NAME))
+.EQN 0 35 198 0
+({0:sfms}NAME)[({0:n}NAME):{0:sfm}NAME({0:n}NAME)
+.TXT 6 -45 231 0
+Cg a71.100000,73.000000,369
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain sfm(t) is the ideal FM modulated
+ signal that would be transmitted.  We now
+ add noise to the phase to simulate channel
+ irregularities.  Note that there is a factor
+ of G in our additive noise.  We did this
+ to simulate the fact that the bandwidth
+ of the PLL changes in proportion to a change
+ in G.  Therefore, as G increases the bandwidth
+ increases, thus adding noise.}
+}
+.EQN 10 10 218 0
+{0:Af}NAME:1
+.EQN 0 12 241 0
+{0:G}NAME:-2
+.EQN 0 12 242 0
+{0:a}NAME:((1-{0:G}NAME))^(-1)
+.EQN 0 18 243 0
+{0:b}NAME:{0:G}NAME*{0:a}NAME
+.EQN 5 -42 229 0
+{0:var}NAME:0.001
+.EQN 0 14 244 0
+({0:no}NAME)[({0:n}NAME):\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))*({0:G}NAME)/(10)
+.EQN 5 -14 245 0
+({0:fms}NAME)[({0:n}NAME):({0:sfms}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.EQN 5 0 246 0
+{0:\f}NAME({0:t}NAME):{0:cf}NAME*{0:intm}NAME({0:t}NAME)
+.EQN 0 21 247 0
+({0:\fm}NAME)[({0:n}NAME):{0:\f}NAME({0:n}NAME)
+.EQN 0 16 248 0
+({0:\fmn}NAME)[({0:n}NAME):({0:\fm}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.TXT 5 -47 249 0
+Cg a71.000000,73.000000,157
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Now that we have our modulated 
+signal s(t) plus noise, we use the phase-locked
+ loop to demodulate it.  We use a linearized
+ equation to define }{\f1 f}{f.}}
+}
+.EQN 7 10 313 0
+({0:\ff}NAME)[(0):0
+.EQN 0 12 250 0
+{0:m}NAME:1;{0:N}NAME-1
+.EQN 0 18 251 0
+({0:\ff}NAME)[({0:m}NAME):{0:a}NAME*({0:\ff}NAME)[({0:m}NAME-1)-{0:b}NAME*({0:\fmn}NAME)[({0:m}NAME)
+.EQN 5 -30 285 0
+({0:y}NAME)[({0:n}NAME):({0:G}NAME*{0:Ac}NAME*{0:Af}NAME)/(2)*{0:sin}NAME(({0:\fmn}NAME)[({0:n}NAME)-({0:\ff}NAME)[({0:n}NAME))
+.EQN 0 26 286 0
+{0:Gf}NAME:-2
+.EQN 5 -26 287 0
+({0:mest}NAME)[({0:n}NAME):({0:y}NAME)[({0:n}NAME)*{0:Gf}NAME
+.EQN 2 0 288 0
+3&-3&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME),({0:mest}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 Estimated m(t) and original m(t)
+.EQN 24 -4 289 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME)-({0:mest}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 15 0 3 Difference between estimate and message
+.EQN 24 1 257 0
+1.3&-1.3&(_n_u_l_l_&_n_u_l_l_)&({0:\ff}NAME)[({0:n}NAME)-({0:\fm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 1 0 2 1 1 
+0 0 0 5 NO-TRACE-STRING
+0 0 1 5 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 21 0 3 Discriminator Error with backward diff.
+.TXT 31 -7 258 0
+Cg a50.100000,73.000000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {As can be seen above, the PLL performs
+ very well as a FM demodulator.}}
+}
+.TXT 5 0 297 0
+Cg a67.800000,73.000000,155
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The forward difference can also
+ be used to digitize the differential equation.
+  However, this creates problems with stability
+ as well as greater error.}}
+}
+.EQN 7 10 298 0
+({0:\fff}NAME)[(0):0
+.EQN 0 14 299 0
+({0:\fff}NAME)[({0:m}NAME):0
+.EQN 0 19 300 0
+({0:\fff}NAME)[({0:m}NAME-1):{0:a}NAME*({0:\fff}NAME)[({0:m}NAME)-{0:b}NAME*({0:\fmn}NAME)[({0:m}NAME-1)
+.EQN 4 -34 261 0
+5&-5&(1&4.3)&({0:\ff}NAME)[({0:n}NAME)-({0:\fm}NAME)[({0:n}NAME),({0:\fff}NAME)[({0:n}NAME)-({0:\fm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+0 0 0 5 NO-TRACE-STRING
+0 0 1 5 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 21 0 3 Discrim. Error with for. and back diff.
+.TXT 28 8 240 0
+Cg a37.900000,56.000000,76
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs16 Note: blue is the forward
+ difference, red is the backward difference}}
+}
+.TXT 6 -17 295 0
+Cg a69.300000,73.000000,107
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We will also will look at how the
+ actual signal estimate is affected by the
+ use of the forward difference.}
+}
+.EQN 6 9 304 0
+({0:yf}NAME)[({0:n}NAME):({0:G}NAME*{0:Ac}NAME*{0:Af}NAME)/(2)*{0:sin}NAME(({0:\fmn}NAME)[({0:n}NAME)-({0:\fff}NAME)[({0:n}NAME))
+.EQN 0 26 291 0
+{0:Gf}NAME:-2
+.EQN 5 -26 305 0
+({0:mestf}NAME)[({0:n}NAME):({0:yf}NAME)[({0:n}NAME)*{0:Gf}NAME
+.EQN 2 0 293 0
+3&-3&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME),({0:mestf}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 Estimated m(t) and original m(t)
+.EQN 24 -4 294 0
+5&-5&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME)-({0:mestf}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 15 0 3 Difference between estimate and message
+.TXT 24 -5 296 0
+Cg a58.700000,73.000000,90
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain It is quite evident that the forward
+ difference makes the signal estimate quite
+ unstable.}
+}
+.TXT 6 0 239 0
+Cg a50.500000,73.000000,73
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We will now examine the performance
+ of the PLL with varying values of G.}
+}
+.EQN 5 10 262 0
+{0:G}NAME:-10
+.EQN 0 12 263 0
+{0:a}NAME:((1-{0:G}NAME))^(-1)
+.EQN 0 18 264 0
+{0:b}NAME:{0:G}NAME*{0:a}NAME
+.EQN 5 -30 265 0
+({0:no}NAME)[({0:n}NAME):\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))*({0:G}NAME)/(10)
+.EQN 5 0 266 0
+({0:fms}NAME)[({0:n}NAME):({0:sfms}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.EQN 0 22 269 0
+({0:\fmn}NAME)[({0:n}NAME):({0:\fm}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.EQN 7 -22 314 0
+({0:\ff}NAME)[(0):0
+.EQN 0 24 312 0
+({0:\fff}NAME)[({0:m}NAME):0
+.EQN 0 19 271 0
+{0:m}NAME:1;{0:N}NAME-1
+.EQN 5 -43 272 0
+({0:\ff}NAME)[({0:m}NAME):{0:a}NAME*({0:\ff}NAME)[({0:m}NAME-1)-{0:b}NAME*({0:\fmn}NAME)[({0:m}NAME)
+.EQN 0 24 303 0
+({0:\fff}NAME)[({0:m}NAME-1):{0:a}NAME*({0:\fff}NAME)[({0:m}NAME)-{0:b}NAME*({0:\fmn}NAME)[({0:m}NAME-1)
+.EQN 5 -24 274 0
+{0:Gf}NAME:-2
+.EQN 6 0 273 0
+({0:y}NAME)[({0:n}NAME):({0:G}NAME*{0:Ac}NAME*{0:Af}NAME)/(2)*{0:sin}NAME(({0:\fmn}NAME)[({0:n}NAME)-({0:\ff}NAME)[({0:n}NAME))
+.EQN 0 28 306 0
+({0:yf}NAME)[({0:n}NAME):({0:G}NAME*{0:Ac}NAME*{0:Af}NAME)/(2)*{0:sin}NAME(({0:\fmn}NAME)[({0:n}NAME)-({0:\fff}NAME)[({0:n}NAME))
+.EQN 5 -28 275 0
+({0:mest}NAME)[({0:n}NAME):({0:y}NAME)[({0:n}NAME)*{0:Gf}NAME
+.EQN 0 28 307 0
+({0:mestf}NAME)[({0:n}NAME):({0:yf}NAME)[({0:n}NAME)*{0:Gf}NAME
+.EQN 4 -28 276 0
+3&-3&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME),({0:mest}NAME)[({0:n}NAME),({0:mestf}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 17 0 3 Estimated m(t) and original m(t)
+.EQN 24 -4 277 0
+3&-3&(_n_u_l_l_&.25)&({0:ms}NAME)[({0:n}NAME)-({0:mest}NAME)[({0:n}NAME),({0:ms}NAME)[({0:n}NAME)-({0:mestf}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 15 0 3 Difference between estimate and message
+.EQN 24 1 282 0
+3&-3&(_n_u_l_l_&_n_u_l_l_)&({0:\ff}NAME)[({0:n}NAME)-({0:\fm}NAME)[({0:n}NAME),({0:\fff}NAME)[({0:n}NAME)-({0:\fm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 1 0 2 1 1 
+0 0 0 5 NO-TRACE-STRING
+0 0 1 5 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 19 0 3 Discrim. Error with for. and back diff.
+.EQN 35 3 315 0
+{0:G}NAME:-30
+.EQN 0 12 316 0
+{0:a}NAME:((1-{0:G}NAME))^(-1)
+.EQN 0 18 317 0
+{0:b}NAME:{0:G}NAME*{0:a}NAME
+.EQN 5 -30 318 0
+({0:no}NAME)[({0:n}NAME):\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))*({0:G}NAME)/(10)
+.EQN 5 0 319 0
+({0:fms}NAME)[({0:n}NAME):({0:sfms}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.EQN 0 22 320 0
+({0:\fmn}NAME)[({0:n}NAME):({0:\fm}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.EQN 7 -22 322 0
+({0:\ff}NAME)[(0):0
+.EQN 0 24 323 0
+({0:\fff}NAME)[({0:m}NAME):0
+.EQN 0 19 324 0
+{0:m}NAME:1;{0:N}NAME-1
+.EQN 5 -43 325 0
+({0:\ff}NAME)[({0:m}NAME):{0:a}NAME*({0:\ff}NAME)[({0:m}NAME-1)-{0:b}NAME*({0:\fmn}NAME)[({0:m}NAME)
+.EQN 0 24 326 0
+({0:\fff}NAME)[({0:m}NAME-1):{0:a}NAME*({0:\fff}NAME)[({0:m}NAME)-{0:b}NAME*({0:\fmn}NAME)[({0:m}NAME-1)
+.EQN 5 -24 327 0
+{0:Gf}NAME:-2
+.EQN 6 0 328 0
+({0:y}NAME)[({0:n}NAME):({0:G}NAME*{0:Ac}NAME*{0:Af}NAME)/(2)*{0:sin}NAME(({0:\fmn}NAME)[({0:n}NAME)-({0:\ff}NAME)[({0:n}NAME))
+.EQN 0 28 329 0
+({0:yf}NAME)[({0:n}NAME):({0:G}NAME*{0:Ac}NAME*{0:Af}NAME)/(2)*{0:sin}NAME(({0:\fmn}NAME)[({0:n}NAME)-({0:\fff}NAME)[({0:n}NAME))
+.EQN 5 -28 330 0
+({0:mest}NAME)[({0:n}NAME):({0:y}NAME)[({0:n}NAME)*{0:Gf}NAME
+.EQN 0 28 331 0
+({0:mestf}NAME)[({0:n}NAME):({0:yf}NAME)[({0:n}NAME)*{0:Gf}NAME
+.EQN 4 -28 332 0
+3&-3&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME),({0:mest}NAME)[({0:n}NAME),({0:mestf}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 17 0 3 Estimated m(t) and original m(t)
+.EQN 24 -4 333 0
+3&-3&(_n_u_l_l_&.25)&({0:ms}NAME)[({0:n}NAME)-({0:mest}NAME)[({0:n}NAME),({0:ms}NAME)[({0:n}NAME)-({0:mestf}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 15 0 3 Difference between estimate and message
+.EQN 24 1 334 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&({0:\ff}NAME)[({0:n}NAME)-({0:\fm}NAME)[({0:n}NAME),({0:\fff}NAME)[({0:n}NAME)-({0:\fm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 1 0 2 1 1 
+0 0 0 5 NO-TRACE-STRING
+0 0 1 5 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 19 0 3 Discrim. Error with for. and back diff.
+.TXT 31 -7 335 0
+Cg a73.300000,73.000000,528
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain Evidently, as G increases, the magnitude
+ of the error between the estimated and 
+original signal decreases while the noise,
+ which can be seen as the "unsmoothness"
+ of the curves, increases.  Conversely, 
+when G is small, the error is large but 
+the signal noise is small, which can be 
+seen by the smoothness of the graph.  Also,
+ the unstablizing effect of the forward 
+difference is very easy to see, as the signal
+ estimate using the forward difference contains
+ gross error in comparison with the backwards
+ difference estimate.}
+}

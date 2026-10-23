@@ -1,0 +1,2467 @@
+.MCAD 303020000 1 62 369 369
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 38 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-2139098532
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.750000 1.656250 1.250000 1.300000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* |P *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 345 0
+Cg a59.750000,61.125000,148
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \fs28 \f1 ____________________________________________________}{\b 
+\par }{\b \fs24 \f1 __________________________________________________________}}
+}
+.TXT 8 0 143 0
+Cg a28.875000,67.375000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs48 \f1 \ulnone \i0 \b 1  Digital
+ Signals}}
+}
+.TXT 3 0 344 0
+Cg a58.500000,61.125000,92
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs28 \f1 ______________________________________}{\b 
+\f1 \fs28 _______}{\f1 \fs28 _______}}
+}
+.TXT 4 11 238 0
+Cg a49.750000,50.000000,365
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {We begin our study of DSP systems
+ with a discussion of models for their signals.
+ A signal will be defined as a sequence 
+whose index corresponds to a time instant.
+ }{\i0 \b0 \ulnone A sequence is represented
+ in }{a computer by an indexed array using
+ a programming language. We show how this
+ is done in Mathcad and go on to implement
+ basic operations on signals.}}
+}
+.TXT 15 0 239 0
+Cg a50.375000,50.000000,648
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs20 \b0 \i0 \i0 \b0 A }{\fs20 
+\b0 \i0 \b \i0 digital signal}{\fs20 \b0 
+\i0 \i0 \b0  is a real or complex valued
+ function of an integer variable n, in other
+ words, a }{\b \fs20 \i0 \i0 sequence}{\fs20 
+\b0 \i0 .}{\fs20 \b0 \i0 \i0 \b0  The index
+ n will be usually interpreted as }{\fs20 
+\b0 \i0 \b \i0 discrete time}{\fs20 \b0 
+\i0 \b0 \i0 . A digital signal is denoted
+ \{s}{\fs16 \dn6 \b0 \i0 n}{\fs20 \b0 \i0 
+\} or, more casually, by s}{\fs16 \dn6 \b0 
+\i0 n}{\fs20 \b0 \i0 . For digital signals
+ of length N, the index n conventionally
+ }{takes on the values \{0,1,..., N-1\}.
+ We shall be occupied with signals of finite
+ length for some time. }}
+}
+.TXT 16 0 1 0
+Cg a46.875000,50.250000,321
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\ulnone \b \i \i0 \b0 \b0 We define
+ a }{\b \i0 \ulnone length}{\ulnone \b \i 
+\b0 \i0 , }{\ulnone \b \i \i0 \b0 \b0 N}{\ulnone 
+\b \i \i0 \b0 \b0 , }{\ulnone \b \i \i0 
+\b0 \b0 and }{\b \i0 \ulnone discrete time
+ index}{\ulnone \b \i \b0 \i0 , }{\ulnone 
+\b \i \i0 \b0 \b0 n}{\ulnone \b \i \i0 \b0 
+\b0 , }{\ulnone \b \i \i0 \b0 \b0 for a 
+signal sequence. }}
+}
+.EQN 6 0 2 0
+{0:N}NAME:64
+.EQN 0 12 3 0
+{0:n}NAME:0;{0:N}NAME-1
+.TXT 4 -12 5 0
+Cg a48.625000,50.000000,321
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs20 \i0 In Mathcad n is termed
+ a }{\b \i0 \fs20 range variable}{\b0 \fs20 
+\i0 . We fit N to the problem and the computer.
+ We define an }{\b \fs20 \i0 array}{\fs20 
+\b0 \i0  that represents the digital signal.
+ E.g., an }{\b \fs20 \i0 exponential }{\b 
+\fs20 \i0 sequence}{\fs20 \b0 \i0  could
+ be entered this way.}}
+}
+.EQN 8 0 240 0
+{0:a}NAME:0.1
+.EQN 0 12 241 0
+({0:s}NAME)[({0:n}NAME):({0:e}NAME)^(-{0:a}NAME*{0:n}NAME)
+.TXT 4 -12 242 0
+Cg a49.750000,50.000000,165
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {Note such declarations are computed
+ for every n. }{A sequence's}{\b  plot}{
+ is very helpful in understanding the sequence
+ and any processing operations upon it.}}
+}
+.EQN 6 -5 243 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:s}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 17 0 3 Exponential Sequence
+.TXT 28 5 244 0
+Cg a49.250000,50.250000,302
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs24 \i0 \fs20 In Mathcad 
+there are various }{\i0 \b \fs20 formatting}{\b0 
+\fs20 \i0  and other options available for
+ plotting. For sequences we may or may not
+ wish to use the default straight line interpolation
+ of the values. This is a matter to be decided
+ in each instance}{\fs20 \b0 \i0 .}}
+}
+.EQN 9 -6 346 0
+{   31    31 0 0}{61}
+19778 2072 0 0 1068
+40 31 31 1 8 0 992 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!0#/=9"C!!!!6k"C!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"C6k!!!!"C!!"C!!!!6s!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!*!(9XLGAa#4Ir!!DG5Y6j!1!+LG#e#4Ir!"#e5Y6j!1!"LG6k!@Ir
+!!DF!1!2!(9XLG#e!@Iy!!&J!1!-LG#e#u"<"BIr!!&J"C!"LG#e#4Ir!"#e5Y6j!1!"LG6k!@Ir!!DF!1!2!(9XLG#e!@Iy!!&J!1!-LG#e#u"<"BIr!!&J"C!"LG#e#4Ir!"#e5Y6j!1!"LG6k!@Ir!!DF!1!2!(9XLG#e!@Iy!!&J!1!-LG#e#5"<"BIr!!>z!1!-LG#e"S"<"BI}!!DF!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!&!(9p
+LG#e!q"<&JIr!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!Q
+
+.TXT 3 6 245 0
+Cg a47.750000,50.250000,161
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b EXERCISE 1.1}{  Choose other
+ definitions for \{s}{\fs16 \dn6 n}{\} and
+ observe their plots. Explore the plotting
+ options in Mathcad.}{\b  }{\b \f0  ¤}{\b 
+ }}
+}
+.TXT 7 0 6 0
+Cg a50.500000,50.250000,287
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\i0 \b0 An important means of generating
+ a signal sequence for digital signal processing
+ is by }{\b \i0 sampling}{\b \i  }{\b0 \i0 
+an analog signal to obtain a digital signal.
+ This operation is called }{\b \i0 analog
+ to digital conversion}{\b \i0  (}{\b \i0 
+ADC)}{\b \i .}{\b0 \i0  }}
+}
+.EQN 7 -6 140 0
+{Microsoft_Windows 0 36960}
+{60}
+*6)d)s!A&M!A&K#j!!!#!!!!#u!!!&*;1X"(5?$y282,/1:B)T!!!!!!!!!!!!!!8/!!DSJ$G7%Z%W#e!!!!!!!!!!!!!!!!!!!!+%!$!0Ip"S!'!!!!!!!!!!!!!!!"!!!!!1!!!!!!!!!!#e!!!A!!!!#e!!#cLVLV!!!!!!!!!!#dLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLTLVLV
+LFLVLVIpLVLULVLV!q!!!!1A!!!(!!!!"C!!!!9Q!!!+!!!!"s!!!!Aa!!!.!!!!#E!!!!Iq!!!1!!!!#u!!!"&K!!!4!!!!$G!!!".[!!!7!!!!$w!!!"6k!!!:!!!!%I!!!">{!!!=!!!!%y!!!"G-!!!@!!!!&K!!!##e!!!C!!!!&{!!!#+u!!!F!!!!'M!!!#4'!!!I!!!!'}!!!#<7!!!L!!!!(O!!!#DG!!!O!!!!)!!!!$!!!!!R
+!!!!)Q!!!$)1!!!U!!!!*#!!!$1A!!!X!!!!*S!!!$9Q!!![!!!!+%!!!$Aa!!!^!!!!+U!!!$Iq!!!a!!!!,'!!!%&K!!#cLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLL&K3u"2!(+u&K!f!'G-4g"5!(9Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!7!!.[LVLVLVLVLVIr!!!!!"<9!!!!!!#%!!!!!!!!,w!!!!!!!!!!!!!!!)3J5_,A"n9R!Q!!!)!!!!!!!!!!!1!d!'Iq3U"3!%Iq1a"-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"&K!A&JLVLV!A!!!0LVLVIq!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+0o!!!!!!!!!w!'9Q4W",!'Iq,W"2!')14w"0!'.[3e"7!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%i!#!0LVLVLVLVLVLVLVLG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+u!!#(6;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!LVLVLVLVLVLVLVLV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!0IpLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVIr!0Ip!Q<7!0LVLVIq%I&K!!!!!-!!!!!!!!!g$'!!!&2,/1:B&N&y)3!e4M$~2yH6!!G-!!!w-N)z.M!g2y5>4M/p!"#e!!!t2i$w2:5*4M/S-N)z.N&{!!!!!!#5D8&+<R$!G=!!!!!!!!!!!!!!!!!!!!!\!!)1LFIz!!1A!.#4$%"d?.>\!!!!!!!!!!!!!!!!!!!!!$>{!Q#cLG9Q"#!!!!!!!!!!
+!!!!!1!!!!#e!!!!!!!!!"!!!!&K!!!"!!!!LFLVLG!!!!!!!!!!LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLL2L4]:b&M7a.-9q,^'N5?:a2SDQ!!!!!!!!!A#(6;!!!1!!
+!"+u.[D?(RJA)(Aa!*+v!!!!!R6k!!!!!0LVLG#d!!!!!0Iq!!!!LG#dLG!!LG#d!!#dLG"C!!!!!)!!!!!!6k"C6k!!6k"C!!"C6k#%Am!!H=3k!-FXCu"v?X)1;>=s!)"C6k")2I1A./E6!$)d)a!;%J<7!!!!!!!!!a!!!!!!!!!%!'!!!#!b4M:T3E"#!!!3/C:`2:)Q.A/t&P'\3[$u!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!v#U!!!!!N!"9Q+uII!rJA=Y!!!!<7!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"9Q+uB;"4JA?=!!!"+u!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%#e!!!!!!#5+i#e!!!!
+!!#5+i#e!!!!!!#5+i#e!!!!!!#5+e!!!!!A!!!!!!!!03!A!!!!!!!!03!!!!#e!1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"!1#f!!6k!A"%!1#c"C!#!7&L!0G5!!&M1a#eL7!!!$">$QGtGD=]+e!"+u!!!!!!!!!!!A!!!!#e#E!#!$">$QGtGD=]+tG5!!&L1a!!L76k!A'O!1#c#E!#!U!!!!!!!!!!!0G5!!&O1a&KL76k!A/_
+!!#c"C!#")&K!0G5!!&R1a!!L7!!!1!"!!#e!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&L!0G5!!&N1a!!L76k!A,y!1#c"C!#!w&K!0Gl!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!"!!#e#E!#!$Iq!!!!!!!!!0G;!!&L+e!!!!!!!!!!L7G-!A',!!!!!!!!!!#c#E!#!TIq!!!!!!!!!0G5!!&O1a#eL76k!A/_!!#c
+!!!!!!!!!!!!!!!!!!!!!!!!!!!"!!!!"C!#!'&K!0G5!!&L1a!!L76k!A'O!!#c"C!#!W&K!0G5!!&O1a!!L76k!A/_!!#c"C!#")&K!0G5!!&R1a!!L76k!A7o!!#c"C!#"Y&K!0G5!!&U1a!!L76k!A@!!!#c"C!##+&K!0G5!!&X1a!!L76k!AH1!!#c"C!##[&K!0G5!!&[1a!!L76k!B$i!!#c"C!#$-&K!0G5!!&^1a!!L7!!!!!!
+!!!!!!!!!!!!!1!!"3!#!'#eL74'!A$h!0G4!!&M1Q#c"3!#!W#eL74'!A,x!0G-!!!!!!!!!!!!!!!"!#1AL6LTLVG,L6Iq!!!!!!!!!!!!!!!"!!6k!A"#!!#c"C!#!7!!!0G5!!&M1A!!L76k!A*3!!#cL'%L!#G/7M!A!K+uI1%I!$+v7}#)!)1A8O"H!##e:#!%!!6k2C&K!!!!!!!!!!!!!!!1']!Q/R/R/R/RBVIr!!!)!!&K1a!!
+L76k!A$i!!#c"C!#!G&K!0G5!!&N1a!!L76k!A,y!!#c#E!#!s#e!!!!!!#U+tG5!!&Q1a!!L7G-!A4W/R/R/R/RBVLU!*+u!a!"!'4'!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)4)d)d)d)p+4)1!!!!!!!!!!)1!!!!!!!!!!!1#e#E!#!$Iq!!!!!!!!!0G;!!&L+e!!!!!!!!!!L7G-!A',!!!!!!!!!!#c#U!#!S$:
+)d)d)d+h+f+s#E!#!d!!!!!!!!!!!0G;!!&P)1!!!!!!!!!!L76k!A2E!1#c:C!%!!#e;U!!!!!!!!!!!1!)!!&K1a!!L7!*!)6k!a!"!"#e!!#dLVLVLVLVLVLVLVLVLG!!!!!!!!!!5J<7!!!!!a"+!%!-&L!@(p<;!!"O!A!!2s!a"N6}&=Hu"#!!4'!!!'<7+uB3$8JA$g4'!++u!!".!%!-G.)P(z<>!!!=!!!!!!!!!!#f!1#e"C!#
+!'&L!0G5!!&L1a#eL76k!A'O!1#c!!!!)8?1>_6L5q,V!!!a!!!!!!!!!!!"!!!!!1!)!!&M1a!!L7!!!1!!!!#e!1!)!!&M1a!!L:Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!!!!!1!/!!&K+e!!!!!!!!!!L7G-!A$F!!!!!!!!!!#c#E!#!DIq!!!!!!!!!0G;!!&N+e!!!!!!!!!!L76k!A,y!!#c7}!y!)1A,w"H
+!##e:#!%!!+uAa!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!Q)d)d)d)dJNJC!!!!!!!!!!!Q!!!!!!!!!!!!!1!)!!&Q1a!!L7"X!!+u!1!h!!!!LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!/Ai!!!!!!&K2c!a#*!5&=Gc"C!!E)!!!'<7+u7=$XJA"c9Q!&!!!!!!!!!!!1#f!1!)!!&K1a#eL76k!A$i!1#c"C!#!G&L!0G-
+!!!Q5z-g-7%#7PIq!%!!!!!!!!!!!!#e!!!"!!6k!A'O!!#c!!!"!!!!!1!"!!6k!A'O!!#c7m!g!).[&["V!!+u!Q!y!!!!LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!"!%!!!!!!#e2c!a"O!6&=Hi"S!!2c!!!!!!!!!"!1#f!!6k!A"%!1#c"C!#!7&L!0G5!!&M1a#eL7!:!$&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U
++e#e!1!/!!&K)RCl48Cl4ABBL7G-!A$9%u5:%u5:>>LU#E!#!D&gBz$#Bz%U+tG;!!&N)RCl48Cl4ABBL:">$QGtGD=]+e!"+u!!!!!!!!!!!1!!!!#e"C!#!g&L!0GN!).[7M"J!##e:#!%!!)1=9!!!!!!!!!!!!!!!!!1']!Q/R/R/R/RBVIr!!!)!!&K1a!!L7"W!!+u!1!D!!#eLVLVLVLVLVIq!!!!!!!!!!!!!!!!!-!'!!!!!!&K
+2c!a"J7#&=G_"c!!@?!!!'9Q+uB;$xJAHo<7!#Aa!!!!!!!!!!#e!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!!!!#e!1!"!!6k!A"%!!#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K!!!!!1"+!%!)=Z4F(t1L!!!a!!!!!1!%!!&K"#!$!!4'!a!)!!.["S!'!!<7"3!,!!6k#%!*!!DG"c!/!!>{#U!-
+!"!!#5!2!!G-$'!0!")1#e!5!"#e$W!3!"1A$7!8!"+u%)!6!"9Q$g!;!"4'%Y!9!"Aa%9!>!"<7&+!<!"Iq%i!A!"DG&[!?!#&K&;!D!#!!'-!B!#.[&k!G!#)1']!E!#6k'=!J!#1A(/!H!#>{'m!M!#9Q(_!K!#G-(?!P!#Aa)1!N!$#e(o!S!#Iq)a!Q!$+u)A!V!$&K*3!T!$4')q!Y!$.[*c!W!$<7*C!\!$6k+5!Z!$DG*s!_!$>{
++e!]!%!!+E!b!$G-,7!`!%)1+u!e!%#e,g!c!%1A,G!h!%+u-9!f!%9Q!!!!!!!"!!#e"C!#!'&K!0G5!!&L1a#eL76k!A'O!!#c!"9Q!1!"!!#e!1!)!!&K1a#eL?1A&["V!!+u!A!U!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!)!#!!!!!!#e2c!a"G7&&=IK#%!!+u!!!!!!!!!!!1!"!!6k!A"%!!#c"C!#!7&L!0G5!!&M1a!!L7!:
+!!+u!1!"!!#e"C!#!'&O!0HU!##e:#!%!!&K)q!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"C!A!!!!!"!'6k+u8w%:JA-YDG!%!!!!!!!!!!!!#e!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!#!!#e!1!"!!6k!A"%!A#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K!!!!!1"+!%!)-:<V(z<D!!!a!!!!
+!!!!!!!"!!#e"C!#!'&K!0G5!!&L1a#eL76k!A'O!!#c!"9Q!Q!"!!#e!1!)!!&K1a)1L?1A&["V!!+u!A!U!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!)!#!!!!!!#e2c!a"O7'&=GW#E!!+u!!!!!!!!!!!1!"!!6k!A"%!!#c"C!#!7&L!0G5!!&M1a!!L7!:!!4'!1!"!!#e"C!#!'&R!0HU!##e:#!%!!&K)q!"!0LVLVLVLVLV!Q!$
+!!)1!!!!!!!!!!"C!A!!!!!"!'6k+u7U%ZJA;5G-!%!!!!!!!!!!!!#e!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!&!!#e!1!"!!6k!A"%!q#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K!!!!!1"+!%!)C&?<(o<F!!!a!!!!!!!!!!!"!!#e"C!#!'&K!0G5!!&L1a#eL76k!A'O!!#c!"9Q"#!"!!#e
+!1!)!!&K1a1AL?1A&["V!!+u!A!U!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!)!#!!!!!!#e2c!a"G7)&=HI#U!!+u!!!!!!!!!!!1!"!!6k!A"%!!#c"C!#!7&L!0G5!!&M1a!!L7!:!!G-!1!"!!#e"C!#!'&Y!0HU!##e:#!%!!&K)q!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"C!A!!!!!"!'6k+u8w%jJAHoIq!%!!!!!!!!!!!!#e
+!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!0!!#e!1!"!!6k!A"%#U#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K!!!!!1"+!%!)-:Df(t<G!!!a!!!!!!!!!!!"!!#e"C!#!'&K!0G5!!&L1a#eL76k!A'O!!#c!"9Q#e!"!!#e!1!)!!&K1b!!L?1A&["V!!+u!A!U!!#eLVLVLVLVLVIt!!)1!Q!!!!!!
+!!!!!)!#!!!!!!#e2c!a"O7*&=I;#e!!+u!!!!!!!!!!!1!"!!6k!A"%!!#c"C!#!7&L!0G5!!&M1a!!L7!:!"#e!1!"!!#e"C!#!'&\!0HU!##e:#!%!!&K)q!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"C!A!!!!!"!'6k+u7U&,JA*t#e!%!!!!!!!!!!!!#e!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!+!!#e!1!"!!6k!A"%
+"c#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K!!!!!1"+!%!)C&GL(y<H!!!a!!!!!!!!!!!"!!#e"C!#!'&K!0G5!!&L1a#eL76k!A'O!!#c!"9Q"C!"!!#e!1!)!!&K1a6kL?1A&["V!!+u!A!U!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!)!#!!!!!!#e2c!a"G7,&=GG$'!!+u!!!!!!!!!!!1!"!!6k!A"%
+!!#c"C!#!7&L!0G5!!&M1a!!L7!:!!DG!1!"!!#e"C!#!'&X!0HU!##e:#!%!!&K)q!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"C!A!!!!!"!'6k+u8w&<JA8P&K!%!!!!!!!!!!!!#e!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!*!!#e!1!"!!6k!A"%"S#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K
+!!!!!1"+!%!)-;!@(~<I!!!a!!!!!!!!!!!"!!#e"C!#!'&K!0G5!!&L1a#eL76k!A'O!!#c!"9Q"s!"!!#e!1!)!!&K1a>{L?1A&["V!!+u!A!U!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!)!#!!!!!!#e2c!a"O7-&=H9$7!!+u!!!!!!!!!!!1!"!!6k!A"%!!#c"C!#!7&L!0G5!!&M1a!!L7!:!!Aa!1!"!!#e"C!#!'&W!0HU!##e
+:#!%!!&K)q!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"C!A!!!!!"!'6k+u7U&\JAF,)1!%!!!!!!!!!!!!#e!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!3!!#e!1!"!!6k!A"%$'#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K!!!!!1"+!%!)C'$&(s<K!!!a!!!!!!!!!!!"!!#e"C!#!'&K!0G5!!&L
+1a#eL76k!A'O!!#c!"9Q$7!"!!#e!1!)!!&K1b)1L?1A&["V!!+u!A!U!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!)!#!!!!!!#e2c!a"G7/&=I+$G!!+u!!!!!!!!!!!1!"!!6k!A"%!!#c"C!#!7&L!0G5!!&M1a!!L7!:!"+u!1!"!!#e"C!#!'&_!0HU!##e:#!%!!&K)q!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"C!A!!!!!"!'6k
++u8w&lJA(0.[!%!!!!!!!!!!!!#e!1!)!!&K1a!!L76k!A$i!1#c"C!#!G&K!0G-%9!6!!#e!1!"!!6k!A"%$W#c7m!B!*)1!a!#!$+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!6k&K!!!!!1"+!%!)-;)P(x<L!!!a!!!!!!!!!!!"!!#e"C!#!'&K!0G5!!&L1a#eL76k!A'O!!#c!"9Q$g!"!!#e!1!)!!&K1b1AL?1A&["V!!+u!A!U
+!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!)!#!!!!!!#e2c!a"O70&=G7$g!!+u!!!!!!!!!!!1!"!!6k!A"%!!#c"C!#!7&L!0G5!!&M1a!!L7!:!"4'!1!"!!#e"C!#!'&b!0HU!##e:#!%!!&K)q!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"C!A!!!!!"!'6k+u7U'.JA5j1A!%!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#
+!G&K!0G-%9!Q.LAI?e$U38Iq!5!!!!!!!!!!!!#e!!!"!!G-!A!Q.LAI?e$U38LU"C!#!7&K!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u8w'.JAHp1A!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q5z-g-7%#7PIq!5!!!!!!!!!!!!#e!!!"!!G-!A!Q5z-g-7%#
+7PLU"C!#!7&K!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u7u'>JA5j4'!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q@@HTI&%a;xIq!5!!!!!!!!!!!!#e!!!"!!G-!A!Q@@HTI&%a;xLU"C!#!7&K!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!
+!!#%!Q!!!!!"!'6k+u6s'NJA"d6k!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q.LAI?e$U38Is!5!!!!!!!!!!!!#e!!!"!!G-!A!Q.LAI?e$U38LU"C!#!7&M!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u8W'NJA;66k!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k
+!A$i!!#c"C!#!G&K!0G-%9!Q5z-g-7%#7PIs!5!!!!!!!!!!!!#e!!!"!!6k!A$i!A#c#E!#!$">$QGtGD=]+tHT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u7U'^JA(09Q!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q@@HTI&%a;xIs!5!!!!!!!!!!!!#e!!!"!!G-
+!A!Q@@HTI&%a;xLU"C!#!7&M!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u99'^JA@`9Q!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q.LAI?e$U38Iu!5!!!!!!!!!!!!#e!!!"!!G-!A!Q.LAI?e$U38LU"C!#!7&O!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$
+!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u87'nJA-Z<7!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q5z-g-7%#7PIu!5!!!!!!!!!!!!#e!!!"!!G-!A!Q5z-g-7%#7PLU"C!#!7&O!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u75'~JAF,<7!'!!!!!!!!!!!1!!!1!)
+!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q@@HTI&%a;xIu!5!!!!!!!!!!!!#e!!!"!!G-!A!Q@@HTI&%a;xLU"C!#!7&O!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u8w'~JA3&>{!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q.LAI?e$U38Ir!5!!!!!!!!!!
+!!#e!!!"!!G-!A!Q.LAI?e$U38LU"C!#!7&L!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u7u(0JAKV>{!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q5z-g-7%#7PIr!5!!!!!!!!!!!!#e!!!"!!6k!A$i!1#c#E!#!$">$QGtGD=]+tHT!##e:#!%!!&K/=!"!0LV
+LVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u6s(@JA8PAa!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q@@HTI&%a;xIr!5!!!!!!!!!!!!#e!!!"!!G-!A!Q@@HTI&%a;xLU"C!#!7&L!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u8W(@JA%JDG!'!!!!!!
+!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q.LAI?e$U38Iq!5!!!!!!!!!!!!#e!!!"!!G-!A!Q.LAI?e$U38LU"C!#!7&K!0HT!##e:#!%!!&K/=!"!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!#%!Q!!!!!"!'6k+u7U(PJA=zDG!'!!!!!!!!!!!1!!!1!)!!&K1a#eL76k!A$i!!#c"C!#!G&K!0G-%9!Q.LAI?e$U38Iq
+!U!!!!!!!!!!!!#e!!!"!!6k!A'O!Q#c#E!#!$!p%g8c7!H:+tG5!!&L1a!!L?.[&["V!!+u!A!}!!#eLVLVLVLVLVIt!!)1!Q!!!!!!!!!!!"!%!!!!!!#e2c!a"Q79&=Gg&+!!2c!!!!!!!!!"!!!"!!6k!A"%!1#c"C!#!7&K!0G5!!&M1a!!L7!:!$!p%g8c7!H:+e!"+u!!!!!!!!!!!1+y!!#e"C!#!G&L!0G;!!&K)5J.HZ-:.A?\
+L76k!A/_!a#c"C!#")&O!0HT!##e:#!%!!&K2#!"!0LVLVLVLVLV!A!#!!&K!!!!!!!!!!"#!a!!!!!"!'6k+u8?(`JADhG-!(!!!!!!!!!!!!!"!1!)!!&K1a!!L76k!A$i!!#c"C!#!G&L!0G-%9!S%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>Ir!!#e"C!#!g&L!0HV!##e:#!%!!&K/=!!!!!!!!!!!!!!!!!1']!S
+%u5:%u5:A$Ir!!!/!!&R)RCl48Cl4BBBL76k!A"%!!#c!#9Q:3!%!!#e)A!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!Q)d)d)d)dJNJC!!!!!!!!!!!Q!!!!!!!!!!!"!1!)!!&Q1a#eL7"X!!+u!1!h!!)1LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!'+|!!!!!!)12c!a"I!O&=HA&;!!1A!!!'9Q+uCm(pJADhIq!$Aa!!"-
+!%!)#gJ2(oGM!!!q!!!!!!!!!!#e!!#e"C!#!'&L!0G5!!&L1a!!L76k!A'O!!#c!"9Q)5J.HZ-:.A?\!!$G!!!!!!!!!!!"!a!!!1!)!!&P1a+uL7G-!A!Q.LAI?e$U38LU7]!B!*)1!a!#!&+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!Aa)1!!!!!1"+!%!)<9J2(yGM!!"#!!!!!!!!!!#e!!#e"C!#!'&L!0G5!!&L1a!!L76k!A'O
+!!#c!"9Q)5J.HZ-:.A?\!!$G!!!!!!!!!!!"!!+u!1!)!!&Q1a+uL7G-!A!Q.LAI?e$U38LU7]!B!*)1!a!#!&+u!1#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!Aa)1!!!!!1"+!%!).[!H(rGN!!"#!!!!!!!!!!!!!1#e"C!#!'&K!0G5!!&L1a!!L76k!A'O!1#c!"9Q)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB!1!"
+!!6k!A,y!1#c7}!B!*)1!a!#!&+u!!!!!!!!!!!!!!!!#g4')X&gBz$#C!$F!1!!#E!#"6'_%u5:%u6,+tG5!!&K1a!!L7!J!*+u!a!"!$#e!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)4)d)d)d)p+4)1!!!!!!!!!!)1!!!!!!!!!!!1#e"C!#")&L!0G-:C!%!!#e-)!$!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"'"3!!
+!!!$!'6k+u6{!34UD)#e!'!!!!",!%!-5I$.(qGO!!!]!!!!3%!a"O!"'_H9&k!!.[!!!!!!!!!!!!#f!!6k!A"%!!#c"C!#!7&K!0G5!!&M1a#eL7!:!$&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+e#e!1!)!!&O1a#eL?4'&["V!!+u!A!u!!!!!!!!!!!!!!!!!"!H!$'B/R/R/R0d+e#e!!6k!A"%!!#c#E!#"6'B
+/R/R/R0d+tG-!!"W!!+u!1!R!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$!T)d)d)d+hAT!!!!!!!!!!!$!!!!!!!!!!!!#f!!6k!A2E!1#c!*.[!a!"!%4'!Q#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!2#4'!!!!!Q"+!%!)4'&r(o<Z!!"#!!!!2s!a#26m'_H9&{!!+5!!!'<7+u7-!S4U=;)1!&!!!!!!!!!!!!!"!1!)
+!!&K1a!!L76k!A$i!!#c"C!#!G&L!0G-%9!S%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>Ir!!#e"C!#!g&L!0HV!##e:#!%!!&K/=!!!!!!!!!!!!!!!!!1']!S!!!!!!!!DJIr!!!/!!&R)Q!!!!!!!.!`L76k!A"%!!#c!#9Q:3!%!!#e)A!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!Q)d)d)d)dJNJC
+!!!!!!!!!!!Q!!!!!!!!!!!"!1!)!!&Q1a#eL7"X!!+u!1!h!!)1LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!'+|!!!!!!)12c!a"P!$'_Gs'-!!1A!!!'9Q+uB;!c4U=;+u!$Aa!!"-!%!)6k,>(}&o!!!q!!!!!!!!!!!!!1#e"C!#!'&K!0G5!!&L1a!!L76k!A'O!1#c!"9Q)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB
+!1!"!!6k!A,y!1#c7}!B!*)1!a!#!&+u!!!!!!!!!!!!!!!!#g4')V/R/R/R/Z/<!1!!#E!#"6'B/R/R/R0t+tG5!!&K1a!!L7!J!*+u!a!"!$#e!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)4)d)d)d)p+4)1!!!!!!!!!!)1!!!!!!!!!!!1#e"C!#")&L!0G-:C!%!!#e-)!$!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"'
+"3!!!!!$!'6k+u7=!s4U7/.[!'!!!!",!%!-:s/$(}&p!!!]!!!!3%!a"Q!&'_GK'M!!.[!!!!!!!!!!!!#f!!6k!A"%!!#c"C!#!7&K!0G5!!&M1a#eL7!:!$&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+e!!!1!)!!&O1a!!L?4'&["V!!+u!A!u!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$!T)d)d
+)d+hAT!!!!!!!!!!!$!!!!!!!!!!!!!"!!6k!A2E!!#c!*.[!a!"!%4'!!!!!!!!!!!!!!!!#g4')RCl48Cl4BBB!1!!"C!#!'&K!0G;!!&R)RCl48Cl4BBBL7!!!*+u!a!"!$#e!Q#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!'m4'!!!!!Q"+!%!)9Q1h(zGS!!"#!!!!3%!a"R6q'_GK']!!.[!!!'9Q+uBS"54U3g4'!$Aa!!!!!!!!!!!"
+!1!)!!&K1a!!L76k!A$i!!#c"C!#!G&L!0G-%9!S%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>Iq!!#e"C!#!g&K!0HV!##e:#!%!!&K/=!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!Q)d)d)d)dJNJC!!!!!!!!!!!Q!!!!!!!!!!!!!1!)!!&Q1a!!L7"X!!+u!1!h!!!!!!!!!!!!!!!!!"!H!$'_%u5:
+%u6,+e#e!!6k!A"%!!#c#E!#"6'_%u5:%u6,+tG-!!"W!!+u!1!R!!)1LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!#6r!!!!!!)12c!a"R!('_Ik']!!1A!!!'<7+u7e"E4U0A6k!&!!!!",!%!->{74(y<_!!!]!!!!!!!!!!!!!1#e"C!#!'&K!0G5!!&L1a!!L76k!A'O!1#c!"9Q)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl
+4ABB!!!"!!6k!A,y!!#c7}!B!*)1!a!#!&+u!!!!!!!!!!!!!!!!#g4')RCl48Cl4BBB!1!!"C!#!'&K!0G;!!&R)RCl48Cl4BBBL7!!!*+u!a!"!$#e!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)4)d)d)d)p+4)1!!!!!!!!!!)1!!!!!!!!!!!1#e"C!#")&L!0G-:C!%!!#e-)!$!0LVLVLVLVLV!Q!$!!)1!!!!!!!!
+!!"'"3!!!!!$!'6k+u7]"U4U*59Q!'!!!!",!%!-@?9x(x1j!!!]!!!!3%!a"C!+'_IC'}!!.[!!!!!!!!!!!!#f!!6k!A"%!!#c"C!#!7&K!0G5!!&M1a#eL7!:!$&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+e!!!1!)!!&O1a!!L?4'&["V!!+u!A!u!!!!!!!!!!!!!!!!!"!H!$'_%u5:%u6,+e#e!!6k!A"%!!#c
+#E!#"6'_%u5:%u6,+tG-!!"W!!+u!1!R!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$!T)d)d)d+hAT!!!!!!!!!!!$!!!!!!!!!!!!#f!!6k!A2E!1#c!*.[!a!"!%4'!Q#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!2#4'!!!!!Q"+!%!)>{<^(v&u!!"#!!!!2s!a#&6v'_IC(/!!+5!!!'<7+u7m"u4U#G>{!&!!!!!!!!!!
+!!!"!1!)!!&K1a!!L76k!A$i!!#c"C!#!G&L!0G-%9!S%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>Ir!!#e"C!#!g&L!0HV!##e:#!%!!&K/=!!!!!!!!!-!!!!!!!1']!S%u5:%u5:A$Ir!!!/!!&R)RCl48Cl4BBBL76k!A"%#%#c!#9Q:3!%!!#e)A!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!Q)d)d
+)d)dJNJC!!!!!!!!!!!Q!!!!!!!!!!!"!1!)!!&Q1a#eL7"X!!+u!1!h!!)1LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!'+|!!!!!!)12c!a"D!-'_H}(?!!1A!!!'9Q+uB{#'4U#GAa!$Aa!!"-!%!)AaB*(s<c!!!q!!!!!!!!!!!!!1#e"C!#!'&K!0G5!!&L1a!!L76k!A'O!1#c!"9Q)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB)RCl
+48Cl4ABB!!!"!!6k!A,y!!#c7}!B!*)1!a!#!&+u!!!!!!!!#%!!!!!!#g4')RCl48Cl4BBB!1!!"C!#!'&W!0G;!!&R)RCl48Cl4BBBL7!!!*+u!a!"!$#e!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)4)d)d)d)p+4)1!!!!!!!!!!)1!!!!!!!!!!!1#e"C!#")&L!0G-:C!%!!#e-)!$!0LVLVLVLVLV!Q!$!!)1!!!!
+!!!!!!"'"3!!!!!$!'6k+u7}#74UHqAa!'!!!!",!%!-EiDn(s<d!!!]!!!!3%!a"E!/'_HU(_!!.[!!!!!!!!!!!!#f!!6k!A"%!!#c"C!#!7&K!0G5!!&M1a#eL7!:!$&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+e!!!1!)!!&O1a!!L?4'&["V!!+u!A!u!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!
+!$!T)d)d)d+hAT!!!!!!!!!!!$!!!!!!!!!!!!!"!!6k!A2E!!#c!*.[!a!"!%4'!!!!!!!!#%!!!!!!#g4')RCl48Cl4BBB!1!!"C!#!'&W!0G;!!&R)RCl48Cl4BBBL7!!!*+u!a!"!$#e!Q#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!'m4'!!!!!Q"+!%!)DGGT(q1o!!"#!!!!3%!a"F6z'_HU(o!!.[!!!'9Q+uC5#W4UEKG-!$Aa!!!!
+!!!!!!!"!1!)!!&K1a!!L76k!A$i!!#c"C!#!G&L!0G-%9!S%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>Ir!!#e"C!#!g&L!0HV!##e:#!%!!&K/=!!!!!!!!!-!!!!!!!1']!S4HCl48ClAtIr!!!)!!&K1aAaL7G-!A4Y4HCl48ClAtLU!!!!:3!%!!#e)A!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!Q
+)d)d)d)dJNJC!!!!!!!!!!!Q!!!!!!!!!!!"!1!)!!&Q1a#eL7"X!!+u!1!h!!)1LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!'+|!!!!!!)12c!a"F!1'_H1)!!!1A!!!'9Q+uC=#g4UB%Iq!$Aa!!"-!%!)G.!H(~G\!!!q!!!!!!!!!!!!!1#e"C!#!'&K!0G5!!&L1a!!L76k!A'O!1#c!"9Q)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB
+)RCl48Cl4ABB!!!"!!6k!A,y!!#c7}!B!*)1!a!#!&+u!!!!!!!!#%!!!!!!#g4')X&gBz$#C!$F!1!!"C!#!'&W!0G;!!&R)X&gBz$#C!$FL7!!!*+u!a!"!$#e!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)4)d)d)d)p+4)1!!!!!!!!!!)1!!!!!!!!!!!1#e"C!#")&L!0G-:C!%!!#e-)!$!0LVLVLVLVLV!Q!$!!)1
+!!!!!!!!!!"'"3!!!!!$!'6k+u8?#w4U;x!!!'!!!!",!%!-K6$.(~G]!!!]!!!!3%!a"G!3'_Gg)A!!.[!!!!!!!!!!!!#f!!6k!A"%!!#c"C!#!7&K!0G5!!&M1a#eL7!:!$&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+h&gBz$#Bz%U+e!!!1!)!!&O1a!!L?4'&["V!!+u!A!u!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!
+!!!!!$!T)d)d)d+hAT!!!!!!!!!!!$!!!!!!!!!!!!!"!!6k!A2E!!#c!*.[!a!"!%4'!!!!!!!!#%!!!!!!#g4')X&gBz$#C!$F!1!!"C!#!'&W!0G;!!&R)X&gBz$#C!$FL7!!!*+u!a!"!$#e!Q#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!'m4'!!!!!Q"+!%!)Ir&r(|<h!!"#!!!!3%!a"H6~'_Gg)Q!!.[!!!'9Q+uCU$94U8R&K!$Aa
+!!!!!!!!!!!"!1!)!!&K1a!!L76k!A$i!!#c"C!#!G&L!0G-%9!S%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>Ir!!#e"C!#!g&L!0HV!##e:#!%!!&K/=!!!!!!!!!-!!!!!!!1']!Q/R/R/R/RBVIr!!!)!!&K1aAaL7"W!!+u!1!D!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$!T)d)d)d+hAT!!!!!!
+!!!!!$!!!!!!!!!!!!#f!!6k!A2E!1#c!*.[!a!"!%4'!Q#dLVLVLVLVLG)1!Q!$!!!!!!!!!!!!JS1A!!!!!Q"+!%!).\,>(p1t!!"#!!!!2s!a#07!'_HE)a!!(O!!!'<7+u9A$I4U<Z)1!&!!!!!!!!!!!!!"!1!)!!&K1a!!L76k!A$i!!#c"C!#!G&L!0G-%9!S%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>JE%u5:%u5:>>Ir!!#e
+"C!#!g&L!0HV!##e:#!%!!&K/=!!!!!!!!!-!!!!!!!1']!S!!!!!!!!DJIr!!!)!!&K1aAaL7G-!A4Y!!!!!!!!DJLU!!!!:3!%!!#e)A!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!`!!!!!!!!!!!Q)d)d)d)dJNJC!!!!!!!!!!!Q!!!!!!!!!!!"!1!)!!&Q1a#eL7"X!!+u!1!h!!)1LVLVLVLVLVIt!!)1!Q!!!!!!!!!!!'+|!!!!
+!!)12c!a"M!6'_Go)q!!1A!!!'9Q+uAi$i4U<Z+u!$Aa!!"-!%!).\1h(|Ga!!!q!!!!!!!!!!!!!1#e"C!#!'&K!0G5!!&L1a!!L76k!A'O!1#c!"9Q)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB)RCl48Cl4ABB!1!"!!6k!A,y!1#c7}!B!*)1!a!#!&+u!!!!!!!!#%!!!!!!#g4')V/R/R/R/Z/<!1!!"C!#!'&W!0G;!!&R)V/R
+/R/R/Z/<L7!!!*+u!a!"!$#e!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)4)d)d)d)p+4)1!!!!!!!!!!)1!!!!!!!!!!!1#e"C!#")&L!0G-:C!%!!#e-)!$!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"'"3!!!!!$!'6k+u6k$y4U6N.[!'!!!!",!%!-2d4N(|Gb!!!]!!!!3%!a"N!8'_GG*3!!.[!!!!!!!!!"!1#f!!6k
+!A"%!1#c"C!#!7&L!0G5!!&M1a#eL7!!!$&gBz$#Bz%5+h&gBz$#Bz%5+h&gBz$#Bz%5+h&gBz$#Bz%5+e#g!1!)!!&P1a&KL:!p%g8c7!H:+e!"+u!!!!!!!!!!!1!!!!#e#E!#!$!p%g8c7!H:+tHT!&+u7}!B!*)1!a!$!(Aa!!!!!!!!!!!!!!!!#g4')RCl48Cl4BBB!1!!#E!#"6&gBz$#Bz%e+tG-!!"W!!+u!1!J!!&KLVLVLVLV
+LVJT!%#e,'!!!!!!!!!!!#6r!!!!!!&K2c!a#*!9'_I+*3!!8o!!!'9Q+uD/%+4U,z4'!$+u!!!!!!!!!1#f!1!)!!&K1a#eL76k!A$i!1#c"C!#!G&L!0G-!!!Q5z-g-7%#7PIq!5!!!!!!!!!!!!#e!!!"!!G-!A!Q5z-g-7%#7PLU)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB!1!"!!G-!A!S%u5:%u5:8rLU#E!#
+!4&gBz$#Bz%5+tG;!!&M)RCl48Cl4?BBL7G-!A)c%u5:%u5:8rLU7}!m!).[&["V!!+u!Q"o!!!!!!!!!!!!!!!!!"!H!$&gBz$#Bz%e+e#e!!G-!A4Y%u5:%u5:A$LU!!!!:3!%!!#e'}!#!0LVLVLVLVLV!Q!$!!)1!!!!!!!!!!"#"S!!!!!#!'6k+uBs%;4U@b4'!,Aa!!",!%!-*T<^(v1y!!!U!!!!!!!!!!#f!1#e"C!#!'&L!0G5
+!!&L1a#eL76k!A'O!1#c!!!!)8?1>_6L5q,V!!)r!!!!!!!!>~Ir!!!!!1!)!!&M1a)1L7G-!A)r!!!!!!!!>~LU)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB!1!"!!G-!A&}%u5:%u5:8rLU#E!#!T&gBz$#Bz%5+tHV!&+u7]!B!*)1!a!$!*6k!1#dLVLVLVLVLK#e,'!b!!!!!!!!!!!!9Q1A!!!!!1"+!%!)>|<^
+(}<o!!"k!!!!!!!!!!#f!1#e"C!#!'&L!0G5!!&L1a#eL76k!A'O!1#c!!!!!1!"#E#f!1!)!!&P1a#eL76k!A*5#E#c7m!B!*)1!a!#!$Aa!!!!!!!!!!!!!!!!#g4')V/R/R/R/Y/<!1!!#E!#"6'B/R/R/R0d+tG-!!"W!!+u!1!J!!&KLVLVLVLVLVJT!%#e,'!!!!!!!!!!!(!%!!!!!!&K2c!a"M7('_I3*c!!-9!!!'9Q+uD?%[4U
+"f<7!$+u!!!!!!!!!1#f!1!)!!&K1a#eL76k!A$i!1#c"C!#!G&L!0G-!!!Q.LAI?e$U38Is!5!!!!!!!!!!!!#e!!!"!!6k!A$i!A#c#E!#!$!p%g8c7!H:+tG_%u5:%u5:8rJE%u5:%u5:8rJE%u5:%u5:8rJE%u5:%u5:8rIq!!#e"C!#!g&K!0HV!&+u7]!B!*)1!a!$!)+u!!!!!!!!!!!!!!!!#g4')RCl48Cl4BBB!1!!#E!#"6&g
+Bz$#Bz%e+tG-!!"W!!+u!1!J!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$Iq!!!!!!!!!$!T)d)d)d+hAT!!!!!!!!!!!$!!!!!!!!!!!!!"!!6k!A2E!!#c!*.[!a!"!%4'!Q#dLVLVLVLVLK#e,'!b!!!!!!!!!!!!Ei<7!!!!!Q"+!%!-9RB*(vGg!!"W!!!!2s!a#(!>'_G?+%!!)q!!!'<7+u7}%{4U,z>{!&!!!!!!!!!!!1#f!1!)
+!!&K1a#eL76k!A$i!1#c"C!#!G&L!0G-!!!S%u5:%u5:8rJE%u5:%u5:8rJE%u5:%u5:8rJE%u5:%u5:8rIq!!#e"C!#!g&K!0G;!!&L)RCl48Cl4?BBL7G-!A&}%u5:%u5:8rLU#E!#!T&gBz$#Bz%5+tG-!$!p%g8c7!H:+e!"+u!!!!!!!!!!!1!!!!#e#E!#!$!p%g8c7!H:+tHT!(G-7}!B!*)1!a!$!+6k!!!!!!!!)Q!!!!!!!!!!
+)Q!!!!!!!!!!)Q!!!!!!!!!!)1!!!!!!!!(O)1!!!!!!!!!!)1!!!!!!!!!!!!#e"C!#")&K!0G;!!&N&[!!!!!!!!(OL7G-!A!S!!!!!!!!!!#c#E!#!4&K!!!!!!!!!0G;!!&M)Q!!!!!!!!!!L7"X!!+u!1"B!!!!!!!!!!!!!!!!!"!H!$&gBz$#Bz%e+e#e!!6k!A'O!!#c#E!#"6&gBz$#Bz%e+tG-!!"W!!+u!1!R!!)1LVLVLVLV
+LVJT!%#e,'!!!!!!!!!!!)!/!!!!!!)12c!a"E!?'_IW+%!!@?!!!'<7+u91&-4U;xAa!)6k!!",!%!-4(J:(q1~!!!]!!!!!!!!!!!!!1#e"C!#!'&K!0G5!!&L1a!!L76k!A'O!1#c!!!!)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB!!!"!!6k!A,y!!#c7}!B!*)1!a!#!&+u!1#dLVLVLVLVLK#e,'!b!!!!!!!!
+!!!!Aa)1!!!!!1"+!%!)IrJ:(z'*!!"#!!!!!!!!!!#f!1#e"C!#!'&L!0G5!!&L1a#eL76k!A'O!1#c!!!!)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB)RCl48Cl4?BB!!!"!!6k!A,y!!#c#E!#!D&gBz$#Bz%5+tG;!!&N)RCl48Cl4?BBL:!p%g8c7!H:+e!"+u!!!!!!!!!!!1!!!!#e#E!#!$!p%g8c7!H:+tHT!(!!7}!B!*)1
+!a!$!*6k!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!+e!!!!!!!!!!)Q!!!!!!!.!`)1!!!!!!!!!!)1!!!!!!!!!!!1#e#E!#!T&K!!!!!!#5+tG-!!"X!!+u!1!n!!&KLVLVLVLVLVJT!%#e,'!!!!!!!!!!!&!,!!!!!!&K2c!a"M!A'_Go+U!!=Y!!!'<7+u7]&]4UHrG-!&6k!!!!!!!!!1#f!1!)!!&K1a#eL76k!A$i!1#c"C!#!G&L
+!0G-!!!Q5z-g-7%#7PIq!U#e!!!!!!"s+e#i!a!"!!6k!A/_!a#c"C!#")&O!0G5!!&O1a#eL7!!)RCl48Cl4?BB)RCl48Cl4?BB)V/R/R/R/W/<)V/R/R/R/W/<!!!"!!6k!A,y!!#c#E!#!D'B/R/R/R0D+tG;!!&N)V/R/R/R/W/<L?4'/]"H!##e:#!%!!)1<w!!!!!!!!!!!!!!!!!1']!S4HCl48ClAtIr!!!/!!&R)X&gBz$#C!$F
+L7!!!*+u!a!"!#9Q!A#dLVLVLVLVLK&K,7!c!!!!!!!!!!!!=Y6k!!!!!A"+!%!-K7$.(w',!!"w!!!!2s!a#07/'_Gc+u!!)q!!!!!!!!!"!1#f!!6k!A"%!1#c"C!#!7&L!0G5!!&M1a#eL7!!!$">$QGtGD=]+e!!+u!!!!!!!!!!!1!!!!#e"C!#!G&K!0G-!!#e!!!"!!#e"C!#!G&K!0G_%u5:%u5:8rJE%u5:%u5:8rJE%u5:%u5:
+8rJE%u5:%u5:8rIs!!#e"C!#!g&M!0HV!&6k7m!g!).[&["V!!+u!a"K!!!!!!!!!!!!!!!!!"!H!$'B/R/R/R0t+e#e!!G-!A4Y/R/R/R/RE<LU!!!!:3!%!!#e'}!#!0LVLVLVLVLV,'!b!%#e!!!!!!!!!!!q"3!!!!!#!'6k+uBC&}4U=}!!!*Aa!!",!%!-HQ)X(s2$!!!U!!!!!!!!!!!!!!!!!!!!8|&K!!!!-Y!k!&!)@?J2(|1H
+!!"#!!!!-Y!q"C7!&=H)"S!!+u!!!%<7.[87$XJA!A<7!$!!!!!k!&!))21`(p1L!!!a!!!!-Y!q"J!8&=He"s!!)1!!!$+u-9D7$xJABc>{!"+v!!!k!&!)#f9p(p<D!!!Q!!!!-Y!q"L!:&=HY#5!!)1!!!%<7.[6{%JJAKUDG!$!!!!!k!&!)9R<V(u<E!!!Q!!!!-Y!q"D!<&=IK#E!!)1!!!%<7.[8?%ZJA-YIq!$!!!!!k!&!)#fB"
+(z<F!!!Q!!!!-Y!q"L!=&=GW#e!!)1!!!%<7.[6{%zJA;6!!!$!!!!!k!&!)9RDf(o<H!!!Q!!!!-Y!q"D!?&=HI#u!!)1!!!%<7.[8?&,JAHp#e!$!!!!!k!&!)#fJ2(t<I!!!Q!!!!-Y!q"L!@&=I;$'!!)1!!!%<7.[6{&LJA*t)1!$!!!!!k!&!)9S!@(y<J!!!Q!!!!-Y!q"D!B&=GG$G!!)1!!!%<7.[8?&\JA8P+u!$!!!!!k!&!)
+#g&j(~<K!!!Q!!!!-Y!q"L!C&=H9$W!!)1!!!%<7.[6{&|JAF,.[!$!!!!!k!&!)9S)P(s<M!!!Q!!!!-Y!q"D!E&=I+$g!!)1!!!%<7.[8?'.JA-Z4'!$!!!!!k!&!))3.z(|<N!!!Q!!!!-Y!q"P!F&=H9%)!!)1!!!%<7.[7}'NJAKV6k!$!!!!!k!&!)#g4F(w<P!!!Q!!!!-Y!q"N!H&=GG%I!!)1!!!%<7.[7]'nJA=z<7!$!!!!!k
+!&!)Is7,(r<R!!!Q!!!!-Y!q"L!J&=I;%Y!!)1!!!%<7.[7=(0JA0@Aa!$!!!!!k!&!)DI<V(}<S!!!Q!!!!-Y!q"J!L&=HI%y!!)1!!!%<7.[6{(PJA"dG-!$!!!!!k!&!)>}B"(y&i!!!Q!!!!-Y!q"H7:&=Go&;!!)1!!!%<7.[6s(pJA1#!!!&!!!!!k!&!)2eJ2(oGN!!!Q!!!!-Y!q"D6k'_Hm&[!!)1!!!%<7.[8g!#4U@a&K!&!!
+!!!k!&!)%)&r(~1d!!!q!!!!-Y!q"J6n'_G_'=!!.[!!!%<7.[9)!c4U3g1A!&!!!!!k!&!)*S1h(y<^!!!q!!!!-Y!q"L6r'_IW'm!!.[!!!%<7.[9I"E4U&m<7!&!!!!!k!&!)/}<^(tGX!!!q!!!!-Y!q"N6v'_Hi(O!!.[!!!%<7.[7%#74UEKDG!&!!!!!k!&!)5IGT(p&z!!!q!!!!-Y!q"P6z'_G{)1!!.[!!!%<7.[7E#w4U8R#e
+!&!!!!!k!&!):t&r({1s!!!q!!!!-Y!q"R6~'_Ic)a!!.[!!!%<7.[7U$Y4U(r.[!&!!!!!k!&!)=Z1h(u<m!!!q!!!!-Y!q"C7%'_HI*C!!+u!!!%<7.[75%;4U=|6k!%!!!!!k!&!)5J<^(x'&!!!Q!!!!-Y!q"I!<'_Gk*s!!+u!!!%<7.[7E%k4U:V>{!&!!!!!k!&!)C&Dn(u'*!!!q!!!!-Y!q"N7,'_G?+U!!)1!!!%<7.[7e&M4U
+,:Iq!%!!!!!k!&!)>}$.(u<w!!!a!!!!-Y!q"R7/'_HI,'!!+u!!!%7]&OBd4]/o-_/q&O:<-I!!!!!!!!!!!!!!!!!!!!!!"c*T*W+u.{!$"3!!!1!"!!!!!!!!!!#e!1#aLG!!!1!!!!!!!!"CCU)1!!!!!!!!!!!!!!!!!!!!!!!!!!!"!!#e!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!0!,Ac!!!!LNLV6jIq!A!!!!#e
+!*G.!Q&8&k)1&K!9!!6k&K!"+y7]&OBd4]/o-_/q&O:<-I"+4."&3H/^!%BS/@$A!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-I!!!!!!!07L-I!!!!!!!/7L+e!!!!!!!-!`+e!!!!!!!-#$-I!!!!!!!0!`-I!!!!!!!0!`!1!%#e!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!"!!!!!!G-!A!j!!!!!!!!K8LU#E!#!59Q!!!!!!#M+tG;!!&M+e!!!!!!!-!`L7G-!A)p!!!!!!!!AlLU"C!#")&L!0G5!!&R1a!!L76k!A7o!a#c"C!#"Y&[!0G;!!&O-I!!!!!!!0!`L7G-!A/F!!!!!!!!ItLU!*&K!a!"!.Iq!!!!!!.[-9!!!!!!7=!%!!#e"c!#!0LVLVLVLVLV!!!!!!!!!!!!
+!!!!!!#Y"s!!!!!#!'6k+u8G'?4U3i4'!/6k!!"(!%!-811h(t2+!!!5!!!!!!!A!#!!!!!+!1!!!!#d!!&KK=K=9PK7K=@6!y5@5H9I8f4,8&5@KD8=5A))8f4,8&5@KD8:590&5@6cK=HF7<8:590&5@6cK=2Z"j8686868&5@KD8=5A))7t4(5Q5@7<8559%!8&5KK5'd5Q@G!y6cK<5A7U81HW0'!i6cK<5N!!#s7]!'"K6cK<467\K7
+Ii.Z"#86KD8&#]>z"#86KD8&#]>z"#86KD8&#]>z"#86KD8-#M<6"BG;8.9I5GK?LG3m8.9I6KHXLG6i#M6cK<468^Iw"K6cK<468^Iw"K6cK<468^Iw"K6cK<467\K7Ii.Z!q86KD8&7]!"#M.[!a5@KD855A(v7t5KK=HF7<8=8/&C9PIrK9-+1W4S&Q-+3|!M&M1a4n:c25"73w"$2),71S"629H83|&k3[$u1W5.4IG-(o!O!#"01WH0
+2Y/o&R-(&R-!25"73|!A3{1a1WH>4m7r4I"62i$w25G-4m7r4I"62i$w25G-2i/o&R*;1X"((o"((qG-!!!!!!!!!!!!HZIq!!!!!!#=+e!!!!!!!/7L!!!!!!!!EtJ<0gKwJe99AV(G&31,.x7L'rC4B2/%I4J<0gKwJe91AQ!!!!!!!0-x!!!!!!!!I<Iq!!!!!!#5AQ!!!!!!!-!`!!!!!%!!!!!!!!#M+i!!!!!!!!#=+i!!!!!!!!#]
++i#e!!!!!!#M+i!!!!!!!!#M+i#e!!!!!!#=+j!!!!!!!!!!!!!!!!#e!!G-!A!a!!!!!!!!HRLU#E!#!5!!!!!!!!#=+tG;!!&M+u!!!!!!!07LL:>{!A*H.!"8!G"C(s!b!!!!!!!!DJIt4{Bc4w'M6mGm,'!!!!!!!.!`6nGm!e#e!!!!!!#M+m#g"W#c$'!#!h.]1C!!!!!!!!#E+e1?$'!#!x.^1C!!!!!!!!#E+e1?#E!#"(!!!!!!
+!!!!!0G5!!&R1a!!L76k!A7o!!#c"C!#"Y&K!0GU!!)3!q!"!!#i!q!!!!4'!q!"!!4'!q!#!!4'!q!$!!4'!q!"!!#h&k!$!Q.[!1!"!q.[!!!(!1.[!1!(!1.[!A!(!1.[!Q!(!1!!!!!!!!!!!!!!!!!!!1!+!!)2!q!"!!#h"C!#!7&K!0G5!!&M6oBCL?+u,7%D!!+u!A"/!1!!!!!!!1!(!!&K1Q#c!!!a!!!!!!!!!!!b!!!!!!!!
+!!!"!"&K!A"8!G!A!!!!!!!!!!!&L8&K!A$|!W!A!!!!!!!!!!!&L7<7!Q!&!!.["c!+!!)2!q!&!!<8+u!!!!!!!07L,'!!!!!!!!!!!1!3!!&K4w'M&K!!!!!!!0!`""G?!!&L4w*3&K!!!!!!!!!!""Gm!!!!!!!!K8JT!!!!!!!!HRIr!"&K!A"8!G!A!!!!!!!!ItIvL8&K!A$|!W!A!!!!!!!!ItIvL;!!!!!!!!!!!%#e!!!!!!#M
++e#e$'!#!(.]1C!!!!!!!!!!!!1?$'!#!8.^1C!!!!!!!!#U+e1?+u!!!!!!!!!!,'!!!!!!!!!!!1!,!!&K4G#e"c!!L7>{!A$y!1!+!1#c!!"N!!+v8_#1!)>{:3"N!&Aa8O!/!)9Q!a!'!#G.!!!!!!!!!!!o1WEN"h-"4mBh!!!!!!!a!!!!!!!!!!!b!!!!!!!!ElIr!"&K!A"8!G!A!!!!!!!!!!!&L8&K!A$|!W!A!!!!!!!!G0Iv
+L;!!!!!!!!#M+i#e!!!!!!#M+e#e$'!#!(.]1C!!!!!!!!#E+e1?#%!#!8.^1G&L!!1?!!!a!!!!!!!!K8JT!!!!!!!!ElIr!!Aa!A"8!G"%!1!&L8&K!A$|!W!A!!!!!!!!G0IvL7!!+u!!!!!!!/7L,'!!!!!!!!!!!1!3!!&K4w'M&K!!!!!!!/!`""G9!!&L4w*31a!!""G-!*9Q<W"\!'G-;%!]!*9Q!a!%!.1A!Q!!!0LVLVLVLK)1
+,G!d!!!!!!!!!!!!={+u!!#e!a"+!%!)*U9x(x2-!!";!1!!3E!b#077'_G;-y!!-y#e!!G-+uDW(Q4U0CDG!")1!!"4!%!-)3B*(uE6!!#Q!!!!!1!F!#DG!A!!!!!!!B?R!!&KLVIq!!!!!!!!!!!!!!!"!!&K!!!!!!!!!!!!!!!!!!"?@_!!!!!'!%1A.[7]'?4U3)6k!%!!!!!D!%!)=[1h(y=!!!!9!1!!"c!a#a74'_I3-I!!47!!
+!!<7+uJ['o4U)e<7!!#e!!!L!%!/0!74(r,a!!"%!!!!-9!q#Q75'_H(.;!!1a!!!%1A!!!j!!&K-Y!$!!!!!!!j$QGtGD<K!%!j$QGtGD<K!%!`!!!!!!!!AdJR!!!!!!!!AlJ\!!!!!!!!ItJ\!!!!!!!!ItIr!!,'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#e!!!!#E!#!%9e>_6L5j+u,&G;!!&L-J-g
+-7%#$G!aL7G-!A'-!!!!!!!!AdLU#E!#!U!!!!!!!!#%A`G5!!&Q1a#eL76k!A5+!!#c"C!#"I&O!0G5!!&T1b!!L7G-!A,`!!!!!!!!ItLU#E!#!u9Q!!!!!!#U+tG-9q!%!!#eF{!!!!!!!a!i!!!!!!"F!!+u!1!+!%9Q!a!#!0LVLVLVLVLV!!!!!!!!!!!!!0LVLVL3$W!!!!!$!'6k+u8'(q4U15Iq!/6k!!"(!%!-2eJ:(s4w!!!5
+!!!!)q!i#-7<'_H*.[!!!a!!!!!!&K!A!!!!-I#e!!!!LG!"!*!T9PK7JK;P">)d+h>%JR*\@w&K!qJM>*+h8J?$#dLV*}>nJK6&70)8#dLV)d+hJK3@!l!!!!K9LO)$7x?!>~@z#]+t!Q+hJK3@!l!\@oK8LG)4JR*Y@o+%+0@C!!)<JR*Y@o(?+-3@7<*Y@o(?+-3@7<*Y@o(?+-3@7<*X@o,B>~@q7h@AJK-t".&v>~@q(G-t7<*W@o1k
+(J!\?G'q@w)$7H?%?G<b>~@q={@B@w)$7X?#(1@o+0(17X@AJK-t".&v>~@q(G-t7<*X@o,B>~@q7h@AJK3@!L!\7x@AJC%d7P)4+0!\7x@AJC%Y7M!$+0!\7x@AJC%Y7LIuIt@o+-3@7<)2?%+t!`!T)96&7<)2?%+t!`!!!)6&7<)2?%+t!P!\8:@AJC%Y7LIsIt@G@w)$!<"G!);P7<*a@w)$94)2JKLV!@)t3{H=29*G&R-!25"62y,|
+&QJy&QK#25"21g=>1x,74mJ34m7r&R*<2).{3{1a1WH>4m7r4IG-!!!!!!!a!!!!!!!!ItJS!!!!!!!!ItJS!!!!!!!!ItJS!!!!!!!!ItJS!!!!!!!!G0JS!!!!!!!!G0Jc!!!!!!!!!!!!!!&L!!!7!!)4!a!!!!9R!a!"!!#j!a!-!!#f#u!#!(.e1H.g1A+Y1a&K"2G>!!&L4w?}4wEI!_,y!A!'L7Iq!A'b"i"8#+!%6kJSL7Iq!A*H
+"y"8#;!%6kJSL81A!Q&O!!#e!1+y!!!!"S!%!!Aa!1&]!!&O4w'M&K!!!!!!!/!`""G?!!&P4w*3&K!!!!!!!/!`""G5!!&Q1a!!L7>{!A5+!!"C,+#c"s!#"I&K!)!b,&G5!!&T1a&KL7!a!!!!!!!!G0JS!!!!!!!!K8JS!!!!!!!!K8JS!!!!!!!!G0Ir!!G-!A!a!!!!!!!!G0LU#E!#!5!!!!!!!!#]+tG;!!&M+u!!!!!!!07LL7G-
+!A)q!!!!!!!!G0LU'm!$!A+u!1!+!!+u!A!+!1+u!Q!+!1+u!a!+!!+u!1!"!!+u!1!"!C6k!Q!%!!#e"c!%!!&K"c#i!!)1"c#i!!+u"c!%!!#e!1!%!!#e!1&g!!)4!a!"!!<8!a!%!!<8!a!"!!#f!a!"!!#h%i!$!1+u!1!+!1+u!a!+!1+u!1!"!1+u!1!"!Q!!!!!!!!!!!!!!!!!!!1!1!!)2!a!-!!#g!a!-!!#h"C!#!I!m,&G-
+!%!!!!!!!!#E+i!!!!!!!!#E+i!!!!!!!!#U+i#Z-RLK-RKy+i!!!!!!!!#E+i#Z-RLK-RKi+j#e!!!!!!!!!!!!!!#e!"1A!A'b!G"C#Y"8.!"D!3E)6{&T,&G=!!)3!a!-!!#h!a!-!!#i#E!#!X/I1H.z1I!O,&G;!!&Q.k!!!!!!!!!!L7>{!A"5!!!*!-#c$'!#!h.z1C!!!!!!!!#E+e1?$'!#!8.^1C!!!!!!!!#E+e1?"c!$!Q+u
+#%!"!r&K!A/r&Q!A!!!!!!!!G0IvL7!!!!#e!!!!!!!"!!!!!!!!!!!!!!!"!!!!"C!#!7&L!0G5!!&S1a#eLA!!GM(+!!G/7M#K!:DGLG"^!!+u!q!-!Q!!!!!"!1!(!!&K1Q&I!!!a!!!!!!!!!!!a!!!!!!!!ItIr!".[!A"8#+"8"i!-1a!!4w'M6l2#L8.[!A$|#;"8"y!.1a!!4w*36l2#L7<7!Q#i!!&K"c$G!!!!!!!!G0JS!!!!
+!!!!ItIr!!>{!A"5!!!*!-#c&k!#!8.g1H.e1A?=!!!!!!!!G0K*!W!&4G#e"c%i6l2#L7<7!Q!%!!)1"c!!+u!!!!!!!/!`+u!!!!!!!!!!!1!,!!&K4G&K"c#%L9&K!A$|#+"8"i!,&K!!!!!!!/!`4w*3!x&O!!<8Ai!7,&G-!!!a!!!!!!!!ItJS!!!!!!!!!!!"!".[!A"8#+"8"i!-4w'M1a!!6l2#L8.[!A$|#;"8"y!-4w*31a!!
+6l2#L7<7!Q#i!!)1"c%4!/.[8_"f!)>{/}"M!!G-8?!%!!.[)1#e!!!!+u!!!!!!!/!`+u!!!!!!!/!`+u!!!!!!!/!`+u!!!!!!!/!`!!#f!1!)!!&O1a!!L76k!A/_!1#c"3!#")#fL8&K!A"8!G!A!!!!!!!!G0IvL8.[!A$|!W!A!!!!!!!!G0Iv6o$GL7>{!A'_!!!*!!#c"s!#!X&K!!9R!0GC!!)1!a!!!!9S!a!#!!<7!a!-!!#e
+"c!$!1+u!!!*!Q!!!+&K!a!"!+#e!Q!!!0LVLVLVLK!!+u!a!!!!!!#dLVLVJi+u!!#e!a"+!%!-*S',(rH!!!!E!Q!!3E!b"I6p+gH1/M!!-9#e!!!!!!!!!!!!!!!!!!!!!!"3!%!-@?2"(y=/!!"o!!!!!1!!!!!!!!!!!/#$!!!!!!!!G0Iq!!!!!!#E+e!!!!!!!/#$#L.5,!44G8J!4t<w=IFk+eHCF/"j#C!`#L.5,!44G8Iq!!!!
+!!#EAQ!!!!!!!/!`!!!!!!!!G0Iq!!!!!!#EAQ!!&K!A!!!!!1#e!!!!7<IrL?+t!@HRLG&I7LIrL?+t!@HRLG&I7LIrL?+t!@HRLG&I7LIrL?+t!@HRLG&I7LIrL?+t!@HRLG9OLVIq!0LV6c+t!8K8LG%(7LIr6c+t!8K8LG%(7LIr6c+t!8K8LG%(7LIr6c+t!8K8LG%(7LIr6c+t!8K8LG%(7LIr6cG,!@"RLG&;9PIrIyLV!@"RLG&;
+9PIrIyLV!@"RLG&;9PIrIyLV!@"RLG&;9PIrIyLV!@"RLG&;9PIrIy9P8/"KLG#t9PIr#]LV!1KDLG#t9PIr#]LV!1KDLG#t9PIr#]LV!1KDLG#t9PIr#]LV!1KDLG#t9PIr#]LV!1KDLG#t8nK%!#DG!A!!!!!!@.-c!"!!LVIq!!!!!!!!!!!!!!!"!!#e!!!!!!!!!!!!!0LVLVK|D'!!!!!+!%1A.[7-(q4U16!!!&!!!!!D!%!*%)!`
+(yJc!!!x!1!!"c!a"Z6l+gG3.{!!*C!!!!<7+uKm!4JA+J&K!!#e!!!i!&!/C%$F(t2:!!"%!!!!(?!a#L!(+gI)/m!!1a!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#)1+u;u"6JA%N6k!!Ir!!!!!!!!,'!!!!!!!"!a,'!!!!!!!"!a,'!!!!!!!-!`,'!!!!!!!-#$-I!!!!!!!0!`-I!!
+!!!!!0!`!a!)&K!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"!!!!!!G-!A!b!!!!!!!!#i#c#E!#!5#e!!!!!!!1,&G;!!&M,'!!!!!!!-!`L7G-!A)r!!!!!!!!AlLU"C!#")&O!0G5!!&R1a!!L76k!A7o"C#c"C!#"Y&k!0G;!!&O-I!!!!!!!0!`L7G-!A/F!!!!!!!!ItLU!*&K!a!"!.Iq!!!!!!+u-9!!
+!!!!7=!%!!#e"c!l!!+u!A#dLVLVLVLVLG!!!!!!!!!!!!#dLVLV&L#e!!!!!Q"+!%!)Iq:2(o$a!!#M!!!!23!a#3!++gIZ0?!!$G!!!$+u-9Aa"vJAL,<7!!+u!!!!!#!!&K!!!$Ab!!!!!0Iq!1"S)iLV7<*^@o0^*}>nJK@z!|JM>*+h8j?"AT>%JR*^@o0^)d+hJK3@!<*W)a0^LVLJJK3@7M!"!Y+07<*Y@o#t7LIr!Y+07<*V@o-l
+)d*r7LIr!Y+07<*V@w&K!A;.7LIr!Y+07<*V@o+x@z@^7LIr!Y+07<*V@o+x@z?,7LIr!Y+07<*V@o)4@z@C!!#p7H@AJK+0!1*]@w)$7H>|!Y>67<*V@o#h8Z@AJK+0!1*]@w)$7H>|!Y>67<*V@o+x@z@r7P*V@w)$7H>~!\@z7M!"!Y+07<*V@o+x@z?,7LIr!Y+07<*V@o+x)d*r7LIr!Y+07<*V@w&K!A;.7LIr!Y+07<*Y@o%H7LIr
+!Y+07<*Y@o#t7LIr!Y+07<*Y@w+u!1@B@w)$9<@AJKI,7<*a@w)$94)2JKLV!@)t3{H=29*G&R-!25"62y,|&QJy&QK#25"21g=>1x,74mJ34m7r&R*43[.{4]:W25"22E"$3kK)2i/o(q!!4].{2iK'2z=H3l,x3G")3K:c&R-(&Q5.4i!C3|-!2:&k4]:W25GO!!!!!!!!+u!!!!!!!!!a+vCl48ClJ2JR+u!!!!!!!!!!,#7~%u5:%x!`
++u!!!!!!!!!!,#7~%u5:%w!`.[!!!!!!!!!!!!!!!1!!$g!$!Q+u!!!*!1+u!1!"!q+u#%!"!2#e!A"8"i"8#+!$Gs&M!!4%#u!#!8.f1H.h1A+Y1a&K"2G<!!&M4wBc4w=9!i!0,&G<!!&N4wEI4w?}!i!0,&G=!!)3!a!"!!#i!a!-!!#e$'!#!h.]1C!!!!!!!!#E+e1?$'!#!x.^1C!!!!!!!!#E+e1?"C!#")&K!0G8!!&R1a!!6o$G
+L7>{!A7o!!"C,+#c"C!#"Y&K!0G-!!!a!!!!!!!!!%!a*[IT*[ITK(JS!!!!!!!!!%!a!!!!!!!!!e!"!!G-!A!a!!!!!!!!!%#c#E!#!5!Y9?)i9?+l+tG;!!&M+u!!!!!!!!!aL7G-!A)q!!!!!!!!!e#c%i!$!!+u!1!"!!+u!1!"!A+u!1!+!!+u!a!+!"Aa!Q&O!!#e!1!%!!#e!1&O!!#e"c!%!!+u"c!C!!)2!a!"!!#f!a!"!!#h
+!a!-!!#e!a!"!!<8!a!$!!<8&k!$!Q+u!1!"!1+u!1!"!Q+u#%!"!!+u!1!+!1+u!Q!+!1!!+u!!!!!!!/#$,#7~%u5:%w!`,'!!!!!!!/!`,6/F<6,`<3,V,'!!!!!!!.!`,6/F<6,`<2,V.[!!!!!!!!!!!!!!!1!!&k!#!(.f1H.h1A?=!!!!!!!!G0K*!G!&4G&K"c#%6l2#L8&K!A$'!!!!!!!!G0K*!W!&L89Q!A'b.!"D!3E),'!!
+!!!!!/!`6{&T,&G;!!&N4{Bc4xJs6mGmL8!!!Q&O!!Aa!1+y!!Aa!1)C!!&O&K!!!!!!!/!`4xJs""G7!!)4!a!-!!#j$'!#!s!!!!!!!!#E+l.{1A1?#E!#"%!!!!!!!!!!!0G-!!!!!!!!!!!!!!!"!"!!!Q#i!!Aa!1)5!!Aa!1&S!!&M6oBCL7!!!!#e!!!!!!!"!!!!!!!!!!!!!!!"!!!!"C!#!7&L!0G5!!&S1a#eL76k!!!!!!!!
+!!!!!!!!!1!!"3!#!W#fLA+u$G*s!/<97M#)!JAaEI%F!09Q;E!%!!1A(O)1!!!!!1#e"3!#!'#fL7!!+u!!!!!!!!!!+u!!!!!!!!!!!1!+!!)1!a!!!!9U$W!#!(.g1H.e1AEK!!"8!G"C$k#c$W!#!8.h1H.f1A:h!W"%!!"C$k#c"c!$!1+u!A!+!1!!+u!!!!!!!/#$+u!!!!!!!!!!!1!+!!)1!a!-!!#e"s!#!(&K!!9QApG8!!&L
+4G#e"c%iL;!!!!!!!!#EAU#-48Cl48D7+e#e"s!#!(&K!!9QApGB!!&L4wEI4w?}"i&K!(.^1I!7,&G7!!)2!a!%!!<8!!!a!!!!!!!!!!!aC,$#Bz$#ItIr!!<7!Q!%!!!!"S,,!!&K4wBc4w=9#,.]1G&K!)!7,&G8!!&L4G)1"c%iL7!!8_#;!)>{:s"N!'&K8O!/!)9Q!a!&!"1B!!!!!%!!!!!!!!#EAU#-48Cl48D'+i!!!!!!!!#E
+AU#-48Cl48D'+e&L!!#e#U!#!%!!!!!!!!#E+f+s$'!#!8.^1C!!!!!!!!#E+e1?(o!#!h&K!!9QAh&L!!<7Aa:e!!!*!-"5!a!+!-!*1a&K1a+u6l2#1a+u6l2#L8Aa!Q!%!!!!"S+y!!&K"c!%!!)1"c!%!!!!"S&V!!&M4G!!"S#%L7<7!Q#i!!!!"S)<!!&N4G!!"S%iL76k!A/_!1#c"C!#")&K!0Hq!!+u!1#-!!1A!!#dLVLVLVJS
+!%!!+u!!!!!!LVLVLN*=!!!"!!+u2c!a"H6x+gG.0o!!-9)1!'Aa,'8W#hJA-O!!!$!"!!!!!!!!!!!!!!!!!!!!!!!!4'!a"Q!2+gHH1Q!!DG!!!!#e!!!!!!!!!!!!!-7~%u5:%w!`!!!!!!!!!!#-48Cl48D'AQHCF/"j#C#$E717"49{G0Iq%78c7!H*+r3jJs4@(=#$!!!!!!!!!!#-48Cl48D'AQ!!!!!!!!!!C,$#Bz$#G0Kp!#DG
+!A!!!!!!;2(9!")1LVIq!!!!!!!!!!!!!!!"!!#e!!!!!!!!!!!!!0LVLVIq;e!!!!!'!%1A.[8G"VJA!6>{!&!!!!!D!%!/#e?\(t$b!!!k!1!!"c!a"y6w+gHj0_!!23!!!!<7+uL/#(JA!&DG!!#e!!!i!&!/HOBB(s:U!!"%!!!!(?!a#P6}+gHz1a!!1a!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(1y!!!$!!.[&+!r"N!E'_I,
+.;!!:s!!!$+u+uB+(a4U/1Iq!!Aa!!!?!&#m+wDn(q:L!!#=!!!!&+!r"R6s+gG:1q!!:s!!!!!!!!!!!!!!!!!!!!!!!!!!!!&K!Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!a!!!!!!!!!%!,&N8O&K!!!!!!!!!!!!!!!!!!!!!A!>!!6k!!#dLVLV!y"N!A&K!!!"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!>ZLOLG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"&*xBy2z*<3{Bw28Bw29EY3K${28Br4M5,2i$y4iHE4^)1!1!6!!!!!!!%6zLV?M*^!A&KLVIq!!!!!!!!!0#$!!!!!!!)$K!!!!!!!06{+u#e!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!#e!1"*!!9Q!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#<7>{!K!"+u!A!K!1!!!!!j"p5l4*Es$+!j.f7+7k?nHRJT!!!!!!!!AdJT!!!!!!!!AlJ\!!!!!!!!ItJ\!!!!!!!!ItIu!!7-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#e!!!!#E!#!%9[Ec*C+M<I,&G;!!&L-N"{&31,.y7LL7G-!A'.!!!!!!!!
+AdLU#E!#!U#e!!!!!!#%A`G5!!&Q1a+uL76k!A5+!!#c"C!#"I&S!0G5!!&T1c!!L7G-!A,`!!!!!!!!ItLU#E!#!u9Q!!!!!!#U+tG-9q!%!!#eF{!!!!!!!1!i!!!!!!!#!%6k!!!+!!)1-9!!!!+u!a!i!!!!"c!&!%6k!!!3!))1&k"F!"<77=!3!))1"c"F!!+u!q!K!%1A!1!h!!&K-9!$!%9Q!a!m!!.[!A#dLVLVLVLVLG!!!!!!
+!!!!!!!!!!!!/}+u!!!!!Q"+!%!)G./<(v*8!!#M!!!!23!a#2!7+gH*2C!!,W!!!$+u-9B#$zJA<-1A!"+u!!!!!!!!+w:O9M)&'{!`+z"{&31,.xBB+u!!!!!!!0!`+u!!!!!!!/,V+u!!!!!!!/!`+u!!!!!!!.,V.[!!!!!!!!!!!!!!!1!!#E!#!%!J0gKwJe91+tG;!!&L+z"{&31,.xBBL7G-!A'-!!!!!!!!ItLU#E!#!U!!!!!!
+!!#I+tG-#e!!!!!!!!!!!!!!!!!"!"!!!Q)5!!+u!1!%!!+u!1#i!)+u6{"^!!+u!A"e!!!!!!!!!1!(+u!!!!!!!!!!+u!!!!!!!!!!!1!a!!!!!!!!ItJS!!!!!!!!!!!"!%!!!!!!!!#U+i!!!!!!!!#I+e#e+u!!!!!!!!!!+u!!!!!!!/,V!1!a!!!!!!!!!!!a!!!!!!!!!!!"!)>{/}"N!%+u8_!Q!)>{%i"M!!4'8?!%!!1A3E!"
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#]+e!!!!!!!/7LLVLVLVLVLVLVLG#e!!!!!%!!!!!!!!!!!%!!!!!!!!#9+e!!+u!!!!!!!/!`+u!!!!!!!/,V!!!a!!!!!!!!ItJS!!!!!!!!E,Iq!"!!!Q!%!!+u!1!%!!+u!1#u!!)2!a!%!!#e!a!%!!#f+u!!!!!!!/!`+u!!!!!!!!!!!!"\!'!!;%!M!*9Q%)"\!!+u!a"7!!!!!!!!!!!!
+,+Gn-}JZ"h)z--Gn-y!!!!!!!!!!!!!!!!!1']!S4HCl48ClAtIr!!!/!!&R)X&gBz$#C!$FL7!!!*+u!a!"!#9Q!q!!!!#e!!!&!0LVLVLVLG!!!!!!!!!!/o.[!!#e"#"+!%!)DH4f(o*:!!"s!!!!3E!b"K7%+gI$2S!!8/!!!#6k+u<O%<JA++6k!#G-!!"4!%!).\:2(u:[!!"K!!!!#E!a"q!:+gIb2c!!$g!!!'9Q+uAa%LJA"99Q
+!$+u!!!"!!!!!!!a"p5l4*DQ!E!a.f7+7k?nFNJS!!!!!!!!ItJS!!!!!!!!GpJS!!!!!!!!G0JS!!!!!!!!E,Jc!!!!!!!!!!!!!!!"!!!/!!&K+u>R<n!^"c'-L7G-!A$G.f7+7k?nFNLU#E!#!E!!!!!!!!#U+tG;!!&N+u!!!!!!!/,VL7!=!!!!!!!!!!!!!!!!!!#e%i!$!Q+u!a!"!A+u!a!"!Q.[!a!"!!.[!a!"!1+u7M"D!*>{
+!a!#!+G-!!!!!!!"!!4g!!!!!!!!!!!a!!!!!!!!!!!"!%!!!!!!!!#U+i!!!!!!!!!!!!#e+u!!!!!!!0!`+u!!!!!!!/,V!1!a!!!!!!!!!!!a!!!!!!!!GpIr!%!!!!!!!!!!!%!!!!!!!!!!!!#e8_!y!)>{,W"N!$!!8_!=!)<7"3"L!!+u"#"/!!&K!!!!!!!!!!!!!!!!!!!!!!!!!!!!!07L!!!!!!!!HRLVLVLVLVLVLVLV!A!!
+!!!!+u!!!!!!!!!!+u!!!!!!!.,V!!!1!!)1!a!%!!#g!a!%!!#h#e!$!1+u!a!"!A+u!a!"!U!!!!!!!!#E+i!!!!!!!!#I+e!!+u!!!!!!!0!`+u!!!!!!!.,V!!!1!!)1!q!%!!#e!q!%!!#f#e!$!1.[!a!"!!.[!a!"!5!!!!!!!!#E+i!!!!!!!!!!!!!!;%"C!*9Q-y"\!$6k;%!%!!+u:3!!!!!!!!!!!&)r.0!m,l&U'q$K,I9Q
+!!!!!!!!!!!!!!!!#g4')X&gBz$#C!$F!1!!#E!#"6'_%u5:%u6,+tG-!!"W!!+u!1!J!!.[!!!#!!!!!q#dLVLVLVIq!!!!!!!!!+J8!!!"!!1A2c!a#2!;+gI.2s!!A!!!!'Aa,'8G%\JA5_<7!)6k!!!I!%!+'nBB(o$r!!!O!!!!47!a"I!=+gG\35!!=Y!!!!G-+u<G%|JAE_>{!"1A!!",!%!-)2E((}ET!!!U!!!!!1!!!!!!+}1,
+.v7+!r!a+z"{&31,.xBB+u!!!!!!!0!`+u!!!!!!!/,V+u!!!!!!!/!`+u!!!!!!!.,V.[!!!!!!!!!!!!!!!1!!#E!#!%"HI&%a&+.k,&G;!!&L+z"{&31,.xBBL7G-!A'-!!!!!!!!ItLU#E!#!U!!!!!!!!#I+tG-#e!!!!!!!!!!!!!!!!!"!"!!!Q)6!!+u!1&P!!+u!1)5!)+u6{"^!!+u!A"e!!!!!!!!!1!(+u!!!!!!!!!!+u!!
+!!!!!!!!!1!a!!!!!!!!ItJS!!!!!!!!!!!"!%!!!!!!!!#U+i!!!!!!!!#I+e#e+u!!!!!!!!!!+u!!!!!!!/,V!1!a!!!!!!!!!!!a!!!!!!!!!!!"!)>{/}"N!%+u8_!Q!)>{%i"M!!4'8?!%!!1A3E!$!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#]+e!!!!!!!/7LLVLVLVLVLVLVLG)1!!!!!%!!!!!!!!!!!%!!!!!!!!#9+e!!#e!$
+!!.[!a!"!A.[!a!"!R!!!Q#j!!+u!1&P!!+u!1)q!!!!!!!!G0JS!!!!!!!!GpIq!%!!!!!!!!#U+i!!!!!!!!#9+e!!+u!!!!!!!/!`+u!!!!!!!!!!!!"\!'!!;%!m!*9Q*S"\!!+u!a"7!!!!!!!!!!!!,[::-N,X-{!+/1::.?$S!!!!!!!!!!!!!!!!!"!H!$'_%u5:%u6,+e#e!!G-!A4Y4HCl48ClAtLU!!!!:3!%!!#e'}!&!!!!
+!Q!!!!.[LVLVLVLV!!!!!!!!!!!|'=!!!1!'!'6k+u6k&.JA<mAa!,!!!!"/!%#m@@Gl(t*@!!"K!!!!'m!a"g7,+gIL3U!!(o!!!(#e+u8/&>JA"YG-!)6k!!!/!%!)#g!`(x$u!!!9!!!!2s!a#(!A+gHx3e!!)q!!!!#e!!!!!%!5>_6L5j.Q+i!q@@HTI&&'+i!!!!!!!!#M+i!!!!!!!!!!!%!!!!!!!!#=+i!!!!!!!!!!!&!!!!!!
+!!!!!!!!!A#e!"1A!U!5>_6L5j.K+i!q@@HTI&&'+i!5>_6L5j.W+i!q@@HTI&&'+e#e%Y!#!(!"!!&K"3!!4'#e!A!(!1"C"w"=)e#c%Y!#!8!"!!&K"3!!4'#e!A!(!1"C"w"=)e#c%Y!#!H!#!!!!"3!!4'&K!!!(!1"C"w"=)e#c%Y!#!X!#!!!!"3!!4'&K!!!(!1"C"w"=)e#c!!!!!!!!!!!!!!!!!!!"!"Aa!Q)5!!+u!1!%!!+u
+!1#i!!+u!1&O!!+u!1)1HS!!!!!!!!#=+i!!!!!!!!!!!%!!!!!!!!#M+i#Z-RLK-RKy+i!!!!!!!!#=+i#Z-RLK-RKi+j#e!!!!!!!!!!!!!!!!!!!!!*Aa"c%-!.G-;e!j!*>{!a!%!&#f!!!!!!#f!!4g!!!!!!!!!!!a!!!!!!!!!!!"!%!!!!!!!!#=+i!!!!!!!!!!!!#e+u!!!!!!!.7L+u!!!!!!!!!!!1!a!!!!!!!!HRJS!!!!
+!!!!!!!"!)>{,W"N!$!!8_!=!)<7"3"L!!+u!q!y!!+u!!!!!!!!!!!!!!!!!!!!!!!!!!!!!0!`!!!!!!!!ItLVLVLVLVLVLG+u!!!!!%!!!!!!!!#=+i!!!!!!!!!!!%!!!!!!!!#=+i!!!!!!!!!!!!!"!1!!!!!!<W!%!!#e(_!%!!!!!a!#!!+u(o#dLVLV!!!!!0LVLVJh2#!!!1!%!'6k+u91&NJA17Iq!'6l!!"/!%#m.]',({59
+!!"3!!!!'m!a#17/+gGd47!!(O!!!(!!+u6k&~JA1x#e!$6k!!!"!!!!!!!a"p5l4*DQ"W!a.f7+7k?nFNJS!!!!!!!!HRJS!!!!!!!!!!!a!!!!!!!!ElJS!!!!!!!!!!!q!!!!!!!!!!!!!!&L!!!7!!)q"p5l4*DQ"'!a.f7+7k?nFNJS"p5l4*DQ#)!a.f7+7k?nFNIr!">{!A"3!A!#!!4'!(!#!!&K"3#e6k?]5l)qL8>{!A$w!A!#
+!!4'!(!#!!&K"3#e6k?]5l)qL8>{!A']!Q!!!!4'!(!$!!!!"3#e6k?]5l)qL8>{!A*C!Q!!!!4'!(!$!!!!"3#e6k?]5l)qL7!!!!!!!!!!!!!!!!!!!1!=!!)4!q!%!!#e!q!%!!#f!q!%!!#g!q!%!!#h!/7M!!!!!!!!ElJS!!!!!!!!!!!a!!!!!!!!HRJSJg;4JW;4BFJS!!!!!!!!ElJSJg;4JW;4?`Jd!!!!!!!!!!!!!!!!!!!!
+!!"_!!<87M#C!*DG-I"^!!+u!a!r!1!!!!!"!1!(+u!!!!!!!!!!+u!!!!!!!!!!!1!a!!!!!!!!ElJS!!!!!!!!!!!"!%!!!!!!!!#=+i!!!!!!!!!!!!#e+u!!!!!!!/7L+u!!!!!!!!!!!1"N!%+u8_!Q!)>{%i"M!!4'8?!%!!.[/}!&!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#U+e!!!!!!!0!`LVLVLVLVLVIv!!!!!!!a!!!!!!!!
+ElJS!!!!!!!!!!!a!!!!!!!!ElJS!!!!!!!!!!!!!1#e!!!!!+&K!a!"!#DG!a!!!!.[!A!%!#G-LVLVLG!!!!#dLVLV/S+u!!#e!a"+!%!)>})p(~EZ!!"+!1!!3E!b"E!F+gH44W!!4'!!!#6k+uC='@JAE@)1!#Aa!!"3!%!)DI/<(o${!!!Y!!!!!1#dLG!!!!!!!!!!!!!!!!!!!!!!!!!!ItIq!!!!!"!5+u!!!!!!Ir!a!!!!!!!!
+!!!!!!!!!!!!!!!!!!#_+%!!!!!'!%1A.[87$ZJA?S1A!&!!!!!i!&!/+v4f(r@(!!"E!!!!-9!q#I!;+gGN3E!!7-!!!%6k.[H?%|JAFaG-!)&K!!!i!&!/4)!`(x@0!!"%!!!!-9!q#I!D+gGf4g!!1a!!!!!!!!!!!!!!@"DG!!#e!A!6!&#qEj,V(x@3!!"g!!!!)q!a#&!G+gGl4w!!!a!!!!!!LVIq!!#e.a$n25Dx!!!'!!#e,=Bd
+1w?=2I:_3E!!$'!"!&512z,|&Q2L3KAa!!+u!1!c3L/b&Q2L3KAa!1!s29,72I:_3E!!!1!h4M/b3g")2yBo!!!N!!#e,N:T3g")2yBo!!#e05/i3KK,&Q2L3KAa-)!"!%EJ2Y/k4m$'2I:_3E!!!1!h4M%"&Q2L3KAa!1!R)3.{-0'N5[")2yBo!!#e)T!F&O5;1X9q2I:_3E!"!$)a'?!h4M%"&Q2L3KAa!1!c3L/b&Q,x4M?=2I:_3E!!
+9Q!"!&'R2%"'1X'X&Q2L3KAa!1!d5_$u&Q,x4M?=2I:_3E!!>{!"!%5;29/k&Q,x4M?=2I:_3E#%!!#e05/i3KK,&Q,x4M?=2I:_3E!!!1!n1W5.3l,x&Q,x4M?=2I:_3E!"!$,G'?!h4M%"&Q2L3KAa!1!V)3.{-0'N5[")2yBo!!#e*6!F&O5;1X9q2I:_3E!"!$4W'?!h4M%"&Q2L3KAa!1!Y)3.{-0'N5[")2yBo!!#e*f!F&O5;1X9q
+2I:_3E!"!%'Y1W*>&N$w5OB#3K:a23"'!1#e,=Bd1w?=)h";3G"/2yH4!(+v!1!c3K$j37!Z4.7y&QBl3k.[7M#f!&'R2%!R4.7y&QBl3k.[!1!s29,7)h";3G"/2yH4!!#e/#/a&N:c5OB#3K:a23!"!%'Y4}.{)H";3G"/2yH4!!#3!1#e,=Bx25!T4.7y&QBl3k.[!/!"!1!c3L/b&N:c5OB#3K:a23!!Iq#f!&512z,|&N$w5OB#3K:a
+23!!!A#e/s7v4m.{)h";3G"/2yH4!"#g!1!x2i:g25!Z4.7y&QBl3k.['=&L!%7n2z'Y2yH4!!&L!%'Y1W*>&R*;3|'a&Q,x4]7r2%"/2yH4!#.]!1!b4N'\5;"%3|-!!!"9!A#e,.'V1WB#&N7}4i"&29HC2:'R2#"%!A#e,.'_3|4G1g/d2yG-;u&L!%$y4MK,&Q/k2#!"!%$y2y$s&N$74.,71w/k4m/o29+u;u&L!%$y2y$s&N$94.,7
+1w/k4m/o29+u>K&L!%$y2y$s&N$?4.,71w/k4m/o29+uBc&L!%$y2y$s&N'!4.,71w/k4m/o29+uEI&L!%$y2y$s&M!Y4.,74mK%&QBh2J+uGm&L!%$y2y$s&N$74.,74mK%&QBh2J+uKU&L!%$y2y$s&M!Y4.,74mK%!!!K!Q#e,.'V1WB#)D"34i"73|!!!%&N!1!u2yEN4Y!A*Z"7&Q*83l,|4M/a!%&N!1!u2yEN4Y!A*Z"7&R-(4'!!
+4G)2!&-"3[/p&M!Y4.,74mK%&QBh2J+u4G)2!&-"3[/p&N$74.,71w/k4m/o29+u7])2!&-"3[/p&N$74.,74mK%!!"u!Q#e/C:`2:)Q)D"34i"73|!A3K/c4g"u!Q#e/C:`2:)Q)D']4i"&29HC2:'R2##*!Q#e/C:`2:)Q)D7}4i"&29HC2:'R2##C!Q#e/C:`2:)Q)T-)4i"&29HC2:'R2##[!Q#e.R'T&O*B3kH41x-(4G!"!%K'2U!o
+3|'Z1WAa!&&O!1!p4M4G,MK#4^/i4m$u4g!!.{+v!%K'2U!f5O/`!!+v!%K'2U!j3k2R1gK-!)9U!1!p4M4G.!:f4g!%!1!p4M4G.AK'3[$s&N&K!a#e.R'T&P*G1W*>!!#e.R'T&P,|1WDG!a#e.R'T&P-"4mBh!!&K,n7r1x/q2z2H!!#e,n7r1x/q2z2H(r&KIa+v!%/u29*H4m:i25G`!0Ae!Q!t2y,|&R-(&R*<2).[!q#e/3:W25"7
+3w"61WEN&R*<2).{!!#a!a#e/3:W25"73w"61WEN&R*<2)/+)q!)!q#e/3:W25"73w"62y,|(r.[!#1F)a")!t)1.+/0!$4,)a!G!t)1$g/0!!6p)a#a!d)1Ia,J!/+y)a#<!d)1Bs,J!,<;)a"n!d)1;e,J!)9U)a"?!d)13%,J!&&O)a![!d)1&k,J!!9U)a#[!T)1Fk)d!-.^)a"u!T)1;%)d!).^)a"5!T)10?)d!%&N)a!K!T)1$')d
+!0<9)a#I!D)1EI&~!-1C)a"p!D)1;u&~!))3)a"9!D)11a&~!%G/)a!Z!D)1'=&~!"#g)a!!!D)1Iq$:!/!")a#3!4)1@_$:!+1B)a"W!4)17M$:!(+v)a"'!4)1/=$:!%+v)a!U!4)1&;$:!!<8)a#Z!$)1Gm!T!.#e)a#%!$)1>{!T!+!!)a"S!$)17=!T!(&K)a"'!$)1/M!T!%4')a!]!$)1(_!T!"DG)a!.!$)1!a!n!(9V!!!6!!!!
+!!#dLG!!!A!!!!!!!!!!!!#e!!!!!!!!"S"*!!!"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'r/R/V0MEG!a'w9HJ,33EG!a'r/R/V0MEG!a'w9HJ,33EG!a(T!!!!!!!!!!!!!!!!!!!!!!!!!!!!#`=y#e!!!2!"1A.[BC!BJA)q!!!'+u!!!8!%!)>{&j(x6k!!!)!!!!$w!a"O!#&=Ho!!!!"C!!!"6k.[9!
+!BJABc!!!!!$!!!G!%!-:s<V({1D!!!u!!!!%I!q#46u&=I+,'!!?]+u!">{+u!!!$JF3i1A!+!!!!!=!%!!!!!H)aGt!!"#!!!!%y!q#G71'_Ht1q!!5i!!!#+u.[B+$:JA&A+u!!Aa!!!A!%!)+v)p(q@#!!!)!!!!&[!a"H!4+gG`2#!!"C!!!#9Q+u7m$:JA+++u!$6l!!!H!&!+<8,V(s*H!!!O!!!!LG"3#3!M+gG-!!!!!!!!!$&K
++uB#'PJA4>.[!,+{!!!]!%!/>{!@(q/y!!!+!!!!DSJ$G7%Z%W#e!!!!!!!!!!!!!!!!!!!!+%!$!0Ip"S!'!!!!!!!!!!!!!!!"!!!!!1!!!!!!!!!!#e!!!A#j!!!&!!!!#5!!!%E./A$M-MBH._:6/=!m(o!!'\9PLG6s!!!)!%B1F+4=#5#e"S!!!_It!!!'!"!!!!!!!!.[!!!,!A!!!!!&!!!!#%(|!(6p!q!!!!IsF:L1LG.[!!!"
+!PLVLG!&!!!!"S(OAm!!!a!!!!&L!A!&!!!!!1)0LVIq"3!!!0Ac!!#%Am!!!!!%!!!!(_#e!!6k!!#_!A.[!!!!!0LVLG!%!!!!(_#f!!G-!!!E!Q.["##'!$&LB#!S!11A"#!'!!1AB#!(!!!!Ku&L!!!!!!!!!!+u!!!N!1&K!a!!!0!"!!!&!!!!#U&q!#1A!q!!!!9SLVLV!!.[!!!"!A!!!!!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!
+Ku&K!0LVLG!!!!+u!!!N!1!!!a!!!#DH!1!/!!!!'-)6!!1AB#!S!=&K)Q#k!!1A"#!'!-&K!a!!!#DH!A!%!!!!Iq#e!!+u!!!N!1&K"C!!!0<9!!!$!!!!!!!!!!+u!!!N!1!!!a!!!!&L!1!/!!!!'=)6!!1AB#!S!=&K)Q#k!!1A"#!'!-&K"C!!!0<9!!!!!!!!!!!!!!+u!!!N!1)1!a!!!0!"!!!1!!!!Ke(eLH)1!!!!!*!"!!!!
+!!!!!#!b4M:T3E!#!!+u!!!N!1!!#e!!!0>}#e!(!!!!!!#!!A!!!!!"!A&m/4:f4m/j!!._!!!!(_#i!!+u!!!)!1!!!q!!!!<9!!!!!!+u!!!#!1#e!a!!!#G.%)!&!!!!"S&K!!!!!a!!!#DH!!!*!!!!&[.a!%$U,+BR-.4',g!*!!!!&[.a!&)z--Gn.#9Q.K!%!!!!(_#i!!.[!!!0!N>zF:Iv!!!!!1)0LVIq!q!!!!9SAm#%!!+u
+!!!#!1&K!q!!!!#gLVLV!!4'!!#a!A!!Am#%!!!!!a!!!#DH!q!%!!!!(_#f!!G-!!!E!Q.[$7(Q!$ItB#!`!Q1A$7&Q!")3B#!%!!!!(_#g!!+u!!#U!1.[!q!!!!Is'M!G!!.[!!!*!PLVLG!&!!!!!1&K!!!!!a!!!!&L!A!&!!!!!1&K!!!!"3!!!0Ac!!#dLVIq!!!%!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q!4!M&K+e+7!$It"#!4
+!A1A$7(Q!!+u!!!N!1&K!a!!!0!"!q!%!!!!(_#g!!6k!!#_!A!!!Q!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#E!!!#.^!q!4!M&K+e+7!$It"#!4!A1A$7(Q!!+u!!!N!1)1!a!!!0!"!q!%!!!!(_#e!!+u!!!N!1+u!a!!!!6l!!!&!!!!"c&K!!!!!a!!!!&L!1!%!!!!(o#}!!.[!!!*!A!!!!!%!!!!(_#e!!<7!!!B!q4'/1$T._BH
+.{!x!%.]"S!!!##j!q!I,+,Z'}"L!'Is!a!!!#DH!a!&!!!!#U(iLT>z!q!!!!#gLVLV!!.[!!!*!M#%Aa!%!!!!!A#g!!.[!!!"!PLVLG!(!!!!Ku&K!-#%Aa!!!!+u!!!N!1.[!a!!!#DH!1!/!!!!'-)6!#!%B#!m!}&K-y.a!#!%"#!A!m&K!a!!!#DH!A!%!!!!Iq#j!!.[!!!0!C1A'M!&!!!!"S)0LVIq!q!!!!#g!!!!!!+u!!!#
+!1&K!q!!!!#g!!!!!!4'!!#a!A!!LVLV!!!!!a!!!#DH!q!%!!!!(_#f!!G-!!!E!Q.[&K-{!%AfB#!m!q1A&K+{!#!%B#!%!!!!(_#g!!+u!!#U!1.[!a!!!#DH!A!)!!!!KU&K!!)1!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!G-!!!F!Q.[&K-{!%AfB#!m!q1A&K+{!#!%B#!%!!!!(_#h!!+u!!#U!1.[!a!!!#DH!!!%!!!!(_#i!!+u
+!!!)!1!!!q!!!!<9!!!!!!+u!!!#!1#e!a!!!#G.%)!&!!!!"S&K!!!!!a!!!#DH!!!+!!!!&[.b!%,`--:G,+Aa/m"'!a9Q!!!B!q1A/1::.?$S8?",!a+u!!!N!1+u!q!!!!9SLVLV!!.[!!!"!A!!!!!%!!!!(_#g!!6k!!#_!A!!!1!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#%!!!#.^!a!S!7+u<g$k!+)22#!4!G+u!a!!!#DH!Q!%
+!!!!Iq#j!!+u!!!#!1&K!q!!!!#g!!!!!!4'!!#a!A!!!!!!!!!!!a!!!#DH!q!%!!!!(_#f!!Aa!!!E!Q+u!a'I!")32#!%!G>{!a'I!!+u!!!N!1&K!a!!!0!"!q!%!!!!(_#g!!6k!!#_!A!!!1!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#%!!!#.^!a!%!FAa$7'Q!!+w35!%!FAa!a!!!#DH!Q!%!!!!Iq#j!!.[!!!*!PLVLG!&!!!!
+!1&K!!!!!a!!!#DH!A!)!!!!KU&K!!#e!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+u+e*7!,!$2#"s!W+u&K,{!!+u!!!N!1)1!a!!!0!"!q!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!Ku&K!!!!!!!!!!+u!!!N!1.[!a!!!#DH!1!-!!!!'-)5!"#i0_!A!g+u#u-$!"#i0_!%!!!!(_#g!!+u!!#U!1.[!a!!!#DH!A!)!!!!KU&K
+!!#e!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+u#u,s!#!%2#!2!g>{#u,s!!+u!!!N!1)1!a!!!0!"!q!$!!!!!!!!!!!!!1!"!#!A#e!"!!+uHO&K!*G-!!!!!!!!!!!!!!!!
+{   76   448 0 0}
+19778 35128 0 0 1068
+40 448 76 1 8 0 34048 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5hLVB"Iv!(<6LS&J#U"<#TJs"79P1A4oLM!(!PJ"!(9_LM!(-HJs"79P1A4)LGIq5YIp1A4oLM!(-HJs"3)0#U"<#TJs"79P1A4oLM!(!PJ"!(9_LM!(-HJs"79P1A4)LGIq5YIp1A4oLM!(
+-HJs"3)0#U"<#TJs"79P1A4oLM!(!PJ"!(9_LM!(-HJs"79P1A4)LGIq5YIp1A4oLM!(-HJs"3)0#U"<#TJs"79P1A4oLM!(!PJ"!(9_LM!(-HJs"79P1A4)LH.[5Y)01Q!,"6DF1Q!,"6DF1Q!,"3)0&["<!PIr!&LV!1!,"6DF!1""LG#e"s4cLG#e1@Ir!!?$!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV!1!,"6DF!1""LG#e"s4)LI#e5Y)0
+!1""LG#e"s4cLG#e1@Ir!!?$+DIr!&LV!1!,"3)0&["<!PIr!&LV!1!,"6DF!1""LG#e"s4cLG#e1@Ir!!?$!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV!1!,"6DF!1""LG#e"s4)LI#e5Y)0!1""LG#e"s4cLG#e1@Ir!!?$+DIr!&LV!1!,"3)0&["<!PIr!&LV!1!,"6DF!1""LG#e"s4cLG#e1@Ir!!?$!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV
+!1!,"6DF!1""LG#e"s4)LI#e5Y)0!1""LG#e"s4cLG#e1@Ir!!?$+DIr!&LV!1!,"3)0&["<!PIr!&LV!1!,"6DF!1""LG#e"s4cLG#e1@Ir!!?$!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV!1!,"6DF!1""LG#e"s4)LI#e5Y)0!1""LG#e"s4cLG#e1@Ir!!?$+DIr!&LV!1!,"3)0&["<!PIr!&LV!1!,"6DF!1""LG#e"s4cLG#e1@Ir!!?$
+!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV!1!,"6DF!1""LG#e"s4)LI#e5Y)0!1""LG#e"s4cLG#e1@Ir!!?$+DIr!&LV!1!,"3)0'}"<!PIr!&LV!1!,"6DF!1!@LG#e%hIr!#+t!1!,"6DF!1""LG#e"s4)LI9Q5Y)0!1""LG#e"s4cLG#e&:Ir!"G,!1!CLG#e"s4cLG#e1@Ir!!?$!PJ<!(9SLG#e1@Ir!!?$+DIr!"Ip!1!>LG#e&zIr!!?$
++DIr!&LV!1!,"3)05Y"<!PIr!"9P!q!$LG#e!pIu!!.Z!1!&LG#e!@Ir!!6j!1!"LG1A%XIr!!?$+DIr!"G,!1!#LG#e"BIr!!&J!q!'LG)1""Ir!#&J!1!,"6DF!1!9LG.[!`Ir!!.Z!a!%LG#e""Ir!!&J!1!(LG#e!@Iw!">z!1!,"3)09a"<!PIr!"6j!1!&LG#e!PIr!!+t!1!%LG#e!`Ir!!.Z!A!"LG#e"BIr!!&J!1!@LG#e"s4c
+LG#e&*Ir!!)0!1!(LG#e!@Ir!!.Z!1!%LG#e!`Ir!!.Z!1!BLG#e"s4cLG#e%(Ir!!1@!1!#LG#e!`Ir!!.Z!1!$LG#e!pIs!!&J!1!(LG#e!@Ir!"LV!1!,"3)0;%"<!PIr!"6j!1!&LG#e!PIr!!)0!1!'LG#e!PIr!!+t!1!"LG#e!PIr!!1@!1!#LG#e&JIr!!?$+DIr!"G,!1!$LG#e""Ir!!)0!1!&LG#e!PIr!!1@!1!$LG#e&jIr
+!!?$+DIr!"6j!1!&LG#e!PIr!!)0!1!'LG#e!PIr!!+t!1!"LG#e!PIr!!1@!1!#LG#e&JIr!!?$!PK6!(9SLG#e&*Ir!!)0!1!#LG#e"2Ir!!)0!1!$LG#e!@Ir!!)0"3!#LG#e&JIr!!?$+DIr!"G,!1!$LG4'!PIr!!1@!1!#LG#e"bIr!#&J!1!,"6DF!1!>LG#e!PIr!!)0!1!'LG#e!PIr!!+t!1!"LG#e!PIx!!)0!1!@LG#e"s4)
+LODG5Y)0!1!<LG&K!`Ir!!)0!1!$LG+u!PIr!!)0!1!#LG#e!`Ir!!+t!1!$LG#e&JIr!!?$+DIr!"G,!1!%LG#e!`Ir!!+t!1!&LG#e!PIr!!<6!1!BLG#e"s4cLG#e%hIs!!+t!1!#LG#e!`Iu!!)0!1!#LG#e!PIr!!+t!1!$LG#e!`Ir!"LV!1!,"3)07]"<!PIr!"9P!Q!&LG#e!PIr!!<6!1!#LG#e!PIr!!+t!1!$LG#e!`Ir!"LV
+!1!,"6DF!1!>LG#e!pIr!!+t!1!$LG#e""Ir!!)0!1!*LG#e&jIr!!?$+DIr!"9P!Q!&LG#e!PIr!!<6!1!#LG#e!PIr!!+t!1!$LG#e!`Ir!"LV!1!,"3)07]"<!PIr!"6j!1!)LG#e!PIr!!<6!1!"LG#e!`Ir!!.Z!1!"LG#e!pIr!"LV!1!,"6DF!1!>LG#e""Ir!!&J!1!%LG#e""Ir!!)0!1!*LG#e&jIr!!?$+DIr!"6j!1!)LG#e
+!PIr!!<6!1!"LG#e!`Ir!!.Z!1!"LG#e!pIr!"LV!1!,"3)0;%"<!PIr!"6j!1!&LG#e!PIr!!)0!1!'LG#e!PIr!!&J!1!$LG#e!pIr!!&J!1!%LG#e&JIr!!?$+DIr!"Ip!1!%LG#e!@Ir!!.Z!1!&LG#e!PIr!!1@!1!#LG#e&zIr!!?$+DIr!"6j!1!&LG#e!PIr!!)0!1!'LG#e!PIr!!&J!1!$LG#e!pIr!!&J!1!%LG#e&JIr!!?$
+!PKF!(9SLG#e%(Ir!!1@!1!#LG#e!`Ir!!.Z!1!$LG&K!pIr!!.Z!1!"LG#e!pIr!"LV!1!,"6DF!1!?LG#e!pIr!!&J!1!%LG#e!pIr!!.Z!1!$LG#e!`Ir!#)0!1!,"6DF!1!8LG#e""Ir!!)0!1!$LG#e!pIr!!+t!A!%LG#e!pIr!!&J!1!%LG#e&JIr!!?$!PK*!(9SLG#e%8Iv!!+t!1!%LG+u!pIr!!1@!1!&LG#e""Ir!"LV!1!,
+"66j!A!$LG#e&JIr!!.Z!1!&LG.["2It!!+t!1!DLG#e"s4^LG&K!`Ir!"9P!q!$LG#e!pIu!!.Z!1!&LG#e""Ir!!1@!1!@LG#e"s4)LI9Q5Y)0!1""LG#e"s4^LG+u!@Ir!&LV!1!,"66j!a!"LG#e1@Ir!!?$!PJ(!(9SLG#e1@J\!&LV-I""LG#e"s4)LI9Q5Y)0!1""LG#e"s4^LG+u!@Ir!&LV!1!,"66j!a!"LG#e1@Ir!!?$!PJ<
+!(9SLG#e1@Ir!!?$*RIs!!+t!1""LG#e"s4^LG&K!`Ir!&LV!1!,"3)0&["<!PIr!&LV!1!,"6DF!1""LG#e"s4cLG#e1@Ir!!?$!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV!1!,"6DF!1""LG#e"s4)LP#e5Y)0!1!4LG#e"BIr!!&J!1!&LG#e!@Ir!!6j!1!"LG1A!`Iu!!4&!a!:LG#e"s4cLG#e$&Iv!!)0!1!(LG#e!@Ir!!+t!1!$LG#e
+!PIr!!9P"#!"LG4'!PIr!!1@!1!3LG#e"s4cLG#e$vIv!!.Z!1!%LG+u!pIr!!.Z!1!$LG#e"BIr!!&J"#!;LG#e"s4)LQ.[5Y)0!1!4LG#e"BIr!!&J!1!%LG&K!@Ir!!6j!1!"LG#e"BIr!!.Z!1!%LG#e!pIr!"9P!1!,"6DF!1!1LG#e""Ir!!&J!1!(LG#e!@Ir!!+t!1!$LG#e!PIr!!9P!1!'LG#e"RIr!!.Z!1!4LG#e"s4cLG#e
+$vIr!!.Z!1!$LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!(LG#e!@Ir!"LV!1!,"3)0>K"<!PIr!".Z!1!&LG#e!PIr!!+t!1!"LG#e!PIr!!1@!1!#LG#e"2Ir!!4&!1!#LG#e"2Ir!"6j!1!,"6DF!1!1LG#e""Ir!!)0!1!&LG#e!PIr!!)0!1!"LG#e!PIr!!)0!1!)LG#e"2Ir!!9P!1!%LG#e$FIr!!?$+DIr!"4&!1!&LG#e!PIr!!)0
+!1!'LG#e!PIr!!.Z!1!%LG#e""Ir!!)0!1!@LG#e"s4)LP9Q5Y)0!1!5LG4'!PIr!!+t!1!"LG#e!PIx!!)0!1!'LG#e"2Ir!!)0!1!'LG#e%(Ir!!?$+DIr!"4&!1!#LG4'!PIr!!)0!1!"LG#e!PIr!!)0!1!)LG#e"2Ir!!9P!1!$LG#e$VIr!!?$+DIr!"4&!1!&LG#e!PIr!!)0!1!'LG#e!PIr!!.Z!1!%LG4'!PIr!"LV!1!,"3)0
+=)"<!PIr!"1@!1!$LG#e!`Ir!!)0!1!#LG#e!`Ir!!+t!1!$LG#e"2Ir!!4&!1!#LG#e!`Iu!"6j!1!,"6DF!1!5LG&K!pIr!!+t!1!$LG#e!PIr!!&J!1!#LG#e!PIw!!+t!1!'LG#e"RIw!"+t!1!,"6DF!1!7LG#e""Ir!!)0!1!#LG#e!`Iu!!)0!1!%LG#e""Ir!!+t!1!$LG#e&JIr!!?$!PKZ!(9SLG#e$fIr!!+t!1!$LG#e!PIr
+!!)0!1!$LG#e!`Ir!!+t!1!'LG#e"2Ir!!)0!1!?LG#e"s4cLG#e$&It!!4&!1!$LG#e!`Ir!!&J!1!$LG#e!@Ir!!)0!1!&LG#e!PIr!!4&"3!#LG#e""Ir!")0!1!,"6DF!1!7LG#e""Ir!!)0!1!#LG#e"bIr!!.Z!1!&LG#e!`Ir!!+t!1!@LG#e"s4)LQ.[5Y)0!1!7LG#e!@Ir!!.Z!1!"LG#e!`Ir!!.Z!1!"LG#e!pIr!!4&!1!'
+LG#e!PIr!"Ip!1!,"6DF!1!1LG#e"rIr!!&J!1!%LG#e!@Ir!!+t!1!"LG#e!PIr!!1@!1!#LG#e"2Ir!!9P!1!&LG#e$6Ir!!?$+DIr!"4&!1!&LG#e!PIr!!)0!1!*LG#e!pIr!!4&!1!"LG#e!pIr!"LV!1!,"3)0=i"<!PIr!"4&!1!"LG#e!pIr!!&J!1!$LG#e!pIr!!&J!1!%LG#e"2Ir!!4&!1!#LG#e"2Ir!"6j!1!,"6DF!1!1
+LG#e""Ir!!.Z!1!"LG#e!pIs!!1@!A!#LG#e""Ir!!)0!1!'LG#e"RIr!!1@!1!3LG#e"s4cLG#e$vIr!!1@!1!#LG#e!PIr!!4&!1!#LG#e!pIr!!4&!1!"LG#e!pIr!"LV!1!,"3)0=)"<!PIr!"4&!1!"LG#e!pIs!!.Z!1!%LG#e!@Ir!!.Z!1!(LG#e!pIr!!.Z!1!%LG#e%8Ir!!?$+DIr!"#d!1!&LG#e!pIr!!&J!1!%LG&K""Is
+!!)0!1!&LG#e!PIr!!4&!1!)LG#e""Ir!")0!1!,"6DF!1!7LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e"2Ir!!&J!1!%LG#e&JIr!!?$!PK.!(9SLG#e%(Ir!!1@!1!&LG#e""Ir!!1@!1!)LG+u"2Iu!"<6!1!,"6DF!1!2LG.["2Ir!!1@!1!(LG#e!PIw!!+t!1!'LG4'!PIw!"+t!1!,"6DF!1!7LG.[!pIr!!.Z!a!%LG#e!@Ix
+!!.Z!1!&LG#e&JIr!!?$!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV!1!,"6DF!1""LG#e"s4)LI#e5Y)0!1""LG#e"s4cLG#e1@Ir!!?$+DIr!&LV!1!,"3)0&["<!PIr!&LV!1!,"6DF!1""LG#e"s4cLG#e1@Ir!!?$!PJ4!(9SLG#e1@Ir!!?$+DIr!&LV!1!,"6DF!1""LG#e"s4)LH>{5Y)0!1""LG#e-8Ir!&LV!1!hLG#e1@Ir!!G,%Y"<
+!PIr!&LV!1!hLG#e1@Ir!%6j!1""LG#e#DJ.!(9SLG#e1@Ir!%6j!1""LG#e-8Ir!&LV!1!.LH>{5Y)0!1""LG#e-8Ir!&LV!1!hLG#e1@Ir!!G,%Y"<!PIr!&LV!1!hLG#e1@Ir!%6j!1""LG#e#DJ.!(9SLG#e1@Ir!%6j!1""LG#e-8Ir!&LV!1!.LH>{5Y)0!1""LG#e-8Ir!&LV!1!hLG#e1@Ir!!G,%Y"<!PIr!&LV!1!hLG#e1@Ir
+!%6j!1""LG#e#DJ.!(9SLG#e1@Ir!%6j!1""LG#e-8Ir!&LV!1!.LH>{5Y)0!1""LG#e-8Ir!&LV!1!hLG#e1@Ir!!G,%Y"<!PIr!&LV!1!hLG#e1@Ir!%6j!1""LG#e#DJ"!(9SLM#e-8Jt!%6j1Q!.LG.[5hLVB"Iv!(<6LS&J
+
+.ATT
+.STATUS This Visio chart cannot be edited
+.ATT_END
+.TXT 14 6 137 0
+Cg a49.750000,50.125000,491
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \i0 A}{\i0 \b0 n }{\b \i0 analog
+ signal}{\b0 \i0  }{\i0 \b0 is}{\i0 \b0 
+ a real or complex valued function of a 
+real variable t. Here t will be interpreted
+ as }{\b \i0 continuous time}{\b0 \i0 . 
+}{\b0 \i0 \b0 \i0 \f0 \fs20 In Mathcad we
+ will use a}{\b0 \i0 \b0 \i \f0 \fs20  }{\b0 
+\i0 \b \i0 \f0 \fs20 function}{\b0 \i0 \b0 
+\i0 \f0 \fs20  definition for an analog 
+signal.}{\b0 \i0  For example, an}{\i0 \b 
+ }{\i0 \b exponential}{\b0 \i0  analog signal,
+ can be entered as}{\b0 \i0  }}
+}
+.EQN 10 0 246 0
+{0:a}NAME:0.05
+.EQN 0 13 9 0
+{0:sa}NAME({0:t}NAME):({0:e}NAME)^(-{0:a}NAME*{0:t}NAME)
+.TXT 4 -13 11 0
+Cg a50.625000,50.250000,421
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \i0 \f0 \fs20 We can plot an
+ analog signal over a finite range at discrete
+ points chosen at a density sufficient to
+ create an apparently smooth curve.}{\b0 
+\i0  }{\b0 \i0 \b0 \i0 \fs20 In Mathcad 
+the function's values are }{\b0 \i0 \b0 
+\fs20 \i0 \fs20 \i0 connected, or }{\b0 
+\i0 \i0 \b \fs20 \fs20 interpolated}{\b0 
+\i0 \b0 \fs20 \i0 \i0 \fs20 , with straight
+ line segments by default.}{\b0 \i0 \b0 
+\fs20 \i0  }}
+}
+.EQN 10 0 12 0
+{0:t}NAME:0,0.1;100
+.EQN 2 -5 13 0
+&&(-1&1)&{0:sa}NAME({0:t}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 41 15 0 3 Exponential Analog Signal
+.EQN 22 0 347 0
+{   21    21 0 0}{61}
+19778 1584 0 0 1068
+40 21 21 1 8 0 504 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1"S"<!`I}!!4&!Q!.!(9TLG#e"rIr!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k
+!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!!DG5Y+t!1!+LG#e"2It!!9Q5Y+t#%!'LG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!$!Q
+
+.TXT 2 5 23 0
+Cg a48.375000,50.125000,240
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \ulnone \f0 \fs20 \i0 EXERCISE
+ 1.2}{\f0 \fs20 \b0 \i0   }{\f0 \fs20 \b0 
+\i0 Choose other functions with which you
+ are familiar for analog signals and observe
+ their plots.}{\b \f0 \fs20 \i0  }{\b \f0 
+\fs20 \i0 \f0  ¤}{\f0 \fs20 \b0 \i0  }}
+}
+.TXT 6 0 15 0
+Cg a46.875000,50.250000,233
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \i0 The correspondence between
+ an analog signal sa(t) and a digital signal
+ \{sd}{\fs16 \dn6 \b0 \i0 n}{\b0 \i0 \}}{\i0 
+\b0 , related by ADC with a }{\b \i0 sampling
+ period}{\i0 \b0  T}{\fs16 \dn8 \b0 \i0 
+s}{\b0 \i0 , is }{\i0  }}
+}
+.EQN 6 0 16 0
+{0:T.s}NAME:1
+.EQN 0 13 17 0
+({0:sd}NAME)[({0:n}NAME):{0:sa}NAME({0:n}NAME*{0:T.s}NAME)
+.TXT 5 -13 146 0
+Cg a43.875000,61.125000,118
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \i0 \f0 \fs20 A digital sequence
+ so-derived is called a }{\b \f0 \fs20 \i0 
+sample sequence}{\f0 \fs20 \b0 \i0 .}}
+}
+.EQN 1 -6 348 0
+{   31    31 0 0}{61}
+19778 2072 0 0 1068
+40 31 31 1 8 0 992 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!0#/=9"C!!!!6k"C!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"C6k!!!!"C!!"C!!!!6s!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!*!(9XLGAa#4Ir!!DG5Y6j!1!+LG#e#4Ir!"#e5Y6j!1!"LG6k!@Ir
+!!DF!1!2!(9XLG#e!@Iy!!&J!1!-LG#e#u"<"BIr!!&J"C!"LG#e#4Ir!"#e5Y6j!1!"LG6k!@Ir!!DF!1!2!(9XLG#e!@Iy!!&J!1!-LG#e#u"<"BIr!!&J"C!"LG#e#4Ir!"#e5Y6j!1!"LG6k!@Ir!!DF!1!2!(9XLG#e!@Iy!!&J!1!-LG#e#5"<"BIr!!>z!1!-LG#e"S"<"BI}!!DF!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!&!(9p
+LG#e!q"<&JIr!!.[5ZLV!1!&!(9pLG#e!q"<&JIr!!.[5ZLV!1!Q
+
+.TXT 3 6 247 0
+Cg a49.625000,50.125000,282
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b EXERCISE 1.3}{  Plot sd}{\fs16 
+\dn6 n}{ for various choices of T}{\fs16 
+\dn6 s}{ and note how inferable is the sampled
+ analog signal. }{\f0 (You can create space
+ below this line by clicking the cursor 
+there and pressing Control and F9 }{\f0 
+together.)  }{\b \f0 \f0  ¤}{\f0  }}
+}
+.TXT 11 0 24 0
+Cg a50.250000,50.125000,320
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\i0 \b0 Even when the digital signal
+ is not actually created by the sampling
+ process, it is often convenient to imagine
+ it so in order to interpret various operations
+ upon sequences. At the same time, it is
+ important to develop a facility for thinking
+ and working directly with the digital signals,
+ as sequences. }}
+}
+.TXT 15 -11 25 0
+Cg a34.875000,42.875000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs36 \f1 \b Examples of Digital
+ Signals}}
+}
+.TXT 4 11 26 0
+Cg a49.500000,50.125000,763
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \fs24 \f1 \ulnone \i0 Example
+ 1.1 _____________________________________}{\b 
+\f0 \i0  \par }{\f0 \b0 \i0 The }{\f0 \i0 
+\b0 (discrete time) }{\b \f0 \i0 unit impulse}{\f0 
+\i0 \b0  }{\f2 \b0 \i0 d}{\f0 \b0 \i0  is
+ a }{\f0 \b0 \i0 \f0 \b0 \i0 fundamental
+ sequence in digital signal processing. 
+T}{\f0 \b0 \i0 he }{\f0 \i0 \b0 (discrete
+ time) }{\b \f0 \i0 unit step}{\f0 \i0 \b0 
+ }{\f2 \b0 \i0 F}{\f0 \b0 \i0  sequence 
+is also useful. In fact, t}{\f0 \b0 \i0 
+\b0 \fs20 he unit impulse and unit step 
+are}{\f0 \b0 \i0 \b0 \i \fs20  }{\f0 \b0 
+\i0 \i0 \b \fs20 built-in}{\f0 \b0 \i0 \i0 
+\b \fs20  }{\f0 \b0 \i0 \i0 \b \fs20 functions}{\f0 
+\b0 \i0 \b0 \fs20  in Mathcad}{\f0 \b0 \i0 
+\fs20 \b .}{\f0 \b0 \i0  We graph them with
+ a suitable delay for easier visualization.}}
+}
+.EQN 15 0 27 0
+{0:nd1}NAME:8
+.EQN 0 10 28 0
+({0:s1}NAME)[({0:n}NAME):{0:\d}NAME({0:nd1}NAME,{0:n}NAME)
+.EQN 0 16 30 0
+{0:nd2}NAME:16
+.EQN 0 11 31 0
+({0:s2}NAME)[({0:n}NAME):{0:\F}NAME({0:n}NAME-{0:nd2}NAME)
+.EQN 3 -41 34 0
+1.5&-0.2&(_n_u_l_l_&_n_u_l_l_)&({0:s1}NAME)[({0:n}NAME)@{0:N}NAME-1&0&({0:nd1}NAME&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+1 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 19 16 0 3 Impulse Sequence (Delayed)
+.EQN 0 28 248 0
+1.5&-0.2&(_n_u_l_l_&_n_u_l_l_)&({0:s2}NAME)[({0:n}NAME)@{0:N}NAME-1&0&({0:nd2}NAME&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+1 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 18 16 0 3 Step Sequence (Delayed)
+.TXT 4 -23 33 0
+Cg a1.000000,52.500000,5
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {  }}
+}
+.TXT 23 -1 363 0
+Cg a44.375000,50.125000,143
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {We will later see that s digital
+ filter's output for a unit impulse sequence
+ input completely defines the digital filter.
+ }{\b  }{\b \f0 ‡ }}
+}
+.TXT 7 0 36 0
+Cg a50.250000,50.000000,903
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \f1 \b \ulnone Example 1.2
+ ______________________________________}{\b 
+\f0  \par }{\f0 \b0 We }{\f0 \b0 \f0 \b0 
+next }{\f0 \b0 define a }{\b \f0 \i0 sinusoidal}{\b 
+\f0  sequence}{\f0 \b0 . A s}{\b0 \f0 inusoidal
+ sequence}{\f0 \b0  is of the form }{\f0 
+\b0 \f0 \b0 cos(}{\f0 \b0 \f2 \b0 w}{\f0 
+\b0 \f0 \b0 n+}{\f2 \b0 q}{\f0 \b0 )}{\f0 
+\b0  with}{\b \f0  frequency}{\f0 \b0  }{\f2 
+\b0 w}{ and }{\b phase}{ }{\f2 q}{. Notice
+ immediately that, for an integer k,  cos((}{\f2 
+w}{+2}{\f2 p}{k)n+}{\f2 q}{) = }{\f0 \b0 
+cos(}{\f2 \b0 w}{\f0 \b0 n+}{\f2 \b0 q}{\f0 
+\b0 ) because the cosine function has period
+ 2}{\f2 \b0 p}{\f0 \b0 . Therefore, the 
+frequencies \{}{\f2 \b0 w}{\f0 \b0 +k2}{\f2 
+\b0 p}{\f0 \b0 , k = 0, +/-1,...\} are }{\ul 
+\f0 \b0 indistinguishable}{\f0 \b0 : they
+ are said to be }{\b \f0 aliases}{\f0 \b0 
+. We will see that it is convenient to express
+ the frequency in a particular form. }}
+}
+.EQN 21 0 266 0
+{0:k}NAME:4
+.EQN 0 8 37 0
+{0:\w}NAME:(2*{0:\p}NAME)/({0:N}NAME)*{0:k}NAME
+.EQN 0 15 39 0
+({0:sc}NAME)[({0:n}NAME):{0:cos}NAME({0:\w}NAME*{0:n}NAME+({0:\p}NAME)/(4))
+.EQN 3 -26 40 0
+1&-1&(-1&1)&({0:sc}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 17 0 3 Sinusoidal Sequence
+.TXT 28 3 364 0
+Cg a46.875000,50.125000,91
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {The plot does appear to be samples
+ of the familiar sine wave.  }{\b \f0 \f0 
+‡ }{\b \f0  }}
+}
+.EQN 3 -5 349 0
+{   21    21 0 0}{61}
+19778 1584 0 0 1068
+40 21 21 1 8 0 504 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1"S"<!`I}!!4&!Q!.!(9TLG#e"rIr!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k
+!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!!DG5Y+t!1!+LG#e"2It!!9Q5Y+t#%!'LG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!$!Q
+
+.TXT 2 5 265 0
+Cg a50.250000,50.000000,321
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b EXERCISE 1.4}{ Graph the above
+ sinusoidal sequence for other choices of
+ k. Note especially when k is replaced by
+ k+N. Is it always self-evident that the
+ sequence is sinusoidal? For what values
+ of k is the fluctuation rate highest? Lowest?
+ Intermediate? (These values may be a surprise
+ to you!) }{\b  }{\b \f0  ¤}}
+}
+.TXT 13 0 135 0
+Cg a50.250000,50.000000,254
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {A sequence \{s}{\fs16 \dn8 n}{\}
+ is said to have }{\b \i0 period}{ N if 
+s}{\fs16 \dn8 n+N}{=s}{\fs16 \dn8 n}{. Whereas
+ every sinusoidal function is periodic, 
+only special sinusoidal sequences are periodic.
+ For suppose there exits an integer N such
+ that}}
+}
+.EQN 9 0 251 0
+{0:cos}NAME({0:\w}NAME*({0:n}NAME+{0:N}NAME)+{0:\q}NAME):{0:cos}NAME({0:\w}NAME*{0:n}NAME+{0:\q}NAME)
+.TXT 4 0 253 0
+Cg a50.500000,61.000000,83
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {Then, as the cosine function has
+ period 2}{\f2 p}{, it follows that necessarily
+ }}
+}
+.EQN 4 0 254 0
+{0:\w}NAME*{0:N}NAME:{0:k}NAME*2*{0:\p}NAME
+.TXT 4 0 255 0
+Cg a47.625000,50.000000,138
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {where k is an integer. That is,
+ a sinusoidal sequence is periodic if and
+ only if its frequency }{is a rational multiple
+ of 2}{\f2 p}{.}}
+}
+.EQN 7 17 256 0
+{0:\w}NAME:({0:k}NAME)/({0:N}NAME)*2*{0:\p}NAME
+.TXT 6 -28 350 0
+Cg a9.000000,61.125000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \f1 PROBLEM\par 1.1}}
+}
+.TXT 0 11 258 0
+Cg a49.625000,50.125000,101
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {Show that k in [0,N-1] gives all
+ the possible sinusoidal sequences of period
+ N. }{\b  }{\b \f0 ‡ }}
+}
+.EQN 3 -8 367 0
+{   48    47 0 0}{61}
+19778 3384 0 0 1068
+40 47 48 1 8 0 2304 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!0#/=9"C!!!!6k"C!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"C6k!!!!"C!!"C!!!!6s!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!*!(9[LH1A#dIr!!9Q5Y<6%)!/
+LG#e"s"<"bIt!"1;#TIr!!>{5Y<6!Q!6KUIp!1!2!(9ZLG)1!P<G!!&J!P<ELG#e#u"<"bIt!!)+#U!#LG)+#TIr!")15Y<6!Q!#KU&K#D<9LG)+#TIr!"4'5Y<6!Q!#KU&K""<9!!4!!PIsKUIp!1!4!(9ZLG)1!P<9!!G'!PIsKUIp!1!8!(9ZLG)1!P<9!!1;!A!'KU)0!P<ELG#e$w"<"bIt!!)+!A!&KU&K"2<9LG)+#TIr!"4'5Y<6
+!Q!#KU&K"2<9!!1;!PIsKUIp!1!8!(9ZLG)1!P<9!!6e!A!%KU)0!P<ELG#e$w"<"bIt!!)+!A!(KU&K!p<9LG)+#TIr!">{5Y<6!Q!#KU&K!`<8!!+o!A!%KU)0!P<ELG#e$w"<"bIt!!)+!A!$KU1A!p<9LG)+#TIr!"4'5Y<6!Q!#KU&K!p<;!!1;!PIsKUIp!1!4!(9ZLG)1!P<9!!G'!PIsKUIp!1!4!(9ZLG)1!P<9!!G'!PIsKUIp
+!1!2!(9ZLG)1!P<8!"#d!P<ELG#e#U"<"bIt!!)+$&IsKUIp!1!,!(9[LG&K$f<ELG#e"s"<#$Ir!"1;#TIr!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!$!Q
+
+.ATT
+.STATUS Hint for Problem 1.1
+.POPUP zb1_1.pas
+.ATT_END
+.TXT 3 8 280 0
+Cg a50.125000,50.250000,486
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {Note that the sine sequence sin}{(}{\f2 
+w}{n+}{\f2 q}{)}{ is included in the above
+ considerations- replace }{\f2 q}{ by }{\f2 
+q}{+}{\f2 p}{/2. Also, as the }{\b complex
+ exponential}{ exp(i(}{\f2 w}{n+}{\f2 q}{))
+ = cos}{(}{\f2 w}{n+}{\f2 q}{)+isin}{(}{\f2 
+w}{n+}{\f2 q}{), these comments on periodicity
+ apply to it. }{If the sinusoidal sequence
+ of frequency }{\f2 w}{ is a sample sequence
+ obtained from a sinusoidal analog signal
+ of frequency }{\f2 n}{, then we have the
+ relation}}
+}
+.EQN 15 16 306 0
+{0:\w}NAME:{0:T.s}NAME*{0:\n}NAME
+.TXT 4 -16 282 0
+Cg a50.000000,50.125000,421
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {But, as }{\f2 w}{ is not distinguishable
+ from its aliases, we see that all the analog
+ frequencies \{}{\f2 n}{ + k 2}{\f2 p}{/Ts,
+ k = 0,+/-1,...\} are indistinguishable-
+ i.e., aliases. }{The }{\b sampling frequency
+ }{\b0 is }{\b0 \f2 w}{\b0 \fs16 \dn6 s}{\b0 
+ = 2}{\b0 \f2 p}{\b0 /T}{\b0 \fs16 \dn6 
+s}{\b0  }{\b0 . We shall later study this
+ aliasing phenomenon for general analog 
+signals in }{\ul \b Chapter 15}{\b0 .}}
+}
+.ATT
+.STATUS Go to Section 15
+.GOTO 15_bk.mcd
+.ATT_END
+.TXT 13 -11 351 0
+Cg a9.000000,61.125000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \f1 PROBLEM\par 1.2}}
+}
+.TXT 0 11 320 0
+Cg a50.250000,50.125000,231
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {If a sinusoidal analog signal of
+ frequency }{\f2 n}{=2}{\f2 p}{/T is sampled
+ with period T}{\fs16 \dn6 s}{, then the
+ resulting digital signal is periodic if
+ and only if T}{\fs16 \dn6 s}{/T is a rational
+ number. }{\b  }{\b \f0 ‡ }}
+}
+.EQN 3 -11 369 0
+{   57    57 0 0}{61}
+19778 4500 0 0 1068
+40 57 57 1 8 0 3420 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!0#/=9"C!!!!6k"C!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"C6k!!!!"C!!"C!!!!6s!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6
+!Q!&!(:,LG)1!q"<*rIt!!9Q5YIp$g!6LG)1"S"<#DJ+!".Z!Q!,!(9^LG)1$f<KLG)1"s"<#DIt!"1;$VIt!"#e5YG,!Q!#KV!!!@IsKV.Z!Q!2!(9^LG)1!P<F!!)0!P<KLG)1$7"<#DIt!!)+!A!.KU)0!P<KLG)1$w"<#DIt!!)+!A!&KU&K"2<9LG)+$VIt!")15YG,!Q!#KU&K#D<9LG)+$VIt!"4'5YG,!Q!#KU&K""<9!!4!!PIs
+KV.Z!Q!8!(9^LG)1!P<9!!1;!A!'KU)0!P<KLG)1$w"<#DIt!!)+!A!'KU&K""<9LG)+$VIt!"4'5YG,!Q!#KU&K"B<9!!.U!PIsKV.Z!Q!8!(9^LG)1!P<9!!6e!A!%KU)0!P<KLG)1%Y"<#DIt!!)+!A!$KU#e!`<9!!.U!PIsKV.Z!Q!8!(9^LG)1!P<9!!+o"#!%KU)0!P<KLG)1$w"<#DIt!!)+!A!%KU+u""<9LG)+$VIt!")15YG,
+!Q!#KU&K#D<9LG)+$VIt!")15YG,!Q!#KU&K#D<9LG)+$VIt!"#e5YG,!Q!#KU#e#tIsKV.Z!Q!0!(9^LG)1!P<HLG)+$VIt!!>{5YIp!A!6KV.Z!Q!,!(9`LG#e$f<KLG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!!.[5\<6!Q!&!(:,LG)1!q"<*rIt
+!!.[5\<6!Q!&!(:,LG)1!q"<*rIt!$!Q
+
+.ATT
+.STATUS Hint for Problem 1.2
+.POPUP zb1_2.pas
+.ATT_END
+.TXT 6 11 42 0
+Cg a50.000000,57.000000,158
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \f1 \b \ulnone Example 1.3
+ _____________________________________}{\f0 
+\b \ulnone  }{\f0 \ulnone  \par We generalize
+ Example 1.2 to a sum of sinusoids}{\f3 
+\ulnone .}}
+}
+.TXT 8 0 352 0
+Cg a8.500000,50.125000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \f1 frequencies:}}
+}
+.EQN 0 13 43 0
+{0:k}NAME:0;({0:N}NAME)/(2)
+.EQN 0 13 45 0
+({0:\w}NAME)[({0:k}NAME):(2*{0:\p}NAME)/({0:N}NAME)*{0:k}NAME
+.TXT 7 -26 353 0
+Cg a5.750000,50.125000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \f1 weights:}}
+}
+.EQN 0 13 47 0
+({0:c}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAMEó({0:N}NAME)/(8),{0:k}NAME,0)
+.TXT 6 -13 354 0
+Cg a4.750000,50.125000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \f1 signal:}}
+}
+.EQN 0 13 49 0
+({0:s}NAME)[({0:n}NAME):{0:k}NAME$({0:c}NAME)[({0:k}NAME)*{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)*{0:n}NAME)
+.EQN 5 -17 51 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:s}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 19 0 3 Sequence Defined by a Fourier Series 
+.TXT 31 4 52 0
+Cg a48.750000,50.250000,192
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \b0 This is an example 
+of a }{\ulnone \b0 \f0 \i0 Fourier series
+ representation.}{\f0 \b0 \b0  More general
+ examples will be central to much of our
+ discussion of DSP.  }{\b \f0 \f0 ‡ }}
+}
+.ATT
+.STATUS Ref: O&S, Sec.2.7; Jack, Sec. 7.1
+.ATT_END
+.EQN 5 -5 355 0
+{   21    21 0 0}{61}
+19778 1584 0 0 1068
+40 21 21 1 8 0 504 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1"S"<!`I}!!4&!Q!.!(9TLG#e"rIr!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k
+!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!!DG5Y+t!1!+LG#e"2It!!9Q5Y+t#%!'LG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!$!Q
+
+.TXT 2 5 53 0
+Cg a47.625000,50.000000,142
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \ulnone \f0 EXERCISE 1.5}{\f0 
+  Choose other sets of amplitudes and phases
+ and observe the resulting  sequences. }{\b 
+\f0  }{\b \f0 \f0  ¤}}
+}
+.TXT 6 0 54 0
+Cg a50.375000,50.125000,693
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 In DSP, models that employ}{\ulnone 
+\f0 \i0 \b  }{\ulnone \f0 \i0 \b random 
+sequences}{\ulnone \f0 \b0  }{\f0 \b0  are
+ of great utility. We want to enrich our
+ models to be able to include degrading 
+random effects such as noise. Mathematical
+ and scientific applications are generally
+ capable of generating at least a random
+ variable uniformly distributed over (0,1)
+ with repeated calls yielding a sequence
+ of approximately independent random variables.
+ Mathcad's}{\b \f0  }{\b0 \f0 built-in function}{\f0 
+\b  rnd(a)}{\f0 \b0  generates a sample 
+of a random variable uniformly distributed
+ over (0,a). With suitable transformations,
+ we can then generate more complicated random
+ models. }}
+}
+.ATT
+.STATUS Ref: O&S, Sec. A.1
+.ATT_END
+.TXT 21 0 177 0
+Cg a50.250000,50.250000,287
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \f1 \b Example 1.4 ______________________________________}{
+  \par }{We can generate a sequence of independent
+ }{\b normal random variables}{ \{c}{\fs16 
+\dn6 k}{\}, of zero mean and variance var,
+ as follows. It models the commonly encountered
+ }{\b thermal noise}{ sample sequence. }}
+}
+.EQN 12 0 147 0
+{0:var}NAME:1
+.EQN 0 14 59 0
+({0:c}NAME)[({0:n}NAME):\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))
+.EQN 4 -18 63 0
+&&(-{0:var}NAME&{0:var}NAME)&({0:c}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 A Normal Random Sequence 
+.TXT 26 4 365 0
+Cg a49.125000,50.125000,150
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {You may recall that, with probability
+ greater than 0.99, the values of such a
+ random sequence will lie in the range (-3
+ var,+ 3 var).  }{\b \f0 ‡ }}
+}
+.EQN 5 -5 356 0
+{   21    21 0 0}{61}
+19778 1584 0 0 1068
+40 21 21 1 8 0 504 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1"S"<!`I}!!4&!Q!.!(9TLG#e"rIr!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k
+!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!!DG5Y+t!1!+LG#e"2It!!9Q5Y+t#%!'LG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!$!Q
+
+.TXT 2 5 267 0
+Cg a50.375000,50.250000,225
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b Exercise 1.6}{  Repeatedly click
+ on the statement defining c}{\fs16 \dn6 
+n}{ and press F9. A new set of normal random
+ variables, independent of each other and
+ the earlier sets, is generated each time.}{\b 
+  }{\b \f0  ¤}}
+}
+.TXT 11 -11 149 0
+Cg a39.750000,77.375000,45
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs36 \f1 \b Basic Operations on
+ Sequences}}
+}
+.TXT 4 11 64 0
+Cg a50.500000,50.250000,620
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 We may regard an N-length sequence
+ as a }{\b \i0 vector}{\b0 \i  }{\b0 \i0 
+in an }{\b0 \i0 N-dimensional linear vector
+ space. Importantly,}{\b0 \i0  this allows
+ us to apply our knowledge of the }{\b0 
+\i0 algebra}{\b0 \i0  of such spaces and
+ to}{\b0 \i0  take advantage of the powerful
+ numerical algorithms already developed 
+for this subject, available in DSP and scientific
+ application software.  There are a variety
+ of such linear algebra functions}{\b0 \i0 
+\b0 \i0 , called }{\b0 \i0 \b \i0 operators,}{\b0 
+\i0  available in Mathcad.}{\b0 \i0  }{We
+ define and implement some of the basic 
+operations here.}}
+}
+.TXT 20 -11 152 0
+Cg a33.250000,76.375000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \ulnone \b \i0 Addition/Subtraction
+ of Sequences}}
+}
+.TXT 3 11 151 0
+Cg a48.500000,50.000000,146
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \i0 By this we mean the element-by-element
+ addition/subtraction of same-indexed members
+ of the sequences to form a new sequence}{\b0 
+\i0 .}}
+}
+.EQN 6 0 65 0
+({0:sum}NAME)[({0:n}NAME):({0:s}NAME)[({0:n}NAME)+({0:sc}NAME)[({0:n}NAME)
+.EQN 0 16 66 0
+{0:sum}NAME:{0:s}NAME+{0:sc}NAME
+.EQN 0 15 67 0
+{0:sum}NAME:(({0:s}NAME+{0:sc}NAME)){49}
+.TXT 4 -31 68 0
+Cg a50.625000,50.250000,426
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs20 In Mathcad, the definition
+ is explicitly implemented in the first 
+form. In the second form Mathcad "understands"
+ the intent. The third form uses Mathcad's
+ }{\b \i0 \fs20 vectorize }{\b0 \fs20 \i0 
+operation}{\b0 \fs20 , which performs the
+ indicated algebraic operation element by
+ element and is }{\fs20 \b0 \b0 \fs20 computationally}{\fs20 
+\b0  faster; the subject arrays must be 
+of the same size.}{\b0 \fs20  }}
+}
+.TXT 13 -11 154 0
+Cg a26.250000,80.375000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b \ulnone Multiplication
+ of Sequences}}
+}
+.TXT 3 12 153 0
+Cg a49.000000,49.250000,177
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 By this we mean the element-by-element
+ multiplication of }{\b0 \b0 \i0 same-indexed}{\b0 
+ members of the sequences }{\b0 \b0 \i0 
+to form a new sequence}{\b0 \b0 \i0 .}{ 
+}}
+}
+.EQN 6 0 69 0
+({0:sp}NAME)[({0:n}NAME):({0:s}NAME)[({0:n}NAME)*({0:sc}NAME)[({0:n}NAME)
+.EQN 0 19 70 0
+{0:sp}NAME:(({0:s}NAME*{0:sc}NAME)){49}
+.TXT 5 -19 155 0
+Cg a53.500000,61.125000,120
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs20 In Mathcad, the first
+ form implements the definition and the 
+second form \par employs the vectorize operation.}}
+}
+.TXT 7 -12 156 0
+Cg a38.250000,80.375000,68
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\ulnone \b  }{\fs24 \ulnone \b 
+Multiplication of a Sequence by a Scalar}}
+}
+.TXT 3 12 71 0
+Cg a48.625000,49.125000,105
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 By this we mean the multiplication
+ of every member, or element, of a sequence
+ by a scalar.}{     }}
+}
+.EQN 6 0 72 0
+({0:sm}NAME)[({0:n}NAME):{0:\p}NAME*({0:s}NAME)[({0:n}NAME)
+.EQN 0 19 73 0
+{0:sm}NAME:{0:\p}NAME*{0:s}NAME
+.TXT 4 -19 308 0
+Cg a48.625000,49.125000,102
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs20 In Mathcad, the first
+ form implements the definition and the 
+second form is understood. }}
+}
+.TXT 7 -12 157 0
+Cg a33.125000,80.375000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b \ulnone Scalar/Inner Product
+ of Sequences}}
+}
+.TXT 3 12 74 0
+Cg a49.750000,49.375000,115
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 This}{ }{\b0 operation produces
+ a scalar which can represent the coordinate
+ of a vector on a basis vector. }}
+}
+.EQN 7 0 75 0
+{0:ip}NAME:{0:n}NAME$({0:s}NAME)[({0:n}NAME)*(({0:sc}NAME)[({0:n}NAME))]
+.EQN 0 19 76 0
+{0:ip}NAME:{0:s}NAME*({0:sc}NAME)]
+.TXT 7 -19 158 0
+Cg a47.125000,49.250000,154
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs20 The first form implements
+ the definition; the second form is understood
+ by Mathcad. }{\b0 \fs20 The overbar denotes
+ complex conjugate}{\b0 .}}
+}
+.TXT 7 -12 159 0
+Cg a16.000000,80.375000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b \ulnone Norm of a Vector}}
+}
+.TXT 3 12 77 0
+Cg a47.625000,49.125000,349
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 This scalar gives the }{\b 
+\i0 length}{\b0 , or}{\b  norm}{\b0 , of
+ a }{\b0 \i0 vector}{\b0 ; its square has
+ the interpretation of the }{\b \i0 energy}{\b 
+\i  }{\b0 of the}{\b  }{\i0 \b0 \b0 sequence}{\i 
+\b0 .}{\b0  (It is not to be confused with
+ the }{\b0 \i0 length}{\b0  or number of
+ elements in the }{\i0 \b0 sequence}{\i0 
+\b0 ).}{\b0  }}
+}
+.EQN 10 0 78 0
+{0:norm1}NAME:\({0:n}NAME$((|(({0:s}NAME)[({0:n}NAME))))^(2))
+.EQN 0 21 79 0
+{0:norm2}NAME:\({0:s}NAME*({0:s}NAME)])
+.EQN 0 16 80 0
+{0:norm}NAME:|({0:s}NAME)
+.TXT 7 -37 81 0
+Cg a47.500000,49.125000,192
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs20 The definition is implemented
+ in the first form and alternatively defined
+ in terms of the inner product in the second
+ form. The third form is Mathcad's efficient
+ implementation.}}
+}
+.EQN 6 -5 357 0
+{   21    21 0 0}{61}
+19778 1584 0 0 1068
+40 21 21 1 8 0 504 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1"S"<!`I}!!4&!Q!.!(9TLG#e"rIr!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k
+!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!!DG5Y+t!1!+LG#e"2It!!9Q5Y+t#%!'LG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!$!Q
+
+.TXT 2 5 82 0
+Cg a48.500000,49.125000,574
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \ulnone \f0 EXERCISE 1.7}{  
+ }{\f0 \i0 Verify the asserted equivalence
+ of the various Mathcad implementations 
+of the basic operations on sequences. You
+ can do this by comparing sets of numbers
+ with graphs and also, if N is not too large,
+ by using Mathcad's }{\b \i0 \f0 table}{\f0 
+\i0  }{\f0 \i0 display}{\f0 \i0  for an 
+array.}{\f0  E.g., forming differences and
+ inspecting for zeros is an effective procedure.
+ }{\f0 (You can create space below this 
+line by clicking the cursor there and pressing
+ Control and F9 }{\f0 together.) }{\b \f0 
+ }{\b \f0 \f0  ¤}{\b \f0  }}
+}
+.TXT 19 -12 161 0
+Cg a51.625000,80.375000,55
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs36 \f1 \b Basic DSP Operations
+ on Digital Signals}}
+}
+.TXT 5 0 163 0
+Cg a18.750000,80.375000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b \ulnone Array of Sequences}}
+}
+.TXT 3 11 83 0
+Cg a50.625000,50.375000,423
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {In digital signal processing we
+ are often concerned with multiple data 
+sequences, or }{\b records}{. It is convenient
+ and conventional to store these records
+ as columns in a matrix array. Given such
+ an array, an individual record can be accessed
+ as a specific column. Mathcad has a simple
+ way to do this. We illustrate this with
+ a simple example composed of M records 
+of length N of a pulse with M different 
+delays.}}
+}
+.EQN 15 0 84 0
+{0:M}NAME:16
+.EQN 0 16 85 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 0 16 87 0
+({0:nd}NAME)[({0:m}NAME):({0:m}NAME)^(1.4)
+.EQN 7 -32 88 0
+({0:sc}NAME)[({0:n}NAME,{0:m}NAME):{0:exp}NAME(-(((({0:n}NAME-8-({0:nd}NAME)[({0:m}NAME)))^(2))/(32)))
+.TXT 6 0 179 0
+Cg a40.875000,63.375000,66
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {A }{\b surface plot}{ summarizes
+ visually all the data records.}}
+}
+.EQN 2 0 178 0
+{0:sc}NAME{30 45 0 60 30    30    43 1 1 1 1 3 Data^Records}{57}
+.EQN 37 -5 358 0
+{   21    21 0 0}{61}
+19778 1584 0 0 1068
+40 21 21 1 8 0 504 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1"S"<!`I}!!4&!Q!.!(9TLG#e"rIr!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k
+!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!!DG5Y+t!1!+LG#e"2It!!9Q5Y+t#%!'LG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!$!Q
+
+.TXT 2 5 268 0
+Cg a49.000000,50.125000,205
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b EXERCISE 1.8 }{ Click on the
+ surface plot and choose }{\b Surface Plot}{
+ from the menu. Experiment with the formatting
+ options. Note that a }{\b contour plot}{
+ is available. }{\b  }{\b \f0  ¤}{\b  }}
+}
+.TXT 8 0 90 0
+Cg a50.250000,50.250000,231
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b0 \fs20 In Mathcad, the columns
+ of a matrix can be specified as a vector
+ by using the }{\b0 \fs20 array}{\fs20 \b 
+ superscript}{\fs20 \b0 . }{ }{We can demonstrate
+ this by accessing a particular record in
+ sc and plotting it.}}
+}
+.EQN 6 -4 91 0
+&&(_n_u_l_l_&_n_u_l_l_)&((({0:sc}NAME){52}(3)))[({0:n}NAME)@&&(_n_u_l_l_&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 41 15 0 3 Accessing One Data Record
+.TXT 26 -7 164 0
+Cg a38.750000,80.375000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b \ulnone Forming and Assembling
+ Subsequences}}
+}
+.TXT 3 11 93 0
+Cg a50.375000,50.125000,440
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {I}{t is often necessary in digital
+ signal processing}{ to form subsequences,
+ or }{\b \i0 blocks}{\b , }{\b0 of}{ a sequence.
+ E.g.,}{ when processing long sequences,
+ it may not be possible to load into the
+ computer the entire sequence.}{ Then operations
+ may be performed on the individual blocks,
+ and the processed blocks may be reassembled
+ in a prescribed manner to form a new, or
+ processed, long sequence. (See }{\ul \b 
+Sec. 5}{.)}}
+}
+.ATT
+.STATUS Go to Section 5
+.GOTO 5_bk.mcd
+.ATT_END
+.TXT 17 0 142 0
+Cg a50.250000,50.125000,383
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \f1 \b \ulnone Example 1.5
+ ______________________________________}{\f0 
+  \par We give a simple example of forming
+ and reassembling }{\f0 \i0 blocks}{\f0 
+ of a     given sequence. We define a sinusoidal
+ sequence of length N and form J disjunct
+ blocks from it, each labeled by an index
+ j and each of length M=N/J. These subsequences
+ then form the columns of an M by N matrix
+ sb.}}
+}
+.EQN 15 0 94 0
+{0:N}NAME:128
+.EQN 0 9 95 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 12 96 0
+{0:\n}NAME:(2*{0:\p}NAME)/({0:N}NAME)*4
+.EQN 0 11 97 0
+({0:s}NAME)[({0:n}NAME):{0:cos}NAME({0:\n}NAME*{0:n}NAME)
+.EQN 6 -32 99 0
+{0:J}NAME:4
+.EQN 0 9 101 0
+{0:j}NAME:0;{0:J}NAME-1
+.EQN 0 12 103 0
+{0:M}NAME:({0:N}NAME)/({0:J}NAME)
+.EQN 0 11 104 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 5 -32 106 0
+({0:sb}NAME)[({0:m}NAME,{0:j}NAME):({0:s}NAME)[({0:m}NAME+{0:j}NAME*{0:M}NAME)
+.TXT 5 0 166 0
+Cg a49.625000,50.250000,78
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {We can reassemble the N-length 
+sequence from the subsequences, or blocks.
+ }}
+}
+.EQN 6 13 108 0
+({0:sr}NAME)[({0:m}NAME+{0:j}NAME*{0:M}NAME):({0:sb}NAME)[({0:m}NAME,{0:j}NAME)
+.TXT 0 16 366 0
+Cg a2.375000,21.125000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {  }{\b \f0 ‡ }}
+}
+.EQN 3 -34 359 0
+{   21    21 0 0}{61}
+19778 1584 0 0 1068
+40 21 21 1 8 0 504 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1"S"<!`I}!!4&!Q!.!(9TLG#e"rIr!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k
+!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!"#e5Y+t!1!"LG6k!@Ir!!4&!Q!2!(9TLG#e!@Iy!!&J!1!'LG)1#u"<!`Ir!!&J"C!"LG#e"2It!!DG5Y+t!1!+LG#e"2It!!9Q5Y+t#%!'LG)1!q"<$fIt!!.[5Z1@!Q!&!(9fLG)1!q"<$fIt!$!Q
+
+.TXT 2 5 110 0
+Cg a50.250000,50.250000,326
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b \ulnone EXERCISE 1.9}{\f0 
+\ulnone   }{\f0 \b0 Verify that the scheme
+ given in Example 1.5 actually forms disjunct
+ blocks and that they are }{\f0 \b0 \f0 
+\b0 correctly}{\f0 \b0  reassembled . You
+ may want to use a more distinctive signal
+ and you may wish to create plots that are
+ helpfully layed out}{. }{\b  }{\b \f0  
+¤}}
+}
+.TXT 11 -11 360 0
+Cg a9.000000,61.125000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \f1 PROBLEM\par 1.3}}
+}
+.TXT 0 11 319 0
+Cg a49.125000,63.000000,111
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {Which element of sb}{\fs16 \dn6 
+m,j}{ is s}{\fs16 \dn6 n}{? I.e., give (m,j)
+ in terms of n and M.  }{\b \f0 ‡ }}
+}
+.TXT 7 -11 167 0
+Cg a23.250000,38.000000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \ulnone \b Extension of Sequences}}
+}
+.TXT 4 11 111 0
+Cg a50.625000,50.250000,411
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {We must often }{consider a sequence
+ for indices outside the range for which
+ it has been defined. For example, the translation
+ of a sequence may be of interest. There
+ are two natural and useful ways to extend
+ the definition of a sequence to a greater
+ range of indices: by zero padding and by
+ periodic extension. We will illustrate 
+the former method now and discuss the latter
+ method in the next section. }}
+}
+.TXT 15 0 168 0
+Cg a50.500000,50.125000,232
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \f1 \b \ulnone Example 1.6
+ ______________________________________}{\f0 
+\b \ulnone   \par }{\f0 We extend an M-length
+ sequence \{s}{\f0 \dn8 n}{\f0 \} to an 
+N-length sequence \{se}{\f0 \dn8 n}{\f0 
+\} (N>M) by appending zeros to it. }}
+}
+.EQN 10 0 112 0
+{0:M}NAME:({0:N}NAME)/(4)
+.EQN 0 10 113 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 0 16 114 0
+({0:s}NAME)[({0:m}NAME):{0:cos}NAME(({0:\w}NAME)[({0:m}NAME)*{0:m}NAME)
+.EQN 5 -26 115 0
+({0:se}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<{0:M}NAME,({0:s}NAME)[({0:n}NAME),0)
+.EQN 0 26 208 0
+({0:se}NAME)[({0:n}NAME):({0:n}NAME<{0:M}NAME)*({0:s}NAME)[({0:n}NAME)
+.EQN 3 -30 217 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:se}NAME)[({0:n}NAME)@&&(_n_u_l_l_&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 15 0 3 Zero-Padded Sequence
+.TXT 27 4 116 0
+Cg a47.625000,50.250000,181
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 This is an example of the }{\b 
+\i0 \f0 zero padding}{\f0  operation. Often,
+ but not always, the zeros are appended 
+to the beginning or end of the sequence.
+  }{\b \f0 \f0 ‡ }}
+}
+.TXT 9 0 211 0
+Cg a50.000000,50.125000,589
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {In Example 1.6, we gave two ways
+ to implement the zero padding operation.
+ The first method used Mathcad's }{\b conditional
+ if function}{ to explicitly implement the
+ definition. }{We explicitly ask for s}{\fs16 
+\dn6 n}{ only for n for which it is defined.}{
+ The second method used the }{\b Boolean
+ operator <}{ in }{the }{\b Boolean expression
+ (n<M)}{ which takes on the value 1 when
+ the }{condit}{ion is true and the value
+ 0 when the }{condit}{ion is false. }{We
+ implicitly ask for s}{\fs16 \dn6 n}{ only
+ for n for which it is defined. We will 
+make frequent use of these functions.}}
+}
+.TXT 21 -11 269 0
+Cg a29.250000,73.000000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b Reading and Writing Data
+ Files}}
+}
+.TXT 4 11 271 0
+Cg a50.000000,50.375000,423
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {Mathcad reads and writes ASCII 
+text files containing numerical data, giving
+ us the ability to import and export data
+ files with other applications. For example,
+ experimental data could be imported into
+ Mathcad, processed and then displayed and/or
+ exported. Here we illustrate one method
+ of writing and reading one type of data
+ file, an }{\b unstructured file}{, that
+ is useful for data in sequence, or vector,
+ form.}}
+}
+.EQN 15 0 272 0
+{0:WRITE}NAME({0:cosine}NAME):({0:s}NAME)[({0:n}NAME)
+.TXT 0 22 273 0
+Cg a27.875000,29.125000,73
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b Writes the cosine sequence of
+ Example 1.6 to data file cosine.dat }}
+}
+.EQN 7 -22 274 0
+({0:s.check}NAME)[({0:n}NAME):{0:READ}NAME({0:cosine}NAME)
+.TXT 0 22 275 0
+Cg a27.750000,28.250000,88
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b Reads the contents of the file
+ cosine.dat into the sequence s}{\b \fs16 
+\dn6 check}}
+}
+.EQN 7 -22 276 0
+({0:s}NAME)[(17)-({0:s.check}NAME)[(17)={0}?_n_u_l_l_
+.TXT 0 22 277 0
+Cg a15.875000,37.000000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b Verify that s = s}{\b \fs16 
+\dn6 check}}
+}
+.TXT 6 -22 278 0
+Cg a49.750000,50.250000,197
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {The Mathcad }{\i User's Guide}{
+ should be referred to for details. E.g.,
+ the}{\b  Associate File}{\b name...}{ under
+ the }{\b File}{ menu is useful in handling
+ data files in other directories.}}
+}
+.TXT 8 -11 361 0
+Cg a9.000000,61.125000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \f1 PROBLEM\par 1.4}}
+}
+.TXT 0 11 331 0
+Cg a49.875000,50.375000,561
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {Whereas }{\b READ}{ and }{\b WRITE}{
+ are useful for data in vector form, }{\b 
+READPRN}{ and }{\b WRITEPRN}{ are useful
+ for data in matrix form. The }{\b structured
+ file}{ time_alt.prn is data }{recorded}{
+ from a rocket launch. It is comprised of
+ 26  (time,altitude) pairs. When read with
+ READPRN, a 26 by 2 matrix results, with
+ the first column being the set of times
+ and the second column being the corresponding
+ measured altitudes. Read the file, extract
+ the columns as time and altitiude vectors
+ and plot the altitude versus time. }{\b 
+ }{\b \f0 ‡ }}
+}
+.TXT 21 -11 169 0
+Cg a51.000000,81.375000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs36 \f1 \b Advanced Operations
+ on Digital Signals}}
+}
+.TXT 4 11 117 0
+Cg a48.625000,50.000000,747
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\i0 "Advanced}{\i  }{\i0 operations
+ on digital sequences" is the heart of }{\i0 
+\ulnone digital signal processing. Our interest
+ here centers on }{\b0 \i0 \ulnone digital
+ filtering}{\i0 \ulnone  of discrete-time
+ signals, which  will be defined as}{\b 
+\i0 \ulnone  }{\b0 \i0 \ulnone linear, invariant
+ operations}{\i0 \ulnone  on sequences. 
+Both the understanding and the efficient
+ implementation of filtering- and other 
+operations associated with digital signals-
+  can be greatly facilitated using the}{\i0 
+\b \ulnone  }{\b0 \i0 \ulnone Discrete Fourier
+ Transform, DFT}{\i0 \b \ulnone ,}{\i0 \ulnone 
+ implemented by a fast algorithm called 
+the}{\b \i0 \ulnone  }{\b0 \i0 \ulnone Fast
+ Fourier Transform, FFT}{\b \i0 \ulnone 
+.}{\i0 \ulnone  We turn next, in order, 
+to these subjects.}}
+}
+.TXT 20 -11 170 0
+Cg a10.500000,80.375000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b Project 1.1}{\fs20 \b 
+ }}
+}
+.TXT 3 12 172 0
+Cg a48.625000,49.125000,261
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {In}{\f0 \i0  a new Mathcad }{\b0 
+\f0 \i0 document, }{\f0 \i0 create and edit
+ text, equation and graphics regions. Copy
+ sample regions from this document into 
+your document. Illustrate the concepts discussed
+ in this section. }{\b \f0 \i0  }{\b \f0 
+\i0 \f0 ‡}}
+}
+.TXT 9 -12 283 0
+Cg a10.000000,12.625000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs24 \b Project 1.2}}
+}
+.TXT 3 11 326 0
+Cg a49.500000,50.125000,163
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {We implement a simulation of a 
+digital communication system. This should
+ demonstrate that, }{with a bit of creativity,}{
+ we already can do significant work!  }}
+}
+.EQN 6 -9 368 0
+{   48    47 0 0}{61}
+19778 3384 0 0 1068
+40 47 48 1 8 0 2304 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!0#/=9"C!!!!6k"C!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"C6k!!!!"C!!"C!!!!6s!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!*!(9[LH1A#dIr!!9Q5Y<6%)!/
+LG#e"s"<"bIt!"1;#TIr!!>{5Y<6!Q!6KUIp!1!2!(9ZLG)1!P<G!!&J!P<ELG#e#u"<"bIt!!)+#U!#LG)+#TIr!")15Y<6!Q!#KU&K#D<9LG)+#TIr!"4'5Y<6!Q!#KU&K""<9!!4!!PIsKUIp!1!4!(9ZLG)1!P<9!!G'!PIsKUIp!1!8!(9ZLG)1!P<9!!1;!A!'KU)0!P<ELG#e$w"<"bIt!!)+!A!&KU&K"2<9LG)+#TIr!"4'5Y<6
+!Q!#KU&K"2<9!!1;!PIsKUIp!1!8!(9ZLG)1!P<9!!6e!A!%KU)0!P<ELG#e$w"<"bIt!!)+!A!(KU&K!p<9LG)+#TIr!">{5Y<6!Q!#KU&K!`<8!!+o!A!%KU)0!P<ELG#e$w"<"bIt!!)+!A!$KU1A!p<9LG)+#TIr!"4'5Y<6!Q!#KU&K!p<;!!1;!PIsKUIp!1!4!(9ZLG)1!P<9!!G'!PIsKUIp!1!4!(9ZLG)1!P<9!!G'!PIsKUIp
+!1!2!(9ZLG)1!P<8!"#d!P<ELG#e#U"<"bIt!!)+$&IsKUIp!1!,!(9[LG&K$f<ELG#e"s"<#$Ir!"1;#TIr!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!!.[5[LV!1!&!(:"LG#e!q"<)0Ir!$!Q
+
+.ATT
+.STATUS Remarks on solution
+.POPUP pr1_2.pas
+.ATT_END
+.TXT 1 9 327 0
+Cg a48.875000,50.125000,343
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 (a) Create a new Mathcad
+ document and d}{\f0 \i0 \b0 \b0 efine an
+ analog pulse train, a periodic repetition
+ of a basic pulse. Use a function definition
+ to implement the basic pulse and use Mathcad's
+ ability to sum functions to implement the
+ pulse train. (You will have to choose workable
+ parameters.) Plot the analog signal.}}
+}
+.TXT 11 0 328 0
+Cg a50.625000,50.250000,423
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \i0 \b0 \b0 (b) Now }{\f0 \b0 
+\i0 \f0 choose, independently for each pulse,
+ an amplitude to be randomly +1 or -1. Such
+ an amplitude sequence represents the encoding
+ of a}{\b0 \f0 \i0 \i0 \f0  sequence of 
+}{\f0 \b0 \i0 \f0 \b0 \i0 \f0  }{\f0 \b0 
+\i0 \b0 \f0 \i0 \i0 \f0 binary}{\f0 \b0 
+\i0  symbols into a (sampled) waveform that
+ can be transmitted through a communication
+ channel. Plot this communication signal.}}
+}
+.TXT 11 0 173 0
+Cg a47.000000,50.125000,216
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 \f0 \b0 \i0 (c) The
+ communication channel will a}{\f0 \b0 \i0 
+\f0 \b0 \i0 \f0 \b0 \i0 dd thermal noise
+ to the communication signal. It will be
+ easiest to add this feature to our model
+ a little later.}}
+}
+.TXT 7 0 329 0
+Cg a49.625000,50.000000,178
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 \f0 \b0 \i0 (d) We 
+wish to implement a receiver to estimate
+ each binary symbol from the "signal plus
+ noise sequence". The receiver will do three
+ operations.     }}
+}
+.TXT 7 4 324 0
+Cg a46.500000,46.125000,199
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 \f0 \b0 \i0 (i)  The
+ first operation is sampling the received
+ analog waveform: implement this. (You will
+ have to choose the sample period. You should
+ have several samples per pulse.)}}
+}
+.TXT 7 3 325 0
+Cg a42.125000,43.250000,244
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 \f0 \b0 \i0 It is at
+ this point that we can add the thermal 
+noise due to the communication channel: 
+add a sequence of independent, normal random
+ variables of zero  mean and variance var.
+ Plot this "signal plus noise" sequence.}}
+}
+.TXT 9 -3 323 0
+Cg a44.375000,46.125000,361
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 \f0 \b0 \i0 (ii) The
+ second operation reduces the effect of 
+the noise. We average the samples over one
+ pulse to produce one sample, which will
+ have a variance reduced by the number of
+ samples averaged. This operation combines
+ digital filtering, which we discuss next
+ (}{\ul \b \f0 \i0 Chapter 2}{\f0 \b0 \i0 
+), and sample decimation which we }}
+}
+.ATT
+.STATUS Go to Chapter 2
+.GOTO 2_bk.mcd
+.ATT_END
+.TXT 11 0 330 0
+Cg a42.000000,58.000000,115
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 \f0 \b0 \i0 take up
+ later (}{\ul \b \f0 \i0 Chapter 17}{\f0 
+\b0 \i0 ). Plot this processed sequence.}}
+}
+.ATT
+.STATUS Go to Chapter 17
+.GOTO 17_bk.mcd
+.ATT_END
+.TXT 3 0 322 0
+Cg a45.000000,46.250000,296
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\f0 \b0 \i0 \f0 \b0 \i0 (iii) The
+ third operation is to make a decision for
+ each symbol: "Was a +1 or a -1 amplitude
+ transmitted?" This can be done with a comparison
+ to a threshold. Plot the original and the
+ estimated binary symbol sequences. }{\b 
+\f0 \i0  }{\b \f0 \i0 \f0 ‡ }{\b \f0 \i0 
+ }}
+}
+.TXT 11 -15 175 0
+Cg a10.875000,80.375000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\b \fs24 References}}
+}
+.TXT 3 12 119 0
+Cg a31.250000,39.875000,114
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\i0 Jackson, Sec. 2.1}{\par }{Oppenheim
+ and Schafer (1989)}{\i0 , Sec. 2.1.\par 
+Proakis and Manolakis, Secs. 1.3, 2.1}}
+}
+.TXT 9 -12 362 0
+Cg a59.750000,61.125000,148
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Times New Roman;}
+{\f2\fnil Symbol;}
+{\f3\fnil CG Times;}
+}
+{\plain {\fs28 \b \f1 ____________________________________________________}{\b 
+\par }{\b \fs24 \f1 __________________________________________________________}}
+}

@@ -1,0 +1,242 @@
+.MCAD 304020000 1 74 33 0
+.CMD PLOTFORMAT
+0 1 0 0 0 2 0 1 0 
+0 1 0 0 0 2 0 1 0 
+0 1 0 0 0 0 NO-TRACE-STRING
+1 2 1 0 0 0 NO-TRACE-STRING
+0 3 2 0 0 0 NO-TRACE-STRING
+0 4 3 0 0 0 NO-TRACE-STRING
+0 1 4 0 0 0 NO-TRACE-STRING
+0 2 5 0 0 0 NO-TRACE-STRING
+0 3 6 0 0 0 NO-TRACE-STRING
+0 4 0 0 0 0 NO-TRACE-STRING
+0 1 1 0 0 0 NO-TRACE-STRING
+0 2 2 0 0 0 NO-TRACE-STRING
+0 3 3 0 0 0 NO-TRACE-STRING
+0 4 4 0 0 0 NO-TRACE-STRING
+0 1 5 0 0 0 NO-TRACE-STRING
+0 2 6 0 0 0 NO-TRACE-STRING
+0 3 0 0 0 0 NO-TRACE-STRING
+0 4 1 0 0 0 NO-TRACE-STRING
+0 0 0 33 9 10 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 0 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-336860181
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 5 5 1 0 0
+Cg a69.000000,69.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs28\b A Mathcad Collection}}
+.TXT 4 0 2 0 0
+Cg a70.000000,70.000000,27
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard of documents concerned with}
+.TXT 5 0 3 0 0
+Cg a69.000000,69.000000,36
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs24\b Digital Signal 
+and Image Processing }}
+.TXT 4 0 20 0 0
+Cg a69.000000,69.000000,103
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Chapters from "An 
+Introduction to Digital Signal Processing with Mathcad", copyright 
+1994, R.O. Harger.}
+.TXT 7 3 23 0 0
+Cg a66.000000,66.000000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 1 Digital 
+Signals (1_bk.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/1_bk.mcd
+.ATT_END
+.TXT 4 0 24 0 0
+Cg a66.000000,66.000000,34
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 2 Digital 
+(FIR) Filters (2_bk.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/2_bk.mcd
+.ATT_END
+.TXT 4 0 25 0 0
+Cg a66.000000,66.000000,37
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 29 Adaptive 
+(FIR) Filters (29_bk.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/29_bk.mcd
+.ATT_END
+.TXT 5 -2 26 0 0
+Cg a68.000000,68.000000,8
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Projects}
+.TXT 4 2 6 0 0
+Cg a66.000000,66.000000,77
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 A 
+communication example: sampling, filtering, message estimation (prj1_2.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj1_2.mcd
+.ATT_END
+.TXT 3 0 8 0 0
+Cg a66.000000,66.000000,48
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 The 
+operation of simple FIR filters (prj2_2.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj2_2.mcd
+.ATT_END
+.TXT 3 0 9 0 0
+Cg a66.000000,66.000000,53
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Frequency 
+response of simple FIR filters (prj3_2.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj3_2.mcd
+.ATT_END
+.TXT 4 0 27 0 0
+Cg a66.000000,66.000000,41
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Non-causal 
+filters: DFT form (prj4_2.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj4_2.mcd
+.ATT_END
+.TXT 3 0 15 0 0
+Cg a66.000000,66.000000,51
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Zeros of 
+the four types of FIR filters (prj8_1.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj8_1.mcd
+.ATT_END
+.TXT 4 0 28 0 0
+Cg a66.000000,66.000000,54
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Even, odd 
+and general FIRs: zero patterns (prj7_1.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj7_1.mcd
+.ATT_END
+.TXT 4 0 29 0 0
+Cg a66.000000,66.000000,46
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Simple 
+sub-band FIRs for Wireless (firexa.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/firexa.mcd
+.ATT_END
+.TXT 4 0 30 0 0
+Cg a66.000000,66.000000,56
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Simple FIR 
+for second-order differentiation (prj8_2.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj8_2.mcd
+.ATT_END
+.TXT 4 0 31 0 0
+Cg a66.000000,66.000000,51
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Simple 
+Design of an DIR differentiator (prj9_1.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj9_1.mcd
+.ATT_END
+.TXT 4 0 33 0 0
+Cg a66.000000,66.000000,43
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Auto 
+regressive (IIR) filters (prj18_2.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/prj18_2.mcd
+.ATT_END

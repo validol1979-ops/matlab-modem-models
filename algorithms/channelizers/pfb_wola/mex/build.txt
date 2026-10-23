@@ -1,0 +1,3 @@
+# build on linux/lrw
+# dependencies: g++ (C++17 or newer), fftw3
+mex wola_chanex.cc -L/usr/lib64/ -lfftw3

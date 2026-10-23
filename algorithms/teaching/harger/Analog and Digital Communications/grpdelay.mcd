@@ -1,0 +1,194 @@
+.MCAD 303010000 1 74 154 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-336860181
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 1 73 0
+Cg a40.375000,73.000000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Grpdelay.mcd}{  to demonstrate
+ group and phase delay.}}
+}
+.EQN 6 6 10 0
+{0:T}NAME:(10)^(-6)
+.EQN 0 13 9 0
+{0:m}NAME({0:t}NAME):{0:exp}NAME(-(((({0:t}NAME))^(2))/(2*({0:T}NAME)^(2))))
+.EQN 0 22 65 0
+{0:\n.c}NAME:3*(2*{0:\p}NAME*(10)^(6))
+.EQN 0 15 11 0
+{0:x}NAME({0:t}NAME):{0:m}NAME({0:t}NAME)*{0:cos}NAME({0:\n.c}NAME*{0:t}NAME)
+.EQN 8 -31 63 0
+{0:t}NAME:-5*{0:T}NAME,(-5*{0:T}NAME*(1-(1)/(128)));5*{0:T}NAME
+.EQN 5 -14 64 0
+&-1&(_n_u_l_l_&_n_u_l_l_)&{0:x}NAME({0:t}NAME),{0:m}NAME({0:t}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 15 0 3 Narrow Band Waveform
+.EQN 27 -2 26 0
+{0:M}NAME({0:\n}NAME):{0:exp}NAME(-(((({0:T}NAME)^(2)*({0:\n}NAME)^(2))/(2))))
+.EQN 0 30 33 0
+{0:X}NAME({0:\n}NAME):(1)/(2)*{0:M}NAME({0:\n}NAME-{0:\n.c}NAME)+(1)/(2)*{0:M}NAME({0:\n}NAME+{0:\n.c}NAME)
+.EQN 6 -12 68 0
+{0:\n}NAME:-((5)/({0:T}NAME)),-((5)/({0:T}NAME))*(1-(1)/(128));(5)/({0:T}NAME)
+.EQN 5 -9 56 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:M}NAME({0:\n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:\n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 27 15 0 3 Modulation Spectrum
+.EQN 26 4 69 0
+{0:\n}NAME:-((25)/({0:T}NAME)),-((25)/({0:T}NAME))*(1-(1)/(128));(25)/({0:T}NAME)
+.EQN 5 -1 70 0
+&&(_n_u_l_l_&_n_u_l_l_)&|({0:X}NAME({0:\n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:\n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 27 15 0 3 N/B Waveform Spectrum
+.EQN 33 -11 7 0
+{0:\q.0}NAME:{0:\p}NAME
+.EQN 0 11 8 0
+{0:\q.1}NAME:(10)^(-6)
+.EQN 0 14 3 0
+{0:\q}NAME({0:\n}NAME):{0:\q.0}NAME+{0:\q.1}NAME*|({0:\n}NAME-{0:\n.c}NAME)
+.EQN 8 -25 75 0
+{0:M}NAME({0:\n}NAME):{0:exp}NAME(-(((({0:T}NAME)^(2)*({0:\n}NAME)^(2))/(2))))
+.EQN 0 30 76 0
+{0:X}NAME({0:\n}NAME):(1)/(2)*{0:M}NAME({0:\n}NAME-{0:\n.c}NAME)+(1)/(2)*{0:M}NAME({0:\n}NAME+{0:\n.c}NAME)
+.EQN 8 -30 78 0
+{0:Y}NAME({0:\n}NAME):{0:exp}NAME(-(((({0:T}NAME)^(2)*(({0:\n}NAME-{0:\n.c}NAME))^(2))/(2))))*{0:exp}NAME(1i*({0:\q.0}NAME+{0:\q.1}NAME*({0:\n}NAME-{0:\n.c}NAME))){54}{0:exp}NAME(-(((({0:T}NAME)^(2)*(({0:\n}NAME+{0:\n.c}NAME))^(2))/(2))))*{0:exp}NAME(1i*
+({0:\q.0}NAME+{0:\q.1}NAME*({0:\n}NAME+{0:\n.c}NAME)))
+.EQN 13 -4 139 0
+{0:y}NAME({0:t}NAME):(1)/((2*{0:\p}NAME))*(\({0:\p}NAME)*(\(2))/({0:T}NAME)*{0:exp}NAME((-1)/(2)*(({0:t}NAME)^(2))/(({0:T}NAME)^(2))+1i*{0:\q.0}NAME-(1)/((2*({0:T}NAME)^(2)))*({0:\q.1}NAME)^(2)+1i*{0:t}NAME*{0:\n.c}NAME-({0:t}NAME)/(({0:T}NAME)^(2))*
+{0:\q.1}NAME)+\({0:\p}NAME)*(\(2))/({0:T}NAME)*{0:exp}NAME((-1)/(2)*(({0:t}NAME)^(2))/(({0:T}NAME)^(2))+1i*{0:\q.0}NAME-(1)/((2*({0:T}NAME)^(2)))*({0:\q.1}NAME)^(2)-1i*{0:t}NAME*{0:\n.c}NAME-({0:t}NAME)/(({0:T}NAME)^(2))*{0:\q.1}NAME))
+.EQN 8 -4 141 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:y}NAME({0:t}NAME))/((10)^(6)),0.8*{0:x}NAME({0:t}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 61 35 0 3 Effect of Group & Phase Delay
+.TXT 47 5 154 0
+Cg a62.625000,66.000000,208
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We note: \par      - the {\f1 p}
+ phase shift in the carrier: it was set 
+as {\f1 q}0 and it is clear in the above
+ plot;\par      - the group delay appears
+ in the envelope, as predicted, and of the
+ appropriate size.}
+}

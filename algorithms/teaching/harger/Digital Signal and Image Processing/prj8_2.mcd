@@ -1,0 +1,459 @@
+.MCAD 303010000 1 74 120 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 2 0
+Cg a68.125000,73.000000,168
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b prj8_2.mcd}{  to find the pole-zero
+ pattern of a second order difference FIR
+ that approximates a second-derivative operation
+ over a certain range of frequencies.}}
+}
+.EQN 6 9 3 0
+({0:h}NAME)[(0):1
+.EQN 0 9 4 0
+({0:h}NAME)[(1):-2
+.EQN 0 10 5 0
+({0:h}NAME)[(2):1
+.EQN 5 -19 13 0
+{0:M}NAME:2
+.EQN 0 9 14 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 0 14 15 0
+{0:N}NAME:{0:M}NAME+1
+.EQN 0 13 16 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 3 -30 18 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+4 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 15 0 3 Second Derivative FIR
+.TXT 28 -10 19 0
+Cg a64.500000,68.000000,104
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We see that this FIR is even about
+ its midpoint and M is even: therefore it
+ is a Type I FIR filter. }}
+}
+.TXT 9 0 6 0
+Cg a20.000000,68.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The transfer function is then}}
+}
+.EQN 0 28 7 0
+{0:H}NAME({0:z}NAME):((0,2,{0:n}NAME,({0:h}NAME)[({0:n}NAME)*({0:z}NAME)^(-{0:n}NAME)){64})
+.TXT 7 -28 8 0
+Cg a1.375000,68.000000,5
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {or}}
+}
+.EQN 5 12 9 0
+{0:H}NAME({0:z}NAME):(((0,2,{0:n}NAME,({0:h}NAME)[({0:n}NAME)*({0:z}NAME)^(2-{0:n}NAME)){64}))/(({0:z}NAME)^(2))
+.TXT 6 -12 10 0
+Cg a60.000000,68.000000,217
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {So h}{\fs16 \dn6 0}{ is the coeficient
+ of z}{\fs16 \up6 2}{, h}{\fs16 \dn6 1}{
+ is the coeficient of z and h}{\fs16 \dn6 
+2}{ is the constant term. \par For the vector
+ v to be used in polyroots(v) we want the
+ reverse order.}}
+}
+.EQN 8 4 11 0
+({0:v}NAME)[({0:n}NAME):({0:h}NAME)[(2-{0:n}NAME)
+.EQN 0 19 12 0
+{0:polyroots}NAME({0:v}NAME)={0}?_n_u_l_l_
+.TXT 6 -23 17 0
+Cg a33.875000,67.000000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {So, we have a }{\b second order
+ singlet}{ at z=+1. }}
+}
+.TXT 7 0 20 0
+Cg a65.625000,68.000000,195
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The frequency response is of interest.
+ In particular, we would like to compare
+ it to the ideal second order differentiator,
+ which has FR (i}{\f1 w}{)}{\fs16 \up6 2}{
+ = -}{\f1 w}{\fs16 \up6 2}{.}}
+}
+.EQN 8 2 22 0
+{0:K}NAME:256
+.EQN 0 8 23 0
+{0:k}NAME:0;{0:K}NAME
+.EQN 0 10 24 0
+({0:\w}NAME)[({0:k}NAME):-{0:\p}NAME+{0:k}NAME*((2*{0:\p}NAME)/({0:K}NAME))
+.EQN 0 17 21 0
+{0:H1}NAME({0:\w}NAME):{0:H}NAME(({0:e}NAME)^(1i*{0:\w}NAME))
+.EQN 0 17 25 0
+({0:H}NAME)[({0:k}NAME):{0:H1}NAME(({0:\w}NAME)[({0:k}NAME))
+.EQN 7 -48 27 0
+({0:I2D}NAME)[({0:k}NAME):-((({0:\w}NAME)[({0:k}NAME)))^(2)
+.EQN 15 -1 26 0
+&&(_n_u_l_l_&0)&|(({0:H}NAME)[({0:k}NAME)),|(({0:I2D}NAME)[({0:k}NAME))@&&(-0.7&0.7)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 24 0 3 Ideal & FIR Differentiators
+.EQN 33 -8 71 0
+4&-4&({0:\p}NAME&0)&(|(({0:H}NAME)[({0:k}NAME)){56}0)*{0:arg}NAME(({0:H}NAME)[({0:k}NAME)),(|(({0:I2D}NAME)[({0:k}NAME)){56}0)*{0:arg}NAME(({0:I2D}NAME)[({0:k}NAME))@&&(-0.7&0.7)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 24 0 3 Ideal & FIR Differentiators
+.TXT 38 3 31 0
+Cg a67.750000,68.000000,132
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We see that the FIR filter "works"
+ as a second order differentiator only over
+ a lowpass band of frequencies. We give 
+an example.}}
+}
+.EQN 8 7 54 0
+{0:\w.1}NAME:(2*{0:\p}NAME)/({0:K}NAME)*4
+.EQN 0 13 60 0
+{0:\w.1}NAME={0}?_n_u_l_l_
+.EQN 0 13 57 0
+{0:\w.2}NAME:(2*{0:\p}NAME)/({0:K}NAME)*8
+.EQN 0 13 61 0
+{0:\w.2}NAME={0}?_n_u_l_l_
+.EQN 7 -39 32 0
+({0:s}NAME)[({0:k}NAME):{0:cos}NAME({0:\w.1}NAME*{0:k}NAME)+2*{0:cos}NAME({0:\w.2}NAME*{0:k}NAME)
+.TXT 6 -7 62 0
+Cg a41.875000,68.000000,61
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The approximate second order derivative
+ is the FIR output.}}
+}
+.EQN 7 11 47 0
+({0:d2sa}NAME)[({0:k}NAME):((0,{0:M}NAME,{0:n}NAME,({0:h}NAME)[({0:n}NAME)*{0:if}NAME({0:k}NAME-{0:n}NAME<0,0,({0:s}NAME)[({0:k}NAME-{0:n}NAME))){64})
+.TXT 7 -11 46 0
+Cg a47.250000,68.000000,69
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The exact second order derivative
+ is easily computed analytically.}}
+}
+.EQN 6 8 36 0
+({0:d2s}NAME)[({0:k}NAME):-(({0:\w.1}NAME))^(2)*{0:cos}NAME({0:\w.1}NAME*{0:k}NAME)+-(({0:\w.2}NAME))^(2)*{0:cos}NAME({0:\w.2}NAME*{0:k}NAME)
+.EQN 6 -8 48 0
+0.1&-0.1&(_n_u_l_l_&_n_u_l_l_)&({0:k}NAME-1ò0)*({0:d2s}NAME)[({0:k}NAME-1),0.5*({0:d2sa}NAME)[({0:k}NAME)@&2&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 25 0 3 Exact & FIR 2nd Derivative
+.TXT 38 0 67 0
+Cg a66.250000,67.000000,138
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise}{  Vary the frequencies
+ }{\f1 w}{\fs16 \dn6 1}{ and }{\f1 w}{\fs16 
+\dn6 2}{ and observe the quality of the 
+FIR approximation.}}
+}
+.TXT 7 0 80 0
+Cg a67.375000,68.000000,223
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Application }  Suppose that 
+we wish to compute the second derivative
+ of an analog waveform using the simple 
+FIR digital filter we have been discussing.
+ The analog signal is known, possibly through
+ measurements, to be}
+}
+.EQN 9 5 83 0
+{0:\n.1}NAME:2*{0:\p}NAME*(10)^(6)
+.EQN 0 15 84 0
+{0:\n.2}NAME:2*{0:\n.1}NAME
+.EQN 0 16 82 0
+{0:s.a}NAME({0:t}NAME):{0:cos}NAME({0:\n.1}NAME*{0:t}NAME)+2*{0:cos}NAME({0:\n.2}NAME*{0:t}NAME)
+.TXT 5 -36 86 0
+Cg a66.375000,68.000000,402
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We must sample the analog waveform.
+ We must choose the sampling frequency. 
+We know that, according to Nyquist's Theorem,
+ we must sample at twice the highest frequency
+ of a real, lowpass waveform. But, further
+ than that, here we wish to make sure that
+ the highest frequency of the resulting 
+digital signal is within the frequency range
+ where our FIR well-approximates a second-order
+ differentiator.}
+}
+.EQN 14 5 88 0
+{0:\n.s}NAME:20*{0:\n.2}NAME
+.EQN 0 14 89 0
+{0:T.s}NAME:(2*{0:\p}NAME)/({0:\n.s}NAME)
+.EQN 0 16 90 0
+{0:T.s}NAME={0}?_n_u_l_l_
+.TXT 6 -35 91 0
+Cg a31.750000,68.000000,45
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain The sampled sequence, the digital
+ signal, is}
+}
+.EQN 5 5 92 0
+({0:s}NAME)[({0:k}NAME):{0:s.a}NAME({0:k}NAME*{0:T.s}NAME)
+.TXT 5 -5 96 0
+Cg a57.250000,68.000000,81
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We see that the digital signal will
+ be composed of two sinusoids, of frequencies}
+}
+.EQN 5 5 97 0
+{0:\w.1}NAME:{0:\n.1}NAME*{0:T.s}NAME
+.EQN 0 14 98 0
+{0:\w.1}NAME={0}?_n_u_l_l_
+.EQN 0 15 99 0
+{0:\w.2}NAME:{0:\n.2}NAME*{0:T.s}NAME
+.EQN 0 14 100 0
+{0:\w.2}NAME={0}?_n_u_l_l_
+.TXT 5 -48 101 0
+Cg a67.250000,68.000000,93
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain These are within the band where 
+the second-order derivative appears to be
+ well approximated.}
+}
+.TXT 4 0 103 0
+Cg a67.500000,68.000000,149
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain To further emphasis this "sampling
+ and fitting" operation, we plot the digital
+ signal'a spectrum and the magnitude of 
+the FIR's frequency response.}
+}
+.EQN 7 6 104 0
+{0:dft}NAME({0:v}NAME):\({0:K}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 21 106 0
+{0:sdft}NAME:{0:dft}NAME({0:s}NAME)
+.TXT 14 -27 110 0
+Cg a49.625000,68.000000,68
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We change the signal spectrum from
+ DFT to FT order before plotting.}
+}
+.EQN 5 6 111 0
+({0:sft}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAMEò({0:K}NAME)/(2),({0:sdft}NAME)[({0:k}NAME-({0:K}NAME)/(2)),({0:sdft}NAME)[({0:k}NAME+({0:K}NAME)/(2)))
+.EQN 8 -6 107 0
+&&(_n_u_l_l_&_n_u_l_l_)&50*|(({0:H}NAME)[({0:k}NAME)),|(({0:sft}NAME)[({0:k}NAME)),50*|(({0:I2D}NAME)[({0:k}NAME))@&&(-0.7&0.7)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 57 34 0 3 Fitting a Spectrum to the Filter
+.TXT 48 2 120 0
+Cg a66.125000,66.000000,421
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain Exercise   Notice that we chose 
+a sampling frequency ten times greater than
+ the Nyquist frequency in order to fit the
+ signal spectrum into the region where the
+ simple FIR filter worked reasonably well.
+ A consequence is the need to process a 
+lot of samples. We might try designing a
+ more sophisticated filter to decrease the
+ required sampling rate- but, very likely,
+ at the cost of more computation per filter
+ output!}
+}

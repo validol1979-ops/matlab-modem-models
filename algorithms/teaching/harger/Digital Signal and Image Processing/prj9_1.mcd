@@ -1,0 +1,430 @@
+.MCAD 303010000 1 73 120 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 0 1 0 NO-TRACE-STRING
+4 0 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 28 26 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.281250 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg a47.250000,73.000000,76
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b prj9_1.mcd}{  to show a simple
+ design of a differentiating FIR filter.}}
+}
+.TXT 4 4 2 0
+Cg a55.375000,73.000000,85
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The derivative of an analog waveform
+ is defined as a limit of a finite difference:}}
+}
+.EQN 4 0 13 0
+{0:\n.1}NAME:2*{0:\p}NAME*(10)^(6)
+.EQN 0 14 14 0
+{0:\n.2}NAME:2*{0:\n.1}NAME
+.EQN 0 14 21 0
+{0:s.a}NAME({0:t}NAME):{0:cos}NAME({0:\n.1}NAME*{0:t}NAME)+2*{0:cos}NAME({0:\n.2}NAME*{0:t}NAME)
+.EQN 6 -11 5 0
+{0:t}NAME"{0:s.a}NAME({0:t}NAME)÷((0,{0:T.s}NAME,({0:s.a}NAME({0:t}NAME)-{0:s.a}NAME({0:t}NAME-{0:T.s}NAME))/({0:T.s}NAME)){68})
+.TXT 6 -16 9 0
+Cg a65.875000,66.250000,448
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We approximate the derivative with
+ a finite difference, after sampling the
+ analog waveform. We know that we have to
+ have a sample frequency larger than twice
+ the highest frequency- }{\f1 n}{\fs16 \dn6 
+2}{ in our example- in order to reconstruct
+ the waveform. But clearly the derivative
+ is more accurately computed as the sample
+ frequency }{\f1 n}{\fs16 \dn6 s}{ gets 
+very large- }{\f1 ¥}{ in the limit. So introduce
+ a }{\b sampling factor}{ f.}}
+}
+.EQN 13 0 10 0
+{0:N}NAME:128
+.EQN 0 7 11 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 10 23 0
+{0:f}NAME:7
+.EQN 0 5 22 0
+{0:\n.s}NAME:{0:f}NAME*2*{0:\n.2}NAME
+.EQN 0 10 24 0
+{0:T.s}NAME:(2*{0:\p}NAME)/({0:\n.s}NAME)
+.EQN 0 8 25 0
+{0:T.s}NAME={0}?_n_u_l_l_
+.EQN 0 16 26 0
+({0:s}NAME)[({0:n}NAME):{0:s.a}NAME({0:n}NAME*{0:T.s}NAME)
+.TXT 6 -56 27 0
+Cg a39.625000,73.000000,61
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The finite difference approximating
+ the derivative is then}}
+}
+.EQN 5 7 28 0
+({0:sd}NAME)[({0:n}NAME):(1)/({0:T.s}NAME)*{0:if}NAME({0:n}NAME÷0,({0:s}NAME)[(1)-({0:s}NAME)[(0),({0:s}NAME)[({0:n}NAME)-({0:s}NAME)[({0:n}NAME-1))
+.TXT 5 -6 29 0
+Cg a48.625000,73.000000,74
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This operation can be interpreted
+ (for n>0) as an FIR filtering with IR}}
+}
+.EQN 6 7 35 0
+{0:M}NAME:1
+.EQN 0 8 36 0
+{0:m}NAME:0;{0:M}NAME
+.EQN 0 15 30 0
+({0:h}NAME)[(0):(1)/({0:T.s}NAME)
+.EQN 0 10 31 0
+({0:h}NAME)[(1):-((1)/({0:T.s}NAME))
+.TXT 5 -39 37 0
+Cg a16.875000,73.000000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The transfer function is }}
+}
+.EQN 5 6 38 0
+{0:H}NAME({0:z}NAME):((0,{0:M}NAME,{0:m}NAME,({0:h}NAME)[({0:m}NAME)*({0:z}NAME)^(-{0:m}NAME)){64})
+.TXT 6 -5 39 0
+Cg a17.500000,73.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {which in rational form is }}
+}
+.EQN 5 5 40 0
+{0:H}NAME({0:z}NAME):(({0:h}NAME)[(0)*{0:z}NAME+({0:h}NAME)[(1))/({0:z}NAME)
+.TXT 5 -6 41 0
+Cg a60.375000,64.750000,164
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {There is a pole at z=0 and a zero
+ at z=-h1/h0=1. }{\ul Therefore, this FIR
+ is the simplest possible Type IV possible!}{\ulnone 
+  The pole-zero plot is very simple.}}
+}
+.EQN 8 6 42 0
+{0:K}NAME:{0:N}NAME
+.EQN 0 10 43 0
+{0:k}NAME:0;{0:K}NAME-1
+.EQN 0 11 44 0
+({0:\w}NAME)[({0:k}NAME):-{0:\p}NAME+{0:k}NAME*((2*{0:\p}NAME)/({0:K}NAME))
+.EQN 3 -14 45 0
+1.2&-1.2&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),0,0@1.2&-1.2&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),0,1
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 0 1 0 NO-TRACE-STRING
+4 0 6 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 18 0 3 Difference FIR Pole-Zero Plot
+.TXT 36 -14 47 0
+Cg a54.625000,67.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The frequency response is of paramount
+ interest.} It is easy to compute it as}
+}
+.EQN 5 10 116 0
+{0:H1}NAME({0:\w}NAME):2*({0:e}NAME)^(-1i*({0:\w}NAME)/(2)+1i*({0:\p}NAME)/(2))*{0:sin}NAME({0:\w}NAME)
+.TXT 5 -10 117 0
+Cg a66.250000,66.250000,124
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise}  Given the transfer
+ function above, verify this frequency response
+ using Mathcad's symbolic math capability.}
+}
+.TXT 7 0 118 0
+Cg a62.625000,66.250000,173
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain Since this FIR filter has length
+ M+1=2, we expect the phase due to causality,
+ namely, {\f1 w}M/2 = {\f1 w}/2. Also, as
+ the FIR is odd, we expect the {\f1 p}/2
+ phase shift.}
+}
+.TXT 7 0 119 0
+Cg a30.875000,66.250000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We now plot the FR magnitude and
+ phase.}
+}
+.EQN 6 11 48 0
+({0:Hs}NAME)[({0:k}NAME):{0:H}NAME(({0:e}NAME)^(1i*({0:\w}NAME)[({0:k}NAME)))
+.EQN 4 -8 49 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:Hs}NAME)[({0:k}NAME)),|((((1i*{0:\w}NAME))[({0:k}NAME))/({0:T.s}NAME))@&&(-0.5&0.5)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+4 0 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 26 0 3 Magnitude of Ideal and FIR FRs
+.EQN 35 -7 50 0
+2&-2&(-(({0:\p}NAME)/(2))&({0:\p}NAME)/(2))&(({0:Hs}NAME)[({0:k}NAME){56}0)*{0:arg}NAME(({0:Hs}NAME)[({0:k}NAME)),((((1i*{0:\w}NAME))[({0:k}NAME))/({0:T.s}NAME){56}0)*{0:arg}NAME((((1i*{0:\w}NAME))[({0:k}NAME))/({0:T.s}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&(
+{0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+4 0 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 26 0 3 Phase of Ideal and FIR FRs
+.TXT 38 4 120 0
+Cg a65.875000,66.250000,278
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain From the explicit FR form above,
+ at {\f1 w} = - {\f1 p}, the overall phase
+ should be 0, which it is: thus the {\f1 
+p}/2 phase shift which produces the i = 
+sqrt(-1) is indeed observed. Also, as sin({\f1 
+w}) changes sign at {\f1 w} = 0, there is
+ a phase shift of {\f1 p} there.}
+}
+.TXT 12 0 65 0
+Cg a65.625000,65.875000,157
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {It is of interest to see where 
+the spectrum of the sample sequence "ended
+ up" (determined by choice of Ts) and how
+ accurately we computed the derivative.}}
+}
+.EQN 8 7 68 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 20 69 0
+{0:sdft}NAME:{0:dft}NAME({0:s}NAME)
+.TXT 6 -26 70 0
+Cg a49.625000,68.000000,70
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We change the signal spectrum from
+ DFT to FT order before plotting.}}
+}
+.EQN 5 6 71 0
+({0:sft}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAMEò({0:K}NAME)/(2),({0:sdft}NAME)[({0:k}NAME-({0:K}NAME)/(2)),({0:sdft}NAME)[({0:k}NAME+({0:K}NAME)/(2)))
+.EQN 7 -5 72 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:Hs}NAME)[({0:k}NAME)),|((((1i*{0:\w}NAME))[({0:k}NAME))/({0:T.s}NAME)),3*(10)^(5)*|(({0:sft}NAME)[({0:k}NAME))@&&(-0.5&0.5)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 26 0 3 Mag Ideal & FIR FRs & Sig Spectrum
+.TXT 37 -3 77 0
+Cg a59.000000,68.000000,85
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {With this choice of Ts, we can 
+expect an accurate approximation to the 
+derivative.}}
+}
+.EQN 6 8 78 0
+{0:s.a}NAME({0:t}NAME):{0:cos}NAME({0:\n.1}NAME*{0:t}NAME)+2*{0:cos}NAME({0:\n.2}NAME*{0:t}NAME)
+.TXT 4 -8 79 0
+Cg a65.000000,68.000000,192
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We can let Mathcad compute the 
+exact derivative and then sample it for 
+a plotting comparison. Since the FIR gives
+ a delay of 1/2 unit, we sample the exact
+ derivative with a similar delay.}}
+}
+.EQN 9 9 81 0
+{0:sd.a}NAME({0:t}NAME):-{0:sin}NAME({0:\n.1}NAME*{0:t}NAME)*{0:\n.1}NAME-2*{0:sin}NAME({0:\n.2}NAME*{0:t}NAME)*{0:\n.2}NAME
+.EQN 5 0 82 0
+({0:sd}NAME)[({0:n}NAME):{0:sd.a}NAME(({0:n}NAME-(1)/(2))*{0:T.s}NAME)
+.TXT 5 -8 83 0
+Cg a48.000000,67.000000,68
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We compute the approximate derivative
+ computed by our FIR filter.}}
+}
+.EQN 5 8 84 0
+({0:he}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<2,({0:h}NAME)[({0:n}NAME),0)
+.EQN 0 21 85 0
+{0:Hdft}NAME:{0:dft}NAME({0:he}NAME)
+.EQN 5 -21 86 0
+({0:sdestdft}NAME)[({0:n}NAME):({0:sdft}NAME)[({0:n}NAME)*({0:Hdft}NAME)[({0:n}NAME)
+.EQN 0 21 87 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 19 88 0
+{0:sdest}NAME:{0:idft}NAME({0:sdestdft}NAME)
+.EQN 5 -52 89 0
+1&&(_n_u_l_l_&_n_u_l_l_)&(({0:sd}NAME)[({0:n}NAME))/({0:max}NAME({0:sd}NAME)),2.*(({0:sdest}NAME)[({0:n}NAME))/({0:max}NAME({0:sdest}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 0 1 0 NO-TRACE-STRING
+4 0 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 58 18 0 3 Approximate and Exact Derivatives

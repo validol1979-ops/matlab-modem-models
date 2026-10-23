@@ -1,0 +1,414 @@
+.MCAD 304020000 1 74 82 0
+.CMD PLOTFORMAT
+0 1 0 0 0 2 0 1 0 
+0 1 0 0 0 2 0 1 0 
+0 1 0 0 0 0 NO-TRACE-STRING
+1 2 1 0 0 0 NO-TRACE-STRING
+0 3 2 0 0 0 NO-TRACE-STRING
+0 4 3 0 0 0 NO-TRACE-STRING
+0 1 4 0 0 0 NO-TRACE-STRING
+0 2 5 0 0 0 NO-TRACE-STRING
+0 3 6 0 0 0 NO-TRACE-STRING
+0 4 0 0 0 0 NO-TRACE-STRING
+0 1 1 0 0 0 NO-TRACE-STRING
+0 2 2 0 0 0 NO-TRACE-STRING
+0 3 3 0 0 0 NO-TRACE-STRING
+0 4 4 0 0 0 NO-TRACE-STRING
+0 1 5 0 0 0 NO-TRACE-STRING
+0 2 6 0 0 0 NO-TRACE-STRING
+0 3 0 0 0 0 NO-TRACE-STRING
+0 4 1 0 0 0 NO-TRACE-STRING
+0 0 0 33 9 10 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 0 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-336860181
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 5 5 1 0 0
+Cg a69.000000,69.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs28\b A Mathcad Collection}}
+.TXT 4 0 2 0 0
+Cg a70.000000,70.000000,27
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard of documents concerned with}
+.TXT 5 0 3 0 0
+Cg a69.000000,69.000000,32
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs24\b Analog and 
+Digital Communication}}
+.TXT 4 0 6 0 0
+Cg a69.000000,69.000000,74
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Fourier and linear 
+analysis, including symbolic and numerical computations}
+.TXT 4 3 8 0 0
+Cg a66.000000,66.000000,38
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 FT of a 
+rectangular pulse (gib3-1.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/gib3_1.mcd
+.ATT_END
+.TXT 3 0 9 0 0
+Cg a66.000000,66.000000,51
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 FT of a 
+double-sided exponential pulse (gib3-2.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/gib3_2.mcd
+.ATT_END
+.TXT 3 0 12 0 0
+Cg a66.000000,66.000000,37
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 FT of a 
+triangular pulse (gib3-3.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/gib3_3.mcd
+.ATT_END
+.TXT 3 0 13 0 0
+Cg a66.000000,66.000000,40
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 FT of a 
+pulse on a carrier (gib3-27.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/gib3_27.mcd
+.ATT_END
+.TXT 3 0 29 0 0
+Cg a66.000000,66.000000,36
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Truncating 
+a sinc pulse (cmnp_1.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/cmnp_1.mcd
+.ATT_END
+.TXT 6 -2 17 0 0
+Cg a68.000000,68.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Amplitude Modulation}
+.TXT 3 2 18 0 0
+Cg a66.000000,66.000000,53
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 
+Conventional (broadcast) AM simulation (dsbtc_am.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/dsbtc_am.mcd
+.ATT_END
+.TXT 4 0 19 0 0
+Cg a66.000000,66.000000,63
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 
+Double-sideband, suppressed carier AM simulation (dsbsc_am.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/dsbsc_am.mcd
+.ATT_END
+.TXT 6 -2 39 0 0
+Cg a68.000000,68.000000,30
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Frequency and Phase Modulation}
+.TXT 3 2 38 0 0
+Cg a65.000000,65.000000,50
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Armstrong 
+FM receiver (without limiter) (fm_1.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/fm_1.mcd
+.ATT_END
+.TXT 4 0 41 0 0
+Cg a65.000000,65.000000,29
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Bessel 
+Functions (bessel.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/bessel.mcd
+.ATT_END
+.TXT 4 0 45 0 0
+Cg a66.000000,66.000000,68
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 FM 
+demodulation with differentiator demodulator (fm2.mcd) (6.0+ doc)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/fm2.mcd
+.ATT_END
+.TXT 3 0 47 0 0
+Cg a66.000000,66.000000,91
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 FM 
+demodulation with differentiator demodulator with limiter/filter 
+(fm2lim.mcd) (6.0+ doc)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/fm2lim.mcd
+.ATT_END
+.TXT 6 0 48 0 0
+Cg a66.000000,66.000000,38
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 
+Phase-Locked Loop dynamics (pll_1.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/pll_1.mcd
+.ATT_END
+.TXT 4 0 49 0 0
+Cg a66.000000,66.000000,41
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 FM 
+discrinination with a PLL (cmnp_3.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/cmnp_3.mcd
+.ATT_END
+.TXT 4 0 51 0 0
+Cg a66.000000,66.000000,31
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 PSK data 
+transmission (psk.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/psk.mcd
+.ATT_END
+.TXT 5 -2 52 0 0
+Cg a68.000000,68.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Quantization}
+.TXT 4 2 54 0 0
+Cg a65.000000,65.000000,31
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Average 
+distortion (420squ.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420squ.mcd
+.ATT_END
+.TXT 4 0 55 0 0
+Cg a66.000000,66.000000,43
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Optimal 
+quantization interval (420squm.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420squm.mcd
+.ATT_END
+.TXT 4 0 58 0 0
+Cg a66.000000,66.000000,55
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Optimal 
+quantization intervals and values (420squp.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420squp.mcd
+.ATT_END
+.TXT 4 0 59 0 0
+Cg a66.000000,66.000000,41
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 mu-Law 
+compander and expander (mulaw.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/mulaw.mcd
+.ATT_END
+.TXT 5 -2 68 0 0
+Cg a68.000000,68.000000,18
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Channel distortion}
+.TXT 4 2 69 0 0
+Cg a66.000000,66.000000,45
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Amplitude 
+errors (paired echoes) (420sad.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420sad.mcd
+.ATT_END
+.TXT 4 0 71 0 0
+Cg a66.000000,66.000000,41
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Phase 
+errors (paired echoes) (420spd.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420spd.mcd
+.ATT_END
+.TXT 3 0 72 0 0
+Cg a66.000000,66.000000,56
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Amplitude 
+and phase errors (paired echoes) (420sapd.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420sapd.mcd
+.ATT_END
+.TXT 6 0 74 0 0
+Cg a66.000000,66.000000,35
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link2 Quadratic 
+phase errors (420sqd.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420sqd.mcd
+.ATT_END
+.TXT 4 0 75 0 0
+Cg a66.000000,66.000000,31
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Cubic phase 
+errors (420scd.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420scd.mcd
+.ATT_END
+.TXT 4 0 80 0 0
+Cg a66.000000,66.000000,36
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Group and 
+phase delay (grpdelay.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/grpdelay.mcd
+.ATT_END
+.TXT 4 -2 76 0 0
+Cg a68.000000,68.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Equalization}
+.TXT 4 2 77 0 0
+Cg a66.000000,66.000000,35
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Automatic 
+equalization (420seq.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420seq.mcd
+.ATT_END
+.TXT 4 0 78 0 0
+Cg a66.000000,66.000000,41
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Adaptive 
+(LMS) equalization (420seqr.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420seqr.mcd
+.ATT_END
+.TXT 4 0 79 0 0
+Cg a66.000000,66.000000,44
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 
+Decision-directed equalization (420seqa.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/420seqa.mcd
+.ATT_END
+.TXT 4 -2 81 0 0
+Cg a68.000000,68.000000,10
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Line Codes}
+.TXT 4 3 82 0 0
+Cg a65.000000,65.000000,40
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Manchester 
+(Ethernet) Code (mnchstr.mcd)}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/mnchstr.mcd
+.ATT_END

@@ -1,0 +1,720 @@
+.MCAD 303010000 1 74 154 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg a72.375000,73.000000,112
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b prj8_1.mcd}{  to find the zeros
+ of examples of each of the four Types of
+  FIR filter, specified by the IR.}}
+}
+.TXT 5 6 2 0
+Cg a50.875000,73.000000,82
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b 1}  {We take as an example of
+ Type I }{the FIR}{ specified on p. 1 of
+ Sec.8.}}
+}
+.EQN 5 1 3 0
+{0:M}NAME:8
+.EQN 0 9 5 0
+{0:N}NAME:{0:M}NAME+1
+.EQN 0 14 6 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 13 7 0
+({0:h.I}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó({0:M}NAME)/(2),{0:n}NAME+1,{0:M}NAME-{0:n}NAME+1)
+.EQN 5 -30 8 0
+&0&(_n_u_l_l_&_n_u_l_l_)&({0:h.I}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 Type I FIR
+.TXT 26 -6 9 0
+Cg a61.625000,66.000000,106
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {To find the zeros we must find 
+the roots of the numerator of the transfer
+ function H}{\fs16 \dn6 I}{(z).}}
+}
+.EQN 6 8 10 0
+{0:H.I}NAME({0:z}NAME):((0,{0:M}NAME,{0:n}NAME,({0:h.I}NAME)[({0:n}NAME)*({0:z}NAME)^(-{0:n}NAME)){64})
+.TXT 7 -8 13 0
+Cg a37.750000,66.000000,98
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Multiplying H}{\fs16 \dn6 I}{(z)
+ by z}{\fs16 \up6 M}{/z}{\fs16 \up6 M}{,
+ we have the rational form}}
+}
+.EQN 10 8 14 0
+{0:H.I}NAME({0:z}NAME):(((0,{0:M}NAME,{0:n}NAME,({0:h.I}NAME)[({0:n}NAME)*({0:z}NAME)^({0:M}NAME-{0:n}NAME)){64}))/(({0:z}NAME)^({0:M}NAME))
+.TXT 7 -8 15 0
+Cg a65.875000,66.000000,318
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Our interest is in the numerator
+ polynomial as we are finding the zeros 
+of the transfer function. {We see that h}{\fs16 
+\dn6 0}{ is the coeficient of z}{\fs16 \up6 
+M}{, h}{\fs16 \dn6 1}{ is the coeficient
+ of z}{\fs16 \up6 M-1}{, and so on. The 
+vector v that we use in the root-finder 
+polyroot is in the reversed order.}}
+}
+.EQN 20 1 16 0
+({0:v.I}NAME)[({0:n}NAME):({0:h.I}NAME)[({0:M}NAME-{0:n}NAME)
+.EQN 0 14 17 0
+{0:polyroots}NAME({0:v.I}NAME)={0}?_n_u_l_l_
+.EQN 0 30 25 0
+{0:zeros.I}NAME:({8,1}ö0.309-0.951iö0.309+0.951iö0.309+0.951iö0.309-0.951iö-0.809+0.588iö-0.809-0.588iö-0.809-0.588iö-0.809+0.588i)
+.TXT 16 -45 19 0
+Cg a22.500000,66.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We now make a pole-zero plot.}}
+}
+.EQN 5 1 20 0
+{0:K}NAME:64
+.EQN 0 11 23 0
+{0:k}NAME:0;{0:K}NAME
+.EQN 0 15 22 0
+({0:\w}NAME)[({0:k}NAME):-{0:\p}NAME+{0:k}NAME*((2*{0:\p}NAME)/({0:K}NAME))
+.EQN 0 20 29 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 7 -40 24 0
+1.1&-1.1&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Im}NAME(({0:zeros.I}NAME)[({0:m}NAME))@1.1&-1.1&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Re}NAME(({0:zeros.I}NAME)[({0:m}NAME))
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 32 28 0 3 Type I FIR Zero Plot
+.TXT 38 -7 32 0
+Cg a65.375000,66.000000,149
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that the zeros appear as
+ }{\b two sets of }{\b second order doublets}{.
+ }{It appears that the zeros are on the 
+unit circle: we check that.}}
+}
+.EQN 16 1 30 0
+({0:mag.I}NAME)[({0:m}NAME):|(({0:zeros.I}NAME)[({0:m}NAME))
+.EQN 0 16 31 0
+{0:mag.I}NAME={0}?_n_u_l_l_
+.EQN 0 14 34 0
+({0:\q.I}NAME)[({0:m}NAME):{0:arg}NAME(({0:zeros.I}NAME)[({0:m}NAME))*57.3
+.EQN 0 24 35 0
+{0:\q.I}NAME={0}?_n_u_l_l_
+.TXT 14 -56 117 0
+Cg a50.125000,67.000000,67
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain We should have checked the roots
+ found by polyroots: we do so now.}
+}
+.EQN 6 2 118 0
+({0:ck}NAME)[({0:m}NAME):{0:H.I}NAME(({0:zeros.I}NAME)[({0:m}NAME))
+.EQN 10 20 119 0
+{0:ck}NAME={0}?_n_u_l_l_
+.TXT 19 -23 120 0
+Cg a61.625000,68.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain We note that the zero approximations
+ found by polyroots do not produce exact
+ zeros!}
+}
+.TXT 19 -1 36 0
+Cg a51.250000,73.000000,85
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b 2}{  }{We take as an example
+ of Type II }{the FIR }{specified on p. 
+2 of Sec.8.}}
+}
+.EQN 5 1 37 0
+{0:M}NAME:7
+.EQN 0 9 38 0
+{0:N}NAME:{0:M}NAME+1
+.EQN 0 14 39 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 13 40 0
+({0:h.II}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó({0:M}NAME)/(2),{0:n}NAME+1,{0:M}NAME-{0:n}NAME+1)
+.EQN 6 -28 41 0
+&0&(_n_u_l_l_&_n_u_l_l_)&({0:h.II}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 Type II FIR
+.TXT 25 -8 42 0
+Cg a62.000000,66.000000,107
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {To find the zeros we must find 
+the roots of the numerator of the transfer
+ function H}{\fs16 \dn6 II}{(z).}}
+}
+.EQN 6 8 43 0
+{0:H.II}NAME({0:z}NAME):((0,{0:M}NAME,{0:n}NAME,({0:h.II}NAME)[({0:n}NAME)*({0:z}NAME)^(-{0:n}NAME)){64})
+.TXT 8 -8 44 0
+Cg a32.375000,66.000000,90
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Multiplying H}{\fs16 \dn6 II}{(z)
+ by z}{\fs16 \up6 M}{/z}{\fs16 \up6 M}{,
+ we have the form}}
+}
+.EQN 11 8 45 0
+{0:H.II}NAME({0:z}NAME):(((0,{0:M}NAME,{0:n}NAME,({0:h.II}NAME)[({0:n}NAME)*({0:z}NAME)^({0:M}NAME-{0:n}NAME)){64}))/(({0:z}NAME)^({0:M}NAME))
+.TXT 7 -8 46 0
+Cg a65.125000,66.000000,220
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that h}{\fs16 \dn6 0}{ is
+ the coeficient of z}{\fs16 \up6 M}{, h}{\fs16 
+\dn6 1}{ is the coeficient of z}{\fs16 \up6 
+M-1}{, and so on. The vector v that we use
+ in the root-finder polyroot is in the reveresed
+ order.}}
+}
+.EQN 17 1 47 0
+({0:v.II}NAME)[({0:n}NAME):({0:h.II}NAME)[({0:M}NAME-{0:n}NAME)
+.EQN 0 14 48 0
+{0:polyroots}NAME({0:v.II}NAME)={0}?_n_u_l_l_
+.EQN 0 30 49 0
+{0:zeros.II}NAME:({7,1}ö0.309-0.951iö0.309+0.951iö1iö-1.156*(10)^(-8)-1iö-0.809+0.588iö-0.809-0.588iö-1)
+.TXT 34 -45 113 0
+Cg a22.500000,68.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We now make a pole-zero plot.}}
+}
+.EQN 5 2 51 0
+{0:K}NAME:64
+.EQN 0 11 52 0
+{0:k}NAME:0;{0:K}NAME
+.EQN 0 15 53 0
+({0:\w}NAME)[({0:k}NAME):-{0:\p}NAME+{0:k}NAME*((2*{0:\p}NAME)/({0:K}NAME))
+.EQN 0 20 54 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 7 -41 55 0
+1.1&-1.1&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Im}NAME(({0:zeros.II}NAME)[({0:m}NAME))@1.1&-1.1&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Re}NAME(({0:zeros.II}NAME)[({0:m}NAME))
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 32 28 0 3 Type II FIR Zero Plot
+.TXT 38 -7 144 0
+Cg a65.625000,66.000000,275
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that the zeros appear as}{\b 
+ three doublets and a singlet @ z = -1}{,
+ two sets, in fact. There appears to be 
+a numerical error in the -i root that doesn't
+ depend on the tolerance set! (See "Built-in
+ Variables" under the Math menu item for
+ the tolerance setting.)}}
+}
+.EQN 8 5 145 0
+{0:H.II}NAME(({0:zeros.II}NAME)[(1))={0}?_n_u_l_l_
+.EQN 0 34 146 0
+{0:H.II}NAME(-1i)={0}?_n_u_l_l_
+.TXT 4 -39 56 0
+Cg a44.500000,66.000000,67
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {It appears that the zeros are on
+ the unit circle: we check that.}}
+}
+.EQN 12 1 57 0
+({0:mag.II}NAME)[({0:m}NAME):|(({0:zeros.II}NAME)[({0:m}NAME))
+.EQN 0 16 58 0
+{0:mag.II}NAME={0}?_n_u_l_l_
+.EQN 0 14 59 0
+({0:\q.II}NAME)[({0:m}NAME):{0:arg}NAME(({0:zeros.II}NAME)[({0:m}NAME))*57.3
+.EQN 0 24 60 0
+{0:\q.II}NAME={0}?_n_u_l_l_
+.TXT 12 -55 121 0
+Cg a66.875000,67.000000,156
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We should have checked the roots
+ found by polyroots: we do so now. }{We 
+note that the zero approximations found 
+by polyroots do not produce exact zeros!}}
+}
+.EQN 16 1 122 0
+({0:ck}NAME)[({0:m}NAME):{0:H.II}NAME(({0:zeros.II}NAME)[({0:m}NAME))
+.EQN 1 22 123 0
+{0:ck}NAME={0}?_n_u_l_l_
+.TXT 17 -24 61 0
+Cg a51.625000,73.000000,86
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b 3}{  }{We take as an example
+ of Type III }{the FIR}{ specified on p.
+ 2 of Sec.8.}}
+}
+.EQN 7 1 62 0
+{0:M}NAME:8
+.EQN 0 9 63 0
+{0:N}NAME:{0:M}NAME+1
+.EQN 0 12 64 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 13 65 0
+({0:h.III}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<({0:M}NAME)/(2),{0:n}NAME+1,{0:if}NAME({0:n}NAME÷({0:M}NAME)/(2),0,-({0:M}NAME-{0:n}NAME+1)))
+.EQN 6 -26 66 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h.III}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 Type III FIR
+.TXT 25 -8 67 0
+Cg a62.375000,66.000000,108
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {To find the zeros we must find 
+the roots of the numerator of the transfer
+ function H}{\fs16 \dn6 III}{(z).}}
+}
+.EQN 6 8 68 0
+{0:H.III}NAME({0:z}NAME):((0,{0:M}NAME,{0:n}NAME,({0:h.III}NAME)[({0:n}NAME)*({0:z}NAME)^(-{0:n}NAME)){64})
+.TXT 8 -8 69 0
+Cg a32.750000,66.000000,91
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Multiplying H}{\fs16 \dn6 III}{(z)
+ by z}{\fs16 \up6 M}{/z}{\fs16 \up6 M}{,
+ we have the form}}
+}
+.EQN 11 8 70 0
+{0:H.III}NAME({0:z}NAME):(((0,{0:M}NAME,{0:n}NAME,({0:h.III}NAME)[({0:n}NAME)*({0:z}NAME)^({0:M}NAME-{0:n}NAME)){64}))/(({0:z}NAME)^({0:M}NAME))
+.TXT 7 -8 71 0
+Cg a65.125000,66.000000,220
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that h}{\fs16 \dn6 0}{ is
+ the coeficient of z}{\fs16 \up6 M}{, h}{\fs16 
+\dn6 1}{ is the coeficient of z}{\fs16 \up6 
+M-1}{, and so on. The vector v that we use
+ in the root-finder polyroot is in the reveresed
+ order.}}
+}
+.EQN 17 -4 72 0
+({0:v.III}NAME)[({0:n}NAME):({0:h.III}NAME)[({0:M}NAME-{0:n}NAME)
+.EQN 0 14 73 0
+{0:polyroots}NAME({0:v.III}NAME)={0}?_n_u_l_l_
+.EQN 0 34 74 0
+{0:zeros.III}NAME:({8,1}ö1ö1.676*(10)^(-8)-0.618iö3.943*(10)^(-9)-1.618iö6.547*(10)^(-11)+0.618iö1.618iö-0.999-0.002iö-0.999+0.002iö-1.002-2.711*(10)^(-4)*1i)
+.TXT 18 -42 148 0
+Cg a22.500000,66.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We now make a pole-zero plot.}}
+}
+.EQN 6 0 76 0
+{0:K}NAME:64
+.EQN 0 11 77 0
+{0:k}NAME:0;{0:K}NAME
+.EQN 0 15 78 0
+({0:\w}NAME)[({0:k}NAME):-{0:\p}NAME+{0:k}NAME*((2*{0:\p}NAME)/({0:K}NAME))
+.EQN 0 20 79 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 7 -41 80 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Im}NAME(({0:zeros.III}NAME)[({0:m}NAME))@2&-2&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Re}NAME(({0:zeros.III}NAME)[({0:m}NAME))
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 32 28 0 3 Type III FIR Zero Plot
+.TXT 38 -7 147 0
+Cg a67.500000,68.000000,97
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that the zeros appear as
+ a quadruplet and two singlets, one at z=1
+ and one at z=-1}{. .}}
+}
+.EQN 15 -3 82 0
+({0:mag.III}NAME)[({0:m}NAME):|(({0:zeros.III}NAME)[({0:m}NAME))
+.EQN 0 20 83 0
+{0:mag.III}NAME={0}?_n_u_l_l_
+.EQN 0 14 84 0
+({0:\q.III}NAME)[({0:m}NAME):{0:arg}NAME(({0:zeros.III}NAME)[({0:m}NAME))*57.3
+.EQN 0 24 85 0
+{0:\q.III}NAME={0}?_n_u_l_l_
+.TXT 15 -56 132 0
+Cg a50.125000,67.000000,69
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We should have checked the roots
+ found by polyroots: we do so now.}}
+}
+.EQN 6 1 133 0
+({0:ck}NAME)[({0:m}NAME):{0:H.III}NAME(({0:zeros.III}NAME)[({0:m}NAME))
+.EQN 10 20 134 0
+{0:ck}NAME={0}?_n_u_l_l_
+.TXT 37 -21 86 0
+Cg a52.000000,73.000000,81
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b 4}{  }{We take as an example
+ the FIR of Type IV specified on p. 2 of
+ Sec.8.}}
+}
+.EQN 5 1 87 0
+{0:M}NAME:7
+.EQN 0 9 88 0
+{0:N}NAME:{0:M}NAME+1
+.EQN 0 14 89 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 13 90 0
+({0:h.IV}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<({0:M}NAME)/(2),{0:n}NAME+1,-({0:M}NAME-{0:n}NAME+1))
+.EQN 6 -28 91 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h.IV}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 Type IV FIR
+.TXT 25 -8 92 0
+Cg a62.500000,66.000000,107
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {To find the zeros we must find 
+the roots of the numerator of the transfer
+ function H}{\fs16 \dn6 IV}{(z).}}
+}
+.EQN 6 8 93 0
+{0:H.IV}NAME({0:z}NAME):((0,{0:M}NAME,{0:n}NAME,({0:h.IV}NAME)[({0:n}NAME)*({0:z}NAME)^(-{0:n}NAME)){64})
+.TXT 8 -8 94 0
+Cg a32.875000,66.000000,90
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Multiplying H}{\fs16 \dn6 IV}{(z)
+ by z}{\fs16 \up6 M}{/z}{\fs16 \up6 M}{,
+ we have the form}}
+}
+.EQN 11 8 95 0
+{0:H.IV}NAME({0:z}NAME):(((0,{0:M}NAME,{0:n}NAME,({0:h.IV}NAME)[({0:n}NAME)*({0:z}NAME)^({0:M}NAME-{0:n}NAME)){64}))/(({0:z}NAME)^({0:M}NAME))
+.TXT 7 -8 96 0
+Cg a65.125000,66.000000,220
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that h}{\fs16 \dn6 0}{ is
+ the coeficient of z}{\fs16 \up6 M}{, h}{\fs16 
+\dn6 1}{ is the coeficient of z}{\fs16 \up6 
+M-1}{, and so on. The vector v that we use
+ in the root-finder polyroot is in the reveresed
+ order.}}
+}
+.EQN 17 0 97 0
+({0:v.IV}NAME)[({0:n}NAME):({0:h.IV}NAME)[({0:M}NAME-{0:n}NAME)
+.EQN 0 15 98 0
+{0:polyroots}NAME({0:v.IV}NAME)={0}?_n_u_l_l_
+.EQN 0 30 99 0
+{0:zeros.IV}NAME:({7,1}ö1ö-0.065-0.549iö-0.065+0.549iö-0.214+1.798iö-0.214-1.798iö-0.52ö-1.922)
+.TXT 16 -45 100 0
+Cg a22.500000,66.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We now make a pole-zero plot.}}
+}
+.EQN 8 2 101 0
+{0:K}NAME:64
+.EQN 0 11 102 0
+{0:k}NAME:0;{0:K}NAME
+.EQN 0 15 103 0
+({0:\w}NAME)[({0:k}NAME):-{0:\p}NAME+{0:k}NAME*((2*{0:\p}NAME)/({0:K}NAME))
+.EQN 0 20 104 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 9 -41 105 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Im}NAME(({0:zeros.IV}NAME)[({0:m}NAME))@2&-2&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Re}NAME(({0:zeros.IV}NAME)[({0:m}NAME))
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 32 28 0 3 Type IV FIR Zero Plot
+.TXT 39 -6 150 0
+Cg a66.875000,67.875000,97
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that the zeros appear as
+ a (complex) quadruplet}{, a real doublet
+ and a singlet a z=1. }}
+}
+.EQN 13 0 107 0
+({0:mag.IV}NAME)[({0:m}NAME):|(({0:zeros.IV}NAME)[({0:m}NAME))
+.EQN 0 17 108 0
+{0:mag.IV}NAME={0}?_n_u_l_l_
+.EQN 0 15 109 0
+({0:\q.IV}NAME)[({0:m}NAME):{0:arg}NAME(({0:zeros.IV}NAME)[({0:m}NAME))*57.3
+.EQN 0 22 110 0
+{0:\q.IV}NAME={0}?_n_u_l_l_
+.TXT 13 -55 135 0
+Cg a50.125000,67.000000,69
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We should have checked the roots
+ found by polyroots: we do so now.}}
+}
+.EQN 5 0 136 0
+({0:ck.IV}NAME)[({0:m}NAME):{0:H.IV}NAME(({0:zeros.IV}NAME)[({0:m}NAME))
+.EQN 10 20 137 0
+{0:ck.IV}NAME={0}?_n_u_l_l_
+.TXT 15 -20 143 0
+Cg a30.750000,68.000000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain The roots are not all that accurately
+ found!!}
+}
+.EQN 5 3 153 0
+({0:zeros.IV}NAME)[(1)={0}?_n_u_l_l_
+.EQN 0 18 151 0
+{0:H.IV}NAME(({0:zeros.IV}NAME)[(1))={0}?_n_u_l_l_
+.EQN 0 25 152 0
+{0:H.IV}NAME(-0.5203)={0}?_n_u_l_l_
+.TXT 7 -46 154 0
+Cg a68.375000,68.000000,123
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Exercise}  Compare the sets 
+of zeros found with those predicted by the
+ theoretical arguments, summarized on page
+ 8-9.}
+}

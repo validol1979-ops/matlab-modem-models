@@ -1,0 +1,4246 @@
+Model {
+  Name			  "QAM64_2008_11_21"
+  Version		  6.0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.28"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5347_P100-1998"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Nov 05 19:55:49 2008"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "1"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Nov 21 12:49:50 2008"
+  ModelVersionFormat	  "1.%<AutoIncrement:28>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.0.4"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.0.4"
+	  StartTime		  "0.0"
+	  StopTime		  "100000.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.0.4"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "sigsOut"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  ConditionalExecOptimization "on_for_testing"
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.0.4"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.0.4"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.0.4"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      ComplexToMagnitudeAngle
+      Output		      "Magnitude and angle"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ComplexToRealImag
+      Output		      "Real and imag"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      DiscreteFilter
+      Numerator		      "[1]"
+      Denominator	      "[1 2]"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FrameConversion
+      OutFrame		      "Frame based"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      AllPortsSameDT	      on
+      OutDataTypeMode	      "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Lookup
+      InputValues	      "[-4:5]"
+      OutputValues	      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      MagnitudeAngleToComplex
+      Input		      "Magnitude and angle"
+      ConstantPart	      "0"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      "M-S-Function"
+      MFile		      "mlfile"
+    }
+    Block {
+      BlockType		      Merge
+      Inputs		      "2"
+      InitialOutput	      "[]"
+      AllowUnequalInputPortWidths off
+      InputPortOffsets	      "[]"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Probe
+      ProbeWidth	      on
+      ProbeSampleTime	      on
+      ProbeComplexSignal      on
+      ProbeSignalDimensions   off
+      ProbeFramedSignal	      off
+      ProbeWidthDataType      "double"
+      ProbeSampleTimeDataType "double"
+      ProbeComplexityDataType "double"
+      ProbeDimensionsDataType "double"
+      ProbeFrameDataType      "double"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RealImagToComplex
+      Input		      "Real and imag"
+      ConstantPart	      "0"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Rounding
+      Operator		      "floor"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Selector
+      InputType		      "Vector"
+      IndexMode		      "One-based"
+      ElementSrc	      "Internal"
+      Elements		      "1"
+      RowSrc		      "Internal"
+      Rows		      "1"
+      ColumnSrc		      "Internal"
+      Columns		      "1"
+      InputPortWidth	      "-1"
+      IndexIsStartValue	      off
+      OutputPortSize	      "1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "QAM64_2008_11_21"
+    Location		    [2, 70, 1278, 752]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "AWGN\nChannel"
+      Ports		      [1, 1]
+      Position		      [490, 64, 570, 106]
+      SourceBlock	      "commchan3/AWGN\nChannel"
+      SourceType	      "AWGN Channel"
+      ShowPortLabels	      on
+      seed		      "67"
+      noiseMode		      "Signal to noise ratio  (Es/No)"
+      EbNodB		      "10"
+      EsNodB		      "90"
+      SNRdB		      "10"
+      bitsPerSym	      "1"
+      Ps		      "1"
+      Tsym		      "1"
+      variance		      "1"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [140, 115, 170, 145]
+      Value		      "-0.5"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [15, 265, 45, 295]
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Digital\nFilter Design\nRRC8"
+      Ports		      [1, 1]
+      Position		      [240, 247, 305, 303]
+      UserDataPersistent      on
+      UserData		      "DataTag0"
+      SourceBlock	      "dsparch4/Digital\nFilter Design"
+      SourceType	      ""
+      ShowPortLabels	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Discrete-Time\nScatter Plot\nScope1"
+      Tag		      "ScatterPlot"
+      Ports		      [1]
+      Position		      [885, 270, 930, 320]
+      SourceBlock	      "commsink2/Discrete-Time\nScatter Plot\nScope"
+      SourceType	      "Discrete-Time Scatter Plot Scope"
+      ShowPortLabels	      on
+      sampPerSymb	      "1"
+      offsetEye		      "0"
+      numTraces		      "512"
+      numNewFrames	      "128"
+      LineMarkers	      "."
+      LineColors	      "b"
+      fading		      on
+      render		      on
+      AxisGrid		      on
+      xMin		      "-1.5"
+      xMax		      "1.5"
+      yMin		      "-1.5"
+      yMax		      "1.5"
+      inphaseLabel	      "In-phase Amplitude"
+      quadratureLabel	      "Quadrature Amplitude"
+      openScopeAtSimStart     on
+      FrameNumber	      on
+      FigPos		      "[232 118 560 560]"
+      figTitle		      "Scatter Plot"
+      numLinesMax	      "8"
+      block_type_	      "scatter"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Downsample1"
+      Ports		      [1, 1]
+      Position		      [820, 278, 855, 312]
+      SourceBlock	      "dspsigops/Downsample"
+      SourceType	      "Downsample"
+      N			      "8"
+      phase		      "0"
+      ic		      "0"
+      smode		      "Allow multirate"
+      fmode		      "Maintain input frame size"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Enabled\nSubsystem"
+      Ports		      [2, 2, 1]
+      Position		      [550, 264, 650, 306]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Enabled\nSubsystem"
+	Location		[2, 82, 1014, 718]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [40, 233, 70, 247]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "one_sps_ena"
+	  Position		  [450, 123, 480, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  Ports			  []
+	  Position		  [235, 20, 255, 40]
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [3, 1]
+	  Position		  [350, 226, 355, 314]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i1"
+	  Ports			  [1, 1]
+	  Position		  [245, 285, 275, 315]
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i5"
+	  Ports			  [1, 1]
+	  Position		  [170, 285, 200, 315]
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "modul"
+	  Ports			  [2, 2, 1]
+	  Position		  [510, 251, 640, 324]
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "modul"
+	    Location		    [2, 82, 1014, 718]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "soft gardner"
+	      Position		      [55, 118, 85, 132]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "indat"
+	      Position		      [55, 183, 85, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      Ports		      []
+	      Position		      [235, 20, 255, 40]
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "gardner"
+	      Ports		      [1, 1]
+	      Position		      [255, 104, 355, 146]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"gardner"
+		Location		[2, 82, 1014, 718]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [90, 263, 120, 277]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  ComplexToRealImag
+		  Name			  "Complex to\nReal-Imag"
+		  Ports			  [1, 1]
+		  Position		  [505, 205, 535, 235]
+		  Output		  "Real"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 3]
+		  Position		  [205, 251, 210, 289]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "3"
+		}
+		Block {
+		  BlockType		  Math
+		  Name			  "Math\nFunction"
+		  Ports			  [1, 1]
+		  Position		  [335, 255, 365, 285]
+		  Operator		  "conj"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  Ports			  [2, 1]
+		  Position		  [415, 201, 460, 234]
+		  InputSameDT		  off
+		  RndMeth		  "Floor"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [2, 1]
+		  Position		  [290, 190, 330, 230]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|+-"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "error"
+		  Position		  [595, 213, 625, 227]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, -50]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  3
+		  Points		  [95, 0]
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  DstBlock		  "Math\nFunction"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Math\nFunction"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, -45]
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "Complex to\nReal-Imag"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Complex to\nReal-Imag"
+		  SrcPort		  1
+		  DstBlock		  "error"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "pif"
+	      Ports		      [1, 1]
+	      Position		      [425, 104, 525, 146]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"pif"
+		Location		[2, 82, 1014, 718]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [175, 88, 205, 102]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain1"
+		  Position		  [280, 152, 340, 198]
+		  Gain			  "1/2^5"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain2"
+		  Position		  [280, 75, 345, 115]
+		  Gain			  "1/2^14"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum1"
+		  Ports			  [2, 1]
+		  Position		  [590, 75, 630, 115]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [2, 1]
+		  Position		  [390, 75, 430, 115]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "i5"
+		  Ports			  [1, 1]
+		  Position		  [480, 80, 510, 110]
+		  NamePlacement		  "alternate"
+		  SourceBlock		  "dspobslib/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  delay			  "1"
+		  ic			  "0"
+		  reset_popup		  "None"
+		}
+		Block {
+		  BlockType		  Scope
+		  Name			  "integrator"
+		  Ports			  [1]
+		  Position		  [595, 299, 625, 331]
+		  Location		  [58, 429, 612, 668]
+		  Open			  off
+		  NumInputPorts		  "1"
+		  ZoomMode		  "xonly"
+		  List {
+		    ListType		    AxesTitles
+		    axes1		    "%<SignalLabel>"
+		  }
+		  YMin			  "-0.002"
+		  YMax			  "0.003"
+		  SaveName		  "ScopeData4"
+		  DataFormat		  "StructureWithTime"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [690, 88, 720, 102]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Gain2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "i5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "i5"
+		  SrcPort		  1
+		  Points		  [0, 0; 25, 0]
+		  Branch {
+		    DstBlock		    "Sum1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 35]
+		    Branch {
+		    DstBlock		    "Sum3"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 185]
+		    DstBlock		    "integrator"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Gain1"
+		  SrcPort		  1
+		  Points		  [265, 0]
+		  DstBlock		  "Sum1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [0, 0; 25, 0]
+		  Branch {
+		    DstBlock		    "Gain2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 80]
+		    DstBlock		    "Gain1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [580, 118, 610, 132]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Outdat"
+	      Position		      [585, 183, 615, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "soft gardner"
+	      SrcPort		      1
+	      DstBlock		      "gardner"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "gardner"
+	      SrcPort		      1
+	      DstBlock		      "pif"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pif"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "indat"
+	      SrcPort		      1
+	      DstBlock		      "Outdat"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "OutGard"
+	  Position		  [735, 263, 765, 277]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "outdat"
+	  Position		  [735, 298, 765, 312]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "i5"
+	  SrcPort		  1
+	  Points		  [0, 0; 20, 0]
+	  Branch {
+	    DstBlock		    "i1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -30]
+	    DstBlock		    "Mux"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "i1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 60]
+	    Branch {
+	      DstBlock		      "i5"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 55; 300, 0; 0, -50]
+	      DstBlock		      "modul"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "modul"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "modul"
+	  SrcPort		  1
+	  DstBlock		  "OutGard"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "modul"
+	  SrcPort		  2
+	  DstBlock		  "outdat"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "one_sps_ena"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  DstBlock		  "modul"
+	  DstPort		  enable
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Farrow1"
+      Ports		      [2, 1]
+      Position		      [220, 64, 320, 106]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Farrow1"
+	Location		[2, 82, 1014, 701]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [25, 18, 55, 32]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "mu"
+	  Position		  [245, 413, 275, 427]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [140, 85, 190, 125]
+	  Gain			  "1/6"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  Position		  [140, 145, 190, 185]
+	  Gain			  "-1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain10"
+	  Position		  [790, 205, 840, 245]
+	  Gain			  "-1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain11"
+	  Position		  [790, 265, 840, 305]
+	  Gain			  "-1/3"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  Position		  [140, 205, 190, 245]
+	  Gain			  "1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain3"
+	  Position		  [140, 265, 190, 305]
+	  Gain			  "-1/6"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain4"
+	  Position		  [475, 85, 525, 125]
+	  Gain			  "0"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain5"
+	  Position		  [475, 145, 525, 185]
+	  Gain			  "1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain6"
+	  Position		  [475, 205, 525, 245]
+	  Gain			  "-1"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain7"
+	  Position		  [475, 265, 525, 305]
+	  Gain			  "1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain8"
+	  Position		  [790, 85, 840, 125]
+	  Gain			  "-1/6"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain9"
+	  Position		  [790, 145, 840, 185]
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [355, 396, 400, 429]
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [745, 406, 790, 439]
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [1040, 416, 1085, 449]
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [4, 1]
+	  Position		  [240, 75, 295, 315]
+	  ShowName		  off
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [4, 1]
+	  Position		  [575, 75, 630, 315]
+	  ShowName		  off
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [4, 1]
+	  Position		  [890, 75, 945, 315]
+	  ShowName		  off
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [2, 1]
+	  Position		  [635, 395, 675, 435]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+||+|||"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum4"
+	  Ports			  [2, 1]
+	  Position		  [965, 405, 1005, 445]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+||+|||"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum5"
+	  Ports			  [2, 1]
+	  Position		  [1120, 415, 1160, 455]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+||+|||"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i"
+	  Ports			  [1, 1]
+	  Position		  [85, 120, 115, 150]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i1"
+	  Ports			  [1, 1]
+	  Position		  [85, 185, 115, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i10"
+	  Ports			  [1, 1]
+	  Position		  [1125, 250, 1155, 280]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i2"
+	  Ports			  [1, 1]
+	  Position		  [85, 245, 115, 275]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i3"
+	  Ports			  [1, 1]
+	  Position		  [420, 120, 450, 150]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i4"
+	  Ports			  [1, 1]
+	  Position		  [420, 185, 450, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i5"
+	  Ports			  [1, 1]
+	  Position		  [420, 245, 450, 275]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i6"
+	  Ports			  [1, 1]
+	  Position		  [735, 120, 765, 150]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i7"
+	  Ports			  [1, 1]
+	  Position		  [735, 185, 765, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i8"
+	  Ports			  [1, 1]
+	  Position		  [735, 245, 765, 275]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i9"
+	  Ports			  [1, 1]
+	  Position		  [1125, 185, 1155, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [1190, 428, 1220, 442]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "i2"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Gain3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i1"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 5]
+	  Branch {
+	    DstBlock		    "i2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "i"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 10]
+	  Branch {
+	    DstBlock		    "i1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain3"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "i5"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Gain7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i4"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 5]
+	  Branch {
+	    DstBlock		    "i5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "i3"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 10]
+	  Branch {
+	    DstBlock		    "i4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain4"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain5"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain6"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain7"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "i8"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Gain11"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i7"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 5]
+	  Branch {
+	    DstBlock		    "i8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain10"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "i6"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 10]
+	  Branch {
+	    DstBlock		    "i7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain9"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain8"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain9"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain10"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain11"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 75]
+	    Branch {
+	      DstBlock		      "i"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 5]
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [335, 0]
+	    Branch {
+	      Points		      [0, 80]
+	      Branch {
+		DstBlock		"i3"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Gain4"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      Points		      [315, 0]
+	      Branch {
+		Points			[0, 80]
+		Branch {
+		  DstBlock		  "i6"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Gain8"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[390, 0]
+		DstBlock		"i9"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Sum4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Sum4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum4"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  DstBlock		  "Sum5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "i10"
+	  SrcPort		  1
+	  DstBlock		  "Sum5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i9"
+	  SrcPort		  1
+	  DstBlock		  "i10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum5"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 210]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "mu"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 70; 385, 0]
+	    Branch {
+	      Points		      [320, 0]
+	      DstBlock		      "Product2"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, -60]
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Farrow2"
+      Ports		      [2, 1]
+      Position		      [360, 264, 460, 306]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Farrow2"
+	Location		[2, 82, 1014, 701]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [25, 18, 55, 32]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "mu"
+	  Position		  [245, 413, 275, 427]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [140, 85, 190, 125]
+	  Gain			  "1/6"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  Position		  [140, 145, 190, 185]
+	  Gain			  "-1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain10"
+	  Position		  [790, 205, 840, 245]
+	  Gain			  "-1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain11"
+	  Position		  [790, 265, 840, 305]
+	  Gain			  "-1/3"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  Position		  [140, 205, 190, 245]
+	  Gain			  "1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain3"
+	  Position		  [140, 265, 190, 305]
+	  Gain			  "-1/6"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain4"
+	  Position		  [475, 85, 525, 125]
+	  Gain			  "0"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain5"
+	  Position		  [475, 145, 525, 185]
+	  Gain			  "1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain6"
+	  Position		  [475, 205, 525, 245]
+	  Gain			  "-1"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain7"
+	  Position		  [475, 265, 525, 305]
+	  Gain			  "1/2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain8"
+	  Position		  [790, 85, 840, 125]
+	  Gain			  "-1/6"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain9"
+	  Position		  [790, 145, 840, 185]
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [355, 396, 400, 429]
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [745, 406, 790, 439]
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [1040, 416, 1085, 449]
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [4, 1]
+	  Position		  [240, 75, 295, 315]
+	  ShowName		  off
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [4, 1]
+	  Position		  [575, 75, 630, 315]
+	  ShowName		  off
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [4, 1]
+	  Position		  [890, 75, 945, 315]
+	  ShowName		  off
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [2, 1]
+	  Position		  [635, 395, 675, 435]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+||+|||"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum4"
+	  Ports			  [2, 1]
+	  Position		  [965, 405, 1005, 445]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+||+|||"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum5"
+	  Ports			  [2, 1]
+	  Position		  [1120, 415, 1160, 455]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+||+|||"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i"
+	  Ports			  [1, 1]
+	  Position		  [85, 120, 115, 150]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i1"
+	  Ports			  [1, 1]
+	  Position		  [85, 185, 115, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i10"
+	  Ports			  [1, 1]
+	  Position		  [1125, 250, 1155, 280]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i2"
+	  Ports			  [1, 1]
+	  Position		  [85, 245, 115, 275]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i3"
+	  Ports			  [1, 1]
+	  Position		  [420, 120, 450, 150]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i4"
+	  Ports			  [1, 1]
+	  Position		  [420, 185, 450, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i5"
+	  Ports			  [1, 1]
+	  Position		  [420, 245, 450, 275]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i6"
+	  Ports			  [1, 1]
+	  Position		  [735, 120, 765, 150]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i7"
+	  Ports			  [1, 1]
+	  Position		  [735, 185, 765, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i8"
+	  Ports			  [1, 1]
+	  Position		  [735, 245, 765, 275]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i9"
+	  Ports			  [1, 1]
+	  Position		  [1125, 185, 1155, 215]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [1190, 428, 1220, 442]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "i2"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Gain3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i1"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 5]
+	  Branch {
+	    DstBlock		    "i2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "i"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 10]
+	  Branch {
+	    DstBlock		    "i1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain3"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "i5"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Gain7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i4"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 5]
+	  Branch {
+	    DstBlock		    "i5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "i3"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 10]
+	  Branch {
+	    DstBlock		    "i4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain4"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain5"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain6"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain7"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "i8"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Gain11"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i7"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 5]
+	  Branch {
+	    DstBlock		    "i8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain10"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "i6"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 10]
+	  Branch {
+	    DstBlock		    "i7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain9"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain8"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain9"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain10"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain11"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 75]
+	    Branch {
+	      DstBlock		      "i"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 5]
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [335, 0]
+	    Branch {
+	      Points		      [0, 80]
+	      Branch {
+		DstBlock		"i3"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Gain4"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      Points		      [315, 0]
+	      Branch {
+		Points			[0, 80]
+		Branch {
+		  DstBlock		  "i6"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Gain8"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[390, 0]
+		DstBlock		"i9"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Sum4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Sum4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum4"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i10"
+	  SrcPort		  1
+	  DstBlock		  "Sum5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i9"
+	  SrcPort		  1
+	  DstBlock		  "i10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum5"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 210]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "mu"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 70; 385, 0]
+	    Branch {
+	      Points		      [320, 0]
+	      DstBlock		      "Product2"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, -60]
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  DstBlock		  "Sum5"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Modulator"
+      Ports		      [0, 1]
+      Position		      [15, 54, 115, 96]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Modulator"
+	Location		[2, 82, 1014, 718]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Coder"
+	  Ports			  [1, 1]
+	  Position		  [315, 89, 415, 131]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "Coder"
+	    Location		    [2, 82, 1014, 718]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [100, 238, 130, 252]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [165, 224, 215, 266]
+	      Gain		      "1/16"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain1"
+	      Position		      [325, 224, 375, 266]
+	      Gain		      "4"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      Position		      [275, 140, 325, 180]
+	      Orientation	      "up"
+	      Gain		      "16"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      Position		      [565, 224, 615, 266]
+	      Gain		      "16"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Integer Delay"
+	      Ports		      [1, 1]
+	      Position		      [470, 340, 500, 370]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      SourceBlock	      "dspobslib/Integer Delay"
+	      SourceType	      "Integer Delay"
+	      delay		      "1"
+	      ic		      "0"
+	      reset_popup	      "None"
+	    }
+	    Block {
+	      BlockType		      Lookup
+	      Name		      "Look-Up\nTable"
+	      Position		      [470, 219, 520, 271]
+	      DialogController	      "Simulink.DDGSource"
+	      InputValues	      "[0:15]"
+	      OutputValues	      "[0 1 2 3 1 3 0 2 2 0 3 1 3 2 1 0]"
+	    }
+	    Block {
+	      BlockType		      Rounding
+	      Name		      "Rounding\nFunction"
+	      Position		      [240, 230, 270, 260]
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [290, 85, 310, 105]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      Ports		      [2, 1]
+	      Position		      [410, 235, 430, 255]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|++"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      Ports		      [2, 1]
+	      Position		      [650, 145, 680, 175]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      IconShape		      "round"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [755, 153, 785, 167]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Rounding\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		DstBlock		"Gain"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -150]
+		DstBlock		"Sum"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Rounding\nFunction"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		DstBlock		"Gain1"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Gain2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain1"
+	      SrcPort		      1
+	      DstBlock		      "Sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Integer Delay"
+	      SrcPort		      1
+	      Points		      [-45, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      DstBlock		      "Look-Up\nTable"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Look-Up\nTable"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"Gain3"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"Integer Delay"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      DstBlock		      "Sum2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      Points		      [350, 0]
+	      DstBlock		      "Sum2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [75, 95, 105, 125]
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Data Mapper IM"
+	  Ports			  [1, 1]
+	  Position		  [460, 153, 540, 197]
+	  SourceBlock		  "commutil2/Data Mapper"
+	  SourceType		  "Data Mapper"
+	  ShowPortLabels	  on
+	  MapMode		  "User Defined"
+	  M			  "64"
+	  MapVec		  "[1 1 3 3 1 1 3 3 7 7 5 5 7 7 5 5 -1 -3 -1 -"
+"3 -7 -5 -7 -5 -1 -3 -1 -3 -7 -5 -7 -5 1 3 1 3 7 5 7 5 1 3 1 3 7 5 7 5 -1 -1 -"
+"3 -3 -1 -1 -3 -3 -7 -7 -5 -5 -7 -7 -5 -5]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Data Mapper RE"
+	  Ports			  [1, 1]
+	  Position		  [460, 88, 540, 132]
+	  SourceBlock		  "commutil2/Data Mapper"
+	  SourceType		  "Data Mapper"
+	  ShowPortLabels	  on
+	  MapMode		  "User Defined"
+	  M			  "64"
+	  MapVec		  "[1 3 1 3 7 5 7 5 1 3 1 3 7 5 7 5 1 1 3 3 1 "
+"1 3 3 7 7 5 5 7 7 5 5 -1 -1 -3 -3 -1 -1 -3 -3 -7 -7 -5 -5 -7 -7 -5 -5 -1 -3 -"
+"1 -3 -7 -5 -7 -5 -1 -3 -1 -3 -7 -5 -7 -5]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Digital\nFilter Design\nRRC4"
+	  Ports			  [1, 1]
+	  Position		  [725, 92, 790, 148]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag1"
+	  SourceBlock		  "dsparch4/Digital\nFilter Design"
+	  SourceType		  ""
+	  ShowPortLabels	  on
+	}
+	Block {
+	  BlockType		  RealImagToComplex
+	  Name			  "Real-Imag to\nComplex1"
+	  Ports			  [2, 1]
+	  Position		  [580, 103, 610, 132]
+	  Input			  "Real and imag"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Scrambler"
+	  Ports			  [1, 1]
+	  Position		  [205, 88, 285, 132]
+	  SourceBlock		  "commsequence2/Scrambler"
+	  SourceType		  "Scrambler"
+	  M			  "64"
+	  poly			  "[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+"0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]"
+	  ini_sta		  "[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "
+"1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay"
+	  Position		  [135, 90, 170, 130]
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Upsample"
+	  Ports			  [1, 1]
+	  Position		  [650, 103, 685, 137]
+	  SourceBlock		  "dspsigops/Upsample"
+	  SourceType		  "Upsample"
+	  N			  "4"
+	  phase			  "0"
+	  ic			  "0"
+	  mode			  "Maintain input frame size"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [830, 113, 860, 127]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Unit Delay"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  DstBlock		  "Scrambler"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Scrambler"
+	  SrcPort		  1
+	  DstBlock		  "Coder"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Upsample"
+	  SrcPort		  1
+	  DstBlock		  "Digital\nFilter Design\nRRC4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Coder"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Data Mapper RE"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Data Mapper IM"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Mapper RE"
+	  SrcPort		  1
+	  DstBlock		  "Real-Imag to\nComplex1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Mapper IM"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -50]
+	  DstBlock		  "Real-Imag to\nComplex1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Real-Imag to\nComplex1"
+	  SrcPort		  1
+	  DstBlock		  "Upsample"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Digital\nFilter Design\nRRC4"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "NCO"
+      Ports		      [1, 3]
+      Position		      [550, 399, 650, 441]
+      Orientation	      "left"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"NCO"
+	Location		[2, 82, 1014, 718]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [50, 283, 80, 297]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [165, 385, 195, 415]
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [470, 120, 500, 150]
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Enabled\nSubsystem"
+	  Ports			  [1, 2, 1]
+	  Position		  [595, 209, 695, 251]
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "Enabled\nSubsystem"
+	    Location		    [421, 301, 919, 601]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [110, 103, 140, 117]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      Ports		      []
+	      Position		      [235, 20, 255, 40]
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [45, 185, 75, 215]
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "NCO2"
+	      Ports		      [1, 1]
+	      Position		      [125, 179, 225, 221]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"NCO2"
+		Location		[2, 82, 1014, 718]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [60, 103, 90, 117]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [170, 125, 200, 155]
+		  Value			  "2"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain2"
+		  Position		  [315, 100, 365, 140]
+		  Gain			  "1/2"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator"
+		  Ports			  [2, 1]
+		  Position		  [635, 97, 665, 128]
+		  AllPortsSameDT	  off
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator1"
+		  Ports			  [1, 1]
+		  Position		  [550, 104, 580, 136]
+		  Operator		  "NOT"
+		  AllPortsSameDT	  off
+		}
+		Block {
+		  BlockType		  Math
+		  Name			  "Math\nFunction"
+		  Ports			  [2, 1]
+		  Position		  [230, 102, 260, 133]
+		  Operator		  "mod"
+		}
+		Block {
+		  BlockType		  Rounding
+		  Name			  "Rounding\nFunction"
+		  Position		  [410, 105, 440, 135]
+		  Operator		  "round"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [2, 1]
+		  Position		  [120, 90, 160, 130]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "i1"
+		  Ports			  [1, 1]
+		  Position		  [480, 105, 510, 135]
+		  NamePlacement		  "alternate"
+		  SourceBlock		  "dspobslib/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  delay			  "1"
+		  ic			  "0"
+		  reset_popup		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "i5"
+		  Ports			  [1, 1]
+		  Position		  [185, 190, 215, 220]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  SourceBlock		  "dspobslib/Integer Delay"
+		  SourceType		  "Integer Delay"
+		  delay			  "1"
+		  ic			  "1"
+		  reset_popup		  "None"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [750, 108, 780, 122]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Math\nFunction"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, -15]
+		  DstBlock		  "Math\nFunction"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Math\nFunction"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    DstBlock		    "Gain2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 85]
+		    DstBlock		    "i5"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "i5"
+		  SrcPort		  1
+		  Points		  [-40, 0]
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Gain2"
+		  SrcPort		  1
+		  DstBlock		  "Rounding\nFunction"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "i1"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Rounding\nFunction"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    DstBlock		    "i1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -45; 160, 0]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      Position		      [290, 193, 320, 207]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "NCO2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "NCO2"
+	      SrcPort		      1
+	      DstBlock		      "Out2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  Position		  [265, 380, 315, 420]
+	  Gain			  "4"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Math\nFunction"
+	  Ports			  [2, 1]
+	  Position		  [405, 302, 435, 333]
+	  Operator		  "mod"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [140, 282, 170, 313]
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [750, 232, 780, 263]
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator"
+	  Position		  [545, 97, 575, 128]
+	  Operator		  "<"
+	  InputSameDT		  off
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope3"
+	  Ports			  [1]
+	  Position		  [575, 309, 605, 341]
+	  Location		  [188, 365, 986, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  SaveName		  "ScopeData6"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [3, 1]
+	  Position		  [230, 290, 270, 330]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|--+"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "i5"
+	  Ports			  [1, 1]
+	  Position		  [315, 295, 345, 325]
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dspobslib/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "strob"
+	  Position		  [810, 108, 840, 122]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "mu"
+	  Position		  [820, 213, 850, 227]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "one_sps_ena"
+	  Position		  [935, 243, 965, 257]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "i5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "i5"
+	  SrcPort		  1
+	  Points		  [0, 0; 25, 0]
+	  Branch {
+	    DstBlock		    "Math\nFunction"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -80]
+	    Branch {
+	      Points		      [0, -125]
+	      DstBlock		      "Relational\nOperator"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [150, 0]
+	      Branch {
+		DstBlock		"Enabled\nSubsystem"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 95]
+		DstBlock		"Scope3"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Math\nFunction"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 50; -225, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "Sum3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Gain2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  Points		  [70, 0]
+	  DstBlock		  "Math\nFunction"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -15]
+	  DstBlock		  "Relational\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator"
+	  SrcPort		  1
+	  Points		  [0, 0; 65, 0]
+	  Branch {
+	    DstBlock		    "Enabled\nSubsystem"
+	    DstPort		    enable
+	  }
+	  Branch {
+	    Points		    [85, 0]
+	    Branch {
+	      DstBlock		      "strob"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 125]
+	      DstBlock		      "Product2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Enabled\nSubsystem"
+	  SrcPort		  1
+	  DstBlock		  "mu"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Enabled\nSubsystem"
+	  SrcPort		  2
+	  Points		  [15, 0; 0, 15]
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [105, 0]
+	  Branch {
+	    Points		    [0, 230; -770, 0; 0, -175]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "one_sps_ena"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Phase/\nFrequency\nOffset"
+      Ports		      [1, 1]
+      Position		      [370, 64, 445, 106]
+      SourceBlock	      "commrflib2/Phase//\nFrequency\nOffset"
+      SourceType	      "Phase/Frequency Offset"
+      ShowPortLabels	      on
+      freqOffset	      "0"
+      phaseOffset	      "0"
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Product"
+      Ports		      [2, 1]
+      Position		      [90, 256, 135, 289]
+      InputSameDT	      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope3"
+      Ports		      [1]
+      Position		      [370, 454, 400, 486]
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "-1"
+      YMax		      "5.55112e-017"
+      SaveName		      "ScopeData3"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Upsample"
+      Ports		      [1, 1]
+      Position		      [175, 258, 210, 292]
+      SourceBlock	      "dspsigops/Upsample"
+      SourceType	      "Upsample"
+      N			      "2"
+      phase		      "0"
+      ic		      "0"
+      mode		      "Maintain input frame size"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "i5"
+      Ports		      [1, 1]
+      Position		      [160, 60, 190, 90]
+      NamePlacement	      "alternate"
+      SourceBlock	      "dspobslib/Integer Delay"
+      SourceType	      "Integer Delay"
+      delay		      "2"
+      ic		      "0"
+      reset_popup	      "None"
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [15, 0; 0, -35]
+      DstBlock		      "Farrow1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "AWGN\nChannel"
+      SrcPort		      1
+      Points		      [25, 0; 0, 95; -525, 0]
+      DstBlock		      "Product"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Product"
+      SrcPort		      1
+      DstBlock		      "Upsample"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Digital\nFilter Design\nRRC8"
+      SrcPort		      1
+      DstBlock		      "Farrow2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "NCO"
+      SrcPort		      2
+      Points		      [-210, 0]
+      Branch {
+	Points			[0, -125]
+	DstBlock		"Farrow2"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"Scope3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "NCO"
+      SrcPort		      1
+      Points		      [-55, 0; 0, -170; 110, 0]
+      DstBlock		      "Enabled\nSubsystem"
+      DstPort		      enable
+    }
+    Line {
+      SrcBlock		      "Farrow2"
+      SrcPort		      1
+      Points		      [70, 0]
+      DstBlock		      "Enabled\nSubsystem"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "Product"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Enabled\nSubsystem"
+      SrcPort		      1
+      Points		      [45, 0; 0, 145]
+      DstBlock		      "NCO"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Downsample1"
+      SrcPort		      1
+      DstBlock		      "Discrete-Time\nScatter Plot\nScope1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Farrow1"
+      SrcPort		      1
+      DstBlock		      "Phase/\nFrequency\nOffset"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Enabled\nSubsystem"
+      SrcPort		      2
+      DstBlock		      "Downsample1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Upsample"
+      SrcPort		      1
+      DstBlock		      "Digital\nFilter Design\nRRC8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Modulator"
+      SrcPort		      1
+      DstBlock		      "i5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "i5"
+      SrcPort		      1
+      DstBlock		      "Farrow1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Phase/\nFrequency\nOffset"
+      SrcPort		      1
+      DstBlock		      "AWGN\nChannel"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "NCO"
+      SrcPort		      3
+      Points		      [-10, 0]
+      DstBlock		      "Enabled\nSubsystem"
+      DstPort		      2
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    L#<   8    (     @         %    "
+"\"     $    !     0         %  0 #0    $   !U    =6YD;VUA;F%G97(  '-I9&5B87( "
+"      !C9FD             9G9T;V]L         &-U<G)E;G1?9FEL= !F:6QT97)-861E0GD 8"
+"W5R<F5N=$9S     '9E<G-I;VX       !H1FEG                #@   ,     &    \"    "
+" (         !0    @    !     0    $         !0 $  @    !    $    %1A9P      5F"
+"5R<VEO;@ .    ,     8    (    !          %    \"                0         0  "
+"        X    X    !@    @    &          4    (     0    $    !          D    "
+"(            \\#\\.    R\"0   8    (     @         %    \"     $    !     0  "
+"       %  0 #0    $    G    8W5R<F5N='!A;F5L &1E<VEG;@        !D<W!F=VEZ     "
+"     X    X    !@    @    $          4    (     0    8    !         !     &  "
+"  9&5S:6=N   .    ,!,   8    (     @         %    \"     $    !     0        "
+" %  0 #P    $   !X    5&%G                5F5R<VEO;@          :7-$97-I9VYE9  "
+"     1FEL=&5R5'EP90      1&5S:6=N365T:&]D    0W5R<F5N=$9S        4W1A=&EC4F5S"
+"<&]N<V4 0V]M<&]N96YT<P      #@   $@    &    \"     0         !0    @    !    "
+"$@    $         $    !(   !S:6=G=6DN9&5S:6=N<&%N96P        .    .     8    ( "
+"   !@         %    \"     $    !     0         )    \"            / _#@   #  "
+"   &    \"     D\"        !0    @    !     0    $          @ !       .    ,  "
+"   8    (    !          %    \"     $    $     0         0  0 <F-O<PX   !    "
+" !@    @    $          4    (     0    P    !         !     ,    9FEL=&1E<RYF"
+":7(Q      X   #     !@    @    \"          4    (     0    $    !          4 "
+"!  &     0    P   !V86QU90!U;FET<P      #@   #@    &    \"     8         !0  "
+"  @    !     0    $         \"0    @            [0 X    P    !@    @    $    "
+"      4    (     0    ,    !         !   P!-2'H #@   #     &    \"     0     "
+"    !0    @    !     P    $         $  # &]F9@ .    ,!    8    (     0       "
+"  %    \"     $    (     0         .    J $   8    (     @         %    \"   "
+"  $    !     0         %  0 \"0    $    M    5&%G        5F5R<VEO;@  :7--:6Y/"
+"<F0 ;6]D90      ;W)D97(         #@   $@    &    \"     0         !0    @    !"
+"    $@    $         $    !(   !S:6=G=6DN9FEL=&5R;W)D97(        .    .     8  "
+"  (    !@         %    \"     $    !     0         )    \"            / _#@  "
+" #     &    \"     D\"        !0    @    !     0    $          @ !       .   "
+" .     8    (    !          %    \"     $    '     0         0    !P   '-P96-"
+"I9GD #@   #     &    \"     0         !0    @    !     P    $         $  # #$"
+"R.  .    , $   8    (     @         %    \"     $    !     0         %  0 #@ "
+"   $    J    5&%G              !697)S:6]N         $1E;G-I='E&86-T;W(         "
+"#@   $@    &    \"     0         !0    @    !    &     $         $    !@   !S"
+":6=G=6DN<F5M97IO<'1I;VYS9G)A;64.    .     8    (    !@         %    \"     $ "
+"   !     0         )    \"            / _#@   #     &    \"     0         !0 "
+"   @    !     @    $         $  \" #$V   .    $ (   8    (     @         %   "
+" \"     $    !     0         %  0 \"@    $    \\    5&%G         %9E<G-I;VX  "
+" !F<F5Q56YI=', 1G,          $9P87-S      !&<W1O<             X   !0    !@    "
+"@    $          4    (     0   !T    !         !     =    9F1A9&5S:6=N<&%N96P"
+"N;'!F<F5Q<&%S<W-T;W     .    .     8    (    !@         %    \"     $    !   "
+"  0         )    \"            / _#@   $@    &    \"     0         !0    @   "
+" !    $P    $         $    !,   !.;W)M86QI>F5D(\"@P('1O(#$I       .    .     "
+"8    (    !          %    \"     $    %     0         0    !0   #0X,# P    #@"
+"   #     &    \"     0         !0    @    !     @    $         $  \" \"XR   ."
+"    ,     8    (    !          %    \"     $    \"     0         0  ( +C4   X"
+"   #X @  !@    @    \"          4    (     0    $    !          4 !  )     0 "
+"  %H   !486<       !697)S:6]N  !)4E1Y<&4   !M86=5;FET<P!!<&%S<P    !!<W1O<   "
+"  !$<&%S<P    !$<W1O<     !%<&%S<P    !%<W1O<              .    2     8    ( "
+"   !          %    \"     $    4     0         0    %    &9D861E<VEG;G!A;F5L+"
+"FQP;6%G      X    X    !@    @    &          4    (     0    $    !          "
+"D    (            \\#\\.    ,     8    (    !          %    \"     $    #    "
+" 0         0  , 1DE2  X    P    !@    @    $          4    (     0    (    ! "
+"        !   @!D0@  #@   #     &    \"     0         !0    @    !     0    $  "
+"       $  ! #$    .    ,     8    (    !          %    \"     $    \"     0  "
+"       0  ( .#    X    P    !@    @    $          4    (     0    ,    !     "
+"    !   P P+C$ #@   #@    &    \"     0         !0    @    !    !0    $      "
+"   $     4    P+C P,0    X    P    !@    @    $          4    (     0    ,   "
+" !         !   P P+C$ #@   #@    &    \"     0         !0    @    !    !0    "
+"$         $     4    P+C P,0    X   \"@ @  !@    @    \"          4    (     "
+"0    $    !          4 !  0     0   '    !486<                 5F5R<VEO;@    "
+"       &9R97%5;FET<P        !&<P                  1G)E<75E;F-Y5F5C=&]R $UA9VY"
+"I='5D959E8W1O<@!796EG:'1696-T;W(     #@   %     &    \"     0         !0    @"
+"    !    &@    $         $    !H   !F9&%D97-I9VYP86YE;\"YD:69F9G)E<6UA9P     "
+"   X    X    !@    @    &          4    (     0    $    !          D    (    "
+"        \\#\\.    2     8    (    !          %    \"     $    3     0        "
+" 0    $P   $YO<FUA;&EZ960@*# @=&\\@,2D       X    X    !@    @    $          "
+"4    (     0    4    !         !     %    -#@P,#     .    0     8    (    !  "
+"        %    \"     $    ,     0         0    #    %LP(\"XU(\"XU-2 Q70     . "
+"   0     8    (    !          %    \"     $    )     0         0    \"0   %LP"
+"(#$@,\" P70         .    .     8    (    !          %    \"     $    %     0 "
+"        0    !0   %LQ(#%=    #@   * \"   &    \"     (         !0    @    !  "
+"   0    $         !0 $  \\    !    >    %1A9P               %9E<G-I;VX       "
+"   &9R97%5;FET<P       $9S                 %1R86YS:71I;VY-;V1E $)A;F1W:61T:  "
+"      %)O;&QO9F8          $9C                  X   !(    !@    @    $        "
+"  4    (     0   !<    !         !     7    9F1A9&5S:6=N<&%N96PN9G)E<7)C;W, #"
+"@   #@    &    \"     8         !0    @    !     0    $         \"0    @     "
+"      #P/PX    P    !@    @    $          4    (     0    ,    !         !   "
+"P!-2'H #@   #     &    \"     0         !0    @    !     @    $         $  \""
+" #(W   .    .     8    (    !          %    \"     $    '     0         0    "
+"!P   %)O;&QO9F8 #@   #     &    \"     0         !0    @    !    !     $     "
+"    $  $ #0P,# .    ,     8    (    !          %    \"     $    $     0      "
+"   0  0 ,\"XQ-0X    X    !@    @    $          4    (     0    4    !        "
+" !     %    ,RXS-S4    .    . $   8    (     @         %    \"     $    !    "
+" 0         %  0 \"P    $    A    5&%G          !697)S:6]N     $1E<VEG;E1Y<&4 "
+"          X   !(    !@    @    $          4    (     0   !8    !         !   "
+"  6    9F1A9&5S:6=N<&%N96PN;6%G<F-O<P  #@   #@    &    \"     8         !0   "
+" @    !     0    $         \"0    @           #P/PX   !     !@    @    $     "
+"     4    (     0    L    !         !     +    4W%U87)E(')O;W0       X   !P 0"
+"  !@    @    \"          4    (     0    $    !          4 !  *     0   \"@  "
+" !486<         5F5R<VEO;@   %=I;F1O=P    !087)A;4-E;&P #@   %     &    \"    "
+" 0         !0    @    !    &0    $         $    !D   !S:6=G=6DN9FER=VEN;W!T:6"
+"]N<V9R86UE          X    X    !@    @    &          4    (     0    $    !   "
+"       D    (            \\#\\.    .     8    (    !          %    \"     $  "
+"  &     0         0    !@   &MA:7-E<@  #@   #     &    \"     0         !0   "
+" @    !     P    $         $  # # N-0 .    Z!    8    (     @         %    \""
+"     $    !     0         %  0 %     $   #<    5&%G                      !697"
+")S:6]N                 $9I;'1E<@                  0FQO8VM4>7!E              !"
+"$97-T:6YA=&EO;@           $)L;V-K3F%M90              3W9E<G=R:71E0FQO8VL     "
+"  !/<'1I;6EZ95IE<F]S         $]P=&EM:7IE3VYE<P          3W!T:6UI>F5.96=/;F5S "
+"     !/<'1I;6EZ941E;&%Y0VAA:6YS       .    ,     8    (    !          %    \""
+"                0         0          X    X    !@    @    &          4    (  "
+"   0    $    !          D    (            \\#\\.    8 T   8    (    $0       "
+"  !          $    &    :&%N9&QE   !    \"P   &1F:6QT+F1F9FER       .    & T  "
+" 8    (     0         %    \"     0    !     0         .    0 $   8    (    "
+"\"0         %    \"    ! !   !     0         \"    $ $   $    %    8    )    "
+"\"H    \\     @!   0 0            !D9FEL= !D9F9I<@!F:6QT97)Q=6%N=&EZ97( ;F-O9"
+"69F<P!-051,04(@87)R87D                                !     @       0       0"
+"    ,                          0    4    !     0                             "
+"       $               $               (                    !                "
+"     0    0    !                    #@   '@    &    \"     $         !0    @ "
+"   !     0    $         #@   $@    &    \"     T         !0    @    %     0  "
+"  $         !@   !0       #= @    $    !     0         .    .     8    (    !"
+"@         %    \"     $    !     0         )    \"           (&! #@   . *   &"
+"    \"     (         !0    @    !     0    $         !0 $ !4    !    J    &-L"
+"87-S                     $%R:71H;65T:6,              '!R:79F<0               "
+"    $YU;65R871O<@               %-T871E<P                   %)E<V5T0F5F;W)E1F"
+"EL=&5R:6YG $YU;5-A;7!L97-0<F]C97-S960  &9D97-I9VX                   X   !    "
+" !@    @    $          4    (     0    L    !         !     +    9&9I;'0N9&9F"
+":7(       X    X    !@    @    $          4    (     0    8    !         !   "
+"  &    9&]U8FQE   .    2     8    (    #0         %    \"     4    !     0   "
+"      &    %        -T\"     0    $    \"          X    X!   !@    @    &    "
+"      4    (     0   ($    !          D    (!   [4F4 O3I1C_2/=I/605,/Y#7;!'Y#"
+"$L_,/Y!:JRE0S^- CJW.5$K/^/NIF3'-#*_F>03MLCP2+\\,#+IX2Y12OVXV0ACX4%6_?:0 8CFK4"
+"[_2ZUSJ2.-*O^YW=;\\]*2N_/=W4PK*I03]U;.@=>/!4/VK5&2ML85X_>LO>=F5L83\\__AH:T&%@"
+"/_T(GB!6L5<_@/(!&Y@603^_9@ 5_.-$O\\)B@TL8 5Z_>#RJ\",@L9[_Y(275W^YKO[>1]>R.Z6N"
+"_\\YIW\"VV!9K\\.;[FDR2%8OUAV+'(]9S _\\/_CRHJ@83]64 PU\"NAO/Q07&RRL!74_,?;T4,#"
+"0=C_)O^M\"V9=T/RS[BV%$BFP_&E0QC. %4C]-L[T%C%)=OX**[^;I4W._9PR[7]-0?;\\K\\14JZ"
+"IR!O]E1($2/O(&_\\0\"G,D=+?;_*N23NF_IPOP]_^XYFSNL^]6F@^F-?<S]BJX]4U>F\"/[^>=T#"
+"* (H_2JV+C/!DC3^B(=8A^O.+/R/(_%2V-X4_KX^*W[$@<S_6O=7M4OEFOPO,?<>$H8:_3W<KI[\\"
+"VD[^GC'-*\\1>9OZFT\"#'_B9N_\"C,WR.]EF;\\[258>CO>1OW_H,F4S@G2_3 K\"MZ8LB3_#2=3"
+"FOP\"A/P'[\"U%6MJP_#A>U3PLRM#_*_P[F!WFY/R(H= 5YK+T_L!FM8VDPP#_AJD3=X*? /[ 9K6"
+"-I,, _(BAT!7FLO3_*_P[F!WFY/PX7M4\\+,K0_ ?L+45:VK#_#2=3FOP\"A/TP*PK>F+(D_?^@R9"
+"3.\"=+\\[258>CO>1OPHS-\\CO99F_J;0(,?^)F[^GC'-*\\1>9OT]W*Z>_-I._\"\\Q]QX2AAK_6"
+"O=7M4OEFOZ^/BM^Q(',_(\\C\\5+8WA3^B(=8A^O.+/TJMBXSP9(T_OYYW0,H BC]BJX]4U>F\"/_"
+"5IH/IC7W,_#W_[CF;.ZS[*N23NF_IPO_$ IS)'2WV_V5$@1(^\\@;\\K\\14JZIR!OV<,NU_34'V_"
+"@HKOYNE3<[]-L[T%C%)=OQI4,8S@!5(_+/N+842*;#_)O^M\"V9=T/S'V]%# T'8_%!<;+*P%=3]6"
+"4 PU\"NAO/_#_X\\J*H&$_6'8L<CUG,#\\.;[FDR2%8O_.:=PMM@6:_MY'U[([I:[_Y(275W^YKOW"
+"@\\J@C(+&>_PF*#2Q@!7K^_9@ 5_.-$OX#R 1N8%D$__0B>(%:Q5S\\__AH:T&%@/WK+WG9E;&$_:"
+"M49*VQA7C]U;.@=>/!4/SW=U,*RJ4$_[G=UOSTI*[_2ZUSJ2.-*OWVD &(YJU._;C9\"&/A05;\\,"
+"#+IX2Y12OYGD$[;(\\$B_X^ZF9,<T,K^- CJW.5$K/S#^06JLI4,_D-=L$?D,2S_2/=I/605,/^U)"
+"E +TZ48_#@   # $   &    \"     8         !0    @   \"      0    $         \"0"
+"     $                                                                       "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                 #@   #     &"
+"    \"     0         !0    @    !     @    $         $  \" &]N   .    .     8"
+"    (    !@         %    \"     $    !     0         )    \"               #@"
+"   #     &    \"     8         !0    @               $         \"0         . "
+"   2     8    (    !          %    \"     $    5     0         0    %0   $9L;"
+"V%T:6YG+7!O:6YT(&)L;V-K<P    X    X    !@    @    $          4    (     0    "
+"<    !         !     '    0W5R<F5N=  .    0     8    (    !          %    \" "
+"    $    *     0         0    \"@   $9I;'1E<B!24D,        .    ,     8    (  "
+"  !          %    \"     $    #     0         0  , ;V9F  X    P    !@    @   "
+" $          4    (     0    (    !         !   @!O;@  #@   #     &    \"     "
+"0         !0    @    !     @    $         $  \" &]N   .    ,     8    (    ! "
+"         %    \"     $    \"     0         0  ( ;VX   X    P    !@    @    $ "
+"         4    (     0    (    !         !   @!O;@  #@   &@\"   &    \"     ( "
+"        !0    @    !     0    $         !0 $ !     !    <    %1A9P           "
+"     !697)S:6]N            1FEL=&5R4W1R=6-T=7)E %-O=7)C90            !/<F1E<@"
+"              :7-3=&%B;&4          %-E8W1I;VYS           .    ,     8    (   "
+" !          %    \"                0         0          X    X    !@    @    "
+"&          4    (     0    $    !          D    (            \\#\\.    0     "
+"8    (    !          %    \"     $    /     0         0    #P   $1I<F5C=\"!F;"
+"W)M($9)4@ .    .     8    (    !          %    \"     $    (     0         0 "
+"   \"    $1E<VEG;F5D#@   #@    &    \"     8         !0    @    !     0    $ "
+"        \"0    @           !@0 X    X    !@    @    &          4    (     0  "
+"  $    !          D    (            \\#\\.    .     8    (    !@         %   "
+" \"     $    !     0         )    \"            / _#@   (@    &    \"     (  "
+"       !0    @    !     0    $         !0 $ !     !    $    &-U<G)E;G1!;F%L>7"
+"-I<P .    .     8    (    !          %    \"     $    '     0         0    !P"
+"   &UA9W)E<W  #@   & -   &    \"    !$          0         !    !@   &AA;F1L90"
+"   0    L   !D9FEL=\"YD9F9I<@      #@   !@-   &    \"     $         !0    @  "
+"  $     0    $         #@   $ !   &    \"     D         !0    @    0 0   0   "
+" $          @   ! !   !    !0   &    \"0    J    /     ( 0  $ $             9"
+"&9I;'0 9&9F:7( 9FEL=&5R<75A;G1I>F5R &YC;V5F9G, 34%43$%\"(&%R<F%Y             "
+"                    0    (       $       $    #                          $   "
+" %     0    $                                    !               !           "
+"    \"                     0                    $    $     0                 "
+"   X   !X    !@    @    !          4    (     0    $    !          X   !(    "
+"!@    @    -          4    (    !0    $    !          8    4        W0(    ! "
+"    0    $         #@   #@    &    \"     8         !0    @    !     0    $  "
+"       \"0    @          \"!@0 X   #@\"@  !@    @    \"          4    (     0"
+"    $    !          4 !  5     0   *@   !C;&%S<P                    !!<FET:&U"
+"E=&EC              !P<FEV9G$                   !.=6UE<F%T;W(               !3"
+"=&%T97,                   !297-E=$)E9F]R949I;'1E<FEN9P!.=6U386UP;&5S4')O8V5S<"
+"V5D  !F9&5S:6=N                   .    0     8    (    !          %    \"    "
+" $    +     0         0    \"P   &1F:6QT+F1F9FER       .    .     8    (    !"
+"          %    \"     $    &     0         0    !@   &1O=6)L90  #@   $@    & "
+"   \"     T         !0    @    %     0    $         !@   !0       #= @    $  "
+"  !     @         .    . 0   8    (    !@         %    \"     $   \"!     0  "
+"       )    \" 0  . +FZL)&QN_\"G.FUNX!/+]HN<RC;X0[O\\1ZSFX.J!*_/86G,ME*-S]PD8"
+"#WQ^I /RCDE^?DZ# _#7&-@!SV+[]_J\"=/XYY#O_<\"3^/-2D\"_)_>YG'^, #\\S/K$G)/!#/W7"
+"8,\"WJ34D_<](''X@Y-C]E'^?\"DYD[O_8X<%:3($^_R$';9X5[2K\\8I<1T;L$ O[L$$K_QRDL_?"
+"(<W[!@N4S_ZKGA(/PE%/P<9A=>*A3J_!\\QH+E_A4[_A)KR#O^I2OSP67Q9_&2V_\"R)C'Y;Y33^:"
+"D)AV?Z56/^Z;,4ES:DD_S34U',]_/[]6LS[@]/56O^]C=!W*=E._M67AX82Z&#^#S1NH* !8/U6)'"
+"TMB0%P_,]W! 3AS/#]F(5NFE.=9OV'$<9DC%6:_1A_B#=C(6[]J\"QTK.C52/Q7IN5_7/F\\_CWF("
+"\":#/<#\\Q7'KUEG]1/[Q[+[!TJ6Z_VW/6I6]]?+_DCZKZ;NEVO_NO&LN+JT _,!]UAHTO@#\\M^:"
+"T7EAR'/TV)>5TOWGP_PQKBJ#J>;;^*CT<3J9*-OWZA \\7=WI&_DZ_N5) 6@;_ <V:U*GJ#/SS'E"
+"\\9W'IH_A'HCALP-G#]-?45NI2Z#/Y=CE1LFKI:_&(C_YSDBJ;^%8;1<*6VIO_\\.^^/NA82_6G*,"
+"7GT\"L3_18:)L]C+$/T6J\"V#/K,T_XJI$W>\"GT#]%J@M@SZS-/]%AHFSV,L0_6G*,7GT\"L3__#"
+"OOC[H6$OX5AM%PI;:F_&(C_YSDBJ;^78Y4;)JZ6OTU]16ZE+H,_A'HCALP-G#\\\\QY?&=QZ:/\\!"
+"S9K4J>H,_DZ_N5) 6@;]^H0/%W=Z1OXJ/1Q.IDHV_PQKBJ#J>;;]-B7E=+]Y\\/RWYK1>6'(<_,!]"
+"UAHTO@#_[KQK+BZM /^2/JOINZ7:_VW/6I6]]?+^\\>R^P=*ENOS%<>O66?U$_CWF(\":#/<#\\5Z"
+";E?USYO/VH+'2LZ-5(_1A_B#=C(6[]AQ'&9(Q5FOV8A6Z:4YUF_,]W! 3AS/#]5B1]+8D!</X/-&Z"
+"@H %@_M67AX82Z&#_O8W0=RG93OU:S/N#T]5:_S34U',]_/[_NFS%)<VI)/YJ0F'9_I58_\"R)C'Y"
+";Y33\\\\%E\\6?QDMO^$FO(._ZE*_!\\QH+E_A4[\\'&877BH4ZO_JN>$@_\"44_?(<W[!@N4S^[!"
+"!*_\\<I+/QBEQ'1NP0\"_R$';9X5[2K_V.'!6DR!/OV4?Y\\*3F3N_<](''X@Y-C]UV# MZDU)/S,"
+"^L2<D\\$,_)_>YG'^, #_W D_CS4I OW^H)T_CGD._#7&-@!SV+[\\HY)?GY.@P/W\"1@/?'ZD _/"
+"86G,ME*-S_$>LYN#J@2OVBYS*-OA#N_\"G.FUNX!/+_@\"YNK\"1L;OPX    P!   !@    @    "
+"&          4    (    @     $    !          D     !                           "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                 X    P    !@    @    $          4    (     0"
+"    (    !         !   @!O;@  #@   #@    &    \"     8         !0    @    !  "
+"   0    $         \"0    @               X    P    !@    @    &          4   "
+" (               !          D         #@   #@    &    \"     0         !0    "
+"@    !    \"     $         $     @   !$97-I9VYE9 X    X    !@    @    &      "
+"    4    (     0    $    !          D    (         ,R_>4$.    .     8    (   "
+" !@         %    \"     $    !     0         )    \"    )J9F9F9F?$_#@   #@   "
+" &    \"     8         !0    @    !     0    $         \"0    @       \"@  \""
+"50 X   \"(    !@    @    )          4    (     0   %@    !          (   !8   "
+"   %)30     .    2     8    (     @         %    \"     $    !     0         "
+"%  0 !P    $    '    :&%N9&QE   .          "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    N#(   8    (     @         %    "
+"\"     $    !     0         %  0 #0    $   \"\"    <VED96)A<@       &9V=&]O; "
+"        !U;F1O;6%N86=E<@  8W5R<F5N=%]F:6QT &9I;'1E<DUA9&5\">0!C=7)R96YT1G,   "
+"  8W5R<F5N=$YA;64  '9E<G-I;VX       !M8V]D90          :$9I9P                 "
+"   X   #X'@  !@    @    \"          4    (     0    $    !          4 !  -   "
+"  0   \"<   !C=7)R96YT<&%N96P 9&5S:6=N         &1S<&9W:7H         #@   #@    "
+"&    \"     0         !0    @    !    !@    $         $     8   !D97-I9VX   X"
+"   !X#0  !@    @    \"          4    (     0    $    !          4 !  3     0 "
+"  +X   !486<                     5F5R<VEO;@               &ES1&5S:6=N960     "
+"      !297-P;VYS951Y<&4         4W5B5'EP90               $1E<VEG;DUE=&AO9    "
+"     !#=7)R96YT1G,             4F5S<&]N<V54>7!E0U-(5&%G %-T871I8U)E<W!O;G-E  "
+"    !#;VUP;VYE;G1S               .    2     8    (    !          %    \"     "
+"$    2     0         0    $@   '-I9V=U:2YD97-I9VYP86YE;         X    X    !@ "
+"   @    &          4    (     0    $    !          D    (            \\#\\.  "
+"  ,     8    (    \"0(        %    \"     $    !     0         \"  $       X "
+"   P    !@    @    $          4    (     0    (    !         !   @!L<   #@   "
+"#     &    \"     0         !0    @    !    !     $         $  $ ')C;W,.    0"
+"     8    (    !          %    \"     $    ,     0         0    #    &9I;'1D9"
+"7,N9FER,0     .    P     8    (     @         %    \"     $    !     0       "
+"  %  0 !@    $    ,    =F%L=64 =6YI=',       X    X    !@    @    &          "
+"4    (     0    $    !          D    (          !PYT .    ,     8    (    !  "
+"        %    \"     $    \"     0         0  ( 2'H   X   !8    !@    @    $  "
+"        4    (     0   \"8    !         !     F    9F1A=&]O;%]F:6QT97)?='EP95"
+"]F<F%M95QF:6QT97)D97-I9VX   X    P    !@    @    $          4    (     0    ,"
+"    !         !   P!O9F8 #@   )@)   &    \"     $         !0    @    !    !0 "
+"   $         #@   *@!   &    \"     (         !0    @    !     0    $        "
+" !0 $  D    !    +0   %1A9P       %9E<G-I;VX  &ES36EN3W)D &]R9&5R     &UO9&4 "
+"          X   !(    !@    @    $          4    (     0   !(    !         !   "
+"  2    <VEG9W5I+F9I;'1E<F]R9&5R        #@   #@    &    \"     8         !0   "
+" @    !     0    $         \"0    @           #P/PX    P    !@    @    ) @   "
+"     4    (     0    $    !          (  0      #@   #     &    \"     0      "
+"   !0    @    !     P    $         $  # #$R.  .    .     8    (    !         "
+" %    \"     $    '     0         0    !P   '-P96-I9GD #@   # !   &    \"    "
+" (         !0    @    !     0    $         !0 $  X    !    *@   %1A9P        "
+"      5F5R<VEO;@        !$96YS:71Y1F%C=&]R          X   !(    !@    @    $   "
+"       4    (     0   !@    !         !     8    <VEG9W5I+G)E;65Z;W!T:6]N<V9R"
+"86UE#@   #@    &    \"     8         !0    @    !     0    $         \"0    @"
+"           #P/PX    P    !@    @    $          4    (     0    (    !        "
+" !   @ Q-@  #@   .@\"   &    \"     (         !0    @    !     0    $        "
+" !0 $  \\    !    AP   %1A9P               %9E<G-I;VX          &9R97%5;FET<P "
+"      $9S                 %1R86YS:71I;VY-;V1E $)A;F1W:61T:        &ES5')A;G, "
+"         %)O;&QO9F8          $9C                   .    2     8    (    !    "
+"      %    \"     $    7     0         0    %P   &9D861E<VEG;G!A;F5L+F9R97%R8"
+"V]S  X    X    !@    @    &          4    (     0    $    !          D    (  "
+"          \\#\\.    ,     8    (    !          %    \"     $    #     0      "
+"   0  , 34AZ  X    P    !@    @    $          4    (     0    (    !         "
+"!   @ U-   #@   #@    &    \"     0         !0    @    !    !P    $         $"
+"     <   !2;VQL;V9F  X    P    !@    @    $          4    (     0    0    !  "
+"       !  !  T,# P#@   #     &    \"     D\"        !0    @    !     0    $  "
+"        @ !  $    .    ,     8    (    !          %    \"     $    $     0   "
+"      0  0 ,\"XQ-0X    X    !@    @    $          4    (     0    4    !     "
+"    !     %    ,RXS-S4    .    . $   8    (     @         %    \"     $    ! "
+"    0         %  0 \"P    $    A    5&%G          !697)S:6]N     $1E<VEG;E1Y<"
+"&4           X   !(    !@    @    $          4    (     0   !8    !         !"
+"     6    9F1A9&5S:6=N<&%N96PN;6%G<F-O<P  #@   #@    &    \"     8         !0"
+"    @    !     0    $         \"0    @           #P/PX   !     !@    @    $  "
+"        4    (     0    L    !         !     +    4W%U87)E(')O;W0       X   !"
+"0 @  !@    @    \"          4    (     0    $    !          4 !  -     0   %L"
+"   !486<             5F5R<VEO;@       %-C86QE          !7:6YD;W<         1G5N"
+"8W1I;VY.86UE %!A<F%M971E<@    !I<TUI;D]R9&5R           .    4     8    (    !"
+"          %    \"     $    9     0         0    &0   '-I9V=U:2YF:7)W:6YO<'1I;"
+"VYS9G)A;64         #@   #@    &    \"     8         !0    @    !     0    $  "
+"       \"0    @             0 X    P    !@    @    $          4    (     0   "
+" ,    !         !   P!O9F8 #@   #@    &    \"     0         !0    @    !    !"
+"@    $         $     8   !+86ES97(   X    P    !@    @    $          4    (  "
+"             !         !          #@   #     &    \"     0         !0    @   "
+" !     P    $         $  # # N-0 .    ,     8    (    \"0(        %    \"    "
+" $    !     0         \"  $       X   #0$   !@    @    \"          4    (    "
+" 0    $    !          4 !  4     0   -P   !486<                      %9E<G-I;"
+"VX                 1FEL=&5R                  !5<V5\"87-I8T5L96UE;G1S     $1E<"
+"W1I;F%T:6]N            0FQO8VM.86UE              !/=F5R=W)I=&5\";&]C:P       "
+"$]P=&EM:7IE6F5R;W,         3W!T:6UI>F5/;F5S          !/<'1I;6EZ94YE9T]N97,   "
+"   $]P=&EM:7IE1&5L87E#:&%I;G,       X    P    !@    @    $          4    (   "
+"            !         !          #@   #@    &    \"     8         !0    @    "
+"!     0    $         \"0    @           #P/PX   !@#0  !@    @    1          $"
+"          0    8   !H86YD;&4   $    +    9&9I;'0N9&9F:7(       X    8#0  !@  "
+"  @    !          4    (    !     $    !          X   !  0  !@    @    )     "
+"     4    (    $ $   $    !          (    0 0   0    4   !@    D    *@   #P  "
+"  \" $  ! !             &1F:6QT &1F9FER &9I;'1E<G%U86YT:7IE<@!N8V]E9F9S $U!5$"
+"Q!0B!A<G)A>0                                $    \"       !       !     P    "
+"                     !    !0    $    !                                     0 "
+"              0               @                    $                    !    "
+"!     $                    .    >     8    (     0         %    \"     $    !"
+"     0         .    2     8    (    #0         %    \"     4    !     0      "
+"   &    %        -T\"     0    $    !          X    X    !@    @    &        "
+"  4    (     0    $    !          D    (           @8$ .    X H   8    (     "
+"@         %    \"     $    !     0         %  0 %0    $   \"H    8VQA<W,     "
+"                07)I=&AM971I8P              <')I=F9Q                    3G5M9"
+"7)A=&]R                4W1A=&5S                    4F5S971\"969O<F5&:6QT97)I;"
+"F< 3G5M4V%M<&QE<U!R;V-E<W-E9   9F1E<VEG;@                  #@   $     &    \""
+"     0         !0    @    !    \"P    $         $     L   !D9FEL=\"YD9F9I<@  "
+"    #@   #@    &    \"     0         !0    @    !    !@    $         $     8 "
+"  !D;W5B;&4   X   !(    !@    @    -          4    (    !0    $    !         "
+" 8    4        W0(    !     0    (         #@   #@$   &    \"     8         !"
+"0    @    !    @0    $         \"0    @$  #M290\"].E&/](]VD]9!4P_D-=L$?D,2S\\"
+"P_D%JK*5#/XT\".K<Y42L_X^ZF9,<T,K^9Y!.VR/!(OPP,NGA+E%*_;C9\"&/A05;]]I !B.:M3O]"
+"+K7.I(XTJ_[G=UOSTI*[\\]W=3\"LJE!/W5LZ!UX\\%0_:M49*VQA7C]ZR]YV96QA/S_^&AK086 _"
+"_0B>(%:Q5S^ \\@$;F!9!/[]F !7\\XT2_PF*#2Q@!7K]X/*H(R\"QGO_DA)=7?[FN_MY'U[([I:["
+"_SFG<+;8%FOPYON:3)(5B_6'8L<CUG,#_P_^/*BJ!A/U90##4*Z&\\_%!<;+*P%=3\\Q]O10P-!V/"
+"\\F_ZT+9EW0_+/N+842*;#\\:5#&,X 52/TVSO06,4EV_@HKOYNE3<[]G#+M?TU!]OROQ%2KJG(&_"
+"V5$@1(^\\@;_Q *<R1TM]O\\JY).Z;^G\"_#W_[CF;.ZS[U::#Z8U]S/V*KCU35Z8(_OYYW0,H BC"
+"]*K8N,\\&2-/Z(AUB'Z\\XL_(\\C\\5+8WA3^OCXK?L2!S/]:]U>U2^6:_\"\\Q]QX2AAK]/=RNGO"
+"S:3OZ>,<TKQ%YF_J;0(,?^)F[\\*,S?([V69OSM)5AZ.]Y&_?^@R93.\"=+],\"L*WIBR)/\\-)U."
+":_ *$_ ?L+45:VK#\\.%[5/\"S*T/\\K_#N8'>;D_(BAT!7FLO3^P&:UC:3# /^&J1-W@I\\ _L!F"
+"M8VDPP#\\B*'0%>:R]/\\K_#N8'>;D_#A>U3PLRM#\\!^PM15K:L/\\-)U.:_ *$_3 K\"MZ8LB3]"
+"_Z#)E,X)TOSM)5AZ.]Y&_\"C,WR.]EF;^IM @Q_XF;OZ>,<TKQ%YF_3W<KI[\\VD[\\+S'W'A*&&O"
+"]:]U>U2^6:_KX^*W[$@<S\\CR/Q4MC>%/Z(AUB'Z\\XL_2JV+C/!DC3^_GG= R@\"*/V*KCU35Z8("
+"_]6F@^F-?<S\\/?_N.9L[K/LJY).Z;^G\"_\\0\"G,D=+?;_942!$C[R!OROQ%2KJG(&_9PR[7]-0"
+"?;^\"BN_FZ5-SOTVSO06,4EV_&E0QC. %4C\\L^XMA1(IL/\\F_ZT+9EW0_,?;T4,#0=C\\4%QLLK"
+" 5U/U90##4*Z&\\_\\/_CRHJ@83]8=BQR/6<P/PYON:3)(5B_\\YIW\"VV!9K^WD?7LCNEKO_DA)="
+"7?[FN_>#RJ\",@L9[_\"8H-+& %>O[]F !7\\XT2_@/(!&Y@603_]\")X@5K%7/S_^&AK086 _>LO"
+">=F5L83]JU1DK;&%>/W5LZ!UX\\%0_/=W4PK*I03_N=W6_/2DKO]+K7.I(XTJ_?:0 8CFK4[]N-D("
+"8^%!5OPP,NGA+E%*_F>03MLCP2+_C[J9DQS0ROXT\".K<Y42L_,/Y!:JRE0S^0UVP1^0Q+/](]VD]"
+"9!4P_[4F4 O3I1C\\.    , 0   8    (    !@         %    \"    (     !     0    "
+"     )      0                                                                "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                        .    "
+",     8    (    !          %    \"     $    \"     0         0  ( ;VX   X    "
+"X    !@    @    &          4    (     0    $    !          D    (            "
+"   .    ,     8    (    !@         %    \"                0         )        "
+"  X    P    !@    @    $          4    (     0    (    !         !   @!O;@  #"
+"@   #@    &    \"     0         !0    @    !    !P    $         $     <   !#="
+"7)R96YT  X   !     !@    @    $          4    (     0    H    !         !    "
+" *    1FEL=&5R(%)20P        X    P    !@    @    $          4    (     0    ,"
+"    !         !   P!O9F8 #@   #     &    \"     0         !0    @    !     @ "
+"   $         $  \" &]N   .    ,     8    (    !          %    \"     $    \" "
+"    0         0  ( ;VX   X    P    !@    @    $          4    (     0    (   "
+" !         !   @!O;@  #@   #     &    \"     0         !0    @    !     @    "
+"$         $  \" &]N   .    X     8    (     @         %    \"     $    !     "
+"0         %  0 $@    $    D    8W5R<F5N=$%N86QY<VES    3W9E<FQA>65D06YA;'ES:7"
+",       X   !     !@    @    $          4    (     0    D    !         !     "
+")    ;6%G;FET=61E          X    P    !@    @    $          4    (            "
+"   !         !          #@   ,     &    \"     (         !0    @    !     0  "
+"  $         !0 $  @    !    $    %1A9P      5F5R<VEO;@ .    ,     8    (    !"
+"          %    \"                0         0          X    X    !@    @    & "
+"         4    (     0    $    !          D    (            \\#\\.    8 T   8 "
+"   (    $0         !          $    &    :&%N9&QE   !    \"P   &1F:6QT+F1F9FER"
+"       .    & T   8    (     0         %    \"     0    !     0         .    "
+"0 $   8    (    \"0         %    \"    ! !   !     0         \"    $ $   $   "
+" %    8    )    \"H    \\     @!   0 0            !D9FEL= !D9F9I<@!F:6QT97)Q="
+"6%N=&EZ97( ;F-O969F<P!-051,04(@87)R87D                                !     @"
+"       0       0    ,                          0    4    !     0             "
+"                       $               $               (                    !"
+"                     0    0    !                    #@   '@    &    \"     $ "
+"        !0    @    !     0    $         #@   $@    &    \"     T         !0  "
+"  @    %     0    $         !@   !0       #= @    $    !     0         .    ."
+"     8    (    !@         %    \"     $    !     0         )    \"           "
+"(&! #@   . *   &    \"     (         !0    @    !     0    $         !0 $ !4 "
+"   !    J    &-L87-S                     $%R:71H;65T:6,              '!R:79F<"
+"0                   $YU;65R871O<@               %-T871E<P                   %"
+")E<V5T0F5F;W)E1FEL=&5R:6YG $YU;5-A;7!L97-0<F]C97-S960  &9D97-I9VX            "
+"       X   !     !@    @    $          4    (     0    L    !         !     +"
+"    9&9I;'0N9&9F:7(       X    X    !@    @    $          4    (     0    8  "
+"  !         !     &    9&]U8FQE   .    2     8    (    #0         %    \"    "
+" 4    !     0         &    %        -T\"     0    $    \"          X    X!   "
+"!@    @    &          4    (     0   ($    !          D    (!   [4F4 O3I1C_2/"
+"=I/605,/Y#7;!'Y#$L_,/Y!:JRE0S^- CJW.5$K/^/NIF3'-#*_F>03MLCP2+\\,#+IX2Y12OVXV0"
+"ACX4%6_?:0 8CFK4[_2ZUSJ2.-*O^YW=;\\]*2N_/=W4PK*I03]U;.@=>/!4/VK5&2ML85X_>LO>="
+"F5L83\\__AH:T&%@/_T(GB!6L5<_@/(!&Y@603^_9@ 5_.-$O\\)B@TL8 5Z_>#RJ\",@L9[_Y(27"
+"5W^YKO[>1]>R.Z6N_\\YIW\"VV!9K\\.;[FDR2%8OUAV+'(]9S _\\/_CRHJ@83]64 PU\"NAO/Q0"
+"7&RRL!74_,?;T4,#0=C_)O^M\"V9=T/RS[BV%$BFP_&E0QC. %4C]-L[T%C%)=OX**[^;I4W._9PR"
+"[7]-0?;\\K\\14JZIR!O]E1($2/O(&_\\0\"G,D=+?;_*N23NF_IPOP]_^XYFSNL^]6F@^F-?<S]B"
+"JX]4U>F\"/[^>=T#* (H_2JV+C/!DC3^B(=8A^O.+/R/(_%2V-X4_KX^*W[$@<S_6O=7M4OEFOPO,"
+"?<>$H8:_3W<KI[\\VD[^GC'-*\\1>9OZFT\"#'_B9N_\"C,WR.]EF;\\[258>CO>1OW_H,F4S@G2_"
+"3 K\"MZ8LB3_#2=3FOP\"A/P'[\"U%6MJP_#A>U3PLRM#_*_P[F!WFY/R(H= 5YK+T_L!FM8VDPP#"
+"_AJD3=X*? /[ 9K6-I,, _(BAT!7FLO3_*_P[F!WFY/PX7M4\\+,K0_ ?L+45:VK#_#2=3FOP\"A/"
+"TP*PK>F+(D_?^@R93.\"=+\\[258>CO>1OPHS-\\CO99F_J;0(,?^)F[^GC'-*\\1>9OT]W*Z>_-I"
+"._\"\\Q]QX2AAK_6O=7M4OEFOZ^/BM^Q(',_(\\C\\5+8WA3^B(=8A^O.+/TJMBXSP9(T_OYYW0,H"
+" BC]BJX]4U>F\"/_5IH/IC7W,_#W_[CF;.ZS[*N23NF_IPO_$ IS)'2WV_V5$@1(^\\@;\\K\\14J"
+"ZIR!OV<,NU_34'V_@HKOYNE3<[]-L[T%C%)=OQI4,8S@!5(_+/N+842*;#_)O^M\"V9=T/S'V]%# "
+"T'8_%!<;+*P%=3]64 PU\"NAO/_#_X\\J*H&$_6'8L<CUG,#\\.;[FDR2%8O_.:=PMM@6:_MY'U[("
+"[I:[_Y(275W^YKOW@\\J@C(+&>_PF*#2Q@!7K^_9@ 5_.-$OX#R 1N8%D$__0B>(%:Q5S\\__AH:T"
+"&%@/WK+WG9E;&$_:M49*VQA7C]U;.@=>/!4/SW=U,*RJ4$_[G=UOSTI*[_2ZUSJ2.-*OWVD &(YJU"
+"._;C9\"&/A05;\\,#+IX2Y12OYGD$[;(\\$B_X^ZF9,<T,K^- CJW.5$K/S#^06JLI4,_D-=L$?D,"
+"2S_2/=I/605,/^U)E +TZ48_#@   # $   &    \"     8         !0    @   \"      0 "
+"   $         \"0     $                                                       "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"    #@   #     &    \"     0         !0    @    !     @    $         $  \" &]"
+"N   .    .     8    (    !@         %    \"     $    !     0         )    \" "
+"              #@   #     &    \"     8         !0    @               $       "
+"  \"0         .    .     8    (    !          %    \"     $    (     0       "
+"  0    \"    $1E<VEG;F5D#@   #@    &    \"     8         !0    @    !     0  "
+"  $         \"0    @         S+^)00X   !(    !@    @    $          4    (    "
+" 0   !(    !         !     2    3&]W<&%S<R!%<75I<FEP<&QE        #@   #@    & "
+"   \"     8         !0    @    !     0    $         \"0    @   \":F9F9F9GQ/PX"
+"   \"( @  !@    @    1          $          0    8   !H86YD;&4   $    6    <VE"
+"G8V]D96=E;BYM8V]D96)U9F9E<@  #@   #@\"   &    \"     $         !0    @    $  "
+"   0    $         #@   ! !   &    \"     D         !0    @   #@     0    $   "
+"       @   .     !    !    %@   !X    @    +    #8    X               <VEG8V]"
+"D96=E;@!M8V]D96)U9F9E<@!P<FEV5W)A< !P<FEV36%X5VED=&@                         "
+"  $    \"                                                          $         "
+"           !                     @    ,    !          0    !     0           "
+"         X   !X    !@    @    !          4    (     0    $    !          X   "
+"!(    !@    @    -          4    (    !0    $    !          8    4        W0("
+"    !     0    $         #@   #     &    \"     0         !0    @    !     @ "
+"   $         $  \" &]N   .    .     8    (    !@         %    \"     $    !  "
+"   0         )    \"           P%) #@   #@    &    \"     8         !0    @  "
+"  !     0    $         \"0    @       \"(  \"U0 X   \"(    !@    @    )      "
+"    4    (     0   %@    !          (   !8      %)30     .    2     8    (   "
+"  @         %    \"     $    !     0         %  0 !P    $    '    :&%N9&QE   "
+".          "
+  }
+}

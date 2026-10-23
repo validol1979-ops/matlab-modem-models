@@ -1,0 +1,444 @@
+.MCAD 303010000 1 73 132 0
+.CMD PLOTFORMAT
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.302083 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 1 21 0
+Cg b72.000000,72.000000,389
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Gib3_3.mcd}{   The Fourier transform
+ of a "triangular pulse" will be evaluated
+ by three methods:\par      1.  analytic
+ evaluation "with paper and pencil and integral
+ tables" }{\par      2.  evaluation using
+ the symbolic math capability of Mathcad\par 
+     3.  numerical evaluation by \par   
+        a. Mathcad's built-in integration
+ capability\par           b. By DFT, using
+ Mathcad's built-in FFT.}}
+}
+.TXT 13 9 22 0
+Cg a27.250000,84.875000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The triangular pulse to be evaluated
+ is}}
+}
+.EQN 4 7 23 0
+{0:\t}NAME:1
+.EQN 0 9 25 0
+{0:f}NAME({0:t}NAME):1-|(({0:t}NAME)/({0:\t}NAME))
+.EQN 0 20 35 0
+{0:N}NAME:64
+.EQN 0 12 26 0
+{0:t}NAME:-{0:\t}NAME,-1+({0:\t}NAME)/({0:N}NAME);{0:\t}NAME
+.EQN 4 -43 27 0
+1.1&-0.1&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME({0:t}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 37 15 0 3 a triangular pulse
+.TXT 25 -5 30 0
+Cg a29.125000,78.875000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The Fourier transform to be calculated
+ is}}
+}
+.EQN 6 20 31 0
+{0:F}NAME({0:\w}NAME):(-{0:\¥}NAME&{0:\¥}NAME`({0:e}NAME)^(-1i*{0:\w}NAME*{0:t}NAME)*{0:f}NAME({0:t}NAME)&{0:t}NAME)
+.TXT 7 -19 32 0
+Cg a15.375000,77.875000,21
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Which here becomes}}
+}
+.EQN 5 20 33 0
+{0:F}NAME({0:\w}NAME):(-{0:\t}NAME&{0:\t}NAME`({0:e}NAME)^(-1i*{0:\w}NAME*{0:t}NAME)*(1-|(({0:t}NAME)/({0:\t}NAME)))&{0:t}NAME)
+.TXT 5 -30 128 0
+C x1,1,0,0
+.TXT 2 0 34 0
+Cg a20.250000,84.875000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {1  ANALYTIC EVALUATION}}
+}
+.TXT 3 8 36 0
+Cg a63.125000,76.875000,243
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We can use a "trick"! Recall that
+ a triangle waveshape is the result of convolving
+ a\par rectangular wave shape with itself.
+ And, in the FT domain this is a multiplication
+ of the\par waveforms's FT with itself. 
+After working out the details we find}
+}
+.EQN 13 5 46 0
+{0:V}NAME:1
+.EQN 0 13 37 0
+{0:F}NAME({0:\w}NAME):{0:\t}NAME*{0:V}NAME*((({0:sin}NAME(({0:\w}NAME*{0:\t}NAME)/(2)))/(({0:\w}NAME*{0:\t}NAME)/(2))))^(2)
+.TXT 7 -18 43 0
+Cg a16.625000,76.875000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We plot it's magnitude.}}
+}
+.EQN 4 0 44 0
+{0:\w}NAME:(-5*2*{0:\p}NAME)/({0:\t}NAME),(-5*2*{0:\p}NAME)/({0:\t}NAME)+(10*2*{0:\p}NAME)/({0:\t}NAME*128);(5*2*{0:\p}NAME)/({0:\t}NAME)
+.EQN 3 9 45 0
+0&-50&(_n_u_l_l_&-13.2)&20*{0:log}NAME(|({0:F}NAME({0:\w}NAME)))@&&(-((2*{0:\p}NAME)/({0:\t}NAME))&(2*{0:\p}NAME)/({0:\t}NAME))&{0:\w}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 34 15 0 3 FT of a triangular pulse
+.TXT 25 -17 129 0
+C x1,1,0,0
+.TXT 2 0 47 0
+Cg a38.500000,84.875000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {2  EVALUATION USING SYMBOLIC MATHEMATICS}}
+}
+.TXT 4 8 48 0
+Cg a40.000000,76.875000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We copy here the form we wish to
+ evaluate, the integral}}
+}
+.EQN 6 14 54 0
+{0:F1}NAME({0:\w}NAME):(-{0:\t}NAME&{0:\t}NAME`({0:e}NAME)^(-1i*{0:\w}NAME*{0:t}NAME)*(1-|(({0:t}NAME)/({0:\t}NAME)))&{0:t}NAME)
+.TXT 7 -13 50 0
+Cg a61.875000,64.000000,199
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We click on and enclose the right
+ side of this equation, load the symbolic
+ processor, and have it evaluated symbolically:
+ again we encounter problems and again break
+ the integral into two parts.}}
+}
+.EQN 9 0 55 0
+{0:F11}NAME({0:\w}NAME):(-{0:\t}NAME&0`({0:e}NAME)^(-1i*{0:\w}NAME*{0:t}NAME)*(1+({0:t}NAME)/({0:\t}NAME))&{0:t}NAME)
+.EQN 0 32 61 0
+{0:F11}NAME({0:\w}NAME):1i*(({0:\t}NAME*{0:\w}NAME-1i))/(({0:\t}NAME*({0:\w}NAME)^(2)))-({0:exp}NAME(1i*{0:\w}NAME*{0:\t}NAME))/(({0:\t}NAME*({0:\w}NAME)^(2)))
+.EQN 10 -32 56 0
+{0:F12}NAME({0:\w}NAME):(0&{0:\t}NAME`({0:e}NAME)^(-1i*{0:\w}NAME*{0:t}NAME)*(1-({0:t}NAME)/({0:\t}NAME))&{0:t}NAME)
+.EQN 0 32 62 0
+{0:F12}NAME({0:\w}NAME):(-{0:exp}NAME(-1i*{0:\w}NAME*{0:\t}NAME))/(({0:\t}NAME*({0:\w}NAME)^(2)))-1i*(({0:\t}NAME*{0:\w}NAME+1i))/(({0:\t}NAME*({0:\w}NAME)^(2)))
+.EQN 8 -32 63 0
+{0:F1}NAME({0:\w}NAME):(1i*(({0:\t}NAME*{0:\w}NAME-1i))/(({0:\t}NAME*({0:\w}NAME)^(2)))-({0:exp}NAME(1i*{0:\w}NAME*{0:\t}NAME))/(({0:\t}NAME*({0:\w}NAME)^(2))))+((-{0:exp}NAME(-1i*{0:\w}NAME*{0:\t}NAME))/(({0:\t}NAME*({0:\w}NAME)^(2)))-1i*(({0:\t}NAME*
+{0:\w}NAME+1i))/(({0:\t}NAME*({0:\w}NAME)^(2))))
+.TXT 7 0 72 0
+Cg a9.000000,63.000000,13
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We simplify:}
+}
+.EQN 5 7 70 0
+{0:F1}NAME({0:\w}NAME):-2*(({0:cos}NAME({0:\t}NAME*{0:\w}NAME)-1))/(({0:\t}NAME*({0:\w}NAME)^(2)))
+.TXT 4 -16 130 0
+C x1,1,0,0
+.TXT 3 10 74 0
+Cg a36.875000,75.875000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We check this result by plotting
+ F1 and F together.}}
+}
+.EQN 6 3 75 0
+{0:F}NAME({0:\w}NAME):{0:if}NAME({0:\w}NAME÷0,1,{0:F}NAME({0:\w}NAME))
+.EQN 0 25 76 0
+{0:F1}NAME({0:\w}NAME):{0:if}NAME({0:\w}NAME÷0,1,{0:F1}NAME({0:\w}NAME))
+.EQN 5 -27 73 0
+&&(_n_u_l_l_&_n_u_l_l_)&|({0:F1}NAME({0:\w}NAME)),|({0:F}NAME({0:\w}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:\w}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 36 15 0 3 
+.TXT 26 -3 77 0
+Cg a41.875000,64.000000,62
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain The plots agree exactly-and verifies
+ our "tricky" evaluation!}
+}
+.TXT 5 0 106 0
+Cg a63.375000,63.000000,109
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise}   Try computing the
+ FT using Mathcad's symbollic Fourier Transfrom
+                capability.}
+}
+.TXT 6 2 107 0
+Cg a24.375000,62.000000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Remark}   I didn't have much
+ luck!}
+}
+.EQN 4 12 112 0
+{0:if}NAME(|({0:t}NAME)ó{0:\t}NAME,1-({0:t}NAME)/({0:\t}NAME),0)
+.TXT 5 -22 131 0
+C x1,1,0,0
+.TXT 2 -1 83 0
+Cg a21.875000,72.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {3  NUMERICAL EVALUATION}}
+}
+.TXT 4 7 109 0
+Cg a66.375000,66.000000,196
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Define the pulse, the sample interval,
+ and the number of samples. Again, the truncation
+ and DFT computation is, in effect, making
+ a periodic extension of the function- and
+ w]we use }DFT order.}
+}
+.EQN 10 7 6 0
+{0:N}NAME:64
+.EQN 0 11 8 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 14 5 0
+{0:T.s}NAME:(4*{0:\t}NAME)/({0:N}NAME)
+.EQN 0 10 4 0
+{0:f}NAME({0:t}NAME):{0:if}NAME(|({0:t}NAME)ó{0:\t}NAME,1-({0:t}NAME)/({0:\t}NAME),0)
+.EQN 7 -31 9 0
+({0:fs}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó({0:N}NAME)/(2),{0:f}NAME({0:n}NAME*{0:T.s}NAME),{0:f}NAME(({0:N}NAME-{0:n}NAME)*{0:T.s}NAME))
+.EQN 8 0 10 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 21 12 0
+{0:F.DFT}NAME:{0:dft}NAME({0:fs}NAME)
+.EQN 5 -22 15 0
+&0&(0&_n_u_l_l_)&|(({0:F.DFT}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 38 20 0 3 
+.TXT 28 -16 132 0
+C x1,1,0,0
+.TXT 2 9 116 0
+Cg a63.375000,63.000000,108
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise}   Plot and compare
+ the DFT and samples of the exact FT. Explain
+ any             differences.}
+}
+.TXT 6 2 117 0
+Cg a48.000000,61.000000,69
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Solution}  We sample the FT 
+with the appropriate sample spacing.}
+}
+.EQN 6 5 118 0
+{0:\w.s}NAME:(2*{0:\p}NAME)/({0:T.s}NAME)
+.EQN 0 14 119 0
+({0:\wa}NAME)[({0:n}NAME):({0:n}NAME-({0:N}NAME)/(2))*({0:\w.s}NAME)/({0:N}NAME)
+.EQN 6 -14 120 0
+({0:F.U}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<({0:N}NAME)/(2),({0:F.DFT}NAME)[({0:n}NAME+({0:N}NAME)/(2)),({0:F.DFT}NAME)[({0:n}NAME-({0:N}NAME)/(2)))
+.EQN 1 32 124 0
+{0:e}NAME:(10)^(-6)
+.EQN 5 -39 121 0
+&&(-0.1&1.1)&20*{0:log}NAME(|({0:T.s}NAME*({0:F.U}NAME)[({0:n}NAME))+{0:e}NAME),20*{0:log}NAME(|({0:F}NAME(({0:\wa}NAME)[({0:n}NAME)))+{0:e}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 45 15 0 3 
+.TXT 24 -2 127 0
+Cg a60.375000,66.000000,136
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {There is error in the DFT, noticeable
+ especially at higher frequencies. This 
+is due to aliasing, as the waveform is not
+ bandlimited.}}
+}

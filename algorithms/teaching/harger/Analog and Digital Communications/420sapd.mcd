@@ -1,0 +1,74 @@
+.MCD 25000 0
+.CMD SURFACEFORMAT rot=10 tilt=35 vScale=20 size=15,30
+.CMD SKETCHFORMAT mag=1.000000,1.000000 center=0.500000,0.500000 size=15,30 box=y
+.CMD PLOTFORMAT logs=0,0 subdivs=1,1 size=5,15 type=l
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD MARGIN 0
+.CMD LINELENGTH 78
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.TXT 0 0 2 32003 
+b2,32002,78,101
+ 420sapd.mcd, to show the effects of amplitude and phase distortions on the 
+sytem impulse response.
+.TXT 3 0 2 32003 
+b2,32002,78,96
+1. Define the degraded magnitude and phase of the channel's frequency 
+response- in 'DFT form'.
+.EQN 3 0 1 10 
+N:128
+.EQN 0 13 1 16 
+n:0;N-1
+.EQN 0 17 1 12 
+j:0;2
+.EQN 0 15 2 14 
+îa[j:0.1*j
+.EQN 0 16 3 11 
+ça:(2*ã)/8
+.EQN 4 -61 2 29 
+A[(n,j):1+2*îa[j*cos(ça*n)
+.EQN 0 31 2 46 
+Ha[(n,j):if(nó8,A[(n,j),if(nò120,A[(N-n,j),0))
+.EQN 3 -31 2 14 
+îp[j:0.1*j
+.EQN 0 18 3 11 
+çp:(2*ã)/8
+.EQN 1 23 2 25 
+é[(n,j):2*îp[j*sin(çp*n)
+.EQN 3 -41 2 62 
+Hp[(n,j):if(nó8,exp(1i*é[(n,j)),if(nò120,exp(1i*é[(N-n,j)),0))
+.EQN 3 0 2 21 
+H[(n,j):Ha[(n,j)*Hp[(n,j)
+.TXT 4 0 2 32003 
+b2,32002,78,135
+2. Define the pulse whose spectrum has been shaped for low sidelobes: We 
+choose a simple model, the triangle spectrum- in 'DFT form'.
+.EQN 3 0 2 45 
+P[n:if(nó8,8-n,if(nò120,n-120,0))
+.EQN 0 50 7 20 
+&&P[n{1,1,6,15,l}@N-1&0&n
+.TXT 7 -50 1 32003 
+b1,32002,78,35
+3. Compute the output pulse, s(t).
+.EQN 2 0 4 25 
+idft(v):(1/\N)*cfft(v)
+.EQN 1 25 2 17 
+S[(n,j):H[(n,j)*P[n
+.EQN 0 24 2 20 
+s{52}j:idft(S{52}j)
+.EQN 3 -32 3 17 
+M[j:max(s{52}j)
+.EQN 0 21 5 14 
+s{52}j:s{52}j/M[j
+.EQN 4 -38 3 14 
+îa=?
+.EQN 1 14 9 64 
+0&-40&20*log(|s{52}j[n+0.000001){4,8,8,35,l}@N-1&0&n
+.EQN 2 -14 3 14 
+îp=?
+.EQN 4 0 1 14 
+ça=?
+.EQN 2 0 1 14 
+çp=?

@@ -1,0 +1,28 @@
+Modest low pass filter specification
+Window             Ntaps       Fc    Fstop        Fs    Adb    F.1db     F1db     F3db   Psbdb
+hann                  51    10000    12000     64000     40     8085     8800     9446     -59
+hamming               51    10000    12000     64000     40     8111     8878     9487     -64
+kaiser(3.4)           39    10000    12000     64000     40     8148     8803     9440     -53
+blackman              67    10000    12000     64000     40     8077     8891     9498     -64
+parzen                77    10000    12000     64000     40     8088     8928     9518     -61
+nuttall               81    10000    12000     64000     40     8061     8904     9507     -63
+albrecht              99    10000    12000     64000     40     8049     8915     9514     -62
+
+Example from Zhang et. al. reference
+Window             Ntaps       Fc    Fstop        Fs    Adb    F.1db     F1db     F3db   Psbdb
+hann                 453     3500     7000    256000     74     2652     2969     3255     -99
+kaiser(7.2)          171     3500     7000    256000     74      804     1929     2787     -90
+blackman             205     3500     7000    256000     74     1012     2065     2850     -95
+parzen               671     3500     7000    256000     74     2622     3008     3278     -98
+nuttall              253     3500     7000    256000     74     1038     2109     2874    -107
+albrecht             323     3500     7000    256000     74     1125     2179     2909    -105
+
+Very strict channelizer filter specification
+Window             Ntaps       Fc    Fstop        Fs    Adb    F.1db     F1db     F3db   Psbdb
+hann               46289    25000    30000   6400000    120    24768    24854    24927    -158
+kaiser(12.3)        5513    25000    30000   6400000    120    22180    23401    24280    -150
+blackman           33393    25000    30000   6400000    120    24609    24768    24890    -158
+parzen             63929    25000    30000   6400000    120    24731    24854    24927    -155
+nuttall            14283    25000    30000   6400000    120    23901    24377    24719    -157
+albrecht            6951    25000    30000   6400000    120    22241    23462    24304    -171
+

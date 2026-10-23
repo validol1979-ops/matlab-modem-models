@@ -1,0 +1,249 @@
+.MCAD 303010000 1 74 16161 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 1.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.EQN 2 1 1 0
+_n_u_l_l_
+.TXT 2 0 2 0
+Cg b73.000000,73.000000,210
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Courier;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 420seqa.mcd}{ to demonstrate
+ adaptive lmse equalization using a recursive
+ LMSE algorithm with decision-directed feedback.
+ The channel model is an autoregressive 
+model and the equalizer is an FIR filter.}}
+}
+.TXT 9 4 3 0
+Cg a22.375000,28.750000,39
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Courier;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {}{\b 1}{ Define the symbol sequence.}}
+}
+.EQN 5 3 4 0
+{0:K}NAME:128
+.EQN 0 11 5 0
+{0:kk}NAME:0;{0:K}NAME
+.EQN 0 21 6 0
+({0:r}NAME)[({0:kk}NAME):{0:if}NAME({0:rnd}NAME(1)<0.5,0,1)
+.TXT 5 -35 7 0
+Cg a44.875000,48.625000,71
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Courier;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {}{\b 2}{ Compute the output of 
+the channel, which varies now slowly.}}
+}
+.EQN 7 1 8 0
+{0:k}NAME:1;{0:K}NAME
+.EQN 0 9 9 0
+({0:\r}NAME)[({0:k}NAME):0.1*(2+{0:cos}NAME((2*{0:\p}NAME)/({0:K}NAME)*{0:k}NAME))
+.EQN 0 20 16155 0
+({0:\r}NAME)[({0:k}NAME):0.1
+.EQN 0 10 10 0
+({0:y}NAME)[(0):({0:r}NAME)[(0)
+.EQN 0 9 11 0
+({0:y}NAME)[({0:k}NAME):({0:\r}NAME)[({0:k}NAME)*({0:y}NAME)[({0:k}NAME-1)+({0:r}NAME)[({0:k}NAME)
+.TXT 8 -48 12 0
+Cg a36.125000,41.875000,60
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Courier;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {}{\b 3}{ Determine the equalization
+ filter, assuming N=1.}}
+}
+.EQN 6 0 14 0
+{0:N}NAME:2
+.EQN 0 9 15 0
+{0:m}NAME:0;{0:N}NAME
+.EQN 0 15 16 0
+{0:n}NAME:0;{0:N}NAME
+.EQN 0 14 17 0
+{0:\d}NAME:1
+.EQN 0 12 13 0
+({0:h}NAME){52}(0):({3,1}ö1.0ö1.0ö1.0)
+.EQN 5 -50 16157 0
+{0:k}NAME:0;{0:K}NAME
+.EQN 4 0 18 0
+({0:h}NAME)[({0:m}NAME,{0:k}NAME+1):({0:h}NAME)[({0:m}NAME,{0:k}NAME){54}{0:\d}NAME*(({0:n}NAME$({0:k}NAME-{0:n}NAMEò0)*(({0:h}NAME)[({0:n}NAME,{0:k}NAME)*({0:y}NAME)[({0:k}NAME-{0:n}NAME))>(1)/(2))-{0:n}NAME$({0:k}NAME-{0:n}NAMEò0)*(({0:h}NAME)[(
+{0:n}NAME,{0:k}NAME)*({0:y}NAME)[({0:k}NAME-{0:n}NAME)))*(({0:k}NAME-{0:m}NAMEò0)*({0:y}NAME)[({0:k}NAME-{0:m}NAME))
+.EQN 15 0 19 0
+({0:h}NAME){52}(({0:K}NAME)/(2))={0}?_n_u_l_l_
+.EQN 1 21 20 0
+({0:h}NAME){52}({0:K}NAME-1)={0}?_n_u_l_l_
+.EQN 0 26 21 0
+({0:h}NAME){52}({0:K}NAME)={0}?_n_u_l_l_
+.TXT 11 -46 22 0
+Cg a63.000000,64.375000,118
+{\rtf1\ansi \deff1
+{\fonttbl
+{\f0\fnil Courier;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 4}{ As a check, suppose we run
+ the data sequence thru the filter and compare
+ its output to the symbol sequence.}}
+}
+.EQN 7 3 23 0
+{0:l}NAME:2;{0:K}NAME
+.EQN 0 19 24 0
+({0:s}NAME)[(0):({0:h}NAME)[(0,{0:K}NAME)*({0:y}NAME)[(0)
+.EQN 0 22 25 0
+({0:s}NAME)[(1):({0:h}NAME)[(0,{0:K}NAME)*({0:y}NAME)[(1)+({0:h}NAME)[(1,{0:K}NAME)*({0:y}NAME)[(0)
+.EQN 6 -41 26 0
+({0:s}NAME)[({0:l}NAME):({0:h}NAME)[(0,{0:K}NAME)*({0:y}NAME)[({0:l}NAME)+({0:h}NAME)[(1,{0:K}NAME)*({0:y}NAME)[({0:l}NAME-1)+({0:h}NAME)[(2,{0:K}NAME)*({0:y}NAME)[({0:l}NAME-2)
+.EQN 0 44 27 0
+({0:s}NAME)[({0:k}NAME):{0:if}NAME(({0:s}NAME)[({0:k}NAME)<0.5,0,1)
+.EQN 7 -44 28 0
+({0:\e}NAME)[({0:k}NAME):({0:r}NAME)[({0:k}NAME)-({0:s}NAME)[({0:k}NAME)
+.EQN 0 24 29 0
+{0:\et}NAME:{0:k}NAME$|(({0:\e}NAME)[({0:k}NAME))
+.EQN 2 30 30 0
+{0:\et}NAME={0}?_n_u_l_l_
+.EQN 11 -57 16158 0
+2&-1&(_n_u_l_l_&_n_u_l_l_)&({0:r}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 9 0 3 
+.EQN 23 0 16159 0
+2&-1&(_n_u_l_l_&_n_u_l_l_)&({0:y}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 9 0 3 
+.EQN 20 0 16160 0
+2&-1&(_n_u_l_l_&_n_u_l_l_)&({0:s}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 9 0 3 
+.EQN 21 0 16161 0
+2&-1&(_n_u_l_l_&_n_u_l_l_)&({0:\e}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 9 0 3 

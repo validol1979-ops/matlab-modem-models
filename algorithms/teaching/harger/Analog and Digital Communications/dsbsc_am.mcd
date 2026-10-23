@@ -1,0 +1,341 @@
+.MCAD 303010000 1 74 72 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 1.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg a52.375000,73.000000,74
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b dsbsc_am.mcd}{   to illustrate
+ DSBSC-AM modulation and demodulation.}}
+}
+.TXT 4 1 2 0
+Cg a54.500000,72.000000,87
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b 1}{  Define the modulation, 
+constructing it with a fourier series representation.}}
+}
+.EQN 6 4 3 0
+{0:N}NAME:256
+.EQN 0 10 4 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 16 6 0
+{0:k}NAME:5;20
+.EQN 4 -26 7 0
+({0:\wm}NAME)[({0:k}NAME):{0:k}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.EQN 0 10 10 0
+({0:\q}NAME)[({0:k}NAME):{0:rnd}NAME(2*{0:\p}NAME)
+.EQN 0 16 11 0
+({0:c}NAME)[({0:k}NAME):30-{0:k}NAME
+.EQN 0 13 12 0
+({0:m}NAME)[({0:n}NAME):{0:k}NAME$({0:c}NAME)[({0:k}NAME)*{0:cos}NAME(({0:\wm}NAME)[({0:k}NAME)*{0:n}NAME+({0:\q}NAME)[({0:k}NAME))
+.TXT 5 -41 13 0
+Cg a32.500000,70.000000,45
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We examine the spectrum of the 
+modualtion.}}
+}
+.EQN 5 2 14 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 26 15 0
+{0:M}NAME:{0:dft}NAME({0:m}NAME)
+.EQN 0 13 26 0
+({0:\w}NAME)[({0:n}NAME):{0:n}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.EQN 0 12 43 0
+{0:\wmx}NAME:({0:\w}NAME)[(20)
+.EQN 4 -55 16 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 27 15 0 3 Modulation
+.EQN 0 36 17 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:M}NAME)[({0:n}NAME))@&&({0:\wmx}NAME&_n_u_l_l_)&({0:\w}NAME)[({0:n}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 Modulation Spectrum
+.TXT 25 -35 18 0
+Cg a50.250000,71.000000,73
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b 2}{  We now define the modulated
+ waveform and compute its spectrum.}}
+}
+.EQN 6 4 19 0
+{0:\wc}NAME:(2*{0:\p}NAME)/({0:N}NAME)*50
+.EQN 0 17 22 0
+({0:sc}NAME)[({0:n}NAME):({0:m}NAME)[({0:n}NAME)*{0:cos}NAME({0:\wc}NAME*{0:n}NAME)
+.EQN 0 23 23 0
+{0:Sc}NAME:{0:dft}NAME({0:sc}NAME)
+.EQN 5 -45 24 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:sc}NAME)[({0:n}NAME),|(({0:m}NAME)[({0:n}NAME)),-|(({0:m}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 27 17 0 3 DSBSC-AM Waveform
+.EQN 1 36 25 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:Sc}NAME)[({0:n}NAME))@&&({0:\wc}NAME&_n_u_l_l_)&({0:\w}NAME)[({0:n}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 DSBSC-AM Spectrum
+.TXT 44 -35 29 0
+Cg a41.125000,71.000000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {3  We demodulate the waveform with
+ a coherent receiver.}}
+}
+.TXT 5 1 31 0
+Cg a5.500000,70.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b mixing}}
+}
+.EQN 0 16 30 0
+({0:mcap}NAME)[({0:n}NAME):({0:sc}NAME)[({0:n}NAME)*2*{0:cos}NAME({0:\wc}NAME*{0:n}NAME)
+.TXT 5 -16 35 0
+Cg a9.125000,70.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b low pass\par filter}{ }{\b (ideal)}}
+}
+.EQN 1 16 34 0
+{0:MCAP}NAME:{0:dft}NAME({0:mcap}NAME)
+.EQN 0 19 36 0
+({0:MCAP}NAME)[({0:n}NAME):((({0:\w}NAME)[({0:n}NAME)ó{0:\wmx}NAME)+(({0:\w}NAME)[({0:n}NAME)ò2*{0:\p}NAME-{0:\wmx}NAME))*({0:MCAP}NAME)[({0:n}NAME)
+.EQN 5 -19 44 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 19 45 0
+{0:mcap}NAME:{0:idft}NAME({0:MCAP}NAME)
+.EQN 7 -29 46 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME),({0:mcap}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 47 21 0 3 Modulation & Its Estimate
+.TXT 44 -7 47 0
+Cg a48.875000,70.000000,74
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {4  We can now study the effects
+ of errors in the receiver's oscillator.}}
+}
+.EQN 6 7 48 0
+{0:\w\e}NAME:(2*{0:\p}NAME)/({0:N}NAME)*0.25
+.EQN 0 13 49 0
+{0:\wLO}NAME:{0:\wc}NAME+{0:\w\e}NAME
+.EQN 0 18 50 0
+({0:\w\e}NAME)/({0:\wc}NAME)={0}?_n_u_l_l_
+.EQN 0 14 51 0
+{0:\qLO}NAME:({0:\p}NAME)/(10)
+.TXT 4 -52 52 0
+Cg a5.500000,70.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b mixing}}
+}
+.EQN 0 16 53 0
+({0:mcap}NAME)[({0:n}NAME):({0:sc}NAME)[({0:n}NAME)*2*{0:cos}NAME({0:\wLO}NAME*{0:n}NAME+{0:\qLO}NAME)
+.TXT 5 -16 54 0
+Cg a9.125000,70.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b low pass\par filter}{ }{\b (ideal)}}
+}
+.EQN 1 16 55 0
+{0:MCAP}NAME:{0:dft}NAME({0:mcap}NAME)
+.EQN 0 19 56 0
+({0:MCAP}NAME)[({0:n}NAME):((({0:\w}NAME)[({0:n}NAME)ó{0:\wmx}NAME)+(({0:\w}NAME)[({0:n}NAME)ò2*{0:\p}NAME-{0:\wmx}NAME))*({0:MCAP}NAME)[({0:n}NAME)
+.EQN 5 -19 57 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 19 58 0
+{0:mcap}NAME:{0:idft}NAME({0:MCAP}NAME)
+.EQN 18 -28 59 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME),({0:mcap}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 47 21 0 3 Modulation & Its Estimate
+.EQN 31 -1 60 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:M}NAME)[({0:n}NAME)),|(({0:MCAP}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 47 21 0 3 Modulation & Its Estimate

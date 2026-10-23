@@ -1,0 +1,627 @@
+.MCAD 303010000 1 74 141 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.216667 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 4 1 30 0
+Cg a13.700000,73.000000,92
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {ENEE 420\par Project 1\par 2/20/96\par 
+\par Angela Cheung\par Hayden Metz\par Joanna
+ Nickerson\par Steve Payne}}
+}
+.TXT 20 0 133 0
+Cg a49.800000,73.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Study of the effect truncating 
+the sinc signal has on its Fourier Transform.}}
+}
+.TXT 5 0 11 0
+Cg a68.100000,73.000000,114
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {First, we generate a sinc signal.
+  Care must be taken to ensure that the 
+function is defined for }{\f1 w}{ = 0.}}
+}
+.EQN 4 6 1 0
+{0:N}NAME:128
+.EQN 0 11 2 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 15 3 0
+({0:\w}NAME)[({0:n}NAME):10*{0:n}NAME*(2*{0:\p}NAME)/(32*{0:\p}NAME)
+.EQN 6 -26 9 0
+{0:t}NAME:-({0:N}NAME-1);{0:N}NAME-1
+.EQN 0 26 10 0
+{0:\w}NAME({0:t}NAME):10*{0:t}NAME*(2*{0:\p}NAME)/(32*{0:\p}NAME)
+.EQN 5 -26 5 0
+{0:sinc}NAME({0:t}NAME):{0:if}NAME({0:t}NAME,({0:sin}NAME({0:\w}NAME({0:t}NAME)))/({0:\w}NAME({0:t}NAME)),1)
+.TXT 7 -6 33 0
+Cg a59.000000,72.000000,91
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {A plot of this real function can
+ be made to confirm the correct signal has
+ been created.}}
+}
+.EQN 1 6 6 0
+1.1&-.3&(_n_u_l_l_&_n_u_l_l_)&{0:sinc}NAME({0:t}NAME)@&-127&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 sinc(t)
+.TXT 25 -6 12 0
+Cg a72.200000,71.900000,134
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The FFT, cfft(.), in Mathcad is
+ based on a DFT defined differently than
+ in DSP, but we can get the one we want 
+by a re-definition:}}
+}
+.EQN 7 11 13 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.TXT 4 -11 35 0
+Cg a70.900000,72.000000,156
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {To compute the Fourier Transform
+ of the sinc signal using the DFT, the real
+ function of time sinc(t) must be sampled,
+ resulting in the sequence "sincs."}}
+}
+.EQN 6 6 18 0
+({0:sincs}NAME)[({0:n}NAME):{0:sinc}NAME({0:n}NAME)
+.EQN 0 19 19 0
+{0:FTsinc}NAME:{0:dft}NAME({0:sincs}NAME)
+.TXT 5 -25 36 0
+Cg a24.800000,72.000000,41
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The plot of this Fourier Transform
+ is:}}
+}
+.EQN 3 11 21 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:FTsinc}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 Fourier Spectrum of sinc(t)
+.TXT 26 -11 23 0
+Cg a43.000000,73.000000,67
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Now we truncate the sinc signal,
+ and plot the truncated version.}}
+}
+.EQN 6 9 24 0
+{0:sinc_trunc}NAME({0:t}NAME):{0:if}NAME(|({0:t}NAME)>20,0,{0:if}NAME({0:t}NAME,({0:sin}NAME({0:\w}NAME({0:t}NAME)))/({0:\w}NAME({0:t}NAME)),1))
+.EQN 6 0 25 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:sinc_trunc}NAME({0:t}NAME)@&&(-20&20)&{0:t}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 37 15 0 3 truncated sinc(t)
+.TXT 25 -9 37 0
+Cg a59.100000,69.000000,88
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Again, the real signal must be 
+sampled to compute the FT with Mathcad's
+ built-in DFT.}}
+}
+.EQN 4 4 27 0
+({0:sincs_trunc}NAME)[({0:n}NAME):{0:sinc_trunc}NAME({0:n}NAME)
+.EQN 0 25 28 0
+{0:FTsinc_trunc}NAME:{0:dft}NAME({0:sincs_trunc}NAME)
+.TXT 6 -29 38 0
+Cg a61.700000,69.000000,93
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {A plot of the Fourier spectrums
+ of both the truncated and untruncated FT's
+ is shown below:}}
+}
+.EQN 2 9 29 0
+3.5&0&(_n_u_l_l_&_n_u_l_l_)&({0:FTsinc_trunc}NAME)[({0:n}NAME),({0:FTsinc}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 Fourier Spectrum of truncated sinc(t)
+.TXT 24 -9 140 0
+Cg a68.900000,73.000000,153
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain It can be seen from the above plot
+ that the Fourier spectrum of the truncated
+ function has ripples and doesn't exactly
+ mimic the ideal low-pass filter.}
+}
+.TXT 10 0 39 0
+Cg a54.400000,71.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {A communication system can be constructed
+ using these truncated sinc pulses:}}
+}
+.TXT 5 0 54 0
+Cg a43.500000,73.000000,68
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We use a function definition to
+ implement an analog  pulse, p(t).}}
+}
+.EQN 4 5 56 0
+{0:pw}NAME:40
+.EQN 0 12 57 0
+{0:p}NAME({0:t}NAME):{0:\F}NAME({0:t}NAME+({0:pw}NAME)/(2))-{0:\F}NAME({0:t}NAME-({0:pw}NAME)/(2))
+.TXT 5 -17 58 0
+Cg a55.800000,62.000000,87
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We use a sum of functions to implement
+ a train of truncated sinc pulses, sincpt(t).
+ }}
+}
+.EQN 4 5 60 0
+{0:pp}NAME:50
+.EQN 4 0 62 0
+{0:M}NAME:3
+.EQN 0 9 63 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 4 -9 68 0
+{0:sincp}NAME({0:t}NAME):{0:sinc}NAME({0:t}NAME)*{0:p}NAME({0:t}NAME)
+.EQN 0 20 75 0
+{0:sincpt}NAME({0:t}NAME):((-({0:M}NAME-1),{0:M}NAME-1,{0:m}NAME,{0:sincp}NAME({0:t}NAME-{0:pp}NAME*{0:m}NAME)){64})
+.TXT 7 -25 92 0
+Cg a19.600000,73.000000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Here is the plot of our signal.}}
+}
+.EQN 2 7 67 0
+1.1&-.5&(_n_u_l_l_&0)&{0:sincpt}NAME({0:t}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 49 15 0 3 Sinc Pulse Train
+.TXT 25 -7 93 0
+Cg a18.600000,73.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We then sample the signal:}}
+}
+.EQN 4 8 94 0
+({0:sincpts}NAME)[({0:n}NAME):{0:sincpt}NAME({0:n}NAME)
+.EQN 2 -1 116 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:sincpts}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 49 15 0 3 Sampled Sinc Pulse Train
+.TXT 25 -6 95 0
+Cg a41.000000,66.000000,57
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Now we add a sample sequence of
+ normal/Gaussian noise.}}
+}
+.EQN 5 9 96 0
+{0:var}NAME:0.001
+.EQN 0 14 97 0
+({0:no}NAME)[({0:n}NAME):\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))
+.EQN 6 -14 98 0
+({0:r}NAME)[({0:n}NAME):({0:sincpts}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.EQN 2 -2 100 0
+1.1&-.4&(0&_n_u_l_l_)&({0:r}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 18 0 3 Sampled Pulse Train + Noise
+.TXT 30 -8 102 0
+Cg a65.500000,67.000000,204
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We now want to recover an estimate
+ of the transmitted sequence.  }{As a first
+ step we form a low pass filter and pass
+ the signal + noise through it.  This is
+ most easily done in the frequency domain.}}
+}
+.TXT 10 0 134 0
+Cg a34.900000,73.000000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {First, the FT of the sinc pulse
+ train + noise is taken.}}
+}
+.EQN 5 7 119 0
+{0:FTsincpt}NAME:{0:dft}NAME({0:r}NAME)
+.EQN 3 -1 122 0
+&-3&(_n_u_l_l_&_n_u_l_l_)&({0:FTsincpt}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 22 0 3 FT of signal + noise
+.TXT 33 -6 135 0
+Cg a71.500000,73.000000,184
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {A low-pass filter must then be 
+created.  Because Mathcad does not center
+ its DFT at zero, the expected window centered
+ at zero must be combined with a similar
+ window centered at N.}}
+}
+.EQN 7 11 124 0
+{0:pw}NAME:50
+.EQN 0 10 123 0
+{0:lp}NAME({0:t}NAME):{0:\F}NAME({0:t}NAME+({0:pw}NAME)/(2))-{0:\F}NAME({0:t}NAME-({0:pw}NAME)/(2))+{0:\F}NAME({0:t}NAME+({0:pw}NAME)/(2)-128)
+.TXT 6 -21 136 0
+Cg a44.100000,73.000000,66
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Again, this filter must be sampled
+ so the DFT can be performed.}}
+}
+.EQN 5 11 125 0
+({0:lps}NAME)[({0:n}NAME):{0:lp}NAME({0:n}NAME)
+.EQN 0 18 127 0
+({0:FTrecon}NAME)[({0:n}NAME):({0:lps}NAME)[({0:n}NAME)*({0:FTsincpt}NAME)[({0:n}NAME)
+.EQN 3 -29 129 0
+1.1&-.1&(_n_u_l_l_&_n_u_l_l_)&({0:lps}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 20 19 0 3 FT of LP Filter
+.EQN 0 26 128 0
+13&-3&(_n_u_l_l_&_n_u_l_l_)&({0:FTrecon}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 38 19 0 3 FT of reconstructed signal
+.TXT 30 -26 138 0
+Cg a72.200000,73.000000,213
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {To get the real-time signal back
+ from the FT'd version of the reconstructed
+ signal it is necessary to define the inverse
+ FT (IDFT).  Just as for the DFT, we must
+ modify Mathcad's definition to suit our
+ syntax.}}
+}
+.EQN 9 11 130 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 21 131 0
+{0:recon}NAME:{0:idft}NAME({0:FTrecon}NAME)
+.TXT 9 -32 139 0
+Cg a49.300000,73.000000,77
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {A plot of the original signal and
+ the reconstructed signal is shown below.}}
+}
+.EQN 2 1 132 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:recon}NAME)[({0:n}NAME),({0:sincpts}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 56 32 0 3 reconstructed and original signals
+.TXT 41 -1 141 0
+Cg a37.300000,73.000000,56
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain This plot shows the two signals 
+are reasonably similar.}
+}

@@ -1,0 +1,972 @@
+.MCAD 304010000 1 0 17157 0
+.CMD PLOTFORMAT
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 1 1 1 
+1 1 0 0 1 1 NO-TRACE-STRING
+1 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 53 19 0 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.000000 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=607659064
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=607659064
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 3 1 16322 0 0
+Cg a75.250000,75.250000,63
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs28\b FM2: Frequency 
+Modulation (FM) with Differentiator Demodulator.}}
+.TXT 3 0 16323 0 0
+Cg a73.000000,73.000000,73
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard by\par \par Vinh Bui, 
+Anuj Mehta, Vincent Park, Jim Roberts, Satish Yelamanchili\par }
+.TXT 10 6 17136 0 0
+Cg a82.000000,82.000000,1273
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul Introduction\par 
+\par }In this document we test two FM system types.  The two systems 
+are equal in design,\par except that the first uses a Difference 
+Method for the differentiator in the receiver, while the\par second 
+system uses Fast Convolution with an ideal differentiator.\par \par 
+The Difference Method is quite simple.  The first derivative is 
+approximated by subtracting\par a discrete data point (at n) from the 
+next discrete data point (at n+1).  Naturally this system\par is 
+non-causal, and a delay is introduced.  As it stands, the Discrete 
+Difference Method only\par approximates the actual derivative; as the 
+sampling period decreases to zero, the Discrete \par Difference Method 
+should approach the true derivative.\par \par Using the Convolution 
+Method, we first find the DFT of the received signal.  Secondly, we
+\par multiply that DFT by the ideal differentiator.  Then the IDFT is 
+calculated.  The resulting\par signal undergoes processing and 
+envolope detection to recover the original message (as\par does the 
+signal from the Discrete Difference Method).\par \par In this first 
+document, we compare the two methods under "bare-bones" conditions, 
+i.e.,\par we leave out the hard-limiter in the receiver since it seems 
+to add its own set of \par complications.  The second document 
+(FM2LIM.MCD) deals with the hard-limiter case.\par \par \par \par }
+.TXT 52 -6 17139 0 0
+Cg a73.000000,73.000000,11
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs24\b Modulation:}}
+.TXT 4 0 17135 0 0
+Cg a67.000000,67.000000,40
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Define the 
+pseudo-random message signal:}}
+.EQN 5 7 17125 0 0
+{0:N}NAME:512
+.EQN 0 12 17126 0 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 14 17127 0 0
+{0:k}NAME:5;20
+.EQN 6 -26 17128 0 0
+({0:\wm}NAME)[({0:k}NAME):{0:k}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.EQN 0 12 17129 0 0
+({0:\q}NAME)[({0:k}NAME):{0:rnd}NAME(2*{0:\p}NAME)
+.EQN 0 14 17130 0 0
+({0:c}NAME)[({0:k}NAME):30-{0:k}NAME
+.EQN 0 13 17131 0 0
+({0:m}NAME)[({0:n}NAME):{0:k}NAME$({0:c}NAME)[({0:k}NAME)*{0:cos}NAME(({0:\wm}NAME)[({0:k}NAME)*{0:n}NAME+({0:\q}NAME)[({0:k}NAME))
+.EQN 7 -43 17138 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 15 10 0 3 Pseudo-Random Message Waveform
+.TXT 28 -3 16458 0 0
+C x1,1,0,0
+.TXT 4 0 16251 0 0
+Cg a70.000000,70.000000,36
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b E}{\b xamine the 
+spectrum of the message:}}
+.TXT 5 8 16888 0 0
+Cg a75.000000,75.000000,14
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard DFT Definition}
+.EQN 0 40 16882 0 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.TXT 4 -40 16881 0 0
+Cg a75.000000,75.000000,27
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard DFT of the Message Waveform}
+.EQN 0 40 16883 0 0
+{0:M}NAME:{0:dft}NAME({0:m}NAME)
+.TXT 4 -40 16879 0 0
+Cg a74.000000,74.000000,30
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Frequency Range in the Message}
+.EQN 0 40 16884 0 0
+({0:\w}NAME)[({0:n}NAME):{0:n}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.TXT 5 -40 16890 0 0
+Cg a75.000000,75.000000,32
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Maximum Frequency in the Message
+}
+.EQN 0 40 16885 0 0
+{0:\wmx}NAME:({0:\w}NAME)[(20)
+.EQN 3 -44 16891 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:M}NAME)[({0:n}NAME))@&&({0:\wmx}NAME&_n_u_l_l_)&({0:\w}NAME)[({0:n}NAME)
+0 0 0 0 0 2 1 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 9 10 0 3 Spectrum of Message Waveform
+.TXT 19 -4 16892 0 0
+Cg a69.000000,69.000000,52
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Integrate the 
+message for frequency modulation (FM):}}
+.EQN 6 9 16904 0 0
+({0:mi}NAME)[({0:n}NAME):{0:k}NAME$(({0:c}NAME)[({0:k}NAME))/(({0:\wm}NAME)[({0:k}NAME))*{0:sin}NAME(({0:\wm}NAME)[({0:k}NAME)*{0:n}NAME+({0:\q}NAME)[({0:k}NAME))
+.EQN 5 -8 16900 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:mi}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 9 10 0 3 Integrated Message Waveform
+.TXT 20 -1 16901 0 0
+Cg a70.000000,70.000000,47
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b E}{\b xamine the 
+spectrum of the integrated message:}}
+.EQN 4 13 16902 0 0
+{0:MI}NAME:{0:dft}NAME({0:mi}NAME)
+.EQN 2 -13 16903 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:MI}NAME)[({0:n}NAME))@({0:\p}NAME)/(4)&&({0:\wmx}NAME&_n_u_l_l_)&({0:\w}NAME)[({0:n}NAME)
+0 0 0 0 0 2 1 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 59 9 10 0 3 Spectrum of Integrated Message Waveform
+.TXT 22 0 16905 0 0
+Cg a70.000000,70.000000,23
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Define the FM waveform:}}
+.TXT 4 11 16914 0 0
+Cg a73.000000,73.000000,17
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Carrier Frequency}
+.EQN 0 33 16915 0 0
+{0:\wc}NAME:(2*{0:\p}NAME)/({0:N}NAME)*64
+.TXT 5 -33 16916 0 0
+Cg a71.000000,71.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Constant Multiplier }
+.EQN 0 33 16917 0 0
+{0:cf}NAME:0.0005
+.TXT 5 -33 16918 0 0
+Cg a71.000000,71.000000,18
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Transmitted Signal}
+.EQN 0 33 16919 0 0
+({0:sfm}NAME)[({0:n}NAME):{0:cos}NAME({0:\wc}NAME*{0:n}NAME+{0:cf}NAME*({0:mi}NAME)[({0:n}NAME))
+.TXT 4 -33 16920 0 0
+Cg a71.000000,71.000000,30
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Transmitted Frequency Spectrum}
+.EQN 0 33 16921 0 0
+{0:SFM}NAME:{0:dft}NAME({0:sfm}NAME)
+.TXT 2 -44 16506 0 0
+C x1,1,0,0
+.EQN 6 0 16922 0 0
+&&(-1.5&1.5)&({0:sfm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 19 10 0 3 FM Waveform
+.EQN 26 4 16925 0 0
+250&0&(-1.5&1.5)&|(({0:SFM}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(65&{0:N}NAME-63)&{0:n}NAME
+0 0 0 0 0 2 1 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 57 19 10 0 3 Spectrum of FM Waveform
+.TXT 31 5 16665 0 0
+Cg a78.000000,78.000000,119
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Note that in the above 
+frequency spectrum, the carrier energy is much greater than\par the 
+sidlobe energy, as it should be.}
+.TXT 8 -9 16662 0 0
+Cg a73.000000,73.000000,49
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs24\b Transmit the FM 
+Waveform Through an AWGN Channel:}}
+.TXT 5 6 16698 0 0
+Cg a77.000000,77.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Noise Factor}
+.EQN 0 37 16947 0 0
+{0:var}NAME:.001
+.TXT 4 -37 16940 0 0
+Cg a45.000000,45.000000,89
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul NOTE}\par {\b 
+Vary the Noise Factor between 0 and 1,\par then observe the reproduced 
+signal on\par page . }}
+.TXT 12 0 16930 0 0
+Cg a76.000000,76.000000,24
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Noisy Transmitted Signal}
+.EQN 0 37 16945 0 0
+({0:sfm}NAME)[({0:n}NAME):({0:sfm}NAME)[({0:n}NAME)+\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))
+.TXT 5 -37 16932 0 0
+Cg a77.000000,77.000000,37
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Noisy Transmitted 
+Frequency Spectrum }
+.EQN 0 37 16946 0 0
+{0:SFM}NAME:{0:dft}NAME({0:sfm}NAME)
+.EQN 5 -42 16948 0 0
+1.2&-1.2&(-1.5&1.5)&({0:sfm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 11 10 0 3 FM Waveform w/ Noise
+.TXT 20 -1 17141 0 0
+C x1,1,0,0
+.EQN 4 0 16729 0 0
+&&(-1.5&1.5)&|(({0:SFM}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 58 11 10 0 3 Spectrum of FM Waveform w/ Noise
+.TXT 23 0 16730 0 0
+Cg a73.000000,73.000000,27
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs24\b Reception and} {
+\fs24\b Demodulation:}}
+.TXT 6 0 16359 0 0
+Cg a101.000000,101.000000,73
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul Filter}{\b  the 
+received waveform to remove noise outside of the FM bandwidth:}}
+.TXT 4 0 16364 0 0
+Cg a102.000000,102.000000,36
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Determine the FM 
+waveform bandwidth:}
+.EQN 6 9 16480 0 0
+{0:cf}NAME={0}?_n_u_l_l_
+.EQN 6 0 16483 0 0
+({0:m2}NAME)[({0:n}NAME):|(({0:m}NAME)[({0:n}NAME))
+.EQN 0 15 16484 0 0
+{0:\D\w}NAME:{0:cf}NAME*({0:max}NAME({0:m2}NAME))
+.EQN 0 21 16485 0 0
+{0:\b}NAME:({0:\D\w}NAME)/({0:\wmx}NAME)
+.EQN 7 -36 16949 0 0
+{0:\e}NAME:.2
+.EQN 0 13 16950 0 0
+{0:bw}NAME:2*{0:\wmx}NAME*(1+{0:\b}NAME)+{0:\e}NAME
+.EQN 0 23 16951 0 0
+{0:bw}NAME={0}?_n_u_l_l_
+.TXT 5 -36 17142 0 0
+Cg a100.000000,100.000000,104
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset2\fnil Symbol;}}\plain\cf1\fs20 
+\pard Note here that the "fudge factor,"  {\f1 e},  widens the filter 
+bandwidth, thereby improving\par signal recovery. }
+.TXT 9 -9 16735 0 0
+Cg a101.000000,101.000000,24
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Next, define the filter.}
+.EQN 6 2 16732 0 0
+({0:H.RF}NAME)[({0:n}NAME):0
+.EQN 1 14 16733 0 0
+({0:H.RF}NAME)[({0:n}NAME):(({0:\w}NAME)[({0:n}NAME)ò{0:\wc}NAME-({0:bw}NAME)/(2))*(({0:\w}NAME)[({0:n}NAME)ó{0:\wc}NAME+({0:bw}NAME)/(2))
+.EQN 0 31 16734 0 0
+({0:H.RF}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó({0:N}NAME)/(2),({0:H.RF}NAME)[({0:n}NAME),({0:H.RF}NAME)[({0:N}NAME-{0:n}NAME))
+.TXT 9 -47 16736 0 0
+Cg a99.000000,99.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Filter the waveform:}
+.EQN 6 2 16740 0 0
+({0:SFM}NAME)[({0:n}NAME):({0:H.RF}NAME)[({0:n}NAME)*({0:SFM}NAME)[({0:n}NAME)
+.EQN 1 23 16741 0 0
+{0:idft}NAME({0:v}NAME):\((1)/({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 26 16742 0 0
+{0:sfm}NAME:{0:idft}NAME({0:SFM}NAME)
+.EQN 6 -47 17144 0 0
+100&&(-1.5&1.5)&({0:H.RF}NAME)[({0:n}NAME)*70,|(({0:SFM}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 15 10 0 3 Spectrum of Filtered Waveform & Filter
+.TXT 24 -4 16512 0 0
+C x1,1,0,0
+.TXT 3 0 16956 0 0
+Cg a72.000000,72.000000,168
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Differentiate the 
+waveform using the Discrete Difference Method:\par \par }\tab Here we 
+approximate the derivative with the difference between two successive
+\par \tab time-domain values. {\b \par \par }}
+.EQN 14 9 16952 0 0
+({0:dsfm}NAME)[({0:n}NAME):0
+.EQN 5 0 16953 0 0
+{0:n}NAME:0;{0:N}NAME-2
+.EQN 0 13 16954 0 0
+({0:dsfm}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<{0:N}NAME-2,({0:sfm}NAME)[({0:n}NAME+1)-({0:sfm}NAME)[({0:n}NAME),({0:dsfm}NAME)[({0:n}NAME-3))
+.EQN 0 36 16955 0 0
+{0:DSFM}NAME:{0:dft}NAME({0:dsfm}NAME)
+.EQN 4 -58 16750 0 0
+&&(-1.5&1.5)&({0:dsfm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 13 10 0 3 Differentiated FM Waveform
+.EQN 22 0 16751 0 0
+&&(-1.5&1.5)&|(({0:DSFM}NAME)[({0:n}NAME)),|(({0:SFM}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 60 16 10 0 3 Spectrum of Differentiated FM Waveform
+.TXT 27 0 16752 0 0
+Cg a65.000000,65.000000,56
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Use envelope 
+detection to estimate the message waveform:}}
+.TXT 7 9 16757 0 0
+Cg a9.250000,9.250000,8
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Squaring}
+.EQN 0 26 16765 0 0
+({0:e}NAME)[({0:n}NAME):((({0:dsfm}NAME)[({0:n}NAME)))^(2)
+.EQN 8 0 16763 0 0
+{0:eft}NAME:{0:dft}NAME({0:e}NAME)
+.EQN 0 15 16764 0 0
+{0:width}NAME:1.11
+.TXT 1 -41 16776 0 0
+Cg a19.250000,19.250000,17
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Remove  Harmonics}
+.EQN 4 26 16760 0 0
+({0:mcapft}NAME)[({0:n}NAME):((({0:\w}NAME)[({0:n}NAME)ó{0:width}NAME*{0:\wmx}NAME)+(({0:\w}NAME)[({0:n}NAME)ò2*{0:\p}NAME-{0:width}NAME*{0:\wmx}NAME))*({0:eft}NAME)[({0:n}NAME)
+.TXT 7 -26 16777 0 0
+Cg a64.000000,64.000000,65
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset2\fnil Symbol;}}\plain\cf1\fs20 
+\pard Note that [1+{\f1 a}m(t)]^2 has a bandwidth twice that of m(t) 
+itself. }
+.TXT 5 0 16781 0 0
+Cg a14.250000,14.250000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Square Root:}
+.EQN 0 26 16771 0 0
+{0:mcap}NAME:{0:idft}NAME({0:mcapft}NAME)
+.EQN 0 21 16772 0 0
+({0:mcap}NAME)[({0:n}NAME):\(({0:mcap}NAME)[({0:n}NAME))
+.TXT 6 -47 16783 0 0
+Cg a12.250000,12.250000,10
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Remove DC:}
+.EQN 1 26 16778 0 0
+{0:mcapft}NAME:{0:dft}NAME({0:mcap}NAME)
+.EQN 0 21 16779 0 0
+({0:mcapft}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷0,0,({0:mcapft}NAME)[({0:n}NAME))
+.TXT 8 -56 17145 0 0
+C x1,1,0,0
+.TXT 3 0 16795 0 0
+Cg a100.000000,100.000000,70
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Compare the 
+spectrums of the original and estimated  message waveform:}}
+.TXT 6 7 16639 0 0
+Cg a76.000000,76.000000,333
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Notice that when noise 
+is absent, the reproduced spectrum still contains errors and doesn't
+\par exactly match the original.  However, we do produce a reasonable 
+facsimile under noiseless\par conditions.  As the SNR increases, the 
+error in the frequency domain becomes extremely\par clear, even to the 
+point where there is no obvious correlation.}
+.EQN 11 -7 16811 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:M}NAME)[({0:n}NAME))@({0:N}NAME)/(10)&&(({0:N}NAME)/(4)&_n_u_l_l_)&{0:n}NAME
+0 0 1 0 0 2 0 1 1 
+0 0 0 0 0 2 1 1 1 
+1 1 0 0 1 1 NO-TRACE-STRING
+1 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 28 19 10 0 3 Spectrum of Original Message Waveform
+.EQN 0 38 16813 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:mcapft}NAME)[({0:n}NAME))@({0:N}NAME)/(10)&&(({0:N}NAME)/(4)&_n_u_l_l_)&{0:n}NAME
+0 0 1 0 0 2 0 1 1 
+0 0 0 0 0 2 1 1 1 
+1 1 0 0 1 1 NO-TRACE-STRING
+1 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 29 19 10 0 3 Spectrum of Estimated Message Waveform
+.TXT 33 -38 16814 0 0
+Cg a100.000000,100.000000,54
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Compare the original 
+and estimated  message waveforms:}}
+.TXT 4 0 16815 0 0
+Cg a82.000000,82.000000,570
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Finally, we compare the 
+reproduction to the original signal.  Note that the Amplification 
+Factor (A)\par was chosen for minimum error under noiseless 
+conditions.  A table comparing the various errors for\par specific 
+noise factors (variance) shows that the system is relatively noise 
+intolerant.  By noise \par intolerant, we mean a reproduction with an 
+absolute error below 10.  There is a good reason for\par this: a noise 
+factor above .001 produces a signal that, graphically, obviously 
+devites from the \par original.  The application dictates whether the 
+reproduction is satisfactory. }
+.TXT 15 8 16847 0 0
+Cg a75.000000,75.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Reconstructed Signal}
+.EQN 0 22 16848 0 0
+{0:mcap}NAME:{0:idft}NAME({0:mcapft}NAME)
+.TXT 4 -22 16849 0 0
+Cg a75.000000,75.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Amplification Factor}
+.EQN 0 22 16850 0 0
+{0:A}NAME:2900
+.EQN 4 -30 16957 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME),(({0:A}NAME*{0:mcap}NAME))[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 63 13 10 0 3 Original & Estimated Message Waveforms
+.EQN 28 9 16841 0 0
+{0:\e.time}NAME:(1)/(\({0:N}NAME))*\(((0,{0:N}NAME-2,{0:i}NAME,((|(({0:m}NAME)[({0:i}NAME)-({0:A}NAME*({0:mcap}NAME)[({0:i}NAME)))))^(2)){64}))
+.EQN 0 40 16842 0 0
+{0:\e.time}NAME={0}?_n_u_l_l_
+.TXT 14 -49 17146 0 0
+C x1,1,0,0
+.TXT 3 13 16827 0 0
+Cg a70.000000,70.000000,199
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Noise Factor\tab 
+Amplification Factor (A)\tab Time Domain Error\par \par 0.0\tab \tab 
+2900\tab \tab \tab \tab   4.89\par 0.00001\tab \tab 2900\tab \tab \tab 
+\tab   5.10\par 0.0001\tab \tab 2800\tab \tab \tab \tab   8.89\par 
+0.001\tab \tab 2500\tab \tab \tab \tab 19.98\par 0.01\tab \tab 600\tab 
+\tab \tab \tab 48.33\par 0.1\tab \tab 200\tab \tab \tab \tab 49.18\par 
+1.0\tab \tab 200\tab \tab \tab \tab 66.81}
+.TXT 23 -13 16852 0 0
+Cg a81.000000,81.000000,306
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Ideally, we want a 
+system that is totally tolerant of noise.  In the next document we 
+look at a system\par that uses a hard-limiter and filtering in the 
+receiver.  First, however, we will examine a second method of\par 
+differentiating the reproduced message: convolving the the signal with 
+an ideal differentiator.}
+.TXT 11 0 16982 0 0
+Cg a72.000000,72.000000,81
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Differentiate the 
+waveform by convolving the signal with an Ideal Differentiator:}}
+.EQN 6 6 16959 0 0
+({0:DSFM}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<({0:N}NAME)/(2),1i*{0:n}NAME*({0:SFM}NAME)[({0:n}NAME),{0:if}NAME({0:n}NAMEò({0:N}NAME)/(2),1i*(-{0:N}NAME+{0:n}NAME)*({0:SFM}NAME)[({0:n}NAME),0))
+.EQN 0 48 16960 0 0
+{0:dsfm}NAME:{0:idft}NAME({0:DSFM}NAME)
+.EQN 5 -54 16986 0 0
+&&(-1.5&1.5)&({0:dsfm}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 66 13 10 0 3 Differentiated FM Waveform
+.EQN 23 0 16987 0 0
+&&(-1.5&1.5)&|(({0:DSFM}NAME)[({0:n}NAME)),|(((50*{0:SFM}NAME))[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 0 2 0 1 1 
+0 1 0 5 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 65 16 10 0 3 Spectrum of Differentiated FM Waveform
+.TXT 28 0 17079 0 0
+Cg a65.000000,65.000000,56
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Use envelope 
+detection of estimate the message waveform:}}
+.EQN 5 27 17080 0 0
+({0:e}NAME)[({0:n}NAME):((({0:dsfm}NAME)[({0:n}NAME)))^(2)
+.TXT 1 -17 17081 0 0
+Cg a9.250000,9.250000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Squaring:}
+.TXT 6 0 17082 0 0
+Cg a19.250000,19.250000,18
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Remove  Harmonics:}
+.EQN 0 17 17083 0 0
+{0:eft}NAME:{0:dft}NAME({0:e}NAME)
+.EQN 2 14 16999 0 0
+{0:width}NAME:1.1
+.EQN 2 -14 17084 0 0
+({0:mcapft}NAME)[({0:n}NAME):((({0:\w}NAME)[({0:n}NAME)ó{0:width}NAME*{0:\wmx}NAME)+(({0:\w}NAME)[({0:n}NAME)ò2*{0:\p}NAME-{0:width}NAME*{0:\wmx}NAME))*({0:eft}NAME)[({0:n}NAME)
+.TXT 7 -27 17148 0 0
+C x1,1,0,0
+.TXT 3 10 17152 0 0
+Cg a64.000000,64.000000,65
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset2\fnil Symbol;}}\plain\cf1\fs20 
+\pard Note that [1+{\f1 a}m(t)]^2 has a bandwidth twice that of m(t) 
+itself. }
+.TXT 5 0 17149 0 0
+Cg a14.250000,14.250000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Square Root:}
+.EQN 0 24 17150 0 0
+{0:mcap}NAME:{0:idft}NAME({0:mcapft}NAME)
+.EQN 0 21 17151 0 0
+({0:mcap}NAME)[({0:n}NAME):\(|(({0:mcap}NAME)[({0:n}NAME)))
+.TXT 4 -45 17018 0 0
+Cg a12.250000,12.250000,10
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Remove DC:}
+.EQN 0 24 17064 0 0
+{0:mcapft}NAME:{0:dft}NAME({0:mcap}NAME)
+.EQN 0 21 17065 0 0
+({0:mcapft}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷0,0,({0:mcapft}NAME)[({0:n}NAME))
+.TXT 6 -45 17068 0 0
+Cg a72.000000,72.000000,18
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Reproduced Message}
+.EQN 0 24 17066 0 0
+{0:mcap}NAME:{0:idft}NAME({0:mcapft}NAME)
+.TXT 5 -24 17070 0 0
+Cg a73.000000,73.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Amplitude Adjustment}
+.EQN 0 24 17067 0 0
+{0:A}NAME:30
+.EQN 3 -34 17047 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME),{0:A}NAME*({0:mcap}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 66 13 10 0 3 Original & Estimated Message Waveforms
+.TXT 25 12 17085 0 0
+Cg a74.000000,74.000000,54
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Absolute Squared Error 
+in the Time-domain Reproduction}
+.EQN 9 1 17056 0 0
+{0:\e.time}NAME:(1)/(\({0:N}NAME))*\(((0,{0:N}NAME-2,{0:i}NAME,((|(({0:m}NAME)[({0:i}NAME)-({0:A}NAME*({0:mcap}NAME)[({0:i}NAME)))))^(2)){64}))
+.EQN 0 38 17057 0 0
+{0:\e.time}NAME={0}?_n_u_l_l_
+.TXT 12 -38 17055 0 0
+Cg a70.000000,70.000000,186
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Noise Factor\tab 
+Amplification Factor (A)\tab Time Domain Error\par \par 0.0\tab \tab 
+33\tab \tab \tab \tab   4.34\par 0.00001\tab \tab 34\tab \tab \tab 
+\tab   4.7\par 0.0001\tab \tab 34\tab \tab \tab \tab   8.51\par 0.001
+\tab \tab 30\tab \tab \tab \tab 20.51\par 0.01\tab \tab 30\tab \tab 
+\tab \tab 55.16\par 0.1\tab \tab 10\tab \tab \tab \tab 70.07\par 1.0
+\tab \tab 2\tab \tab \tab \tab 65.07}
+.TXT 23 -13 17071 0 0
+Cg a100.000000,100.000000,123
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Compare the 
+spectrums of the original and estimated  message waveform produced\par 
+with the convolution differentiation method.}}
+.EQN 6 0 17074 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:M}NAME)[({0:n}NAME))@({0:N}NAME)/(4)&&(({0:N}NAME)/(4)&_n_u_l_l_)&{0:n}NAME
+0 0 1 0 0 2 0 1 1 
+0 0 0 0 0 2 1 1 1 
+1 1 0 0 1 1 NO-TRACE-STRING
+1 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 28 9 10 0 3 Spectrum of Original Message Waveform
+.EQN 0 38 17075 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:mcapft}NAME)[({0:n}NAME))@({0:N}NAME)/(4)&&(({0:N}NAME)/(4)&_n_u_l_l_)&{0:n}NAME
+0 0 1 0 0 2 0 1 1 
+0 0 0 0 0 2 1 1 1 
+1 1 0 0 1 1 NO-TRACE-STRING
+1 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 29 9 10 0 3 Spectrum of Estimated Message Waveform
+.TXT 21 -38 17156 0 0
+C x1,1,0,0
+.TXT 3 1 17155 0 0
+Cg a82.000000,82.000000,81
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Next is the 
+comparision between the Difference Method and the Convolution Method.}}
+.TXT 3 22 17154 0 0
+Cg a67.000000,67.000000,40
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b The Difference 
+Method of Differentiation}}
+.TXT 4 -9 17095 0 0
+Cg a70.000000,70.000000,199
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Noise Factor\tab 
+Amplification Factor (A)\tab Time Domain Error\par \par 0.0\tab \tab 
+2900\tab \tab \tab \tab   4.89\par 0.00001\tab \tab 2900\tab \tab \tab 
+\tab   5.10\par 0.0001\tab \tab 2800\tab \tab \tab \tab   8.89\par 
+0.001\tab \tab 2500\tab \tab \tab \tab 19.98\par 0.01\tab \tab 600\tab 
+\tab \tab \tab 48.33\par 0.1\tab \tab 200\tab \tab \tab \tab 49.18\par 
+1.0\tab \tab 200\tab \tab \tab \tab 66.81}
+.TXT 21 6 17098 0 0
+Cg a67.000000,67.000000,41
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b The Convolution 
+Method of Differentiation}}
+.TXT 3 -9 17097 0 0
+Cg a70.000000,70.000000,186
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Noise Factor\tab 
+Amplification Factor (A)\tab Time Domain Error\par \par 0.0\tab \tab 
+33\tab \tab \tab \tab   4.34\par 0.00001\tab \tab 34\tab \tab \tab 
+\tab   4.7\par 0.0001\tab \tab 34\tab \tab \tab \tab   8.51\par 0.001
+\tab \tab 30\tab \tab \tab \tab 20.51\par 0.01\tab \tab 30\tab \tab 
+\tab \tab 55.16\par 0.1\tab \tab 10\tab \tab \tab \tab 70.07\par 1.0
+\tab \tab 2\tab \tab \tab \tab 65.07}
+.TXT 23 -5 17106 0 0
+Cg a63.125000,63.125000,846
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul Conclusion}\par 
+\par The two methods seem to produce roughly equal results.  When 
+noise is low, the errors\par between methods are very similar at each 
+corresponding noise factor.  When the noise\par factor exceeds 0.001, 
+both methods "lose"  the original message.  Considering this \par 
+information, the difference method may be a better choice since it is 
+more efficient with\par regard to calculation intensity, even though 
+the convolution method offers a slightly \par better noise tolerance 
+at a noise factor below 0.001.  Clearly, both systems need\par 
+improvement, and that is the subject of the second document, 
+FM2LIM.MCD.  \par \par Also, we haven't taken into account the 
+performance differences that might occur when the sampling rate 
+varies.  Although we are out of time for this project, it would be 
+interesting to test each system's tolerance under various sampling rates.}
+.TXT 66 -6 17157 0 0
+C x1,1,0,0

@@ -1,0 +1,200 @@
+.MCAD 303010000 1 74 16130 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 16129 0
+Cg a67.125000,73.000000,100
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {\b 420sad.mcd}{ to show the effects
+ of amplitude distortion in the channel's
+  frequency response.}}
+}
+.TXT 4 5 16130 0
+Cg a60.500000,68.000000,93
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {}{\b 1}{ Define the degraded magnitude
+ of the channel's frequency response- in
+ 'DFT form'.}}
+}
+.EQN 4 3 3 0
+{0:N}NAME:128
+.EQN 0 8 4 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 18 5 0
+{0:j}NAME:0;2
+.EQN 0 8 6 0
+({0:\e}NAME)[({0:j}NAME):0.1*{0:j}NAME
+.EQN 0 12 7 0
+{0:\t}NAME:(2*{0:\p}NAME)/(8)
+.EQN 5 -46 8 0
+({0:A}NAME)[({0:n}NAME,{0:j}NAME):1+2*({0:\e}NAME)[({0:j}NAME)*{0:cos}NAME({0:\t}NAME*{0:n}NAME)
+.EQN 0 26 9 0
+({0:H}NAME)[({0:n}NAME,{0:j}NAME):{0:if}NAME({0:n}NAMEó16,({0:A}NAME)[({0:n}NAME,{0:j}NAME),{0:if}NAME({0:n}NAMEò112,({0:A}NAME)[({0:N}NAME-{0:n}NAME,{0:j}NAME),0))
+.EQN 4 -24 10 0
+&&(_n_u_l_l_&_n_u_l_l_)&((({0:H}NAME){52}(0)))[({0:n}NAME),((({0:H}NAME){52}(1)))[({0:n}NAME),((({0:H}NAME){52}(2)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 0 1 
+0 0 0 0 0 0 1 
+0 1 0 5 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 50 18 0 3 Channel Error: FR Amplitude
+.TXT 28 -4 11 0
+Cg a54.500000,61.125000,156
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {\b 2 }{ Define the channel input
+ pulse whose spectrum has been shaped for
+ low sidelobes. We choose a simple model,
+ the triangle spectrum- in 'DFT form'.}}
+}
+.EQN 6 1 12 0
+({0:P}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó16,16-{0:n}NAME,{0:if}NAME({0:n}NAMEò112,{0:n}NAME-112,0))
+.EQN 0 34 13 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:P}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 0 0 1 
+0 0 0 0 0 0 1 
+0 1 0 5 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 12 0 3 Channel Input Pulse FT
+.TXT 10 -34 14 0
+Cg a24.375000,27.250000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {}{\b 3}{  Compute the output pulse,
+ s(t).}}
+}
+.EQN 5 21 16 0
+({0:S}NAME)[({0:n}NAME,{0:j}NAME):({0:H}NAME)[({0:n}NAME,{0:j}NAME)*({0:P}NAME)[({0:n}NAME)
+.EQN 1 -20 15 0
+{0:idft}NAME({0:v}NAME):((1)/(\({0:N}NAME)))*{0:cfft}NAME({0:v}NAME)
+.EQN 8 0 17 0
+({0:s}NAME){52}({0:j}NAME):{0:idft}NAME(({0:S}NAME){52}({0:j}NAME))
+.EQN 0 16 18 0
+({0:M}NAME)[({0:j}NAME):{0:max}NAME(({0:s}NAME){52}({0:j}NAME))
+.EQN 0 20 19 0
+({0:s}NAME){52}({0:j}NAME):(({0:s}NAME){52}({0:j}NAME))/(({0:M}NAME)[({0:j}NAME))
+.EQN 5 -29 20 0
+0&-40&(-40&0)&20*{0:log}NAME(|(((({0:s}NAME){52}({0:j}NAME)))[({0:n}NAME))+0.000001)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 1 0 0 0 0 1 
+0 1 0 0 0 0 1 
+0 0 0 5 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 35 22 0 3 ISI: channel FR amplitude errors
+.EQN 9 -12 21 0
+{0:\e}NAME={0}?_n_u_l_l_
+.EQN 9 0 22 0
+{0:\t}NAME={0}?_n_u_l_l_
+.TXT 14 5 23 0
+Cg a59.625000,64.625000,103
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {Thus amplitude errors as large 
+as 10% negate the extra bandwidth used to
+ control sidelobe behavior.}}
+}

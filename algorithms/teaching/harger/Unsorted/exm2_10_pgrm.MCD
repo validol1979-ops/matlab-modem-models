@@ -1,0 +1,503 @@
+.MCAD 304020000 1 79 347 0
+.CMD PLOTFORMAT
+0 0 1 0 0 2 1 1 1 
+0 0 1 0 0 2 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 38 15 10 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 0 1 0 0 1 1 1 
+0 0 1 1 0 1 0 0 1 1 1 
+0 1 0 0 1 1 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 1 1 NO-TRACE-STRING
+0 1 1 1 21 0 15 0 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-2139098532
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.000000 1.000000 1.000000 1.000000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |F |D |P
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.CMD COLORTAB_ENTRY 0 64 128
+.TXT 3 1 53 0 0
+Cg a61.125000,61.125000,61
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b exm2_10_pgrm.mcd}  a 
+program to compute the mean square error.}
+.TXT 6 4 216 0 0
+Cg a73.000000,73.000000,91
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 1  }The problem 
+discussed in Example 2.10 is summarized by the following mathcad statements.}
+.TXT 7 0 228 0 0
+Cg a42.000000,42.000000,13
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b pulse signal:}}
+.EQN 0 18 229 0 0
+{0:L}NAME:64
+.EQN 0 8 230 0 0
+{0:j}NAME:0;{0:L}NAME-1
+.EQN 0 17 231 0 0
+{0:A.s}NAME:1
+.EQN 0 11 232 0 0
+({0:s}NAME)[({0:j}NAME):{0:A.s}NAME*({0:j}NAME<{0:L}NAME-1)
+.TXT 5 -54 233 0 0
+Cg a41.000000,41.000000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b noise:}}
+.EQN 0 18 234 0 0
+{0:var}NAME:0.15
+.EQN 0 12 235 0 0
+{0:no}NAME:{0:rnorm}NAME({0:L}NAME,0,\({0:var}NAME))
+.TXT 4 -30 236 0 0
+Cg a31.000000,31.000000,5
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b data:}}
+.EQN 0 18 237 0 0
+({0:x}NAME)[({0:j}NAME):({0:s}NAME)[({0:j}NAME)+({0:no}NAME)[({0:j}NAME)
+.TXT 5 -18 238 0 0
+Cg a4.000000,4.000000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b FIR:}}
+.EQN 0 18 239 0 0
+{0:M}NAME:8
+.EQN 0 9 240 0 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 0 13 241 0 0
+({0:h}NAME)[({0:m}NAME):(1)/({0:M}NAME)
+.TXT 6 -40 242 0 0
+Cg a71.000000,71.000000,13
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b output index}{\f1\b :}}
+.EQN 0 18 243 0 0
+{0:N}NAME:{0:L}NAME+{0:M}NAME-1
+.EQN 0 12 244 0 0
+{0:n}NAME:0;{0:N}NAME-1
+.TXT 6 -30 245 0 0
+Cg a30.000000,30.000000,38
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b filter output/\par aperiodic \par convolution}{\f1
+\b :}}
+.EQN 1 18 246 0 0
+({0:y}NAME)[({0:n}NAME):((0,{0:M}NAME-1,{0:m}NAME,({0:h}NAME)[({0:m}NAME)*(({0:n}NAME-{0:m}NAMEò0)*({0:n}NAME-{0:m}NAMEó{0:L}NAME-1))*({0:x}NAME)[({0:n}NAME-{0:m}NAME)){64})
+.TXT 8 -18 217 0 0
+Cg a74.000000,74.000000,167
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 2}  We can gain some 
+information simply by examining the plots as we make repeated runs by 
+enclosing the equation generating the noise sample and pushing F9 repeatedly.}
+.TXT 6 0 218 0 0
+Cg a74.000000,74.000000,486
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 3}  We would like to 
+consider the question of the "best" M. We need to define "best": we do 
+this by setting up a {\b criterion} which will be minimized by choice 
+of M. We choose the {\b mean-square error criterion} for a number of 
+reasons: it is mathematically tractable - we can solve for the best M 
+often, it is a common choice, it is a reasonable criterion when we 
+want a good copy of the signal, and it is a {\b robust} criterion - 
+that is, it often seems to work well - e.g., it is practical, etc.}
+.TXT 14 0 266 0 0
+Cg a57.125000,57.125000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b time-averaged\par squared error:}}
+.EQN 0 18 267 0 0
+{0:mse1}NAME:(1)/({0:N}NAME)*((0,{0:N}NAME-1,{0:j}NAME,((({0:j}NAME<{0:L}NAME)*({0:s}NAME)[({0:j}NAME)-({0:y}NAME)[({0:j}NAME)))^(2)){64})
+.EQN 0 28 268 0 0
+{0:mse1}NAME={0}?_n_u_l_l_
+.TXT 8 -46 224 0 0
+Cg a57.125000,57.125000,418
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 4}  If we make many 
+trials computing the mean-square error, we see that, generally there 
+is a variablilty in mse1 - after all, it is a {\b random variable}. 
+This is a definite defect in a criterion - we would like a {\b number}
+.This is done in theory by averaging over the distribution of the 
+noise: this is called an {\b ensemble average} - versus the{\b  time average} 
+formed above. This computation can be done here but it is not easy! }
+.TXT 15 0 226 0 0
+Cg a70.375000,70.375000,380
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We use a method commonly 
+employed to approximate the ensemble average of the time-averaged 
+squared error by forming the sample average of many trials. ("many" 
+depends, in part, on Mathcad and the computer!) We can do this using 
+modifying the above staements to generate an indexed set of mse s 
+which we can then average. We basically index the noise sample 
+sequences as shown now.}
+.TXT 10 -4 335 0 0
+C x1,1,0,0
+.TXT 2 4 247 0 0
+Cg a42.000000,42.000000,13
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b pulse signal:}}
+.EQN 0 18 248 0 0
+{0:L}NAME:64
+.EQN 0 8 249 0 0
+{0:j}NAME:0;{0:L}NAME-1
+.EQN 0 17 250 0 0
+{0:A.s}NAME:1
+.EQN 0 11 251 0 0
+({0:s}NAME)[({0:j}NAME):{0:A.s}NAME*({0:j}NAME<{0:L}NAME-1)
+.TXT 5 -54 276 0 0
+Cg a41.000000,41.000000,25
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b number of \par random trials:}}
+.EQN 1 18 277 0 0
+{0:NT}NAME:256
+.EQN 0 11 278 0 0
+{0:nt}NAME:0;{0:NT}NAME-1
+.TXT 4 22 280 0 0
+Cg a22.750000,22.750000,59
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b we array the noise sample sequences as columns in a matrix:
+}}
+.TXT 3 -51 279 0 0
+Cg a41.000000,41.000000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b noise:}}
+.EQN 0 18 253 0 0
+{0:var}NAME:0.15
+.EQN 0 12 254 0 0
+({0:no}NAME){52}({0:nt}NAME):{0:rnorm}NAME({0:L}NAME,0,\({0:var}NAME))
+.TXT 4 -30 255 0 0
+Cg a31.000000,31.000000,5
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b data:}}
+.EQN 0 18 256 0 0
+({0:x}NAME)[({0:j}NAME,{0:nt}NAME):({0:s}NAME)[({0:j}NAME)+({0:no}NAME)[({0:j}NAME,{0:nt}NAME)
+.TXT 0 16 284 0 0
+Cg a40.000000,40.000000,2
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b or}}
+.EQN 1 9 283 0 0
+({0:x}NAME){52}({0:nt}NAME):({0:s}NAME+({0:no}NAME){52}({0:nt}NAME))
+.TXT 4 -43 257 0 0
+Cg a4.000000,4.000000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b FIR:}}
+.EQN 0 18 258 0 0
+{0:M}NAME:6
+.EQN 0 9 259 0 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 0 13 260 0 0
+({0:h}NAME)[({0:m}NAME):(1)/({0:M}NAME)
+.TXT 6 -40 261 0 0
+Cg a71.000000,71.000000,13
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b output index}{\f1\b :}}
+.EQN 0 18 262 0 0
+{0:N}NAME:{0:L}NAME+{0:M}NAME-1
+.EQN 0 12 263 0 0
+{0:n}NAME:0;{0:N}NAME-1
+.TXT 6 -30 264 0 0
+Cg a30.000000,30.000000,38
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b filter output/\par aperiodic \par convolution}{\f1
+\b :}}
+.EQN 1 18 265 0 0
+({0:y}NAME)[({0:n}NAME,{0:nt}NAME):((0,{0:M}NAME-1,{0:m}NAME,({0:h}NAME)[({0:m}NAME)*(({0:n}NAME-{0:m}NAMEò0)*({0:n}NAME-{0:m}NAMEó{0:L}NAME-1))*({0:x}NAME)[({0:n}NAME-{0:m}NAME,{0:nt}NAME)){64})
+.TXT 9 -18 287 0 0
+Cg a57.125000,57.125000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b time-averaged\par squared error:}}
+.EQN 0 18 273 0 0
+({0:mse1}NAME)[({0:nt}NAME):(1)/({0:N}NAME)*((0,{0:N}NAME-1,{0:j}NAME,((({0:j}NAME<{0:L}NAME)*({0:s}NAME)[({0:j}NAME)-({0:y}NAME)[({0:j}NAME,{0:nt}NAME)))^(2)){64})
+.EQN 1 31 299 0 0
+{0:min}NAME({0:mse1}NAME)={0}?_n_u_l_l_
+.EQN 2 0 302 0 0
+{0:max}NAME({0:mse1}NAME)={0}?_n_u_l_l_
+.TXT 4 -49 288 0 0
+Cg a57.125000,57.125000,45
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b sample-averaged,\par time-averaged\par squared error:}}
+.EQN 2 18 289 0 0
+{0:MSE1}NAME:(1)/({0:NT}NAME)*((0,{0:NT}NAME-1,{0:nt}NAME,({0:mse1}NAME)[({0:nt}NAME)){64})
+.EQN 0 27 290 0 0
+{0:MSE1}NAME={0}?_n_u_l_l_
+.TXT 7 -45 304 0 0
+Cg a74.000000,74.000000,315
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By making repeated runs 
+of this collection of statements, we can get an idea of the number of 
+trials, NT, that must be averaged to get an estimate MSE1 of the 
+ensemble average with low variabiblity. Then, making runs with 
+different Ms, it is not difficult to find the best M for any specified 
+variance of the noise.}
+.TXT 11 0 227 0 0
+Cg a74.000000,74.000000,322
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 5}  We would also 
+like results for various choices of (M,var). But, we have exhausted 
+Mathcad's subscripting capacity - at least directly. But, we can use 
+Mathcad's function programming capability to, in effect, increase the 
+number of subscripts. In fact, this gives us an opportunity to 
+introduce programming with Mathcad.}
+.TXT 10 0 125 0 0
+Cg a74.000000,74.000000,102
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard There is no need for a 
+function program to generate the signal - but it is an easy one to 
+begin with!!}
+.EQN 5 0 114 0 0
+{0:pulse}NAME({0:L}NAME,{0:A}NAME):(((({0:pulse}NAME)[({0:j}NAME)){72}({0:A}NAME)){79}(({0:j}NAME){72}((0;{0:L}NAME-1)))){71}(({0:pulse}NAME){72}({0:pulse}NAME))
+.TXT 4 40 131 0 0
+Cg a41.000000,41.000000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b check:}}
+.EQN 0 11 121 0 0
+{0:pulse}NAME(4,2)={0}?_n_u_l_l_
+.TXT 6 -55 336 0 0
+C x1,1,0,0
+.TXT 3 4 126 0 0
+Cg a74.000000,74.000000,142
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard There is no need for a 
+function program to generate the data, which is the signal plus a 
+noise sequence  - but it is an easy one to learn on!!}
+.EQN 7 0 128 0 0
+{0:data}NAME({0:s}NAME,{0:var}NAME):(({0:J}NAME){72}({0:length}NAME({0:s}NAME))){71}(({0:data}NAME){72}(({0:s}NAME+{0:rnorm}NAME({0:J}NAME,0,\({0:var}NAME)))))
+.TXT 3 40 138 0 0
+Cg a41.000000,41.000000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b check:}}
+.EQN 0 10 130 0 0
+{0:data}NAME({0:pulse}NAME(4,2),0.1)={0}?_n_u_l_l_
+.TXT 7 -49 136 0 0
+Cg a73.000000,73.000000,79
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We construct a program 
+that generates the IR of a simple moving average filter.}
+.EQN 5 0 137 0 0
+{0:MAf}NAME({0:M}NAME):(((({0:MAf}NAME)[({0:m}NAME)){72}((1)/({0:M}NAME))){79}(({0:m}NAME){72}((0;{0:M}NAME-1)))){71}(({0:MAf}NAME){72}({0:MAf}NAME))
+.TXT 3 40 305 0 0
+Cg a41.000000,41.000000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b check:}}
+.EQN 0 9 306 0 0
+{0:MAf}NAME(4)={0}?_n_u_l_l_
+.TXT 11 -49 133 0 0
+Cg a73.000000,73.000000,58
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We need a function 
+program to compute the filtered output.}
+.EQN 6 0 134 0 0
+{0:convolve}NAME({0:h}NAME,{0:s}NAME):((((({0:M}NAME){72}({0:length}NAME({0:h}NAME))){71}(({0:J}NAME){72}({0:length}NAME({0:s}NAME)))){71}(({0:N}NAME){72}({0:J}NAME+{0:M}NAME-1))){71}((((({0:y}NAME)[({0:n}NAME)){72}(0)){71}(((({0:y}NAME)[(
+{0:n}NAME)){72}(({0:y}NAME)[({0:n}NAME)+({0:h}NAME)[({0:m}NAME)*(({0:n}NAME-{0:m}NAMEò0)*({0:n}NAME-{0:m}NAMEó{0:J}NAME-1))*({0:s}NAME)[({0:n}NAME-{0:m}NAME))){79}(({0:m}NAME){72}((0;{0:M}NAME-1))))){79}(({0:n}NAME){72}((0;{0:N}NAME-1))))){71}((
+{0:convolve}NAME){72}({0:y}NAME))
+.TXT 33 3 307 0 0
+Cg a41.000000,41.000000,7
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b checks:}}
+.EQN 0 9 308 0 0
+{0:convolve}NAME({0:MAf}NAME(4),{0:pulse}NAME(4,1))={0}?_n_u_l_l_
+.TXT 11 -17 337 0 0
+C x1,1,0,0
+.EQN 3 16 309 0 0
+{0:yno}NAME:{0:convolve}NAME({0:MAf}NAME(8),{0:data}NAME({0:pulse}NAME(64,1),0.2))
+.EQN 2 -10 145 0 0
+{0:A.s}NAME+3*\({0:var}NAME)&-(3*\({0:var}NAME))&(_n_u_l_l_&0)&({0:yno}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 0 0 2 1 1 1 
+0 0 1 0 0 2 1 1 1 
+1 0 0 0 1 1 NO-TRACE-STRING
+3 0 1 0 1 1 NO-TRACE-STRING
+5 0 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 58 21 10 0 3 Filtered Data
+.TXT 33 2 318 0 0
+Cg a70.000000,70.000000,86
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We now write a program 
+to find the time-averaged squared error between two sequences. }
+.EQN 4 0 311 0 0
+{0:mse}NAME({0:s}NAME,{0:y}NAME):(((((({0:J}NAME){72}({0:length}NAME({0:y}NAME))){71}(({0:L}NAME){72}({0:length}NAME({0:s}NAME)))){71}(((({0:se}NAME)[({0:j}NAME)){72}({0:if}NAME({0:j}NAME<{0:L}NAME,({0:s}NAME)[({0:j}NAME),0))){79}(({0:j}NAME){72}((
+0;{0:J}NAME-1))))){71}(({0:mse}NAME){72}(0))){71}((({0:mse}NAME){72}({0:mse}NAME+((({0:se}NAME)[({0:j}NAME)-({0:y}NAME)[({0:j}NAME)))^(2))){79}(({0:j}NAME){72}((0;{0:J}NAME-1))))){71}(({0:mse}NAME){72}(({0:mse}NAME)/({0:J}NAME)))
+.TXT 28 0 324 0 0
+Cg a70.000000,70.000000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b Examples:}}
+.EQN 2 9 314 0 0
+{0:mse}NAME({0:pulse}NAME(64,1),{0:convolve}NAME({0:MAf}NAME(16),{0:data}NAME({0:pulse}NAME(64,1),0.1)))={0}?_n_u_l_l_
+.EQN 4 0 317 0 0
+{0:mse}NAME({0:pulse}NAME(64,1),{0:pulse}NAME(66,1))={0}?_n_u_l_l_
+.EQN 4 0 315 0 0
+{0:mse}NAME({0:pulse}NAME(64,1),{0:data}NAME({0:pulse}NAME(64,1),0.2))={0}?_n_u_l_l_
+.TXT 4 -10 319 0 0
+Cg a70.000000,70.000000,117
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We now write a program 
+to approximate the ensemble average of the time-averaged squared error 
+between two sequences. }
+.EQN 6 0 321 0 0
+{0:MSE}NAME({0:s}NAME,{0:y}NAME,{0:NT}NAME):((({0:MSE}NAME){72}(0)){71}((({0:MSE}NAME){72}({0:MSE}NAME+{0:mse}NAME({0:s}NAME,{0:y}NAME))){79}(({0:nt}NAME){72}((0;{0:NT}NAME))))){71}(({0:MSE}NAME){72}(({0:MSE}NAME)/({0:NT}NAME)))
+.TXT 15 1 338 0 0
+Cg a70.000000,70.000000,8
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}{\f1\fcharset0\fnil Times New Roman;}}\plain\cf1
+\fs20 \pard {\f1\b Example:}}
+.EQN 0 15 339 0 0
+{0:MSE}NAME({0:pulse}NAME(64,1),{0:convolve}NAME({0:MAf}NAME(12),{0:data}NAME({0:pulse}NAME(64,1),0.5)),1024)={0}?_n_u_l_l_
+.TXT 2 -23 340 0 0
+C x1,1,0,0
+.TXT 3 7 327 0 0
+Cg a71.000000,71.000000,113
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard At long last (!!) we are 
+in a position to make multiple runs for a set of pairs (M,var). This 
+program will do it.}
+.EQN 8 -3 326 0 0
+{0:Plotdata}NAME({0:NM}NAME,{0:NN}NAME):(((({0:M}NAME){72}((2)^({0:m}NAME))){71}(((({0:var}NAME){72}(0.1+0.2*{0:n}NAME)){71}((({0:matrix}NAME)[({0:m}NAME,{0:n}NAME)){72}({0:MSE}NAME({0:pulse}NAME(64,1),{0:convolve}NAME({0:MAf}NAME({0:M}NAME),
+{0:data}NAME({0:pulse}NAME(64,1),{0:var}NAME)),512)))){79}(({0:n}NAME){72}((0;{0:NN}NAME-1))))){79}(({0:m}NAME){72}((0;{0:NM}NAME-1)))){71}(({0:Plotdata}NAME){72}({0:matrix}NAME))
+.TXT 20 2 330 0 0
+Cg a72.000000,72.000000,217
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\i We should avoid 
+using any programmed function statements in defining the abscissa and 
+ordinates of the plot - which we can do by pre-computing them as arrays}
+. We need to specify the abscissa of M values for the plot. }
+.EQN 8 0 196 0 0
+{0:Abscissa}NAME({0:M}NAME):(((({0:absc}NAME)[({0:m}NAME)){72}(2+4*{0:m}NAME)){79}(({0:m}NAME){72}((0;{0:M}NAME-1)))){71}(({0:Abscissa}NAME){72}({0:absc}NAME))
+.EQN 0 36 343 0 0
+{0:param}NAME({0:N}NAME):(((({0:var}NAME)[({0:n}NAME)){72}(0.1+{0:n}NAME*0.2)){79}(({0:n}NAME){72}((0;{0:N}NAME-1)))){71}(({0:param}NAME){72}({0:var}NAME))
+.EQN 16 -36 201 0 0
+{0:Plotmatrix}NAME:{0:Plotdata}NAME(6,3)
+.EQN 0 21 329 0 0
+{0:ab}NAME:{0:Abscissa}NAME(6)
+.EQN 0 14 331 0 0
+{0:ab}NAME={0}?_n_u_l_l_
+.EQN 0 11 332 0 0
+{0:Plotmatrix}NAME={0}?_n_u_l_l_
+.EQN 4 -46 213 0 0
+{0:M}NAME:6
+.EQN 0 9 212 0 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 6 -8 346 0 0
+&0&(_n_u_l_l_&_n_u_l_l_)&((({0:Plotmatrix}NAME){52}(0)))[({0:m}NAME),((({0:Plotmatrix}NAME){52}(1)))[({0:m}NAME),((({0:Plotmatrix}NAME){52}(2)))[({0:m}NAME)@32&0&(_n_u_l_l_&_n_u_l_l_)&({0:ab}NAME)[({0:m}NAME)
+0 0 1 0 0 2 1 1 1 
+0 0 1 0 0 2 1 1 1 
+1 2 0 0 1 1 NO-TRACE-STRING
+4 2 1 0 1 1 NO-TRACE-STRING
+5 2 6 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 38 20 10 0 3 MSE versus M, parameter var
+.EQN 14 57 347 0 0
+{0:param}NAME(3)={0}?_n_u_l_l_
+.TXT 18 -58 342 0 0
+Cg a72.000000,72.000000,185
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard From this plot we can 
+confidently assert that a best M exists, and it depends on the noise 
+variance.\par It is also apparent that we are pressing the capability 
+of mathcad and the computer!}

@@ -1,0 +1,147 @@
+.MCAD 304020000 1 74 44 0
+.CMD PLOTFORMAT
+0 1 0 0 0 2 0 1 0 
+0 1 0 0 0 2 0 1 0 
+0 1 0 0 0 0 NO-TRACE-STRING
+1 2 1 0 0 0 NO-TRACE-STRING
+0 3 2 0 0 0 NO-TRACE-STRING
+0 4 3 0 0 0 NO-TRACE-STRING
+0 1 4 0 0 0 NO-TRACE-STRING
+0 2 5 0 0 0 NO-TRACE-STRING
+0 3 6 0 0 0 NO-TRACE-STRING
+0 4 0 0 0 0 NO-TRACE-STRING
+0 1 1 0 0 0 NO-TRACE-STRING
+0 2 2 0 0 0 NO-TRACE-STRING
+0 3 3 0 0 0 NO-TRACE-STRING
+0 4 4 0 0 0 NO-TRACE-STRING
+0 1 5 0 0 0 NO-TRACE-STRING
+0 2 6 0 0 0 NO-TRACE-STRING
+0 3 0 0 0 0 NO-TRACE-STRING
+0 4 1 0 0 0 NO-TRACE-STRING
+0 0 0 33 9 10 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 0 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-336860181
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 5 5 21 0 0
+Cg a69.000000,69.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs28\b A Mathcad Collection}}
+.TXT 4 0 27 0 0
+Cg a70.000000,70.000000,27
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard of documents concerned with}
+.TXT 5 0 28 0 0
+Cg a69.000000,69.000000,73
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs24\b Digital Signal 
+and Image Processing and \par Analog and Digital Communication}}
+.TXT 8 0 35 0 0
+Cg a73.000000,73.000000,16
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs28\b Robert O. Harger}}
+.TXT 5 0 36 0 0
+Cg a36.000000,36.000000,67
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs24\b Professor \par 
+Electrical Engineering Department University of Maryland}}
+.TXT 10 0 37 0 0
+Cg a70.000000,70.000000,344
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard The sources of these 
+documents are myself and students and are generally exercises, 
+examples, projects and design projects from courses I teach. They are 
+subject to continuous improvement and are intended solely for 
+educational purposes. Selected chapters from "An Introduction to 
+Digital Signal Processing with Mathcad" are copyrighted (1994).}
+.TXT 11 4 42 0 0
+Cg a66.000000,66.000000,35
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Digital 
+Signal and Image Processing}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/toc_dsp.mcd
+.ATT_END
+.TXT 5 0 43 0 0
+Cg a66.000000,66.000000,40
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul\link1 Analog and 
+Digital Communication Systems}}
+.ATT
+.ATT_END
+.ATT
+.LINK http://www.glue.umd.edu/~harger/toc_com.mcd
+.ATT_END
+.TXT 5 -3 44 0 0
+Cg a70.000000,70.000000,202
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard These files are mathcad 
+5.0+ files and can be read by Mathcad 6.0+ using its internal Web 
+browser. They are accessible with, e.g., Netscape, if Mathcad 6.0+ has 
+been installed as a "helper application".}

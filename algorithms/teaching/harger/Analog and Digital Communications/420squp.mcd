@@ -1,0 +1,159 @@
+.MCAD 303010000 1 74 16130 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 4 1 1 0
+Cg a70.125000,70.375000,201
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 420squp.mcd}{ to find optimal
+ quantization points & values for a standard
+ normal random variable. The necessary conditions
+ are derived analytically & implemented 
+in the FIND algorithm for L = 4.}}
+}
+.EQN 8 15 7 0
+{0:f}NAME({0:x}NAME):({0:exp}NAME(-0.5*({0:x}NAME)^(2)))/(\(2*{0:\p}NAME))
+.EQN 0 22 8 0
+{0:inf}NAME:10
+.TXT 7 -31 2 0
+Cg a20.500000,58.250000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {}{\b 1}{  Define the initial guesses.}}
+}
+.EQN 4 4 3 0
+{0:y1}NAME:-1.5
+.EQN 0 12 4 0
+{0:y2}NAME:-0.5
+.EQN 0 14 5 0
+{0:y3}NAME:-{0:y2}NAME
+.EQN 0 14 6 0
+{0:y4}NAME:-{0:y1}NAME
+.EQN 5 -40 9 0
+{0:x0}NAME:-{0:inf}NAME
+.EQN 0 15 10 0
+{0:x1}NAME:-1
+.EQN 0 15 11 0
+{0:x2}NAME:0
+.EQN 0 10 12 0
+{0:x3}NAME:-{0:x1}NAME
+.EQN 0 12 13 0
+{0:x4}NAME:{0:inf}NAME
+.TXT 6 -56 16129 0
+Cg a30.875000,67.000000,47
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 2}  Now use Mathcad's FIND "block
+ solver".}
+}
+.EQN 5 -6 14 0
+{0:GIVEN}NAME
+.EQN 5 9 15 0
+{0:x1}NAME÷({0:y1}NAME+{0:y2}NAME)/(2)
+.EQN 2 19 16 0
+{0:y1}NAME÷(({0:x0}NAME&{0:x1}NAME`{0:x}NAME*{0:f}NAME({0:x}NAME)&{0:x}NAME))/(({0:x0}NAME&{0:x1}NAME`{0:f}NAME({0:x}NAME)&{0:x}NAME))
+.EQN 0 25 17 0
+{0:y2}NAME÷(({0:x1}NAME&{0:x2}NAME`{0:x}NAME*{0:f}NAME({0:x}NAME)&{0:x}NAME))/(({0:x1}NAME&{0:x2}NAME`{0:f}NAME({0:x}NAME)&{0:x}NAME))
+.EQN 6 -44 18 0
+{0:x2}NAME÷({0:y2}NAME+{0:y3}NAME)/(2)
+.EQN 8 0 19 0
+{0:x3}NAME÷({0:y3}NAME+{0:y4}NAME)/(2)
+.EQN 4 19 20 0
+{0:y3}NAME÷(({0:x2}NAME&{0:x3}NAME`{0:x}NAME*{0:f}NAME({0:x}NAME)&{0:x}NAME))/(({0:x2}NAME&{0:x3}NAME`{0:f}NAME({0:x}NAME)&{0:x}NAME))
+.EQN 0 25 21 0
+{0:y4}NAME÷(({0:x3}NAME&{0:x4}NAME`{0:x}NAME*{0:f}NAME({0:x}NAME)&{0:x}NAME))/(({0:x3}NAME&{0:x4}NAME`{0:f}NAME({0:x}NAME)&{0:x}NAME))
+.EQN 4 -44 22 0
+{0:x3}NAME÷-{0:x1}NAME
+.EQN 4 0 23 0
+{0:y3}NAME÷-{0:y2}NAME
+.EQN 4 0 24 0
+{0:y4}NAME÷-{0:y1}NAME
+.EQN 15 -1 25 0
+({7,1}ö{0:y4o}NAMEö{0:y3o}NAMEö{0:y2o}NAMEö{0:y1o}NAMEö{0:x3o}NAMEö{0:x2o}NAMEö{0:x1o}NAME):{0:FIND}NAME({0:x1}NAME,{0:x2}NAME,{0:x3}NAME,{0:y1}NAME,{0:y2}NAME,{0:y3}NAME,{0:y4}NAME)
+.EQN 0 38 26 0
+({7,1}ö{0:y4o}NAMEö{0:y3o}NAMEö{0:y2o}NAMEö{0:y1o}NAMEö{0:x3o}NAMEö{0:x2o}NAMEö{0:x1o}NAME)={18996}?_n_u_l_l_
+.TXT 15 -38 27 0
+Cg a30.250000,51.625000,45
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {(Solution takes a few seconds on
+ a 486 !!)}}
+}
+.TXT 5 0 16130 0
+Cg a61.250000,65.000000,160
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Exercise}  We must always verify
+ that such an iterative algorithm has converged
+ to a solution. So, verify that the necessary
+ conditions are, in fact, met.}
+}

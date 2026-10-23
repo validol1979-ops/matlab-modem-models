@@ -1,0 +1,155 @@
+.MCAD 303010000 1 74 62 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 22 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-336860181
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg a53.000000,73.000000,75
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil Courier;}
+}
+{\plain {\b phunwrap.mcd}   to demonstrate
+ a digital phase demodulation algorithm.}
+}
+.TXT 5 5 3 0
+Cg a22.875000,68.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil Courier;}
+}
+{\plain {\b 1}  Define the phase modulation.}
+}
+.EQN 4 3 54 0
+{0:N}NAME:256
+.EQN 0 9 55 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 5 -9 57 0
+{0:\w.1}NAME:(2*{0:\p}NAME)/({0:N}NAME)*3
+.EQN 0 12 58 0
+{0:\w.2}NAME:(2*{0:\p}NAME)/({0:N}NAME)*4
+.EQN 0 18 4 0
+({0:m}NAME)[({0:n}NAME):{0:sin}NAME({0:\w.1}NAME*{0:n}NAME)+2*{0:sin}NAME({0:\w.2}NAME*{0:n}NAME)
+.TXT 8 -33 8 0
+Cg a65.875000,68.000000,190
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil Courier;}
+}
+{\plain {\b 2}  the result of phase modulation-
+ with phase deviation {\f1 m}, ideal transmission,
+ and reception with in-phase and quadrature
+ mixers is the ordered pair, or "complex"
+ data sequences}
+}
+.EQN 7 3 14 0
+{0:\m}NAME:1
+.EQN 0 8 9 0
+({0:r}NAME)[({0:n}NAME):{0:cos}NAME({0:\m}NAME*({0:m}NAME)[({0:n}NAME))
+.EQN 0 20 10 0
+({0:q}NAME)[({0:n}NAME):{0:sin}NAME({0:\m}NAME*({0:m}NAME)[({0:n}NAME))
+.EQN 0 17 59 0
+({0:c}NAME)[({0:n}NAME):({0:r}NAME)[({0:n}NAME)+1i*({0:q}NAME)[({0:n}NAME)
+.TXT 7 -48 36 0
+Cg a65.250000,68.000000,93
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil Courier;}
+}
+{\plain {\b 4}  The recursive algorithm 
+that performs the phase demodulation can
+ now be implemented.}
+}
+.EQN 5 6 38 0
+({0:\q}NAME)[(0):{0:arg}NAME(({0:c}NAME)[(0))
+.EQN 0 16 40 0
+({0:\q}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷0,({0:\q}NAME)[(0),({0:\q}NAME)[({0:n}NAME-1)+{0:arg}NAME(({0:c}NAME)[({0:n}NAME)*(({0:c}NAME)[({0:n}NAME-1))]))
+.EQN 6 -27 41 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:\m}NAME*({0:m}NAME)[({0:n}NAME),({0:\q}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 64 22 0 3 Digital Phase Demodulation
+.TXT 35 6 62 0
+Cg a62.625000,67.000000,157
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil Courier;}
+}
+{\plain {\b Exercise}  Increase {\f1 m} 
+until error appears in the demodulation-
+ because the intersample phase change can
+ lie outside the range (-{\f1 p},{\f1 p}).}
+}

@@ -1,0 +1,788 @@
+.MCAD 303010000 1 74 331 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 1 1 0
+Cg a72.625000,73.000000,329
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Project 3.2}{  The linear FIR
+ filters on Project 2.2 can be reconsidered
+ now that we have the concept of an N-periodic
+ frequency response, N-FR. We can efficiently
+ calculate the N-PR with the DFT/FFT. Thus,
+ we can compile the same information about
+ the filters, and simulate them, in a more
+ orderly and efficient manner.}}
+}
+.TXT 12 5 2 0
+Cg a12.125000,69.000000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(a)  M=0,  a}{\fs16 \dn6 0}{ = 
+1}}
+}
+.TXT 0 53 9 0
+Cg a6.250000,15.000000,13
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(identity)}}
+}
+.TXT 4 -53 4 0
+Cg a38.875000,43.000000,127
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(b)  M=4,  b}{\fs16 \dn6 0}{ = 
+b}{\fs16 \dn6 4}{ = 3/35, b}{\fs16 \dn6 
+1}{ = b}{\fs16 \dn6 3}{ = 12/35, b}{\fs16 
+\dn6 2}{ = 17/35}}
+}
+.TXT 0 53 10 0
+Cg a6.250000,15.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(lo pass)}}
+}
+.TXT 4 -53 5 0
+Cg a38.875000,68.000000,129
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(c)  }{M=4,  c}{\fs16 \dn6 0}{ 
+= c}{\fs16 \dn6 4}{ = -3/35,c}{\fs16 \dn6 
+1}{ =c}{\fs16 \dn6 3}{ = -12/35, c}{\fs16 
+\dn6 2}{ = 18/35}}
+}
+.TXT 0 53 11 0
+Cg a6.250000,15.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(hi pass)}}
+}
+.TXT 4 -53 7 0
+Cg a38.875000,67.000000,129
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(d)  }{ M=4,  d}{\fs16 \dn6 0}{
+ = d}{\fs16 \dn6 4}{ = 3/35,d}{\fs16 \dn6 
+1}{ = d}{\fs16 \dn6 3}{ = 12/35, d}{\fs16 
+\dn6 2}{ = 52/35}}
+}
+.TXT 0 53 13 0
+Cg a12.125000,15.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(edge sharpener)}}
+}
+.TXT 4 -53 8 0
+Cg a32.625000,68.000000,121
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(e)  }{ M=4,  e}{\fs16 \dn6 0}{
+ = e}{\fs16 \dn6 1}{ = e}{\fs16 \dn6 2}{
+ = 1/12, e}{\fs16 \dn6 3}{ = e}{\fs16 \dn6 
+4}{ = 1/4}}
+}
+.TXT 0 53 12 0
+Cg a8.500000,14.000000,14
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(band pass)}}
+}
+.TXT 4 -53 15 0
+Cg a17.625000,68.000000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(f)    M=1,  f}{\fs16 \dn6 0}{ 
+= f}{\fs16 \dn6 1}{  = -1/2}}
+}
+.TXT 0 53 16 0
+Cg a7.500000,15.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(1st deriv.)}}
+}
+.TXT 5 -53 17 0
+Cg a23.625000,68.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(g)  M=2,   g}{\fs16 \dn6 0}{ =
+ g}{\fs16 \dn6 2}{ = 1/2, g}{\fs16 \dn6 
+1}{ = -1}}
+}
+.TXT 0 53 18 0
+Cg a7.875000,15.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(2nd deriv.)}}
+}
+.TXT 7 -58 19 0
+Cg a6.625000,73.000000,14
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Solution}}
+}
+.TXT 5 1 23 0
+Cg a8.125000,72.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b FIR length}}
+}
+.EQN 0 14 21 0
+{0:N}NAME:64
+.EQN 0 11 22 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 18 229 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.TXT 5 -37 35 0
+Cg a53.875000,67.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 1}{  We  plot the N-FR of the
+ filter with FIR a and compute and plot 
+its N-FR.}}
+}
+.EQN 5 3 226 0
+({0:h}NAME)[({0:n}NAME):0.0
+.EQN 0 15 227 0
+({0:h}NAME)[(0):1
+.EQN 0 11 230 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 4 -31 41 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 IR of FIR 
+.EQN 0 35 51 0
+1.1&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 26 -34 231 0
+Cg a63.625000,66.000000,207
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We know, of course, that this FIR
+ is simply the identity operation: the output
+ equals the input. And, we may expect that
+ the N-FR is constant over index/frequency.
+ It could be called an "all-pass" filter.}
+}
+.TXT 30 0 232 0
+Cg a53.875000,67.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 2}{  We  plot the N-FR of the
+ filter with FIR b and compute and plot 
+its N-FR.}}
+}
+.EQN 5 2 233 0
+({0:h}NAME)[({0:n}NAME):0.0
+.EQN 0 9 234 0
+({0:h}NAME)[(0):(3)/(35)
+.EQN 0 8 240 0
+({0:h}NAME)[(1):(12)/(35)
+.EQN 0 8 241 0
+({0:h}NAME)[(2):(17)/(35)
+.EQN 0 9 242 0
+({0:h}NAME)[(3):(12)/(35)
+.EQN 0 11 243 0
+({0:h}NAME)[(4):(3)/(35)
+.EQN 0 9 235 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 4 -58 236 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 IR of FIR 
+.EQN 0 35 237 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 27 -34 238 0
+Cg a28.250000,66.000000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain This {N-FR describes a "low-pass"
+ filter.}}
+}
+.TXT 5 0 244 0
+Cg a53.875000,67.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 3}{  We  plot the N-FR of the
+ filter with FIR c and compute and plot 
+its N-FR.}}
+}
+.EQN 5 2 245 0
+({0:h}NAME)[({0:n}NAME):0.0
+.EQN 0 9 246 0
+({0:h}NAME)[(0):-((3)/(35))
+.EQN 0 8 247 0
+({0:h}NAME)[(1):-((12)/(35))
+.EQN 0 8 248 0
+({0:h}NAME)[(2):(18)/(35)
+.EQN 0 9 249 0
+({0:h}NAME)[(3):-((12)/(35))
+.EQN 0 11 250 0
+({0:h}NAME)[(4):-((3)/(35))
+.EQN 0 9 251 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 4 -58 252 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 IR of FIR 
+.EQN 0 35 253 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 26 -34 254 0
+Cg a67.875000,69.250000,103
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This }{N-FR describes a "high-pass"
+ filter, albeit with a rather high "sidelobe"
+ at low frequencies.}}
+}
+.TXT 4 2 256 0
+Cg a53.875000,67.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 4}{  We  plot the N-FR of the
+ filter with FIR d and compute and plot 
+its N-FR.}}
+}
+.EQN 5 2 257 0
+({0:h}NAME)[({0:n}NAME):0.0
+.EQN 0 9 258 0
+({0:h}NAME)[(0):(3)/(35)
+.EQN 0 8 259 0
+({0:h}NAME)[(1):(12)/(35)
+.EQN 0 8 260 0
+({0:h}NAME)[(2):(52)/(35)
+.EQN 0 9 261 0
+({0:h}NAME)[(3):(12)/(35)
+.EQN 0 11 262 0
+({0:h}NAME)[(4):(3)/(35)
+.EQN 0 9 263 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 4 -58 264 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 IR of FIR 
+.EQN 0 35 265 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 24 -33 266 0
+Cg a60.750000,66.000000,104
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This }{N-FR describes, generally,
+ a "low-pass" filter, but with a good response
+ at high frequencies.}}
+}
+.TXT 7 -1 276 0
+Cg a53.875000,67.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 5}{  We  plot the N-FR of the
+ filter with FIR e and compute and plot 
+its N-FR.}}
+}
+.EQN 5 2 277 0
+({0:h}NAME)[({0:n}NAME):0.0
+.EQN 0 9 278 0
+({0:h}NAME)[(0):(1)/(12)
+.EQN 0 8 279 0
+({0:h}NAME)[(1):(1)/(12)
+.EQN 0 8 280 0
+({0:h}NAME)[(2):(1)/(12)
+.EQN 0 9 281 0
+({0:h}NAME)[(3):(1)/(4)
+.EQN 0 9 282 0
+({0:h}NAME)[(4):(1)/(4)
+.EQN 0 11 283 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 4 -58 284 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 IR of FIR 
+.EQN 0 35 285 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 24 -33 286 0
+Cg a60.750000,66.000000,104
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This }{N-FR describes, generally,
+ a "low-pass" filter, but with a good response
+ at high frequencies.}}
+}
+.TXT 6 -1 299 0
+Cg a53.375000,67.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 6}{  We  plot the N-FR of the
+ filter with FIR f and compute and plot 
+its N-FR.}}
+}
+.EQN 5 6 300 0
+({0:h}NAME)[({0:n}NAME):0.0
+.EQN 0 9 301 0
+({0:h}NAME)[(0):(1)/(2)
+.EQN 0 8 302 0
+({0:h}NAME)[(1):-((0.99999)/(2))
+.EQN 0 15 306 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 4 -40 307 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 IR of FIR 
+.EQN 0 35 308 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 25 -33 309 0
+Cg a63.625000,66.000000,158
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This }{N-FR looks like |}{\f1 w}|
+ at low frequencies and like sin({\f1 w})
+ at all frequencies. Thus it can approximate
+ a differentiator at low frequencies.}
+}
+.EQN 6 26 313 0
+&&(_n_u_l_l_&_n_u_l_l_)&(|(({0:H}NAME)[({0:n}NAME)){56}0)*{0:arg}NAME(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 24 -30 224 0
+C x1,1,0,0
+.TXT 3 6 321 0
+Cg a53.875000,67.000000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 7}{  We  plot the N-FR of the
+ filter with FIR g and compute and plot 
+its N-FR.}}
+}
+.EQN 5 6 322 0
+({0:h}NAME)[({0:n}NAME):0.0
+.EQN 0 9 323 0
+({0:h}NAME)[(0):(1)/(2)
+.EQN 0 8 324 0
+({0:h}NAME)[(1):-1
+.EQN 0 10 331 0
+({0:h}NAME)[(2):(1)/(2)
+.EQN 0 16 325 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 4 -51 326 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 26 15 0 3 IR of FIR 
+.EQN 0 35 327 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 25 15 0 3 N-FR of FIR 
+.TXT 25 -33 328 0
+Cg a60.500000,66.000000,149
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This }{N-FR looks like }{\f1 w}{\fs16 
+\up6 \f1 2}{ at low frequencies}{. Thus 
+it can approximate a second-order differentiator
+ at low frequencies.}}
+}

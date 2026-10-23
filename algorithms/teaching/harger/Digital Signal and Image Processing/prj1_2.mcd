@@ -1,0 +1,381 @@
+.MCAD 303010000 1 74 63 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 10 1 0
+Cg a60.375000,61.000000,788
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone \f0 \i0 Project }{\b 
+\ulnone \f0 \i0 1.2}{\f0 \b0 \i0   (a) Create
+ a new Mathcad document and d}{\f0 \i0 \b0 
+\b0 efine an analog pulse train, using a
+ function definition and Mathcad's ability
+ to sum functions, and then sample it. Plot
+ both the analog and digital signals. (b)
+ Now }{\f0 \b0 \i0 \f0 choose each pulse
+ amplitude to be randomly +/- 1; such an
+ amplitude sequence represents a }{\f0 \b0 
+\i0 \b \i0 \f0 binary sequence}{\f0 \b0 
+\i0 \f0 , a model for a communication message.
+ (c) Add a sequence of normal noise, of 
+zero mean and variance var, to the digital
+ sequence. Implement a simple "receiver"
+ to extract an estimate of the binary sequence
+ from the "signal plus noise sequence". 
+Count the errors and study their number 
+versus the "signal to noise ratio" 1/var.}}
+}
+.TXT 19 2 3 0
+Cg a49.250000,73.000000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We can use a function definition
+ to implement an analog  pulse, p(t).}}
+}
+.TXT 4 -10 4 0
+Cg a9.125000,73.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b pulse width}}
+}
+.EQN 0 16 5 0
+{0:pw}NAME:4
+.EQN 0 12 6 0
+{0:p}NAME({0:t}NAME):{0:\F}NAME({0:t}NAME)-{0:\F}NAME({0:t}NAME-{0:pw}NAME)
+.TXT 5 -18 7 0
+Cg a49.250000,62.000000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We can use a sum of functions to
+ implement a "pulse train", ptrn(t). }}
+}
+.TXT 4 -10 8 0
+Cg a9.875000,73.000000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b pulse period}}
+}
+.EQN 0 16 9 0
+{0:pp}NAME:8
+.TXT 4 -16 10 0
+Cg a8.375000,73.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b # of pulses}}
+}
+.EQN 0 16 11 0
+{0:M}NAME:16
+.EQN 0 9 27 0
+{0:m}NAME:0;{0:M}NAME-1
+.EQN 0 16 24 0
+({0:b}NAME)[({0:m}NAME):{0:if}NAME({0:rnd}NAME(1)ó(1)/(2),-1,1)
+.EQN 8 -25 12 0
+{0:ptrn}NAME({0:t}NAME):((0,{0:M}NAME-1,{0:m}NAME,({0:b}NAME)[({0:m}NAME)*{0:p}NAME({0:t}NAME-{0:m}NAME*{0:pp}NAME)){64})
+.EQN 7 19 21 0
+{0:t}NAME:0,(1)/(16);{0:M}NAME*{0:pp}NAME
+.EQN 2 -24 22 0
+1.1&-1.1&(_n_u_l_l_&0)&{0:ptrn}NAME({0:t}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 49 15 0 3 Analog Pulse Train
+.TXT 23 -12 62 0
+C x1,1,0,0
+.TXT 4 9 13 0
+Cg a44.500000,65.000000,78
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We can now sample it to form the
+ sample sequence, \{ptrns}{\fs16 \dn6 n}{\}.}}
+}
+.TXT 6 -7 14 0
+Cg a11.375000,72.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b sample period}}
+}
+.EQN 0 17 15 0
+{0:T.s}NAME:1
+.TXT 4 -17 16 0
+Cg a9.875000,72.000000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b # of samples}}
+}
+.EQN 0 17 17 0
+{0:N}NAME:({0:M}NAME*{0:pp}NAME)/({0:T.s}NAME)
+.EQN 0 14 18 0
+{0:N}NAME={0}?_n_u_l_l_
+.EQN 0 11 19 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 13 20 0
+({0:ptrns}NAME)[({0:n}NAME):{0:ptrn}NAME({0:n}NAME*{0:T.s}NAME)
+.EQN 5 -44 23 0
+1.1&-0.1&(1&0)&({0:ptrns}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 15 0 3 Sampled Pulse Train
+.TXT 25 -6 28 0
+Cg a42.750000,66.000000,55
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain Now we add a sample sequence of 
+normal/Gaussian noise.}
+}
+.EQN 5 9 29 0
+{0:var}NAME:0.001
+.EQN 0 14 30 0
+({0:no}NAME)[({0:n}NAME):\(-2*{0:var}NAME*{0:ln}NAME({0:rnd}NAME(1)))*{0:cos}NAME({0:rnd}NAME(2*{0:\p}NAME))
+.EQN 6 -14 31 0
+({0:r}NAME)[({0:n}NAME):({0:ptrns}NAME)[({0:n}NAME)+({0:no}NAME)[({0:n}NAME)
+.EQN 0 18 32 0
+{0:r}NAME:(({0:ptrns}NAME+{0:no}NAME)){49}
+.EQN 4 -20 33 0
+&&(0&1+3*{0:var}NAME)&({0:r}NAME)[({0:n}NAME),1@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 15 0 3 Sampled Pulse Train
+.TXT 21 -14 63 0
+C x1,1,0,0
+.TXT 4 6 35 0
+Cg a52.250000,67.000000,71
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain We now want to recover an estimate
+ of the transmitted binary sequence.}
+}
+.TXT 4 0 36 0
+Cg a49.500000,67.000000,70
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain As a first step we form a "running
+ average" of the received sequence.}
+}
+.EQN 6 9 37 0
+({0:z}NAME)[({0:n}NAME):((0,3,{0:j}NAME,({0:n}NAME-{0:j}NAMEò0)*({0:r}NAME)[({0:n}NAME-{0:j}NAME)){64})
+.EQN 6 -5 42 0
+&&(0&_n_u_l_l_)&({0:z}NAME)[({0:n}NAME),1@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 15 0 3 Pulse Train: running average
+.TXT 25 -2 43 0
+Cg a60.125000,65.000000,130
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain Now we select the subsequence on
+ which will base our estimate of the transmitted
+ sequence. We sample at the times (3,11,19,...).}
+}
+.EQN 7 8 44 0
+({0:bcap}NAME)[({0:m}NAME):({0:z}NAME)[(8*({0:m}NAME+1)-5)
+.TXT 5 -8 47 0
+Cg a62.000000,65.000000,135
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain Our decision rule is this: "if bcapm
+ is >0 then decide a +1 was transmitted;
+ otherwise decide a -1 was transmitted".
+ We implement it.}
+}
+.EQN 6 9 48 0
+({0:bcap}NAME)[({0:m}NAME):{0:if}NAME(({0:bcap}NAME)[({0:m}NAME)>0,1,-1)
+.TXT 6 -9 51 0
+Cg a51.750000,65.000000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain We can form and plot the error sequence
+ and total the number of errors.}
+}
+.EQN 5 10 52 0
+({0:erseq}NAME)[({0:m}NAME):|(({0:b}NAME)[({0:m}NAME)-({0:bcap}NAME)[({0:m}NAME))
+.EQN 0 21 56 0
+{0:ertot}NAME:{0:m}NAME$({0:erseq}NAME)[({0:m}NAME)
+.EQN 0 18 57 0
+{0:ertot}NAME={0}?_n_u_l_l_
+.TXT 6 -49 55 0
+Cg a44.500000,65.000000,67
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain An estimate of the probability of
+ error in transmitting one bit is}
+}
+.EQN 5 11 58 0
+{0:Perest}NAME:({0:ertot}NAME)/({0:M}NAME)
+.EQN 0 20 59 0
+{0:Perest}NAME={0}?_n_u_l_l_

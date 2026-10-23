@@ -1,0 +1,978 @@
+.MCAD 304010000 1 74 242 0
+.CMD PLOTFORMAT
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 0 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 0 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=812658800
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=812658800
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 3 1 1 0 0
+Cg a73.000000,73.000000,565
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Project 2.2}  The 
+direct computation of (2.2) or (2.3) is often not a preferred 
+computation, as we will soon discuss. However, if M<<N then they can 
+be an attractive computation, especially if we have a restricted 
+computational ability in the processor. There are simple FIR filters 
+that are useful: we consider some here. For each filter, see if you 
+can describe its operation. One way to do this is to filter some trial 
+input sequences- not necessarily restricted to a (single) sinusoid! We 
+give the nonzero values of each FIR which is zero-padded out to length N.}
+.TXT 14 2 3 0 0
+Cg a71.000000,71.000000,108
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Hint: the filters 
+include low, band and high pass filters and approximations to certain 
+calculus operations.}
+.TXT 6 3 2 0 0
+Cg a69.000000,69.000000,17
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (a)  M=0,  a{\fs16\dn 0} 
+= 1}
+.TXT 0 53 9 0 0
+Cg a15.000000,15.000000,10
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (identity)}
+.TXT 4 -53 4 0 0
+Cg a43.000000,43.000000,54
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (b)  M=4,  b{\fs16\dn 0} 
+= b{\fs16\dn 4} = 3/35, b{\fs16\dn 1} = b{\fs16\dn 3} = 12/35, b{\fs16
+\dn 2} = 17/35}
+.TXT 0 53 10 0 0
+Cg a15.000000,15.000000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (lo pass)}
+.TXT 4 -53 5 0 0
+Cg a68.000000,68.000000,54
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (c)  M=4,  c{\fs16\dn 0} 
+= c{\fs16\dn 4} = -3/35,c{\fs16\dn 1} =c{\fs16\dn 3} = -12/35, c{\fs16
+\dn 2} = 18/35}
+.TXT 0 53 11 0 0
+Cg a15.000000,15.000000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (hi pass)}
+.TXT 4 -53 7 0 0
+Cg a67.000000,67.000000,54
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (d)   M=4,  d{\fs16\dn 0} 
+= d{\fs16\dn 4} = 3/35,d{\fs16\dn 1} = d{\fs16\dn 3} = 12/35, d{\fs16
+\dn 2} = 52/35}
+.TXT 0 53 13 0 0
+Cg a15.000000,15.000000,16
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (edge sharpener)}
+.TXT 4 -53 8 0 0
+Cg a68.000000,68.000000,46
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (e)   M=4,  e{\fs16\dn 0} 
+= e{\fs16\dn 1} = e{\fs16\dn 2} = 1/12, e{\fs16\dn 3} = e{\fs16\dn 4} 
+= 1/4}
+.TXT 0 53 12 0 0
+Cg a14.000000,14.000000,11
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (band pass)}
+.TXT 4 -53 15 0 0
+Cg a68.000000,68.000000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (f)    M=1,  f{\fs16\dn 0} 
+= f{\fs16\dn 1}  = -1/2}
+.TXT 0 53 16 0 0
+Cg a15.000000,15.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (1st deriv.)}
+.TXT 5 -53 17 0 0
+Cg a68.000000,68.000000,34
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (g)  M=2,   g{\fs16\dn 0} 
+= g{\fs16\dn 2} = 1/2, g{\fs16\dn 1} = -1}
+.TXT 0 53 18 0 0
+Cg a15.000000,15.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (2nd deriv.)}
+.TXT 7 -58 19 0 0
+Cg a73.000000,73.000000,8
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Solution}}
+.TXT 4 5 20 0 0
+Cg a68.000000,68.000000,160
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We can learn about the 
+filters with a trial sequence which is made up of an equally-weighted 
+sum of sinusoidal sequences. Other signals can also be informative.}
+.TXT 6 -4 23 0 0
+Cg a72.000000,72.000000,13
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b signal length}}
+.EQN 0 14 21 0 0
+{0:N}NAME:64
+.EQN 0 11 22 0 0
+{0:n}NAME:0;{0:N}NAME-1
+.TXT 4 -25 24 0 0
+Cg a72.000000,72.000000,11
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b frequencies}}
+.EQN 0 14 25 0 0
+{0:K}NAME:32
+.EQN 0 11 26 0 0
+{0:k}NAME:0;{0:K}NAME-1
+.EQN 0 15 27 0 0
+({0:\w}NAME)[({0:k}NAME):(2*{0:\p}NAME)/({0:N}NAME)*{0:k}NAME
+.TXT 5 -40 28 0 0
+Cg a72.000000,72.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b test signals}}
+.EQN 0 14 31 0 0
+({0:V}NAME)[({0:k}NAME):1
+.EQN 0 26 30 0 0
+({0:s}NAME)[({0:n}NAME,{0:k}NAME):({0:V}NAME)[({0:k}NAME)*{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)*{0:n}NAME)
+.TXT 6 -35 37 0 0
+Cg a67.000000,67.000000,56
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard The periodic convolution 
+has the following generic form.}
+.EQN 6 2 39 0 0
+{0:pod}NAME({0:n}NAME,{0:N}NAME):{0:mod}NAME({0:N}NAME+{0:mod}NAME({0:n}NAME,{0:N}NAME),{0:N}NAME)
+.EQN 0 37 38 0 0
+({0:y}NAME)[({0:n}NAME):((0,{0:M}NAME,{0:m}NAME,({0:h}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))){64})
+.TXT 7 -38 35 0 0
+Cg a67.000000,67.000000,78
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 1}  We now put this 
+ensemble of signal, one by one, thru the filter with FIR a.}
+.EQN 6 4 47 0 0
+({0:a}NAME)[(0):1
+.EQN 0 17 36 0 0
+({0:y}NAME)[({0:n}NAME,{0:k}NAME):((0,0,{0:m}NAME,({0:a}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)){64})
+.TXT 5 -28 219 0 0
+C x1,1,0,0
+.TXT 2 9 40 0 0
+Cg a64.000000,64.000000,76
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By plotting the various 
+output sequences, we can see that all are sinusoids.}
+.EQN 3 6 41 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&((({0:s}NAME){52}(2)))[({0:n}NAME),((({0:y}NAME){52}(2)))[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -6 44 0 0
+Cg a64.000000,64.000000,199
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard In each case the output 
+and input are identical and we conclude- as is obvious from the FIR 
+definition- that this operation is the identity operation- which we 
+could describe as an "all pass" filter.}
+.TXT 8 0 45 0 0
+Cg a64.000000,64.000000,128
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard To establish the 
+technique we shall use in this project, we find the amplitudes of the 
+family of output sequences and plot them.}
+.EQN 7 6 46 0 0
+({0:ya}NAME)[({0:k}NAME):{0:max}NAME(({0:y}NAME){52}({0:k}NAME))
+.EQN 4 1 51 0 0
+1.1&0&(_n_u_l_l_&_n_u_l_l_)&({0:V}NAME)[({0:k}NAME),({0:ya}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 25 -7 52 0 0
+Cg a67.000000,67.000000,78
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 2}  We now put this 
+ensemble of signal, one by one, thru the filter with FIR b.}
+.EQN 6 -5 62 0 0
+({0:b}NAME)[(0):(3)/(35)
+.EQN 0 8 65 0 0
+({0:b}NAME)[(1):(12)/(35)
+.EQN 0 8 67 0 0
+({0:b}NAME)[(2):(17)/(35)
+.EQN 0 10 66 0 0
+({0:b}NAME)[(3):(12)/(35)
+.EQN 0 8 63 0 0
+({0:b}NAME)[(4):(3)/(35)
+.EQN 0 8 54 0 0
+({0:yb}NAME)[({0:n}NAME,{0:k}NAME):((0,4,{0:m}NAME,({0:b}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)){64})
+.TXT 7 -36 55 0 0
+Cg a64.000000,64.000000,76
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By plotting the various 
+output sequences, we can see that all are sinusoids.}
+.EQN 3 6 56 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&((({0:s}NAME){52}(1)))[({0:n}NAME),((({0:yb}NAME){52}(1)))[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -7 57 0 0
+Cg a56.000000,56.000000,38
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard In each case the output 
+is a sinusoid.}
+.TXT 2 -9 220 0 0
+C x1,1,0,0
+.EQN 4 16 59 0 0
+({0:ybm}NAME)[({0:k}NAME):{0:max}NAME(({0:yb}NAME){52}({0:k}NAME))
+.EQN 0 20 78 0 0
+{0:max}NAME(({0:yb}NAME){52}(5))={0}?_n_u_l_l_
+.EQN 4 -19 60 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:V}NAME)[({0:k}NAME),({0:ybm}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -7 82 0 0
+Cg a63.000000,63.000000,60
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We conclude that the 
+filter with FIR b is a low pass filter.}
+.TXT 5 0 83 0 0
+Cg a67.000000,67.000000,79
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 3}   We now put this 
+ensemble of signal, one by one, thru the filter with FIR c.}
+.EQN 6 -2 99 0 0
+({0:c}NAME)[(0):-((3)/(35))
+.EQN 0 8 100 0 0
+({0:c}NAME)[(1):-((12)/(35))
+.EQN 0 8 101 0 0
+({0:c}NAME)[(2):(18)/(35)
+.EQN 0 8 102 0 0
+({0:c}NAME)[(3):-((12)/(35))
+.EQN 0 8 103 0 0
+({0:c}NAME)[(4):-((3)/(35))
+.EQN 0 8 89 0 0
+({0:yc}NAME)[({0:n}NAME,{0:k}NAME):((0,4,{0:m}NAME,({0:c}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)){64})
+.TXT 7 -32 90 0 0
+Cg a64.000000,64.000000,76
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By plotting the various 
+output sequences, we can see that all are sinusoids.}
+.EQN 3 2 91 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&((({0:s}NAME){52}(4)))[({0:n}NAME),((({0:yc}NAME){52}(4)))[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 23 -3 92 0 0
+Cg a58.125000,58.125000,83
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard In each case the output 
+is also a sinusoid- but notice the pronounced phase shifts.}
+.EQN 6 3 94 0 0
+({0:ycm}NAME)[({0:k}NAME):{0:max}NAME(({0:yc}NAME){52}({0:k}NAME))
+.EQN 0 20 95 0 0
+{0:max}NAME(({0:yc}NAME){52}(5))={0}?_n_u_l_l_
+.EQN 4 -19 96 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:V}NAME)[({0:k}NAME),({0:ycm}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -3 97 0 0
+Cg a63.000000,63.000000,108
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We conclude that the 
+filter with FIR b is a high pass filter, albeit one that is not 
+particularly selective!}
+.TXT 3 -16 221 0 0
+C x1,1,0,0
+.TXT 4 8 104 0 0
+Cg a67.000000,67.000000,79
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 4}{\b  }  We now put 
+this ensemble of signal, one by one, thru the filter with FIR d.}
+.TXT 5 -3 118 0 0
+Cg a67.000000,67.000000,55
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (d)   M=4,  d{\fs16\dn 0} 
+= d{\fs16\dn 4} = -3/70,d{\fs16\dn 1} = d{\fs16\dn 3} = 12/70, d{\fs16
+\dn 2} = 52/70}
+.EQN 5 1 105 0 0
+({0:d}NAME)[(0):(38)/(35)
+.EQN 0 8 106 0 0
+({0:d}NAME)[(1):(12)/(35)
+.EQN 0 8 107 0 0
+({0:d}NAME)[(2):(17)/(35)
+.EQN 0 8 108 0 0
+({0:d}NAME)[(3):(12)/(35)
+.EQN 0 8 109 0 0
+({0:d}NAME)[(4):(3)/(35)
+.EQN 0 8 110 0 0
+({0:yd}NAME)[({0:n}NAME,{0:k}NAME):((0,4,{0:m}NAME,({0:d}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)){64})
+.TXT 7 -32 111 0 0
+Cg a64.000000,64.000000,76
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By plotting the various 
+output sequences, we can see that all are sinusoids.}
+.EQN 3 2 112 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&((({0:s}NAME){52}(4)))[({0:n}NAME),((({0:yd}NAME){52}(4)))[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 23 -3 113 0 0
+Cg a58.125000,58.125000,83
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard In each case the output 
+is also a sinusoid- but notice the pronounced phase shifts.}
+.EQN 6 3 114 0 0
+({0:ydm}NAME)[({0:k}NAME):{0:max}NAME(({0:yd}NAME){52}({0:k}NAME))
+.EQN 0 20 115 0 0
+{0:max}NAME(({0:yd}NAME){52}(5))={0}?_n_u_l_l_
+.EQN 4 -19 116 0 0
+_n_u_l_l_&0&(_n_u_l_l_&_n_u_l_l_)&({0:V}NAME)[({0:k}NAME),({0:ydm}NAME)[({0:k}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -3 117 0 0
+Cg a58.750000,58.750000,102
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We conclude that the 
+filter with FIR b is a low pass filter, augmented by an increased high 
+pass band.}
+.TXT 6 -5 127 0 0
+Cg a68.000000,68.000000,46
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (e)   M=4,  e{\fs16\dn 0} 
+= e{\fs16\dn 1} = e{\fs16\dn 2} = 1/12, e{\fs16\dn 3} = e{\fs16\dn 4} 
+= 1/4}
+.TXT 4 -2 128 0 0
+Cg a67.000000,67.000000,79
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 5}{\b  }  We now put 
+this ensemble of signal, one by one, thru the filter with FIR e.}
+.EQN 10 -2 130 0 0
+({0:e}NAME)[(0):-((3)/(10))
+.EQN 0 8 131 0 0
+({0:e}NAME)[(1):-((3)/(10))
+.EQN 0 8 132 0 0
+({0:e}NAME)[(2):-((3)/(10))
+.EQN 0 8 133 0 0
+({0:e}NAME)[(3):(1)/(5)
+.EQN 0 8 134 0 0
+({0:e}NAME)[(4):(1)/(5)
+.EQN 0 8 135 0 0
+({0:ye}NAME)[({0:n}NAME,{0:k}NAME):((0,4,{0:m}NAME,({0:e}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)){64})
+.TXT 4 -45 222 0 0
+C x1,1,0,0
+.TXT 3 13 136 0 0
+Cg a64.000000,64.000000,76
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By plotting the various 
+output sequences, we can see that all are sinusoids.}
+.EQN 3 2 137 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&((({0:s}NAME){52}(4)))[({0:n}NAME),((({0:ye}NAME){52}(4)))[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 23 -3 138 0 0
+Cg a58.125000,58.125000,83
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard In each case the output 
+is also a sinusoid- but notice the pronounced phase shifts.}
+.EQN 6 3 139 0 0
+({0:yem}NAME)[({0:k}NAME):{0:max}NAME(({0:ye}NAME){52}({0:k}NAME))
+.EQN 0 20 140 0 0
+{0:max}NAME(({0:ye}NAME){52}(5))={0}?_n_u_l_l_
+.EQN 4 -19 141 0 0
+1.1&0&(_n_u_l_l_&_n_u_l_l_)&({0:V}NAME)[({0:k}NAME),({0:yem}NAME)[({0:k}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -3 142 0 0
+Cg a58.750000,58.750000,95
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We conclude that the 
+filter with FIR b is a band pass filter, albeit with not much selectivity!}
+.TXT 6 -4 148 0 0
+Cg a68.000000,68.000000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (f)    M=1,  f{\fs16\dn 0} 
+= f{\fs16\dn 1}  = -1/2}
+.TXT 4 -2 149 0 0
+Cg a67.000000,67.000000,79
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard 6{\b  }  We now put this 
+ensemble of signal, one by one, thru the filter with FIR f.}
+.EQN 7 5 150 0 0
+({0:f}NAME)[(0):(1)/(2)
+.EQN 0 8 151 0 0
+({0:f}NAME)[(1):-((1)/(2))
+.EQN 0 12 155 0 0
+({0:yf}NAME)[({0:n}NAME,{0:k}NAME):((0,1,{0:m}NAME,({0:f}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)){64})
+.TXT 8 -19 156 0 0
+Cg a64.000000,64.000000,76
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By plotting the various 
+output sequences, we can see that all are sinusoids.}
+.EQN 3 2 157 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&((({0:s}NAME){52}(4)))[({0:n}NAME),((({0:ye}NAME){52}(4)))[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 23 -3 158 0 0
+Cg a58.125000,58.125000,83
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard In each case the output 
+is also a sinusoid- but notice the pronounced phase shifts.}
+.TXT 3 -12 223 0 0
+C x1,1,0,0
+.EQN 3 15 159 0 0
+({0:yfm}NAME)[({0:k}NAME):{0:max}NAME(({0:yf}NAME){52}({0:k}NAME))
+.EQN 0 20 160 0 0
+{0:max}NAME(({0:yf}NAME){52}(5))={0}?_n_u_l_l_
+.EQN 4 -19 161 0 0
+1.1&0&(_n_u_l_l_&_n_u_l_l_)&({0:V}NAME)[({0:k}NAME),({0:yfm}NAME)[({0:k}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+4 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 23 -3 164 0 0
+Cg a60.000000,60.000000,156
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We see that the 
+frequency response is rather linear for small k and, for all k 
+plotted, rather like a sine(.) dependence. Like a differentiator for 
+small k!}
+.TXT 7 -9 165 0 0
+Cg a67.000000,67.000000,79
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 7}{\b  }  We now put 
+this ensemble of signal, one by one, thru the filter with FIR g.}
+.EQN 7 5 166 0 0
+({0:g}NAME)[(0):(1)/(2)
+.EQN 0 8 167 0 0
+({0:g}NAME)[(1):-1
+.EQN 0 9 176 0 0
+({0:g}NAME)[(2):(1)/(2)
+.EQN 0 17 168 0 0
+({0:yg}NAME)[({0:n}NAME,{0:k}NAME):((0,1,{0:m}NAME,({0:g}NAME)[({0:m}NAME)*({0:s}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)){64})
+.TXT 8 -33 169 0 0
+Cg a64.000000,64.000000,76
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard By plotting the various 
+output sequences, we can see that all are sinusoids.}
+.EQN 3 2 170 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&((({0:s}NAME){52}(4)))[({0:n}NAME),((({0:yg}NAME){52}(4)))[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 23 -3 171 0 0
+Cg a58.125000,58.125000,83
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard In each case the output 
+is also a sinusoid- but notice the pronounced phase shifts.}
+.EQN 6 3 172 0 0
+({0:ygm}NAME)[({0:k}NAME):{0:max}NAME(({0:yg}NAME){52}({0:k}NAME))
+.EQN 0 20 173 0 0
+{0:max}NAME(({0:yg}NAME){52}(5))={0}?_n_u_l_l_
+.EQN 4 -19 174 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:V}NAME)[({0:k}NAME),({0:ygm}NAME)[({0:k}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:k}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+4 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 10 -12 177 0 0
+Cg a72.000000,72.000000,14
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\ul value at k=0??}}
+.TXT 13 9 175 0 0
+Cg a60.000000,60.000000,126
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard We see that the 
+frequency response is rather quadratic for small k dependence. Like a 
+second order differentiator for small k!}
+.TXT 5 -10 224 0 0
+C x1,1,0,0
+.TXT 2 1 178 0 0
+Cg a72.000000,72.000000,8
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Examples}}
+.TXT 5 8 179 0 0
+Cg a64.000000,64.000000,137
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Suppose we create a 
+signal that has some smooth behavior plus a rapidly changing 
+frequency. Then we filter it with each of these filters.}
+.EQN 7 3 180 0 0
+({0:ss}NAME)[({0:n}NAME):0.25*{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*5*{0:n}NAME)+0.25*{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*25*{0:n}NAME)+{0:exp}NAME(-(((({0:n}NAME-32))^(2))/(2*10)))
+.TXT 8 -11 189 0 0
+Cg a72.000000,72.000000,18
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b low pass/\par smoother}}
+.EQN 0 12 188 0 0
+{0:M}NAME:4
+.EQN 0 9 184 0 0
+({0:zb}NAME)[({0:n}NAME):((0,{0:M}NAME,{0:m}NAME,({0:b}NAME)[({0:m}NAME)*({0:ss}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))){64})
+.EQN 5 -7 190 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:ss}NAME)[({0:n}NAME),({0:zb}NAME)[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 2 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -14 199 0 0
+Cg a72.000000,72.000000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b high}{\b  pass}}
+.EQN 0 12 200 0 0
+{0:M}NAME:4
+.EQN 0 9 201 0 0
+({0:zc}NAME)[({0:n}NAME):((0,{0:M}NAME,{0:m}NAME,({0:c}NAME)[({0:m}NAME)*({0:ss}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))){64})
+.EQN 5 -7 202 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:ss}NAME)[({0:n}NAME),({0:zc}NAME)[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 2 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 1 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 25 -15 203 0 0
+Cg a72.000000,72.000000,22
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b rapid change \par emphasis}}
+.EQN 1 14 204 0 0
+{0:M}NAME:4
+.EQN 0 11 229 0 0
+({0:ss}NAME)[({0:n}NAME):2*(({0:n}NAME>({0:N}NAME)/(2))*({0:n}NAMEó(3*{0:N}NAME)/(4)))
+.EQN 0 26 205 0 0
+({0:zd}NAME)[({0:n}NAME):((0,{0:M}NAME,{0:m}NAME,({0:d}NAME)[({0:m}NAME)*({0:ss}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))){64})
+.EQN 5 -35 206 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:ss}NAME)[({0:n}NAME),({0:zd}NAME)[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 2 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 1 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 22 -16 225 0 0
+C x1,1,0,0
+.TXT 4 0 207 0 0
+Cg a72.000000,72.000000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b band pass}}
+.EQN 1 14 208 0 0
+{0:M}NAME:4
+.EQN 0 9 209 0 0
+({0:ze}NAME)[({0:n}NAME):((0,{0:M}NAME,{0:m}NAME,({0:e}NAME)[({0:m}NAME)*({0:ss}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))){64})
+.EQN 5 -7 210 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:ss}NAME)[({0:n}NAME),({0:ze}NAME)[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 2 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 1 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 26 -14 211 0 0
+Cg a72.000000,72.000000,14
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b differentiator}}
+.EQN 1 14 212 0 0
+{0:M}NAME:1
+.EQN 0 10 231 0 0
+({0:ss}NAME)[({0:n}NAME):{0:exp}NAME(-(((({0:n}NAME-32))^(2))/(2*10)))
+.EQN 0 22 213 0 0
+({0:zf}NAME)[({0:n}NAME):((0,{0:M}NAME,{0:m}NAME,({0:f}NAME)[({0:m}NAME)*({0:ss}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))){64})
+.EQN 5 -30 214 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:ss}NAME)[({0:n}NAME),20*({0:zf}NAME)[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 2 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 1 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 
+.TXT 24 -17 215 0 0
+Cg a72.000000,72.000000,17
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue255;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b second\par derivative}}
+.EQN 1 14 216 0 0
+{0:M}NAME:2
+.EQN 0 9 217 0 0
+({0:zg}NAME)[({0:n}NAME):((0,{0:M}NAME,{0:m}NAME,({0:g}NAME)[({0:m}NAME)*({0:ss}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))){64})
+.EQN 5 -7 218 0 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:ss}NAME)[({0:n}NAME),20*({0:zg}NAME)[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 0 2 0 1 1 
+0 0 0 0 0 2 0 1 1 
+0 2 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 1 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 44 15 10 0 3 

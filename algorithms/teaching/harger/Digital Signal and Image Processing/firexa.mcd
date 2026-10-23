@@ -1,0 +1,492 @@
+.MCAD 303010000 1 74 84 0
+.CMD PLOTFORMAT
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-336860181
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 19 0
+Cg a72.500000,73.000000,322
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b FIRexa.mcd}  to show the frequency
+ response of two subband filters used for
+ data compression in a prototype portable
+ video-on-demand wireless receiver. (Low
+ power was the dominant design consideration.
+ Meng, et.al., "Portable video-on-demand
+ in wireless communication", Proc IEEE 83,
+ No 4, April 1995, pp. 659-680.}
+}
+.TXT 11 0 68 0
+Cg a23.250000,73.000000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 Background Information}}
+}
+.TXT 4 5 69 0
+Cg a63.375000,68.000000,133
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\ul System} Design Criteria: (i)
+ low power consumption; (ii) high compression
+ efficiency; (iii) channel error resiliency.
+ [p. 659]}
+}
+.TXT 7 0 70 0
+Cg a63.500000,68.000000,87
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Compression Algorithm: lattice vector
+ quantization and subband decomposition.
+ [p. 663]}
+}
+.TXT 5 0 72 0
+Cg a24.125000,68.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Subband Decomposition: [p. 663]}
+}
+.TXT 4 4 74 0
+Cg a53.000000,64.000000,155
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Advantages: (i) no "block" artifacts;
+ (ii) hierarchical nature implies flexible
+ quantization/bit-allocation; (iii) architectural
+ tradeoffs for low power.}
+}
+.TXT 8 0 75 0
+Cg a63.125000,64.000000,133
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Algorithm structure: uses multiple
+ stages of subband decomposition; use fixed
+ low and high pass filters with interspersed
+ sampling.}
+}
+.TXT 7 0 76 0
+Cg a50.500000,64.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\ul Filter} Design Criteria: additionally
+ want accurate reproduction of image}
+}
+.TXT 5 0 77 0
+Cg a62.750000,64.000000,231
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Candidate Types: (i) Quadrature 
+Mirror Filters: near-perfect reconstruction;
+ (ii) wavelet filters: near perfect magnitude
+ reconstruction but nonlinear phase; (iii)
+ "short" FIR filter: see attached excerpt
+ for tradeoffs [p. 673].}
+}
+.TXT 9 0 84 0
+Cg a29.875000,64.000000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Filter Type Selection: short FIRs
+ [p. 673].}
+}
+.TXT 5 0 78 0
+Cg a13.625000,64.000000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain The Filter Designs:}
+}
+.EQN 9 6 79 0
+{0:hlo}NAME:({4,1}ö-1ö2ö6ö3)
+.EQN 0 19 80 0
+{0:hhi}NAME:({4,1}ö3ö-6ö2ö1)
+.TXT 9 -34 81 0
+Cg a7.250000,73.000000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 Project} }
+}
+.TXT 4 8 83 0
+Cg a62.625000,65.000000,165
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain Plot the frequency response of each
+ of these filters and the overall frequency
+ response (both magnitude and phase). Plot
+ the poles and zeros of these two filters.
+ }
+}
+.TXT 10 -8 67 0
+C x1,1,0,0
+.TXT 2 0 20 0
+Cg a15.250000,73.000000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Low Pass FIR Filter}}
+}
+.EQN 5 10 1 0
+({0:hlo}NAME)[(0):3
+.EQN 0 12 2 0
+({0:hlo}NAME)[(1):6
+.EQN 0 11 3 0
+({0:hlo}NAME)[(2):2
+.EQN 0 12 4 0
+({0:hlo}NAME)[(3):-1
+.EQN 6 -35 5 0
+{0:N}NAME:128
+.EQN 0 10 6 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 15 7 0
+({0:hloe}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<4,({0:hlo}NAME)[({0:n}NAME),0)
+.EQN 4 -21 21 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:hloe}NAME)[({0:n}NAME)@8&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 34 12 0 3 Low Pass FIR 
+.EQN 23 -7 8 0
+{0:Hlo}NAME:\({0:N}NAME)*{0:icfft}NAME({0:hloe}NAME)
+.EQN 0 24 32 0
+({0:Hlo}NAME)[({0:n}NAME):({0:Hlo}NAME)[({0:n}NAME)+(10)^(-6)
+.EQN 5 -24 27 0
+({0:\qlo}NAME)[(0):{0:arg}NAME(({0:Hlo}NAME)[(0))
+.EQN 0 18 28 0
+({0:\qlo}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷0,({0:\qlo}NAME)[(0),({0:\qlo}NAME)[({0:n}NAME-1)+{0:arg}NAME(({0:Hlo}NAME)[({0:n}NAME)*((({0:Hlo}NAME)[({0:n}NAME-1)))]))
+.EQN 4 -25 9 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:Hlo}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 30 18 0 3 Low Pass FIR FR magnitude
+.EQN 0 37 29 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:\qlo}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 29 18 0 3 Low Pass FIR FR phase
+.TXT 32 -37 26 0
+Cg a15.500000,73.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b High Pass FIR Filter}}
+}
+.EQN 4 9 10 0
+({0:hhi}NAME)[(0):1
+.EQN 0 10 11 0
+({0:hhi}NAME)[(1):2
+.EQN 0 10 12 0
+({0:hhi}NAME)[(2):-6
+.EQN 0 10 13 0
+({0:hhi}NAME)[(3):3
+.EQN 0 13 14 0
+({0:hhie}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<4,({0:hhi}NAME)[({0:n}NAME),0)
+.EQN 3 -37 25 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:hhie}NAME)[({0:n}NAME)@8&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 37 12 0 3 High Pass FIR 
+.EQN 24 -5 15 0
+{0:Hhi}NAME:\({0:N}NAME)*{0:icfft}NAME({0:hhie}NAME)
+.EQN 0 24 34 0
+({0:Hhi}NAME)[({0:n}NAME):({0:Hhi}NAME)[({0:n}NAME)+(10)^(-6)
+.EQN 6 -24 35 0
+({0:\qhi}NAME)[(0):{0:arg}NAME(({0:Hhi}NAME)[(0))
+.EQN 0 18 36 0
+({0:\qhi}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷0,({0:\qhi}NAME)[(0),({0:\qhi}NAME)[({0:n}NAME-1)+{0:arg}NAME(({0:Hhi}NAME)[({0:n}NAME)*((({0:Hhi}NAME)[({0:n}NAME-1)))]))
+.EQN 5 -28 16 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:Hhi}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 30 18 0 3 High Pass FIR FR
+.EQN 0 36 37 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:\qhi}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 29 18 0 3 High Pass FIR FR phase
+.TXT 32 -36 40 0
+Cg a8.875000,73.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Overall FIR}}
+}
+.EQN 4 13 41 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:hloe}NAME)[({0:n}NAME)+({0:hhie}NAME)[({0:n}NAME))@8&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 46 15 0 3 Overall IR
+.EQN 24 0 17 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:Hlo}NAME)[({0:n}NAME)+({0:Hhi}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 46 15 0 3 Overall FR mag
+.EQN 23 2 63 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:\qlo}NAME)[({0:n}NAME)+({0:\qhi}NAME)[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 46 15 0 3 Overall FR phase
+.TXT 25 -15 51 0
+Cg a4.250000,73.000000,11
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Zeros}}
+}
+.EQN 5 5 44 0
+{0:m}NAME:0;3
+.EQN 0 10 42 0
+({0:hlor}NAME)[({0:m}NAME):({0:hlo}NAME)[(3-{0:m}NAME)
+.EQN 0 16 45 0
+{0:polyroots}NAME({0:hlor}NAME)={0}?_n_u_l_l_
+.EQN 0 22 46 0
+{0:zeroslo}NAME:({3,1}ö0.264ö-1ö-1.264)
+.EQN 9 -38 48 0
+({0:hhir}NAME)[({0:m}NAME):({0:hhi}NAME)[(3-{0:m}NAME)
+.EQN 0 16 49 0
+{0:polyroots}NAME({0:hhir}NAME)={0}?_n_u_l_l_
+.EQN 0 22 50 0
+{0:zeroshi}NAME:({3,1}ö1ö0.791ö-3.791)
+.EQN 9 -38 52 0
+({0:\w}NAME)[({0:n}NAME):{0:n}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.EQN 1 18 62 0
+{0:mm}NAME:0;2
+.EQN 7 -17 55 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:n}NAME)),{0:Im}NAME(({0:zeroslo}NAME)[({0:mm}NAME)),{0:Im}NAME(({0:zeroshi}NAME)[({0:mm}NAME))@2&-4&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:n}NAME)),{0:Re}NAME(({0:zeroslo}NAME)[(
+{0:mm}NAME)),{0:Re}NAME(({0:zeroshi}NAME)[({0:mm}NAME))
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+0 2 0 0 NO-TRACE-STRING
+1 0 1 0 NO-TRACE-STRING
+2 0 6 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 40 27 0 3 Zeros of Lo & Hi Pass FIRs

@@ -1,0 +1,392 @@
+.MCAD 303010000 1 74 16223 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg b73.000000,73.000000,211
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Mnchstr}{\b .mcd}{   to compute
+ the spectral densities (as defined) for
+ the }{\b Manchester}{ line code used in
+ the }{\b Ethernet}{. The expectation is
+ approximated by a sample average of repeated
+ trials.}}
+}
+.TXT 7 7 2 0
+Cg a60.875000,61.875000,221
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 1}{  Define the discrete time
+ index, the random binary sequence \{x(n)\}
+ to be encoded, and the binary sequence 
+\{b(n)\} of pulse amplitudes. The repeated
+ trials are indexed by i. Let the probability
+ of a 1 be pr.}}
+}
+.EQN 8 7 3 0
+{0:N}NAME:16
+.EQN 0 10 4 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 13 5 0
+{0:I}NAME:15
+.EQN 0 9 6 0
+{0:i}NAME:0;{0:I}NAME-1
+.EQN 0 13 7 0
+{0:pr}NAME:0.5
+.EQN 4 -45 8 0
+({0:x}NAME)[({0:n}NAME,{0:i}NAME):{0:if}NAME({0:rnd}NAME(1)<{0:pr}NAME,1,0)
+.TXT 6 -7 9 0
+Cg a62.125000,63.625000,384
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {The Manchester code encodes a '0'
+ into 'zero-return pulse', actually one 
+cycle of a square wave & a '1' into the 
+opposite phase pulse. The resulting wave
+ will have good synchronization properties
+ and, on average, 'zero average value', 
+or, ' no DC', or, 'quite low' low frequency
+ content in the spectral density. So the
+ binary sequence of pulse amplitudes have
+ values of +/- 1 :}}
+}
+.EQN 14 7 10 0
+({0:b}NAME)[({0:n}NAME,{0:i}NAME):{0:if}NAME(({0:x}NAME)[({0:n}NAME,{0:i}NAME)÷0,-1,1)
+.TXT 6 -7 16165 0
+Cg a43.625000,65.000000,60
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain We now define the pulse and compute,
+ symbollically, its FT.}
+}
+.EQN 6 2 12 0
+{0:T}NAME:1
+.EQN 0 12 16132 0
+{0:p}NAME({0:t}NAME):{0:\F}NAME({0:t}NAME)-2*{0:\F}NAME({0:t}NAME-({0:T}NAME)/(2))+{0:\F}NAME({0:t}NAME-{0:T}NAME)
+.EQN 6 -3 16183 0
+{0:t}NAME:-0.1,-0.1+0.01;1.1
+.EQN 2 -4 16173 0
+1.1&-1.1&(-0.1&1.1)&{0:p}NAME({0:t}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 5 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 36 17 0 3 Basic Pulse of Ethernet code
+.TXT 29 -13 16166 0
+Cg a9.625000,72.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Compute FT}}
+}
+.EQN 0 20 16141 0
+{0:P}NAME({0:\w}NAME):(-1i)/({0:\w}NAME)+2*(1i)/({0:\w}NAME)*{0:exp}NAME((-1)/(2)*1i*{0:\w}NAME*{0:T}NAME)-(1i)/({0:\w}NAME)*{0:exp}NAME(-1i*{0:\w}NAME*{0:T}NAME)
+.TXT 8 -20 16168 0
+Cg a13.000000,72.000000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Form Magnitude}}
+}
+.EQN 0 20 16151 0
+{0:Pm}NAME({0:\w}NAME):((|((-1i)/({0:\w}NAME)+2*(1i)/({0:\w}NAME)*{0:exp}NAME((-1)/(2)*1i*{0:\w}NAME*{0:T}NAME)-(1i)/({0:\w}NAME)*{0:exp}NAME(-1i*{0:\w}NAME*{0:T}NAME))))^(2)
+.TXT 6 -20 16169 0
+Cg a6.500000,72.000000,14
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Simplify}}
+}
+.EQN 8 5 16155 0
+{0:Pm}NAME({0:\w}NAME):(((\(6-4*{0:sin}NAME((1)/(2)*{0:\w}NAME*{0:T}NAME)*{0:sin}NAME({0:\w}NAME*{0:T}NAME)-4*{0:cos}NAME((1)/(2)*{0:\w}NAME*{0:T}NAME)+2*{0:cos}NAME({0:\w}NAME*{0:T}NAME)-4*{0:cos}NAME((1)/(2)*{0:\w}NAME*{0:T}NAME)*{0:cos}NAME({0:\w}NAME*
+{0:T}NAME)))/({0:\w}NAME)))^(2)
+.TXT 11 0 16170 0
+Cg a66.375000,67.000000,134
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain We plot the FT magnitude. As the
+ "basic pulse width" is T/2, a measure of
+ the bandwidth of the pulse is 2{\f2 p}/(T/2)
+ = 4{\f2 p}/T.}
+}
+.EQN 9 8 16156 0
+{0:\w}NAME:(-15*{0:\p}NAME)/({0:T}NAME),0.98*(-15*{0:\p}NAME)/({0:T}NAME);(15*{0:\p}NAME)/({0:T}NAME)
+.EQN 6 -6 16164 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:Pm}NAME({0:\w}NAME)@&&((-4*{0:\p}NAME)/({0:T}NAME)&(4*{0:\p}NAME)/({0:T}NAME))&{0:\w}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 54 24 0 3 FT of Ethernet Pulse
+.TXT 36 -1 16171 0
+Cg a58.000000,66.000000,83
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain As we expect, for a discontinuously
+ modeled pulse, the FT is not of finite 
+extent.}
+}
+.TXT 7 0 11 0
+Cg a54.500000,60.750000,133
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 2}{  The pulse sequence representing
+ the encoding of the binary code is now 
+constructed using a simple rectangular pulse
+ p(t).}}
+}
+.TXT 6 0 16185 0
+Cg a46.625000,66.000000,64
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain We sample this function for plotting
+ and computing the spectrum}
+}
+.EQN 6 3 16186 0
+{0:Ts}NAME:({0:T}NAME)/(16)
+.EQN 0 10 16187 0
+{0:NN}NAME:({0:N}NAME*{0:T}NAME)/({0:Ts}NAME)
+.EQN 0 11 16188 0
+{0:NN}NAME={0}?_n_u_l_l_
+.EQN 0 13 16189 0
+{0:nn}NAME:0;{0:NN}NAME-1
+.EQN 7 -33 16190 0
+({0:ss}NAME)[({0:nn}NAME,{0:i}NAME):{0:n}NAME$({0:b}NAME)[({0:n}NAME,{0:i}NAME)*{0:p}NAME({0:nn}NAME*{0:Ts}NAME-{0:n}NAME*{0:T}NAME)
+.EQN 6 3 16194 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:ss}NAME)[({0:nn}NAME,0)@&&(_n_u_l_l_&_n_u_l_l_)&{0:nn}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 15 0 3 Eternet Code Pulse Sequence
+.TXT 37 -6 23 0
+Cg a63.750000,64.375000,276
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 3} { The spectral density is
+ defined as the time-averaged expectation
+ of the modulus-squared of the Fourier transform
+ of the pulse sequence. Again, the expectation
+ is approximated by a sample average of 
+the time average over repeated trials- the
+ # set by choice of I.}}
+}
+.EQN 12 6 16195 0
+{0:dft}NAME({0:v}NAME):\({0:NN}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 6 0 24 0
+({0:ssft}NAME){52}({0:i}NAME):{0:dft}NAME(({0:ss}NAME){52}({0:i}NAME))
+.TXT 4 26 16220 0
+Cg a30.375000,33.000000,77
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain (The factor Ts is in the Reimann
+ sum that approximates the integral of FT.)}
+}
+.EQN 1 -26 25 0
+({0:S}NAME)[({0:nn}NAME,{0:i}NAME):(({0:Ts}NAME*|(({0:ssft}NAME)[({0:nn}NAME,{0:i}NAME))))^(2)
+.TXT 6 26 16223 0
+Cg a30.875000,33.000000,57
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain (Time average (1/N) and sample/ensemble
+ average (1/I).)}
+}
+.EQN 1 -26 26 0
+({0:Save}NAME)[({0:nn}NAME):((1)/({0:N}NAME*{0:I}NAME))*{0:i}NAME$({0:S}NAME)[({0:nn}NAME,{0:i}NAME)
+.TXT 8 -6 27 0
+Cg a63.000000,63.000000,334
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {For comparison, the spectral density
+ , computed analytically, is given by eq.
+ 8.9-34, p. 246 of Gibson, & plotted in 
+Fig.9.5-5, p. 271: it is (1/T)*|P(}{\f2 
+w}{)|^2. Our definition of the spectrum 
+uses a different "time average" and so the
+ (1/T) does not enter. (we re-order the 
+theoretical spectrum from FT order to DFT
+ order.)}}
+}
+.EQN 11 3 16197 0
+({0:\w}NAME)[({0:nn}NAME):{0:nn}NAME*(2*{0:\p}NAME)/({0:NN}NAME)
+.EQN 0 23 16207 0
+({0:Pms}NAME)[({0:nn}NAME):{0:if}NAME(({0:\w}NAME)[({0:nn}NAME)ó{0:\p}NAME,{0:Pm}NAME((({0:\w}NAME)[({0:nn}NAME))/({0:Ts}NAME)),{0:Pm}NAME((({0:\w}NAME)[({0:NN}NAME-{0:nn}NAME))/({0:Ts}NAME)))
+.EQN 4 -31 29 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:Save}NAME)[({0:nn}NAME),({0:Pms}NAME)[({0:nn}NAME)@&&((4*{0:\p}NAME)/({0:T}NAME)*{0:Ts}NAME&_n_u_l_l_)&({0:\w}NAME)[({0:nn}NAME)
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 0 0 5 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 61 27 0 3 Ethernet Code Spectra: Theo. & Num.
+.EQN 38 15 30 0
+{0:pr}NAME={0}?_n_u_l_l_
+.EQN 0 9 32 0
+{0:N}NAME={0}?_n_u_l_l_
+.EQN 0 9 31 0
+{0:I}NAME={0}?_n_u_l_l_
+.EQN 0 8 33 0
+{0:T}NAME={0}?_n_u_l_l_
+.EQN 0 7 16222 0
+{0:Ts}NAME={0}?_n_u_l_l_

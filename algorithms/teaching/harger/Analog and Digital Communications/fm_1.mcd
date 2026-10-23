@@ -1,0 +1,426 @@
+.MCAD 303010000 1 74 16175 0
+.CMD PLOTFORMAT
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 1 1 0
+Cg b73.000000,73.000000,681
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b fm_1}{\b .mcd}{  to see simple
+ demodulation with a 'de-tuned' filter, 
+whose output will have an amplitude/envelope
+ varying in proportion to the local/'instantaneous'
+ frequency. Thus a succeeding envelope detection
+ should then produce an estimate of the 
+derivative of the phase modulation. The 
+"intuitive idea" is that, as the instantaneous
+ frequency of the FM waveform changes in
+ accordance with the modulation, that the
+ de-tuned} will convert the frequency variations
+ into amplitude variations. I.e., the frequency
+ modulation will be converted into amplitude
+ modulation. And, we have now learned hoe
+ to demodulate amplitude modulation- with,
+ e.g., an envelope detector.}
+}
+.TXT 18 6 16146 0
+Cg a34.875000,66.000000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 1}{  Define modulation and modulated
+ waveforms. }}
+}
+.EQN 5 5 3 0
+{0:N}NAME:128
+.EQN 0 12 4 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 18 5 0
+{0:W}NAME:(2*{0:\p}NAME)/({0:N}NAME)
+.TXT 5 -35 16147 0
+Cg a42.375000,67.000000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain Suppose that the modulation is a
+ simple sum of sinusoids.}
+}
+.EQN 5 5 6 0
+{0:\wm1}NAME:{0:W}NAME*2
+.EQN 0 12 7 0
+{0:\wm2}NAME:{0:W}NAME*4
+.EQN 0 12 8 0
+{0:m}NAME({0:t}NAME):{0:cos}NAME({0:\wm1}NAME*{0:t}NAME)+2*{0:cos}NAME({0:\wm2}NAME*{0:t}NAME)
+.EQN 0 28 9 0
+({0:ms}NAME)[({0:n}NAME):{0:m}NAME({0:n}NAME)
+.EQN 5 -49 17 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:ms}NAME)[({0:n}NAME)@{0:N}NAME&0&(0&{0:N}NAME)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 1 0 0 2 0 1 
+0 1 0 5 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 44 14 0 3 Modulation
+.TXT 25 -8 16148 0
+Cg a66.750000,67.000000,359
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain Then the FM wave is phase modulated
+ with the integral of this modulation waveform.
+ {\b We can have Mathcad do this intgration
+ for us symbollically!} (Just click on and
+ enclose an instance of the variable t on
+ the right side of the definition of m(t)
+ and choose, form the Symbollic menu, "integrate
+ on variable". Then redefine the resulting
+ form as fm(t).)}
+}
+.EQN 12 14 16149 0
+{0:fm}NAME({0:t}NAME):({0:sin}NAME({0:\wm1}NAME*{0:t}NAME))/({0:\wm1}NAME)+2*({0:sin}NAME({0:\wm2}NAME*{0:t}NAME))/({0:\wm2}NAME)
+.EQN 0 33 16154 0
+({0:fms}NAME)[({0:n}NAME):{0:fm}NAME({0:n}NAME)
+.TXT 6 -47 16150 0
+Cg a22.625000,67.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain The FM waveform has the form }
+}
+.EQN 5 14 16151 0
+{0:sfm}NAME({0:t}NAME):{0:A}NAME*{0:cos}NAME({0:\w.c}NAME*{0:t}NAME+{0:c.f}NAME*{0:fm}NAME({0:t}NAME))
+.TXT 5 -13 16156 0
+Cg a35.000000,66.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We therefore specify the constants
+ A, {\f1 w}{\fs16 \dn6 c} and c{\fs16 \dn6 
+f}.}
+}
+.EQN 4 13 16157 0
+{0:A}NAME:1
+.EQN 0 8 11 0
+{0:\w.c}NAME:{0:W}NAME*28
+.EQN 0 15 16158 0
+{0:c.f}NAME:0.1
+.TXT 5 -36 16159 0
+Cg a39.125000,66.000000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We check the resulting maximum frequency
+ deviation:}
+}
+.EQN 5 12 16160 0
+{0:\b}NAME:{0:c.f}NAME*{0:max}NAME({0:fms}NAME)
+.EQN 0 19 16161 0
+{0:\b}NAME={0}?_n_u_l_l_
+.TXT 5 -31 16162 0
+Cg a24.125000,66.000000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain Then the FM waveform is defined.}
+}
+.EQN 4 12 16163 0
+{0:sfm}NAME({0:t}NAME):{0:A}NAME*{0:cos}NAME({0:\w.c}NAME*{0:t}NAME+{0:c.f}NAME*{0:fm}NAME({0:t}NAME))
+.EQN 0 35 16155 0
+({0:sfms}NAME)[({0:n}NAME):{0:sfm}NAME({0:n}NAME)
+.TXT 6 -47 16164 0
+Cg a47.500000,66.000000,66
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain As always, the spectrum of the modulated
+ waveform is of interest.}
+}
+.EQN 6 4 15 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 28 16 0
+{0:sfmft}NAME:{0:dft}NAME({0:sfms}NAME)
+.EQN 6 -28 16129 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:sfmft}NAME)[({0:n}NAME))@&&(16&40)&{0:n}NAME
+0 0 0 0 2 1 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 45 20 0 3 FM Waveform Spectrum
+.TXT 31 -3 16167 0
+Cg a64.125000,65.000000,140
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We note that the bandwidth of the
+ modulated waveform, say 2(40-16)=28 is 
+considerably larger than the bandwidth of
+ the modulation, 2(4)=8!}
+}
+.TXT 8 -1 16137 0
+Cg a43.000000,66.000000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 2}{  Define the de-tuned filter:
+  we choose a very simple filter!:}}
+}
+.EQN 7 0 20 0
+{0:\wf}NAME:{0:W}NAME*40
+.EQN 0 13 21 0
+{0:\t}NAME:4
+.EQN 0 13 22 0
+({0:h}NAME)[({0:n}NAME):{0:exp}NAME(-((({0:n}NAME)/({0:\t}NAME)))^(2))*{0:cos}NAME({0:\wf}NAME*{0:n}NAME)
+.EQN 0 29 23 0
+{0:hft}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 6 -50 24 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:hft}NAME)[({0:n}NAME))@{0:N}NAME&&(16&40)&{0:n}NAME
+0 1 0 0 2 1 1 
+0 0 0 0 2 0 1 
+0 0 0 5 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 46 15 0 3 De-Tuned Filter Frequency Response
+.TXT 25 -5 16168 0
+Cg a59.875000,66.000000,154
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain So the filter has a nearly linear
+ behavior over the spectrum of the FM waveform
+ and hopefully will be able to convert the
+ FM into AM. We try it, anyway!}
+}
+.TXT 9 0 16134 0
+Cg a53.125000,66.000000,80
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 3}{  Pass the PM waveform thru
+ the filter and examine the output waveform:}}
+}
+.EQN 7 3 26 0
+{0:mestft}NAME:(({0:hft}NAME*{0:sfmft}NAME)){49}
+.EQN 0 17 27 0
+{0:idft}NAME({0:v}NAME):\((1)/({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 21 28 0
+{0:mest}NAME:{0:idft}NAME({0:mestft}NAME)
+.TXT 9 -41 16172 0
+Cg a65.625000,66.000000,103
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain We also "fit" (by trial and error)
+ an envelope using the modulation to see
+ if our scheme has promise.}
+}
+.EQN 6 4 16169 0
+&&(_n_u_l_l_&_n_u_l_l_)&2*({0:mest}NAME)[({0:n}NAME),2+((0.6*{0:ms}NAME))[({0:n}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 49 19 0 3 Detuned Filter Output
+.TXT 28 -4 16173 0
+Cg a60.250000,66.000000,85
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain It looks promising: that is, the
+ envelope does approximately contain the
+ modulation.}
+}
+.TXT 8 0 16133 0
+Cg a62.125000,66.000000,121
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 4}{  The AM is demodulated by
+ envelope detection; that is, we square 
+& filter to remove second harmonic and 'DC':.}}
+}
+.EQN 7 5 31 0
+({0:mest}NAME)[({0:n}NAME):((({0:mest}NAME)[({0:n}NAME)))^(2)
+.EQN 0 24 32 0
+{0:mestft}NAME:{0:dft}NAME({0:mest}NAME)
+.EQN 6 -24 33 0
+({0:mestft}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷0,0,{0:if}NAME({0:n}NAMEó8,({0:mestft}NAME)[({0:n}NAME),{0:if}NAME({0:n}NAMEò120,({0:mestft}NAME)[({0:n}NAME),0)))
+.EQN 6 0 34 0
+{0:mest}NAME:{0:idft}NAME({0:mestft}NAME)
+.EQN 4 -5 35 0
+&&(-0.6&0.6)&3*({0:mest}NAME)[({0:n}NAME),({0:n}NAME-2ò0)*({0:ms}NAME)[({0:n}NAME-2)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 1 0 0 2 0 1 
+0 1 0 5 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 52 14 0 3 Modualtion & Demodulation
+.TXT 25 4 16132 0
+Cg a31.125000,62.000000,49
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Not bad, really, for such a simple
+ receiver !!}}
+}
+.TXT 5 0 16145 0
+Cg a62.125000,62.000000,138
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise}{  Vary (i) the center
+ frequency and (ii) the bandwidth of the
+ filter and note the effect on the modulation
+ estimate mest.}}
+}

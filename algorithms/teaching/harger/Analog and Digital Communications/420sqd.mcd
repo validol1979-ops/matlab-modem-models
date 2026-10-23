@@ -1,0 +1,187 @@
+.MCAD 303010000 1 74 16133 0
+.CMD PLOTFORMAT
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 1.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.EQN 2 1 1 0
+_n_u_l_l_
+.TXT 2 0 2 0
+Cg b73.000000,73.000000,96
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {420sqd.mcd to show the effects 
+of quadratic phase error in the channel's
+  frequency response.}}
+}
+.TXT 5 4 3 0
+Cg a57.375000,61.250000,89
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {}{\b 1}{ Define the degraded phase
+ of the channel's frequency response- in
+ 'DFT form'.}}
+}
+.EQN 4 5 4 0
+{0:N}NAME:128
+.EQN 0 8 5 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 17 6 0
+{0:j}NAME:0;2
+.EQN 0 9 7 0
+({0:\e}NAME)[({0:j}NAME):0.005*{0:j}NAME
+.EQN 0 12 8 0
+({0:\q}NAME)[({0:n}NAME,{0:j}NAME):({0:\e}NAME)[({0:j}NAME)*({0:n}NAME)^(2)
+.EQN 5 -46 9 0
+({0:H}NAME)[({0:n}NAME,{0:j}NAME):{0:if}NAME({0:n}NAMEó8,{0:exp}NAME(1i*({0:\q}NAME)[({0:n}NAME,{0:j}NAME)),{0:if}NAME({0:n}NAMEò120,{0:exp}NAME(1i*({0:\q}NAME)[({0:N}NAME-{0:n}NAME,{0:j}NAME)),0))
+.EQN 4 7 10 0
+({0:\p}NAME)/(2)&0&(0&({0:\p}NAME)/(10))&({0:\q}NAME)[({0:n}NAME,0),({0:\q}NAME)[({0:n}NAME,1),({0:\q}NAME)[({0:n}NAME,2)@8&0&(0&8)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+0 0 0 5 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 30 21 0 3 Quadratic Phase Error over Pulse Band
+.TXT 31 -11 11 0
+Cg a67.125000,67.250000,141
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {\b 2}{ Define the pulse whose spectrum
+ has been shaped for low sidelobes: We choose
+ a simple model, the triangle spectrum- 
+in 'DFT form'.}}
+}
+.EQN 7 1 12 0
+({0:P}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó8,8-{0:n}NAME,{0:if}NAME({0:n}NAMEò120,{0:n}NAME-120,0))
+.EQN 0 32 13 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:P}NAME)[({0:n}NAME)@({0:N}NAME)/(2)&0&(8&_n_u_l_l_)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+0 0 0 5 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 27 12 0 3 Pulse Spectrum Magnitude
+.TXT 19 -32 14 0
+Cg a23.875000,42.375000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+}
+{\plain {}{\b 3}{ Compute the output pulse,
+ s(t).}}
+}
+.EQN 6 4 15 0
+{0:idft}NAME({0:v}NAME):((1)/(\({0:N}NAME)))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 20 16 0
+({0:S}NAME)[({0:n}NAME,{0:j}NAME):({0:H}NAME)[({0:n}NAME,{0:j}NAME)*({0:P}NAME)[({0:n}NAME)
+.EQN 1 17 17 0
+({0:s}NAME){52}({0:j}NAME):{0:idft}NAME(({0:S}NAME){52}({0:j}NAME))
+.EQN 10 -29 18 0
+({0:M}NAME)[({0:j}NAME):{0:max}NAME(({0:s}NAME){52}({0:j}NAME))
+.EQN 0 17 19 0
+({0:s}NAME){52}({0:j}NAME):(({0:s}NAME){52}({0:j}NAME))/(({0:M}NAME)[({0:j}NAME))+0.000001
+.EQN 13 -27 21 0
+0&-60&(-40&-20)&20*{0:log}NAME(|(((({0:s}NAME){52}(0)))[({0:n}NAME))),20*{0:log}NAME(|(((({0:s}NAME){52}(1)))[({0:n}NAME))),20*{0:log}NAME(|(((({0:s}NAME){52}(2)))[({0:n}NAME)))@({0:N}NAME)/(2)&&(0&16)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 35 18 0 3 
+.EQN 6 59 20 0
+({0:\q}NAME)[(8,{0:j}NAME)=

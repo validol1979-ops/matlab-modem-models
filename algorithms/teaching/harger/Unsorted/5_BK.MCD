@@ -1,0 +1,1850 @@
+.MCAD 303020000 1 76 363 363
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 63 25 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.000000 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* |P *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.EQN 3 1 166 0
+{   19   598 0 0}{61}
+19778 12176 0 0 1068
+40 583 19 1 8 0 11096 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!>{5dIp!A6jLO9P!1!*!(<6LVLV-XIr!!DG5Y)0LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.Z
+LVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.ZLVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!!DG5Y)0
+LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!!9Q5hLVLVJ\LG#e
+
+.TXT 7 1 167 0
+Cg a21.000000,67.375000,71
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs28 5}{\b \fs28 \ulnone \i0 
+ }{\fs28 \b \i0 \ulnone  Fast Convolution}}
+}
+.EQN 2 -1 168 0
+{    8   597 0 0}{61}
+19778 4560 0 0 1068
+40 580 6 1 8 0 3480 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!4'5hLVLVJYLG4'5hLVLVJYLG>{5Y)0LG.Z!e)5!@I|!(9SLVIuLG,Z!a&J"3"<LVLVLK4&"3"<LVLVLK4&
+
+.TXT 5 11 169 0
+Cg a64.500000,64.500000,967
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We have seen that FIR filtering
+ may be performed efficiently by the DFT
+ method. In some applications the data sequence
+ length may too long to be read entirely
+ into the computer memory. And even if it
+ could be read in, we might wish to make
+ use of the output as soon as it can be 
+computed. Because we want to exploit the
+ computational advantage of the DFT method,
+ we are led to consider whether we can process
+ a long input in conveniently sized subsequences,
+ or}{\i  }{\i0 blocks,}{ that would be processed
+ by the DFT method, and then reassembled
+ to get the desired filtered output. This
+ is possible because the filter impulse 
+response is of finite length. The desired
+ output is the aperiodic convolution of 
+the FIR with the data sequence. }{\ul In
+ this Section}{, a}{\ulnone  value yp}{\ulnone 
+\dn8 n}{\ulnone  of the periodic convolution
+ will be called }{\ul \b0 \i0 correct}{\ulnone 
+ if it agrees with the value ya}{\ulnone 
+\dn8 n}{\ulnone  of the aperiodic convolution.}}
+}
+.TXT 26 0 1 0
+Cg a64.875000,64.625000,518
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Thus the following questions arise.\par 
+        How big should the blocks be?\par 
+        How should they be formed from the
+ data sequence?\par         What size DFT
+ should be chosen?\par         How should
+ the processed blocks be reassembled?\par 
+\par We will discuss two solutions, the 
+overlap-add and overlap-save methods, which
+ are called}{\i0 \b  }{\i0 \b fast convolution}{
+ methods. In order to understand these methods
+ we will recall the nature of the periodic
+ convolution, as the DFT method computes
+ a periodic convolution.}}
+}
+.TXT 22 -10 170 0
+Cg a57.875000,75.625000,70
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 Periodic Convolution for
+ Unequal Length FIR, Block and DFT}}
+}
+.TXT 3 10 2 0
+Cg a63.625000,63.750000,669
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\i0 Consider a FIR \{h}{\dn8 \i0 
+n}{\i0 , n=0,...,L-1\}, a signal block \{x}{\dn8 
+\i0 n}{\i0 , n=0,...,M-1\} and a DFT defined
+ for sequences of length N. }{\i0 \i0  We
+ wish to compare the periodic and aperiodic
+ convolutions f}{\i0 \i0 \i0 or a given 
+set (L,M,N)}{\i0 . We assume that M>=L because
+ the filter should be "filled" }{\i0 \i0 
+\i0 at least once by the signal block for
+ at least one correct output value. Also,
+ we assume that N>=M because we want to 
+fully utilize the signal block. }{\i0 Thus
+ \{h}{\dn8 \i0 n}{\i0 \} and \{x}{\dn8 \i0 
+n}{\i0 \} are extended, if necessary, by
+ zero padding to length N. We define an 
+example to be used for illustration.}}
+}
+.EQN 18 2 3 0
+{0:N}NAME:32
+.EQN 0 11 4 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 37 5 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 5 -48 6 0
+{0:L}NAME:8
+.EQN 0 11 7 0
+({0:h}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<{0:L}NAME,(1)/({0:L}NAME),0)
+.EQN 0 37 8 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 7 -48 9 0
+{0:M}NAME:28
+.EQN 0 11 10 0
+({0:x}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<{0:M}NAME,{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*{0:e}NAME*{0:n}NAME)+{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*{0:\p}NAME*{0:n}NAME),0)
+.EQN 0 37 11 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 6 -48 12 0
+{0:m}NAME:0;{0:N}NAME-1
+.EQN 0 14 13 0
+{0:pod}NAME({0:n}NAME,{0:N}NAME):{0:mod}NAME({0:N}NAME+{0:mod}NAME({0:n}NAME,{0:N}NAME),{0:N}NAME)
+.TXT 6 -25 15 0
+Cg a18.500000,22.000000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 periodic convolution: 
+\par  direct method}}
+}
+.EQN 0 25 14 0
+({0:yp}NAME)[({0:n}NAME):{0:m}NAME$({0:h}NAME)[({0:m}NAME)*({0:x}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME))
+.TXT 14 -25 16 0
+Cg a19.500000,22.000000,51
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 aperiodic convolution:
+ \par  direct method}}
+}
+.EQN 1 25 17 0
+({0:ya}NAME)[({0:n}NAME):{0:m}NAME$({0:h}NAME)[({0:m}NAME)*{0:if}NAME(({0:n}NAME-{0:m}NAMEò0)*({0:n}NAME-{0:m}NAMEó{0:N}NAME-1),({0:x}NAME)[({0:n}NAME-{0:m}NAME),0)
+.TXT 7 -25 18 0
+Cg a18.000000,22.000000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 periodic convolution:\par 
+ DFT method}}
+}
+.EQN 1 25 19 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 19 20 0
+{0:yq}NAME:{0:idft}NAME((({0:H}NAME*{0:X}NAME)){49})
+.EQN 5 -32 21 0
+&&(_n_u_l_l_&0)&({0:yq}NAME)[({0:n}NAME),({0:ya}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 50 19 0 3 Periodic & Aperiodic Convolutions
+.TXT 31 -3 22 0
+Cg a63.875000,63.875000,143
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \ulnone \f0 Exercise 5.1}{\f0 
+  Try various values of (L,M,N) and observe
+ when and where the aperiodic    and periodic
+ convolutions agree. }}
+}
+.TXT 5 0 23 0
+Cg a59.125000,64.625000,121
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {To better understand this phenomenon,
+ we plot the factors of the summand of the
+ periodic convolution, first for n=0. }}
+}
+.EQN 4 5 24 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:L}NAME*({0:h}NAME)[({0:m}NAME),({0:x}NAME)[({0:pod}NAME(0-{0:m}NAME,{0:N}NAME))@&&({0:N}NAME-{0:M}NAME+1&_n_u_l_l_)&{0:m}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 45 15 0 3 Convolution: case @ n=0
+.TXT 10 -14 28 0
+Cg a3.875000,4.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\ulnone \b n = 0}}
+}
+.TXT 17 9 29 0
+Cg a64.000000,63.625000,524
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that, if a periodic repetition
+ of the signal falls into the basic interval
+ [0,L-1] where \{h}{\dn8 m}{\} has nonzero
+ values, an incorrect value }{will result}{.
+ The left-most, possibly nonzero, point 
+of this period is -(M-1)+N. If this point
+ falls on or to the left of the last point
+ of h}{\dn8 m}{, at L-1, then an incorrect
+ value will be computed. In this case, we
+ increase n until the first time there is
+ no overlap of the periodic repetition with
+ \{h}{\fs16 \dn6 m}{\}, so that a correct
+ value is computed.}}
+}
+.TXT 15 0 270 0
+Cg a64.000000,64.625000,217
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Exercise 5.2}{  In the above
+ plot, edit the changes x}{\fs16 \dn6 pod(n-m,N)}{
+ for x}{\fs16 \dn6 pod(0-m,N)}{ for values
+ of n=1,...,M+L-N-1. Carefully observe the
+ plots. When n=M+L-N-1 you will get the 
+next plot.}}
+}
+.EQN 25 -2 30 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:L}NAME*({0:h}NAME)[({0:m}NAME),({0:x}NAME)[({0:pod}NAME({0:M}NAME+{0:L}NAME-{0:N}NAME-1-{0:m}NAME,{0:N}NAME))@&&({0:L}NAME&{0:N}NAME-1)&{0:m}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 45 17 0 3 Convolution: Case @ n=M+L-N-1
+.TXT 11 -9 34 0
+Cg a8.375000,73.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b n=M+L-N-1}}
+}
+.EQN 15 32 292 0
+{0:M}NAME+{0:L}NAME-{0:N}NAME-1={0}?_n_u_l_l_
+.TXT 4 -21 35 0
+Cg a62.625000,63.375000,234
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We see that, at this point, the
+ periodic repetition is not contributing
+ to the convolution, which will therefore
+ agree with the aperiodic convolution. Thus,
+ as n increases, we will  get correct values
+ when n >= max\{0, M+L-N-1\}.}}
+}
+.TXT 8 0 271 0
+Cg a62.375000,64.375000,223
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Exercise 5.3}{  Continuing Exercise
+ 5.2, edit the change x}{\fs16 \dn6 pod(n-m,N)}{
+ for x}{\fs16 \dn6 pod(0-m,N)}{ for values
+ of n =M+L-N-1,...,N-1. Carefully observe
+ the plots. When n=N-1 you will get the 
+plot below.}}
+}
+.TXT 8 0 272 0
+Cg a44.250000,64.625000,64
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {At n=N-1, its maximum value, we
+ have the following situation.}}
+}
+.EQN 2 3 36 0
+&&(_n_u_l_l_&_n_u_l_l_)&(({0:L}NAME*{0:h}NAME))[({0:m}NAME),({0:x}NAME)[({0:pod}NAME({0:N}NAME-1-{0:m}NAME,{0:N}NAME))@&&({0:N}NAME-{0:M}NAME&{0:N}NAME-1)&{0:m}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 43 17 0 3 Convolution: Case at n=N-1
+.TXT 12 -13 40 0
+Cg a4.500000,73.000000,11
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b n=N-1}}
+}
+.TXT 15 10 171 0
+Cg a63.000000,62.625000,431
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {No periodic repetitions are falling
+ in the basic summing interval [0,L-1] and
+ so the value is correct. At this point,
+ n = N-1, we have computed all N values 
+of the DFT, which has period N. At n = N,
+ we must again compute the value at n = 
+0. Visualizing the period of x just off 
+the plot to the left, increasing n from 
+N-1 to N moves x}{\fs16 \dn6 pod(n-m,N)}{
+ one step to the right, recreating the plot
+ shown above for n = 0.}}
+}
+.TXT 12 0 41 0
+Cg a45.375000,63.125000,173
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {W}{e have thus shown that the correct
+ values are computed for\par \par       
+                       }{\ulnone   }{\ulnone 
+\b  }{\ulnone \b max\{0, M+L-N-1\} <= n 
+<= N-1}{\ulnone  }{\ulnone  .}}
+}
+.TXT 4 59 277 0
+Cg a3.250000,5.625000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {(5.1)}}
+}
+.TXT 5 -59 42 0
+Cg a64.625000,64.375000,547
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \ulnone \f0 Problem 5.1}{\f0 
+  Show that, if M+L-2 < N-1, then the values
+ of the convolution for\par             
+                     }{\b \f0   M+L-2 <=
+ n <= N-1}{\f0 \par are apriori known to
+ be zero. }{\f0 \f0 Modify the above example
+ with an appropriate choice of L,M and N
+ and carefully repeat the graphical analysis.}{\f0 
+\par }{\b \f0 Hint}{\f0   The index of the
+ left-most nonzero value of x}{\fs16 \dn6 
+\f0 n-m}{\f0  is -(M-1)+n. If, for some 
+n < N-1 this index exceeds L-1, then there
+ are no nonzero products and the convolution
+ sum is zero.}}
+}
+.EQN 1 -10 355 0
+{   52    50 0 0}{61}
+19778 3784 0 0 1068
+40 50 52 1 8 0 2704 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!)!!!!"C!)!!I}>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"C6k!!!!"C!!"C!!!!6s!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!9Q5Z6j!1,1LG&K"S"<$vIt!b<6!A!*!(9f
+LG._%8Is!!9Q5Z.Z"3,.LG&K"S"<$FIz!b4&!A!.!(9cLG._!1!&!b1@!A!0!(9bLG._!@Is!!._$VIs!!Iq5Z#d!q+wLG)1!q,*LG&K#u"<#dIv!a)0!A4*!!._$6Is!"#e5YIp!q+wLG+|!Q!&!b&J!A!2!(9^LG._!PIw"3)1!q,'LG&K#u"<#4Iv!a)0"C4*!!._#dIs!"#e5YA`!q+wLG<>!Q!&!aIp!A!2!(9[LG._!PI}"3)1!q,$
+LG&K#u"<#$Iv!a)0"c4*!!._#TIs!"#e5YDF!q+wLG6r!Q!&!aLV!A!2!(9^LG._!PIw"3)1!q,'LG&K#u"<#TIv!a)0!a4*!!._$&Is!"#e5YLV!q+wLG&R!Q!&!b)0!A!0!(9aLG._!PIt!!._$FIs!!Iq5Z&J!q+wLG#e!q,+LG&K#5"<$6Iv!a&J!q,,LG&K"S"<$FIz!b4&!A!*!(9eLG4+%(Is!!9Q5Z1@!q,/LG&K"S"<$vIt!b<6
+!A!*!(9hLG#i%XIs!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!.[5\)0!A!&!(:%LG&K!q"<)`Is!!.[5\)0!A!Q
+
+.ATT
+.STATUS (Action not yet assigned)
+.ATT_END
+.TXT 27 10 43 0
+Cg a54.000000,57.875000,206
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Thus, correct and not apriori-known
+ zero values are computed for \par \par 
+               }{    }{\ulnone   }{\ulnone 
+\b  }{\ulnone \b max\{ 0,  M+L-N-1 \} <=
+ n <= min\{ M+L-2, N-1 \}}{\ulnone \b  }{\ulnone 
+ }{              }}
+}
+.TXT 4 59 278 0
+Cg a3.250000,5.625000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {(5.2)}}
+}
+.TXT 5 -59 274 0
+Cg a62.000000,63.625000,152
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Exercise 5.4}{  Show that, with
+ the assumed ordering 0<L<=M<=N, the left
+ member of the relations (5.2) is less than
+ or equal to the right member.}}
+}
+.TXT 5 0 44 0
+Cg a64.250000,63.875000,960
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {There are three cases of special
+ interest to us. Note that the aperiodic
+ convolution is of length M+L-1.\par \par 
+    }{\b   I}{   }{\b \ulnone M = L, N =
+ M+D, 0<=D<=M-1}{.  Then }{correct }{and
+ not apriori known zero values          
+      are computed for\par              
+                                }{\b  M-D-1
+ <= n <= M+D-1 = N-1}{    .             
+            (5.3)\par   \par     }{\b  II}{\b 
+ }{ }{\ulnone  }{\b \ulnone N=M}{.  Then
+ correct }{and not apriori-known zero values
+ are computed for \par \par             
+     }{                          }{\ulnone 
+      }{\b \ulnone L-1  <= n <=  N-1}{\ulnone 
+ }{\ulnone    .}{\ulnone                
+                       (5.4)\par \par   
+  }{\b \ulnone III}{\ulnone  }{\ulnone  
+}{\b \ulnone N=M+L-1}{\ulnone . }{\ulnone 
+Then correct }{\ulnone and not apriori-known
+ zero values are computed for \par \par 
+                 }{\ulnone              
+                  }{\b \ulnone     }{\b 
+\ulnone  }{\b \ulnone 0 <= n <=  N-1}{\ulnone 
+    .}{\ulnone \ulnone                  
+                     (5.5)}}
+}
+.TXT 32 0 45 0
+Cg a59.500000,60.500000,233
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \ulnone \f0 Problem 5.2}{\f0 
+  }{\f0 Verify the three inequalities in
+ the above illustration. For each case, 
+m}{\f0 \f0 odify the above example with 
+an appropriate choice of L,M and N and carefully
+ repeat the graphical analysis.}}
+}
+.TXT 9 -10 173 0
+Cg a48.000000,75.625000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 Convolution Computation
+ over a Restricted Range}}
+}
+.TXT 3 10 46 0
+Cg a64.000000,63.625000,683
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {It may happen that the aperiodic
+ convolution is required only over a restricted
+ range. In a signal design problem discussed
+ below, the filter output is known to be
+ of interest only over a small range of 
+indices. Also, when estimating a covariance
+ sequence (}{\ul \b Sec. 25}{), its principal
+ support is typically over a restricted 
+range of indices. We assume that the two
+ sequences to be convolved are of equal 
+length: M = L. We take N = M + D  where 
+D an integer in [0,M-1]. We have already
+ seen, in case (i) mentioned above, that
+ the periodic convolution will be correct
+ for n in [M-D-1,M+D-1]. It happens that
+ this is the interval of most interest in
+ filtering problems.}}
+}
+.ATT
+.STATUS Go to Section 25, p. 4
+.GOTO 25_bk.mcd
+.ATT_END
+.TXT 18 0 47 0
+Cg a62.500000,63.625000,254
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \ulnone \f0 Example 5.1}{\f0 
+  We examine the }{\b \f0 matched filtering}{\f0 
+ (}{\ul \b \f0 Sec. 3}{\ul \b \f0 1}{\f0 
+) of a given sequence \{x}{\f0 \dn8 n}{\f0 
+\} where the filter impulse response is 
+the signal reversed and zero padded to length
+ N.}}
+}
+.ATT
+.STATUS Go to Section 31, p. 2
+.GOTO 31_bk.mcd
+.ATT_END
+.EQN 8 5 48 0
+{0:MM}NAME:120
+.EQN 0 10 49 0
+{0:mm}NAME:0;{0:MM}NAME-1
+.EQN 0 17 50 0
+{0:\k}NAME:0.01
+.EQN 0 10 51 0
+({0:xx}NAME)[({0:mm}NAME):{0:cos}NAME({0:\k}NAME*((({0:MM}NAME)/(2)-{0:mm}NAME))^(2))
+.EQN 3 -39 52 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:xx}NAME)[({0:mm}NAME)@{0:MM}NAME-1&0&(_n_u_l_l_&{0:M}NAME-1)&{0:mm}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 2 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 38 16 0 3 Signal
+.TXT 35 -13 175 0
+Cg a11.000000,26.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 matched filter}}
+}
+.EQN 0 22 324 0
+({0:hh}NAME)[({0:mm}NAME):({0:xx}NAME)[({0:MM}NAME-{0:mm}NAME-1)
+.TXT 5 -22 174 0
+Cg a11.750000,24.250000,38
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\fs20 \b zero padding\par  to length
+ N}}
+}
+.EQN 0 22 280 0
+{0:NN}NAME:128
+.EQN 0 10 282 0
+{0:nn}NAME:0;{0:NN}NAME-1
+.EQN 4 -10 56 0
+({0:xx}NAME)[({0:nn}NAME):{0:if}NAME({0:nn}NAME<{0:MM}NAME-1,({0:xx}NAME)[({0:nn}NAME),0)
+.EQN 0 28 57 0
+{0:XX}NAME:\({0:NN}NAME)*{0:icfft}NAME({0:xx}NAME)
+.EQN 5 -28 59 0
+({0:hh}NAME)[({0:nn}NAME):{0:if}NAME({0:nn}NAME<{0:MM}NAME,({0:hh}NAME)[({0:nn}NAME),0)
+.EQN 0 29 60 0
+{0:HH}NAME:\({0:NN}NAME)*{0:icfft}NAME({0:hh}NAME)
+.TXT 6 -51 359 0
+Cg a12.500000,74.625000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b restricted range}}
+}
+.EQN 0 22 360 0
+{0:DD}NAME:{0:NN}NAME-{0:MM}NAME
+.EQN 0 20 361 0
+{0:DD}NAME={0}?_n_u_l_l_
+.TXT 5 -42 176 0
+Cg a18.000000,22.000000,47
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 periodic convolution:\par 
+ direct form}}
+}
+.EQN 0 27 62 0
+({0:yyp}NAME)[({0:nn}NAME):{0:mm}NAME$({0:hh}NAME)[({0:mm}NAME)*({0:xx}NAME)[({0:pod}NAME({0:nn}NAME-{0:mm}NAME,{0:NN}NAME))
+.TXT 6 -27 177 0
+Cg a10.250000,22.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 aperiodic \par   convolution}}
+}
+.EQN 1 27 65 0
+({0:yya}NAME)[({0:nn}NAME):{0:mm}NAME$({0:hh}NAME)[({0:mm}NAME)*{0:if}NAME(({0:nn}NAME-{0:mm}NAMEò0)*({0:nn}NAME-{0:mm}NAMEó{0:NN}NAME-1),({0:xx}NAME)[({0:nn}NAME-{0:mm}NAME),0)
+.TXT 6 -17 66 0
+Cg a42.250000,57.000000,65
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\f0 To speed up the calculation,
+ we can use the alternate form}}
+}
+.TXT 4 -10 67 0
+Cg a18.000000,22.000000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 periodic convolution:\par 
+ DFT method}}
+}
+.EQN 1 24 68 0
+{0:yydft}NAME:(1)/(\({0:NN}NAME))*{0:cfft}NAME((({0:HH}NAME*{0:XX}NAME)){49})
+.EQN 5 -22 69 0
+&&(_n_u_l_l_&0)&({0:yyp}NAME)[({0:nn}NAME),({0:yydft}NAME)[({0:nn}NAME),({0:yya}NAME)[({0:nn}NAME)@&&(_n_u_l_l_&{0:NN}NAME-2*{0:DD}NAME-1)&{0:nn}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+3 0 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 59 22 0 3 Periodic & Aperiodic Convolutions
+.TXT 33 8 70 0
+Cg a63.500000,64.500000,123
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\f0 We expect the two computations
+ to agree for 2DD+1 contiguous indices including
+ NN-1 and we see that this the case. }}
+}
+.TXT 5 0 356 0
+Cg a34.375000,64.625000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Exercise 5.5}{  Vary DD and 
+observe the results.}}
+}
+.TXT 3 0 71 0
+Cg a64.625000,64.625000,600
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain A{ signal design problem is }{illustrated}
+ {by Example 5.1. It can be shown that, 
+when white noise accompanies a signal, the
+ maximum SNR at the output of a filter is
+ attained by the filter defined above. The
+ resolution (}{\ul \b Sec. 32}{) of the 
+output signal is especially important. Two
+ important parameters characterizing resolution
+ are (i) mainlobe width and (ii) the first
+ sidelobe level. To examine these parameters
+ for any particular signal design one need
+ only compute the convolution over a restricted
+ range, where it is correctly and rapidly
+  computed by the periodic convolution. 
+}}
+}
+.ATT
+.STATUS Go to Section 32, p. 2
+.GOTO 32_bk.mcd
+.ATT_END
+.TXT 33 -10 178 0
+Cg a23.625000,26.500000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 The Overlap-Add Method}}
+}
+.TXT 3 10 72 0
+Cg a64.375000,64.000000,481
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We now consider in detail the overlap-add
+ method of filtering long data sequences.
+ We know that, for a filter length L and
+ a data block length of M, a DFT of length
+ N = L+M-1 will compute a periodic convolution
+ in agreement with the aperiodic convolution-
+ which, of course, has length N = L+M-1.
+ So, if we form nonoverlapping, abutting
+ M-length blocks from the input sequence,
+ we will have to somehow overlap and combine
+ the filterings of each block. We do this
+ as follows.}}
+}
+.TXT 14 0 347 0
+Cg a61.000000,64.625000,212
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Exercise 5.2}{  }{We write out
+ the data sequence \{x}{\dn8 n}{, n=0,...,NT\},
+ formed into J=NT/M blocks \{\{x}{\up8 j}{\dn8 
+n}{, n=0,...M-1\}, j=0,J-1\}. We illustrate
+ this method with (L,M,N) = (8,25,32).}}
+}
+.EQN 7 6 73 0
+{0:NT}NAME:75
+.EQN 0 12 74 0
+{0:nn}NAME:0;{0:NT}NAME-1
+.EQN 0 19 75 0
+{0:N}NAME:32
+.EQN 0 13 76 0
+{0:n}NAME:0;{0:N}NAME-1
+.TXT 5 -61 78 0
+Cg a11.500000,24.000000,27
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 (defining data)}}
+}
+.EQN 0 29 77 0
+({0:x}NAME)[({0:nn}NAME):{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*{0:e}NAME*{0:nn}NAME)+{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*{0:\p}NAME*{0:nn}NAME)
+.EQN 6 -13 79 0
+{0:M}NAME:25
+.EQN 0 19 80 0
+{0:J}NAME:({0:NT}NAME)/({0:M}NAME)
+.EQN 0 11 81 0
+{0:J}NAME={0}?_n_u_l_l_
+.EQN 0 8 82 0
+{0:j}NAME:0;{0:J}NAME-1
+.TXT 5 -54 84 0
+Cg a17.750000,24.000000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 (defining data blocks\par 
+and zero padding)}}
+}
+.EQN 1 29 83 0
+({0:xblk}NAME)[({0:n}NAME,{0:j}NAME):{0:if}NAME({0:n}NAME<{0:M}NAME,({0:x}NAME)[({0:n}NAME+{0:j}NAME*{0:M}NAME),0)
+.TXT 5 -18 85 0
+Cg a64.250000,64.500000,204
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We can reconstruct the entire data
+ record from the blocks with an explicit
+ summation. The following elegant way}{,
+ a modification of the method given in }{\ul 
+\b Sec.1}{,}{ is due to Richard Kuehnel.}}
+}
+.ATT
+.STATUS Go to Section 1, p. 8
+.GOTO 1_bk.mcd
+.ATT_END
+.TXT 8 -11 218 0
+Cg a11.625000,75.625000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b (reassembling}{\b )}}
+}
+.EQN 0 20 214 0
+({0:w}NAME)[({0:nn}NAME):0
+.EQN 0 12 213 0
+({0:w}NAME)[({0:n}NAME+{0:j}NAME*{0:M}NAME):({0:w}NAME)[({0:n}NAME+{0:j}NAME*{0:M}NAME)+({0:xblk}NAME)[({0:n}NAME,{0:j}NAME)
+.TXT 0 39 87 0
+Cg a3.250000,7.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {(5.6)}}
+}
+.EQN 3 -55 88 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:nn}NAME),({0:w}NAME)[({0:nn}NAME)@{0:NT}NAME-1&0&(0&{0:NT}NAME-1)&{0:nn}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 50 16 0 3 Input Sequence: Original and Reassembled
+.TXT 27 -5 216 0
+Cg a64.875000,64.625000,627
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {To understand (5.6), consider it
+ first for}{ j = 0. It simply assigns the
+ sequence xblk}{\fs16 \dn6 n,0}{ to the 
+first N positions of w, all the values of
+ w}{\fs16 \dn6 n}{ having been initialized
+ to zero. Next, when j = 1, the right hand
+ side will, for n = 0,...,N-M-1, add w}{\fs16 
+\dn6 n+M}{ to xblk}{\fs16 \dn6 n,1}{ and
+ assign them to w}{\fs16 \dn6 n+M}{. For
+ the remaining n, w}{\fs16 \dn6 n+M}{ is
+ 0 and the values of xblk}{\fs16 \dn6 n,1}{
+ are assigned to w}{\fs16 \dn6 n+M}{. Thus
+ the overlap is handled. Similarly for the
+ remaining j. So, the reconstruction algorithm
+ (5.6) builds up w}{\fs16 \dn6 nn}{ in this
+ manner.}}
+}
+.TXT 17 -11 179 0
+Cg a15.000000,32.000000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 defining FIR filter\par 
+ and zero padding}}
+}
+.EQN 1 23 90 0
+{0:L}NAME:8
+.EQN 0 14 91 0
+({0:h}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<{0:L}NAME,(1)/({0:L}NAME),0)
+.EQN 18 -25 93 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:nn}NAME)@{0:NT}NAME-1&0&(0&{0:NT}NAME-1)&{0:nn}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 56 15 0 3 Input Data Sequence
+.EQN 22 -6 94 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&((({0:xblk}NAME){52}((0))))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 24 12 0 3 First Data Block
+.EQN 17 20 95 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&((({0:xblk}NAME){52}(1)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 24 12 0 3 Second Data Block
+.EQN 18 19 96 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&((({0:xblk}NAME){52}(2)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 13 0 3 Third Data Block
+.TXT 22 -34 97 0
+Cg a45.875000,56.375000,65
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Now each separate data block is
+ filtered using the DFT method.}}
+}
+.EQN 5 10 98 0
+({0:XBLK}NAME){52}({0:j}NAME):{0:dft}NAME(({0:xblk}NAME){52}({0:j}NAME))
+.EQN 0 30 99 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 5 -30 100 0
+({0:YBLK}NAME){52}({0:j}NAME):(((({0:XBLK}NAME){52}({0:j}NAME)*{0:H}NAME)){49})
+.EQN 5 0 101 0
+({0:yblk}NAME){52}({0:j}NAME):{0:idft}NAME(({0:YBLK}NAME){52}({0:j}NAME))
+.EQN 3 -8 102 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&((({0:yblk}NAME){52}(0)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 13 0 3 First Output Block
+.EQN 26 16 103 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&((({0:yblk}NAME){52}(1)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 13 0 3 Second Output Block
+.EQN 19 16 104 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&((({0:yblk}NAME){52}(2)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 13 0 3 Third Output Block
+.TXT 22 -34 105 0
+Cg a57.250000,63.625000,80
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We can reassemble the output blocks
+ using the algorithm we have ready, (5.6).}}
+}
+.EQN 4 9 212 0
+({0:y}NAME)[({0:nn}NAME):0
+.EQN 0 12 118 0
+({0:y}NAME)[({0:n}NAME+{0:j}NAME*{0:M}NAME):({0:y}NAME)[({0:n}NAME+{0:j}NAME*{0:M}NAME)+({0:yblk}NAME)[({0:n}NAME,{0:j}NAME)
+.EQN 4 -20 107 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&({0:y}NAME)[({0:nn}NAME)@{0:J}NAME*{0:M}NAME-1&&(_n_u_l_l_&{0:J}NAME*{0:M}NAME-1)&{0:nn}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 55 15 0 3 Filter Output by Overlap-Add Method
+.TXT 25 -1 108 0
+Cg a49.375000,59.500000,71
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We check the result by computing
+ the aperiodic convolution directly.}}
+}
+.EQN 5 7 109 0
+{0:m}NAME:0;{0:L}NAME
+.EQN 0 15 110 0
+({0:ya}NAME)[({0:nn}NAME):{0:m}NAME$({0:h}NAME)[({0:m}NAME)*{0:if}NAME({0:nn}NAME-{0:m}NAME<0,0,({0:x}NAME)[({0:nn}NAME-{0:m}NAME))
+.EQN 5 -21 111 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&({0:ya}NAME)[({0:nn}NAME),({0:y}NAME)[({0:nn}NAME)@{0:J}NAME*{0:M}NAME-1&&(_n_u_l_l_&{0:J}NAME*{0:M}NAME-1)&{0:nn}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 55 15 0 3 Filter Output by Direct Convolution
+.EQN 39 22 112 0
+({0:\e}NAME)[({0:nn}NAME):({0:y}NAME)[({0:nn}NAME)-({0:ya}NAME)[({0:nn}NAME)
+.EQN 3 -26 113 0
+(10)^(-15)&-(10)^(-15)&(_n_u_l_l_&_n_u_l_l_)&({0:\e}NAME)[({0:nn}NAME)@{0:J}NAME*{0:M}NAME-1&&(_n_u_l_l_&{0:J}NAME*{0:M}NAME-1)&{0:nn}NAME
+0 0 0 0 2 0 1 
+0 0 1 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 57 15 0 3 Error in Two Convolution Methods
+.TXT 25 3 219 0
+Cg a65.000000,64.750000,146
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Thus, within machine error, the
+ computations agree and we have established
+ an algorithm to perform the overlap-add
+ method of fast convolution.}}
+}
+.TXT 5 0 357 0
+Cg a59.375000,64.625000,108
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Exercise 5.6}{  }{Choose at 
+least one other signal and filter and carefully
+ observe the computations.}}
+}
+.TXT 6 -10 181 0
+Cg a24.500000,75.625000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 The Overlap-Save Method}}
+}
+.TXT 4 10 120 0
+Cg a64.625000,64.625000,533
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {For this method we choose a block
+ size M>L and a DFT size N=M. So, as we 
+observed above, the first L-1 values are
+ incorrect and will be discarded. This means,
+ referring to our beginning discussion in
+ this section, that the first L-1 values
+ of the data block were not used to produce
+ correct results. Thus, the data blocks 
+will have to be overlapped by L-1 indices.
+ If we are worried about the initial values
+ of the output- we may not be, if we are
+ processing a very long input- then we need
+ to prefix the data with L-1 zeros.}}
+}
+.EQN 15 1 121 0
+{0:M}NAME:32
+.EQN 0 10 122 0
+{0:J}NAME:3
+.EQN 0 8 123 0
+{0:j}NAME:0;{0:J}NAME-1
+.EQN 0 10 124 0
+{0:NT}NAME:{0:J}NAME*{0:M}NAME
+.EQN 0 13 125 0
+{0:NT}NAME={0}?_n_u_l_l_
+.EQN 0 11 126 0
+{0:nt}NAME:0;{0:NT}NAME-1
+.TXT 4 -62 128 0
+Cg a7.750000,16.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 defining\par data}}
+}
+.EQN 1 20 127 0
+({0:x}NAME)[({0:nt}NAME):{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*{0:\p}NAME*{0:nt}NAME)+{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*{0:e}NAME*{0:nt}NAME)
+.TXT 5 -20 233 0
+Cg a7.750000,16.000000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 defining\par filter}}
+}
+.EQN 1 17 234 0
+{0:L}NAME:8
+.EQN 0 10 235 0
+{0:N}NAME:{0:M}NAME
+.EQN 0 12 236 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 16 237 0
+({0:h}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<{0:L}NAME,(1)/({0:L}NAME),0)
+.TXT 5 -55 226 0
+Cg a9.375000,16.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 prefix zeros}}
+}
+.EQN 0 14 227 0
+{0:NP}NAME:{0:NT}NAME+{0:L}NAME-1
+.EQN 0 17 228 0
+{0:nn}NAME:0;{0:NP}NAME-1
+.EQN 0 15 229 0
+({0:xe}NAME)[({0:nn}NAME):{0:if}NAME({0:nn}NAME<{0:L}NAME-1,0,({0:x}NAME)[({0:nn}NAME-{0:L}NAME+1))
+.TXT 4 -46 230 0
+Cg a9.000000,16.000000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs20 defining\par data blocks}}
+}
+.EQN 1 20 231 0
+{0:NML}NAME:{0:N}NAME-{0:L}NAME
+.EQN 0 15 258 0
+{0:K}NAME:0;{0:NML}NAME-1
+.EQN 0 19 232 0
+({0:xblk}NAME)[({0:n}NAME,{0:j}NAME):({0:xe}NAME)[({0:n}NAME+{0:j}NAME*{0:NML}NAME)
+.TXT 5 -45 200 0
+Cg a64.500000,64.750000,269
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We reassemble the sequence from
+ the blocks. Since the blocks were deliberately
+ overlapped by L-1 samples, we take only
+ the remaining part of the blocks and abut
+ them. Note the index K runs only over this
+ partial block and that we discard the initial
+ zero padding.}}
+}
+.EQN 9 9 265 0
+({0:w}NAME)[({0:nn}NAME):0
+.EQN 0 10 266 0
+({0:w}NAME)[({0:K}NAME+{0:j}NAME*{0:NML}NAME):({0:w}NAME)[({0:K}NAME+{0:j}NAME*{0:NML}NAME)+({0:xblk}NAME)[({0:K}NAME+{0:L}NAME-1,{0:j}NAME)
+.TXT 0 40 358 0
+Cg a3.250000,7.625000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {(5.7)}}
+}
+.EQN 4 -65 142 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:nt}NAME),({0:w}NAME)[({0:nt}NAME)@{0:J}NAME*{0:NML}NAME-1&&(_n_u_l_l_&_n_u_l_l_)&{0:nt}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 60 14 0 3 Filter Input Data
+.EQN 24 2 143 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&((({0:xblk}NAME){52}(0)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 First Data Block
+.EQN 21 15 144 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&((({0:xblk}NAME){52}(1)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 14 0 3 Second Data Block
+.EQN 19 15 145 0
+2&-2&(_n_u_l_l_&_n_u_l_l_)&((({0:xblk}NAME){52}(2)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 14 0 3 Third Data Block
+.TXT 24 -25 146 0
+Cg a45.875000,52.750000,65
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Now each separate data block is
+ filtered using the DFT method.}}
+}
+.EQN 4 9 147 0
+({0:XBLK}NAME){52}({0:j}NAME):{0:dft}NAME(({0:xblk}NAME){52}({0:j}NAME))
+.EQN 5 0 148 0
+({0:YBLK}NAME){52}({0:j}NAME):(((({0:XBLK}NAME){52}({0:j}NAME)*{0:H}NAME)){49})
+.EQN 5 0 149 0
+({0:yblk}NAME){52}({0:j}NAME):{0:idft}NAME(({0:YBLK}NAME){52}({0:j}NAME))
+.EQN 3 -9 150 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&((({0:yblk}NAME){52}(0)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 13 0 3 First Output Block
+.EQN 19 16 151 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&((({0:yblk}NAME){52}(1)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 13 0 3 Second Output Block
+.EQN 22 16 152 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&((({0:yblk}NAME){52}(2)))[({0:n}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 13 0 3 Third Output block
+.TXT 22 -33 153 0
+Cg a64.125000,64.625000,150
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We now assemble the output, discarding
+ the first L-1 incorrect values of each 
+block. Our reconstruction algorithm (5.7)
+ is already set to do this.}}
+}
+.EQN 6 9 267 0
+({0:y}NAME)[({0:nn}NAME):0
+.EQN 0 10 268 0
+({0:y}NAME)[({0:K}NAME+{0:j}NAME*{0:NML}NAME):({0:y}NAME)[({0:K}NAME+{0:j}NAME*{0:NML}NAME)+({0:yblk}NAME)[({0:K}NAME+{0:L}NAME-1,{0:j}NAME)
+.TXT 5 -19 155 0
+Cg a63.000000,64.500000,139
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {We also compute the aperiodic convolution
+ for comparison and display the part of 
+it we expect will agree with the periodic
+ convolution.}}
+}
+.EQN 7 9 156 0
+{0:l}NAME:0;{0:L}NAME
+.EQN 0 15 157 0
+({0:ya}NAME)[({0:nt}NAME):{0:l}NAME$({0:h}NAME)[({0:l}NAME)*{0:if}NAME({0:nt}NAME-{0:l}NAME<0,0,({0:x}NAME)[({0:nt}NAME-{0:l}NAME))
+.EQN 5 -21 269 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:ya}NAME)[({0:nt}NAME),({0:y}NAME)[({0:nt}NAME)@3*{0:NML}NAME-1&&(_n_u_l_l_&_n_u_l_l_)&{0:nt}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+4 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 47 18 0 3 
+.TXT 28 -3 161 0
+Cg a46.875000,63.750000,64
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Thus we have implemented the overlap-save
+ method in Mathcad. }}
+}
+.TXT 3 0 163 0
+Cg a59.375000,63.500000,121
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \ulnone \f0 Exercise 5.7}{\f0 
+  }{Choose at least one other signal and
+ filter and carefully observe the computations.}}
+}
+.TXT 5 0 164 0
+Cg a64.000000,63.625000,472
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b0 \fs20 The above discussion 
+is illustrative of an important use of high-level
+ mathematical software. A signal processing
+ algorithm may be }{\fs20 \b0 \b0 \fs20 
+implemented, studied and understood}{\fs20 
+\b0  relatively quickly. Then the algorithm
+ may be translated into the much lower level
+ language that  will be used in the actual
+ application. This lower level language 
+is efficient computationally but a laborious
+ and opaque algorithm development environment!}}
+}
+.TXT 12 -10 362 0
+Cg a3.625000,74.625000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Note}}
+}
+.TXT 3 10 363 0
+Cg a64.750000,64.625000,207
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain We include on the book diskettes
+ the Mathcad 6.0+ file aper_cnv.mcd which
+ generates an {\b animation}, or movie, 
+of the aperiodic convolution. You can easily
+ modify it to animate the periodic convolution.}
+}
+.TXT 9 -10 202 0
+Cg a10.000000,75.625000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 Project 5.1}}
+}
+.TXT 4 9 203 0
+Cg a65.375000,65.625000,485
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b Comparison of convolution computation
+ methods}{  We have now discussed four methods
+ of computing the discrete-time convolution-
+ that is, the output of a digital filter.
+ These are the direct method, the DFT/FFT
+ method and the two fast convolution methods:
+ overlap-add and overlap-save.  Call a complex
+ multiply and a complex addition a }{\b 
+complex operation}{, }{\b CO}{. We wish 
+to compare the number of CO s required for
+ each method, without regard to memory requirements.}}
+}
+.EQN 1 -8 207 0
+{   42    40 0 0}{61}
+19778 2760 0 0 1068
+40 40 42 1 8 0 1680 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!)15[9P!Q"<'|It!(9yLG)15[9P!Q"<'|It!(9yLG)15[9P"3"<$FIr!b.Z"3"<$6It!b+t"3"<$&Iv!b)0"3"<#tIx!b&J"3"<#dIz!b#d"s"<#TIv!a&C!q,&LGDG5YG,!q+vLG))!q,%LGDG
+5YDF!q+wLG+m!q,$LGIq5YA`!q+wLG&R!`6p!aDF#U"<"rIv!a)0!a4*K5._#$J"!(9ZLG._!PIw"3+m!q,!LGIq5Y9P!q+wLG6r!`6p!a<6#U"<"BIv!a)0"c4*K5._"RJ"!(9WLG._!PI}"3+m!q+|LGIq5Y6j!q+wLG<>!`6p!a9P#U"<"RIv!a)0"C4*K5._"bJ"!(9ZLG._!PIw"3+m!q,!LGIq5Y>z!q+wLG+|!`6p!aA`#U"<#$Iv
+!a)0!A4*K5._#4I~!(9]LG._!PItK5._#DI~!(9^LG._!PIrK5._#TI|!(9_LG._!@Iv!aLV"3"<#dIz!b#d"3"<#tIx!b&J"3"<$&Iv!b)0"3"<$6It!b+t"3"<$FIr!b.Z!Q"<'|It!(9yLG)15[9P!Q"<'|It!(9yLG)15[9P!Q"<'|It!(9yLJ!Q
+
+.ATT
+.STATUS Remarks on solution
+.POPUP zj5_1.pas
+.ATT_END
+.TXT 14 8 204 0
+Cg a65.375000,65.625000,717
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Suppose that we have available 
+a FFT algorithm that requires (N/2)log}{\fs16 
+\dn6 2}{N CO s to compute the DFT of an 
+N-length sequence. Assume a data sequence
+ of length N}{\fs16 \dn6 g}{ is to be filtered
+ with an FIR filter of IR length L. We are
+ especially interested in, and therefore
+ assume, the case N}{\fs16 \dn6 g}{>>L. 
+It is convenient to normalize the number
+ of CO s by (Ng L), which therefore gives
+ the number of CO s required to compute 
+each filter output value, normalized by 
+the IR length. Then, e.g., the normalized
+ CO s for the direct method is 1. The other
+ methods can have normalized CO s less than
+ or greater than 1. Note that the block 
+size M is to be chosen in the fast convolution
+ methods. }}
+}
+.TXT 20 0 208 0
+Cg a65.875000,65.625000,129
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Your discussion should include 
+a procedure for choosing the most efficient
+ method and, as appropriate, the best block
+ length.}}
+}
+.TXT 7 -9 209 0
+Cg a10.000000,10.125000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 Project 5.2}}
+}
+.TXT 3 9 211 0
+Cg a58.125000,65.625000,112
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Reconsider }{\ul \b Example 2.3}{
+ by implementing the overlap-save and overlap-add
+ fast convolution methods.}}
+}
+.ATT
+.STATUS Go to Section 2, p. 7
+.GOTO 2_bk.mcd
+.ATT_END
+.TXT 7 -9 182 0
+Cg a10.875000,75.625000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {\b \fs24 References}}
+}
+.TXT 3 9 165 0
+Cg a30.750000,53.625000,102
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+}
+{\plain {Jackson, pp. 164-167}{\par }{Oppenheim
+ and Schafer (1989), Sec. 8.9\par Proakis
+ and Manolakis, Sec. 5.3.2}}
+}
+.EQN 8 -10 197 0
+{   19   605 0 0}{61}
+19778 12176 0 0 1068
+40 583 19 1 8 0 11096 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!>{5dIp!A6jLO9P!1!*!(<6LVLV-XIr!!DG5Y)0LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.Z
+LVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.ZLVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!!DG5Y)0
+LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!!9Q5hLVLVJ\LG#e
+

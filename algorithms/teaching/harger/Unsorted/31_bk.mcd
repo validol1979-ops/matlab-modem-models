@@ -1,0 +1,1868 @@
+.MCAD 303020000 1 74 672 672
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 34 18 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=6 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* |P *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=Greek^Compatibility
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.EQN 2 1 287 0
+{   19   583 0 0}{61}
+19778 12176 0 0 1068
+40 583 19 1 8 0 11096 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!)"C6k!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!>{5dIp!A6jLO9P!1!*!(<6LVLV-XIr!!DG5Y)0LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.Z
+LVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.ZLVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!!DG5Y)0
+LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!!9Q5hLVLVJ\LG#e
+
+.TXT 7 1 288 0
+Cg a23.000000,67.375000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs28 \ulnone \i0 \b 31  Radar}{\fs28 
+\b \i0 \ulnone \fs28 \ulnone \i0 \b  Processing}}
+}
+.EQN 2 -1 289 0
+{    8   580 0 0}{61}
+19778 4560 0 0 1068
+40 580 6 1 8 0 3480 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!)"C6k!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!4'5hLVLVJYLG4'5hLVLVJYLG>{5Y)0LG.Z!e)5!@I|!(9SLVIuLG,Z!a&J"3"<LVLVLK4&"3"<LVLVLK4&
+
+.TXT 4 11 310 0
+Cg a62.000000,61.875000,563
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {P}{rocessing radar signals was 
+o}{ne of the earliest applications of DSP
+ and it remains an important spur to DSP
+ development. The early radar systems transmitted
+ a pulse p(t) and then received the scaled
+ and delayed pulse, }{\f1 s }{p(t-}{\f1 
+t}{\fs16 \dn6 o}{), reflected by an isolated
+ object. The measurement of the }{\b delay}{
+ }{\f1 t}{\fs16 \dn6 o}{ gives the }{\b 
+range}{ R}{\fs16 \dn6 o}{ by the relation
+ }{\f1 t}{\fs16 \dn6 o}{ = 2R}{\fs16 \dn6 
+o}{/c , where c is the velocity of light.
+ The scale }{\f1 s}{ also depends on range,
+ but less sensitively.}}
+}
+.TXT 16 0 311 0
+Cg a61.750000,61.750000,146
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {For a variety of reasons- such 
+as efficiency of antennas and spectrum availability-
+ the }{\b pulse}{ is a }{\b narrowband signal}{
+ of the form}}
+}
+.EQN 6 6 312 0
+{0:p}NAME({0:t}NAME):{0:f.m}NAME({0:t}NAME)*{0:cos}NAME({0:\n.c}NAME*{0:t}NAME+{0:\f}NAME({0:t}NAME))
+.TXT 4 -6 313 0
+Cg a59.000000,62.000000,206
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {where }{\f1 n}{\fs16 \dn6 c}{ is
+ the}{\b  radiation frequency}{, }{\b RF}{,
+ and f}{\fs16 \dn6 m}{(t) and }{\f1 f}{(t)
+ are, respectively, the}{\b  }{\b0 pulse}{\b 
+ amplitude }{and}{\b  phase modulations}{.}}
+}
+.TXT 7 0 314 0
+Cg a61.500000,61.875000,1037
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {T}{o process the received radar
+ signal, it is (i) translated in frequency
+ by multiplying it by cos(}{\f1 n}{\fs16 
+\dn6 c}{t) and a copy of it by sin(}{\f1 
+n}{\fs16 \dn6 c}{t), the }{\b inphase}{ 
+and }{\b quadrature carriers}{ generated
+ by a}{\b  coherent}{ }{\b local oscillator
+ (LO)}{\b0 ,}{\b0  and (ii) each resulting
+ waveform is lowpass filtered to remove 
+the double harmonic}{\b0 . The result is
+ that the radar data is now the pair of 
+waveforms (}{\f1 \b0 s}{\b0  f}{\fs16 \dn6 
+\b0 m}{\b0 (t-}{\f1 \b0 t}{\fs16 \dn6 \b0 
+o}{\b0 )cos(}{\f1 \b0 f}{\b0 (t-}{\f1 \b0 
+t}{\fs16 \dn6 \b0 o}{\b0 )-}{\f1 \b0 q}{\b0 
+) ,}{\f1 \b0 s}{\b0  f}{\fs16 \dn6 \b0 m}{\b0 
+(t-}{\f1 \b0 t}{\fs16 \dn6 \b0 o}{\b0 )sin(}{\f1 
+\b0 f}{\b0 (t-}{\f1 \b0 t}{\fs16 \dn6 \b0 
+o}{\b0 )-}{\f1 \b0 q}{\b0 ) ) , where }{\f1 
+\b0 q}{\b0 =}{\f1 \b0 n}{\fs16 \dn6 \b0 
+c}{\f1 \b0 t}{\fs16 \dn6 \b0 o}{\b0  is 
+a phase and }{\f1 \b0 s}{\b0  is an amplitude.
+  Any such ordered pair of real functions
+ can be taken as the real and imaginary 
+parts of a }{\b complex representation }}
+}
+.EQN 20 8 315 0
+{0:f.c}NAME({0:t}NAME-{0:\t.o}NAME):{0:\s}NAME*{0:f.m}NAME({0:t}NAME-{0:\t.o}NAME)*({0:e}NAME)^(1i*{0:\f}NAME({0:t}NAME-{0:\t.o}NAME)-1i*{0:\q}NAME)
+.EQN 4 -6 543 0
+{   33    53 6272 0 8 336 833}{66}
+!1!*!!!$(/Aa!!1A#e!!!!!!!q!!!!>}!!!!!!.[!!!-!P!+.\+z!!!!#U(DLR1@!q!!!!#gLVLV!!.[!!!*!M#%Aa!%!!!!!A#g!!.[!!!"!PLVLG!(!!!!Ku&K!-#%Aa!!!!+u!!!N!1!!"C!!!0<9!q!!!!!!LVLV!!+u!!!N!1#e#E!!!#+x!q!-!$)79Q)d",!$47,#!(#i#%!T"#4'!!#a!A#e!!!!!!!!!a!!!#DH!A!%!!!!Iq#e
+!!.[!!!0!E>{-i!&!!!!"S)0LVIq!q!!!!#g!!!!!!+u!!!#!1&K!q!!!!#g!!!!!!4'!!#a!A!!LVLV!!!!!a!!!#DH!!!%!!!!(_#f!!G-!!!E!Q.[#%!T",!$)a2s!X#i#%"4!aAa)a1E!!!!(_#g!!+u!!#U!1!!!a!!!#DH!A!)!!!!KU&K!!4'!!!!!!!!!a!!!#DH!!!%!!!!!A#f!!G-!!!F!Q.[#%!T",!$)a2s!X#i#%"4!aAa
+)a1I!!!!KU&K!!!!!!!!!!!!!a!!!#DH!Q!%!!!!Iq#e!"!!!!#`!JDF(O!!!!!!9Q#e!!!!!!!!&O$y2y$s!!&K!a!!!#DH!!!1!!!!Ke&[!!4'!!!!!,Ac!!!!!!#g!C'@5`*G29DG!q+u!!!N!1+u!a!!!!6l!!!&!!!!"c&K!!!!!a!!!!&L!1!%!!!!(o#}!!.[!!!*!A!!!!!%!!!!(_#e!!9Q!!!B!q.[/!$K,,&K)q.z!16k!!!B
+!q+u,[$[,1Af-9#i!!!!(_#i!!.[!!!0!L1@?|Iv!!!!!1)0LVIq!q!!!!9SAm#%!!+u!!!#!1&K!q!!!!#gLVLV!!4'!!#a!A!!Am#%!!!!!a!!!#DH!q!%!!!!(_#f!!G-!!!E!Q.[HO0m!7AjD'$s"SAaHO.g!/6pD'#i!!!!(_#g!!+u!!#U!1.[!q!!!!Is-i!l!!.[!!!*!PLVLG!&!!!!!1&K!!!!!a!!!!&L!A!&!!!!!1&K!!!!
+"3!!!0Ac!!#dLVIq!!!%!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q#M!}G.3E;c!7Aj#%#M!qAaHO0m!1+u!!!N!1&K!a!!!0!"!q!%!!!!(_#g!!6k!!#_!A!!"3!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#E!!!#.^!q#M!}G.3E;c!7Aj#%#M!qAaHO0m!1+u!!!N!1)1!a!!!0!"!q!%!!!!(_#e!!+u!!!N!1+u!a!!!!6l!!!&!!!!"c&K
+!!!!!a!!!!&L!1!%!!!!(o#}!!.[!!!*!A!!!!!%!!!!(_#e!!<7!!!B!q4'-MG}-=$Z,g#4!-G3"3!!!##j!A!m.O4(2S4+!!!!(_#i!!.[!!!0!L1@?|Iv!!!!!1)0LVIq!q!!!!9SAm#%!!+u!!!#!1&K!q!!!!#gLVLV!!4'!!#a!A!!Am#%!!!!!a!!!#DH!q!%!!!!(_#f!!G-!!!E!Q.[HO07"iAj:s=E"`1IHO0u"Q6p:s<;!!!!
+(_#g!!+u!!#U!1.[!q!!!!Is-i!l!!.[!!!*!PLVLG!&!!!!!1&K!!!!!a!!!!&L!A!&!!!!!1&K!!!!"3!!!0Ac!!#dLVIq!!!%!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q#M!z6u3E;-"iAjEI99!~1IHO07"c+u!!!N!1&K!a!!!0!"!q!%!!!!(_#g!!6k!!#_!A!!"3!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#E!!!#.^!q#M!z6u3E;-
+"iAjEI99!~1IHO07"c+u!!!N!1)1!a!!!0!"!q!%!!!!(_#e!!+u!!!N!1+u!a!!!!6l!!!&!!!!"c&K!!!!!a!!!!&L!1!%!!!!(o#}!!.[!!!*!A!!!!!%!!!!(_#e!!>{!!!B!q<7.p/>,\'./B/O,p9Z-y1H!!!!&[.]!%BR#u=@"3+u!!!N!1+u!q!!!!Is?|KjLG.[!!!"!PLVLG!&!!!!"S(OAm!!!a!!!!&L!A!&!!!!!1)0LVIq
+"3!!!0Ac!!#%Am!!!!!%!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q!O"~Ae?=I-!l&YKU&y#$<9(o@{!a+u!!!N!1&K!a!!!0!"!q!&!!!!#U'8!%>{!q!!!!9SLVLV!!.[!!!"!A!!!!!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!Ku&K!0LVLG!!!!+u!!!N!1.[!a!!!#DH!1!/!!!!'-)6!#G8A!-k#PAe?=Ik!CG8KU&y"~Ae!a!!!#DH!A!%
+!!!!Iq#j!!+u!!!N!1&K"C!!!0<9!!!(!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!/!!!!'=)6!#G8A!-k#PAe?=Ik!CG8KU&y"~Ae!a!!!#DH!Q!%!!!!Iq#j!!+u!!!N!1!!!a!!!#DH!a!%!!!!"C#e!!.[!!!+!A!!!!!%!!!!!A#f!!+u!!!O!26k!q!!!!9S!!!!!!+u!!!N!1!!"c!!!##j"C!m.P4G._$Z/8DJHO?&!!!!&[.a!%2,
+-~,\.~._,GAe!!!!(_#i!!.[!!!0!L1@?|Iv!!!!!1)0LVIq!q!!!!9SAm#%!!+u!!!#!1&K!q!!!!#gLVLV!!4'!!#a!A!!Am#%!!!!!a!!!#DH!q!%!!!!(_#f!!G-!!!E!Q.[(o@i">&Y=y5{#S6p(oAI!sG8=y4+!!!!(_#g!!+u!!#U!1.[!q!!!!Is-i!l!!.[!!!*!PLVLG!&!!!!!1&K!!!!!a!!!!&L!A!&!!!!!1&K!!!!"3!!
+!0Ac!!#dLVIq!!!%!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q!O"}<>?=Hy">&YHO/+##6p(o@i"3+u!!!N!1&K!a!!!0!"!q!%!!!!(_#g!!6k!!#_!A!!"3!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#E!!!#.^!q!O"}<>?=Hy">&YHO/+##6p(o@i"3+u!!!N!1)1!a!!!0!"!q!%!!!!(_#e!!+u!!!N!1+u!a!!!!6l!!!&!!!!"c&K!!!!
+!a!!!!&L!1!%!!!!(o#}!!.[!!!*!A!!!!!%!!!!(_#e!!<7!!!B!q6k-}Jj&P!b/2*~"16v"S!!!##j"#!g-MBW,l&n"7)=!a!!!#DH!a!&!!!!#U(DLR1@!q!!!!#gLVLV!!.[!!!*!M#%Aa!%!!!!!A#g!!.[!!!"!PLVLG!(!!!!Ku&K!-#%Aa!!!!+u!!!N!1.[!a!!!#DH!1!/!!!!'-)6!/6pA!-%"^Ae3E<1!O6pKU(w!|Ae!a!!
+!#DH!A!%!!!!Iq#j!!.[!!!0!E>{-i!&!!!!"S)0LVIq!q!!!!#g!!!!!!+u!!!#!1&K!q!!!!#g!!!!!!4'!!#a!A!!LVLV!!!!!a!!!#DH!q!%!!!!(_#f!!G-!!!E!Q.[HO0[!gAjA!-%"b<9HO1;!O6pA!+y!!!!(_#g!!+u!!#U!1.[!a!!!#DH!A!)!!!!KU&K!!4'!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!G-!!!F!Q.[HO0[!gAj
+A!-%"b<9HO1;!O6pA!+y!!!!(_#h!!+u!!#U!1.[!a!!!#DH!!!%!!!!(_#i!!+u!!!)!1!!!q!!!!<9!!!!!!+u!!!#!1#e!a!!!#G.%)!&!!!!"S&K!!!!!a!!!#DH!!!+!!!!&[.c!%E>-~,`._B\KE+*"#+u!!!N!1+u!q!!!!Is?|KjLG.[!!!"!PLVLG!&!!!!"S(OAm!!!a!!!!&L!A!&!!!!!1)0LVIq"3!!!0Ac!!#%Am!!!!!%
+!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q#M!{<>3E;?"9AjHO1)"!6pHO0I"3+u!!!N!1&K!a!!!0!"!q!&!!!!#U'8!%>{!q!!!!9SLVLV!!.[!!!"!A!!!!!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!Ku&K!0LVLG!!!!+u!!!N!1.[!a!!!#DH!1!/!!!!'-)6!/6p=y55"]<>3E;}"!6pHO1)!{<>!a!!!#DH!A!%!!!!Iq#j!!+u!!!N!1&K
+"C!!!0<9!!!(!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!/!!!!'=)6!/6p=y55"]<>3E;}"!6pHO1)!{<>!a!!!#DH!Q!%!!!!Iq#j!!+u!!!N!1!!!a!!!#DH!a!%!!!!"C#e!!.[!!!+!A!!!!!%!!!!!A#f!!+u!!!O!26k!q!!!!9S!!!!!!+u!!!N!1!!"c!!!##j"C!n/QBW-N!m0=4-?m1E!!!!(_#i!!.[!!!*!PLVLG!&!!!!!1&K
+!!!!!a!!!#DH!A!)!!!!KU&K!!)1!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+u9Q*%!|Ae.{0[!m9WHO0h"#+u!!!N!1)1!a!!!0!"!q!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!Ku&K!!!!!!!!!!+u!!!N!1.[!a!!!#DH!1!-!!!!'-)5!-<<@_3m!}9WCE0w"/<<@_1E!!!!(_#g!!+u!!#U!1.[!a!!!#DH!A!)!!!!KU&K!!)1
+!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+uCE0Y"16pC53O!~6qCE0Y"#+u!!!N!1)1!a!!!0!"!q!&!!!!"S)0LVIq!q!!!!#g!!!!!!+u!!!N!1&K"C!!!0<9!!!$!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!-!!!!'=)5!*!$.{0[!f&PA!.6!_6pF;)5!!!!(_#h!!+u!!#U!1.[!a!!!!&L!A!&!!!!!1&K!!!!"3!!!0Ac!!!!
+!!!!!!!%!!!!(_#j!!+u!!!N!1#e#%!!!#+x!a#/!}AdHO0z!]<<Ho+?!}Ad!a!!!#DH!A!%!!!!Iq#j!!+u!!!N!1&K"C!!!0<9!!!$!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!-!!!!'=)5!-<<Ce+]!~>~CE1+!]<<Ce)5!!!!(_#h!!+u!!#U!1.[!q!!!!9SLVLV!!.[!!!"!A!!!!!%!!!!(_#g!!6k!!#_!A!!!Q!!!!!!!!!%!!!!
+(_#j!!+u!!!#!1#e#%!!!#.^!a"m"?G.=y5x!K<>2#(9"B<9!a!!!#DH!Q!%!!!!Iq#j!!+u!!!#!1&K!q!!!!#g!!!!!!4'!!#a!A!!!!!!!!!!!a!!!#DH!q!%!!!!(_#f!!Aa!!!E!Q+u@O6G!K<>KU(*"@Ac@O6G!A+u!!!N!1&K!a!!!0!"!q!%!!!!(_#g!!6k!!#_!A!!!Q!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#%!!!#.^!a"|
+"@Ac=y6e!J?$FK(H"@Ac!a!!!#DH!Q!%!!!!Iq#j!!.[!!!*!PLVLG!&!!!!!1&K!!!!!a!!!#DH!A!)!!!!KU&K!!)1!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+u=y5s"=<>8_8Y"7!)=y6A"C+u!!!N!1)1!a!!!0!"!q!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!Ku&K!!!!!!!!!!+u!!!N!1.[!a!!!#DH!1!-!!!!'-)5!,9X
+C%5s"=<>;E63">9XC%4+!!!!(_#g!!+u!!#U!1.[!a!!!#DH!A!)!!!!KU&K!!)1!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+u@O63"=<>=y5d"?6r@O63"3+u!!!N!1)1!a!!!0!"!q!&!!!!"S)0LVIq!q!!!!#g!!!!!!+u!!!N!1&K"C!!!0<9!!!$!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!-!!!!'=)5!'AjC520"o9W.+>D
+"%G8C51E!!!!(_#h!!+u!!#U!1.[!a!!!!&L!A!&!!!!!1&K!!!!"3!!!0Ac!!!!!!!!!!!%!!!!(_#j!!+u!!!N!1#e#%!!!#+x!a!1"~<=(oA*"$!,Ei1Q"~<=!a!!!#DH!A!%!!!!Iq#j!!+u!!!N!1&K"C!!!0<9!!!$!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!-!!!!'=)5!"!,@_1o#!9W#eA9"$!,@_1E!!!!(_#h!!+u!!#U!1.[
+!q!!!!9SLVLV!!.[!!!"!A!!!!!%!!!!(_#g!!6k!!#_!A!!!Q!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#%!!!#.^!a"/"`>~.+>V!UDQF;)_#">~!a!!!#DH!Q!%!!!!Iq#j!!+u!!!#!1&K!q!!!!#g!!!!!!4'!!#a!A!!!!!!!!!!!a!!!#DH!q!%!!!!(_#f!!Aa!!!E!Q+u#eA-!SG8F;)A##<:#eA-!Q+u!!!N!1&K!a!!!0!"!q!%
+!!!!(_#g!!6k!!#_!A!!!Q!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#%!!!#.^!a!1#!Ad(oA<!R!,Ho)A#!Ad!a!!!#DH!Q!%!!!!Iq#j!!.[!!!0!L1@?|Iv!!!!!1)0LVIq!q!!!!9SAm#%!!+u!!!#!1&K!q!!!!#gLVLV!!4'!!#a!A!!Am#%!!!!!a!!!#DH!q!%!!!!(_#f!!G-!!!E!Q.[4h#!!p6~A!.S$F<94h#_!H,'A!+y!!!!
+(_#g!!+u!!#U!1.[!q!!!!Is-i!l!!.[!!!*!PLVLG!&!!!!!1&K!!!!!a!!!!&L!A!&!!!!!1&K!!!!"3!!!0Ac!!#dLVIq!!!%!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q"7#pAeK6+1!p6~KU'a#t<94h#!!a+u!!!N!1&K!a!!!0!"!q!%!!!!(_#g!!6k!!#_!A!!"3!!!!!!!!!%!!!!(_#j!!+u!!!#!1#e#E!!!#.^!q"7#pAeK6+1
+!p6~KU'a#t<94h#!!a+u!!!N!1)1!a!!!0!"!q!%!!!!(_#e!!+u!!!N!1+u!a!!!!6l!!!&!!!!"c&K!!!!!a!!!!&L!1!%!!!!(o#}!!.[!!!*!A!!!!!%!!!!(_#e!!<7!!!B!q4'-MG}-=$Z,g#"!V<H"C!!!##j!a!e,,,X*#-i#u+u!!!N!1+u!q!!!!Is?|KjLG.[!!!"!PLVLG!&!!!!"S(OAm!!!a!!!!&L!A!&!!!!!1)0LVIq
+"3!!!0Ac!!#%Am!!!!!%!!!!(_#j!!+u!!!N!1#e#E!!!#+x!q"7#o<>K6*}"B6~HO/q#s6p4h"m"3+u!!!N!1&K!a!!!0!"!q!&!!!!#U'8!%>{!q!!!!9SLVLV!!.[!!!"!A!!!!!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!Ku&K!0LVLG!!!!+u!!!N!1.[!a!!!#DH!1!/!!!!'-)6!(,'=y6c$A<>K6+]!x,'HO/q#o<>!a!!!#DH!A!%
+!!!!Iq#j!!+u!!!N!1&K"C!!!0<9!!!(!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!/!!!!'=)6!(,'=y6c$A<>K6+]!x,'HO/q#o<>!a!!!#DH!Q!%!!!!Iq#j!!+u!!!N!1!!!a!!!#DH!a!%!!!!"C#e!!.[!!!+!A!!!!!%!!!!!A#f!!+u!!!O!26k!q!!!!9S!!!!!!+u!!!N!1!!"s!!!##j"c!r/Q$K/!$[/R'2>+3]#e6k!!!B!q+u
+,[$[,))8>|#i!!!!(_#i!!.[!!!*!PLVLG!&!!!!!1&K!!!!!a!!!#DH!A!)!!!!KU&K!!)1!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+u?=I:",)@C52v#a9W4h#."#+u!!!N!1)1!a!!!0!"!q!%!!!!!A#g!!.[!!!"!A!!!!!(!!!!Ku&K!!!!!!!!!!+u!!!N!1.[!a!!!#DH!1!-!!!!'-)5!&1Q@_2W#q9W/^#="(1Q@_1E
+!!!!(_#g!!+u!!#U!1.[!a!!!#DH!A!)!!!!KU&K!!)1!!!!!!!!!a!!!#DH!q!%!!!!!A#f!!Aa!!!F!Q+u/^"}"*,'C529#r6q/^"}"#+u!!!N!1)1!a!!!0!"!q!&!!!!"S)0LVIq!q!!!!#g!!!!!!+u!!!N!1&K"C!!!0<9!!!$!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!-!!!!'=)5!,&YF;*f#b>~:#L2!X,'F;)5!!!!(_#h!!+u
+!!#U!1.[!a!!!!&L!A!&!!!!!1&K!!!!"3!!!0Ac!!!!!!!!!!!%!!!!(_#j!!+u!!!N!1#e#%!!!#+x!a!w#qAd4h#@!V1QHo*)#qAd!a!!!#DH!A!%!!!!Iq#j!!+u!!!N!1&K"C!!!0<9!!!$!!!!!!!!!!+u!!!N!1.[!a!!!!&L!1!-!!!!'=)5!&1QCe*G#r>~/^#O!V1QCe)5!!!!(_#h!!+u!!#U!1.[!Q!!!!!!Bw4%!A#N6[#d
+5)=C!W<w3%"-!'<78dG5LJ53LP=!!:4\8C4#+E!!4w+^$G!Q
+
+.TXT 36 -13 532 0
+C x1,1,0,0
+.TXT 3 11 317 0
+Cg a61.875000,61.875000,319
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {While the phase }{\f1 q}{ does 
+depend on range}{, many radar systems do
+ not control knowledge of phase with sufficient
+ accuracy to make this dependence useful
+ and we consider }{\f1 q}{, along with }{\f1 
+s}{ and }{\f1 t}{\fs16 \dn6 o}{, as }{\b0 
+unknown parameters}{. }{We therefore write
+ the radar data in the form}}
+}
+.EQN 12 4 528 0
+{0:b}NAME:{0:\s}NAME*({0:e}NAME)^(-1i*{0:\q}NAME)
+.EQN 0 15 661 0
+{0:b}NAME*{0:f}NAME({0:t}NAME-{0:\t.o}NAME):{0:b}NAME*{0:f.m}NAME({0:t}NAME-{0:\t.o}NAME)*({0:e}NAME)^(1i*{0:\f}NAME({0:t}NAME-{0:\t.o}NAME))
+.TXT 0 37 321 0
+Cg a4.125000,6.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.1)}}
+}
+.TXT 6 -56 319 0
+Cg a58.125000,61.875000,127
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {where b is the }{\b0 unknown}{\b 
+ complex amplitude}{. The }{\b range-finding
+ radar signal model}{ is thus given by (31.1).}}
+}
+.TXT 10 -11 322 0
+Cg a24.625000,73.000000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 Signal Processing Theory}}
+}
+.TXT 4 11 323 0
+Cg a61.375000,62.000000,363
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {To complete a practical model for
+ the received data, we add a sample function
+ of a white normal random sequence that 
+models the }{\b0 thermal noise}{\b0  that
+ is always present in radar data due to 
+the material composition of the rec}{eiver
+ and the viewed scene- the sky, for example.
+ So t}{he }{\b range-finding radar data 
+model}{ is thus given by (31.2):}}
+}
+.EQN 12 6 324 0
+{0:z}NAME({0:t}NAME):{0:b}NAME*{0:f}NAME({0:t}NAME-{0:\t.o}NAME)+{0:no}NAME({0:t}NAME)
+.TXT 0 50 325 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.2)}}
+}
+.TXT 4 -56 328 0
+Cg a30.375000,61.000000,47
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {where the }{\b pulse complex modulation}{
+ is}}
+}
+.EQN 4 6 329 0
+{0:f}NAME({0:t}NAME):{0:f.m}NAME({0:t}NAME)*({0:e}NAME)^(1i*{0:\f}NAME({0:t}NAME))
+.TXT 0 51 330 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.3)}}
+}
+.TXT 4 -57 327 0
+Cg a62.250000,62.000000,251
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Our radar processing problem is
+ twofold. First, we must decide if the signal
+ is present in the data- this is the }{\b 
+detection problem}{. If the signal is present
+ then, secondly, we must estimate the delay-
+ this is the}{\b  estimation problem}{.}}
+}
+.TXT 9 0 331 0
+Cg a59.625000,62.000000,526
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {What shall the radar processor 
+be? There are several ways to arrive at 
+the usual processor form but we choose an
+ intuitive argument. First, let us address
+ the detection problem, assuming for the
+ moment that the parameters (b,}{\f1 t}{\fs16 
+\dn6 o}{) are known and that }{\f1 t}{\fs16 
+\dn6 o}{ = 0 and b=1. We know by now that
+ a filter can partially eliminate the noise}{,
+ so }{it is reasonable to take a linear 
+filter }{with IR h(t)}{ }{a}{s the first
+ stage of the radar processor}{, forming
+ the partially processed data}}
+}
+.EQN 18 7 333 0
+(-{0:\¥}NAME&{0:\¥}NAME`{0:z}NAME({0:s}NAME)*{0:h}NAME({0:t}NAME-{0:s}NAME)&{0:s}NAME)
+.TXT 6 -7 334 0
+Cg a18.500000,61.000000,27
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {which we examine at t=0.}}
+}
+.EQN 6 7 353 0
+(-{0:\¥}NAME&{0:\¥}NAME`{0:z}NAME({0:s}NAME)*{0:h}NAME(-{0:s}NAME)&{0:s}NAME)
+.TXT 0 50 338 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.4)}}
+}
+.TXT 4 -68 544 0
+C x1,1,0,0
+.TXT 2 11 336 0
+Cg a60.250000,61.000000,187
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {How shall we choose the IR h? The
+ thermal noise has a spectral density uniform
+ over frequency and it gives no preferable
+ FR. So consider the signal-dependent part
+ of the form (31.4):}}
+}
+.EQN 11 7 340 0
+(-{0:\¥}NAME&{0:\¥}NAME`{0:f}NAME({0:s}NAME)*{0:h}NAME(-{0:s}NAME)&{0:s}NAME)
+.TXT 0 50 349 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.5)}}
+}
+.TXT 7 -57 342 0
+Cg a62.000000,61.875000,193
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Regarding f(s) and h(-s) as vectors,
+ the form is the scalar product of f(s) 
+and conj[h(-s)], which is maximized over
+ h by choosing conj[h(-s)] to be collinear
+ with f(s). That is, we choose}}
+}
+.EQN 9 8 344 0
+{0:h}NAME({0:t}NAME):{0:\a}NAME*({0:f}NAME(-{0:t}NAME))]
+.TXT 0 49 358 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.6)}}
+}
+.TXT 5 -57 346 0
+Cg a55.625000,62.000000,170
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {where }{\f1 a}{ is a constant. 
+}{This filter is famous in signal processing
+ and was first discovered in the 1940s by
+ D.O.North:  it is called the}{\b  matched
+ filter.}}
+}
+.TXT 7 0 348 0
+Cg a62.000000,61.875000,324
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.1}{  Show that the
+ resulting maximum of (31.5), using (31.6),
+ is real and    that it is in fact the }{\b 
+energy}{, the integral of the squared modulus,
+ of the pulse            complex modulation
+ f(t). Show that the energy of the complex
+ pulse modulation is twice the energy of
+ the real pulse modulation.}}
+}
+.TXT 11 0 351 0
+Cg a62.250000,62.375000,330
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.2}{  The filter 
+IR of (31.6) is complex. Show how this filtering
+ may be          realized with four filters
+ with real IRs, given }{the real and imaginary
+ parts of the           complex radar data,
+ which are}{ obtained, from }{the real narrowband
+ radar data}{ by using inphase and quadrature
+ local oscillators.}}
+}
+.TXT 11 0 352 0
+Cg a61.250000,61.000000,107
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Next, to decide whether or not 
+the signal is present at t=0 with b=1, we
+ compare the squared-magnitude }}
+}
+.EQN 9 10 363 0
+((|((-{0:\¥}NAME&{0:\¥}NAME`{0:z}NAME({0:s}NAME)*({0:f}NAME({0:s}NAME))]&{0:s}NAME))))^(2)
+.TXT 0 47 359 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.7)}}
+}
+.TXT 7 -57 357 0
+Cg a59.375000,61.000000,201
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {with a real number tr called the
+ }{\b threshold.}{ The }{\b decision rule}{
+ we choose is this:\par \par       "D}{ecide
+ a signal is present}{ if and only if the}{\b 
+ test statistic}{ (31.7) exceeds tr ". }}
+}
+.TXT 9 0 360 0
+Cg a60.500000,61.875000,373
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Now we re-examine our processor
+ choice when (b,}{\f1 t}{\fs16 \dn6 o}{)
+ is not (1,0); in particular, we examine
+ it when the radar data is purely signal-
+ that is, z(t) is replaced in (31.7) by 
+bf(t-}{\f1 t}{\fs16 \dn6 o}{). Note that
+ taking the magnitude in (31.7) means that
+ b enters only as |b|: its unknown phase,
+ of no interest to us anyway, does not enter
+ the form.}}
+}
+.TXT 12 0 361 0
+Cg a62.250000,62.000000,210
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.3}{  Referring to
+ (31.7), show that if either the real or
+ imaginary part is        used- instead 
+of the magnitude- then the unknown phase
+ would render the                procedure
+ worthless.}}
+}
+.TXT 6 -11 545 0
+C x1,1,0,0
+.TXT 2 11 362 0
+Cg a60.500000,61.000000,279
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {If the delay is unknown, then our
+ above reasoning leads us to compute a set
+ of test statistics with h(t;}{\f1 t}{\fs16 
+\dn6 o}{) = conj[f[-(t-}{\f1 t}{\fs16 \dn6 
+o}{)]] for a sufficiently dense set of possible
+ }{\f1 t}{\fs16 \dn6 o}{. That is, we must
+ compute the set of forms }}
+}
+.EQN 11 10 364 0
+((|((-{0:\¥}NAME&{0:\¥}NAME`{0:z}NAME({0:s}NAME)*({0:f}NAME(-({0:\t.o}NAME-{0:s}NAME)))]&{0:s}NAME))))^(2)
+.TXT 0 47 366 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.8)}}
+}
+.TXT 8 -57 365 0
+Cg a59.875000,61.000000,315
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {But all these computations can 
+be realized in a fairly simple way. We perform
+ a matched filtering of the radar data and
+ examine its output over a set of times 
+equal to the set of selected delays. If 
+the maximum value exceeds the threshold 
+then we declare a signal present at the 
+location of the maximum value.}}
+}
+.TXT 10 0 371 0
+Cg a61.375000,61.125000,320
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Note that our processing scheme
+ can, }{to a certain extent}{, handle the
+ case of multiple objects with a modification
+ of the decision rule. We decide an object
+ present at every location whose output 
+is above the threshold, assuming that signals
+ are well separated, or resolved, with respect
+ to the width of the IR.}}
+}
+.TXT 12 -11 369 0
+Cg a33.375000,73.000000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 Linear FM (Chirp) Pulse
+ Modulation}}
+}
+.TXT 4 11 370 0
+Cg a61.375000,61.000000,798
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {A popular choice of radar pulse
+ modulation has a phase modulation depending
+ quadratically upon time. The derivative
+ of the phase, the frequency modulation,
+ is therefore linear in time. At audible
+ frequencies such a modulation sounds like
+ a chirp. This }{\b linear FM}{\b0 ,}{ or
+ }{\b Chirp}{\b0 ,}{ modulation is useful
+ because its bandwidth can be independent
+ of its time extent, which is determined
+ by the pulse amplitude modulation. Thus,
+ under a peak power restraint to prevent
+ physical damage, a pulse amplitude modulation
+ can be chosen }{of sufficient time extent}{
+ so the pulse modulation has the energy 
+for good detection performance}{- recall
+ Exercise 31.1-}{ and has large bandwidth
+ for location accuracy and resolution. We
+ wish to illustrate these attributes of 
+this signal. }}
+}
+.TXT 24 0 624 0
+Cg a61.375000,62.000000,353
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We choose a magnitude for the linear
+ FM pulse so that we can easily perform 
+all the calculations with pencil and paper.
+ Better, w}{e employ the symbolic mathematics
+ capability of Mathcad to good advantage-
+ and leave the former efforts to problems
+ as a check! For more practical magnitude
+ models, the computations would likely be
+ done numerically.}}
+}
+.TXT 12 0 372 0
+Cg a42.625000,61.000000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The linear FM pulse has a complex
+ modulation modeled by}}
+}
+.EQN 6 8 373 0
+{0:f.}NAME({0:t}NAME):\(({0:E}NAME)/(\(2*{0:\p}NAME)*{0:T}NAME))*{0:exp}NAME(-((({0:t}NAME)^(2))/(4*({0:T}NAME)^(2)))-1i*{0:k}NAME*(({0:t}NAME)^(2))/(2))
+.TXT 0 49 376 0
+Cg a4.125000,6.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.9)}}
+}
+.TXT 7 -57 391 0
+Cg a59.750000,61.000000,145
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {where T}{ is an indicator of the}{\b0 
+ }{\b0 time extent}{ of the modulation and
+ k}{ is the}{\b  linear FM rate}{. The }{\b 
+energy}{ of f is }}
+}
+.EQN 8 9 392 0
+{0:E.f}NAME:(-{0:\¥}NAME&{0:\¥}NAME`((|({0:f}NAME({0:t}NAME))))^(2)&{0:t}NAME)
+.TXT 4 -20 546 0
+C x1,1,0,0
+.TXT 3 11 396 0
+Cg a56.375000,61.000000,189
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.4}{  Show that the
+ energy E}{\fs16 \dn6 f}{ for f defined 
+by (31.9) is E}{.}{ \par Hint: recalling
+ the normal density function- see Sec. 25,
+ e.g.- no integration is required!}}
+}
+.TXT 8 0 388 0
+Cg a62.250000,62.000000,284
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This modulation has an unlimited
+ time extent but falls off exponentially;
+ it is not a bad model for practical signals
+ whose precise extent is hard to define.
+ It is useful to define the }{\b time extent}{\b0 
+,}{\b  T}{\fs16 \dn6 \b e}{\b0 ,}{ by the
+ }{\b radius of gyration measure}}
+}
+.EQN 14 7 390 0
+({0:T.e}NAME)^(2):((-{0:\¥}NAME&{0:\¥}NAME`({0:t}NAME)^(2)*((|({0:f}NAME({0:t}NAME))))^(2)&{0:t}NAME))/({0:E}NAME)
+.TXT 6 -7 397 0
+Cg a62.250000,62.000000,209
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.5}{  Show that the
+ time extent T}{\fs16 \dn6 e}{ of f, defined
+ by (31.9), is T}{. }{ (Hint:           
+recalling the normal density function- see
+ Sec. 25, e.g.- no integration is required)!}{
+ }}
+}
+.TXT 7 0 398 0
+Cg a60.000000,61.875000,431
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {It is useful to define the }{\b 
+bandwidth parameter}{ }{\f1 D}{=kT}{, which
+ is the extent of frequencies swept through
+ in time T. Thus k}{=}{\f1 D}{/T}{. T}{he
+ }{\b time-bandwidth product}{ (}{\b TBP)}{,
+ of the linear FM waveform is defined to
+ be TBP=}{\f1 D}{T}{\f1 .}{ A}{s we will
+ see, }{it is a significant parameter of
+ this modulation. With specific parameters
+ convenient here, the complex modulation
+ now takes the form}}
+}
+.EQN 13 0 483 0
+{0:T}NAME:5*(10)^(-6)
+.TXT 0 9 613 0
+Cg a2.625000,54.000000,6
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {sec}}
+}
+.EQN 0 7 484 0
+{0:\D}NAME:2*{0:\p}NAME*(10)^(6)
+.TXT 0 10 614 0
+Cg a5.375000,36.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {rad/sec}}
+}
+.EQN 0 12 485 0
+{0:E}NAME:(10)^(-2)
+.TXT 0 8 615 0
+Cg a3.375000,16.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {joule}}
+}
+.EQN 6 -37 410 0
+{0:f}NAME({0:t}NAME):\(({0:E}NAME)/(\(2*{0:\p}NAME)*{0:T}NAME))*{0:exp}NAME(-((({0:t}NAME)^(2))/(4*({0:T}NAME)^(2)))-1i*({0:\D}NAME)/({0:T}NAME)*(({0:t}NAME)^(2))/(2))
+.TXT 0 47 412 0
+Cg a5.000000,6.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.10)}}
+}
+.TXT 7 -56 509 0
+Cg a43.000000,53.750000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We graph the linear FM modulation's
+ magnitude and phase.}}
+}
+.EQN 4 26 510 0
+{0:t}NAME:-5*{0:T}NAME,-5*{0:T}NAME+(10*{0:T}NAME)/(128);5*{0:T}NAME
+.EQN 3 -25 511 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|({0:f}NAME({0:t}NAME))@&&(-{0:T}NAME&{0:T}NAME)&{0:t}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 18 0 3 Chirp Pulse Magnitude
+.TXT 26 -12 547 0
+C x1,1,0,0
+.EQN 1 7 512 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:\D}NAME)/({0:T}NAME)*(({0:t}NAME)^(2))/(2)@&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 1 0 2 0 1 
+0 0 1 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 18 0 3 Chirp Pulse Phase
+.TXT 29 -6 557 0
+Cg a22.500000,72.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Symbolic Computation of FT}}
+}
+.TXT 4 10 226 0
+Cg a61.000000,61.000000,338
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We are interested in the FT of 
+the chirp waveform. We compute it using 
+the symbolic mathematics feature of Mathcad.
+ To employ this feature, }{Choose }{\b Load
+ Symbolic Processor}{ from the }{\b Symbolic}{
+ menu.}{ It is convenient here to let }{\f1 
+w}{ be the frequency variable of the FT,
+ which we usually have denoted by }{\f1 
+n}{.}}
+}
+.TXT 11 0 291 0
+Cg a33.375000,34.125000,126
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 1}{  }{\b0 \fs20 Isolate a copy
+ of the right side  of (31.10) and click
+ on  and enclose an instance of the t variable.}}
+}
+.EQN 2 38 402 0
+\(({0:E}NAME)/(\(2*{0:\p}NAME)*{0:T}NAME))*{0:exp}NAME(-((({0:t}NAME)^(2))/(4*({0:T}NAME)^(2)))-1i*({0:\D}NAME)/({0:T}NAME)*(({0:t}NAME)^(2))/(2))
+.TXT 8 -38 292 0
+Cg a57.750000,58.000000,222
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 2}{  }{\b0 \fs20 No}{\b0 \fs20 
+w choose }{\b \fs20 Fourier Transform}{\fs20 
+\b0 \b0 \fs20  from the }{\b \fs20 Symbolic}{\fs20 
+\b0  menu.}{\fs20 \b0  The computation is
+ placed below}{\b0  }{\b0 \fs20 the form}{\b0 
+.}}
+}
+.EQN 9 9 415 0
+(2)^(((3)/(4)))*\({0:\E}NAME)*(({0:\p}NAME)^(((1)/(4))))/((\({0:\T}NAME)*\(1+2i*{0:\D}NAME*{0:\T}NAME)))*{0:\T}NAME*{0:exp}NAME((-1)/(4)*(({0:\w}NAME)^(2))/(((1)/((4*({0:\T}NAME)^(2)))+(1)/(2)*1i*({0:\D}NAME)/({0:\T}NAME))))
+.TXT 10 -9 293 0
+Cg a55.500000,58.000000,143
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 3}{  }{\b0 \fs20 Enclose the
+ exponent and then choose Simplify from 
+the Symbolic menu. Repeat for the factor
+ in }{front of the exponent.}}
+}
+.EQN 9 9 488 0
+(2)^(((3)/(4)))*\({0:E}NAME)*({0:\p}NAME)^(((1)/(4)))*(\({0:T}NAME))/(\(1+2i*{0:\D}NAME*{0:T}NAME))*{0:exp}NAME(-({0:\w}NAME)^(2)*(({0:T}NAME)^(2))/((1+2i*{0:\D}NAME*{0:T}NAME)))
+.TXT 6 -9 570 0
+Cg a58.250000,62.000000,180
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We rationalize the complex fractions.
+ E.g., for 1/(a+ib) form (a-ib)/[(a+ib)*(a-ib)\},
+ select the bracketed expression and choose
+ }{\b Simplify}{ from the }{\b Symbolic}{
+ menu.}}
+}
+.EQN 9 9 587 0
+(2)^(((3)/(4)))*\({0:E}NAME)*({0:\p}NAME)^(((1)/(4)))*(\({0:T}NAME)*\(1-2i*{0:\D}NAME*{0:T}NAME))/(\((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2))))*{0:exp}NAME(-({0:\w}NAME)^(2)*(({0:T}NAME)^(2)*(1-2i*{0:\D}NAME*{0:T}NAME))/((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2
+))))
+.TXT 5 -20 671 0
+C x1,1,0,0
+.TXT 2 11 294 0
+Cg a45.000000,59.375000,127
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 4 }{ }{\b0 \fs20 We now copy
+ this result to a}{\b0 \i \fs20  }{\b0 \i0 
+\fs20 function declaratio}{\b0 \fs20 n for
+ the FT.}}
+}
+.EQN 7 7 234 0
+{0:F}NAME({0:\w}NAME):(2)^(((3)/(4)))*\({0:E}NAME)*({0:\p}NAME)^(((1)/(4)))*(\({0:T}NAME)*\(1-2i*{0:\D}NAME*{0:T}NAME))/(\((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2))))*{0:exp}NAME(-({0:\w}NAME)^(2)*(({0:T}NAME)^(2)*(1-2i*{0:\D}NAME*{0:T}NAME))/((1+4*(
+{0:\D}NAME)^(2)*({0:T}NAME)^(2))))
+.TXT 0 49 431 0
+Cg a5.000000,6.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.11)}}
+}
+.TXT 8 -56 529 0
+Cg a58.875000,61.000000,113
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Notice that the FT of this linear
+ FM modulation itself has a quadratic phase
+ and a Gaussian-shaped magnitude.}}
+}
+.TXT 6 0 616 0
+Cg a60.500000,61.750000,351
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Problem 31.1}{  Analytically
+ compute the FT of the linear FM waveform.\par 
+}{\b Hint}{ We recall that the FT of a Gaussian
+ density function exp(-x}{\fs16 \up6 2}{/2}{\f1 
+s}{\fs16 \up6 2}{)/sqrt(2}{\f1 p}{\f1 s}{\fs16 
+\up6 2}{) is its characteristic function
+ exp(-}{\f1 s}{\fs16 \up6 2}{u}{\fs16 \up6 
+2}{/2). So no integration is required- just
+ algebra!}}
+}
+.TXT 9 0 513 0
+Cg a61.375000,61.000000,136
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We can make a }{\b radius of gyration
+ definition of bandwidth }{\f1 \b D}{\fs16 
+\dn6 \b e}{\b  }{ analogous to that for 
+time extent. }}
+}
+.EQN 12 10 514 0
+({0:\D.e}NAME)^(2):((-{0:\¥}NAME&{0:\¥}NAME`({0:\w}NAME)^(2)*((|({0:F}NAME({0:\w}NAME))))^(2)&{0:\w}NAME))/((-{0:\¥}NAME&{0:\¥}NAME`((|({0:F}NAME({0:\w}NAME))))^(2)&{0:\w}NAME))
+.TXT 11 -10 517 0
+Cg a40.750000,61.000000,64
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.6}{  Show that, 
+for the linear FM modulation, }}
+}
+.EQN 6 11 518 0
+{0:\D.e}NAME:\((1+((2*{0:\D}NAME*{0:T}NAME))^(2))/(((2*{0:T}NAME))^(2)))
+.TXT 7 -11 519 0
+Cg a61.250000,61.750000,176
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(Again, no integrations are required!)
+ Show that}{ the limiting form of }{\f1 
+D}{e when the TBP is large is }{\f1 D}{,
+ }{\ul independently of the time extent 
+T}{ }{\f1 !}{ }}
+}
+.TXT 7 0 608 0
+Cg a58.250000,61.250000,123
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We now graph the magnitude of the
+ FT of the chirp signal. The }{\b0 \fs20 
+radius of gyration measure of bandwidth}{
+  is}}
+}
+.EQN 7 12 609 0
+{0:\w}NAME:-5*{0:\D.e}NAME,(-5*{0:\D.e}NAME+(2*(5*{0:\D.e}NAME))/(128));5*{0:\D.e}NAME
+.TXT 3 -23 672 0
+C x1,1,0,0
+.EQN 1 7 610 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|({0:F}NAME({0:\w}NAME))@&&(-{0:\D.e}NAME&{0:\D.e}NAME)&{0:\w}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 50 23 0 3 Matched Filter Output FT
+.TXT 36 -5 553 0
+Cg a35.375000,73.000000,67
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Symbolic Computation }{\b of}{
+  }{\fs20 \b Matched Filtering }}
+}
+.TXT 4 9 551 0
+Cg a59.625000,62.000000,446
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We now compute the filter's output
+ (in the absence of noise) using Mathcad's
+ symbolic mathematics capability. We use
+ the frequency domain method, which corresponds
+ to the likely method used by a digital 
+processor. }{The FT of the output signal's
+ complex representation, Fo(}{\f1 w}{), 
+is the product of F(}{\f1 w}{) and the frequency
+ response of the matched filter, which is
+ F(}{\f1 w}{)*. So Fo(}{\f1 w}{) = |F(}{\f1 
+w}{)|}{\fs16 \up8 2}{.}}
+}
+.TXT 10 0 236 0
+Cg a0.500000,60.875000,4
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain { }}
+}
+.TXT 3 0 295 0
+Cg a50.625000,59.250000,93
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 5}{  }{\b0 \fs20 Isolate a copy
+ of the squared-magnitude of the right side
+ of (31.11). }}
+}
+.EQN 7 10 441 0
+((|((2)^(((3)/(4)))*\({0:E}NAME)*({0:\p}NAME)^(((1)/(4)))*(\({0:T}NAME)*\(1-2i*{0:\D}NAME*{0:T}NAME))/(\((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2))))*{0:exp}NAME(-({0:\w}NAME)^(2)*(({0:T}NAME)^(2)*(1-2i*{0:\D}NAME*{0:T}NAME))/((1+4*({0:\D}NAME)^(2)*({0:T}NAME
+)^(2)))))))^(2)
+.TXT 8 -10 296 0
+Cg a61.500000,62.000000,142
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 6}{  }{\b0 \fs20 Now click on
+ and enclose the form and choose S}{\fs20 
+\b0 \b0 \fs20 implify}{\fs20 \b0  from the
+ Symbolic menu .}{\b0  }}
+}
+.EQN 5 10 594 0
+2*\(2)*|({0:E}NAME)*\({0:\p}NAME)*(|({0:T}NAME))/(\(1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2)))*{0:exp}NAME(-2*({0:\w}NAME)^(2)*(({0:T}NAME)^(2))/((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2))))
+.TXT 8 -10 297 0
+Cg a53.375000,59.125000,139
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 7}{  }{\b0 \fs20 We now copy
+ it to a}{\b0 \i \fs20  }{\b0 \i0 \fs20 
+function declaratio}{\b0 \fs20 n defining
+ the output signal's FT.}}
+}
+.EQN 7 9 242 0
+{0:Fo}NAME({0:\w}NAME):2*\(2)*|({0:E}NAME)*\({0:\p}NAME)*(|({0:T}NAME))/(\(1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2)))*{0:exp}NAME(-2*({0:\w}NAME)^(2)*(({0:T}NAME)^(2))/((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2))))
+.TXT 0 47 448 0
+Cg a5.000000,7.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.12)}}
+}
+.TXT 5 -67 599 0
+C x1,1,0,0
+.TXT 3 11 298 0
+Cg a61.500000,62.125000,368
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 8}{  }{We can now have Mathcad
+ compute the IFT to find the output signal.}{
+ }{\b0 \fs20 Isolate a copy of the right
+ side of (31.14) and click on and enclose
+ an instance of the }{\f1 \fs20 \b0 w}{\fs20 
+\b0  variable. Choose }{\b \fs20 Inverse
+ Fourier Transform}{\fs20 \b0  and then 
+}{\b \fs20 Simplify}{\fs20 \b0  from the
+ }{\b \fs20 Symbolic}{\fs20 \b0  menu.}}
+}
+.TXT 1 0 244 0
+Cg a0.500000,51.875000,4
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain { }}
+}
+.EQN 10 11 601 0
+|({0:E}NAME)*(|({0:T}NAME))/({0:T}NAME)*{0:exp}NAME((-1)/(8)*({0:t}NAME)^(2)*((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2)))/(({0:T}NAME)^(2)))
+.TXT 6 -11 300 0
+Cg a59.250000,59.000000,248
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b 9}{  }{\b0 \fs20 We now copy
+ the result to a}{\b0 \i \fs20  }{\b0 \i0 
+\fs20 function declaratio}{\b0 \fs20 n defining
+ the output signal-           with a little
+ assistance as T}{\fs20 \b0  and E}{\fs20 
+\b0  are}{\fs20 \b0  real and positive!}}
+}
+.EQN 8 11 467 0
+{0:fo}NAME({0:t}NAME):{0:E}NAME*{0:exp}NAME((-1)/(8)*({0:t}NAME)^(2)*((1+4*({0:\D}NAME)^(2)*({0:T}NAME)^(2))/(({0:T}NAME)^(2))))
+.TXT 0 44 471 0
+Cg a5.000000,9.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.13)}}
+}
+.TXT 6 -55 478 0
+Cg a59.500000,60.000000,124
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {This result is relatively simple!
+ Note that the peak output value is the 
+energy of the complex modulation, as predicted.}}
+}
+.TXT 6 0 623 0
+Cg a60.500000,62.000000,351
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Problem 31.2}{  Derive the matched
+ filter output (31.13) analytically.\par 
+}{\b Hint}{ We recall that the FT of a Gaussian
+ density function exp(-x}{\fs16 \up6 2}{/2}{\f1 
+s}{\fs16 \up6 2}{)/sqrt(2}{\f1 p}{\f1 s}{\fs16 
+\up6 2}{) is its characteristic function
+ exp(-}{\f1 s}{\fs16 \up6 2}{u}{\fs16 \up6 
+2}{/2). So no integration is required- just
+ algebra!}}
+}
+.TXT 9 0 479 0
+Cg a60.000000,60.000000,103
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.6}{  Show that the
+ time extent, defined as the radius of gyration,
+ of the  output is}}
+}
+.EQN 6 9 480 0
+{0:T.oe}NAME:2*({0:T}NAME)/(\(1+((2*{0:\D}NAME*{0:T}NAME))^(2)))
+.TXT 1 46 499 0
+Cg a5.000000,5.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {(31.14)}}
+}
+.TXT 7 -55 520 0
+Cg a58.125000,60.000000,160
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {and that T}{\fs16 \dn6 oe}{ = 1/}{\f1 
+D}{\fs16 \dn6 e}{ ! Find}{ the limiting 
+form for large TBP and show that it is 1/}{\f1 
+D}{, }{\ul independently of T}{! }}
+}
+.TXT 7 0 73 0
+Cg a55.000000,61.125000,107
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We plot the input and output signals,
+ both normalized to unity maximum, to compare
+ their time extents. }}
+}
+.EQN 7 19 75 0
+{0:t}NAME:-3*{0:T}NAME,(-3*{0:T}NAME+(2*(3*{0:T}NAME))/(128));3*{0:T}NAME
+.EQN 4 -18 84 0
+&0&(_n_u_l_l_&_n_u_l_l_)&({0:fo}NAME({0:t}NAME))/({0:E}NAME),(|({0:f}NAME({0:t}NAME)))/({0:f}NAME(0))@&&(_n_u_l_l_&{0:T}NAME)&{0:t}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 16 0 3 Matched Filter Output
+.TXT 3 20 177 0
+Cg a0.500000,42.375000,4
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain { }}
+}
+.TXT 23 -32 306 0
+C x1,1,0,0
+.TXT 3 11 185 0
+Cg a56.375000,58.250000,269
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We observe that the output signal
+ has considerably less extent than the input
+ signal. T}{he}{\b \i0  }{\b \i0 compression
+ ratio}{\b0 \i0 ,}{ }{\b CR}{\b0 ,}{ is 
+the ratio of the extent of the output  to
+ the extent of the input, each measured 
+by radius of gyration.}}
+}
+.TXT 8 0 640 0
+Cg a42.125000,61.000000,66
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.7}{  Show that cr
+ for the linear FM waveform is }}
+}
+.EQN 5 9 641 0
+{0:CR}NAME:(1)/(2)*\(1+((2*{0:\D}NAME*{0:T}NAME))^(2))
+.EQN 0 26 643 0
+{0:CR}NAME={0}?_n_u_l_l_
+.TXT 4 -35 642 0
+Cg a50.875000,62.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Show that in the limit as the TBP
+ = }{\f1 D}{T becomes large that CR is TBP.}}
+}
+.TXT 5 -9 644 0
+Cg a6.125000,71.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Remark}}
+}
+.TXT 4 9 645 0
+Cg a61.500000,62.000000,477
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The intrinsic range estimation 
+accuracy of the linear FM pulse, taken as
+ the time extent of the output of its matched
+ filter, is independent of the time extent
+ of the  pulse when the time-bandwidth product
+ is large: TBP >> 1. This makes it possible
+ to transmit a long pulse, under a practical
+ peak power restraint, with accumulation
+ of large energy to enable good detection
+ and estimation performance. In practice
+ radar systems employ TBPs as large as several
+ thousand.}}
+}
+.TXT 17 -11 301 0
+Cg a24.375000,73.000000,38
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 Digital Signal Processing
+ }}
+}
+.TXT 4 11 253 0
+Cg a61.375000,61.000000,1071
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We have used symbolic mathematics
+ to describe analog processing of a radar
+ pulse with its matched filter. In practice,
+ the processing is often done with a digital
+ processor implementing a numerical algorithm.
+ The received data is heterodyned with in-phase
+ and quadrature mixers and sampled. This
+ can introduce artifacts due to aliasing.
+ T}{he engineering design problem typically
+ is to choose a sampling frequency sufficiently
+ large that the artifacts}{ are reduced 
+to a tolerable level}{. We will see here
+ that an artifact of aliasing can be the
+ introduction of a false image! }{In a radar
+ system, the received waveform from one 
+transmitted pulse is relatively long and
+ a fast convolution method (see Sec.5) may
+ be used. Here we will be concerned with
+ just one block of input data, of extent
+ about that of the transmitted pulse, in
+ order to reduce the computation to a feasible
+ level. To reduce the required computation,}{
+ we compute the digital filtering by the
+ frequency domain method and use the DFT/FFT.
+ Therefore we arrange the samples in DFT
+ order. }}
+}
+.TXT 29 0 286 0
+Cg a61.625000,61.250000,669
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The linear FM pulse with a Gaussian
+ magnitude is not limited in time or frequency.
+ So sampling introduces both truncation 
+and aliasing effects. To minimize the effects
+ due to truncation we choose t}{he sample
+ sequence of extent sufficient to include
+ all but a negligible amount of signal energy.
+ We will choose a}{ sufficiently large}{
+ sampling frequency by trial and error. 
+l}{\fs20 \f0 et }{\fs20 \f0 . W}{e take 
+the sampling frequency in the form }{\f1 
+f}{\f1 D}{ where }{\fs20 \f1 f}{\fs20 \f0 
+ is  a variable sampling factor}{ }{. A 
+}{\f1 f}{ no larger than 8 will be sufficient.
+ Then a sample length of N=1024 includes
+ all significant samples of f(t) }{.}}
+}
+.TXT 15 -11 656 0
+C x1,1,0,0
+.EQN 3 12 264 0
+{0:\f}NAME:6
+.EQN 0 8 265 0
+{0:\ws}NAME:{0:\f}NAME*{0:\D}NAME
+.EQN 0 10 266 0
+{0:Ts}NAME:(2*{0:\p}NAME)/({0:\ws}NAME)
+.EQN 0 10 268 0
+{0:Ts}NAME={0}?_n_u_l_l_
+.EQN 0 16 267 0
+{0:\ws}NAME={0}?_n_u_l_l_
+.EQN 7 -44 269 0
+{0:N}NAME:1024
+.EQN 0 9 270 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 12 271 0
+({0:fs}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó({0:N}NAME)/(2),{0:f}NAME({0:n}NAME*{0:Ts}NAME),{0:f}NAME(({0:n}NAME-{0:N}NAME)*{0:Ts}NAME))
+.EQN 8 -21 272 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 25 273 0
+{0:idft}NAME({0:v}NAME):((1)/(\({0:N}NAME)))*{0:cfft}NAME({0:v}NAME)
+.EQN 0 22 274 0
+{0:fsft}NAME:{0:dft}NAME({0:fs}NAME)
+.EQN 6 -49 275 0
+&&(0&1)&|(({0:fs}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 0 0 5 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 1 47 15 0 3 Chirp Pulse Sample Sequence
+.EQN 24 4 276 0
+&0&(0&{0:max}NAME({0:fsft}NAME))&|(({0:fsft}NAME)[({0:n}NAME))@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 0 0 1 
+0 0 1 0 0 0 1 
+0 0 0 5 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 1 47 15 0 3 DTFT of Sampled Chirp Pulse
+.TXT 26 -2 277 0
+Cg a60.625000,60.750000,290
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs20 \f0 We can see}{\f0 \fs24 
+ }{\f1 \fs24 f}{\fs20 \f0 =6 results in 
+a}{\fs20 \ulnone \f0  }{\fs20 \ulnone \f0 
+well }{\fs20 \f0 sampled signal with a slight
+ indication of aliasing}{\f0 \fs24 . }{\fs20 
+\f0 For}{\f0 \fs24  }{\f1 \fs20 f}{=5 there
+ is evident interference due to }{alias}{ing.}}
+}
+.TXT 7 0 531 0
+Cg a61.250000,61.000000,225
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.7}{  Vary f over
+ a range of about 1 to 8 and note the aliasing
+ effects in      the DFT. Explain the interference
+ pattern that is seen. Compute the percent
+ energy   of the waveform in the truncated
+ section.}}
+}
+.TXT 7 -12 606 0
+C x1,1,0,0
+.TXT 2 12 278 0
+Cg a36.500000,45.625000,61
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We now c}{\fs20 \f0 ompute the 
+output by frequency method.}}
+}
+.EQN 4 2 279 0
+({0:foft}NAME)[({0:n}NAME):((|(({0:fsft}NAME)[({0:n}NAME))))^(2)
+.EQN 0 16 280 0
+{0:fo}NAME:{0:idft}NAME({0:foft}NAME)
+.EQN 0 13 281 0
+{0:mx}NAME:{0:max}NAME({0:fo}NAME)
+.EQN 0 14 282 0
+{0:mx}NAME={0}?_n_u_l_l_
+.EQN 6 -27 283 0
+({0:fo}NAME)[({0:n}NAME):20*{0:log}NAME((({0:fo}NAME)[({0:n}NAME))/({0:mx}NAME)+(10)^(-5))
+.EQN 5 -17 284 0
+0&-60&(-40&0)&({0:fo}NAME)[({0:n}NAME)@({0:N}NAME)/(2)&0&(0&({0:N}NAME)/(2))&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+0 0 0 5 NO-TRACE-STRING
+0 3 1 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 0 0 0 NO-TRACE-STRING
+0 1 48 18 0 3 Matched Filter Output
+.TXT 30 -2 285 0
+Cg a62.375000,62.125000,717
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Examining the output, w}{\fs20 
+\f0 e note again that, relative to the input,
+ the output is of a larger peak value and
+ a very narrow time extent- in other words,
+ of  fine resolution. This is the great 
+virtue of the linear FM signal. We see that
+ the sampling procedure has introduced false
+ images, whose location and peak value depend
+ on}{\f0 \fs24  }{\f1 \fs24 f}{\f0 \fs24 
+. }{\fs20 \f0 By trial and error we find
+ that, with}{\f0 \fs24  }{\f1 \fs24 f}{=6.1,
+ these false images have a relative size
+ of -40 db: sufficiently low to be ignored.
+ (We remark, however, that radar signals
+ can show a dynamic range of more than 70
+ db: that is, some weak signals of interest
+ can be 70 db below the strongest signals)!}}
+}
+.TXT 21 0 527 0
+Cg a60.250000,61.000000,181
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Exercise 31.8}{  Vary }{\f1 
+f}{ and observe the location and height 
+of the false images. }{For a -40db specification
+ on the false image level, what is the minimal
+ }{\f1 f }{?}}
+}
+.TXT 9 -11 536 0
+Cg a11.125000,73.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 Project 31.1}}
+}
+.TXT 4 11 537 0
+Cg a61.250000,61.000000,650
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Extend the digital signal processing
+ discussion}{ by adding white Gaussian noise
+ of variable level to the data. Study how
+ the presence of this noise effects the 
+delectability of the signal and the accuracy
+ of the estimate of its position. }{Place
+ a few signals of variable amplitudes in
+ the data and study the resolution properties.}{
+ \par A sample spacing adequate for processing
+ may be to large for good accuracy. What
+ can be done? (Hint: recall Sec.16!) \par 
+Since the matched filter has a FR with a
+ quadratic phase, it has a delay that depends
+ linearly upon frequency. Give a simple,
+ even graphical, explanation for the compression
+ phenomenon.}}
+}
+.TXT 21 -11 657 0
+C x1,1,0,0
+.TXT 3 0 658 0
+Cg a11.125000,73.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 Project 31.2}}
+}
+.TXT 4 11 660 0
+Cg a61.375000,62.000000,385
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {If an object is moving with a component
+ v of its velocity }{\b v}{ along its line
+ of sight to the radar then there will be
+ a }{\b Doppler shift}{ }{\f1 n}{ in the
+ frequency of the received pulse given by
+ }{\f1 n}{ = (2v/c)}{\f1 n}{\fs16 \dn6 c}{.
+ Thus, the radar can estimate this velocity
+ by measuring the Doppler shift. The }{\b 
+range-Doppler-finding radar signal model}{
+ is now}}
+}
+.EQN 13 11 662 0
+{0:b}NAME*{0:f}NAME({0:t}NAME,{0:\t.o}NAME,{0:\n}NAME):{0:b}NAME*{0:f.m}NAME({0:t}NAME-{0:\t.o}NAME)*({0:e}NAME)^(1i*{0:\f}NAME({0:t}NAME-{0:\t.o}NAME))*({0:e}NAME)^(1i*{0:\n}NAME*{0:t}NAME)
+.TXT 4 -11 663 0
+Cg a58.250000,62.125000,217
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {All of the above discussion for
+ the range-finding radar carries over with
+ obvious modification. In particular, the
+ square-magnitude of output of the processing
+ filter matched to this signal can be put
+ in the form}}
+}
+.EQN 10 11 664 0
+{0:q}NAME({0:\t}NAME,{0:\m}NAME):((|((-{0:\¥}NAME&{0:\¥}NAME`{0:f}NAME({0:t}NAME)*{0:f}NAME({0:t}NAME-{0:\t}NAME)*({0:e}NAME)^(1i*{0:\m}NAME*{0:t}NAME)&{0:t}NAME))))^(2)
+.TXT 5 -11 665 0
+Cg a62.125000,62.000000,407
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {where }{\f1 t}{ is the difference
+ between the true delay and a test delay
+ and }{\f1 m}{ is the difference between
+ the true Doppler and a test Doppler. Thus
+ we are interested in how q(}{\f1 t}{,}{\f1 
+m}{) varies with changes in }{\f1 t}{ and
+ }{\f1 m}{. q is the famous}{\b  range-Doppler
+ ambiguity function}{. Its salient property
+ is this: assuming that the energy of f 
+has been normalized to unity,  }}
+}
+.EQN 14 17 666 0
+(-{0:\¥}NAME&{0:\¥}NAME`(-{0:\¥}NAME&{0:\¥}NAME`{0:q}NAME({0:\t}NAME,{0:\m}NAME)&{0:\t}NAME)&{0:\m}NAME)÷2*{0:\p}NAME
+.TXT 7 -17 667 0
+Cg a62.125000,62.000000,276
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Explain the significance of this
+ result. Compute this ambiguity function
+ for the linear FM pulse and make a surface
+ plot for various choices of T and }{\f1 
+D}{. Make other choices of pulse modulation.
+ E.g., a finite sequence of pulses, with
+ or  without phase modulation.}}
+}
+.TXT 12 -11 540 0
+Cg a10.875000,73.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 References}}
+}
+.TXT 4 11 669 0
+Cg a28.250000,61.000000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Ulaby, F.T, R.K. Moore and A.K.
+ Fung }}
+}
+.TXT 4 0 670 0
+Cg a38.750000,62.000000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Srinath, Rajasekaran and Viswanathan,
+ Secs. 8.4-8.8}}
+}
+.EQN 6 -11 302 0
+{   19   583 0 0}{61}
+19778 12176 0 0 1068
+40 583 19 1 8 0 11096 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!)"C6k!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!>{5dIp!A6jLO9P!1!*!(<6LVLV-XIr!!DG5Y)0LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.Z
+LVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.ZLVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!!DG5Y)0
+LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!!9Q5hLVLVJ\LG#e
+

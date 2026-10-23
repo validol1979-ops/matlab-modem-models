@@ -1,0 +1,1241 @@
+.MCAD 303010000 1 74 451 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 -1.000000 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 4 4 219 0
+Cg a42.625000,72.000000,91
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \ul \fs32 ENEE 420\par \par 
+}{\b \ul \fs32 P}{\b \ul \fs32 roject #3
+ Frequency Shift Keying}}
+}
+.TXT 15 0 220 0
+Cg a34.500000,68.000000,149
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul Team members}{:  Heidi Pohlhaus\par 
+                              John Yakoumatos\par 
+                              Daniel Orejuela
+                 }}
+}
+.TXT 3 41 221 0
+Cg a19.625000,37.000000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Submitted: March 14, 1996}}
+}
+.TXT 9 -40 222 0
+Cg a69.375000,69.000000,1580
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {With the growth of computer usage
+ in the past years, it is common for one
+ computer to need to communicate with another.
+  The advent and growth of the internet 
+has caused  even greater need forcommunications
+ between computers and computer systems.
+  All of these applications use the telephone
+ to provide the underlying communication
+ path.  Using a raw telephone line is not
+ suitable for sending computer signals, 
+which generally represent a 1 as 5 volts
+ and a 0 as 0 volts.  Two-level signals 
+suffer considerable distortion when transmitted
+ over a voice-grade telephone line, and 
+this of course leads to bit errors.  We 
+showed in chapter 5 that we could use AM
+ to send the data, then in chapter 6 we 
+found an even more efficient method in FM.
+  Therefore, for our third project we chose
+ the most popular method of data transmission
+ FSK.  In frequency modulation the voltage
+ level is constant but the carrier frequency
+ is different for a 1or 0.  A person listening
+ to FSK would hear two tones, corresponding
+ to 1 and 0.  Because voice grade telephone
+ provides only one channel for transmission
+ the bits must be sent serially, one after
+ the other ( or in groups of two if dibit
+ is used). The device that accepts characters
+ from a computer in the form of two-level
+ signals, one bit at a time, and transmits
+ the bits in groups of one or two in FSK
+ is the }{\i0 \b modem}{.  Presently the
+ baud rate for the modem is at 28,000 bps
+ or one bit change every 35.5 }{\f1 m}{sec.
+  Now that we have the motivation for our
+ project let's implement it using the power
+ of Mathcad.}}
+}
+.TXT 39 0 223 0
+Cg a66.875000,69.000000,98
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Using the binary data as a pulse
+ with a 0 for a 0 and 1 for a 1 we have 
+the transmitted signal;}}
+}
+.EQN 6 4 231 0
+{0:N}NAME:32
+.EQN 0 12 232 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 19 233 0
+{0:\w1}NAME:4*({0:\p}NAME)/({0:N}NAME)
+.EQN 0 12 235 0
+{0:\w2}NAME:(8*{0:\p}NAME)/({0:N}NAME)
+.EQN 4 -39 237 0
+{0:A.c}NAME:1
+.EQN 0 11 234 0
+{0:t}NAME:0,0.1;100
+.EQN 4 -17 224 0
+{0:s1}NAME({0:t}NAME):{0:A.c}NAME*{0:cos}NAME({0:\w1}NAME*{0:t}NAME)
+.TXT 0 19 225 0
+Cg a8.625000,40.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {,for a 1 and,}}
+}
+.EQN 0 13 226 0
+{0:s2}NAME({0:t}NAME):{0:A.c}NAME*{0:cos}NAME({0:\w2}NAME*{0:t}NAME)
+.TXT 0 18 228 0
+Cg a5.000000,20.000000,11
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {for a 0.}}
+}
+.EQN 4 -40 239 0
+{0:s}NAME({0:t}NAME):{0:if}NAME({0:t}NAME<50,{0:s1}NAME({0:t}NAME),{0:s2}NAME({0:t}NAME))
+.EQN 4 -12 236 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:s}NAME({0:t}NAME)@100&&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 1 3 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 15 0 3 
+.TXT 26 -3 241 0
+Cg a70.375000,70.000000,273
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The pulse shape is chosen so that
+ its bandwidth is appropriately contained.
+  In order to reduce the sidelobes and have
+ them decay fairly rapidly with regular 
+zero's we choose the truncated sinc function
+ shown below.  Doing so will give us low
+ intersymbol interference.}}
+}
+.EQN 11 3 206 0
+{0:Bs}NAME:.1
+.EQN 0 11 42 0
+{0:N}NAME:128
+.EQN 0 10 43 0
+{0:n}NAME:0;{0:N}NAME
+.EQN 0 12 41 0
+({0:p.ideal}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME÷({0:N}NAME)/(2),1,({0:sin}NAME({0:Bs}NAME*({0:n}NAME-({0:N}NAME)/(2))))/({0:Bs}NAME*({0:n}NAME-({0:N}NAME)/(2))))
+.EQN 6 -29 44 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:p.ideal}NAME)[({0:n}NAME)@128&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 33 18 0 3 SINC FUNCTION
+.TXT 30 0 242 0
+Cg a12.750000,65.000000,21
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Actual truncation;}}
+}
+.EQN 1 26 247 0
+({0:w.M}NAME)[({0:n}NAME):0.54-0.46*{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*{0:n}NAME)
+.EQN 7 -23 248 0
+({0:p}NAME)[({0:n}NAME):({0:p.ideal}NAME)[({0:n}NAME)*({0:w.M}NAME)[({0:n}NAME)
+.EQN 6 -4 201 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:p}NAME)[({0:n}NAME)@128&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 34 19 0 3 TRUNCATED SINC
+.TXT 34 -4 27 0
+Cg a57.625000,62.875000,223
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We would now like to see exactly
+ how the p(t) looks in the frequency domain.
+  Therefore, we take the Fourier transform
+ and in}{\f0  order to see greater detail
+ in the frequency response, we zero-pad 
+p to a length 16*M.}}
+}
+.EQN 9 4 28 0
+{0:K}NAME:16*{0:N}NAME
+.EQN 0 11 29 0
+{0:k}NAME:0;{0:K}NAME-1
+.EQN 0 13 30 0
+({0:pe}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAME<{0:N}NAME+1,({0:p}NAME)[({0:k}NAME),0)
+.EQN 0 22 31 0
+({0:\w}NAME)[({0:k}NAME):{0:k}NAME*(2*{0:\p}NAME)/({0:K}NAME)
+.EQN 6 -48 32 0
+{0:dft}NAME({0:v}NAME):\({0:K}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 21 33 0
+{0:P}NAME:{0:dft}NAME({0:pe}NAME)
+.EQN 0 13 34 0
+{0:\e}NAME:(10)^(-10)
+.EQN 0 10 35 0
+({0:P}NAME)[({0:k}NAME):{0:if}NAME(|(({0:P}NAME)[({0:k}NAME))÷0,{0:\e}NAME,({0:P}NAME)[({0:k}NAME))
+.EQN 5 -48 249 0
+5&-60&(-50&-3)&20*{0:log}NAME((|(({0:P}NAME)[({0:k}NAME)))/(|(({0:P}NAME)[(0))))@2*{0:\p}NAME&&(.181&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 1 1 0 1 1 
+0 0 1 1 0 1 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 56 21 0 3 P(w) FR MAGNITUDE
+.TXT 35 2 243 0
+Cg a61.250000,68.000000,86
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The synthesis transform is as we
+ expect in Mathcad since we are going from
+ 0...N-1.}}
+}
+.TXT 7 0 51 0
+Cg a66.250000,67.000000,109
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The bandwidth occupied by our sinc
+ pulse in the frequency domain is 2*(.273)}{\f1 
+ = .362}{\f1  }{radians.}}
+}
+.EQN 6 5 49 0
+{0:BW}NAME:.36
+.EQN 1 34 423 0
+({0:\p}NAME)/(16)={0}?_n_u_l_l_
+.TXT 5 -40 53 0
+Cg a63.750000,66.000000,108
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We now will define our encoding
+ scheme ( ie. the frequencies that will 
+correspond to the dibit symbols).}}
+}
+.TXT 8 8 60 0
+Cg a38.750000,54.000000,49
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b Four Phase FSK Message Sequence
+ Assignment }}
+}
+.TXT 5 5 56 0
+Cg a3.625000,67.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul \b Dibit}}
+}
+.TXT 0 17 57 0
+Cg a8.375000,50.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\ul \b Frequency}}
+}
+.TXT 3 -16 59 0
+Cg a26.750000,66.000000,207
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {00                             
+   0}{\par 01                           
+     }{\f1 p}{/4        }{\f1      }{\f1 
+  \par }{10                             
+   3}{\f1 p}{/4\par 11                  
+              }{\f1 p}}
+}
+.EQN 1 37 77 0
+{0:\w.FSK}NAME:({4,1}ö(7*{0:\p}NAME)/(16)ö(5*{0:\p}NAME)/(16)ö(3*{0:\p}NAME)/(16)ö({0:\p}NAME)/(16))
+.TXT 22 -47 61 0
+Cg a30.625000,67.000000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {The random message to be transmitted
+ is:}}
+}
+.EQN 7 41 69 0
+{0:x}NAME:({8,1}ö1ö1ö0ö1ö1ö0ö0ö0)
+.TXT 12 -45 72 0
+Cg a37.000000,67.000000,51
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Our message sequence will be encoded
+ as follows:}}
+}
+.EQN 16 1 428 0
+{0:\W.c}NAME:({4,1}ö({0:\w.FSK}NAME)[((({0:x}NAME)[(7)*1)+(({0:x}NAME)[(6)*2))ö({0:\w.FSK}NAME)[((({0:x}NAME)[(5)*1)+(({0:x}NAME)[(4)*2))ö({0:\w.FSK}NAME)[((({0:x}NAME)[(3)*1)+(({0:x}NAME)[(2)*2))ö({0:\w.FSK}NAME)[((({0:x}NAME)[(1)*1)+(({0:x}NAME)[(0)*2))
+)
+.EQN 0 29 76 0
+{0:\W.c}NAME:({4,1}ö(({0:\w.FSK}NAME)[((({0:x}NAME)[(1)*1)+(({0:x}NAME)[(0)*2)))ö(({0:\w.FSK}NAME)[((({0:x}NAME)[(3)*1)+(({0:x}NAME)[(2)*2)))ö(({0:\w.FSK}NAME)[((({0:x}NAME)[(5)*1)+(({0:x}NAME)[(4)*2)))ö(({0:\w.FSK}NAME)[((({0:x}NAME)[(7)*1)+(({0:x}NAME)
+[(6)*2))))
+.EQN 1 23 93 0
+{0:\W.c}NAME={0}?_n_u_l_l_
+.TXT 16 -53 250 0
+Cg a67.750000,69.000000,220
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We now define our sampling period
+ Ts such that it corresponds to a sampling
+ frequency fs which is greater than twice
+ the highest frequency }{\f1 W. }{\f1  }{The
+ FSK modulated  dibit waveforms are defined
+ as follows.}}
+}
+.EQN 8 39 255 0
+{0:K}NAME:4
+.EQN 0 8 256 0
+{0:k}NAME:0;{0:K}NAME-1
+.EQN 4 -37 105 0
+{0:T.s}NAME:0.06
+.EQN 0 29 88 0
+({0:m}NAME)[({0:n}NAME,{0:k}NAME):({0:p}NAME)[({0:n}NAME)*{0:cos}NAME(({0:\W.c}NAME)[({0:k}NAME)*{0:n}NAME)
+.EQN 5 -41 89 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME,0)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 19 0 3 1st DIBIT
+.EQN 0 36 252 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME,1)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 19 0 3 2nd DIBIT
+.EQN 27 -36 253 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME,2)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 19 0 3 3rd DIBT
+.EQN 0 36 254 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:m}NAME)[({0:n}NAME,3)@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 19 0 3 4th DIBIT
+.EQN 33 -36 108 0
+{0:J}NAME:4*{0:N}NAME
+.EQN 0 9 109 0
+{0:j}NAME:0;{0:J}NAME-1
+.EQN 0 14 257 0
+{0:N}NAME={0}?_n_u_l_l_
+.EQN 5 -23 148 0
+({0:Message}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAMEó{0:N}NAME-1,({0:m}NAME)[({0:j}NAME,0),{0:if}NAME({0:j}NAMEó2*{0:N}NAME-1,({0:m}NAME)[({0:j}NAME-{0:N}NAME,1),{0:if}NAME({0:j}NAMEó3*{0:N}NAME-1,({0:m}NAME)[({0:j}NAME-2*{0:N}NAME,2),({0:m}NAME)[({0:j}NAME
+-3*{0:N}NAME,3))))
+.EQN 7 2 110 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&({0:Message}NAME)[({0:j}NAME)@4*{0:N}NAME&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 19 0 3 FSK Modulated Message
+.TXT 31 3 119 0
+Cg a65.125000,68.000000,106
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We now will look at the magnitude
+ spectra of the cos(}{\f1 w0*}{n) through
+ cos(}{\f1 w}{3*n) sequences.}}
+}
+.EQN 5 0 120 0
+{0:dft}NAME({0:v}NAME):\({0:J}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 20 335 0
+{0:Mess.dft}NAME:{0:dft}NAME({0:Message}NAME)
+.EQN 0 24 337 0
+({0:\w}NAME)[({0:j}NAME):(2*{0:\p}NAME)/({0:J}NAME)*{0:j}NAME
+.EQN 5 -48 336 0
+&-50&(_n_u_l_l_&_n_u_l_l_)&20*{0:log}NAME(|(({0:Mess.dft}NAME)[({0:j}NAME))+(10)^(-8))@2*{0:\p}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:j}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 40 15 0 3 FR of  MESSAGE
+.TXT 29 1 183 0
+Cg a30.125000,65.000000,41
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b \fs24 Reception of the FSK waveform}}
+}
+.EQN 9 4 184 0
+{0:\w.m}NAME:({0:BW}NAME)/(2)
+.EQN 0 13 185 0
+{0:\w.m}NAME={0}?_n_u_l_l_
+.EQN 9 -16 187 0
+({0:H.BP1}NAME)[({0:j}NAME):0
+.EQN 0 10 188 0
+({0:H.BP1}NAME)[({0:j}NAME):(({0:\w}NAME)[({0:j}NAME)ò({0:\w.FSK}NAME)[(0)-{0:\w.m}NAME)*(({0:\w}NAME)[({0:j}NAME)ó({0:\w.FSK}NAME)[(0)+{0:\w.m}NAME)
+.EQN 0 37 189 0
+({0:H.BP1}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAMEó({0:J}NAME)/(2),({0:H.BP1}NAME)[({0:j}NAME),({0:H.BP1}NAME)[({0:J}NAME-{0:j}NAME))
+.EQN 8 -47 190 0
+({0:H.BP2}NAME)[({0:j}NAME):0
+.EQN 0 10 191 0
+({0:H.BP2}NAME)[({0:j}NAME):(({0:\w}NAME)[({0:j}NAME)ò({0:\w.FSK}NAME)[(1)-{0:\w.m}NAME)*(({0:\w}NAME)[({0:j}NAME)ó({0:\w.FSK}NAME)[(1)+{0:\w.m}NAME)
+.EQN 0 37 192 0
+({0:H.BP2}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAMEó({0:J}NAME)/(2),({0:H.BP2}NAME)[({0:j}NAME),({0:H.BP2}NAME)[({0:J}NAME-{0:j}NAME))
+.EQN 10 -47 193 0
+({0:H.BP3}NAME)[({0:j}NAME):0
+.EQN 0 10 194 0
+({0:H.BP3}NAME)[({0:j}NAME):(({0:\w}NAME)[({0:j}NAME)ò({0:\w.FSK}NAME)[(2)-{0:\w.m}NAME)*(({0:\w}NAME)[({0:j}NAME)ó({0:\w.FSK}NAME)[(2)+{0:\w.m}NAME)
+.EQN 0 37 195 0
+({0:H.BP3}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAMEó({0:J}NAME)/(2),({0:H.BP3}NAME)[({0:j}NAME),({0:H.BP3}NAME)[({0:J}NAME-{0:j}NAME))
+.EQN 9 -47 196 0
+({0:H.BP4}NAME)[({0:j}NAME):0
+.EQN 0 10 197 0
+({0:H.BP4}NAME)[({0:j}NAME):(({0:\w}NAME)[({0:j}NAME)ò({0:\w.FSK}NAME)[(3)-{0:\w.m}NAME)*(({0:\w}NAME)[({0:j}NAME)ó({0:\w.FSK}NAME)[(3)+{0:\w.m}NAME)
+.EQN 0 37 198 0
+({0:H.BP4}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAMEó({0:J}NAME)/(2),({0:H.BP4}NAME)[({0:j}NAME),({0:H.BP4}NAME)[({0:J}NAME-{0:j}NAME))
+.EQN 8 -43 199 0
+&&(_n_u_l_l_&_n_u_l_l_)&20*{0:log}NAME(|(({0:H.BP1}NAME)[({0:j}NAME))+(10)^(-8)),20*{0:log}NAME(|(({0:H.BP2}NAME)[({0:j}NAME))+(10)^(-8)),20*{0:log}NAME(|(({0:H.BP3}NAME)[({0:j}NAME))+(10)^(-8)),20*{0:log}NAME(|(({0:H.BP4}NAME)[({0:j}NAME))+(10)^(-8))@2*
+{0:\p}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:j}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 40 25 0 3 FR RESPONSE OF BANDPASS FILTERS
+.EQN 35 0 447 0
+&-50&(_n_u_l_l_&_n_u_l_l_)&20*{0:log}NAME(|(({0:Mess.dft}NAME)[({0:j}NAME))+(10)^(-8))@2*{0:\p}NAME&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:j}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 40 15 0 3 FR of  MESSAGE
+.TXT 29 -5 269 0
+Cg a41.375000,71.000000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Our message is passed through the
+ four bandpass filters.}}
+}
+.EQN 7 -1 265 0
+({0:Mess.out1}NAME)[({0:j}NAME):({0:H.BP1}NAME)[({0:j}NAME)*({0:Mess.dft}NAME)[({0:j}NAME)
+.EQN 0 28 266 0
+({0:Mess.out2}NAME)[({0:j}NAME):({0:H.BP2}NAME)[({0:j}NAME)*({0:Mess.dft}NAME)[({0:j}NAME)
+.EQN 6 -28 267 0
+({0:Mess.out3}NAME)[({0:j}NAME):({0:H.BP3}NAME)[({0:j}NAME)*({0:Mess.dft}NAME)[({0:j}NAME)
+.EQN 0 28 268 0
+({0:Mess.out4}NAME)[({0:j}NAME):({0:H.BP4}NAME)[({0:j}NAME)*({0:Mess.dft}NAME)[({0:j}NAME)
+.EQN 7 -27 271 0
+{0:idft}NAME({0:v}NAME):(1)/(\({0:J}NAME))*{0:cfft}NAME({0:v}NAME)
+.EQN 9 -1 270 0
+{0:Mess.out1}NAME:{0:idft}NAME({0:Mess.out1}NAME)
+.EQN 0 26 283 0
+{0:Mess.out2}NAME:{0:idft}NAME({0:Mess.out2}NAME)
+.EQN 5 -26 284 0
+{0:Mess.out3}NAME:{0:idft}NAME({0:Mess.out3}NAME)
+.EQN 0 26 285 0
+{0:Mess.out4}NAME:{0:idft}NAME({0:Mess.out4}NAME)
+.EQN 10 -24 272 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:Mess.out1}NAME)[({0:j}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 0 34 286 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:Mess.out2}NAME)[({0:j}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 25 -35 287 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:Mess.out3}NAME)[({0:j}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 0 35 288 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:Mess.out4}NAME)[({0:j}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.TXT 27 -33 293 0
+Cg a62.875000,65.000000,152
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {We demonstrate envelope detection
+ which consists of  (1) squaring, (2) filtering
+ out the "second harmonic", (3) square root
+ and (4) removal of 'DC':}}
+}
+.EQN 7 16 295 0
+({0:e1}NAME)[({0:j}NAME):((({0:Mess.out1}NAME)[({0:j}NAME)))^(2)
+.TXT 4 -16 294 0
+Cg a7.250000,9.250000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b S}{\b quaring}}
+}
+.EQN 1 16 308 0
+({0:e2}NAME)[({0:j}NAME):((({0:Mess.out2}NAME)[({0:j}NAME)))^(2)
+.EQN 4 57 446 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:Mess.out1}NAME)[({0:j}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:j}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 1 -57 309 0
+({0:e3}NAME)[({0:j}NAME):((({0:Mess.out3}NAME)[({0:j}NAME)))^(2)
+.EQN 6 0 310 0
+({0:e4}NAME)[({0:j}NAME):((({0:Mess.out4}NAME)[({0:j}NAME)))^(2)
+.TXT 12 -15 296 0
+Cg a8.875000,19.250000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b R}{\b emove\par  Harmonics}}
+}
+.EQN 2 15 443 0
+{0:eft1}NAME:{0:dft}NAME({0:e1}NAME)
+.EQN 0 12 444 0
+({0:mcapft1}NAME)[({0:j}NAME):((({0:\w}NAME)[({0:j}NAME)ó2*({0:\w.FSK}NAME)[(0))+(({0:\w}NAME)[({0:j}NAME)ò2*{0:\p}NAME-2*({0:\w.FSK}NAME)[(0)))*({0:eft1}NAME)[({0:j}NAME)
+.EQN 1 44 445 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:eft1}NAME)[({0:j}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:j}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 3 -56 311 0
+{0:eft2}NAME:{0:dft}NAME({0:e2}NAME)
+.EQN 0 12 416 0
+({0:mcapft2}NAME)[({0:j}NAME):((({0:\w}NAME)[({0:j}NAME)ó2*({0:\w.FSK}NAME)[(1))+(({0:\w}NAME)[({0:j}NAME)ò2*{0:\p}NAME-2*({0:\w.FSK}NAME)[(1)))*({0:eft2}NAME)[({0:j}NAME)
+.EQN 5 -12 313 0
+{0:eft3}NAME:{0:dft}NAME({0:e3}NAME)
+.EQN 0 12 417 0
+({0:mcapft3}NAME)[({0:j}NAME):((({0:\w}NAME)[({0:j}NAME)ó2*({0:\w.FSK}NAME)[(2))+(({0:\w}NAME)[({0:j}NAME)ò2*{0:\p}NAME-2*({0:\w.FSK}NAME)[(2)))*({0:eft3}NAME)[({0:j}NAME)
+.EQN 5 -12 315 0
+{0:eft4}NAME:{0:dft}NAME({0:e4}NAME)
+.EQN 0 12 418 0
+({0:mcapft4}NAME)[({0:j}NAME):((({0:\w}NAME)[({0:j}NAME)ó2*({0:\w.FSK}NAME)[(3))+(({0:\w}NAME)[({0:j}NAME)ò2*{0:\p}NAME-2*({0:\w.FSK}NAME)[(3)))*({0:eft4}NAME)[({0:j}NAME)
+.TXT 14 -28 300 0
+Cg a9.875000,14.250000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b S}{\b quare Root}}
+}
+.EQN 0 17 301 0
+{0:mcap1}NAME:{0:idft}NAME({0:mcapft1}NAME)
+.EQN 0 21 302 0
+({0:mcap1}NAME)[({0:j}NAME):\(|(({0:mcap1}NAME)[({0:j}NAME)))
+.EQN 4 -21 317 0
+{0:mcap2}NAME:{0:idft}NAME({0:mcapft2}NAME)
+.EQN 0 21 318 0
+({0:mcap2}NAME)[({0:j}NAME):\(|(({0:mcap2}NAME)[({0:j}NAME)))
+.EQN 5 -21 319 0
+{0:mcap3}NAME:{0:idft}NAME({0:mcapft3}NAME)
+.EQN 0 21 320 0
+({0:mcap3}NAME)[({0:j}NAME):\(|(({0:mcap3}NAME)[({0:j}NAME)))
+.EQN 5 -21 321 0
+{0:mcap4}NAME:{0:idft}NAME({0:mcapft4}NAME)
+.EQN 0 21 322 0
+({0:mcap4}NAME)[({0:j}NAME):\(|(({0:mcap4}NAME)[({0:j}NAME)))
+.TXT 6 -38 303 0
+Cg a9.250000,12.250000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\b R}{\b emove DC}}
+}
+.EQN 0 12 304 0
+{0:mcapft1}NAME:{0:dft}NAME({0:mcap1}NAME)
+.EQN 0 16 305 0
+({0:mcapft1}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAME÷0,0,({0:mcapft1}NAME)[({0:j}NAME))
+.EQN 0 24 306 0
+{0:mcap1}NAME:{0:idft}NAME({0:mcapft1}NAME)
+.EQN 4 -40 323 0
+{0:mcapft2}NAME:{0:dft}NAME({0:mcap2}NAME)
+.EQN 0 16 324 0
+({0:mcapft2}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAME÷0,0,({0:mcapft2}NAME)[({0:j}NAME))
+.EQN 0 24 325 0
+{0:mcap2}NAME:{0:idft}NAME({0:mcapft2}NAME)
+.EQN 4 -40 326 0
+{0:mcapft3}NAME:{0:dft}NAME({0:mcap3}NAME)
+.EQN 0 16 327 0
+({0:mcapft3}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAME÷0,0,({0:mcapft3}NAME)[({0:j}NAME))
+.EQN 0 24 328 0
+{0:mcap3}NAME:{0:idft}NAME({0:mcapft3}NAME)
+.EQN 4 -40 329 0
+{0:mcapft4}NAME:{0:dft}NAME({0:mcap4}NAME)
+.EQN 0 16 330 0
+({0:mcapft4}NAME)[({0:j}NAME):{0:if}NAME({0:j}NAME÷0,0,({0:mcapft4}NAME)[({0:j}NAME))
+.EQN 0 24 331 0
+{0:mcap}NAME:{0:idft}NAME({0:mcapft4}NAME)
+.EQN 5 -54 307 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:mcap1}NAME)[({0:j}NAME)@4*{0:N}NAME&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 15 0 3 OUTPUT- ENV. DETECTOR #1
+.EQN 0 35 332 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:mcap2}NAME)[({0:j}NAME)@4*{0:N}NAME&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 15 0 3 OUPUT- ENV. DETECTOR #2
+.EQN 23 -35 333 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:mcap3}NAME)[({0:j}NAME)@4*{0:N}NAME&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 15 0 3 OUTPUT - ENV. DETECTOR #3
+.EQN 0 36 334 0
+1.5&-.5&(_n_u_l_l_&_n_u_l_l_)&({0:mcap4}NAME)[({0:j}NAME)@4*{0:N}NAME&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 15 0 3 OUTPUT - ENV. DETECTOR #4
+.TXT 30 -32 342 0
+Cg a31.250000,67.000000,43
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {\fs24 \b Implementation of A Comparator!}}
+}
+.TXT 3 0 400 0
+Cg a67.250000,67.000000,327
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {At each time period (corresponding
+ to the transmission of a symbol) the output
+ of one\par of the four bandpass filters
+ will be greater than the others.  By comparing
+ the peak outputs of the envelope detectors
+ at the center of each time period, we can
+ determine the frequency of transmission
+ and hence the dibit transmitted.  }}
+}
+.TXT 12 1 347 0
+Cg a63.875000,66.000000,100
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {For the first Symbol coming through
+ we compare the peak outputs of the four
+ envelope \par detectors.}}
+}
+.EQN 5 1 348 0
+{0:max.mcap1}NAME:({0:mcap1}NAME)[(63)
+.EQN 0 20 354 0
+{0:max.mcap2}NAME:({0:mcap2}NAME)[(63)
+.EQN 4 -20 353 0
+{0:max.mcap3}NAME:({0:mcap3}NAME)[(63)
+.EQN 0 20 355 0
+{0:max.mcap4}NAME:({0:mcap4}NAME)[(63)
+.EQN 9 -20 357 0
+{0:max.mcap1}NAME={0}?_n_u_l_l_
+.EQN 0 20 359 0
+{0:max.mcap2}NAME={0}?_n_u_l_l_
+.EQN 4 -20 358 0
+{0:max.mcap3}NAME={0}?_n_u_l_l_
+.EQN 0 20 360 0
+{0:max.mcap4}NAME={0}?_n_u_l_l_
+.TXT 7 -19 361 0
+Cg a62.500000,64.000000,221
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Since mcap0 has the maximum value
+ in this region (corresponding to the peak
+ of a\par sinc function) the frequency of
+ the transmitted dibit was equal to }{\f1 
+p}{\f1  }{and the value of the transmitted
+ dibit must be "00".}}
+}
+.TXT 9 -1 378 0
+Cg a65.750000,66.000000,101
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {For the second Symbol coming through
+ we compare the peak outputs of the four
+ envelope \par detectors.}}
+}
+.EQN 9 1 362 0
+{0:max.mcap1}NAME:({0:mcap1}NAME)[(191)
+.EQN 0 20 363 0
+{0:max.mcap2}NAME:({0:mcap2}NAME)[(191)
+.EQN 4 -20 364 0
+{0:max.mcap3}NAME:({0:mcap3}NAME)[(191)
+.EQN 0 20 365 0
+{0:max.mcap4}NAME:({0:mcap4}NAME)[(191)
+.EQN 9 -20 366 0
+{0:max.mcap1}NAME={0}?_n_u_l_l_
+.EQN 0 20 367 0
+{0:max.mcap2}NAME={0}?_n_u_l_l_
+.EQN 4 -20 368 0
+{0:max.mcap3}NAME={0}?_n_u_l_l_
+.EQN 0 20 369 0
+{0:max.mcap4}NAME={0}?_n_u_l_l_
+.TXT 6 -22 379 0
+Cg a61.875000,64.000000,224
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Since mcap2 has the maximum value
+ in this region (corresponding to the peak
+ of a\par sinc function) the frequency of
+ the transmitted dibit was equal to 3}{\f1 
+p}{\f1 /4 }{and the value of the transmitted
+ dibit must be "01".}}
+}
+.TXT 12 -1 380 0
+Cg a64.375000,66.000000,100
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {For the third Symbol coming through
+ we compare the peak outputs of the four
+ envelope \par detectors.}}
+}
+.EQN 9 1 381 0
+{0:max.mcap1}NAME:({0:mcap1}NAME)[(319)
+.EQN 0 20 382 0
+{0:max.mcap2}NAME:({0:mcap2}NAME)[(319)
+.EQN 4 -20 383 0
+{0:max.mcap3}NAME:({0:mcap3}NAME)[(319)
+.EQN 0 20 384 0
+{0:max.mcap4}NAME:({0:mcap4}NAME)[(319)
+.EQN 9 -20 385 0
+{0:max.mcap1}NAME={0}?_n_u_l_l_
+.EQN 0 20 386 0
+{0:max.mcap2}NAME={0}?_n_u_l_l_
+.EQN 4 -20 387 0
+{0:max.mcap3}NAME={0}?_n_u_l_l_
+.EQN 0 20 388 0
+{0:max.mcap4}NAME={0}?_n_u_l_l_
+.TXT 6 -22 389 0
+Cg a63.750000,64.000000,222
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Since mcap3has the maximum value
+ in this region (corresponding to the peak
+ of a\par sinc function) the frequency of
+ the transmitted dibit was equal to }{\f1 
+p}{\f1 /4 }{and the value of the transmitted
+ dibit must be "10".}}
+}
+.TXT 10 0 390 0
+Cg a65.250000,66.000000,101
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {For the fourth Symbol coming through
+ we compare the peak outputs of the four
+ envelope \par detectors.}}
+}
+.EQN 9 1 391 0
+{0:max.mcap1}NAME:({0:mcap1}NAME)[(447)
+.EQN 0 20 392 0
+{0:max.mcap2}NAME:({0:mcap2}NAME)[(447)
+.EQN 4 -20 393 0
+{0:max.mcap3}NAME:({0:mcap3}NAME)[(447)
+.EQN 0 20 394 0
+{0:max.mcap4}NAME:({0:mcap4}NAME)[(447)
+.EQN 9 -20 395 0
+{0:max.mcap1}NAME={0}?_n_u_l_l_
+.EQN 0 20 396 0
+{0:max.mcap2}NAME={0}?_n_u_l_l_
+.EQN 4 -20 397 0
+{0:max.mcap3}NAME={0}?_n_u_l_l_
+.EQN 0 20 398 0
+{0:max.mcap4}NAME={0}?_n_u_l_l_
+.TXT 6 -22 399 0
+Cg a62.375000,64.000000,215
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Since mcap4 has the maximum value
+ in this region (corresponding to the peak
+ of a\par sinc function) the frequency of
+ the transmitted dibit was equal to 0}{\f1 
+ }{and the value of the transmitted dibit
+ must be "11".}}
+}
+.TXT 9 1 402 0
+Cg a30.125000,68.000000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+}
+{\plain {Our received message is :  "00 
+01 10 11".}}
+}

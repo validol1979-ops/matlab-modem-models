@@ -1,0 +1,128 @@
+.MCAD 303010000 1 74 16135 0
+.CMD PLOTFORMAT
+0 0 0 1 2 0 1 
+0 0 0 1 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+1 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 4 1 1 0
+Cg a70.375000,73.000000,193
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 420squm.mcd}{  To compute the
+ optimal quantization increment, given the
+ number of quantization levels, assuming
+ a standard normal random variable. The 
+standard normal density function is}}
+}
+.EQN 10 20 6 0
+{0:f}NAME({0:y}NAME):({0:exp}NAME((-({0:y}NAME)^(2))/(2)))/(\(2*{0:\p}NAME))
+.TXT 7 -14 2 0
+Cg a66.375000,67.125000,113
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b 1}{  Set the # of quantization
+ levels, L, and the initial estimate of 
+the quantization increment }{\f2 d}{.}}
+}
+.EQN 6 6 3 0
+{0:L}NAME:32
+.EQN 0 12 4 0
+{0:\d}NAME:0.2
+.EQN 0 13 5 0
+{0:i}NAME:1;(({0:L}NAME)/(2)-1)
+.EQN 0 18 7 0
+{0:TOL}NAME:0.0001
+.TXT 9 -47 16130 0
+Cg a42.125000,65.000000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain Compute the required integrals of
+ the necessary condition.}
+}
+.EQN 9 4 8 0
+{0:g}NAME({0:\d}NAME):{0:i}NAME$(({0:i}NAME-1)*{0:\d}NAME&{0:i}NAME*{0:\d}NAME`(({0:i}NAME-0.5)*{0:\d}NAME-{0:y}NAME)*{0:f}NAME({0:y}NAME)&{0:y}NAME)*(2*{0:i}NAME-1)
+.EQN 10 0 9 0
+{0:h}NAME({0:\d}NAME):((({0:L}NAME)/(2)-1)*{0:\d}NAME&10`(({0:L}NAME-1)*({0:\d}NAME)/(2)-{0:y}NAME)*{0:f}NAME({0:y}NAME)&{0:y}NAME)*({0:L}NAME-1)
+.TXT 12 -3 16131 0
+Cg a23.000000,64.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain The necessary condition is then}
+}
+.EQN 4 11 16134 0
+{0:g}NAME({0:\d}NAME)+{0:h}NAME({0:\d}NAME):0
+.TXT 5 -11 16135 0
+Cg a44.750000,63.000000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Courier;}
+{\f2\fnil Symbol;}
+}
+{\plain We use Mathcad's built-in function
+ root( ) to find the optimal {\f2 d}.}
+}
+.EQN 7 10 16129 0
+{0:root}NAME(({0:g}NAME({0:\d}NAME)+{0:h}NAME({0:\d}NAME)),{0:\d}NAME)={18996}?_n_u_l_l_

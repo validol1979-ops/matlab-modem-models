@@ -1,0 +1,985 @@
+.MCAD 303010000 1 77 150 0
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.000000 1.166667 1.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 |D |P |F
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 5 1 52 0
+Cg a10.000000,73.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 Project 7.1}}
+}
+.TXT 4 11 53 0
+Cg a62.250000,62.000000,430
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Consider an FIR \{h}{\fs16 \dn6 
+m}{, m=0,...M\} of length M+1 with M even.
+ Temporarily define the sequence \{g}{\fs16 
+\dn6 m}{=h}{\fs16 \dn6 m-M/2}{, m=-M/2,...,M/2\}.
+ For \{g}{\fs16 \dn6 m}{\} (i) even, (ii)
+ odd, and (iii) neither even or odd, compute
+ the FR of the corresponding FIRs \{h}{\fs16 
+\dn6 m}{\} using the DFT to approximate 
+the DTFT and plot the magnitude and phase.
+ Comment especially upon the nature of the
+ phase.}}
+}
+.TXT 14 0 54 0
+Cg a61.375000,62.000000,137
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {For each of the FIRs you considered,
+ write down the ZT and plot its poles and
+ zeros. comment especially upon the nature
+ of the zeros.}}
+}
+.TXT 10 -11 55 0
+Cg a8.000000,74.000000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 Solution}}
+}
+.TXT 4 8 1 0
+Cg a28.875000,54.125000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b (i)  "even g".  }{\b0 We define
+ an "even" FIR.}}
+}
+.EQN 5 2 2 0
+{0:M}NAME:8
+.EQN 0 9 3 0
+{0:m}NAME:0;{0:M}NAME
+.EQN 0 11 5 0
+({0:h}NAME)[({0:m}NAME):0
+.EQN 0 10 4 0
+({0:h}NAME)[({0:m}NAME):{0:if}NAME({0:m}NAMEó({0:M}NAME)/(2),({0:m}NAME)^(2)+1,(({0:M}NAME-{0:m}NAME))^(2)+1)
+.TXT 6 -30 7 0
+Cg a11.250000,21.625000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain check eveness:}
+}
+.EQN 4 6 8 0
+{0:g}NAME({0:x}NAME):({0:h}NAME)[({0:x}NAME+({0:M}NAME)/(2))
+.EQN 0 15 9 0
+{0:x}NAME:-(({0:M}NAME)/(2)),-(({0:M}NAME)/(2))+1;({0:M}NAME)/(2)
+.EQN 5 -14 10 0
+&0&(_n_u_l_l_&_n_u_l_l_)&{0:g}NAME({0:x}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:x}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 An even sequence
+.EQN 0 31 6 0
+&0&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:m}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:m}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 An "Even" FIR
+.TXT 28 -42 56 0
+Cg a69.250000,70.000000,174
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain We approximate the FR (DTFT) of 
+the FIR with the DFT. We can get as many
+ points in the DFT as we like- remember 
+the points are samples of the DTFT- by zero-padding
+ the FIR.}
+}
+.EQN 6 7 13 0
+{0:N}NAME:128
+.EQN 0 11 14 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 16 15 0
+({0:h}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó{0:M}NAME,({0:h}NAME)[({0:n}NAME),0)
+.EQN 5 -27 16 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 19 17 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 0 15 22 0
+{0:k}NAME:0;{0:N}NAME-1
+.EQN 0 15 18 0
+({0:\w}NAME)[({0:n}NAME):{0:n}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.EQN 5 -53 21 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:k}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 FR of an even FIR
+.EQN 0 35 49 0
+&-30&(_n_u_l_l_&_n_u_l_l_)&20*{0:log}NAME(|((({0:H}NAME)[({0:k}NAME))/(({0:H}NAME)[(0))))@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 FR of an even FIR (db)
+.TXT 29 -31 50 0
+Cg a42.500000,61.000000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain Notice that there happens to be 
+no zeros in the magnitude.}
+}
+.TXT 5 0 51 0
+Cg a18.875000,61.000000,27
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain Now let us plot the phase.}
+}
+.EQN 3 7 23 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:arg}NAME(({0:H}NAME)[({0:k}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 40 15 0 3 Phase (mod 2pi) of an even FIR
+.TXT 26 -14 42 0
+Cg a41.500000,68.000000,60
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain Let's look at the phase more carefully
+ by "un-wrapping it".}
+}
+.EQN 5 10 43 0
+({0:\q}NAME)[(0):{0:arg}NAME(({0:H}NAME)[(0))
+.EQN 0 15 44 0
+({0:\q}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAME÷0,({0:\q}NAME)[(0),({0:\q}NAME)[({0:k}NAME-1)+{0:arg}NAME(({0:H}NAME)[({0:k}NAME)*(({0:H}NAME)[({0:k}NAME-1))]))
+.EQN 4 -11 45 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:\q}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 Phase of an even FIR 
+.TXT 26 -13 150 0
+Cg a67.375000,69.000000,102
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain As there are no zeros in the FR,
+ the phase is linear and purely due to the
+ delay for causality, M/2.}
+}
+.TXT 9 0 57 0
+Cg a62.750000,69.000000,89
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain We now write down the transfer function
+ (ZT of h) and find and plot the poles and
+ zeros.}
+}
+.EQN 6 7 24 0
+{0:H}NAME({0:z}NAME):((0,{0:M}NAME,{0:m}NAME,({0:h}NAME)[({0:m}NAME)*({0:z}NAME)^(-{0:m}NAME)){64})
+.EQN 0 21 26 0
+({0:hr}NAME)[({0:m}NAME):({0:h}NAME)[({0:M}NAME-{0:m}NAME)
+.EQN 2 17 25 0
+{0:H}NAME({0:z}NAME):(((0,{0:M}NAME,{0:m}NAME,({0:hr}NAME)[({0:m}NAME)*({0:z}NAME)^({0:m}NAME)){64}))/(({0:z}NAME)^({0:M}NAME))
+.EQN 15 -38 31 0
+{0:polyroots}NAME({0:hr}NAME)={0}?_n_u_l_l_
+.EQN 0 32 32 0
+{0:zeros}NAME:{0:polyroots}NAME({0:hr}NAME)
+.EQN 16 -17 34 0
+{0:j}NAME:0;{0:M}NAME-1
+.EQN 13 -9 33 0
+2.0&-2.0&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Im}NAME(({0:zeros}NAME)[({0:j}NAME)),0@2.0&-2.0&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Re}NAME(({0:zeros}NAME)[({0:j}NAME)),0
+0 1 0 0 2 0 1 
+0 1 0 0 2 0 1 
+0 2 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+1 3 3 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 33 29 0 3 Pole-zero plot: even FIR filter
+.EQN 53 -9 36 0
+{0:polyroots}NAME({0:hr}NAME)={0}?_n_u_l_l_
+.EQN 0 30 38 0
+({0:polyroots}NAME({0:hr}NAME))]={0}?_n_u_l_l_
+.TXT 26 -27 40 0
+Cg a7.750000,70.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 Note:  !!!}}
+}
+.EQN 0 14 35 0
+(((1)/({0:polyroots}NAME({0:hr}NAME)))){49}={0}?_n_u_l_l_
+.TXT 17 -19 41 0
+Cg a57.875000,68.000000,140
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\fs20 \b Thus, we have observed
+ that the zeros have occurred in }{\fs24 
+\b q}{\fs24 \b \ul uadruplets}{\fs24 \b 
+ }{\fs20 \b !}{\fs24 \b !}}
+}
+.TXT 29 0 58 0
+Cg a27.875000,54.125000,51
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b (ii)  "odd g".  }{\b0 We define
+ an "odd" FIR.}}
+}
+.EQN 5 2 59 0
+{0:M}NAME:8
+.EQN 0 9 60 0
+{0:m}NAME:0;{0:M}NAME
+.EQN 0 11 61 0
+({0:h}NAME)[({0:m}NAME):0
+.EQN 0 10 62 0
+({0:h}NAME)[({0:m}NAME):{0:if}NAME({0:m}NAME<({0:M}NAME)/(2),({0:m}NAME)^(2)+1,{0:if}NAME({0:m}NAME÷({0:M}NAME)/(2),0,-({0:h}NAME)[({0:M}NAME-{0:m}NAME)))
+.TXT 6 -30 63 0
+Cg a11.250000,21.625000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {check eveness:}}
+}
+.EQN 4 6 64 0
+{0:g}NAME({0:x}NAME):({0:h}NAME)[({0:x}NAME+({0:M}NAME)/(2))
+.EQN 0 15 65 0
+{0:x}NAME:-(({0:M}NAME)/(2)),-(({0:M}NAME)/(2))+1;({0:M}NAME)/(2)
+.EQN 5 -14 66 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:g}NAME({0:x}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:x}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 An odd sequence
+.EQN 0 31 67 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:m}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:m}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 An "odd" FIR
+.TXT 28 -42 68 0
+Cg a69.250000,70.000000,176
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We approximate the FR (DTFT) of
+ the FIR with the DFT. We can get as many
+ points in the DFT as we like- remember 
+the points are samples of the DTFT- by zero-padding
+ the FIR.}}
+}
+.EQN 6 7 69 0
+{0:N}NAME:128
+.EQN 0 11 70 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 16 71 0
+({0:h}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó{0:M}NAME,({0:h}NAME)[({0:n}NAME),0)
+.EQN 5 -27 72 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 19 73 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 0 15 74 0
+{0:k}NAME:0;{0:N}NAME-1
+.EQN 0 15 75 0
+({0:\w}NAME)[({0:n}NAME):{0:n}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.EQN 5 -42 76 0
+&&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:k}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 FR of an even FIR
+.TXT 26 -7 78 0
+Cg a42.875000,61.000000,62
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Notice that there appears to be
+ two zeros in the magnitude.}}
+}
+.TXT 5 0 79 0
+Cg a58.625000,61.000000,162
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Now let us plot the phase. Because
+ there are zeros in the magnitude, at those
+ zeros the phase is undefined. We can try
+ adding a very small constant to the FR.}}
+}
+.EQN 6 1 80 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:arg}NAME(({0:H}NAME)[({0:k}NAME)+0.000001)@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 40 15 0 3 Phase (mod 2pi) of an even FIR
+.TXT 27 -8 81 0
+Cg a41.500000,68.000000,62
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Let's look at the phase more carefully
+ by "un-wrapping it".}}
+}
+.EQN 0 46 106 0
+({0:H}NAME)[({0:k}NAME):({0:H}NAME)[({0:k}NAME)+0.000001
+.EQN 5 -42 82 0
+({0:\q}NAME)[(0):{0:arg}NAME(({0:H}NAME)[(0)+0.000001)
+.EQN 0 21 83 0
+({0:\q}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAME÷0,({0:\q}NAME)[(0),{0:if}NAME({0:k}NAME÷({0:N}NAME)/(2),0,({0:\q}NAME)[({0:k}NAME-1)+{0:arg}NAME(({0:H}NAME)[({0:k}NAME)*(({0:H}NAME)[({0:k}NAME-1))])))
+.EQN 5 -11 84 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:\q}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 Phase of an even FIR 
+.TXT 27 -13 85 0
+Cg a62.750000,69.000000,91
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We now write down the transfer 
+function (ZT of h) and find and plot the
+ poles and zeros.}}
+}
+.EQN 8 7 86 0
+{0:H}NAME({0:z}NAME):((0,{0:M}NAME,{0:m}NAME,({0:h}NAME)[({0:m}NAME)*({0:z}NAME)^(-{0:m}NAME)){64})
+.EQN 0 21 87 0
+({0:hr}NAME)[({0:m}NAME):({0:h}NAME)[({0:M}NAME-{0:m}NAME)
+.EQN 2 17 88 0
+{0:H}NAME({0:z}NAME):(((0,{0:M}NAME,{0:m}NAME,({0:hr}NAME)[({0:m}NAME)*({0:z}NAME)^({0:m}NAME)){64}))/(({0:z}NAME)^({0:M}NAME))
+.EQN 15 -38 89 0
+{0:polyroots}NAME({0:hr}NAME)={0}?_n_u_l_l_
+.EQN 0 32 90 0
+{0:zeros}NAME:{0:polyroots}NAME({0:hr}NAME)
+.EQN 16 -17 91 0
+{0:j}NAME:0;{0:M}NAME-1
+.EQN 5 -10 92 0
+3.0&-3.0&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Im}NAME(({0:zeros}NAME)[({0:j}NAME)),0@3.0&-3.0&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Re}NAME(({0:zeros}NAME)[({0:j}NAME)),0
+0 1 0 0 2 0 1 
+0 1 0 0 2 0 1 
+0 2 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+1 3 3 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 33 29 0 3 Pole-zero plot: even FIR filter
+.EQN 61 -8 93 0
+{0:polyroots}NAME({0:hr}NAME)={0}?_n_u_l_l_
+.EQN 0 30 94 0
+({0:polyroots}NAME({0:hr}NAME))]={0}?_n_u_l_l_
+.TXT 26 -27 95 0
+Cg a7.750000,70.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 Note:  !!!}}
+}
+.EQN 0 14 96 0
+(((1)/({0:polyroots}NAME({0:hr}NAME)))){49}={0}?_n_u_l_l_
+.TXT 17 -22 97 0
+Cg a67.375000,68.000000,624
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\fs20 \b Thus, we have observed
+ that the zeros have occurred in a little
+ more complicated manner. There is a quadruplet
+ set which are "closed" under complex conjugation
+ and inversion. Notice that there is also
+ a real pair, not equal to +/- 1, which 
+are their own conjugates and are reciprocals:
+ again, the pair is }{\fs20 \b \fs20 \b 
+"closed" under complex conjugation and inversion.
+ Finally, the zero at z=1 is its own complex
+ conjugate and its own reciprocal: so it
+ is a single-member set that is }{\fs20 
+\b \fs20 \b "closed" under complex conjugation
+ and inversion. The same statment applies
+ to the zero at z+-1.}}
+}
+.TXT 19 1 108 0
+Cg a63.000000,68.375000,99
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b (iii)  "general g".  }{\b0 We
+ define an "general" FIR, by truncating 
+an exponential sequence.}}
+}
+.EQN 5 2 109 0
+{0:M}NAME:8
+.EQN 0 9 110 0
+{0:m}NAME:0;{0:M}NAME
+.EQN 0 11 111 0
+{0:a}NAME:0.9
+.EQN 0 10 112 0
+({0:h}NAME)[({0:m}NAME):({0:a}NAME)^({0:m}NAME)
+.TXT 6 -30 113 0
+Cg a11.250000,21.625000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {check eveness:}}
+}
+.EQN 4 6 114 0
+{0:g}NAME({0:x}NAME):({0:h}NAME)[({0:x}NAME+({0:M}NAME)/(2))
+.EQN 0 15 115 0
+{0:x}NAME:-(({0:M}NAME)/(2)),-(({0:M}NAME)/(2))+1;({0:M}NAME)/(2)
+.EQN 5 -18 116 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:g}NAME({0:x}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:x}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 An exponential sequence
+.EQN 0 31 117 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:h}NAME)[({0:m}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:m}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 An exponential FIR
+.TXT 26 -38 118 0
+Cg a69.250000,70.000000,176
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We approximate the FR (DTFT) of
+ the FIR with the DFT. We can get as many
+ points in the DFT as we like- remember 
+the points are samples of the DTFT- by zero-padding
+ the FIR.}}
+}
+.EQN 6 7 119 0
+{0:N}NAME:128
+.EQN 0 11 120 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 16 121 0
+({0:h}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAMEó{0:M}NAME,({0:h}NAME)[({0:n}NAME),0)
+.EQN 5 -27 122 0
+{0:dft}NAME({0:v}NAME):\({0:N}NAME)*{0:icfft}NAME({0:v}NAME)
+.EQN 0 19 123 0
+{0:H}NAME:{0:dft}NAME({0:h}NAME)
+.EQN 0 15 124 0
+{0:k}NAME:0;{0:N}NAME-1
+.EQN 0 15 125 0
+({0:\w}NAME)[({0:n}NAME):{0:n}NAME*(2*{0:\p}NAME)/({0:N}NAME)
+.EQN 5 -42 126 0
+&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:k}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 34 15 0 3 FR of an exponential FIR
+.TXT 26 -7 127 0
+Cg a42.125000,61.000000,61
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Notice that there appears to be
+ no zeros in the magnitude.}}
+}
+.TXT 5 0 128 0
+Cg a19.375000,61.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Now let us plot the phase. }}
+}
+.EQN 6 1 129 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:arg}NAME(({0:H}NAME)[({0:k}NAME)+0.000001)@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 40 15 0 3 Phase (mod 2pi) of an exponential FIR
+.TXT 27 -8 130 0
+Cg a41.500000,68.000000,62
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Let's look at the phase more carefully
+ by "un-wrapping it".}}
+}
+.EQN 5 4 132 0
+({0:\q}NAME)[(0):{0:arg}NAME(({0:H}NAME)[(0))
+.EQN 0 21 133 0
+({0:\q}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAME÷0,({0:\q}NAME)[(0),{0:if}NAME({0:k}NAME÷({0:N}NAME)/(2),0,({0:\q}NAME)[({0:k}NAME-1)+{0:arg}NAME(({0:H}NAME)[({0:k}NAME)*(({0:H}NAME)[({0:k}NAME-1))])))
+.EQN 5 -11 134 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:\q}NAME)[({0:k}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&({0:\w}NAME)[({0:k}NAME)
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 15 0 3 Phase of an exponential FIR 
+.TXT 30 -13 148 0
+Cg a37.125000,69.000000,54
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Notice that the phase is not
+ "piecewise linear".}}
+}
+.TXT 7 0 135 0
+Cg a62.750000,69.000000,91
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We now write down the transfer 
+function (ZT of h) and find and plot the
+ poles and zeros.}}
+}
+.EQN 8 7 136 0
+{0:H}NAME({0:z}NAME):((0,{0:M}NAME,{0:m}NAME,({0:h}NAME)[({0:m}NAME)*({0:z}NAME)^(-{0:m}NAME)){64})
+.EQN 0 21 137 0
+({0:hr}NAME)[({0:m}NAME):({0:h}NAME)[({0:M}NAME-{0:m}NAME)
+.EQN 2 17 138 0
+{0:H}NAME({0:z}NAME):(((0,{0:M}NAME,{0:m}NAME,({0:hr}NAME)[({0:m}NAME)*({0:z}NAME)^({0:m}NAME)){64}))/(({0:z}NAME)^({0:M}NAME))
+.EQN 15 -38 139 0
+{0:polyroots}NAME({0:hr}NAME)={0}?_n_u_l_l_
+.EQN 0 32 140 0
+{0:zeros}NAME:{0:polyroots}NAME({0:hr}NAME)
+.EQN 16 -17 141 0
+{0:j}NAME:0;{0:M}NAME-1
+.EQN 5 -10 142 0
+2.0&-2.0&(_n_u_l_l_&_n_u_l_l_)&{0:sin}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Im}NAME(({0:zeros}NAME)[({0:j}NAME)),0@2.0&-2.0&(_n_u_l_l_&_n_u_l_l_)&{0:cos}NAME(({0:\w}NAME)[({0:k}NAME)),{0:Re}NAME(({0:zeros}NAME)[({0:j}NAME)),0
+0 1 0 0 2 0 1 
+0 1 0 0 2 0 1 
+0 2 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+1 3 3 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 33 29 0 3 Pole-zero plot: exponential FIR filter
+.EQN 58 -8 143 0
+{0:polyroots}NAME({0:hr}NAME)={0}?_n_u_l_l_
+.EQN 0 30 144 0
+({0:polyroots}NAME({0:hr}NAME))]={0}?_n_u_l_l_
+.EQN 32 -13 146 0
+(((1)/({0:polyroots}NAME({0:hr}NAME)))){49}={0}?_n_u_l_l_
+.TXT 17 -22 149 0
+Cg a68.750000,70.000000,212
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain While complex roots must occur as
+ complex conjugate pairs, the reciprocals
+ of the zeros are generally not present.
+ Thus, unlike the odd and even cases considered
+ above, the zeros do not occur in "quadruplets".}
+}

@@ -1,0 +1,355 @@
+.MCAD 304020000 1 62 156 0
+.CMD PLOTFORMAT
+0 0 1 0 0 2 1 1 1 
+0 0 1 0 0 2 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 38 15 10 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 0 1 0 0 1 1 1 
+0 0 1 1 0 1 0 0 1 1 1 
+0 1 0 0 1 1 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 1 1 NO-TRACE-STRING
+0 1 1 1 21 0 15 0 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=-2139098532
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.750000 1.656250 1.250000 1.300000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.CMD COLORTAB_ENTRY 0 64 128
+.TXT 4 1 1 0 0
+Cg a61.125000,61.125000,94
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b waterfall.mcd}  a 
+program to illustrate the "spectrum" of a sequence using \tab \tab 
+"short-time" DFTs.}
+.TXT 8 6 13 0 0
+Cg a55.125000,55.125000,53
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 1}  The "standard 
+spectrum" is the modulus of the dft.}
+.TXT 7 40 36 0 0
+Cg a15.125000,15.125000,38
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b "}{\b\ul the 
+frequency is proportional to n}{\b ". }}
+.EQN 1 -40 2 0 0
+{0:N}NAME:1024
+.EQN 0 10 3 0 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 13 4 0 0
+({0:x}NAME)[({0:n}NAME):{0:cos}NAME((2*{0:\p}NAME)/({0:N}NAME)*({0:n}NAME)/(8)*{0:n}NAME)
+.EQN 5 -23 7 0 0
+{0:X}NAME:\({0:N}NAME)*{0:icfft}NAME({0:x}NAME)
+.EQN 2 2 11 0 0
+50&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:X}NAME)[({0:n}NAME))@&&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 1 0 0 2 1 1 1 
+0 0 1 0 0 2 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 25 12 10 0 3 
+.TXT 7 38 12 0 0
+Cg a15.125000,15.125000,11
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b ("check"!!)}}
+.TXT 15 -39 14 0 0
+Cg a54.125000,54.125000,90
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Clearly tells us the 
+overall spectrum of the signal - but we could learn more as follows. }
+.TXT 5 0 15 0 0
+Cg a54.125000,54.125000,175
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 2}  Obviously, in 
+this example, the dft over shorter time intervals would be much more 
+informative. In the example above, at time n, we expect frequencies 
+near n to be present.}
+.TXT 9 4 89 0 0
+Cg a49.125000,49.125000,30
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b block size and\par 
+internal index:}}
+.EQN 0 22 90 0 0
+{0:J}NAME:64
+.EQN 0 6 91 0 0
+{0:j}NAME:0;{0:J}NAME-1
+.TXT 5 -28 92 0 0
+Cg a50.125000,50.125000,33
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b number of blocks\par 
+and block index:}}
+.EQN 1 22 93 0 0
+{0:M}NAME:({0:N}NAME)/({0:J}NAME)
+.EQN 0 8 94 0 0
+{0:M}NAME={0}?_n_u_l_l_
+.EQN 0 9 95 0 0
+{0:m}NAME:0;{0:M}NAME-1
+.TXT 4 -39 96 0 0
+Cg a54.125000,54.125000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b forming disjunct\par 
+sub-blocks:}}
+.EQN 1 22 97 0 0
+({0:xb}NAME)[({0:j}NAME,{0:m}NAME):({0:x}NAME)[({0:m}NAME*{0:J}NAME+{0:j}NAME)
+.EQN 3 -8 26 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:j}NAME),((({0:xb}NAME){52}(0)))[({0:j}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:j}NAME
+0 0 1 0 0 2 1 1 1 
+0 0 1 0 0 2 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 23 15 10 0 3 
+.TXT 11 -17 27 0 0
+Cg a53.125000,53.125000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b check:}}
+.TXT 15 0 109 0 0
+Cg a53.125000,53.125000,25
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b computing\par dfts 
+of blocks:}}
+.EQN 1 18 110 0 0
+({0:Xb}NAME){52}({0:m}NAME):\({0:J}NAME)*{0:icfft}NAME(({0:xb}NAME){52}({0:m}NAME))
+.EQN 0 22 111 0 0
+{0:Xbm}NAME:(|({0:Xb}NAME)){49}
+.EQN 7 -34 112 0 0
+((|({0:Xb}NAME)){49}){1 4 3 0 90 1 30 30 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 3 100 2 NO-TITLE}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 4 33 154 0 0
+Cg a13.250000,13.250000,158
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b this plot is clearly 
+much more informative!\par it suggests that the signal is a narrow 
+band of frequencies with a center frequency increasing linearly with time}.}
+.TXT 4 -37 150 0 0
+Cg a51.125000,51.125000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard "lo"}
+.TXT 8 -9 153 0 0
+Cg a55.125000,55.125000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard frequency}
+.TXT 0 9 152 0 0
+Cg a51.125000,51.125000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard "hi"}
+.TXT 9 0 151 0 0
+Cg a51.125000,51.125000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard "lo"}
+.TXT 11 18 58 0 0
+Cg a42.125000,42.125000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard time n}
+.TXT 6 -20 47 0 0
+Cg a53.125000,53.125000,42
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard a program that computes 
+this plot follows.}
+.EQN 6 0 48 0 0
+{0:waterfall}NAME({0:x}NAME,{0:M}NAME):((((({0:N}NAME){72}({0:length}NAME({0:x}NAME))){71}(({0:J}NAME){72}({0:floor}NAME(({0:N}NAME)/({0:M}NAME))))){71}((((({0:xb}NAME)[({0:j}NAME,{0:m}NAME)){72}(({0:x}NAME)[({0:m}NAME*{0:J}NAME+{0:j}NAME))){79}((
+{0:j}NAME){72}((0;{0:J}NAME-1)))){79}(({0:m}NAME){72}((0;{0:M}NAME-1))))){71}(((({0:Xb}NAME){52}({0:m}NAME)){72}(\({0:J}NAME)*{0:icfft}NAME(({0:xb}NAME){52}({0:m}NAME)))){79}(({0:m}NAME){72}((0;{0:M}NAME-1))))){71}(({0:Xbm}NAME){72}((|(
+{0:Xb}NAME)){49}))
+.TXT 29 -1 65 0 0
+Cg a54.125000,54.125000,62
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard now we use the program 
+to get the data for the waterfall plot.}
+.EQN 4 0 54 0 0
+{0:plot}NAME:{0:waterfall}NAME({0:x}NAME,{0:M}NAME)
+.EQN 4 22 133 0 0
+{0:plot}NAME{1 4 3 0 90 1 30 30 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 3 100 2 NO-TITLE}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 9 -5 147 0 0
+Cg a52.125000,52.125000,5
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (low)}
+.TXT 6 -9 148 0 0
+Cg a55.125000,55.125000,9
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard frequency}
+.TXT 0 10 143 0 0
+Cg a52.125000,52.125000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (hi)}
+.TXT 10 -1 144 0 0
+Cg a52.125000,52.125000,5
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (low)}
+.TXT 10 16 146 0 0
+Cg a42.125000,42.125000,6
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard time n}
+.TXT 5 -33 156 0 0
+Cg a54.125000,54.125000,61
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard the plots appear to 
+agree! - so the program is probably okay.}
+.TXT 6 0 67 0 0
+Cg a54.125000,54.125000,289
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 3}  There are many 
+variations on this idea. We could form overlapping blocks, e.g. The 
+extreme limit is a scheme in which the block advances with n - we can 
+imagine a sliding window. We then compute the set of N  "short-time 
+fourier transforms". This is very computationally intensive, tho.}
+.TXT 11 0 98 0 0
+Cg a49.125000,49.125000,30
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b block size and\par 
+internal index:}}
+.EQN 0 22 99 0 0
+{0:J}NAME:64
+.EQN 0 6 100 0 0
+{0:j}NAME:0;{0:J}NAME-1
+.TXT 5 -28 101 0 0
+Cg a50.125000,50.125000,33
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b number of blocks\par 
+and block index:}}
+.EQN 1 22 102 0 0
+{0:M}NAME:{0:N}NAME
+.EQN 0 8 103 0 0
+{0:M}NAME={0}?_n_u_l_l_
+.EQN 0 12 121 0 0
+{0:m}NAME:0;{0:M}NAME-1
+.TXT 4 -42 105 0 0
+Cg a54.125000,54.125000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b forming disjunct\par 
+sub-blocks:}}
+.EQN 1 22 106 0 0
+({0:xb}NAME)[({0:j}NAME,{0:m}NAME):{0:if}NAME(({0:m}NAME+{0:j}NAMEò0)*({0:m}NAME+{0:j}NAME<{0:N}NAME),({0:x}NAME)[({0:m}NAME+{0:j}NAME),0)
+.TXT 6 -22 115 0 0
+Cg a53.125000,53.125000,25
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b computing\par dfts 
+of blocks:}}
+.EQN 1 18 116 0 0
+({0:Xb}NAME){52}({0:m}NAME):\({0:J}NAME)*{0:icfft}NAME(({0:xb}NAME){52}({0:m}NAME))
+.EQN 0 22 117 0 0
+{0:Xbm}NAME:(|({0:Xb}NAME)){49}
+.EQN 7 -34 118 0 0
+((|({0:Xb}NAME)){49}){1 4 3 0 90 1 30 30 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 3 100 2 NO-TITLE}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 6 33 119 0 0
+Cg a13.125000,13.125000,93
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b this plot is a 
+little more informative - but it involves a very large amount of calculation!!
+}}
+.TXT 8 -45 120 0 0
+Cg a55.125000,55.125000,11
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard frequency k}
+.TXT 26 6 155 0 0
+Cg a54.125000,54.125000,207
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b 4}  one should use a 
+tapered window .... to control sidelobes - we have discussed this a 
+little...  See also, Chapter 11 of Oppenheim and Shafer - on reserve 
+in the library... there are a lot of trade offs...}

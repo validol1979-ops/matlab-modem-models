@@ -1,0 +1,329 @@
+.MCAD 304020000 1 74 209 0
+.CMD PLOTFORMAT
+0 0 1 0 0 2 1 1 1 
+0 0 1 0 0 2 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 38 15 10 0 3 
+.CMD PLOTFORMAT
+0 0 1 1 0 1 0 0 1 1 1 
+0 0 1 1 0 1 0 0 1 1 1 
+0 1 0 0 1 1 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 1 1 NO-TRACE-STRING
+0 1 1 1 21 0 15 0 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.CMD COLORTAB_ENTRY 0 64 128
+.TXT 2 1 84 0 0
+Cg a73.000000,73.000000,54
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Project 4.2 extended 
+for 2-D images    }{\b\i   \{  WHO  ??  \}}}
+.TXT 7 0 85 0 0
+Cg a73.000000,73.000000,24
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard indices and seq. length:}
+.EQN 0 22 72 0 0
+{0:N}NAME:32
+.EQN 0 7 73 0 0
+{0:M}NAME:9
+.EQN 0 7 74 0 0
+{0:P}NAME:64
+.EQN 0 8 75 0 0
+{0:pp}NAME:0;{0:P}NAME-1
+.EQN 0 12 76 0 0
+{0:qq}NAME:{0:P}NAME-1
+.TXT 4 -56 86 0 0
+Cg a73.000000,73.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard 2-D indices:}
+.EQN 0 22 77 0 0
+{0:mm}NAME:0;{0:N}NAME-1
+.EQN 0 12 78 0 0
+{0:nn}NAME:0;{0:N}NAME-1
+.TXT 5 -34 87 0 0
+Cg a73.000000,73.000000,21
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard periodice definition:}
+.EQN 0 22 79 0 0
+{0:pod}NAME({0:n}NAME,{0:N}NAME):{0:mod}NAME({0:N}NAME+{0:mod}NAME({0:n}NAME,{0:N}NAME),{0:N}NAME)
+.TXT 6 -22 89 0 0
+Cg a73.000000,73.000000,42
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard spatial average filter
+\par ,causal definition:}
+.EQN 0 22 80 0 0
+({0:h.c}NAME)[({0:mm}NAME,{0:nn}NAME):{0:if}NAME(({0:mm}NAME<{0:M}NAME)*({0:nn}NAME<{0:M}NAME),(1)/(((2*{0:M}NAME+1))^(2)),0)
+.TXT 9 -22 90 0 0
+Cg a73.000000,73.000000,46
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard spatial average filter
+\par ,non-causal definition:}
+.EQN 0 22 81 0 0
+({0:h.nc}NAME)[({0:mm}NAME,{0:nn}NAME):({0:h.c}NAME)[({0:pod}NAME({0:mm}NAME+({0:M}NAME-1)/(2),{0:N}NAME),{0:pod}NAME({0:nn}NAME+({0:M}NAME-1)/(2),{0:N}NAME))
+.TXT 9 -22 92 0 0
+Cg a73.000000,73.000000,5
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard NOTE:}
+.TXT 0 8 93 0 0
+Cg a65.000000,65.000000,332
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard The number of non-zero 
+values of the spatial average filter has been chosen to be an odd 
+number. This enables to center the filter around (0,0), i.e. to 
+convert the filter to DFT order from FT order. I have made use of the 
+pod function to translate the filter in time domain, which converts to 
+a phase shift in the frequency domain.}
+.TXT 13 -8 104 0 0
+Cg a73.000000,73.000000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard image centered at (N/2,N/2):}
+.EQN 4 16 155 0 0
+({0:x}NAME)[({0:mm}NAME,{0:nn}NAME):({0:mm}NAMEò({0:N}NAME)/(2)-({0:M}NAME-1)/(2))*({0:mm}NAMEó({0:N}NAME)/(2)+({0:M}NAME-1)/(2))*({0:nn}NAMEò({0:N}NAME)/(2)-({0:M}NAME-1)/(2))*({0:nn}NAMEó({0:N}NAME)/(2)+({0:M}NAME-1)/(2))
+.EQN 5 -16 107 0 0
+{0:x}NAME{1 4 3 270 90 0 41 39 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 1 100 3 Input^Image}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 47 0 111 0 0
+Cg a73.000000,73.000000,37
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard periodic extension of 
+non-causal\par FIR:}
+.EQN 0 29 109 0 0
+({0:hh.nc}NAME)[({0:pod}NAME({0:pp}NAME,{0:N}NAME),{0:pod}NAME({0:qq}NAME,{0:N}NAME)):({0:h.c}NAME)[({0:mm}NAME,{0:nn}NAME)
+.EQN 7 -29 108 0 0
+{0:h.nc}NAME{1 4 3 270 90 0 41 39 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 1 100 3 Non-causal^FIR}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 3 48 158 0 0
+Cg a25.000000,25.000000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard NOTE}
+.TXT 3 0 157 0 0
+Cg a25.000000,25.000000,162
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard This filter is 
+non-causal as it is advanced in the time domain. This is done using 
+the Fourier Transform property of time translation and phase shift in 
+FT pairs.}
+.TXT 40 -48 115 0 0
+Cg a73.000000,73.000000,33
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard periodic extension of 
+causal\par FIR:}
+.EQN 0 26 114 0 0
+({0:hh.c}NAME)[({0:pod}NAME({0:pp}NAME,{0:N}NAME),{0:pod}NAME({0:qq}NAME,{0:N}NAME)):({0:h.c}NAME)[({0:mm}NAME,{0:nn}NAME)
+.EQN 6 -26 130 0 0
+{0:h.c}NAME{1 4 3 270 90 0 41 39 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 1 100 3 Causal^FIR}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 50 0 125 0 0
+Cg a73.000000,73.000000,48
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard standard convolution\par 
+with the causal FIR filter:}
+.EQN 0 19 117 0 0
+({0:y.c}NAME)[({0:mm}NAME,{0:nn}NAME):((0,{0:M}NAME-1,{0:\h}NAME,((0,{0:M}NAME-1,{0:\m}NAME,({0:h.c}NAME)[({0:pod}NAME({0:\h}NAME,{0:N}NAME),{0:pod}NAME({0:\m}NAME,{0:N}NAME))*({0:x}NAME)[({0:pod}NAME({0:mm}NAME-{0:\h}NAME,{0:N}NAME),{0:pod}NAME(
+{0:nn}NAME-{0:\m}NAME,{0:N}NAME))){64})){64})
+.TXT 9 -19 126 0 0
+Cg a73.000000,73.000000,45
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard DFT and IDFT definitions
+\par with CFFT and ICFFT:}
+.EQN 0 19 127 0 0
+{0:dft}NAME({0:v}NAME):{0:N}NAME*{0:icfft}NAME({0:v}NAME)
+.EQN 0 15 128 0 0
+{0:idft}NAME({0:v}NAME):(1)/({0:N}NAME)*{0:cfft}NAME({0:v}NAME)
+.EQN 6 -34 190 0 0
+{0:kk}NAME:0;{0:N}NAME-1
+.EQN 0 13 191 0 0
+{0:\k\k}NAME:0;{0:N}NAME-1
+.EQN 9 -13 192 0 0
+({0:T}NAME)[({0:kk}NAME,{0:\k\k}NAME):{0:if}NAME({0:kk}NAME÷0,1,({0:sin}NAME((2*{0:\p}NAME)/({0:N}NAME)*({0:M}NAME)/(2)*{0:kk}NAME))/((2*{0:M}NAME+1)*{0:sin}NAME((2*{0:\p}NAME)/({0:N}NAME)*(1)/(2)*{0:kk}NAME)))*{0:if}NAME({0:\k\k}NAME÷0,1,({0:sin}NAME((2*
+{0:\p}NAME)/({0:N}NAME)*({0:M}NAME)/(2)*{0:\k\k}NAME))/((2*{0:M}NAME+1)*{0:sin}NAME((2*{0:\p}NAME)/({0:N}NAME)*(1)/(2)*{0:\k\k}NAME)))
+.EQN 9 0 193 0 0
+{0:t}NAME:{0:idft}NAME({0:T}NAME)
+.EQN 8 0 194 0 0
+{0:t}NAME{1 4 3 270 90 0 41 39 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 1 100 3 IDFT^of^N-periodic^freq.^response}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 3 48 202 0 0
+Cg a25.000000,25.000000,4
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard NOTE}
+.TXT 4 0 204 0 0
+Cg a25.000000,25.000000,162
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard The IDFT of the 
+numerically derived DFT of the spatial average filter, without the 
+phase component, is equivalent to the translated FIR filter in the 
+time domain.}
+.TXT 14 0 205 0 0
+Cg a25.000000,25.000000,202
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard This further solidifies 
+the fact that the non-causal FIR filter is the filter without the 
+phase component in the frequency domain. With the FT properties, it is 
+equivalent to translation in time domain.}
+.TXT 31 -48 200 0 0
+Cg a73.000000,73.000000,15
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard implement DFTs:}
+.EQN 0 19 174 0 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 0 15 175 0 0
+{0:H.c}NAME:{0:dft}NAME({0:h.c}NAME)
+.EQN 0 17 176 0 0
+{0:Y.c}NAME:((({0:H.c}NAME*{0:X}NAME)){49})
+.TXT 5 -51 199 0 0
+Cg a73.000000,73.000000,39
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard image filtered with the
+\par non-causal FIR:}
+.EQN 0 19 178 0 0
+{0:y.c}NAME:{0:idft}NAME({0:Y.c}NAME)
+.TXT 6 -19 201 0 0
+Cg a73.000000,73.000000,15
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard implement DFTs:}
+.EQN 0 19 159 0 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 0 15 160 0 0
+{0:H.nc}NAME:{0:dft}NAME({0:h.nc}NAME)
+.EQN 0 17 161 0 0
+{0:Y.nc}NAME:((({0:H.nc}NAME*{0:X}NAME)){49})
+.TXT 5 -51 162 0 0
+Cg a73.000000,73.000000,38
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard image filtered with the
+\par non-causal FIR}
+.EQN 0 19 163 0 0
+{0:y.nc}NAME:{0:idft}NAME({0:Y.nc}NAME)
+.EQN 7 -19 139 0 0
+{0:y.c}NAME{1 4 3 270 90 0 41 39 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 1 100 3 Image^Filtered^with^Causal^FIR^Filter}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 6 47 132 0 0
+Cg a26.000000,26.000000,149
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard NOTE:\par It is observed 
+the image is shifted from its original location. This is caused by the 
+phase shift of the causal FIR, that can be recognized as }
+.EQN 16 0 133 0 0
+{0:exp}NAME(-1i*(2*{0:\p}NAME)/({0:N}NAME)*({0:M}NAME-1)/(2)*{0:k}NAME)
+.TXT 6 0 138 0 0
+Cg a26.000000,26.000000,41
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard in both abscissa and 
+ordinate directions.}
+.EQN 24 -47 187 0 0
+{0:y.nc}NAME{1 4 3 270 90 0 41 39 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 0 1 1 1 4 -1 1 5 0 16777215 1 100 3 Image^Filtered^with^Non-Causal^FIR}{57}
+2 5 21 21 0 1 1.5 7
+1 5 4 3 0 4 1 0
+3 1 2 0.1
+.TXT 7 47 146 0 0
+Cg a26.000000,26.000000,278
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard NOTE\par When the image 
+is filtered with the non-causal filter, it is observed the original 
+location of the filtered image has been preserved. This is very useful 
+in digital image processins as it save one from trying to relocate the 
+filtered image compared with the original image.}
+.TXT 41 -47 206 0 0
+Cg a73.000000,73.000000,315
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Therefore, we 
+conclude that in image processing applications, using a non-causal FIR 
+filter makes the retrieved image easy to recognize as compared with 
+the original image. If we use a causal filter the filtered image is 
+translated image in the time domain. But this does not happen with the 
+use of a causal filter.}}
+.TXT 12 7 207 0 0
+Cg a66.000000,66.000000,319
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b\i \{  Comments:\par 
+\tab -  your last paragraph is defective in several respects:\par \tab 
+\tab - causal vs noncausal has little to do with "recognize..."\par 
+\tab \tab - the last sentence is illogical - you meant "noncausal"?
+\par \tab -  a much better conclusion is the preceding paragraph!!\par 
+\tab -  generally, good work.\par \par Grade:    ignoring last 
+paragraph!,   A  \}}}

@@ -1,0 +1,2077 @@
+.MCAD 303020000 1 74 366 366
+.CMD PLOTFORMAT
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 23 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.218750 0.000000 0.600000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* |P *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Terminal points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.EQN 2 1 138 0
+{   19   583 0 0}{61}
+19778 12176 0 0 1068
+40 583 19 1 8 0 11096 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!>{5dIp!A6jLO9P!1!*!(<6LVLV-XIr!!DG5Y)0LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.Z
+LVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.ZLVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!!DG5Y)0
+LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!!9Q5hLVLVJ\LG#e
+
+.TXT 7 1 139 0
+Cg a32.000000,67.375000,81
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs28 3}{\b \fs28 \ulnone \i0 
+ }{\fs28 \b \i0 \ulnone  Discrete Fourier
+ Transform}}
+}
+.EQN 2 -1 140 0
+{    8   580 0 0}{61}
+19778 4560 0 0 1068
+40 580 6 1 8 0 3480 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!4'5hLVLVJYLG4'5hLVLVJYLG>{5Y)0LG.Z!e)5!@I|!(9SLVIuLG,Z!a&J"3"<LVLVLK4&"3"<LVLVLK4&
+
+.TXT 5 11 2 0
+Cg a58.875000,61.750000,204
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We now consider an FIR filter whose
+ output is defined by the periodic convolution
+ }{\ul \b (2.5)}{ with associated period
+ N. For simplicity, we assume a MA filter
+ of uniform weights and length M+1<N.}}
+}
+.ATT
+.STATUS Go to Section 2, p. 6
+.GOTO 2_bk.mcd
+.ATT_END
+.EQN 8 11 3 0
+{0:M}NAME:8
+.EQN 0 9 4 0
+{0:m}NAME:0;{0:M}NAME
+.EQN 0 18 5 0
+({0:h}NAME)[({0:m}NAME):(1)/({0:M}NAME+1)
+.TXT 5 -38 6 0
+Cg a62.500000,62.125000,304
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Suppose that the input sequence
+ }{is one of a family of complex exponential
+ sequences \{\{ec}{\dn8 n}{\dn8 ,k}{, n=0,...,N-1}{\},
+ k=0,...,N-1\} of frequencies \{}{\f1 w}{\dn8 
+k}{ = (2}{\f1 p}{)/N)k\}. Since this complex
+ exponential has period N in either n or
+ k, we need only consider k in [0,N-1]. 
+}}
+}
+.EQN 9 10 7 0
+{0:N}NAME:32
+.EQN 0 10 8 0
+{0:n}NAME:0;{0:N}NAME-1
+.EQN 0 15 9 0
+{0:k}NAME:0;{0:N}NAME-1
+.EQN 5 -25 10 0
+({0:ec}NAME)[({0:n}NAME,{0:k}NAME):{0:exp}NAME(1i*(2*{0:\p}NAME)/({0:N}NAME)*{0:k}NAME*{0:n}NAME)
+.TXT 0 48 11 0
+Cg a3.250000,6.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.1)}}
+}
+.TXT 5 -58 12 0
+Cg a59.750000,62.000000,119
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The corresponding set of output
+ sequences \{\{y}{\dn8 n}{, n=0,...,N-1\},
+ k=0,...,N-1\} are then computed by (2.5):}}
+}
+.EQN 7 7 13 0
+{0:pod}NAME({0:n}NAME,{0:N}NAME):{0:mod}NAME({0:N}NAME+{0:mod}NAME({0:n}NAME,{0:N}NAME),{0:N}NAME)
+.EQN 5 4 14 0
+({0:y}NAME)[({0:n}NAME,{0:k}NAME):{0:m}NAME$({0:h}NAME)[({0:m}NAME)*({0:ec}NAME)[({0:pod}NAME({0:n}NAME-{0:m}NAME,{0:N}NAME),{0:k}NAME)
+.TXT 1 46 365 0
+Cg a4.125000,5.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.2a)}}
+}
+.EQN 3 -56 16 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&((({0:ec}NAME){52}(2)))[({0:n}NAME),((({0:y}NAME){52}(2)))[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 45 17 0 3 Filtering a Complex Exponential
+.TXT 27 -1 17 0
+Cg a45.875000,56.500000,77
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b0 \fs20 By default, Mathcad will
+ plot the real part of complex sequence.}}
+}
+.TXT 4 0 18 0
+Cg a43.875000,61.250000,82
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\f0 \b \ulnone Exercise 3.1}{\f0 
+  Compute the above plot for various values
+ of k.}}
+}
+.TXT 4 0 19 0
+Cg a62.125000,62.000000,475
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We note that the output corresponding
+ to each input also appears to be a complex
+ exponential at the same frequency, but 
+with a phase shift and amplitude change.
+  We now prove it. }{By}{ }{\ul \b Problem
+ 2.3}{, }{  ec}{\dn8 pod(n,N)}{\dn8 ,k}{
+ = ec}{\dn8 n,k}{ . Therefore\par ec}{\dn8 
+pod(n-m,N),k}{ = ec}{\dn8 n-m,k}{ = ec}{\dn8 
+n,k}{ ec}{\dn8 -m,k}{ and ec}{\dn8 -m,k}{
+ = conjugate(ec}{\dn8 m,k}{). So the periodic
+ convolution (3.2a) }{ is alternatively 
+expressed as }{ }}
+}
+.ATT
+.STATUS Go to Section 2, p. 5
+.GOTO 2_bk.mcd
+.ATT_END
+.EQN 14 7 21 0
+({0:ya}NAME)[({0:n}NAME,{0:k}NAME):({0:m}NAME$({0:h}NAME)[({0:m}NAME)*(({0:ec}NAME)[({0:m}NAME,{0:k}NAME))])*({0:ec}NAME)[({0:n}NAME,{0:k}NAME)
+.TXT 0 50 22 0
+Cg a4.125000,9.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.2b)}}
+}
+.TXT 11 -57 23 0
+Cg a51.500000,52.250000,73
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {To check this result, we can compare
+ the two computations with a plot.}}
+}
+.EQN 2 1 24 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&((({0:y}NAME){52}(3)))[({0:n}NAME),((({0:ya}NAME){52}(3)))[({0:n}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:n}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 47 16 0 3 invariance of complex exponentials
+.TXT 26 -1 26 0
+Cg a61.500000,62.000000,201
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone \f0 Exercise 3.2}{\f0 
+  Plot the real and imaginary parts of \{y}{\fs16 
+\dn6 \f0 n}{\f0 \} and \{ya}{\fs16 \dn6 
+\f0 n}{\f0 \} for various values of  k. 
+You should see agreement in every case.}}
+}
+.TXT 7 0 27 0
+Cg a62.375000,62.250000,568
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {This is a remarkable result! Filtering
+ a member of this family of complex exponentials
+ just results in its multiplication by a
+ complex scalar! We say that the members
+ of this family are}{\i  }{\b \i0 invariant}{
+ under this filtering. The set of complex
+ scalars is called the }{\b \i0 (periodic)
+ frequency response}{ of the filter. Its
+ computation we will call the discrete Fourier
+ transform and we will also see that the
+ impulse response sequence is recoverable
+ from it. Hence this frequency response 
+itself will completely determine the filtering
+ operation. }}
+}
+.TXT 16 0 143 0
+Cg a62.375000,62.000000,434
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Therefore, for any input that is
+ in the form of a weighted sum of members
+ of this family of complex exponentials,
+ }{the filter output}{ is easily computed
+ by multiplying each term of said sum by
+ the filter's frequency response at the 
+corresponding frequency. The linearity of
+ the filtering operation allows us to do
+ this. In effect, the convolution operation
+ is replaced by the much simpler operation
+ of scalar multiplication. }}
+}
+.TXT 12 0 144 0
+Cg a62.375000,62.125000,712
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {It is therefore of great importance
+ to know that }{\ul \i0 any}{ finite sequence
+ has a representation as a weighted sum 
+of complex exponentials of this specific
+ form. This possibility, in a different 
+context, was first recognized by Fourier
+ and therefore such a representation is 
+called a }{\i0 Fourier series}{. Further,
+ since the time of Gauss, it has been known
+ how to efficiently compute such representations
+ with an algorithm now called a Fast Fourier
+ Transform (FFT). The existence of the FFT
+ has made possible widespread digital signal
+ processing }{applications}{. Specifically,
+ the periodic convolution, implemented by
+ using an FFT algorithm, can be a very efficient
+ and practical computation.}}
+}
+.TXT 21 0 28 0
+Cg a60.375000,62.125000,171
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We shall now elaborate this remarkable
+ set of ideas that is central to the  analysis,
+ modeling, simulation and }{implementation}{
+ of digital signal processing systems.}}
+}
+.TXT 7 -10 145 0
+Cg a27.750000,73.000000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 Fourier Series for Sequences}}
+}
+.TXT 4 10 29 0
+Cg a62.375000,62.125000,664
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\i0 Given a sequence of length 
+N, we can extend it to have period N. Then
+ we may seek a Fourier series type representation
+ for the sequence. We may propose as a }{\b 
+\i0 basis}{\i0  for such an expansion the
+ family of complex exponentials \{\{ec}{\dn8 
+\i0 n,}{\dn8 \i0 k}{\i0  = exp[i(2}{\f1 
+\i0 p}{\i0 /N)kn], n=0,...,N-1\}, k=0,...,N-1\}.
+ We have already observed that }{\i0 \i0 
+exp[i(2}{\f1 \i0 p}{\i0 /N)kn] has period
+ N in k and that therefore there are only
+ N unique such basis sequences. }{Then the
+ proposed }{\b \i0 Fourier series representation}{
+ of a sequence \{x}{\dn8 n}{, n=0,...,N-1\}
+ is of the form of a weighted sum of the
+ basis sequences.}}
+}
+.TXT 27 0 255 0
+Cg a62.375000,62.125000,658
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\i0 It is very helpful to think
+ of N-length sequences as vectors in an 
+N-dimensional vector space. E.g., visualize
+ a three dimensional space, corresponding
+ to N equal to 3, and recall how vectors
+ could be represented in terms of the (}{\b 
+\i0 i,j,k}{\i0 ) unit vectors! The complex
+ exponential sequences are, as we soon show,
+ an orthogonal set of vectors spanning the
+ N-dimensional space. Then any vector in
+ the space has a representation as a weighted
+ sum of the basis vectors, }{\i0 \i0 with
+ the set of weights \{X}{\i0 \i0 \dn8 k}{\i0 
+\i0 , k=0,...,N-1\} given by the }{\b \fs20 
+\i0 projection}{\i0  of the vector onto 
+each of the basis vectors. }}
+}
+.TXT 17 0 30 0
+Cg a57.250000,62.000000,86
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Thus, carrying along the simple,
+ truncated exponential sequence}{ for illustration,}}
+}
+.EQN 4 7 31 0
+{0:a}NAME:0.85
+.EQN 0 17 32 0
+({0:x}NAME)[({0:n}NAME):({0:a}NAME)^({0:n}NAME)
+.TXT 4 -24 33 0
+Cg a41.625000,45.375000,63
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {the set of weights is given by 
+the inner, or scalar products}}
+}
+.EQN 4 8 262 0
+({0:X}NAME)[({0:k}NAME):{0:x}NAME*(({0:ec}NAME){52}({0:k}NAME))]
+.TXT 0 50 37 0
+Cg a3.250000,8.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.3)}}
+}
+.TXT 3 -58 38 0
+Cg a40.250000,52.875000,59
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {and the Fourier series representation
+ of the sequence is}}
+}
+.EQN 4 8 40 0
+({0:xrep}NAME)[({0:n}NAME):(1)/({0:N}NAME)*{0:k}NAME$({0:X}NAME)[({0:k}NAME)*({0:ec}NAME)[({0:n}NAME,{0:k}NAME)
+.TXT 1 50 39 0
+Cg a3.250000,9.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.4)}}
+}
+.TXT 5 -58 267 0
+Cg a61.625000,62.000000,146
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Exercise 3.3}{  }{Show for this
+ example that xrep in fact is x. E.g., make
+ a Table or plot of (x - xrep). (We prove
+ this in general below.)}}
+}
+.TXT 3 37 266 0
+Cg a0.500000,62.000000,4
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain { }}
+}
+.TXT 2 -37 45 0
+Cg a61.875000,62.000000,333
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {In digital signal processing the
+ sequence \{X}{\dn8 k}{, k = 1,...,N-1) 
+computed by (3.3), is called the }{\b \i0 
+Discrete Fourier Transform (DFT)}{ of the
+ sequence \{x}{\dn8 n}{, n = 0,...,N-1\}
+ and (3.4) is called the}{\b \i0  Inverse
+ Discrete Fourier Transform (IDFT)}{. We
+ recopy them, writing out the complex exponentials.}}
+}
+.TXT 14 -10 278 0
+Cg a14.250000,72.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Fourier Transform}}
+}
+.EQN 0 25 270 0
+({0:X}NAME)[({0:k}NAME):((0,{0:N}NAME-1,{0:n}NAME,({0:e}NAME)^(-1i*((2*{0:\p}NAME)/({0:N}NAME))*{0:k}NAME*{0:n}NAME)*({0:x}NAME)[({0:n}NAME)){64})
+.TXT 0 42 282 0
+Cg a3.250000,6.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.3)}}
+}
+.TXT 9 -67 279 0
+Cg a20.500000,72.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Inverse Fourier Transform}}
+}
+.EQN 0 25 274 0
+({0:x}NAME)[({0:n}NAME):(1)/({0:N}NAME)*((0,{0:N}NAME-1,{0:k}NAME,({0:e}NAME)^(1i*((2*{0:\p}NAME)/({0:N}NAME))*{0:k}NAME*{0:n}NAME)*({0:X}NAME)[({0:k}NAME)){64})
+.TXT 0 42 283 0
+Cg a3.250000,6.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.4)}}
+}
+.TXT 7 -57 268 0
+Cg a62.000000,62.000000,146
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Exercise 3.4}{  }{Prove
+ that the right side of (3.3) has period
+ N in k. }{ Pr}{ove  that the right side
+ of (3.4) has period N in n.}{ }}
+}
+.TXT 5 0 46 0
+Cg a62.125000,61.875000,609
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b0 \fs20 The definitions (3.3)
+ and (3.4) are standard in digital signal
+ processing, but are not the only }{\fs20 
+\b0 \b0 \fs20 possible }{\fs20 \b0 choices.
+ In fact, Mathcad uses a different definition
+ and implements the DFT and IDFT with fast
+ algorithms as the built-in functions }{\b 
+\fs20 cfft(x)}{\fs20 \b0  and }{\b \fs20 
+icfft(X)}{\fs20 \b0 . We discuss these algorithms
+ in }{\ul \b \fs20 Sec. 4}{\fs20 \b0 .  
+We can get the forms we want with the following
+ function definitions,}{\ul \fs20 \b0  }{\ul 
+\b0 \fs20 which we will always use from 
+}{\ul \b0 \fs20 now on}{\fs20 \b0 \ulnone 
+:}{\b0 \fs20  }}
+}
+.ATT
+.STATUS Go to Section 4, p. 6
+.GOTO 4_bk.mcd
+.ATT_END
+.EQN 13 8 47 0
+{0:dft}NAME({0:x}NAME):\({0:N}NAME)*{0:icfft}NAME({0:x}NAME)
+.EQN 0 30 48 0
+{0:idft}NAME({0:X}NAME):(1)/(\({0:N}NAME))*{0:cfft}NAME({0:X}NAME)
+.TXT 5 -38 49 0
+Cg a46.375000,57.875000,84
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b0 \fs20 Note again that we are
+ thus taking advantage of a fast algorithm}{\b0 
+.}}
+}
+.TXT 3 0 287 0
+Cg a60.500000,62.000000,358
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The reason the 1/N appears in the
+ IDFT is that, whereas the complex exponential
+ sequences are orthogonal, they are not 
+orthonormal. Their norm is N and so \{\{ec}{\fs16 
+\dn6 n,k }{/sqrt(N)\}\} is an orthonormal
+ set of basis vectors. By convention in 
+DSP, the DFT is defined with ec not normalized:
+ to correct for this the 1/N factor appears
+ in the IDFT.}}
+}
+.TXT 20 0 288 0
+Cg a60.250000,62.000000,103
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Exercise 3.5}{  Compute several
+ inner products and norms of the ec}{\fs16 
+\dn6 n,k}{. For example,}}
+}
+.EQN 4 16 284 0
+({0:ec}NAME){52}(2)*(({0:ec}NAME){52}(2))]={0}?_n_u_l_l_
+.TXT 4 -16 50 0
+Cg a60.875000,62.125000,330
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We now prove}{ that (3.4) is the
+ inverse of (3.3). If so, then the DFT operation
+ followed by the IDFT operation must be 
+the identity operation. Thus, we }{substitute
+ (3.3) into the right side of (3.4) and 
+show that in fact the sequence \{x}{\fs16 
+\dn6 n}{, n=0,...,N-1\} is recovered. Thus
+ we want to evaluate the double sum }}
+}
+.TXT 3 -10 289 0
+Cg a8.000000,72.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Proof of \par Inversion}}
+}
+.EQN 9 13 51 0
+{0:nn}NAME:0;{0:N}NAME-1
+.EQN 0 23 52 0
+({0:xx}NAME)[({0:nn}NAME):(1)/({0:N}NAME)*({0:k}NAME$({0:ec}NAME)[({0:nn}NAME,{0:k}NAME)*({0:n}NAME$(({0:ec}NAME)[({0:n}NAME,{0:k}NAME))]*({0:x}NAME)[({0:n}NAME)))
+.TXT 6 -26 53 0
+Cg a47.375000,55.125000,71
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {and show that xx = x}{. }{After
+ exchanging order of summation to get}}
+}
+.EQN 5 8 54 0
+({0:xx}NAME)[({0:nn}NAME):{0:n}NAME$({0:x}NAME)[({0:n}NAME)*((1)/({0:N}NAME)*{0:k}NAME$({0:ec}NAME)[({0:nn}NAME,{0:k}NAME)*(({0:ec}NAME)[({0:n}NAME,{0:k}NAME))])
+.TXT 0 49 55 0
+Cg a3.250000,7.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.5)}}
+}
+.TXT 7 -57 56 0
+Cg a22.000000,37.125000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {we are led to evaluate the sum}}
+}
+.EQN 4 8 313 0
+({0:S}NAME)[({0:nn}NAME,{0:n}NAME):(1)/({0:N}NAME)*{0:k}NAME$({0:ec}NAME)[({0:nn}NAME,{0:k}NAME)*(({0:ec}NAME)[({0:n}NAME,{0:k}NAME))]
+.TXT 0 49 60 0
+Cg a3.250000,8.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.6)}}
+}
+.TXT 1 -67 310 0
+Cg a6.000000,72.000000,11
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Lemma}}
+}
+.TXT 5 10 300 0
+Cg a38.625000,62.000000,56
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We write it out out the complex
+ exponentials and get }}
+}
+.EQN 7 8 302 0
+({0:S}NAME)[({0:nn}NAME,{0:n}NAME):(1)/({0:N}NAME)*((0,{0:N}NAME-1,{0:k}NAME,((({0:e}NAME)^(-1i*((2*{0:\p}NAME)/({0:N}NAME))*({0:nn}NAME-{0:n}NAME))))^({0:k}NAME)){64})
+.TXT 7 -8 62 0
+Cg a52.500000,62.125000,136
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {W}{e recognize the sum of a finite
+ geometric series. First note that when\par 
+pod(nn-n,N) = 0, S = 1. When mod(k-k1,N)
+ is not zero, have}}
+}
+.EQN 10 7 63 0
+({0:S}NAME)[({0:k}NAME,{0:k1}NAME):(1-((({0:e}NAME)^(1i*({0:nn}NAME-{0:n}NAME)*((2*{0:\p}NAME)/({0:N}NAME)))))^({0:N}NAME))/(1-({0:e}NAME)^(1i*({0:nn}NAME-{0:n}NAME)*((2*{0:\p}NAME)/({0:N}NAME))))
+.TXT 0 31 64 0
+Cg a17.250000,23.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {( }{mod(k1-k,N) not zero )}}
+}
+.TXT 7 -38 306 0
+Cg a2.500000,62.000000,6
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {But}}
+}
+.EQN 6 4 309 0
+((({0:e}NAME)^(1i*({0:nn}NAME-{0:n}NAME)*((2*{0:\p}NAME)/({0:N}NAME)))))^({0:N}NAME)÷({0:e}NAME)^(1i*({0:nn}NAME-{0:n}NAME)*2*{0:\p}NAME)÷(1)^({0:nn}NAME-{0:n}NAME)÷1
+.TXT 4 -4 65 0
+Cg a25.750000,39.875000,41
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {and note that this form is 0. That
+ is,}}
+}
+.EQN 4 8 66 0
+({0:S}NAME)[({0:nn}NAME,{0:n}NAME):{0:\d}NAME({0:pod}NAME({0:nn}NAME-{0:n}NAME,{0:N}NAME),0)
+.TXT 0 50 67 0
+Cg a3.250000,8.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.7)}}
+}
+.TXT 5 -58 223 0
+Cg a56.000000,61.000000,110
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Now substituting (3.7) into (3.5)
+ we see that xx}{\fs16 \dn6 nn}{ = x}{\fs16 
+\dn6 nn}{ as was to be proved.  }}
+}
+.TXT 4 0 312 0
+Cg a17.750000,62.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Problem 3.1}{  Show that}}
+}
+.EQN 4 7 316 0
+{0:k}NAME$({0:ec}NAME)[({0:nn}NAME,{0:k}NAME)*(({0:ec}NAME)[({0:n}NAME,{0:k}NAME))]÷{0:N}NAME*{0:\d}NAME({0:pod}NAME(({0:nn}NAME-{0:n}NAME,{0:N}NAME),0)
+.TXT 5 -7 319 0
+Cg a60.875000,62.000000,87
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {and hence that the family of complex
+ exponentials is orthogonal and of norm 
+sqrt(N).}}
+}
+.TXT 11 -10 152 0
+Cg a19.750000,73.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 Examples of the DFT}}
+}
+.TXT 3 10 224 0
+Cg a61.375000,62.125000,213
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The DFT is generally complex: typically
+ the magnitude and phase are plotted. Recall
+ that the phase of a complex number is not
+ defined when its magnitude is zero: it 
+is convenient here to then take it as zero.}}
+}
+.TXT 7 0 70 0
+Cg a40.500000,61.125000,65
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Example 3.1}{  We compute
+ the DFT of the unit impulse.}}
+}
+.EQN 3 3 71 0
+({0:x}NAME)[({0:n}NAME):{0:\d}NAME({0:n}NAME,0)
+.EQN 0 13 72 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 0 12 225 0
+{0:Xmag}NAME:((|({0:X}NAME))){49}
+.EQN 0 14 234 0
+({0:Xph}NAME)[({0:k}NAME):(({0:Xmag}NAME)[({0:k}NAME)>0)*({0:arg}NAME(({0:X}NAME)[({0:k}NAME))){49}
+.EQN 3 -41 227 0
+2&-0.25&(0&1)&({0:Xmag}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 DFT Magnitude
+.EQN 0 30 75 0
+{0:\p}NAME&-{0:\p}NAME&(_n_u_l_l_&_n_u_l_l_)&({0:Xph}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 DFT Phase
+.TXT 25 -31 76 0
+Cg a47.625000,63.750000,69
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {So, the DFT of the unit impulse
+ is a sequence of constant value 1.}}
+}
+.TXT 3 0 77 0
+Cg a44.125000,60.375000,68
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Example 3.2}{  We compute
+ the DFT of a constant sequence.}}
+}
+.EQN 5 8 78 0
+({0:x}NAME)[({0:n}NAME):(1)/({0:N}NAME)
+.EQN 0 9 79 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 0 11 235 0
+{0:Xmag}NAME:((|({0:X}NAME))){49}
+.EQN 0 14 236 0
+({0:Xph}NAME)[({0:k}NAME):(({0:Xmag}NAME)[({0:k}NAME)>0)*({0:arg}NAME(({0:X}NAME)[({0:k}NAME))){49}
+.EQN 3 -41 228 0
+2&-0.25&(0&_n_u_l_l_)&({0:Xmag}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 DFT Magnitude
+.EQN 0 31 229 0
+{0:\p}NAME&-{0:\p}NAME&(_n_u_l_l_&_n_u_l_l_)&({0:Xph}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 0 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 DFT Phase
+.TXT 25 -32 83 0
+Cg a61.500000,62.000000,148
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {As we could have anticipated from
+ Example 3.1 and the similarity of the DFT
+ and the IDFT, the DFT of a constant sequence
+ is an impulse sequence.}}
+}
+.TXT 5 0 84 0
+Cg a57.125000,60.500000,87
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Example 3.3}{  We compute
+ the DFT of a finite, complex exponential
+ sequence.}}
+}
+.EQN 4 6 85 0
+{0:\w}NAME:(2*{0:\p}NAME)/({0:N}NAME)*4
+.EQN 0 13 86 0
+({0:x}NAME)[({0:n}NAME):{0:exp}NAME(1i*{0:\w}NAME*{0:n}NAME)
+.EQN 4 -13 87 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 0 13 247 0
+{0:Xmag}NAME:((|({0:X}NAME))){49}
+.EQN 0 18 238 0
+({0:Xph}NAME)[({0:k}NAME):(({0:Xmag}NAME)[({0:k}NAME)>0)*({0:arg}NAME(({0:X}NAME)[({0:k}NAME))){49}
+.EQN 1 -26 239 0
+48&0&(_n_u_l_l_&_n_u_l_l_)&({0:Xmag}NAME)[({0:k}NAME)@_n_u_l_l_&_n_u_l_l_&(4&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 DFT Magnitude
+.EQN 10 36 241 0
+({0:Xph}NAME)[(4)={0}?_n_u_l_l_
+.TXT 21 -47 91 0
+Cg a62.375000,62.000000,210
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We see that a complex exponential
+ of a suitably chosen frequency has an impulse
+ sequence as its DFT. Actually, we could
+ have anticipated this fact in view of the
+ noted orthogonality of the basis sequences.}}
+}
+.TXT 7 0 92 0
+Cg a60.000000,61.875000,238
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Exercise 3.6}{  (a) 
+For Example 3.3, give a "rule" for the location
+ of the }{impulse}{.\par (b) Choose a frequency
+ not of the form taken in Example 3.3 and
+ note the              phenomenon called
+ }{\b leakage}{ in the DSP jargon.}}
+}
+.TXT 7 0 93 0
+Cg a61.875000,61.875000,239
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Note that the DFT of an exponential
+ sequence is the sum of a finite number 
+of terms of a geometric series and can be
+ written in a simple form. In fact, the 
+Maple symbolic algebra capability of Mathcad
+ can be used to sum such a series.}}
+}
+.TXT 7 0 94 0
+Cg a62.625000,62.250000,195
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Problem 3.2}{  Use Mathcad's
+ symbolic mathematics capability to compute
+ the DFT in Example 3.3 and then plot and
+ compare your result with the numerically
+                computed DFT.}}
+}
+.TXT 7 0 95 0
+Cg a49.500000,62.250000,78
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Example 3.4}{  We compute
+ the DFT of a finite, sinusoidal sequence.}}
+}
+.EQN 5 0 96 0
+{0:\w}NAME:(2*{0:\p}NAME)/({0:N}NAME)*4
+.EQN 0 10 97 0
+({0:x}NAME)[({0:n}NAME):{0:cos}NAME({0:\w}NAME*{0:n}NAME)
+.EQN 0 12 98 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 0 9 248 0
+{0:Xmag}NAME:((|({0:X}NAME))){49}
+.EQN 0 11 242 0
+({0:Xph}NAME)[({0:k}NAME):(({0:Xmag}NAME)[({0:k}NAME)>0)*({0:arg}NAME(({0:X}NAME)[({0:k}NAME))){49}
+.EQN 5 -34 100 0
+{0:N}NAME&0&(0&({0:N}NAME)/(2))&({0:X}NAME)[({0:k}NAME)@{0:N}NAME-1&_n_u_l_l_&(4&{0:N}NAME-4)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 23 15 0 3 DFT of a Sinusoid
+.EQN 8 36 243 0
+({0:Xph}NAME)[(4)={0}?_n_u_l_l_
+.EQN 5 0 246 0
+({0:Xph}NAME)[({0:N}NAME-4)={0}?_n_u_l_l_
+.TXT 13 -44 102 0
+Cg a62.250000,62.125000,383
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Since, by Euler's formula, the 
+cosine is expressible as a sum of two conjugate
+ exponentials}{, we could have anticipated
+ that the DFT would consist of the sum of
+ two impulse sequences, one at n = 4 and
+ one at n = -4. Because we use the conventional
+ indexing from 0 to N-1, and because the
+ DFT has period N, this second line appears
+ at (-4+N). This is an important observation.}}
+}
+.TXT 11 0 103 0
+Cg a61.250000,60.875000,148
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Example 3.5}{  We compute
+ the DFT of a finite sequence of uncorrelated
+ random       variables. There is no readily
+ understood structure.}}
+}
+.EQN 6 8 104 0
+({0:x}NAME)[({0:n}NAME):{0:rnd}NAME(2)-1
+.EQN 0 30 105 0
+{0:X}NAME:{0:dft}NAME({0:x}NAME)
+.EQN 3 -40 106 0
+1&-1&(_n_u_l_l_&_n_u_l_l_)&({0:x}NAME)[({0:n}NAME)@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:n}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 23 15 0 3 Noise Sample
+.EQN 0 32 107 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&|(({0:X}NAME)[({0:k}NAME))@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 Noise Sample DFT Magnitude
+.TXT 38 -30 108 0
+Cg a61.250000,62.000000,174
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Example 3.6}{  We develop
+ further Example 3.5 by computing the "sample
+ average"   of the magnitudes of a number
+ of DFTs of independently chosen random 
+sequences. }}
+}
+.EQN 7 3 109 0
+{0:L}NAME:64
+.EQN 0 9 110 0
+{0:l}NAME:0;{0:L}NAME-1
+.EQN 0 14 111 0
+({0:x}NAME)[({0:n}NAME,{0:l}NAME):{0:rnd}NAME(2)-1
+.EQN 0 19 112 0
+({0:X}NAME){52}({0:l}NAME):{0:dft}NAME(({0:x}NAME){52}({0:l}NAME))
+.EQN 6 -28 113 0
+({0:Sp}NAME)[({0:k}NAME):(1)/({0:L}NAME)*{0:l}NAME$|(((({0:X}NAME){52}({0:l}NAME)))[({0:k}NAME))
+.EQN 5 -11 114 0
+5&0&(0&3)&({0:Sp}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:k}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 48 20 0 3 sample average of noise DFT magnitudes
+.TXT 31 -6 115 0
+Cg a61.500000,62.250000,288
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Notice that the sample average 
+of the DFT magnitude of an uncorrelated 
+sequence is approximately a constant (for
+ L sufficiently large). Such a sequence 
+is called }{\b white}{, in analogy to the
+ magnitudes of the nearly equal components
+ of ordinary, or white, light at each frequency}}
+}
+.TXT 12 -10 164 0
+Cg a28.875000,74.000000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 Periodic Frequency Response}}
+}
+.TXT 4 10 116 0
+Cg a61.625000,61.250000,149
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We have seen that the N-periodic
+ frequency response of an FIR filter is 
+the DFT of its impulse response, extended
+ as necessary by zero padding.\par }}
+}
+.TXT 6 0 117 0
+Cg a60.500000,62.125000,223
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \ulnone Example 3.7}{  The simple
+ MA filter before us has an N-periodic frequency
+ response easily computed by the DFT and
+ we plot it. Since it is complex, we plot
+ the magnitude and phase, }{as is conventionally
+ done}{.}}
+}
+.EQN 9 3 118 0
+{0:M}NAME:9
+.EQN 0 17 119 0
+({0:he}NAME)[({0:n}NAME):{0:if}NAME({0:n}NAME<{0:M}NAME,(1)/({0:M}NAME),0)
+.EQN 0 28 120 0
+{0:H}NAME:{0:dft}NAME({0:he}NAME)
+.EQN 4 -47 121 0
+_n_u_l_l_&0&(_n_u_l_l_&_n_u_l_l_)&|(({0:H}NAME)[({0:k}NAME))@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 52 15 0 3 MA FR Magnitude
+.TXT 38 -1 122 0
+Cg a62.375000,62.000000,711
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The phase of a complex number z
+ = x+iy is defined when the magnitude z}{\dn8 
+m}{ = sqrt(x}{\up8 2}{+y}{\up8 2}{) is not
+ zero. Recall that the arctangent(y/x) determines
+ an angle in [-}{\f1 p}{/2,}{\f1 p}{/2] 
+and  could be used to define the phase of
+ the frequency response. However, knowing
+ x and y allows us to determine the quadrant
+ of z in the complex plane and hence the
+ angle in [-}{\f1 p}{,}{\f1 p}{], which 
+is more informative. This function is implemented
+ as the }{\b arg}{ built-in function in 
+Mathcad and gives us a conventionally defined
+ phase. However, a still more informative
+ definition of the phase is obtained by 
+recursively computing the phase differences
+ between samples, as follows.}}
+}
+.TXT 20 -10 366 0
+Cg a10.750000,72.000000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b phase \par unwrapping\par algorithm}}
+}
+.EQN 2 15 123 0
+({0:\q}NAME)[(0):{0:arg}NAME(({0:H}NAME)[(0))
+.EQN 0 14 124 0
+{0:j}NAME:1;{0:N}NAME-1
+.EQN 0 15 125 0
+({0:\q}NAME)[({0:j}NAME):({0:\q}NAME)[({0:j}NAME-1)+{0:arg}NAME(({0:H}NAME)[({0:j}NAME)*(({0:H}NAME)[({0:j}NAME-1))])
+.EQN 4 -32 126 0
+{0:\p}NAME&-{0:\p}NAME&(-{0:\p}NAME&{0:\p}NAME)&({0:\q}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(0&{0:N}NAME-1)&{0:k}NAME
+0 0 0 0 2 0 1 
+0 0 0 0 2 0 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 53 15 0 3 MA FR phase
+.TXT 24 -2 323 0
+Cg a61.375000,61.000000,210
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {This phase determination is called
+ }{\b phase unwrapping}{. Note that we may
+ have to improve its implementation to handle
+ a zero sample value where arg( ) is not
+ defined. But it works usually as it stands!}}
+}
+.TXT 8 0 127 0
+Cg a62.375000,62.000000,158
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {In order to better understand the
+ nature of this phase function we analytically
+ compute the DFT. This is easy to do since
+ it is a finite geometric series.}}
+}
+.TXT 6 0 128 0
+Cg a61.500000,61.125000,137
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Problem}{\b \ulnone  }{\b \ulnone 
+3.3}{  Show that the DFT of the MA filter
+ of length M and weights \{1/M\}, zero padded
+ to length N, is}}
+}
+.EQN 10 3 129 0
+({0:T}NAME)[({0:k}NAME):{0:if}NAME({0:k}NAME÷0,1,({0:sin}NAME(((2*{0:\p}NAME)/({0:N}NAME))*(({0:M}NAME)/(2))*{0:k}NAME))/({0:M}NAME*{0:sin}NAME(((2*{0:\p}NAME)/({0:N}NAME))*((1)/(2))*{0:k}NAME)))
+.EQN 0 33 130 0
+({0:Ha}NAME)[({0:k}NAME):{0:exp}NAME(-1i*((2*{0:\p}NAME)/({0:N}NAME))*(({0:M}NAME-1)/(2))*{0:k}NAME)*({0:T}NAME)[({0:k}NAME)
+.TXT 9 -36 131 0
+Cg a37.625000,49.000000,66
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {One might hastily conclude that
+ the phase of \{H}{\dn8 k}{\} is}}
+}
+.EQN 5 12 132 0
+({0:\f}NAME)[({0:k}NAME):-(((2*{0:\p}NAME)/({0:N}NAME)))*(({0:M}NAME-1)/(2))*{0:k}NAME
+.EQN 3 -12 133 0
+_n_u_l_l_&_n_u_l_l_&(-{0:M}NAME*{0:\p}NAME&0)&({0:\f}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 51 15 0 3 Linear phase
+.TXT 31 0 134 0
+Cg a57.625000,61.000000,157
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {However, we note that the sequence
+ \{T}{\dn8 k}{\} changes sign and so it 
+is not a proper magnitude: the sign changes
+ must be accounted for by the phase.}}
+}
+.EQN 5 1 135 0
+10&-{0:\p}NAME&({0:\p}NAME&0)&((10*{0:T}NAME))[({0:k}NAME),({0:\q}NAME)[({0:k}NAME)@{0:N}NAME-1&0&(_n_u_l_l_&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 50 19 0 3 Piecewise Linear Phase
+.TXT 31 -1 136 0
+Cg a60.750000,62.125000,267
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We see that \{T}{\dn8 k}{\} itself
+ changes sign (M-1) times. This change of
+ sign must be accounted for by a jump of
+ }{\f1 p}{ in the phase of the frequency
+ response: examining the latter's plot, 
+we see that there are exactly (M-1) jumps
+ at the correct indices!  }}
+}
+.TXT 11 -10 194 0
+Cg a26.250000,73.000000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 DFT Symbolic Computation}}
+}
+.TXT 4 10 195 0
+Cg a62.500000,62.125000,427
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We show how one can compute the
+ DFTs of typical generic sequences using
+ Mathcad's symbolic mathematics capability.
+ There is a certain art involved in using
+ such software. Agreeable forms are sometimes
+ obtained only after using the symbolic 
+mathematical operations of simplify, factor,
+ expand and collect. One must start up the
+ symbolic processor by choosing }{\b Load
+ Symbolic Processor}{ from the }{\b Symbolic}{
+ menu.}}
+}
+.TXT 14 0 170 0
+Cg a61.000000,61.000000,160
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We begin with a simple sequence,
+ namely a geometric series whose sum we 
+know. }{We write down a finite geometric
+ series in a region of our Mathcad document:}}
+}
+.EQN 8 17 171 0
+((0,{0:N}NAME-1,{0:n}NAME,({0:a}NAME)^({0:n}NAME)){64})
+.TXT 6 -17 172 0
+Cg a60.875000,61.000000,240
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {W}{e click on and enclose this 
+expression. Then we choose }{\b Evaluate
+ Symbolically}{ from the}{\b  S}{\b ymbolic}{
+ menu. Then choose }{\b S}{\b implify}{ 
+from the Symbolic menu. We get, after discarding
+ intermediate forms, the result}}
+}
+.EQN 10 18 173 0
+((({0:a}NAME)^({0:N}NAME)-1))/(({0:a}NAME-1))
+.TXT 5 -18 174 0
+Cg a21.000000,51.875000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {which we know to be correct.}}
+}
+.TXT 3 0 324 0
+Cg a29.625000,61.000000,48
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b Exercise 3.7}{  Duplicate the
+ above steps.}}
+}
+.TXT 3 0 175 0
+Cg a55.125000,60.875000,103
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {W}{e can now compute the DFT of
+ any exponential sequence \{a}{\fs16 \up8 
+n}{\} in a similar manner. }}
+}
+.TXT 8 6 217 0
+Cg a3.625000,61.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b IDFT}}
+}
+.EQN 0 8 342 0
+({0:a}NAME)^({0:n}NAME)
+.TXT 0 14 219 0
+Cg a3.125000,3.125000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b DFT}}
+}
+.EQN 0 8 176 0
+((({0:a}NAME)^({0:N}NAME)-1))/(({0:a}NAME*{0:exp}NAME(-2*1i*({0:\p}NAME)/({0:N}NAME)*{0:k}NAME)-1))
+.TXT 14 -36 178 0
+Cg a29.750000,52.875000,48
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We can use the form to }{define}{
+ a function.}}
+}
+.EQN 6 8 179 0
+{0:F}NAME({0:k}NAME,{0:a}NAME,{0:N}NAME):((({0:a}NAME)^({0:N}NAME)-1))/(({0:a}NAME*{0:exp}NAME(-2*1i*({0:\p}NAME)/({0:N}NAME)*{0:k}NAME)-1))
+.TXT 1 48 345 0
+Cg a3.250000,7.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {(3.8)}}
+}
+.TXT 8 -56 180 0
+Cg a47.000000,56.875000,65
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Then we can assign values to the
+ parameters and graph the DFT.}}
+}
+.EQN 5 7 181 0
+{0:N}NAME:32
+.EQN 0 11 182 0
+{0:k}NAME:0;{0:N}NAME-1
+.EQN 0 18 183 0
+{0:a}NAME:0.5
+.EQN 2 -34 184 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&0)&{0:Re}NAME({0:F}NAME({0:k}NAME,{0:a}NAME,{0:N}NAME)),{0:Im}NAME({0:F}NAME({0:k}NAME,{0:a}NAME,{0:N}NAME)),|({0:F}NAME({0:k}NAME,{0:a}NAME,{0:N}NAME))@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+2 0 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 18 0 3 DFT of a Real Exponential Sequence
+.TXT 30 -2 185 0
+Cg a60.625000,62.000000,198
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The particular case of a complex
+ exponential is of special interest, as 
+we have already noted. }{(The case of }{\f1 
+a}{ an }{integer must be handled separately
+ by returning to original form}{.)}}
+}
+.EQN 9 10 187 0
+{0:\a}NAME:3.17
+.EQN 0 21 203 0
+{0:a}NAME:{0:exp}NAME(1i*((2*{0:\p}NAME)/({0:N}NAME))*{0:\a}NAME)
+.EQN 4 -29 211 0
+30&-10&(_n_u_l_l_&0)&{0:Re}NAME({0:F}NAME({0:k}NAME,{0:a}NAME,{0:N}NAME)),{0:Im}NAME({0:F}NAME({0:k}NAME,{0:a}NAME,{0:N}NAME)),|({0:F}NAME({0:k}NAME,{0:a}NAME,{0:N}NAME))@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&{0:N}NAME-1)&{0:k}NAME
+0 0 1 0 2 1 1 
+0 0 1 0 2 1 1 
+1 0 0 0 NO-TRACE-STRING
+4 0 1 0 NO-TRACE-STRING
+0 1 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 42 18 0 3 DFT of a Complex Exponential Sequence
+.TXT 30 -3 325 0
+Cg a62.000000,63.125000,268
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {We know that a complex exponential
+ with a frequency other than (2}{\f1 p}{/N)k,
+ where k is an integer, cannot be orthogonal
+ to any of the basis complex exponentials
+ and so will have all nonzero DFT values,
+ the projections. This is referred to as
+ }{\b0 leakage}{. }}
+}
+.TXT 10 -9 249 0
+Cg a10.000000,73.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\fs24 \b Project 3.1}}
+}
+.TXT 4 10 250 0
+Cg a58.250000,63.000000,168
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {For each of the FIRs of }{\ul \b 
+Project 2.2}{ compute the N-periodic frequency
+ response. Interpret each filter's operation
+ and compare to your earlier conclusions.}}
+}
+.ATT
+.STATUS Go to Section 2, p. 9
+.GOTO 2_bk.mcd
+.ATT_END
+.TXT 14 -10 346 0
+Cg a10.000000,13.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\fs24 \b Project 3.2}}
+}
+.TXT 3 10 252 0
+Cg a61.625000,62.000000,405
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {The DFT is an important numerical
+ algorithm. But it is useful for analysis
+ and checking  to have a collection of DFT-IDFT
+ pairs. These can be derived by hand or 
+by using Mathcad's sy}{mbolic mathematics
+ capability. In itself it is useful to learn
+ how to use symbolic mathematics  software}{.
+ Construct a table of DFTs. Some entries
+ are suggested: these are sequences defined
+ for n and k in [0,N-1].}}
+}
+.TXT 12 0 344 0
+Cg a52.250000,62.000000,750
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {              }{\b  IDFT    }{ 
+                                        
+        }{\b  DFT}{\par \par            
+    1                                   
+                         }{\f1 d}{(k,0)\par 
+               }{\f1 d}{(n)             
+                                        
+    1          \par                exp}{(i(2}{\f1 
+p}{/N)}{\f1 k}{n), exp(i}{\f1 a}{n)     
+                       N }{\f1 d}{(}{\f1 
+k}{,k), (eq. 3.8)\par                cos}{((2}{\f1 
+p}{/N)}{\f1 k}{n), cos(}{\f1 a}{n)\par  
+              sin}{((2}{\f1 p}{/N)}{\f1 
+k}{n), sin(}{\f1 a}{n)}{\par            
+    a}{\fs16 \up6 n }{                  
+                                        
+ (eq. 3.8)\par                }{\f1 F}{(n,0)
+ - }{\f1 F}{(n,M)                       
+                 (Exercise 3.7)}}
+}
+.TXT 22 -10 347 0
+Cg a10.000000,13.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\fs24 \b Project 3.3}}
+}
+.TXT 4 11 349 0
+Cg a61.125000,61.000000,152
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Analog communication systems are
+ classified according to the modulation 
+type that they employ. E.g., commercial 
+AM broadcasts a signal of the form  }}
+}
+.EQN 6 12 350 0
+{0:s}NAME({0:t}NAME)÷(1+{0:\m}NAME*{0:m}NAME({0:t}NAME))*{0:A}NAME*{0:cos}NAME({0:\w.c}NAME*{0:t}NAME)
+.TXT 4 -12 353 0
+Cg a60.750000,61.000000,689
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Here m(t) is the }{\b modulation}{-
+ e.g., voice. An important problem is determining
+ the bandwidth occupied by analog communication
+ signals. One reason is spectral occupancy
+ is controlled by the law! Computing the
+ Fourier Transform (FT) of the signal answers
+ this question- but this is not easy. We
+ can construct discrete time models that
+ give us insight into this problem. We choose
+ a convenient sequence length N and make
+ up discrete time models using sequences
+ that are sinusoidal with frequencies of
+ the form (2}{\f1 p}{/N)k, where k is an
+ integer. We then compute the DFT. This 
+particular choice for the frequencies gives
+ a suggestive similarity between the DFT
+ and the FT.}}
+}
+.TXT 21 0 354 0
+Cg a59.500000,61.000000,211
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {For simple modulations composed
+ of one or a few sinusoids, compute the 
+DFT for the common types of analog modulated
+ waveforms: (i) broadcast AM and \par (ii)
+ broadcast FM. You can refer to Gibson for
+ the forms.}}
+}
+.TXT 11 -11 196 0
+Cg a10.875000,73.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {\b \fs24 References}}
+}
+.TXT 5 10 197 0
+Cg a35.125000,49.500000,129
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Arial;}
+{\f1\fnil Symbol;}
+{\f2\fnil CG Times;}
+}
+{\plain {Gibson, Chapters 5 and 6\par Jackson,
+ Sec. 7.1}{\par }{Oppenheim and Schafer 
+(1989), Sec. 8.0 & 8.6\par Proakis and Manolakis,
+ Sec. 5.1}}
+}
+.EQN 8 -11 200 0
+{   19   583 0 0}{61}
+19778 12176 0 0 1068
+40 583 19 1 8 0 11096 0 0 256 0
+!!!!!!!!AQ!!AQ!!!,Kt!,Iq!!#$!,IqA\Iq!-#%Aa#%FW!!I}8S!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!!>{5dIp!A6jLO9P!1!*!(<6LVLV-XIr!!DG5Y)0LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.Z
+LVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!%9S3tLV!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!pLVLVIq-I'[LVIu!a+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a+yLVLVLG!j!GIpLG+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a.ZLVLV!%9S3tLV!a+y"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+y!pLVLVIq-I'[LVIu!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+yLVLVLG!j!GIpLG+y!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E
+"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{
+!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E"#+{!a1E!a.ZLVLV!!DG5Y)0
+LG.Z!e)5!pIr!!DG5Y)0LG.Z!e)5!pIr!!9Q5hLVLVJ\LG#e
+
