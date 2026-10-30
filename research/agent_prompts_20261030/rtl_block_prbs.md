@@ -1,0 +1,1 @@
+Твой блок: DSP-PRBS-SCRAMBLER (docs/RTL_TODO.md раздел 9.1). Python-модель: common/python/ext_code_basics.py (prbs_bits, lfsr_jump, additive_scramble, selfsync_scramble, selfsync_descramble). Модуль rtl/common/prbs_scrambler.sv (генератор PRBS, аддитивный и самосинхронизирующийся скремблер/дескремблер), раннер tools/run_prbs.py.

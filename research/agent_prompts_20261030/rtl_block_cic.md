@@ -1,0 +1,1 @@
+Твой блок: DSP-CIC-DEC (docs/RTL_TODO.md раздел 8.2). Python-модель: common/python/cic_model.py (+ cic_reference.py как независимый эталон, docs/TYPED_MODELS.md#cic-models-added-on-2026-10-30). Модуль rtl/common/cic_decimator.sv, раннер tools/run_cic.py.
