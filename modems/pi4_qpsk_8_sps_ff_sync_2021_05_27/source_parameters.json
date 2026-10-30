@@ -1,0 +1,3933 @@
+[
+  {
+    "SampleTime": "-1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Same as input",
+    "RndMeth": "Floor",
+    "source_line": 979
+  },
+  {
+    "Bias": "0",
+    "source_line": 990
+  },
+  {
+    "N": "64",
+    "V": "0",
+    "ic": "0",
+    "TreatMby1Signals": "M channels (this choice will be removed - see release notes)",
+    "OverlapPercent": "0",
+    "source_line": 995
+  },
+  {
+    "Output": "Magnitude and angle",
+    "SampleTime": "-1",
+    "source_line": 1006
+  },
+  {
+    "Output": "Real and imag",
+    "SampleTime": "-1",
+    "source_line": 1011
+  },
+  {
+    "NumInputs": "2",
+    "Mode": "Vector",
+    "ConcatenateDimension": "1",
+    "source_line": 1016
+  },
+  {
+    "Value": "1",
+    "SamplingMode": "Sample based",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Inherit from 'Constant value'",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1022
+  },
+  {
+    "DefaultConfigurationName": "comm.scopes.ConstellationDiagramBlockCfg",
+    "source_line": 1035
+  },
+  {
+    "dim": "Columns",
+    "source_line": 1039
+  },
+  {
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Inherit via back propagation",
+    "ConvertRealWorld": "Real World Value (RWV)",
+    "RndMeth": "Zero",
+    "SampleTime": "-1",
+    "source_line": 1043
+  },
+  {
+    "DelayLengthSource": "Dialog",
+    "DelayLength": "2",
+    "DelayLengthUpperLimit": "100",
+    "InitialConditionSource": "Dialog",
+    "InitialCondition": "0.0",
+    "ExternalReset": "None",
+    "DiagnosticForDelayLength": "None",
+    "InputProcessing": "Elements as channels (sample based)",
+    "SampleTime": "-1",
+    "CodeGenStateStorageClass": "Auto",
+    "source_line": 1054
+  },
+  {
+    "PulseType": "Sample based",
+    "TimeSource": "Use simulation time",
+    "Amplitude": "1",
+    "Period": "2",
+    "PulseWidth": "1",
+    "PhaseDelay": "0",
+    "SampleTime": "1",
+    "source_line": 1072
+  },
+  {
+    "Format": "short",
+    "Decimation": "10",
+    "SampleTime": "-1",
+    "source_line": 1083
+  },
+  {
+    "N": "2",
+    "phase": "0",
+    "InputProcessing": "Columns as channels (frame based)",
+    "smode": "Allow multirate",
+    "fmode": "Maintain input frame size",
+    "RateOptions": "Enforce single-rate processing",
+    "ic": "0",
+    "source_line": 1091
+  },
+  {
+    "StatesWhenEnabling": "held",
+    "PropagateVarSize": "Only when enabling",
+    "PortDimensions": "1",
+    "SampleTime": "-1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "double",
+    "source_line": 1101
+  },
+  {
+    "OutFrame": "Frame-based",
+    "source_line": 1115
+  },
+  {
+    "Gain": "1",
+    "Multiplication": "Element-wise(K.*u)",
+    "ParamMin": "[]",
+    "ParamMax": "[]",
+    "ParamDataTypeStr": "Inherit: Same as input",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Same as input",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 1119
+  },
+  {
+    "Port": "1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: auto",
+    "Unit": "inherit",
+    "PortDimensions": "-1",
+    "VarSizeSig": "Inherit",
+    "SampleTime": "-1",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "source_line": 1134
+  },
+  {
+    "Operator": "exp",
+    "OutputSignalType": "auto",
+    "SampleTime": "-1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Same as first input",
+    "RndMeth": "Floor",
+    "IntermediateResultsDataTypeStr": "Inherit: Inherit via internal rule",
+    "AlgorithmType": "Newton-Raphson",
+    "Iterations": "3",
+    "source_line": 1153
+  },
+  {
+    "Port": "1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: auto",
+    "Unit": "inherit",
+    "PortDimensions": "-1",
+    "VarSizeSig": "Inherit",
+    "SampleTime": "-1",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "SourceOfInitialOutputValue": "Dialog",
+    "OutputWhenDisabled": "held",
+    "InitialOutput": "[]",
+    "source_line": 1168
+  },
+  {
+    "Inputs": "2",
+    "Multiplication": "Element-wise(.*)",
+    "CollapseMode": "All dimensions",
+    "CollapseDim": "1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Same as first input",
+    "RndMeth": "Zero",
+    "SampleTime": "-1",
+    "source_line": 1187
+  },
+  {
+    "Input": "Real and imag",
+    "ConstantPart": "0",
+    "SampleTime": "-1",
+    "source_line": 1202
+  },
+  {
+    "Operator": "floor",
+    "SampleTime": "-1",
+    "source_line": 1208
+  },
+  {
+    "UpperLimitSource": "Dialog",
+    "UpperLimit": "0.5",
+    "LowerLimitSource": "Dialog",
+    "LowerLimit": "-0.5",
+    "SampleTime": "-1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Same as input",
+    "RndMeth": "Floor",
+    "source_line": 1213
+  },
+  {
+    "DefaultConfigurationName": "Simulink.scopes.TimeScopeBlockCfg",
+    "source_line": 1228
+  },
+  {
+    "DefaultConfigurationName": "spbscopes.SpectrumAnalyzerBlockCfg",
+    "source_line": 1233
+  },
+  {
+    "Operator": "sqrt",
+    "OutputSignalType": "auto",
+    "SampleTime": "-1",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Same as first input",
+    "RndMeth": "Floor",
+    "IntermediateResultsDataTypeStr": "Inherit: Inherit via internal rule",
+    "AlgorithmType": "Exact",
+    "Iterations": "3",
+    "source_line": 1237
+  },
+  {
+    "ShowPortLabels": "FromPortIcon",
+    "Permissions": "ReadWrite",
+    "PermitHierarchicalResolution": "All",
+    "SystemSampleTime": "-1",
+    "RTWSystemCode": "Auto",
+    "RTWFcnNameOpts": "Auto",
+    "RTWFileNameOpts": "Auto",
+    "FunctionInterfaceSpec": "void_void",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "DataTypeOverride": "UseLocalSettings",
+    "DataTypeOverrideAppliesTo": "AllNumericTypes",
+    "MinMaxOverflowLogging": "UseLocalSettings",
+    "SFBlockType": "NONE",
+    "source_line": 1252
+  },
+  {
+    "IconShape": "rectangular",
+    "Inputs": "++",
+    "CollapseMode": "All dimensions",
+    "CollapseDim": "1",
+    "AccumDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutMin": "[]",
+    "OutMax": "[]",
+    "OutDataTypeStr": "Inherit: Same as first input",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 1284
+  },
+  {
+    "Name": "1_sps_clock_domain",
+    "SID": "131",
+    "LibraryVersion": "1.216",
+    "source_line": 1318
+  },
+  {
+    "Name": "In1",
+    "SID": "132",
+    "IconDisplay": "Port number",
+    "source_line": 1343
+  },
+  {
+    "Name": "mu",
+    "SID": "868",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 1351
+  },
+  {
+    "Name": "Enable",
+    "SID": "138",
+    "source_line": 1360
+  },
+  {
+    "Name": "parabolic_farrow_interpolator",
+    "SID": "2438",
+    "source_line": 1368
+  },
+  {
+    "Name": "in",
+    "SID": "2439",
+    "IconDisplay": "Port number",
+    "source_line": 1392
+  },
+  {
+    "Name": "mu",
+    "SID": "2440",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 1400
+  },
+  {
+    "Name": "Gain1",
+    "SID": "2441",
+    "Gain": "1/2",
+    "source_line": 1409
+  },
+  {
+    "Name": "Gain2",
+    "SID": "2442",
+    "Gain": "-1/2",
+    "source_line": 1418
+  },
+  {
+    "Name": "Gain3",
+    "SID": "2443",
+    "Gain": "-1/2",
+    "source_line": 1427
+  },
+  {
+    "Name": "Gain4",
+    "SID": "2444",
+    "Gain": "1/2",
+    "source_line": 1436
+  },
+  {
+    "Name": "Gain5",
+    "SID": "2445",
+    "Gain": "-1/2",
+    "source_line": 1445
+  },
+  {
+    "Name": "Gain6",
+    "SID": "2446",
+    "Gain": "3/2",
+    "source_line": 1454
+  },
+  {
+    "Name": "Gain7",
+    "SID": "2447",
+    "Gain": "-1/2",
+    "source_line": 1463
+  },
+  {
+    "Name": "Gain8",
+    "SID": "2448",
+    "Gain": "-1/2",
+    "source_line": 1472
+  },
+  {
+    "Name": "Multiport\\nSelector",
+    "SID": "2449",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 1481
+  },
+  {
+    "Name": "Multiport\\nSelector1",
+    "SID": "2450",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 1495
+  },
+  {
+    "Name": "Multiport\\nSelector2",
+    "SID": "2451",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 1509
+  },
+  {
+    "Name": "Product",
+    "SID": "2452",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1523
+  },
+  {
+    "Name": "Product1",
+    "SID": "2453",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1535
+  },
+  {
+    "Name": "Sum",
+    "SID": "2454",
+    "Inputs": "++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 1547
+  },
+  {
+    "Name": "Sum1",
+    "SID": "2455",
+    "Inputs": "++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 1559
+  },
+  {
+    "Name": "Sum2",
+    "SID": "2456",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 1571
+  },
+  {
+    "Name": "Sum3",
+    "SID": "2457",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 1582
+  },
+  {
+    "Name": "out",
+    "SID": "2458",
+    "IconDisplay": "Port number",
+    "source_line": 1593
+  },
+  {
+    "Name": "subsystem\\n",
+    "SID": "139",
+    "LibraryVersion": "1.216",
+    "source_line": 1812
+  },
+  {
+    "Name": "In1",
+    "SID": "140",
+    "IconDisplay": "Port number",
+    "source_line": 1837
+  },
+  {
+    "Name": "Add",
+    "SID": "1840",
+    "Inputs": "-+",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 1845
+  },
+  {
+    "Name": "Constant",
+    "SID": "1414",
+    "Value": "-pi/4",
+    "source_line": 1857
+  },
+  {
+    "Name": "Gain",
+    "SID": "1839",
+    "Gain": "1/2",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 1865
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1415",
+    "InputPortMap": "u0",
+    "DelayLength": "64",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 1876
+  },
+  {
+    "Name": "Integer Delay2",
+    "SID": "1855",
+    "InputPortMap": "u0",
+    "DelayLength": "2^5/2",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 1889
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1416",
+    "OutputSignalType": "complex",
+    "source_line": 1902
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "1841",
+    "Operator": "magnitude^2",
+    "source_line": 1911
+  },
+  {
+    "Name": "NCO",
+    "SID": "1417",
+    "LibraryVersion": "1.216",
+    "source_line": 1920
+  },
+  {
+    "Name": "In1",
+    "SID": "1418",
+    "IconDisplay": "Port number",
+    "source_line": 1945
+  },
+  {
+    "Name": "Constant",
+    "SID": "1419",
+    "Value": "2*pi",
+    "source_line": 1953
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1420",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 1961
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1421",
+    "Operator": "mod",
+    "source_line": 1974
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1422",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 1983
+  },
+  {
+    "Name": "Out1",
+    "SID": "1423",
+    "IconDisplay": "Port number",
+    "source_line": 1997
+  },
+  {
+    "Name": "Product",
+    "SID": "1424",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 2054
+  },
+  {
+    "Name": "Product1",
+    "SID": "1425",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 2066
+  },
+  {
+    "Name": "Sqrt",
+    "SID": "1853",
+    "source_line": 2078
+  },
+  {
+    "Name": "cic",
+    "SID": "1843",
+    "LibraryVersion": "1.216",
+    "source_line": 2085
+  },
+  {
+    "Name": "In1",
+    "SID": "1844",
+    "IconDisplay": "Port number",
+    "source_line": 2110
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1845",
+    "InputPortMap": "u0",
+    "DelayLength": "2^5",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 2118
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "1846",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 2131
+  },
+  {
+    "Name": "Sum",
+    "SID": "1847",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 2145
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1848",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 2159
+  },
+  {
+    "Name": "gain",
+    "SID": "1849",
+    "Gain": "1/2^5",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 2173
+  },
+  {
+    "Name": "Out1",
+    "SID": "1850",
+    "IconDisplay": "Port number",
+    "source_line": 2184
+  },
+  {
+    "Name": "data_decoder",
+    "SID": "591",
+    "source_line": 2258
+  },
+  {
+    "Name": "decision\\n",
+    "SID": "592",
+    "IconDisplay": "Port number",
+    "source_line": 2282
+  },
+  {
+    "Name": "Bias",
+    "SID": "1179",
+    "Bias": "-1",
+    "source_line": 2290
+  },
+  {
+    "Name": "Complex to\\nReal-Imag",
+    "SID": "1182",
+    "source_line": 2299
+  },
+  {
+    "Name": "Constant1",
+    "SID": "1183",
+    "Value": "[1 2]",
+    "source_line": 2307
+  },
+  {
+    "Name": "Constant2",
+    "SID": "1184",
+    "Value": "[0 1 3 2]",
+    "source_line": 2315
+  },
+  {
+    "Name": "Constant3",
+    "SID": "1170",
+    "Value": "[0 1 3 2]",
+    "source_line": 2323
+  },
+  {
+    "Name": "Constant4",
+    "SID": "594",
+    "Value": "4",
+    "source_line": 2331
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1288",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 2341
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "598",
+    "Operator": "mod",
+    "source_line": 2354
+  },
+  {
+    "Name": "Matrix\\nConcatenate",
+    "SID": "1187",
+    "ConcatenateDimension": "2",
+    "source_line": 2363
+  },
+  {
+    "Name": "Matrix\\nSum",
+    "SID": "1188",
+    "Inputs": "+",
+    "CollapseMode": "Specified dimension",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 2372
+  },
+  {
+    "Name": "Product",
+    "SID": "1190",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 2385
+  },
+  {
+    "Name": "Sum5",
+    "SID": "599",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2397
+  },
+  {
+    "Name": "Variable\\nSelector",
+    "SID": "1171",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 2409
+  },
+  {
+    "Name": "Variable\\nSelector1",
+    "SID": "1192",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 2429
+  },
+  {
+    "Name": "descrambler",
+    "SID": "601",
+    "LibraryVersion": "1.216",
+    "source_line": 2449
+  },
+  {
+    "Name": "In1",
+    "SID": "602",
+    "IconDisplay": "Port number",
+    "source_line": 2474
+  },
+  {
+    "Name": "Constant",
+    "SID": "603",
+    "Value": "4",
+    "source_line": 2482
+  },
+  {
+    "Name": "Constant1",
+    "SID": "604",
+    "Value": "4",
+    "source_line": 2490
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "605",
+    "InputPortMap": "u0",
+    "DelayLength": "14",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 2498
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "606",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 2511
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "607",
+    "Operator": "mod",
+    "source_line": 2524
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "608",
+    "Operator": "mod",
+    "source_line": 2533
+  },
+  {
+    "Name": "Sum",
+    "SID": "609",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 2542
+  },
+  {
+    "Name": "Sum1",
+    "SID": "610",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 2556
+  },
+  {
+    "Name": "Out1",
+    "SID": "611",
+    "IconDisplay": "Port number",
+    "source_line": 2570
+  },
+  {
+    "Name": "gain",
+    "SID": "1193",
+    "Gain": "-1/2",
+    "source_line": 2666
+  },
+  {
+    "Name": "data",
+    "SID": "612",
+    "IconDisplay": "Port number",
+    "source_line": 2675
+  },
+  {
+    "Name": "decision",
+    "SID": "1466",
+    "source_line": 2867
+  },
+  {
+    "Name": "soft",
+    "SID": "1467",
+    "IconDisplay": "Port number",
+    "source_line": 2891
+  },
+  {
+    "Name": "Bias",
+    "SID": "1468",
+    "Bias": "-1",
+    "source_line": 2899
+  },
+  {
+    "Name": "Compare\\nTo Constant",
+    "SID": "1469",
+    "LibraryVersion": "1.388",
+    "SourceBlock": "simulink/Logic and Bit\\nOperations/Compare\\nTo Constant",
+    "SourceType": "Compare To Constant",
+    "relop": ">",
+    "const": "0",
+    "OutDataTypeStr": "boolean",
+    "source_line": 2908
+  },
+  {
+    "Name": "Complex to\\nReal-Imag",
+    "SID": "1470",
+    "source_line": 2924
+  },
+  {
+    "Name": "Data Type Conversion",
+    "SID": "1471",
+    "OutDataTypeStr": "double",
+    "RndMeth": "Floor",
+    "source_line": 2932
+  },
+  {
+    "Name": "Matrix\\nConcatenate",
+    "SID": "1472",
+    "ConcatenateDimension": "2",
+    "source_line": 2942
+  },
+  {
+    "Name": "Multiport\\nSelector",
+    "SID": "1473",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 2951
+  },
+  {
+    "Name": "Real-Imag to\\nComplex",
+    "SID": "1474",
+    "source_line": 2965
+  },
+  {
+    "Name": "gain",
+    "SID": "1475",
+    "Gain": "2",
+    "source_line": 2973
+  },
+  {
+    "Name": "decision",
+    "SID": "1476",
+    "IconDisplay": "Port number",
+    "source_line": 2982
+  },
+  {
+    "Name": "phase_sync",
+    "SID": "1426",
+    "source_line": 3069
+  },
+  {
+    "Name": "In1",
+    "SID": "1427",
+    "IconDisplay": "Port number",
+    "source_line": 3093
+  },
+  {
+    "Name": "Constant",
+    "SID": "1428",
+    "Value": "pi/4",
+    "source_line": 3101
+  },
+  {
+    "Name": "Constant1",
+    "SID": "1800",
+    "Value": "mod((-2*pi*[-127:127]/256)*128/2, 2*pi)",
+    "source_line": 3109
+  },
+  {
+    "Name": "Gain1",
+    "SID": "1430",
+    "Gain": "-i",
+    "source_line": 3117
+  },
+  {
+    "Name": "Gain2",
+    "SID": "1760",
+    "Gain": "1/4",
+    "source_line": 3126
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1802",
+    "Operator": "magnitude^2",
+    "source_line": 3135
+  },
+  {
+    "Name": "Math\\nFunction2",
+    "SID": "1431",
+    "source_line": 3144
+  },
+  {
+    "Name": "Maximum",
+    "SID": "1804",
+    "LibraryVersion": "1.588",
+    "UserData": "DataTag0",
+    "SourceBlock": "dspstat3/Maximum",
+    "SourceType": "Maximum",
+    "operation": "maximum",
+    "fcn": "Index",
+    "indexBase": "Zero",
+    "operateOver": "Entire input",
+    "Dimension": "1",
+    "InputProcessing": "Columns as channels (frame based)",
+    "reset": "None",
+    "roiType": "Rectangles",
+    "roiPortion": "Entire ROI",
+    "roiOutput": "Individual statistics for each ROI",
+    "roundingMode": "Floor",
+    "prodOutputMode": "Same as input",
+    "prodOutputWordLength": "32",
+    "prodOutputFracLength": "30",
+    "prodOutputDataTypeStr": "Inherit: Same as input",
+    "prodOutputLastDataTypeStr": "Inherit: Same as input",
+    "accumMode": "Same as product output",
+    "accumWordLength": "32",
+    "accumFracLength": "30",
+    "accumDataTypeStr": "Inherit: Same as product output",
+    "accumLastDataTypeStr": "Inherit: Same as product output",
+    "source_line": 3152
+  },
+  {
+    "Name": "Product",
+    "SID": "1432",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 3192
+  },
+  {
+    "Name": "Product1",
+    "SID": "1433",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 3204
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1808",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 3216
+  },
+  {
+    "Name": "Sum3",
+    "SID": "1434",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 3230
+  },
+  {
+    "Name": "Variable\\nSelector",
+    "SID": "1799",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 3244
+  },
+  {
+    "Name": "Variable\\nSelector1",
+    "SID": "1809",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 3264
+  },
+  {
+    "Name": "cordic",
+    "SID": "1769",
+    "Output": "Angle",
+    "source_line": 3284
+  },
+  {
+    "Name": "phase_unwrap",
+    "SID": "1810",
+    "source_line": 3293
+  },
+  {
+    "Name": "in",
+    "SID": "1811",
+    "IconDisplay": "Port number",
+    "source_line": 3317
+  },
+  {
+    "Name": "Constant1",
+    "SID": "1812",
+    "Value": "pi",
+    "source_line": 3325
+  },
+  {
+    "Name": "Constant2",
+    "SID": "1813",
+    "Value": "2*pi",
+    "source_line": 3335
+  },
+  {
+    "Name": "Constant3",
+    "SID": "1814",
+    "Value": "pi/4",
+    "source_line": 3345
+  },
+  {
+    "Name": "Constant4",
+    "SID": "1815",
+    "Value": "2*pi/4",
+    "source_line": 3355
+  },
+  {
+    "Name": "Constant5",
+    "SID": "1816",
+    "Value": "pi",
+    "source_line": 3365
+  },
+  {
+    "Name": "Constant6",
+    "SID": "1817",
+    "Value": "pi/4",
+    "source_line": 3375
+  },
+  {
+    "Name": "Gain",
+    "SID": "1818",
+    "source_line": 3385
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "1819",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 3393
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "1820",
+    "Operator": "mod",
+    "source_line": 3407
+  },
+  {
+    "Name": "Math\\nFunction3",
+    "SID": "1821",
+    "Operator": "mod",
+    "source_line": 3416
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1822",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 3425
+  },
+  {
+    "Name": "Sum2",
+    "SID": "1823",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 3437
+  },
+  {
+    "Name": "Sum3",
+    "SID": "1824",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 3449
+  },
+  {
+    "Name": "Sum4",
+    "SID": "1825",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 3461
+  },
+  {
+    "Name": "Sum5",
+    "SID": "1826",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 3473
+  },
+  {
+    "Name": "Sum6",
+    "SID": "1827",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 3485
+  },
+  {
+    "Name": "out",
+    "SID": "1828",
+    "IconDisplay": "Port number",
+    "source_line": 3497
+  },
+  {
+    "Name": "sliding_DFT",
+    "SID": "1761",
+    "LibraryVersion": "1.216",
+    "source_line": 3648
+  },
+  {
+    "Name": "In1",
+    "SID": "1762",
+    "IconDisplay": "Port number",
+    "source_line": 3673
+  },
+  {
+    "Name": "Add",
+    "SID": "1789",
+    "Inputs": "+-",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 3681
+  },
+  {
+    "Name": "Add1",
+    "SID": "1790",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 3693
+  },
+  {
+    "Name": "Constant",
+    "SID": "1792",
+    "Value": "(1-1/2^12)^128",
+    "source_line": 3704
+  },
+  {
+    "Name": "Constant1",
+    "SID": "1793",
+    "Value": "exp(j*(2*pi*[-127:127]/256))",
+    "source_line": 3712
+  },
+  {
+    "Name": "Constant2",
+    "SID": "1795",
+    "Value": "1-1/2^12",
+    "source_line": 3720
+  },
+  {
+    "Name": "Constant3",
+    "SID": "1834",
+    "Value": "exp(j*(2*pi*[-127:127]/256)*128)",
+    "source_line": 3728
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1763",
+    "InputPortMap": "u0",
+    "DelayLength": "128",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 3736
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "1764",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 3749
+  },
+  {
+    "Name": "Product1",
+    "SID": "1794",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 3763
+  },
+  {
+    "Name": "Product2",
+    "SID": "1796",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 3776
+  },
+  {
+    "Name": "Product3",
+    "SID": "1791",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 3789
+  },
+  {
+    "Name": "Product4",
+    "SID": "1835",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 3801
+  },
+  {
+    "Name": "Out1",
+    "SID": "1768",
+    "IconDisplay": "Port number",
+    "source_line": 3813
+  },
+  {
+    "Name": "Out1",
+    "SID": "1463",
+    "IconDisplay": "Port number",
+    "source_line": 3940
+  },
+  {
+    "Name": "filter_number",
+    "SID": "1829",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 3948
+  },
+  {
+    "Name": "sqrt(-1)",
+    "SID": "1465",
+    "Gain": "i",
+    "source_line": 4139
+  },
+  {
+    "Name": "scatter",
+    "SID": "143",
+    "IconDisplay": "Port number",
+    "source_line": 4148
+  },
+  {
+    "Name": "data",
+    "SID": "144",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 4156
+  },
+  {
+    "Name": "filter_number",
+    "SID": "1830",
+    "Port": "3",
+    "IconDisplay": "Port number",
+    "source_line": 4165
+  },
+  {
+    "Name": "EVM",
+    "SID": "1837",
+    "Port": "4",
+    "IconDisplay": "Port number",
+    "source_line": 4174
+  },
+  {
+    "Name": "scatter",
+    "SID": "133",
+    "IconDisplay": "Port number",
+    "source_line": 4354
+  },
+  {
+    "Name": "data",
+    "SID": "135",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 4362
+  },
+  {
+    "Name": "filter_number",
+    "SID": "1831",
+    "Port": "3",
+    "IconDisplay": "Port number",
+    "source_line": 4371
+  },
+  {
+    "Name": "EVM",
+    "SID": "137",
+    "Port": "4",
+    "IconDisplay": "Port number",
+    "source_line": 4380
+  },
+  {
+    "Name": "AGC",
+    "SID": "1478",
+    "source_line": 4441
+  },
+  {
+    "Name": "in",
+    "SID": "1479",
+    "IconDisplay": "Port number",
+    "source_line": 4465
+  },
+  {
+    "Name": "AGC",
+    "SID": "1595",
+    "BackgroundColor": "darkGreen",
+    "source_line": 4473
+  },
+  {
+    "Name": "Abs",
+    "SID": "1506",
+    "source_line": 4508
+  },
+  {
+    "Name": "Abs1",
+    "SID": "1596",
+    "source_line": 4517
+  },
+  {
+    "Name": "Bias",
+    "SID": "1480",
+    "Bias": "0.1",
+    "source_line": 4525
+  },
+  {
+    "Name": "Constant",
+    "SID": "1482",
+    "Value": "1*log(0.707)",
+    "source_line": 4535
+  },
+  {
+    "Name": "IIR_LPF",
+    "SID": "1483",
+    "source_line": 4543
+  },
+  {
+    "Name": "in",
+    "SID": "1484",
+    "IconDisplay": "Port number",
+    "source_line": 4568
+  },
+  {
+    "Name": "Gain",
+    "SID": "1485",
+    "Gain": "1-1/2^6",
+    "source_line": 4576
+  },
+  {
+    "Name": "Gain1",
+    "SID": "1486",
+    "Gain": "1/2^6",
+    "source_line": 4586
+  },
+  {
+    "Name": "Integer Delay10",
+    "SID": "1487",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 4595
+  },
+  {
+    "Name": "Sum8",
+    "SID": "1488",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 4609
+  },
+  {
+    "Name": "out\\n",
+    "SID": "1489",
+    "IconDisplay": "Port number",
+    "source_line": 4623
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "1593",
+    "InputPortMap": "u0",
+    "DelayLength": "18*8",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 4679
+  },
+  {
+    "Name": "Integer Delay4",
+    "SID": "1490",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 4692
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1491",
+    "OutputSignalType": "real",
+    "source_line": 4706
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "1492",
+    "Operator": "log",
+    "source_line": 4716
+  },
+  {
+    "Name": "Product",
+    "SID": "1497",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 4726
+  },
+  {
+    "Name": "Product1",
+    "SID": "1592",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 4738
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1500",
+    "IconShape": "round",
+    "Inputs": "|-+",
+    "source_line": 4750
+  },
+  {
+    "Name": "Sum4",
+    "SID": "1501",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 4763
+  },
+  {
+    "Name": "complex_saturation",
+    "SID": "1123",
+    "source_line": 4776
+  },
+  {
+    "Name": "in",
+    "SID": "1124",
+    "IconDisplay": "Port number",
+    "source_line": 4800
+  },
+  {
+    "Name": "Complex to\\nReal-Imag",
+    "SID": "1125",
+    "source_line": 4808
+  },
+  {
+    "Name": "Real-Imag to\\nComplex",
+    "SID": "1126",
+    "source_line": 4816
+  },
+  {
+    "Name": "Saturation",
+    "SID": "1127",
+    "InputPortMap": "u0",
+    "UpperLimit": "1.25",
+    "LowerLimit": "-1.25",
+    "source_line": 4824
+  },
+  {
+    "Name": "Saturation1",
+    "SID": "1128",
+    "InputPortMap": "u0",
+    "UpperLimit": "1.25",
+    "LowerLimit": "-1.25",
+    "source_line": 4835
+  },
+  {
+    "Name": "out",
+    "SID": "1129",
+    "IconDisplay": "Port number",
+    "source_line": 4846
+  },
+  {
+    "Name": "gain",
+    "SID": "1503",
+    "Gain": "1/2^7",
+    "source_line": 4900
+  },
+  {
+    "Name": "out",
+    "SID": "1505",
+    "IconDisplay": "Port number",
+    "source_line": 4910
+  },
+  {
+    "Name": "AWGN\\nChannel",
+    "SID": "82",
+    "LibraryVersion": "1.472",
+    "UserData": "DataTag1",
+    "SourceBlock": "commchan3/AWGN\\nChannel",
+    "SourceType": "AWGN Channel",
+    "InputProcessing": "Columns as channels (frame based)",
+    "seed": "randseed",
+    "noiseMode": "Signal to noise ratio  (Eb/No)",
+    "EbNodB": "10",
+    "EsNodB": "10",
+    "SNRdB": "10",
+    "bitsPerSym": "2",
+    "Ps": "0.99/10^(3*2*1)",
+    "Tsym": "1",
+    "variance": "1",
+    "source_line": 5085
+  },
+  {
+    "Name": "Add",
+    "SID": "1737",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 5109
+  },
+  {
+    "Name": "Complex to\\nReal-Imag",
+    "SID": "184",
+    "source_line": 5120
+  },
+  {
+    "Name": "Complex to\\nReal-Imag1",
+    "SID": "1130",
+    "Output": "Real",
+    "source_line": 5128
+  },
+  {
+    "Name": "Complex to\\nReal-Imag2",
+    "SID": "1598",
+    "Output": "Real",
+    "source_line": 5137
+  },
+  {
+    "Name": "Constant1",
+    "SID": "1599",
+    "Value": "1/2^15.271",
+    "source_line": 5146
+  },
+  {
+    "Name": "Constant2",
+    "SID": "1131",
+    "Value": "1/2^15.271",
+    "source_line": 5154
+  },
+  {
+    "Name": "Constant6",
+    "SID": "2311",
+    "source_line": 5162
+  },
+  {
+    "Name": "Constant7",
+    "SID": "2312",
+    "Value": "0",
+    "source_line": 5169
+  },
+  {
+    "Name": "Discrete-Time\\nScatter Plot\\nScope",
+    "SID": "179",
+    "Tag": "ScatterPlot",
+    "ScopeSpecificationString": "comm.scopes.ConstellationDiagramBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sources','WiredSimulink',true),extmgr.Configuration('Sources','SimulinkEvent',false),extmgr.Configuration('Sources','Simulink',false),extmgr.Configuration('Sources','File',false),extmgr.Configuration('Sources','Workspace',false),extmgr.Configuration('Sources','Streaming',false),extmgr.Configuration('Sources','SPTool',false),extmgr.Configuration('Visuals','Constellation',true,'MinYLim','-1.5','MaxYLim','1.5','MinXLim','-1.5','MaxXLim','1.5','SymbolsToDisplayFromInput',false,'SymbolsToDisplay','2^7','ColorFading',true,'ShowRefConstellation',false,'Title','Scatter Plot','LineProperties',struct('DisplayName','','Color',[1 1 0.0666666666666667],'LineStyle','none','LineWidth',0.5,'Marker','.','MarkerSize',6,'MarkerEdgeColor','auto','MarkerFaceColor','none','Visible','on'),'AxesProperties',struct('Color',[0 0 0],'XColor',[0.686274509803922 0.686274509803922 0.686274509803922],'YColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ZColor',[0.686274509803922 0.686274509803922 0.686274509803922]),'AuxLineProperties',struct('LineColor',[1 1 0.0666666666666667],'LineStyle','none','TrajLineWidth',0.5,'RefConStyle','+','RefConSize',6,'RefConColor',[1 0 0],'RefConLineWidth',0.5)),extmgr.Configuration('Visuals','Eye Diagram',false),extmgr.Configuration('Visuals','Array Plot',false),extmgr.Configuration('Visuals','Video',false),extmgr.Configuration('Visuals','PhasedMatrix',false),extmgr.Configuration('Visuals','IntensityVisual',false),extmgr.Configuration('Visuals','ScenarioVisual',false),extmgr.Configuration('Visuals','Logic Analyzer',false),extmgr.Configuration('Visuals','Spectrum',false),extmgr.Configuration('Visuals','TimeVisual',false),extmgr.Configuration('Visuals','Time Domain',false),extmgr.Configuration('Visuals','Matrix',false),extmgr.Configuration('Visuals','BodeVisual',false),extmgr.Configuration('Visuals','PZMapVisual',false),extmgr.Configuration('Visuals','NicholsVisual',false),extmgr.Configuration('Visuals','MarginsVisual',false),extmgr.Configuration('Visuals','SigmaVisual',false),extmgr.Configuration('Visuals','LinearStepVisual',false),extmgr.Configuration('Tools','Measurements',true,'Version','2016b'),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Requirement viewer',false),extmgr.Configuration('Tools','Check block zoom',false),extmgr.Configuration('Tools','Instrumentation Sets',false),extmgr.Configuration('Tools','Response Optimization',false),extmgr.Configuration('Tools','Image Tool',false),extmgr.Configuration('Tools','Pixel Region',false),extmgr.Configuration('Tools','Image Navigation Tools',false)),'Version','2016b','Position',[1031.4 413 349.6 349.6],'VisibleAtModelOpen','on')",
+    "source_line": 5177
+  },
+  {
+    "Name": "Discrete-Time\\nSignal Trajectory\\nScope",
+    "SID": "80",
+    "Tag": "SignalTrajectory",
+    "ScopeSpecificationString": "comm.scopes.ConstellationDiagramBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sources','WiredSimulink',true),extmgr.Configuration('Sources','SimulinkEvent',false),extmgr.Configuration('Sources','Simulink',false),extmgr.Configuration('Sources','File',false),extmgr.Configuration('Sources','Workspace',false),extmgr.Configuration('Sources','Streaming',false),extmgr.Configuration('Sources','SPTool',false),extmgr.Configuration('Visuals','Constellation',true,'MinYLim','-1.5','MaxYLim','1.5','MinXLim','-1.5','MaxXLim','1.5','AxesProperties',struct('Color',[0 0 0],'XColor',[0.686274509803922 0.686274509803922 0.686274509803922],'YColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ZColor',[0.686274509803922 0.686274509803922 0.686274509803922]),'SamplesPerSymbol','8','SymbolsToDisplayFromInput',false,'SymbolsToDisplay','1000','LineStyle','-','LineColor','b','ColorFading',true,'ShowRefConstellation',false,'Title','Signal Trajectory','Trajectory',true,'LineProperties',struct('DisplayName','','Color',[1 1 0.0666666666666667],'LineStyle','-','LineWidth',0.5,'Marker','.','MarkerSize',6,'MarkerEdgeColor','auto','MarkerFaceColor','none','Visible','on'),'AuxLineProperties',struct('LineColor',[1 1 0.0666666666666667],'LineStyle','-','TrajLineWidth',0.5,'RefConStyle','+','RefConSize',6,'RefConColor',[1 0 0],'RefConLineWidth',0.5)),extmgr.Configuration('Visuals','Eye Diagram',false),extmgr.Configuration('Visuals','Array Plot',false),extmgr.Configuration('Visuals','Video',false),extmgr.Configuration('Visuals','PhasedMatrix',false),extmgr.Configuration('Visuals','IntensityVisual',false),extmgr.Configuration('Visuals','ScenarioVisual',false),extmgr.Configuration('Visuals','Logic Analyzer',false),extmgr.Configuration('Visuals','Spectrum',false),extmgr.Configuration('Visuals','TimeVisual',false),extmgr.Configuration('Visuals','Time Domain',false),extmgr.Configuration('Visuals','Matrix',false),extmgr.Configuration('Visuals','BodeVisual',false),extmgr.Configuration('Visuals','PZMapVisual',false),extmgr.Configuration('Visuals','NicholsVisual',false),extmgr.Configuration('Visuals','MarginsVisual',false),extmgr.Configuration('Visuals','SigmaVisual',false),extmgr.Configuration('Visuals','LinearStepVisual',false),extmgr.Configuration('Tools','Measurements',true,'Version','2016b'),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Requirement viewer',false),extmgr.Configuration('Tools','Check block zoom',false),extmgr.Configuration('Tools','Instrumentation Sets',false),extmgr.Configuration('Tools','Response Optimization',false),extmgr.Configuration('Tools','Pixel Region',false),extmgr.Configuration('Tools','Image Navigation Tools',false),extmgr.Configuration('Tools','Image Tool',false)),'Version','2016b','Position',[17 412.2 349.6 349.6],'VisibleAtModelOpen','on')",
+    "source_line": 5212
+  },
+  {
+    "Name": "Downsample",
+    "SID": "180",
+    "UserData": "DataTag2",
+    "N": "8",
+    "InputProcessing": "Elements as channels (sample based)",
+    "RateOptions": "Allow multirate processing",
+    "source_line": 5248
+  },
+  {
+    "Name": "Downsample1",
+    "SID": "614",
+    "UserData": "DataTag3",
+    "N": "8",
+    "InputProcessing": "Elements as channels (sample based)",
+    "RateOptions": "Allow multirate processing",
+    "source_line": 5260
+  },
+  {
+    "Name": "Downsample2",
+    "SID": "1832",
+    "UserData": "DataTag4",
+    "N": "8",
+    "InputProcessing": "Elements as channels (sample based)",
+    "RateOptions": "Allow multirate processing",
+    "source_line": 5272
+  },
+  {
+    "Name": "Downsample3",
+    "SID": "1836",
+    "UserData": "DataTag5",
+    "N": "8",
+    "InputProcessing": "Elements as channels (sample based)",
+    "RateOptions": "Allow multirate processing",
+    "source_line": 5284
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "178",
+    "InputPortMap": "u0",
+    "DelayLength": "6",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 5296
+  },
+  {
+    "Name": "Integer Delay11",
+    "SID": "1591",
+    "InputPortMap": "u0",
+    "DelayLength": "8*128/2",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 5309
+  },
+  {
+    "Name": "Integer Delay2",
+    "SID": "1740",
+    "InputPortMap": "u0",
+    "DelayLength": "6-4",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 5322
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "109",
+    "Operator": "magnitude^2",
+    "source_line": 5335
+  },
+  {
+    "Name": "NCO",
+    "SID": "1151",
+    "LibraryVersion": "1.216",
+    "source_line": 5344
+  },
+  {
+    "Name": "In1",
+    "SID": "1152",
+    "IconDisplay": "Port number",
+    "source_line": 5369
+  },
+  {
+    "Name": "Constant",
+    "SID": "1153",
+    "Value": "2*pi",
+    "source_line": 5377
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1154",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 5385
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1155",
+    "Operator": "mod",
+    "source_line": 5398
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "1156",
+    "OutputSignalType": "complex",
+    "source_line": 5407
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1157",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 5416
+  },
+  {
+    "Name": "sqrt(-1)",
+    "SID": "1158",
+    "Gain": "i",
+    "source_line": 5430
+  },
+  {
+    "Name": "Out1",
+    "SID": "1159",
+    "IconDisplay": "Port number",
+    "source_line": 5439
+  },
+  {
+    "Name": "NCO1",
+    "SID": "1602",
+    "LibraryVersion": "1.216",
+    "source_line": 5510
+  },
+  {
+    "Name": "In1",
+    "SID": "1603",
+    "IconDisplay": "Port number",
+    "source_line": 5535
+  },
+  {
+    "Name": "Constant",
+    "SID": "1604",
+    "Value": "2*pi",
+    "source_line": 5543
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1605",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "pi",
+    "InputProcessing": "Inherited",
+    "source_line": 5551
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1606",
+    "Operator": "mod",
+    "source_line": 5564
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "1607",
+    "OutputSignalType": "complex",
+    "source_line": 5573
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1608",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 5582
+  },
+  {
+    "Name": "sqrt(-1)",
+    "SID": "1609",
+    "Gain": "i",
+    "source_line": 5596
+  },
+  {
+    "Name": "Out1",
+    "SID": "1610",
+    "IconDisplay": "Port number",
+    "source_line": 5605
+  },
+  {
+    "Name": "Phase/\\nFrequency\\nOffset",
+    "SID": "111",
+    "LibraryVersion": "1.330",
+    "SourceBlock": "commrflib2/Phase//\\nFrequency\\nOffset",
+    "SourceType": "Phase/Frequency Offset",
+    "phaseOffset": "0",
+    "freqOffset": "-1/2^4-1/2^11",
+    "source_line": 5676
+  },
+  {
+    "Name": "Phase/\\nFrequency\\nOffset1",
+    "SID": "1611",
+    "LibraryVersion": "1.330",
+    "SourceBlock": "commrflib2/Phase//\\nFrequency\\nOffset",
+    "SourceType": "Phase/Frequency Offset",
+    "phaseOffset": "45",
+    "freqOffset": "-1/2^4+1/2^11",
+    "source_line": 5690
+  },
+  {
+    "Name": "Pulse\\nGenerator",
+    "SID": "1507",
+    "Period": "(32+512+32)*2",
+    "PulseWidth": "512",
+    "PhaseDelay": "32",
+    "source_line": 5704
+  },
+  {
+    "Name": "Pulse\\nGenerator1",
+    "SID": "2309",
+    "Period": "(32+512+32)*2",
+    "PulseWidth": "512",
+    "PhaseDelay": "32+512+32*2",
+    "source_line": 5715
+  },
+  {
+    "Name": "Spectrum\\nScope",
+    "SID": "112",
+    "ScopeSpecificationString": "spbscopes.SpectrumAnalyzerBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sources','WiredSimulink',true),extmgr.Configuration('Sources','File',false),extmgr.Configuration('Sources','SimulinkEvent',false),extmgr.Configuration('Sources','Simulink',false),extmgr.Configuration('Sources','SPTool',false),extmgr.Configuration('Sources','Streaming',false),extmgr.Configuration('Sources','Workspace',false),extmgr.Configuration('Visuals','Spectrum',true,'AxesProperties',struct('Color',[0 0 0],'XColor',[0.686274509803922 0.686274509803922 0.686274509803922],'YColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ZColor',[0.686274509803922 0.686274509803922 0.686274509803922],'XGrid','on','YGrid','on','ZGrid','off','Box','on','XScale','linear','YScale','linear','ZScale','linear','XDir','normal','YDir','normal','ZDir','normal','XTickMode','auto','YTickMode','auto','ZTickMode','auto','XTickLabelMode','auto','YTickLabelMode','manual','ZTickLabelMode','manual','YTickLabel',['     0';'0.5556';' 1.111';' 1.667';' 2.222'],'ZTickLabel','','FontName','Helvetica','FontSize',8.5,'FontUnits','points','FontWeight','normal','Title','','XLabel','Frequency (Hz)','YLabel','Time History (hrs)  \\\\rightarrow','ZLabel',''),'LineProperties',struct('DisplayName','','Color',[1 1 0.0666666666666667],'LineStyle','-','LineWidth',0.5,'Marker','none','MarkerSize',6,'MarkerEdgeColor','auto','MarkerFaceColor','none','Visible','on'),'YLabel','Magnitude-squared','MinYLim','-117.94413840029837','MaxYLim','15.829935243254916','SpectrumType','Spectrogram','SampleRate','8','Span','4','StartFrequency','-2','StopFrequency','2','OverlapPercent','50','SpectralAverages','8','FFTLengthSource','Property','FFTLength','2^8','PowerUnits','dBW','IsSpanValuesValid',true,'IsSpanCFSettingDirty',true,'IsFstartFstopSettingDirty',true,'SegLen','2^10','FrequencyResolutionMethod','WindowLength','IsValidSettingsDialogReadouts',false,'IsNFFTSettingDirty',true,'WindowLength','2^8','TimeSpanSource','Property','TimeSpan','2^13','MaxColorLim','0','MinColorLim','-100','WindowOptionsPanelToggleState',1,'TimeSpanEditBoxDirtyState',true,'IsTimeSpanSettingDirty',true),extmgr.Configuration('Visuals','NicholsVisual',false),extmgr.Configuration('Visuals','MarginsVisual',false),extmgr.Configuration('Visuals','LinearStepVisual',false),extmgr.Configuration('Visuals','SigmaVisual',false),extmgr.Configuration('Visuals','BodeVisual',false),extmgr.Configuration('Visuals','PZMapVisual',false),extmgr.Configuration('Visuals','Video',false),extmgr.Configuration('Visuals','Constellation',false),extmgr.Configuration('Visuals','TimeVisual',false),extmgr.Configuration('Visuals','Time Domain',false),extmgr.Configuration('Visuals','Array Plot',false),extmgr.Configuration('Visuals','Logic Analyzer',false),extmgr.Configuration('Visuals','Eye Diagram',false),extmgr.Configuration('Visuals','PhasedMatrix',false),extmgr.Configuration('Visuals','IntensityVisual',false),extmgr.Configuration('Visuals','ScenarioVisual',false),extmgr.Configuration('Visuals','Matrix',false),extmgr.Configuration('Tools','Plot Navigation',true,'AutoscaleMode','Manual','OnceAtStop',false,'PreviousAutoscale','C'),extmgr.Configuration('Tools','Measurements',true,'Version','2016b'),extmgr.Configuration('Tools','Response Optimization',false),extmgr.Configuration('Tools','Instrumentation Sets',false),extmgr.Configuration('Tools','Check block zoom',false),extmgr.Configuration('Tools','Requirement viewer',false),extmgr.Configuration('Tools','Image Navigation Tools',false),extmgr.Configuration('Tools','Pixel Region',false),extmgr.Configuration('Tools','Image Tool',false)),'Version','2016b','Position',[539.4 456.2 449.6 307.2],'VisibleAtModelOpen','on')",
+    "NumInputPorts": "1",
+    "source_line": 5726
+  },
+  {
+    "Name": "channel_delay",
+    "SID": "1033",
+    "source_line": 5770
+  },
+  {
+    "Name": "in",
+    "SID": "1034",
+    "IconDisplay": "Port number",
+    "source_line": 5794
+  },
+  {
+    "Name": "0..1(=delay_z^-3..z^-2)-optimal_mu_range\\nfor_quintic_farrow_interpolator",
+    "SID": "1035",
+    "source_line": 5802
+  },
+  {
+    "Name": "Complex to\\nReal-Imag1",
+    "SID": "1037",
+    "Output": "Imag",
+    "source_line": 5809
+  },
+  {
+    "Name": "Constant\\n",
+    "SID": "1038",
+    "Value": "1/2^15.145",
+    "source_line": 5818
+  },
+  {
+    "Name": "Constant1",
+    "SID": "1039",
+    "Value": "2*pi",
+    "source_line": 5827
+  },
+  {
+    "Name": "Constant2",
+    "SID": "1040",
+    "source_line": 5835
+  },
+  {
+    "Name": "Constant3",
+    "SID": "1041",
+    "Value": "[1 2 3 4 5 6]",
+    "source_line": 5843
+  },
+  {
+    "Name": "Flip",
+    "SID": "1042",
+    "source_line": 5852
+  },
+  {
+    "Name": "Frame Conversion",
+    "SID": "1043",
+    "OutFrame": "Sample-based",
+    "source_line": 5859
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "1044",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 5869
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1045",
+    "OutputSignalType": "complex",
+    "source_line": 5881
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "1046",
+    "Operator": "mod",
+    "source_line": 5890
+  },
+  {
+    "Name": "Rounding\\nFunction",
+    "SID": "1048",
+    "source_line": 5899
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1049",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 5906
+  },
+  {
+    "Name": "Sum2",
+    "SID": "1050",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 5918
+  },
+  {
+    "Name": "Sum3",
+    "SID": "1051",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 5930
+  },
+  {
+    "Name": "Sum4",
+    "SID": "1052",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 5942
+  },
+  {
+    "Name": "Sum5",
+    "SID": "1053",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 5954
+  },
+  {
+    "Name": "Variable\\nSelector",
+    "SID": "1054",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Rows",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "One-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 5966
+  },
+  {
+    "Name": "delay_line",
+    "SID": "1056",
+    "N": "6+2^6",
+    "V": "6+2^6-1",
+    "TreatMby1Signals": "One channel",
+    "source_line": 5986
+  },
+  {
+    "Name": "gain",
+    "SID": "1057",
+    "Gain": "2^6/2",
+    "source_line": 5996
+  },
+  {
+    "Name": "quintic_farrow_interpolator\\n1",
+    "SID": "2585",
+    "source_line": 6005
+  },
+  {
+    "Name": "in",
+    "SID": "2586",
+    "IconDisplay": "Port number",
+    "source_line": 6029
+  },
+  {
+    "Name": "mu",
+    "SID": "2587",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 6037
+  },
+  {
+    "Name": "Gain1",
+    "SID": "2588",
+    "Gain": "1/60",
+    "source_line": 6046
+  },
+  {
+    "Name": "Gain10",
+    "SID": "2589",
+    "Gain": "1/4",
+    "source_line": 6055
+  },
+  {
+    "Name": "Gain11",
+    "SID": "2590",
+    "Gain": "-1/5",
+    "source_line": 6064
+  },
+  {
+    "Name": "Gain12",
+    "SID": "2591",
+    "Gain": "1/12",
+    "source_line": 6073
+  },
+  {
+    "Name": "Gain13",
+    "SID": "2592",
+    "Gain": "-1/12",
+    "source_line": 6082
+  },
+  {
+    "Name": "Gain14",
+    "SID": "2593",
+    "Gain": "7/20",
+    "source_line": 6091
+  },
+  {
+    "Name": "Gain15",
+    "SID": "2594",
+    "Gain": "-7/12",
+    "source_line": 6100
+  },
+  {
+    "Name": "Gain16",
+    "SID": "2595",
+    "Gain": "5/12",
+    "source_line": 6109
+  },
+  {
+    "Name": "Gain17",
+    "SID": "2596",
+    "Gain": "-1/20",
+    "source_line": 6118
+  },
+  {
+    "Name": "Gain18",
+    "SID": "2597",
+    "Gain": "-1/12",
+    "source_line": 6127
+  },
+  {
+    "Name": "Gain19",
+    "SID": "2598",
+    "Gain": "0",
+    "source_line": 6136
+  },
+  {
+    "Name": "Gain2",
+    "SID": "2599",
+    "Gain": "-1/20",
+    "source_line": 6145
+  },
+  {
+    "Name": "Gain20",
+    "SID": "2609",
+    "Gain": "-1/20",
+    "source_line": 6154
+  },
+  {
+    "Name": "Gain21",
+    "SID": "2611",
+    "Gain": "2/3",
+    "source_line": 6163
+  },
+  {
+    "Name": "Gain22",
+    "SID": "2612",
+    "Gain": "-5/4",
+    "source_line": 6172
+  },
+  {
+    "Name": "Gain23",
+    "SID": "2613",
+    "Gain": "4/5",
+    "source_line": 6181
+  },
+  {
+    "Name": "Gain24",
+    "SID": "2614",
+    "Gain": "-1/12",
+    "source_line": 6190
+  },
+  {
+    "Name": "Gain25",
+    "SID": "2615",
+    "Gain": "1/15",
+    "source_line": 6199
+  },
+  {
+    "Name": "Gain26",
+    "SID": "2616",
+    "Gain": "-3/10",
+    "source_line": 6208
+  },
+  {
+    "Name": "Gain27",
+    "SID": "2617",
+    "source_line": 6217
+  },
+  {
+    "Name": "Gain28",
+    "SID": "2600",
+    "Gain": "-1/3",
+    "source_line": 6225
+  },
+  {
+    "Name": "Gain29",
+    "SID": "2601",
+    "Gain": "-3/5",
+    "source_line": 6234
+  },
+  {
+    "Name": "Gain3",
+    "SID": "2610",
+    "Gain": "1/12",
+    "source_line": 6243
+  },
+  {
+    "Name": "Gain30",
+    "SID": "2602",
+    "Gain": "1/10",
+    "source_line": 6252
+  },
+  {
+    "Name": "Gain31",
+    "SID": "2603",
+    "Gain": "0",
+    "source_line": 6261
+  },
+  {
+    "Name": "Gain32",
+    "SID": "2604",
+    "Gain": "0",
+    "source_line": 6270
+  },
+  {
+    "Name": "Gain33",
+    "SID": "2605",
+    "Gain": "0",
+    "source_line": 6279
+  },
+  {
+    "Name": "Gain34",
+    "SID": "2606",
+    "source_line": 6288
+  },
+  {
+    "Name": "Gain35",
+    "SID": "2607",
+    "Gain": "0",
+    "source_line": 6296
+  },
+  {
+    "Name": "Gain36",
+    "SID": "2608",
+    "Gain": "0",
+    "source_line": 6305
+  },
+  {
+    "Name": "Gain4",
+    "SID": "2618",
+    "Gain": "-1/12",
+    "source_line": 6314
+  },
+  {
+    "Name": "Gain5",
+    "SID": "2619",
+    "Gain": "1/20",
+    "source_line": 6323
+  },
+  {
+    "Name": "Gain6",
+    "SID": "2620",
+    "Gain": "-1/60",
+    "source_line": 6332
+  },
+  {
+    "Name": "Gain7",
+    "SID": "2621",
+    "Gain": "0",
+    "source_line": 6341
+  },
+  {
+    "Name": "Gain8",
+    "SID": "2622",
+    "Gain": "1/20",
+    "source_line": 6350
+  },
+  {
+    "Name": "Gain9",
+    "SID": "2623",
+    "Gain": "-1/6",
+    "source_line": 6359
+  },
+  {
+    "Name": "Multiport\\nSelector",
+    "SID": "2624",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 6368
+  },
+  {
+    "Name": "Multiport\\nSelector1",
+    "SID": "2625",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 6382
+  },
+  {
+    "Name": "Multiport\\nSelector2",
+    "SID": "2626",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 6396
+  },
+  {
+    "Name": "Multiport\\nSelector3",
+    "SID": "2627",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 6410
+  },
+  {
+    "Name": "Multiport\\nSelector4",
+    "SID": "2628",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 6424
+  },
+  {
+    "Name": "Multiport\\nSelector5",
+    "SID": "2629",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 6438
+  },
+  {
+    "Name": "Product",
+    "SID": "2630",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 6452
+  },
+  {
+    "Name": "Product1",
+    "SID": "2631",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 6464
+  },
+  {
+    "Name": "Product2",
+    "SID": "2632",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 6476
+  },
+  {
+    "Name": "Product3",
+    "SID": "2633",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 6488
+  },
+  {
+    "Name": "Product4",
+    "SID": "2634",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 6500
+  },
+  {
+    "Name": "Sum",
+    "SID": "2635",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 6512
+  },
+  {
+    "Name": "Sum1",
+    "SID": "2636",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 6525
+  },
+  {
+    "Name": "Sum13",
+    "SID": "2637",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 6538
+  },
+  {
+    "Name": "Sum2",
+    "SID": "2638",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 6550
+  },
+  {
+    "Name": "Sum3",
+    "SID": "2639",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 6563
+  },
+  {
+    "Name": "Sum4",
+    "SID": "2640",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 6575
+  },
+  {
+    "Name": "Sum5",
+    "SID": "2641",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 6587
+  },
+  {
+    "Name": "Sum6",
+    "SID": "2642",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 6600
+  },
+  {
+    "Name": "Sum7",
+    "SID": "2643",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 6613
+  },
+  {
+    "Name": "Sum8",
+    "SID": "2644",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 6626
+  },
+  {
+    "Name": "Sum9",
+    "SID": "2645",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 6638
+  },
+  {
+    "Name": "out",
+    "SID": "2646",
+    "IconDisplay": "Port number",
+    "source_line": 6650
+  },
+  {
+    "Name": "sqrt(-1)",
+    "SID": "1120",
+    "Gain": "i",
+    "source_line": 7382
+  },
+  {
+    "Name": "out",
+    "SID": "1121",
+    "IconDisplay": "Port number",
+    "source_line": 7391
+  },
+  {
+    "Name": "channel_delay1",
+    "SID": "2797",
+    "source_line": 7605
+  },
+  {
+    "Name": "in",
+    "SID": "2798",
+    "IconDisplay": "Port number",
+    "source_line": 7629
+  },
+  {
+    "Name": "0..1(=delay_z^-3..z^-2)-optimal_mu_range\\nfor_quintic_farrow_interpolator",
+    "SID": "2799",
+    "source_line": 7637
+  },
+  {
+    "Name": "Complex to\\nReal-Imag1",
+    "SID": "2800",
+    "Output": "Imag",
+    "source_line": 7644
+  },
+  {
+    "Name": "Constant\\n",
+    "SID": "2801",
+    "Value": "1/2^15.145",
+    "source_line": 7653
+  },
+  {
+    "Name": "Constant1",
+    "SID": "2802",
+    "Value": "2*pi",
+    "source_line": 7662
+  },
+  {
+    "Name": "Constant2",
+    "SID": "2803",
+    "source_line": 7670
+  },
+  {
+    "Name": "Constant3",
+    "SID": "2804",
+    "Value": "[1 2 3 4 5 6]",
+    "source_line": 7678
+  },
+  {
+    "Name": "Flip",
+    "SID": "2805",
+    "source_line": 7687
+  },
+  {
+    "Name": "Frame Conversion",
+    "SID": "2806",
+    "OutFrame": "Sample-based",
+    "source_line": 7694
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "2807",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "pi",
+    "InputProcessing": "Inherited",
+    "source_line": 7704
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "2808",
+    "OutputSignalType": "complex",
+    "source_line": 7716
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "2809",
+    "Operator": "mod",
+    "source_line": 7725
+  },
+  {
+    "Name": "Rounding\\nFunction",
+    "SID": "2810",
+    "source_line": 7734
+  },
+  {
+    "Name": "Sum1",
+    "SID": "2811",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 7741
+  },
+  {
+    "Name": "Sum2",
+    "SID": "2812",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 7753
+  },
+  {
+    "Name": "Sum3",
+    "SID": "2813",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 7765
+  },
+  {
+    "Name": "Sum4",
+    "SID": "2814",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 7777
+  },
+  {
+    "Name": "Sum5",
+    "SID": "2815",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 7789
+  },
+  {
+    "Name": "Variable\\nSelector",
+    "SID": "2816",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Rows",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "One-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 7801
+  },
+  {
+    "Name": "delay_line",
+    "SID": "2817",
+    "N": "6+2^6",
+    "V": "6+2^6-1",
+    "TreatMby1Signals": "One channel",
+    "source_line": 7821
+  },
+  {
+    "Name": "gain",
+    "SID": "2818",
+    "Gain": "2^6/2",
+    "source_line": 7831
+  },
+  {
+    "Name": "quintic_farrow_interpolator\\n1",
+    "SID": "2819",
+    "source_line": 7840
+  },
+  {
+    "Name": "in",
+    "SID": "2820",
+    "IconDisplay": "Port number",
+    "source_line": 7864
+  },
+  {
+    "Name": "mu",
+    "SID": "2821",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 7872
+  },
+  {
+    "Name": "Gain1",
+    "SID": "2822",
+    "Gain": "1/60",
+    "source_line": 7881
+  },
+  {
+    "Name": "Gain10",
+    "SID": "2823",
+    "Gain": "1/4",
+    "source_line": 7890
+  },
+  {
+    "Name": "Gain11",
+    "SID": "2824",
+    "Gain": "-1/5",
+    "source_line": 7899
+  },
+  {
+    "Name": "Gain12",
+    "SID": "2825",
+    "Gain": "1/12",
+    "source_line": 7908
+  },
+  {
+    "Name": "Gain13",
+    "SID": "2826",
+    "Gain": "-1/12",
+    "source_line": 7917
+  },
+  {
+    "Name": "Gain14",
+    "SID": "2827",
+    "Gain": "7/20",
+    "source_line": 7926
+  },
+  {
+    "Name": "Gain15",
+    "SID": "2828",
+    "Gain": "-7/12",
+    "source_line": 7935
+  },
+  {
+    "Name": "Gain16",
+    "SID": "2829",
+    "Gain": "5/12",
+    "source_line": 7944
+  },
+  {
+    "Name": "Gain17",
+    "SID": "2830",
+    "Gain": "-1/20",
+    "source_line": 7953
+  },
+  {
+    "Name": "Gain18",
+    "SID": "2831",
+    "Gain": "-1/12",
+    "source_line": 7962
+  },
+  {
+    "Name": "Gain19",
+    "SID": "2832",
+    "Gain": "0",
+    "source_line": 7971
+  },
+  {
+    "Name": "Gain2",
+    "SID": "2833",
+    "Gain": "-1/20",
+    "source_line": 7980
+  },
+  {
+    "Name": "Gain20",
+    "SID": "2834",
+    "Gain": "-1/20",
+    "source_line": 7989
+  },
+  {
+    "Name": "Gain21",
+    "SID": "2835",
+    "Gain": "2/3",
+    "source_line": 7998
+  },
+  {
+    "Name": "Gain22",
+    "SID": "2836",
+    "Gain": "-5/4",
+    "source_line": 8007
+  },
+  {
+    "Name": "Gain23",
+    "SID": "2837",
+    "Gain": "4/5",
+    "source_line": 8016
+  },
+  {
+    "Name": "Gain24",
+    "SID": "2838",
+    "Gain": "-1/12",
+    "source_line": 8025
+  },
+  {
+    "Name": "Gain25",
+    "SID": "2839",
+    "Gain": "1/15",
+    "source_line": 8034
+  },
+  {
+    "Name": "Gain26",
+    "SID": "2840",
+    "Gain": "-3/10",
+    "source_line": 8043
+  },
+  {
+    "Name": "Gain27",
+    "SID": "2841",
+    "source_line": 8052
+  },
+  {
+    "Name": "Gain28",
+    "SID": "2842",
+    "Gain": "-1/3",
+    "source_line": 8060
+  },
+  {
+    "Name": "Gain29",
+    "SID": "2843",
+    "Gain": "-3/5",
+    "source_line": 8069
+  },
+  {
+    "Name": "Gain3",
+    "SID": "2844",
+    "Gain": "1/12",
+    "source_line": 8078
+  },
+  {
+    "Name": "Gain30",
+    "SID": "2845",
+    "Gain": "1/10",
+    "source_line": 8087
+  },
+  {
+    "Name": "Gain31",
+    "SID": "2846",
+    "Gain": "0",
+    "source_line": 8096
+  },
+  {
+    "Name": "Gain32",
+    "SID": "2847",
+    "Gain": "0",
+    "source_line": 8105
+  },
+  {
+    "Name": "Gain33",
+    "SID": "2848",
+    "Gain": "0",
+    "source_line": 8114
+  },
+  {
+    "Name": "Gain34",
+    "SID": "2849",
+    "source_line": 8123
+  },
+  {
+    "Name": "Gain35",
+    "SID": "2850",
+    "Gain": "0",
+    "source_line": 8131
+  },
+  {
+    "Name": "Gain36",
+    "SID": "2851",
+    "Gain": "0",
+    "source_line": 8140
+  },
+  {
+    "Name": "Gain4",
+    "SID": "2852",
+    "Gain": "-1/12",
+    "source_line": 8149
+  },
+  {
+    "Name": "Gain5",
+    "SID": "2853",
+    "Gain": "1/20",
+    "source_line": 8158
+  },
+  {
+    "Name": "Gain6",
+    "SID": "2854",
+    "Gain": "-1/60",
+    "source_line": 8167
+  },
+  {
+    "Name": "Gain7",
+    "SID": "2855",
+    "Gain": "0",
+    "source_line": 8176
+  },
+  {
+    "Name": "Gain8",
+    "SID": "2856",
+    "Gain": "1/20",
+    "source_line": 8185
+  },
+  {
+    "Name": "Gain9",
+    "SID": "2857",
+    "Gain": "-1/6",
+    "source_line": 8194
+  },
+  {
+    "Name": "Multiport\\nSelector",
+    "SID": "2858",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 8203
+  },
+  {
+    "Name": "Multiport\\nSelector1",
+    "SID": "2859",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 8217
+  },
+  {
+    "Name": "Multiport\\nSelector2",
+    "SID": "2860",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 8231
+  },
+  {
+    "Name": "Multiport\\nSelector3",
+    "SID": "2861",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 8245
+  },
+  {
+    "Name": "Multiport\\nSelector4",
+    "SID": "2862",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 8259
+  },
+  {
+    "Name": "Multiport\\nSelector5",
+    "SID": "2863",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Multiport\\nSelector",
+    "SourceType": "Multiport Selector",
+    "rowsOrCols": "Rows",
+    "source_line": 8273
+  },
+  {
+    "Name": "Product",
+    "SID": "2864",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 8287
+  },
+  {
+    "Name": "Product1",
+    "SID": "2865",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 8299
+  },
+  {
+    "Name": "Product2",
+    "SID": "2866",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 8311
+  },
+  {
+    "Name": "Product3",
+    "SID": "2867",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 8323
+  },
+  {
+    "Name": "Product4",
+    "SID": "2868",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 8335
+  },
+  {
+    "Name": "Sum",
+    "SID": "2869",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 8347
+  },
+  {
+    "Name": "Sum1",
+    "SID": "2870",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 8360
+  },
+  {
+    "Name": "Sum13",
+    "SID": "2871",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 8373
+  },
+  {
+    "Name": "Sum2",
+    "SID": "2872",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 8385
+  },
+  {
+    "Name": "Sum3",
+    "SID": "2873",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 8398
+  },
+  {
+    "Name": "Sum4",
+    "SID": "2874",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 8410
+  },
+  {
+    "Name": "Sum5",
+    "SID": "2875",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 8422
+  },
+  {
+    "Name": "Sum6",
+    "SID": "2876",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 8435
+  },
+  {
+    "Name": "Sum7",
+    "SID": "2877",
+    "Inputs": "++++++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 8448
+  },
+  {
+    "Name": "Sum8",
+    "SID": "2878",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 8461
+  },
+  {
+    "Name": "Sum9",
+    "SID": "2879",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 8473
+  },
+  {
+    "Name": "out",
+    "SID": "2880",
+    "IconDisplay": "Port number",
+    "source_line": 8485
+  },
+  {
+    "Name": "sqrt(-1)",
+    "SID": "2881",
+    "Gain": "i",
+    "source_line": 9217
+  },
+  {
+    "Name": "out",
+    "SID": "2882",
+    "IconDisplay": "Port number",
+    "source_line": 9226
+  },
+  {
+    "Name": "cic",
+    "SID": "83",
+    "LibraryVersion": "1.216",
+    "source_line": 9440
+  },
+  {
+    "Name": "In1",
+    "SID": "84",
+    "IconDisplay": "Port number",
+    "source_line": 9465
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "89",
+    "InputPortMap": "u0",
+    "DelayLength": "2^12",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 9473
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "95",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 9486
+  },
+  {
+    "Name": "Sum",
+    "SID": "91",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9500
+  },
+  {
+    "Name": "Sum1",
+    "SID": "94",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9514
+  },
+  {
+    "Name": "gain",
+    "SID": "93",
+    "Gain": "1/2^12",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9528
+  },
+  {
+    "Name": "Out1",
+    "SID": "85",
+    "IconDisplay": "Port number",
+    "source_line": 9539
+  },
+  {
+    "Name": "data",
+    "SID": "613",
+    "BackgroundColor": "darkGreen",
+    "source_line": 9613
+  },
+  {
+    "Name": "data1",
+    "SID": "13",
+    "SampleTime": "1",
+    "source_line": 9649
+  },
+  {
+    "Name": "data2",
+    "SID": "1704",
+    "Value": "3",
+    "SampleTime": "1",
+    "source_line": 9657
+  },
+  {
+    "Name": "delay_line_with_taps",
+    "SID": "2459",
+    "source_line": 9666
+  },
+  {
+    "Name": "in",
+    "SID": "2460",
+    "IconDisplay": "Port number",
+    "source_line": 9690
+  },
+  {
+    "Name": "Delay Line",
+    "SID": "2461",
+    "LibraryVersion": "1.417",
+    "UserData": "DataTag6",
+    "SourceBlock": "dspbuff3/Delay Line",
+    "SourceType": "Delay Line",
+    "siz": "4",
+    "ic": "0",
+    "TreatMby1Signals": "One channel",
+    "source_line": 9698
+  },
+  {
+    "Name": "Flip",
+    "SID": "2462",
+    "source_line": 9718
+  },
+  {
+    "Name": "Frame Conversion",
+    "SID": "2463",
+    "OutFrame": "Sample-based",
+    "source_line": 9725
+  },
+  {
+    "Name": "out",
+    "SID": "2464",
+    "IconDisplay": "Port number",
+    "source_line": 9735
+  },
+  {
+    "Name": "filter_number",
+    "SID": "1833",
+    "BackgroundColor": "darkGreen",
+    "source_line": 9773
+  },
+  {
+    "Name": "gain",
+    "SID": "92",
+    "Gain": "8",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9804
+  },
+  {
+    "Name": "gain1",
+    "SID": "434",
+    "Gain": "0.707",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9815
+  },
+  {
+    "Name": "gain2",
+    "SID": "1141",
+    "Gain": "0.12",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9827
+  },
+  {
+    "Name": "gain3",
+    "SID": "1594",
+    "Gain": "1/10^3",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9838
+  },
+  {
+    "Name": "gain4",
+    "SID": "1705",
+    "Gain": "8",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9849
+  },
+  {
+    "Name": "gain5",
+    "SID": "1706",
+    "Gain": "0.12",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9860
+  },
+  {
+    "Name": "modulator_1",
+    "SID": "4",
+    "LibraryVersion": "1.216",
+    "source_line": 9871
+  },
+  {
+    "Name": "data",
+    "SID": "1597",
+    "IconDisplay": "Port number",
+    "source_line": 9896
+  },
+  {
+    "Name": "on/off",
+    "SID": "2276",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 9904
+  },
+  {
+    "Name": "Constant1",
+    "SID": "60",
+    "Value": "8",
+    "source_line": 9913
+  },
+  {
+    "Name": "Constant2",
+    "SID": "64",
+    "source_line": 9921
+  },
+  {
+    "Name": "Constant3",
+    "SID": "1143",
+    "Value": "[0 1 3 2]",
+    "source_line": 9928
+  },
+  {
+    "Name": "Constant4",
+    "SID": "1147",
+    "Value": "exp(i*([0:7]*pi/4+0*pi/8))",
+    "source_line": 9936
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "62",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 9944
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "61",
+    "Operator": "mod",
+    "source_line": 9958
+  },
+  {
+    "Name": "Product",
+    "SID": "2275",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 9967
+  },
+  {
+    "Name": "Sum",
+    "SID": "59",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9979
+  },
+  {
+    "Name": "Sum1",
+    "SID": "63",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 9993
+  },
+  {
+    "Name": "Upsample",
+    "SID": "66",
+    "LibraryVersion": "1.774",
+    "UserData": "DataTag7",
+    "SourceBlock": "dspsigops/Upsample",
+    "SourceType": "Upsample",
+    "N": "8",
+    "phase": "0",
+    "InputProcessing": "Elements as channels (sample based)",
+    "RateOptions": "Allow multirate processing",
+    "ic": "0",
+    "mode": "Unused parameter value",
+    "source_line": 10008
+  },
+  {
+    "Name": "Variable\\nSelector",
+    "SID": "1142",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 10027
+  },
+  {
+    "Name": "Variable\\nSelector1",
+    "SID": "1146",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 10047
+  },
+  {
+    "Name": "qpsk_to_8psk",
+    "SID": "58",
+    "Gain": "2",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10067
+  },
+  {
+    "Name": "scrambler",
+    "SID": "7",
+    "LibraryVersion": "1.216",
+    "source_line": 10078
+  },
+  {
+    "Name": "In1",
+    "SID": "8",
+    "IconDisplay": "Port number",
+    "source_line": 10103
+  },
+  {
+    "Name": "Constant",
+    "SID": "12",
+    "Value": "4",
+    "source_line": 10111
+  },
+  {
+    "Name": "Constant1",
+    "SID": "29",
+    "Value": "4",
+    "source_line": 10119
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "16",
+    "InputPortMap": "u0",
+    "DelayLength": "14",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 10127
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "32",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "3",
+    "InputProcessing": "Inherited",
+    "source_line": 10140
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "17",
+    "Operator": "mod",
+    "source_line": 10153
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "30",
+    "Operator": "mod",
+    "source_line": 10162
+  },
+  {
+    "Name": "Sum",
+    "SID": "10",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10171
+  },
+  {
+    "Name": "Sum1",
+    "SID": "31",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10185
+  },
+  {
+    "Name": "Out1",
+    "SID": "9",
+    "IconDisplay": "Port number",
+    "source_line": 10199
+  },
+  {
+    "Name": "square_root_raised_cosine_filter",
+    "SID": "75",
+    "LibraryVersion": "1.351",
+    "UserData": "DataTag8",
+    "SourceBlock": "dsparch4/Digital\\nFilter Design",
+    "SourceType": "Digital Filter Design",
+    "source_line": 10295
+  },
+  {
+    "Name": "Out1",
+    "SID": "6",
+    "IconDisplay": "Port number",
+    "source_line": 10310
+  },
+  {
+    "Name": "modulator_2",
+    "SID": "2466",
+    "LibraryVersion": "1.216",
+    "source_line": 10496
+  },
+  {
+    "Name": "data",
+    "SID": "2467",
+    "IconDisplay": "Port number",
+    "source_line": 10521
+  },
+  {
+    "Name": "on/off",
+    "SID": "2468",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 10529
+  },
+  {
+    "Name": "Constant1",
+    "SID": "2469",
+    "Value": "8",
+    "source_line": 10538
+  },
+  {
+    "Name": "Constant2",
+    "SID": "2470",
+    "source_line": 10546
+  },
+  {
+    "Name": "Constant3",
+    "SID": "2471",
+    "Value": "[0 1 3 2]",
+    "source_line": 10553
+  },
+  {
+    "Name": "Constant4",
+    "SID": "2472",
+    "Value": "exp(i*([0:7]*pi/4+0*pi/8))",
+    "source_line": 10561
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "2473",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 10569
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "2474",
+    "Operator": "mod",
+    "source_line": 10583
+  },
+  {
+    "Name": "Product",
+    "SID": "2475",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 10592
+  },
+  {
+    "Name": "Sum",
+    "SID": "2476",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10604
+  },
+  {
+    "Name": "Sum1",
+    "SID": "2477",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10618
+  },
+  {
+    "Name": "Upsample",
+    "SID": "2478",
+    "LibraryVersion": "1.774",
+    "UserData": "DataTag9",
+    "SourceBlock": "dspsigops/Upsample",
+    "SourceType": "Upsample",
+    "N": "8",
+    "phase": "0",
+    "InputProcessing": "Elements as channels (sample based)",
+    "RateOptions": "Allow multirate processing",
+    "ic": "0",
+    "mode": "Unused parameter value",
+    "source_line": 10633
+  },
+  {
+    "Name": "Variable\\nSelector",
+    "SID": "2479",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 10652
+  },
+  {
+    "Name": "Variable\\nSelector1",
+    "SID": "2480",
+    "LibraryVersion": "1.462",
+    "SourceBlock": "dspindex/Variable\\nSelector",
+    "SourceType": "Variable Selector",
+    "NumInputs": "1",
+    "rowsOrCols": "Columns",
+    "IdxMode": "Variable",
+    "Elements": "[1 3]",
+    "ZerOneIdxMode": "Zero-based",
+    "errmode": "Generate Error",
+    "FillValues": "0",
+    "source_line": 10672
+  },
+  {
+    "Name": "qpsk_to_8psk",
+    "SID": "2481",
+    "Gain": "2",
+    "ParamDataTypeStr": "Inherit: Inherit via internal rule",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10692
+  },
+  {
+    "Name": "scrambler",
+    "SID": "2482",
+    "LibraryVersion": "1.216",
+    "source_line": 10703
+  },
+  {
+    "Name": "In1",
+    "SID": "2483",
+    "IconDisplay": "Port number",
+    "source_line": 10728
+  },
+  {
+    "Name": "Constant",
+    "SID": "2484",
+    "Value": "4",
+    "source_line": 10736
+  },
+  {
+    "Name": "Constant1",
+    "SID": "2485",
+    "Value": "4",
+    "source_line": 10744
+  },
+  {
+    "Name": "Integer Delay",
+    "SID": "2486",
+    "InputPortMap": "u0",
+    "DelayLength": "14",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 10752
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "2487",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "3",
+    "InputProcessing": "Inherited",
+    "source_line": 10765
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "2488",
+    "Operator": "mod",
+    "source_line": 10778
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "2489",
+    "Operator": "mod",
+    "source_line": 10787
+  },
+  {
+    "Name": "Sum",
+    "SID": "2490",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10796
+  },
+  {
+    "Name": "Sum1",
+    "SID": "2491",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 10810
+  },
+  {
+    "Name": "Out1",
+    "SID": "2492",
+    "IconDisplay": "Port number",
+    "source_line": 10824
+  },
+  {
+    "Name": "square_root_raised_cosine_filter",
+    "SID": "2493",
+    "LibraryVersion": "1.351",
+    "UserData": "DataTag10",
+    "SourceBlock": "dsparch4/Digital\\nFilter Design",
+    "SourceType": "Digital Filter Design",
+    "source_line": 10920
+  },
+  {
+    "Name": "Out1",
+    "SID": "2494",
+    "IconDisplay": "Port number",
+    "source_line": 10935
+  },
+  {
+    "Name": "power(Watts)",
+    "SID": "98",
+    "Decimation": "2^11",
+    "source_line": 11121
+  },
+  {
+    "Name": "scope",
+    "SID": "2345",
+    "BackgroundColor": "darkGreen",
+    "source_line": 11130
+  },
+  {
+    "Name": "square_root_raised_cosine_filter",
+    "SID": "113",
+    "LibraryVersion": "1.351",
+    "UserData": "DataTag11",
+    "SourceBlock": "dsparch4/Digital\\nFilter Design",
+    "SourceType": "Digital Filter Design",
+    "source_line": 11166
+  },
+  {
+    "Name": "symbol_clock",
+    "SID": "1742",
+    "BackgroundColor": "darkGreen",
+    "source_line": 11181
+  },
+  {
+    "Name": "synchronizer",
+    "SID": "1513",
+    "source_line": 11217
+  },
+  {
+    "Name": "in",
+    "SID": "1514",
+    "IconDisplay": "Port number",
+    "source_line": 11241
+  },
+  {
+    "Name": "1/0=on/off_sync",
+    "SID": "1516",
+    "source_line": 11249
+  },
+  {
+    "Name": "1sps_clock_domain",
+    "SID": "1517",
+    "source_line": 11256
+  },
+  {
+    "Name": "in",
+    "SID": "1518",
+    "IconDisplay": "Port number",
+    "source_line": 11280
+  },
+  {
+    "Name": "phase",
+    "SID": "1520",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 11288
+  },
+  {
+    "Name": "Enable",
+    "SID": "1521",
+    "source_line": 11297
+  },
+  {
+    "Name": "Complex to\\nMagnitude-Angle",
+    "SID": "1524",
+    "Output": "Angle",
+    "source_line": 11305
+  },
+  {
+    "Name": "Constant",
+    "SID": "1525",
+    "Value": "8",
+    "source_line": 11314
+  },
+  {
+    "Name": "Gain",
+    "SID": "1527",
+    "Gain": "1/(2*pi/8)",
+    "source_line": 11322
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1528",
+    "Operator": "mod",
+    "source_line": 11331
+  },
+  {
+    "Name": "Sum3",
+    "SID": "1531",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 11340
+  },
+  {
+    "Name": "out",
+    "SID": "1533",
+    "IconDisplay": "Port number",
+    "source_line": 11354
+  },
+  {
+    "Name": "1sps_clock_domain1",
+    "SID": "1535",
+    "source_line": 11415
+  },
+  {
+    "Name": "in",
+    "SID": "1536",
+    "IconDisplay": "Port number",
+    "source_line": 11439
+  },
+  {
+    "Name": "Enable",
+    "SID": "1537",
+    "source_line": 11447
+  },
+  {
+    "Name": "Bias",
+    "SID": "1538",
+    "Bias": "8+1",
+    "source_line": 11455
+  },
+  {
+    "Name": "gain",
+    "SID": "1539",
+    "Gain": "-1",
+    "source_line": 11464
+  },
+  {
+    "Name": "out",
+    "SID": "1540",
+    "IconDisplay": "Port number",
+    "source_line": 11473
+  },
+  {
+    "Name": "Abs1",
+    "SID": "1758",
+    "source_line": 11504
+  },
+  {
+    "Name": "Compare\\nTo Constant",
+    "SID": "1541",
+    "LibraryVersion": "1.388",
+    "SourceBlock": "simulink/Logic and Bit\\nOperations/Compare\\nTo Constant",
+    "SourceType": "Compare To Constant",
+    "relop": ">=",
+    "const": "8",
+    "OutDataTypeStr": "boolean",
+    "source_line": 11512
+  },
+  {
+    "Name": "Constant",
+    "SID": "1542",
+    "Value": "8",
+    "source_line": 11528
+  },
+  {
+    "Name": "Constant1",
+    "SID": "1543",
+    "source_line": 11536
+  },
+  {
+    "Name": "Constant2",
+    "SID": "1544",
+    "Value": "8",
+    "source_line": 11543
+  },
+  {
+    "Name": "Integer Delay1",
+    "SID": "1545",
+    "InputPortMap": "u0",
+    "DelayLength": "1",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 11551
+  },
+  {
+    "Name": "Integer Delay3",
+    "SID": "1546",
+    "InputPortMap": "u0",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 11564
+  },
+  {
+    "Name": "Math\\nFunction",
+    "SID": "1547",
+    "Operator": "mod",
+    "source_line": 11576
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "SID": "1548",
+    "Operator": "mod",
+    "source_line": 11585
+  },
+  {
+    "Name": "Product",
+    "SID": "1550",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 11594
+  },
+  {
+    "Name": "Saturation",
+    "SID": "1551",
+    "InputPortMap": "u0",
+    "UpperLimit": "1+1/2^2",
+    "LowerLimit": "1-1/2^2",
+    "source_line": 11606
+  },
+  {
+    "Name": "Sum1",
+    "SID": "1552",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 11617
+  },
+  {
+    "Name": "Sum2",
+    "SID": "1553",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 11631
+  },
+  {
+    "Name": "cic",
+    "SID": "1573",
+    "source_line": 11645
+  },
+  {
+    "Name": "in",
+    "SID": "1574",
+    "IconDisplay": "Port number",
+    "source_line": 11669
+  },
+  {
+    "Name": "FIR_filter\\n",
+    "SID": "1575",
+    "source_line": 11677
+  },
+  {
+    "Name": "in",
+    "SID": "1576",
+    "IconDisplay": "Port number",
+    "source_line": 11701
+  },
+  {
+    "Name": "Delay Line",
+    "SID": "1577",
+    "LibraryVersion": "1.417",
+    "UserData": "DataTag12",
+    "SourceBlock": "dspbuff3/Delay Line",
+    "SourceType": "Delay Line",
+    "siz": "8",
+    "ic": "0",
+    "TreatMby1Signals": "One channel",
+    "source_line": 11709
+  },
+  {
+    "Name": "Frame Conversion",
+    "SID": "1578",
+    "OutFrame": "Sample-based",
+    "source_line": 11729
+  },
+  {
+    "Name": "Gain",
+    "SID": "1579",
+    "source_line": 11739
+  },
+  {
+    "Name": "Matrix Multiply",
+    "SID": "1580",
+    "Multiplication": "Matrix(*)",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "RndMeth": "Floor",
+    "source_line": 11747
+  },
+  {
+    "Name": "target_signal+conj",
+    "SID": "1581",
+    "Value": "conj(exp( i*( [0:8-1]*2*pi/8+0*pi/(8*2) ) ))",
+    "source_line": 11760
+  },
+  {
+    "Name": "out",
+    "SID": "1582",
+    "IconDisplay": "Port number",
+    "source_line": 11769
+  },
+  {
+    "Name": "Integer Delay10",
+    "SID": "1585",
+    "InputPortMap": "u0",
+    "DelayLength": "8",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 11855
+  },
+  {
+    "Name": "Integer Delay11",
+    "SID": "1586",
+    "InputPortMap": "u0",
+    "DelayLength": "8*128",
+    "InitialCondition": "0",
+    "InputProcessing": "Inherited",
+    "source_line": 11869
+  },
+  {
+    "Name": "Sum8",
+    "SID": "1587",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 11882
+  },
+  {
+    "Name": "Sum9",
+    "SID": "1588",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "OutDataTypeStr": "Inherit: Inherit via internal rule",
+    "source_line": 11896
+  },
+  {
+    "Name": "out",
+    "SID": "1589",
+    "IconDisplay": "Port number",
+    "source_line": 11910
+  },
+  {
+    "Name": "symbol_clock\\n",
+    "SID": "1571",
+    "IconDisplay": "Port number",
+    "source_line": 11984
+  },
+  {
+    "Name": "mu",
+    "SID": "1572",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 11992
+  }
+]

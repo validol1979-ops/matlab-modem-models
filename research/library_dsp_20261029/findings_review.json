@@ -1,0 +1,545 @@
+{
+  "task": "Read-only DSP library inventory and source review",
+  "date": "2026-10-29",
+  "search_policy": "Local CLI lexical --no-rerank; catalog→document-filtered search→read for indexed books; no generator API, no external web, no scan/import/OCR/restart; supporting original code and existing PDF text-layer fallbacks explicitly labelled",
+  "findings": [
+    {
+      "id": "dct_audio",
+      "title": "DCT/IDCT и усечение коэффициентов аудиоблока",
+      "priority": "medium",
+      "recommend_separate_todo": true,
+      "existing_coverage": "Есть FFT/IFFT/STFT и OM-LSA, но DCT/IDCT нет ни в production Python, ни в RTL. Не называть это готовым аудиокодеком: энтропийное кодирование и битстрим источник не задаёт.",
+      "source_facts": [
+        "Alasooly §3.2.2 Audio Compressing делит WAV на блоки8192 и вызывает dct/idct с сохранением1/2,1/4,1/8 коэффициентов. Это реальный код раздела, не только оглавление."
+      ],
+      "spec_sources": [
+        {
+          "kind": "indexed_rag_read",
+          "path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Matlab/Alasooly H.M. - Case Studies on Signal, Audio and Image Processing Using Matlab.epub",
+          "document_id": "010d67cef8dff4ef703ccf0314a014a8723e337d486557ee3702606f2a2e218e",
+          "part": 9,
+          "epub_path": "OEBPS/dr-hedaya-mahmood-alasooly-some-case-studies-on-signal-audio-and-image-processing-using-matlab_6.html",
+          "section": "3.2.2 Audio Compressing",
+          "start_char": 7000,
+          "end_char": 9200,
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Matlab/Alasooly H.M. - Case Studies on Signal, Audio and Image Processing Using Matlab.epub",
+          "source_sha256": "010d67cef8dff4ef703ccf0314a014a8723e337d486557ee3702606f2a2e218e"
+        }
+      ],
+      "provenance": [
+        "catalog_alasooly.json",
+        "search_alasooly_dct.json",
+        "read_alasooly_9_7000.json"
+      ],
+      "project_derived_spec": [
+        "Сначала зафиксировать нормировку DCT-II/IDCT и обработку неполного хвоста; MATLAB dct/idct — независимый исходный эталон.",
+        "Для первого RTL ограничить размеры N=32/128, K=N,N/2,N/4,N/8 и signed18 вход; это проектный выбор, в книге блок8192.",
+        "Проверять round-trip и энергию приK=N, а приусечении — точное соответствие coefficient mask/reconstruction, не обещать заданное качество сжатия без измерений."
+      ],
+      "sources": [
+        {
+          "kind": "indexed_rag_read",
+          "path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Matlab/Alasooly H.M. - Case Studies on Signal, Audio and Image Processing Using Matlab.epub",
+          "document_id": "010d67cef8dff4ef703ccf0314a014a8723e337d486557ee3702606f2a2e218e",
+          "part": 9,
+          "epub_path": "OEBPS/dr-hedaya-mahmood-alasooly-some-case-studies-on-signal-audio-and-image-processing-using-matlab_6.html",
+          "section": "3.2.2 Audio Compressing",
+          "start_char": 7000,
+          "end_char": 9200,
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Matlab/Alasooly H.M. - Case Studies on Signal, Audio and Image Processing Using Matlab.epub",
+          "source_sha256": "010d67cef8dff4ef703ccf0314a014a8723e337d486557ee3702606f2a2e218e"
+        }
+      ],
+      "proposed_project_spec": [
+        "Сначала зафиксировать нормировку DCT-II/IDCT и обработку неполного хвоста; MATLAB dct/idct — независимый исходный эталон.",
+        "Для первого RTL ограничить размеры N=32/128, K=N,N/2,N/4,N/8 и signed18 вход; это проектный выбор, в книге блок8192.",
+        "Проверять round-trip и энергию приK=N, а приусечении — точное соответствие coefficient mask/reconstruction, не обещать заданное качество сжатия без измерений."
+      ],
+      "novelty_vs_project": "Есть FFT/IFFT/STFT и OM-LSA, но DCT/IDCT нет ни в production Python, ни в RTL. Не называть это готовым аудиокодеком: энтропийное кодирование и битстрим источник не задаёт."
+    },
+    {
+      "id": "dpd_memory_polynomial",
+      "title": "DPD memory-polynomial: статический runtime и offline идентификация",
+      "priority": "high",
+      "recommend_separate_todo": true,
+      "existing_coverage": "DPD_Example сохранён под sources/ и arxiv/, но не имеет переносимой модели, functional workspace и RTL. LMS/RLS сами по себе DPD не реализуют.",
+      "source_facts": [
+        "DPD.pdf file pages3–4 задаёт complex memory-polynomial PA/DPD, нормировку и временное выравнивание; pages7–8 объясняют indirect learning; page11 различает LMS и RPEM.",
+        "README.pdf pages1–3 задаёт порядок pa_measure→dpd_static_verify→dpd_adapt_verify.",
+        "DPD_analysis.m использует PA M=3,K=3, DPD M=5,K=5 и offset3. fit_memory_poly_model.m строит все степени abs(x)^(k−1), а не только нечётные порядки. meas_pa.mat должен быть создан pa_measure; готовых измерений в источнике нет."
+      ],
+      "spec_sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/СВЧ и моделирование радиочастотных цепей/DPD_Example/main/DPD.pdf",
+          "file_pages": [
+            3,
+            4,
+            7,
+            8,
+            11
+          ],
+          "sections": [
+            "Phase2 Equations1/2",
+            "Phase4 Going Adaptive"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/СВЧ и моделирование радиочастотных цепей/DPD_Example/main/DPD.pdf",
+          "source_sha256": "9b16719c12be043dc4a7ff58e3880488d9ec2a0f2977d0300f9c515216381cfd"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "sources/DPD_Example/main/fit_memory_poly_model.m",
+          "lines": [
+            1,
+            24
+          ],
+          "source_path": "sources/DPD_Example/main/fit_memory_poly_model.m",
+          "source_sha256": "d6762999a22743b177f580ef9082f9933cdef41db523d8d4164f2b2c12127693",
+          "original_lines": [
+            1,
+            24
+          ]
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "sources/DPD_Example/main/DPD_analysis.m",
+          "lines": [
+            1,
+            95
+          ],
+          "source_path": "sources/DPD_Example/main/DPD_analysis.m",
+          "source_sha256": "8eb07d23a802b5543db37af2b3cdd0e5eb71f35ea2e2da4a57f2b731c0382daf",
+          "original_lines": [
+            1,
+            95
+          ]
+        }
+      ],
+      "provenance": [
+        "catalog_dpd.json",
+        "catalog_dpd_example_main_dpd.json",
+        "dpd_library_pdf_text.txt",
+        "dpd_library_readme_text.txt",
+        "repo_inventory.json"
+      ],
+      "caveats": [
+        "RAG проиндексировал только license.txt каталога DPD; математическая часть прочитана напрямую из существующего PDF безOCR, это не RAG hit.",
+        "Не считать синтетический PA датасет реальными аппаратными измерениями."
+      ],
+      "project_derived_spec": [
+        "Разделить offline обучение коэффициентов и переносимый потоковый polynomial runtime с явным состоянием памяти и атомарной cfg.",
+        "Начать с фиксированной конфигурации M=5,K=5 источника; зафиксировать порядок коэффициентов и transient discard/offset, затем выбрать разрядности.",
+        "Опциональную adaptive ILA/LMS отложить отдельным этапом; RPEM и hardware acquisition не подразумеваются первым runtime.",
+        "Измерять NMSE/спектральное разрастание на независимом PA эталоне, отдельно публиковать сценарии насыщения."
+      ],
+      "sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/СВЧ и моделирование радиочастотных цепей/DPD_Example/main/DPD.pdf",
+          "file_pages": [
+            3,
+            4,
+            7,
+            8,
+            11
+          ],
+          "sections": [
+            "Phase2 Equations1/2",
+            "Phase4 Going Adaptive"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/СВЧ и моделирование радиочастотных цепей/DPD_Example/main/DPD.pdf",
+          "source_sha256": "9b16719c12be043dc4a7ff58e3880488d9ec2a0f2977d0300f9c515216381cfd"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "sources/DPD_Example/main/fit_memory_poly_model.m",
+          "lines": [
+            1,
+            24
+          ],
+          "source_path": "sources/DPD_Example/main/fit_memory_poly_model.m",
+          "source_sha256": "d6762999a22743b177f580ef9082f9933cdef41db523d8d4164f2b2c12127693",
+          "original_lines": [
+            1,
+            24
+          ]
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "sources/DPD_Example/main/DPD_analysis.m",
+          "lines": [
+            1,
+            95
+          ],
+          "source_path": "sources/DPD_Example/main/DPD_analysis.m",
+          "source_sha256": "8eb07d23a802b5543db37af2b3cdd0e5eb71f35ea2e2da4a57f2b731c0382daf",
+          "original_lines": [
+            1,
+            95
+          ]
+        }
+      ],
+      "proposed_project_spec": [
+        "Разделить offline обучение коэффициентов и переносимый потоковый polynomial runtime с явным состоянием памяти и атомарной cfg.",
+        "Начать с фиксированной конфигурации M=5,K=5 источника; зафиксировать порядок коэффициентов и transient discard/offset, затем выбрать разрядности.",
+        "Опциональную adaptive ILA/LMS отложить отдельным этапом; RPEM и hardware acquisition не подразумеваются первым runtime.",
+        "Измерять NMSE/спектральное разрастание на независимом PA эталоне, отдельно публиковать сценарии насыщения."
+      ],
+      "novelty_vs_project": "DPD_Example сохранён под sources/ и arxiv/, но не имеет переносимой модели, functional workspace и RTL. LMS/RLS сами по себе DPD не реализуют."
+    },
+    {
+      "id": "mvdr_capon",
+      "title": "Ковариационный накопитель и MVDR/Capon веса",
+      "priority": "high",
+      "recommend_separate_todo": true,
+      "existing_coverage": "Существующий beamform вычисляет X*conj(a)/(aHa) с заданными a; covariance estimation и MVDR normalization отсутствуют. Доказанные арифметические блоки/приёмы MMSE можно переиспользовать; готового generic inverse-R API и covariance/weight contract нет.",
+      "source_facts": [
+        "Haupt §8.3.2 (PDF file page492) минимизирует output power при сохранении desired response; §8.4.2 (file pages501–503) использует signal correlation matrix для adaptive nulling.",
+        "Сохранённый Fig7_16.m строит Gamma_alpha=(1−alpha)Gamma0+alphaI и h=(Gamma_alpha\\d)/(d'/Gamma_alpha*d), для8микрофонов. Fig10_14.m показывает loaded constrained beamformer."
+      ],
+      "spec_sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "file_pages": [
+            483,
+            484,
+            492,
+            501,
+            502,
+            503
+          ],
+          "sections": [
+            "8.2 Array Signals and Noise",
+            "8.3.2 Capon",
+            "8.4.2 Adaptive Nulling"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "source_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/arrays/beamforming/original/Fig7_16.m",
+          "lines": [
+            1,
+            29
+          ],
+          "source_path": "algorithms/arrays/beamforming/original/Fig7_16.m",
+          "source_sha256": "c3f7eb32ae075a3b3e5933c0494d2556921cd8a2c4e8bd94e44a2f55e4d0d391",
+          "original_lines": [
+            1,
+            29
+          ]
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/arrays/beamforming/original/Fig10_14.m",
+          "lines": [
+            1,
+            65
+          ],
+          "source_path": "algorithms/arrays/beamforming/original/Fig10_14.m",
+          "source_sha256": "4b7f5498d11e58f8a461a19c34ad55ff2c5130755112fa84cca4b7ec2fa599c5",
+          "original_lines": [
+            1,
+            65
+          ]
+        }
+      ],
+      "provenance": [
+        "catalog_haupt.json",
+        "haupt_book_text.txt",
+        "haupt_file_page_492.txt",
+        "haupt_file_page_501.txt",
+        "haupt_file_page_502.txt",
+        "repo_inventory.json"
+      ],
+      "project_derived_spec": [
+        "Первый контракт M=4/8, вход snapshot complexsigned18, накопление Hermitian R, diagonal loading и отдельный поток коэффициентов; размеры — проектный выбор.",
+        "Проверять distortionless constraint, Hermitian symmetry, поведение при сингулярномR и подавление заданной помехи на NumPy/Matlab reference.",
+        "Обучение/решение и runtime beamform разделить; не обещать обновление матрицы заодинтакт или физические100МГц безсинтеза.",
+        "Текущий beamform делит результат на энергию входного вектора весов; для MVDR нужен явный unnormalized dot-product/масштабный адаптер, иначе distortionless constraint изменится. Существующий MMSE solver не является готовым generic inverse-R API; reuse ограничить доказанными арифметическими примитивами/раскладкой."
+      ],
+      "sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "file_pages": [
+            483,
+            484,
+            492,
+            501,
+            502,
+            503
+          ],
+          "sections": [
+            "8.2 Array Signals and Noise",
+            "8.3.2 Capon",
+            "8.4.2 Adaptive Nulling"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "source_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/arrays/beamforming/original/Fig7_16.m",
+          "lines": [
+            1,
+            29
+          ],
+          "source_path": "algorithms/arrays/beamforming/original/Fig7_16.m",
+          "source_sha256": "c3f7eb32ae075a3b3e5933c0494d2556921cd8a2c4e8bd94e44a2f55e4d0d391",
+          "original_lines": [
+            1,
+            29
+          ]
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/arrays/beamforming/original/Fig10_14.m",
+          "lines": [
+            1,
+            65
+          ],
+          "source_path": "algorithms/arrays/beamforming/original/Fig10_14.m",
+          "source_sha256": "4b7f5498d11e58f8a461a19c34ad55ff2c5130755112fa84cca4b7ec2fa599c5",
+          "original_lines": [
+            1,
+            65
+          ]
+        }
+      ],
+      "proposed_project_spec": [
+        "Первый контракт M=4/8, вход snapshot complexsigned18, накопление Hermitian R, diagonal loading и отдельный поток коэффициентов; размеры — проектный выбор.",
+        "Проверять distortionless constraint, Hermitian symmetry, поведение при сингулярномR и подавление заданной помехи на NumPy/Matlab reference.",
+        "Обучение/решение и runtime beamform разделить; не обещать обновление матрицы заодинтакт или физические100МГц безсинтеза.",
+        "Текущий beamform делит результат на энергию входного вектора весов; для MVDR нужен явный unnormalized dot-product/масштабный адаптер, иначе distortionless constraint изменится. Существующий MMSE solver не является готовым generic inverse-R API; reuse ограничить доказанными арифметическими примитивами/раскладкой."
+      ],
+      "novelty_vs_project": "Существующий beamform вычисляет X*conj(a)/(aHa) с заданными a; covariance estimation и MVDR normalization отсутствуют. Доказанные арифметические блоки/приёмы MMSE можно переиспользовать; готового generic inverse-R API и covariance/weight contract нет."
+    },
+    {
+      "id": "music_esprit_doa",
+      "title": "DOA estimation: MUSIC, затем ESPRIT",
+      "priority": "medium",
+      "recommend_separate_todo": true,
+      "existing_coverage": "В production нет MUSIC/ESPRIT или углового поиска. Существующий beamform потребляет уже известный steering vector; он не определяет угол прихода.",
+      "source_facts": [
+        "Haupt §8.3.3 (file pages492–494) задаёт MUSIC noise-subspace spectrum и пример8элементов с расстояниемλ/2, сигналами−60°,0°,10°.",
+        "§8.3.6 (file pages497–498) описывает две перекрывающиеся subarrays и оценку углов через eigenvalues rotational invariance.",
+        "Сам текст отмечает предпосылки некоррелированного шума, слабо/некоррелированных сигналов и точной калибровки; универсальная робастность не заявлена."
+      ],
+      "spec_sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "file_pages": [
+            492,
+            493,
+            494,
+            497,
+            498
+          ],
+          "sections": [
+            "8.3.3 MUSIC",
+            "8.3.6 ESPRIT"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "source_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e"
+        }
+      ],
+      "provenance": [
+        "catalog_haupt.json",
+        "haupt_book_text.txt",
+        "haupt_file_page_492.txt",
+        "haupt_file_page_493.txt",
+        "haupt_file_page_494.txt",
+        "haupt_file_page_497.txt",
+        "haupt_file_page_498.txt",
+        "repo_inventory.json"
+      ],
+      "caveats": [
+        "Книга не найдена в текущем частичном RAG-каталоге; используемые места — реальный локальный PDF text layer, безOCR.",
+        "Формулы в text layer местами повреждены; перед численной реализацией сверить страницыPDF визуально. Здесь зафиксированы тема/раздел и пример, не транскрибирована формула избитогоOCR."
+      ],
+      "project_derived_spec": [
+        "Первый этап — floating reference для ULA M=4/8 и известного числа источников K=1/2; затем отдельное ТЗ на Hermitian eigensolver и fixed-point угловой поиск.",
+        "Сначала MUSIC с фиксированной сеткойуглов; ESPRIT добавить после подтверждения eigenspace/kernel.",
+        "Проверять выделение отдельных источников вограниченных SNR/angle scenarios; coherent sources и calibration errors — отдельные стресс-режимы, не гарантированныйPASS."
+      ],
+      "sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "file_pages": [
+            492,
+            493,
+            494,
+            497,
+            498
+          ],
+          "sections": [
+            "8.3.3 MUSIC",
+            "8.3.6 ESPRIT"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "source_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e"
+        }
+      ],
+      "proposed_project_spec": [
+        "Первый этап — floating reference для ULA M=4/8 и известного числа источников K=1/2; затем отдельное ТЗ на Hermitian eigensolver и fixed-point угловой поиск.",
+        "Сначала MUSIC с фиксированной сеткойуглов; ESPRIT добавить после подтверждения eigenspace/kernel.",
+        "Проверять выделение отдельных источников вограниченных SNR/angle scenarios; coherent sources и calibration errors — отдельные стресс-режимы, не гарантированныйPASS."
+      ],
+      "novelty_vs_project": "В production нет MUSIC/ESPRIT или углового поиска. Существующий beamform потребляет уже известный steering vector; он не определяет угол прихода."
+    },
+    {
+      "id": "imcra_noise_tracking",
+      "title": "Адаптивный IMCRA noise-PSD tracker перед существующим OM-LSA gain",
+      "priority": "high",
+      "recommend_separate_todo": true,
+      "existing_coverage": "Portable OM-LSA явно использует noise-only prefix calibration; исторический IMCRA не реализован. Это расширение существующейцепочки, а не новый дубликат gain/STFT.",
+      "source_facts": [
+        "algorithms/audio/omlsa/original/omlsa.m объявляетSingleChannelOMLSAwithIMCRA; lines24–32 задают frequency smoothing, Nwin8,Vwin15, alpha_s0.9, alpha_d0.85.",
+        "Примерно lines150–250 реализуют сглаживание по времени/частоте, minima windows, qhat/phat, alpha_dt и рекурсивный noise PSD lambda_dav/lambda_d.",
+        "Original lines147–151 и211 используют eta/v и prior-SNR feedback; line333 обновляет eta_2term=GH1.^2.*gamma после gain. Поэтому noise tracker и gain имеют согласованное межкадровое состояние."
+      ],
+      "spec_sources": [
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/audio/omlsa/original/omlsa.m",
+          "function": "omlsa",
+          "lines": [
+            1,
+            335
+          ],
+          "source_path": "algorithms/audio/omlsa/original/omlsa.m",
+          "source_sha256": "d0bd9a2f02736442a2d63e1fb28a1d197c4507f3b4e4b123607c321b3b715684",
+          "original_lines": [
+            1,
+            335
+          ]
+        },
+        {
+          "kind": "preserved_source_provenance",
+          "path": "research/dsp_global_20260930/manifest.json",
+          "entry_id": "israel_omlsa",
+          "source_path": "research/dsp_global_20260930/manifest.json",
+          "source_sha256": "89b94736f6b97f5217cf58f8f95350d56f2474a46b6e85b29c73f96b944a714e"
+        }
+      ],
+      "provenance": [
+        "catalog_imcra.json",
+        "catalog_cohen.json",
+        "repo_inventory.json"
+      ],
+      "caveats": [
+        "RAG поиск IMCRA/Cohen в каталоге не дал indexed source; основной algorithm contract здесь — реальный сохранённый MATLAB entrypoint, не архивная документация проекта."
+      ],
+      "project_derived_spec": [
+        "Выделить tracker отдельно от STFT/OM-LSA gain: на вход power spectrum и согласованный prior-SNR/feedback state gain, на выход noise PSD и speech presence. Интерфейс и порядок обновления eta/eta_2term вывести из original до RTL; явно описать reset/initialization/minima rollover. Самостоятельный вариант без этого feedback требует отдельного эталона и не считается побитной копией historical schedule.",
+        "Повторить исходный floating schedule на синтетическом stationary/ramped/noise-step+speech dataset, затем оценить fixed-point ширины и LUT.",
+        "Первый аппаратный размерN=32/HOP8 можно выбрать длясовместимости с существующимRTL, но это отклонение отисходногоM512/Fs16k, требующее отдельногоэталона и объяснения."
+      ],
+      "sources": [
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/audio/omlsa/original/omlsa.m",
+          "function": "omlsa",
+          "lines": [
+            1,
+            335
+          ],
+          "source_path": "algorithms/audio/omlsa/original/omlsa.m",
+          "source_sha256": "d0bd9a2f02736442a2d63e1fb28a1d197c4507f3b4e4b123607c321b3b715684",
+          "original_lines": [
+            1,
+            335
+          ]
+        },
+        {
+          "kind": "preserved_source_provenance",
+          "path": "research/dsp_global_20260930/manifest.json",
+          "entry_id": "israel_omlsa",
+          "source_path": "research/dsp_global_20260930/manifest.json",
+          "source_sha256": "89b94736f6b97f5217cf58f8f95350d56f2474a46b6e85b29c73f96b944a714e"
+        }
+      ],
+      "proposed_project_spec": [
+        "Выделить tracker отдельно от STFT/OM-LSA gain: на вход power spectrum и согласованный prior-SNR/feedback state gain, на выход noise PSD и speech presence. Интерфейс и порядок обновления eta/eta_2term вывести из original до RTL; явно описать reset/initialization/minima rollover. Самостоятельный вариант без этого feedback требует отдельного эталона и не считается побитной копией historical schedule.",
+        "Повторить исходный floating schedule на синтетическом stationary/ramped/noise-step+speech dataset, затем оценить fixed-point ширины и LUT.",
+        "Первый аппаратный размерN=32/HOP8 можно выбрать длясовместимости с существующимRTL, но это отклонение отисходногоM512/Fs16k, требующее отдельногоэталона и объяснения."
+      ],
+      "novelty_vs_project": "Portable OM-LSA явно использует noise-only prefix calibration; исторический IMCRA не реализован. Это расширение существующейцепочки, а не новый дубликат gain/STFT."
+    },
+    {
+      "id": "graphic_eq_synthesis",
+      "title": "16-band graphic EQ как synthesis extension PFB/WOLA",
+      "priority": "medium",
+      "recommend_separate_todo": true,
+      "existing_coverage": "Историческая MDL сохранена, functional workspace отсутствует. Текущий PFB/WOLA analogue — analysis transform; synthesis bank и полный analysis→gain→synthesis route не реализованы.",
+      "source_facts": [
+        "Историческая graphic_equalizer MDL содержит Downsample16/2,16×32 layout,FFT/IFFT иequalizer_coeff/prototype_impulse_response. Это не подтверждение biquad/IIR graphicEQ."
+      ],
+      "spec_sources": [
+        {
+          "kind": "preserved_original_model",
+          "path": "sources/graphic_equalizer_16_band_2011_05_17/graphic_equalizer_16_band_2011_05_17.mdl",
+          "blocks": [
+            "Downsample",
+            "IFFT",
+            "IFFT1",
+            "equalizer_coeff",
+            "prototype_impulse_response"
+          ],
+          "source_path": "sources/graphic_equalizer_16_band_2011_05_17/graphic_equalizer_16_band_2011_05_17.mdl",
+          "source_sha256": "cb24f61ab2f2286a81d37e1d133d4c9cc6b0f1fc86292e8e779d403ff53efcc9"
+        },
+        {
+          "kind": "preserved_original_model",
+          "path": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+          "source_path": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+          "source_sha256": "f8c3194caa0f2a2e96629f0d6c90fb51dbafa043d7224bccd7c769c3bbe55bf9"
+        }
+      ],
+      "provenance": [
+        "catalog_graphic_equalizer.json",
+        "repo_inventory.json"
+      ],
+      "project_derived_spec": [
+        "Отдельная задача synthesis PFB: сначала восстановить коэффициенты/нормировку/frame convention из исходных MDL, затем добавить per-band gain interface и analysis→gain→synthesis reconstruction tests; существующий analysis PFB переиспользовать.",
+        "Не дублировать уже имеющийся анализатор и не объявлять source architecture бикуадным каскадом."
+      ],
+      "sources": [
+        {
+          "kind": "preserved_original_model",
+          "path": "sources/graphic_equalizer_16_band_2011_05_17/graphic_equalizer_16_band_2011_05_17.mdl",
+          "blocks": [
+            "Downsample",
+            "IFFT",
+            "IFFT1",
+            "equalizer_coeff",
+            "prototype_impulse_response"
+          ],
+          "source_path": "sources/graphic_equalizer_16_band_2011_05_17/graphic_equalizer_16_band_2011_05_17.mdl",
+          "source_sha256": "cb24f61ab2f2286a81d37e1d133d4c9cc6b0f1fc86292e8e779d403ff53efcc9"
+        },
+        {
+          "kind": "preserved_original_model",
+          "path": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+          "source_path": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+          "source_sha256": "f8c3194caa0f2a2e96629f0d6c90fb51dbafa043d7224bccd7c769c3bbe55bf9"
+        }
+      ],
+      "proposed_project_spec": [
+        "Отдельная задача synthesis PFB: сначала восстановить коэффициенты/нормировку/frame convention из исходных MDL, затем добавить per-band gain interface и analysis→gain→synthesis reconstruction tests; существующий analysis PFB переиспользовать.",
+        "Не дублировать уже имеющийся анализатор и не объявлять source architecture бикуадным каскадом."
+      ],
+      "novelty_vs_project": "Историческая MDL сохранена, functional workspace отсутствует. Текущий PFB/WOLA analogue — analysis transform; synthesis bank и полный analysis→gain→synthesis route не реализованы."
+    }
+  ],
+  "scope_notes": [
+    "Индекс частичный: пустой catalog/search не доказывает отсутствие книги/идеи в библиотеке.",
+    "Milewski иadaptdemos сохранены, но дляновых RTL задач здесь не установлены достаточноточные standalone specs; пока не добавлять их только поназванию.",
+    "Polar coding оставлен coding-агенту; не дублироватьегоfinding."
+  ]
+}

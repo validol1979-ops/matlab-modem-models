@@ -1,0 +1,72 @@
+{
+  "id": "modems/fsk_text",
+  "title": "Frequency-coded communication",
+  "category": "modems",
+  "path": "modems/fsk_text",
+  "operations": [
+    "fsk_rx",
+    "fsk_tx"
+  ],
+  "cases": [
+    "four_fsk_tx",
+    "four_fsk_rx"
+  ],
+  "limits": "Orthogonal four-FSK complex-baseband analogue. Source text/alphabet conventions, amplitude-coding and plotting exercises are preserved as references, not claimed equivalent.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/Communication System Simulation & Diabetes Classification/code/p1.m",
+      "original": "modems/fsk_text/original/Communication System Simulation & Diabetes Classification/code/p1.m",
+      "sha256": "ca9140a10ce49144015c8adf8d9d02d749e1795e2dfda80dcb2fab36dbbc3d77",
+      "bytes": 7273
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/freq_coding.m",
+      "original": "modems/fsk_text/original/Fourier Analysis & Frequency-Based Communication/code/freq_coding.m",
+      "sha256": "46002f0f592fc31b4d62390db6d53c35c4ed852e5515d7f613963ca1ec35e73f",
+      "bytes": 1055
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/freq_decoding.m",
+      "original": "modems/fsk_text/original/Fourier Analysis & Frequency-Based Communication/code/freq_decoding.m",
+      "sha256": "68e60f2f2543e25a5987b637edd9b4a6a7bd409a9e9e25d9f1559c9210ce36ea",
+      "bytes": 1654
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/p1_1.m",
+      "original": "modems/fsk_text/original/Fourier Analysis & Frequency-Based Communication/code/p1_1.m",
+      "sha256": "15643b1b5f68fd3928314de72b495f7986deb2aef7784d5e92a512cc0101feb1",
+      "bytes": 732
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/p1_2.m",
+      "original": "modems/fsk_text/original/Fourier Analysis & Frequency-Based Communication/code/p1_2.m",
+      "sha256": "40e5c2de610eaac976e4d47923c6782680e9cd1d664de5bd3ee78da51a15a906",
+      "bytes": 1144
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/p2.m",
+      "original": "modems/fsk_text/original/Fourier Analysis & Frequency-Based Communication/code/p2.m",
+      "sha256": "f42fe46dac8557aefcc6cb086e10328d852ae9474172540998f0dd80852d61f5",
+      "bytes": 2545
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/LICENSE",
+      "original": "modems/fsk_text/original/LICENSE",
+      "sha256": "6864f6681b54348a456a3f305b9e225ffc072242436f2fddb0fd86c2861eb630",
+      "bytes": 1069
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_tehran/README.md",
+      "original": "modems/fsk_text/original/README.md",
+      "sha256": "c9b8ead68eb9ef4160495e20a7bccb4ade7aa60b2fbb98b1e719098a94a2224d",
+      "bytes": 2517
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

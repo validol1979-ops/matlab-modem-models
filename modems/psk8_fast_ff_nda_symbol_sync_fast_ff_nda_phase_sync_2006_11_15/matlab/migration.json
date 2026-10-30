@@ -1,0 +1,13 @@
+{
+  "source": "modems/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15/original/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15.mdl",
+  "original_sha256": "b53a50c0f07ade0ce635e7310415906e256bccdc30c3c1c7bc8d9e72bb6c2f0e",
+  "prepared_sha256": "f276548196eff4a29eb890569c140027733ce59fa33c5d1105684a2a08285ff4",
+  "changes": [
+    {
+      "old": "commdigbbndpm2/",
+      "new": "commdigbbndpm3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

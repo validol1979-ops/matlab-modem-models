@@ -1,0 +1,13 @@
+{
+  "source": "modems/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18/original/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.mdl",
+  "original_sha256": "a292e1b503732fcf20ce0b525ba2cf9e23e763be6b6d284e7f8dadd5ecb3674b",
+  "prepared_sha256": "db0fb062adfd62ab851c1898f606a547243d583a833ca66855ec1e95b8d44f64",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

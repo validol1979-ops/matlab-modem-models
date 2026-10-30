@@ -1,0 +1,43 @@
+{
+  "name": "qpsk_phase_noise_phase_sync_2009_04_12",
+  "original_sha256": "149865d0d0c9c16c89eaac56c85405818643b88762b4e18a990bb8329550a21a",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Failed to load library 'commdigbbndpm2' referenced by 'qpsk_phase_noise_phase_sync_2009_04_12/Modulator/data_mapper'.",
+  "migration": {
+    "source": "modems/qpsk_phase_noise_phase_sync_2009_04_12/original/qpsk_phase_noise_phase_sync_2009_04_12.mdl",
+    "original_sha256": "149865d0d0c9c16c89eaac56c85405818643b88762b4e18a990bb8329550a21a",
+    "prepared_sha256": "cd504a1636ebda0e5618bd4d675f5e0631f2954361d109beb784241c1c43c8d3",
+    "changes": [
+      {
+        "old": "commdigbbndpm2/",
+        "new": "commdigbbndpm3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 1,
+  "stop_time": 16384,
+  "requested_steps": 16384,
+  "signal_count": 17,
+  "finite": true,
+  "captured_values": 278545,
+  "capture_sha256": "5d00ee98c7f41ee44849a2d30bbfb39833b4be04d617455b8621611cccdc274b",
+  "mapper_checks": [
+    {
+      "block": "qpsk_phase_noise_phase_sync_2009_04_12/Modulator/data_mapper",
+      "samples": 16385,
+      "maximum_error": 0.0,
+      "covered_labels": 4,
+      "alphabet": 4,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

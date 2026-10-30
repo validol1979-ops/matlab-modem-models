@@ -1,0 +1,22 @@
+{
+  "status": "STAGED_PASS",
+  "scope": "Isolated PSK/QAM TX; not integrated into the active root acceptance e. Sources and command outputs archived before integration.",
+  "profiles": 13,
+  "ordinary": 130,
+  "negative": 234,
+  "python_tests": 5,
+  "compatibility_profiles": [
+    "bpsk",
+    "oqpsk",
+    "msk",
+    "gmsk"
+  ],
+  "source_hashes": {
+    "modem_tx_uvm.svh": "815511c28dea34a02f9a3af8d501806b10360b4ce9324640cfd7a72277c96878",
+    "psk_tx_uvm_tb.sv": "206076f28a6b3086b2441d2e2338e8154b67f38f94e61beba84fe095e1a3f952",
+    "run_psk_tx_uvm.py": "005efb861eab5d2ad9743541a8132033644d69798544abc5dd8e7e0a2b93a5b4",
+    "test_psk_tx_uvm.py": "b2544e9d6ddaf1bc840d98b4ada15755370f365536ceff213303a793b3694a7f",
+    "parent_psk_tx.py": "53222964d97d007d02e6510eece54c6a8411869e8e0a83064fb71ce39f1976a2",
+    "integrate.py": "476a256a14a9007cb8d1f715c6dc2da3bf5194afcb6eef6b031647c269a3a723"
+  }
+}

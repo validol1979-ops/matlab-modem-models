@@ -1,0 +1,65 @@
+test_fcs_residue_and_corruption (test_ext_code_basics_oracles.CRCOracles.test_fcs_residue_and_corruption) ... ok
+test_polynomial_division_and_chunks (test_ext_code_basics_oracles.CRCOracles.test_polynomial_division_and_chunks) ... ok
+test_standard_byte_oracles (test_ext_code_basics_oracles.CRCOracles.test_standard_byte_oracles) ... ok
+test_all_single_and_double_locations (test_ext_code_basics_oracles.HammingOracles.test_all_single_and_double_locations) ... ok
+test_small_code_distance_and_parity_matrix (test_ext_code_basics_oracles.HammingOracles.test_small_code_distance_and_parity_matrix) ... ok
+test_period_recurrence_jump (test_ext_code_basics_oracles.LFSROracles.test_period_recurrence_jump) ... ok
+test_scramblers (test_ext_code_basics_oracles.LFSROracles.test_scramblers) ... ok
+test_crc_parallel_matrix_and_fcs (test_ext_code_basics_oracles.ParallelAndStreamingOracles.test_crc_parallel_matrix_and_fcs) ... ok
+test_h_g_matrix_orthogonality_and_bit_types (test_ext_code_basics_oracles.ParallelAndStreamingOracles.test_h_g_matrix_orthogonality_and_bit_types) ... ok
+test_parallel_prbs_and_stalled_chunkcarry (test_ext_code_basics_oracles.ParallelAndStreamingOracles.test_parallel_prbs_and_stalled_chunkcarry) ... ok
+test_failure_and_negative (test_ext_code_block.BCHOracles.test_failure_and_negative) ... ok
+test_small_exhaustive_payload_error_patterns (test_ext_code_block.BCHOracles.test_small_exhaustive_payload_error_patterns) ... ok
+test_source_generator_and_full_shortened_profiles (test_ext_code_block.BCHOracles.test_source_generator_and_full_shortened_profiles) ... ok
+test_polynomial_arithmetic (test_ext_code_block.FieldOracles.test_polynomial_arithmetic) ... ok
+test_strict_public_field_inputs (test_ext_code_block.FieldOracles.test_strict_public_field_inputs) ... ok
+test_failure_and_validation (test_ext_code_block.RSOracles.test_failure_and_validation) ... ok
+test_full_profile_errors_erasures_and_shortening (test_ext_code_block.RSOracles.test_full_profile_errors_erasures_and_shortening) ... ok
+test_component_spc_exact_and_chase_candidate_oracle (test_ext_code_btc.BTCOracles.test_component_spc_exact_and_chase_candidate_oracle) ... ok
+test_integer_clipping_and_validation (test_ext_code_btc.BTCOracles.test_integer_clipping_and_validation) ... ok
+test_product_profiles_syndromes_soft_iterations_and_error (test_ext_code_btc.BTCOracles.test_product_profiles_syndromes_soft_iterations_and_error) ... ok
+test_all_masks_to_radius3_and_radius4_failure (test_ext_code_golay.GolayOracles.test_all_masks_to_radius3_and_radius4_failure) ... ok
+test_matrix_all_codewords_distance_source_order (test_ext_code_golay.GolayOracles.test_matrix_all_codewords_distance_source_order) ... ok
+test_negative (test_ext_code_golay.GolayOracles.test_negative) ... ok
+test_soft_chase_and_independent_exhaustive_ml (test_ext_code_golay.GolayOracles.test_soft_chase_and_independent_exhaustive_ml) ... ok
+test_constellations_gray_labels_and_signs (test_ext_code_llr.LLROracles.test_constellations_gray_labels_and_signs) ... ok
+test_exact_probability_oracle_and_bpsk_formula (test_ext_code_llr.LLROracles.test_exact_probability_oracle_and_bpsk_formula) ... ok
+test_integer_distance_error_saturation_q8_adapter (test_ext_code_llr.LLROracles.test_integer_distance_error_saturation_q8_adapter) ... ok
+test_all_labels_bits_phase_and_fixed (test_ext_code_pls.PLSOracles.test_all_labels_bits_phase_and_fixed) ... ok
+test_fht_against_direct_matrix_and_ml (test_ext_code_pls.PLSOracles.test_fht_against_direct_matrix_and_ml) ... ok
+test_negative_scramble_phase_order_and_validation (test_ext_code_pls.PLSOracles.test_negative_scramble_phase_order_and_validation) ... ok
+test_small_sc_single_information_ml (test_ext_code_polar.PolarOracles.test_small_sc_single_information_ml) ... ok
+test_source_profiles_float_and_integer (test_ext_code_polar.PolarOracles.test_source_profiles_float_and_integer) ... ok
+test_table_and_kronecker_matrix (test_ext_code_polar.PolarOracles.test_table_and_kronecker_matrix) ... ok
+test_ties_saturation_minsum_and_negative (test_ext_code_polar.PolarOracles.test_ties_saturation_minsum_and_negative) ... ok
+test_btc_large_input_matches_prescaled_signed_rails (test_ext_code_quantization.FiniteQuantizationRegressions.test_btc_large_input_matches_prescaled_signed_rails) ... ok
+test_polar_fractional_scale_extreme_and_tiny_values (test_ext_code_quantization.FiniteQuantizationRegressions.test_polar_fractional_scale_extreme_and_tiny_values) ... ok
+test_tcm_large_finite_iq_uses_wide_integer_coordinates (test_ext_code_quantization.FiniteQuantizationRegressions.test_tcm_large_finite_iq_uses_wide_integer_coordinates) ... ok
+test_turbo_large_input_matches_prescaled_signed_rails (test_ext_code_quantization.FiniteQuantizationRegressions.test_turbo_large_input_matches_prescaled_signed_rails) ... ok
+test_variable_scales_pls_golay_and_q8_rounding (test_ext_code_quantization.FiniteQuantizationRegressions.test_variable_scales_pls_golay_and_q8_rounding) ... ok
+test_exhaustive_short_frame_ml (test_ext_code_tcm.TCMOracles.test_exhaustive_short_frame_ml) ... ok
+test_float_and_integer_noiseless_noisy (test_ext_code_tcm.TCMOracles.test_float_and_integer_noiseless_noisy) ... ok
+test_source_differential_pipeline_golden (test_ext_code_tcm.TCMOracles.test_source_differential_pipeline_golden) ... ok
+test_source_mapper_and_transitions (test_ext_code_tcm.TCMOracles.test_source_mapper_and_transitions) ... ok
+test_validation_and_reset (test_ext_code_tcm.TCMOracles.test_validation_and_reset) ... ok
+test_exhaustive_ml (test_ext_code_trellis.TestTrellis.test_exhaustive_ml) ... ok
+test_impulse_golden (test_ext_code_trellis.TestTrellis.test_impulse_golden) ... ok
+test_noiseless_300 (test_ext_code_trellis.TestTrellis.test_noiseless_300) ... ok
+test_noisy_300_transmitted_path_metric_bound (test_ext_code_trellis.TestTrellis.test_noisy_300_transmitted_path_metric_bound) ... ok
+test_oracle_match (test_ext_code_trellis.TestTrellis.test_oracle_match) ... ok
+test_quant_clip_and_round (test_ext_code_trellis.TestTrellis.test_quant_clip_and_round) ... ok
+test_soft_reliability_beats_hard_majority (test_ext_code_trellis.TestTrellis.test_soft_reliability_beats_hard_majority) ... ok
+test_tails_and_trace (test_ext_code_trellis.TestTrellis.test_tails_and_trace) ... ok
+test_validation (test_ext_code_trellis.TestTrellis.test_validation) ... ok
+test_zero_llr_ties_to_zero (test_ext_code_trellis.TestTrellis.test_zero_llr_ties_to_zero) ... ok
+test_bcjr_against_exhaustive_soft_posterior (test_ext_code_turbo.TurboOracles.test_bcjr_against_exhaustive_soft_posterior) ... ok
+test_bounded_noise_improves_hard_bypass (test_ext_code_turbo.TurboOracles.test_bounded_noise_improves_hard_bypass) ... ok
+test_clipping_reset_invalid (test_ext_code_turbo.TurboOracles.test_clipping_reset_invalid) ... ok
+test_full_blocks_noiseless_float_integer_and_iterations (test_ext_code_turbo.TurboOracles.test_full_blocks_noiseless_float_integer_and_iterations) ... ok
+test_source_trellis_interleaver_and_encoder (test_ext_code_turbo.TurboOracles.test_source_trellis_interleaver_and_encoder) ... ok
+
+----------------------------------------------------------------------
+Ran 59 tests in 15.568s
+
+OK
+CCSDS1784 seed619 sigma1.2 hard_errors 374 float_errors 0 fixed_SC_errors 0

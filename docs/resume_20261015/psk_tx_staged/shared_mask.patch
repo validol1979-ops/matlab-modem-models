@@ -1,0 +1,41 @@
+--- root/modem_tx_uvm.svh
++++ staged/modem_tx_uvm.svh
+@@ -168,7 +168,8 @@
+     `uvm_component_utils(tx_monitor)
+     virtual `TX_INTERFACE vif;
+     uvm_analysis_port #(tx_item) observed;
+-    int inputs=0,outputs=0,input_stalls=0,output_stalls=0,pending_resets=0,input_gaps=0,labels_seen=0;
++    int inputs=0,outputs=0,input_stalls=0,output_stalls=0,pending_resets=0,input_gaps=0;
++    longint unsigned labels_seen=0;
+     function new(string name,uvm_component parent);super.new(name,parent);observed=new("observed",this);endfunction
+     function void build_phase(uvm_phase phase);
+       if(!uvm_config_db#(virtual `TX_INTERFACE)::get(this,"","vif",vif)) `uvm_fatal("CONFIG","Missing TX monitor interface")
+@@ -205,7 +206,7 @@
+           held_re=vif.sample.m_re;held_im=vif.sample.m_im;held_output_last=vif.sample.m_last;
+           if(vif.sample.s_valid&&vif.sample.s_ready) begin
+             item=tx_item::type_id::create("input_observed");item.kind=INPUT_EVENT;item.observed_bit=int'(vif.sample.s_bit);item.observed_last=int'(vif.sample.s_last);
+-            inputs++;labels_seen|=1<<item.observed_bit;input_frame_open=!item.observed_last;observed.write(item);
++            inputs++;labels_seen|=64'd1<<item.observed_bit;input_frame_open=!item.observed_last;observed.write(item);
+           end
+           if(vif.sample.m_valid&&vif.sample.m_ready) begin
+             item=tx_item::type_id::create("output_observed");item.kind=OUTPUT_EVENT;
+@@ -315,6 +316,9 @@
+       end
+     endfunction
+     function void report_phase(uvm_phase phase);
++`ifdef TX_PSK
++      `uvm_info("PARAMETERS",$sformatf("UVM PSK TX PARAMETERS order=%0d amplitude=%0d differential=%0d axis=%0d pi4=%0d",`PSK_ORDER,`PSK_AMPLITUDE,`PSK_DIFFERENTIAL,`PSK_TX_AXIS,`PSK_PI4),UVM_LOW)
++`endif
+       `uvm_info("LABELS",$sformatf("UVM TX LABELS bits=%0d mask=%0d",`TX_LABEL_BITS,env.monitor.labels_seen),UVM_LOW)
+       `uvm_info("COVER",$sformatf("UVM TX HANDSHAKES input=%0d output=%0d input_stalls=%0d output_stalls=%0d ready_gaps=%0d pending_resets=%0d",env.monitor.inputs,env.monitor.outputs,env.monitor.input_stalls,env.monitor.output_stalls,env.monitor.input_gaps,env.monitor.pending_resets),UVM_LOW)
+     endfunction
+@@ -333,6 +337,9 @@
+     wait(bus.rst!=bus.ACTIVE);force bus.s_bit=`TX_LABEL_BITS'(1<<(`TX_LABEL_BITS-1));
+   end
+   `TX_DUT #(.RESET_ACTIVE(bus.ACTIVE)
++`ifdef TX_PSK
++    ,.ORDER(`PSK_ORDER),.AMPLITUDE(`PSK_AMPLITUDE),.DIFFERENTIAL(`PSK_DIFFERENTIAL),.TX_AXIS(`PSK_TX_AXIS),.PI4(`PSK_PI4)
++`endif
+ `ifdef TX_CPM
+     ,.TABLE_DIR(TABLE_DIR),.GMSK(`TX_GMSK)
+ `endif

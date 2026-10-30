@@ -1,0 +1,43 @@
+{
+  "name": "bpsk_costas_2008_08_25",
+  "original_sha256": "001a1c7c5fb3832eb801074c44668bbf6e37ec820bebc40446b9966e602753bf",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Failed to load library 'commchan2' referenced by 'bpsk_costas_2008_08_25/AWGN Channel'.",
+  "migration": {
+    "source": "modems/bpsk_costas_2008_08_25/original/bpsk_costas_2008_08_25.mdl",
+    "original_sha256": "001a1c7c5fb3832eb801074c44668bbf6e37ec820bebc40446b9966e602753bf",
+    "prepared_sha256": "7d397fd2de8486ab1a18aac9fd0595982c0dcd2935c4ac639e9fc5255f0a1335",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 29,
+  "finite": true,
+  "captured_values": 358429,
+  "capture_sha256": "9748293d32ddf13608a491a5017cb29618cb40e6597c0157326f39b003270c0c",
+  "mapper_checks": [
+    {
+      "block": "bpsk_costas_2008_08_25/Modulator/data_mapper",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 2,
+      "alphabet": 2,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

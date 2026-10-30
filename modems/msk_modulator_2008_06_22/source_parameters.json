@@ -1,0 +1,288 @@
+[
+  {
+    "Output": "Real and imag",
+    "SampleTime": "-1",
+    "source_line": 422
+  },
+  {
+    "Value": "1",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "source_line": 427
+  },
+  {
+    "OutDataTypeMode": "Inherit via back propagation",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "ConvertRealWorld": "Real World Value (RWV)",
+    "RndMeth": "Zero",
+    "SampleTime": "-1",
+    "source_line": 437
+  },
+  {
+    "Gain": "1",
+    "Multiplication": "Element-wise(K.*u)",
+    "ParameterDataTypeMode": "Same as input",
+    "ParameterDataType": "sfix(16)",
+    "ParameterScalingMode": "Best Precision: Matrix-wise",
+    "ParameterScaling": "2^0",
+    "OutDataTypeMode": "Same as input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 448
+  },
+  {
+    "BusObject": "BusObject",
+    "PortDimensions": "-1",
+    "SampleTime": "-1",
+    "DataType": "auto",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "source_line": 464
+  },
+  {
+    "Operator": "exp",
+    "OutputSignalType": "auto",
+    "SampleTime": "-1",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "source_line": 477
+  },
+  {
+    "Inputs": "4",
+    "DisplayOption": "none",
+    "BusObject": "BusObject",
+    "source_line": 489
+  },
+  {
+    "Port": "1",
+    "BusObject": "BusObject",
+    "PortDimensions": "-1",
+    "SampleTime": "-1",
+    "DataType": "auto",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "OutputWhenDisabled": "held",
+    "InitialOutput": "[]",
+    "source_line": 496
+  },
+  {
+    "TickLabels": "OneTimeTick",
+    "ZoomMode": "on",
+    "Grid": "on",
+    "TimeRange": "auto",
+    "YMin": "-5",
+    "YMax": "5",
+    "SaveName": "ScopeData",
+    "MaxDataPoints": "5000",
+    "Decimation": "1",
+    "SampleTime": "0",
+    "source_line": 511
+  },
+  {
+    "BlockType": "S-Function",
+    "FunctionName": "system",
+    "PortCounts": "[]",
+    "SFunctionModules": "''",
+    "source_line": 529
+  },
+  {
+    "Permissions": "ReadWrite",
+    "PermitHierarchicalResolution": "All",
+    "SystemSampleTime": "-1",
+    "RTWFcnNameOpts": "Auto",
+    "RTWFileNameOpts": "Auto",
+    "DataTypeOverride": "UseLocalSettings",
+    "MinMaxOverflowLogging": "UseLocalSettings",
+    "source_line": 535
+  },
+  {
+    "IconShape": "rectangular",
+    "Inputs": "++",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 547
+  },
+  {
+    "X0": "0",
+    "SampleTime": "1",
+    "RTWStateStorageClass": "Auto",
+    "source_line": 560
+  },
+  {
+    "Name": "CIC",
+    "RTWSystemCode": "Auto",
+    "source_line": 598
+  },
+  {
+    "Name": "in",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 618
+  },
+  {
+    "Name": "Gain",
+    "Gain": "1/32",
+    "source_line": 626
+  },
+  {
+    "Name": "Integer Delay10",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "32",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 632
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 644
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 656
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 665
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 674
+  },
+  {
+    "Name": "Complex to\\nReal-Imag",
+    "Output": "Real and imag",
+    "source_line": 739
+  },
+  {
+    "Name": "Complex to\\nReal-Imag1",
+    "Output": "Real and imag",
+    "source_line": 746
+  },
+  {
+    "Name": "Constant",
+    "Value": "2*pi",
+    "source_line": 753
+  },
+  {
+    "Name": "Gain",
+    "Gain": "pi/2",
+    "source_line": 759
+  },
+  {
+    "Name": "Gain1",
+    "Gain": "2",
+    "source_line": 765
+  },
+  {
+    "Name": "Gain3",
+    "Gain": "i",
+    "source_line": 771
+  },
+  {
+    "Name": "Integer Delay2",
+    "Orientation": "left",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 777
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "mod",
+    "source_line": 790
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "source_line": 797
+  },
+  {
+    "Name": "Scope4",
+    "BackgroundColor": "darkGreen",
+    "NumInputPorts": "5",
+    "ZoomMode": "xonly",
+    "source_line": 803
+  },
+  {
+    "Name": "Scrambler1",
+    "SourceBlock": "commsequence2/Scrambler",
+    "SourceType": "Scrambler",
+    "M": "2",
+    "poly": "[1 0 0 0 0 0 0 0 0 1 0 1]",
+    "ini_sta": "[0 0 0 0 0 0 0 0 0 0 0]",
+    "source_line": 828
+  },
+  {
+    "Name": "Sum2",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 839
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 848
+  },
+  {
+    "Name": "Unit Delay2",
+    "source_line": 857
+  },
+  {
+    "Name": "Upsample",
+    "SourceBlock": "dspsigops/Upsample",
+    "SourceType": "Upsample",
+    "N": "32",
+    "phase": "0",
+    "ic": "0",
+    "mode": "Maintain input frame size",
+    "source_line": 862
+  },
+  {
+    "Name": "XY Graph",
+    "SourceBlock": "simulink/Sinks/XY Graph",
+    "SourceType": "XY scope.",
+    "xmin": "-1.5",
+    "xmax": "1.5",
+    "ymin": "-1.5",
+    "ymax": "1.5",
+    "st": "-1",
+    "source_line": 874
+  },
+  {
+    "Name": "constant",
+    "source_line": 888
+  },
+  {
+    "Name": "constant1",
+    "Value": "0.5",
+    "source_line": 893
+  }
+]

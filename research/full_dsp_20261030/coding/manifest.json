@@ -1,0 +1,1597 @@
+{
+  "scope": "targeted/provisional; owned coding source/test freeze",
+  "tasks": {
+    "FEC-VIT": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_trellis.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_trellis.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Первый профиль: rate1/2,K7,g=[171,133]octal; независимый trellis model, затем параметризованный кодер и soft-input Viterbi с RAM traceback.",
+        "Явно определить zero-tail/flush policy, начальное/конечное состояние, tie-breaking, metric overflow и traceback latency; после этого отдельным расширением3/4."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/README.md",
+          "exists": true,
+          "source_size": 629,
+          "document_id": "56e4fb632c6950a6a57db54642eb4dc02fa89888b88905a4b21c602315f9f90b",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 629,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_viterbi.json",
+          "page_text_sha256": "56e4fb632c6950a6a57db54642eb4dc02fa89888b88905a4b21c602315f9f90b",
+          "verified_sha256": "56e4fb632c6950a6a57db54642eb4dc02fa89888b88905a4b21c602315f9f90b",
+          "verified_size": 629,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_trellis.svh",
+          "exists": true,
+          "line_start": 24,
+          "line_end": 26,
+          "sha256": "9569c8aff4e4cf878806570cc2119e8062ba9c81be178f705b776e248330a9cf",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "9569c8aff4e4cf878806570cc2119e8062ba9c81be178f705b776e248330a9cf",
+          "verified_size": 5304,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_enc.sv",
+          "exists": true,
+          "line_start": 77,
+          "line_end": 125,
+          "sha256": "a0087a294378b1eb0a57023d13d4d515859db7382d83f2c2839a361645a68d3f",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "a0087a294378b1eb0a57023d13d4d515859db7382d83f2c2839a361645a68d3f",
+          "verified_size": 5243,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_dec.sv",
+          "exists": true,
+          "line_start": 92,
+          "line_end": 150,
+          "sha256": "e9d48cf37a0ec0ecd5e2d9cfc184ea90094919a596eb20ed0df0e75439c6e6fe",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "e9d48cf37a0ec0ecd5e2d9cfc184ea90094919a596eb20ed0df0e75439c6e6fe",
+          "verified_size": 9180,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Source K7 octal171/133 MSBcurrent, softViterbi float/integer normalizedmetrics",
+      "fixed_scope": "Explicit signed input quantization; integer metrics; float softmetric reference",
+      "limitations": [
+        "README пишет(171,131), тогда как реальный активный параметр кода—(171,133). В ТЗ использовать проверенный source variant и сохранить оговорку; не переносить typo молча."
+      ],
+      "numerical_results": {
+        "tests": 10,
+        "long_frame_bits": 300,
+        "short_exhaustive_ML_lengths": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "wire_impulse_pairs": [
+          "11",
+          "10",
+          "11",
+          "11",
+          "00",
+          "01",
+          "11"
+        ],
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "soft_advantage": "Weak6/10bit flips select wrong hard message but correct floating/integer soft message",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "owned_sha256": {
+        "common/python/ext_code_trellis.py": "9193fc1de1ca395e57ccfb6a851a54f213e26d1e1795406c00382f18f23d4e08",
+        "tests/test_ext_code_trellis.py": "a927feeab35142900428ccc21af4986b57915d6c4e2e471de34504dadab9137f",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      },
+      "source_hashes": [
+        {
+          "task": "FEC-VIT",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/README.md",
+          "sha256": "56e4fb632c6950a6a57db54642eb4dc02fa89888b88905a4b21c602315f9f90b",
+          "lines": [
+            1,
+            18
+          ]
+        },
+        {
+          "task": "FEC-VIT",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_trellis.svh",
+          "sha256": "9569c8aff4e4cf878806570cc2119e8062ba9c81be178f705b776e248330a9cf",
+          "lines": [
+            24,
+            26
+          ]
+        },
+        {
+          "task": "FEC-VIT",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_enc.sv",
+          "sha256": "a0087a294378b1eb0a57023d13d4d515859db7382d83f2c2839a361645a68d3f",
+          "lines": [
+            77,
+            125
+          ]
+        },
+        {
+          "task": "FEC-VIT",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_dec.sv",
+          "sha256": "e9d48cf37a0ec0ecd5e2d9cfc184ea90094919a596eb20ed0df0e75439c6e6fe",
+          "lines": [
+            92,
+            150
+          ]
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_trellis.svh",
+          "sha256": "9569c8aff4e4cf878806570cc2119e8062ba9c81be178f705b776e248330a9cf"
+        }
+      ]
+    },
+    "FEC-RS": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_gf.py",
+        "common/python/ext_code_rs.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_block.py"
+      ],
+      "contract": [
+        "Первый явный профиль shortened RS(240,210),GF(2^8),irreducible polynomial0x11d,30 parity symbols,t15; независимые GF arithmetic/poly model и codec.",
+        "Раздельно задать errors-only и errors+erasures, fail/output policy и полностью буферизованный/согласованный ready/valid wrapper вокруг исходной жёсткой синхронизации."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/README.md",
+          "exists": true,
+          "source_size": 1055,
+          "document_id": "c756c26970ed3a3b16f49867b05587e01ba7a792ae51cb4b78e685844b863fb8",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 1055,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_rs_confirmed.json",
+          "page_text_sha256": "c756c26970ed3a3b16f49867b05587e01ba7a792ae51cb4b78e685844b863fb8",
+          "verified_sha256": "c756c26970ed3a3b16f49867b05587e01ba7a792ae51cb4b78e685844b863fb8",
+          "verified_size": 1055,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/rs_parameters.svh",
+          "exists": true,
+          "line_start": 12,
+          "line_end": 29,
+          "sha256": "15143f7d013363d45d0b3fa5a63d499d9a9d10ba7ec65f9720bfb9220fdc1456",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "15143f7d013363d45d0b3fa5a63d499d9a9d10ba7ec65f9720bfb9220fdc1456",
+          "verified_size": 1777,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/rs_enc.sv",
+          "exists": true,
+          "line_start": 77,
+          "line_end": 120,
+          "sha256": "b7a2f734340b0d842b04b8f11ec865ea5a56497681870b7145c2c6459bdfd546",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "b7a2f734340b0d842b04b8f11ec865ea5a56497681870b7145c2c6459bdfd546",
+          "verified_size": 4657,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/rs_dec.sv",
+          "exists": true,
+          "line_start": 88,
+          "line_end": 147,
+          "sha256": "d254e10842cbbbfb52696eb411ea57330fe4f817eec613eb482470237e2c86a1",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "d254e10842cbbbfb52696eb411ea57330fe4f817eec613eb482470237e2c86a1",
+          "verified_size": 12293,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Exact GF2560x11d shortenedRS240,210; systematic; errors+erasures",
+      "fixed_scope": "Integer GF2/GF256 exact model",
+      "limitations": [
+        "README явно предупреждает, что simple decoder не восстанавливает исходные symbols при decoder-fail, а erasure decoder восстанавливает; это должно стать явным output contract."
+      ],
+      "numerical_results": {
+        "tests": 7,
+        "full_profile": "240,210",
+        "error_vectors": "t15;30erasures;7errors16erasures;14errors2erasures",
+        "shortened_lengths": [
+          31,
+          73,
+          240
+        ],
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59
+      },
+      "owned_sha256": {
+        "common/python/ext_code_gf.py": "18c6382beebad993f25de8fd4eecb73ab9bdad895b9b906af2a7caca4688a918",
+        "common/python/ext_code_rs.py": "01b37bddb98bc3898f04a9dce32cafdf3b4babfd13d76ba05740e9705e017797",
+        "tests/test_ext_code_block.py": "35d99e3ac311292ea0d1502e0096ea355c47e953ad3897f78cb572717c3108ee"
+      },
+      "source_hashes": [
+        {
+          "task": "FEC-RS",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/README.md",
+          "sha256": "c756c26970ed3a3b16f49867b05587e01ba7a792ae51cb4b78e685844b863fb8",
+          "lines": [
+            1,
+            24
+          ]
+        },
+        {
+          "task": "FEC-RS",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/rs_parameters.svh",
+          "sha256": "15143f7d013363d45d0b3fa5a63d499d9a9d10ba7ec65f9720bfb9220fdc1456",
+          "lines": [
+            12,
+            29
+          ]
+        },
+        {
+          "task": "FEC-RS",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/rs_enc.sv",
+          "sha256": "b7a2f734340b0d842b04b8f11ec865ea5a56497681870b7145c2c6459bdfd546",
+          "lines": [
+            77,
+            120
+          ]
+        },
+        {
+          "task": "FEC-RS",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/rs_dec.sv",
+          "sha256": "d254e10842cbbbfb52696eb411ea57330fe4f817eec613eb482470237e2c86a1",
+          "lines": [
+            88,
+            147
+          ]
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/rs_parameters.svh",
+          "sha256": "15143f7d013363d45d0b3fa5a63d499d9a9d10ba7ec65f9720bfb9220fdc1456"
+        }
+      ]
+    },
+    "FEC-BCH": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_gf.py",
+        "common/python/ext_code_bch.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_block.py"
+      ],
+      "contract": [
+        "Первый выбранный профиль BCH(255,223,t4), затем один shortening profile; определить GF polynomial, generator и bit order по явным параметрам, не полагаться на текущий default source file.",
+        "Переносимый готовый codec с syndrome/error-locator/Chien и документированным fail policy, а не только GF2 matrix encoder."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/README.md",
+          "exists": true,
+          "source_size": 1174,
+          "document_id": "82ba71e78f7e8e89e4f79837aab03182985940a50a862dea49d3c116c23bfdf6",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 1174,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_bch_confirmed.json",
+          "page_text_sha256": "82ba71e78f7e8e89e4f79837aab03182985940a50a862dea49d3c116c23bfdf6",
+          "verified_sha256": "82ba71e78f7e8e89e4f79837aab03182985940a50a862dea49d3c116c23bfdf6",
+          "verified_size": 1174,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/bch_parameters.svh",
+          "exists": true,
+          "line_start": 76,
+          "line_end": 87,
+          "sha256": "9303a4b4813fa76babf81a9b6793ae911a8eeca1c2cd866a48b453a276b5505b",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "9303a4b4813fa76babf81a9b6793ae911a8eeca1c2cd866a48b453a276b5505b",
+          "verified_size": 9582,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/bch_enc.sv",
+          "exists": true,
+          "line_start": 76,
+          "line_end": 117,
+          "sha256": "513389ae2c1a7dfe1eeaf810fe74bfa36c4248e8c44940adb65174e93b15816e",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "513389ae2c1a7dfe1eeaf810fe74bfa36c4248e8c44940adb65174e93b15816e",
+          "verified_size": 4777,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/bch_dec.sv",
+          "exists": true,
+          "line_start": 86,
+          "line_end": 147,
+          "sha256": "326c55a6df9e733708821843d08d5d7b874ec7377890062795a8811619c075cc",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "326c55a6df9e733708821843d08d5d7b874ec7377890062795a8811619c075cc",
+          "verified_size": 10572,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Exact GF2560x171 BCH255,223,t4 and shortening239,207; generator0x17e85b4ef",
+      "fixed_scope": "Integer GF2/GF256 exact model",
+      "limitations": [
+        "Пример README — предлагаемая первая конфигурация, не утверждение, что он является активным default всех файлов."
+      ],
+      "numerical_results": {
+        "tests": 7,
+        "full_profile": "255,223,t4",
+        "shortening": "239,207",
+        "small_profile": "15,7,t2",
+        "exhaustive_small_vectors": 15488,
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59
+      },
+      "owned_sha256": {
+        "common/python/ext_code_gf.py": "18c6382beebad993f25de8fd4eecb73ab9bdad895b9b906af2a7caca4688a918",
+        "common/python/ext_code_bch.py": "b7bfdc2d59501b5d2ddc310888861f674b07d64031bb1bc11ba675b5b7d06831",
+        "tests/test_ext_code_block.py": "35d99e3ac311292ea0d1502e0096ea355c47e953ad3897f78cb572717c3108ee"
+      },
+      "source_hashes": [
+        {
+          "task": "FEC-BCH",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/README.md",
+          "sha256": "82ba71e78f7e8e89e4f79837aab03182985940a50a862dea49d3c116c23bfdf6",
+          "lines": [
+            1,
+            25
+          ]
+        },
+        {
+          "task": "FEC-BCH",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/bch_parameters.svh",
+          "sha256": "9303a4b4813fa76babf81a9b6793ae911a8eeca1c2cd866a48b453a276b5505b",
+          "lines": [
+            76,
+            87
+          ]
+        },
+        {
+          "task": "FEC-BCH",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/bch_enc.sv",
+          "sha256": "513389ae2c1a7dfe1eeaf810fe74bfa36c4248e8c44940adb65174e93b15816e",
+          "lines": [
+            76,
+            117
+          ]
+        },
+        {
+          "task": "FEC-BCH",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/bch_dec.sv",
+          "sha256": "326c55a6df9e733708821843d08d5d7b874ec7377890062795a8811619c075cc",
+          "lines": [
+            86,
+            147
+          ]
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/bch_parameters.svh",
+          "sha256": "9303a4b4813fa76babf81a9b6793ae911a8eeca1c2cd866a48b453a276b5505b"
+        }
+      ]
+    },
+    "FEC-POLAR": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_polar.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_polar.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Первый профиль N1024,K512,frozen-bit map по локальной таблице; сначала независимый SC/reference и comparison с preserved behavioural source, затем stream-ready RTL.",
+        "Optional CRC включать отдельным профилем после явной проверки его polynomial/initial/final/bit-order; не объявлять CRC-aided SCL, если реализован только SC."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/README.md",
+          "exists": true,
+          "source_size": 700,
+          "document_id": "8f75a851abae9c486ab9cfa77e8a16def7cef1da8ba521c2a9adf3ca28b189fd",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 700,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_polar.json",
+          "page_text_sha256": "8f75a851abae9c486ab9cfa77e8a16def7cef1da8ba521c2a9adf3ca28b189fd",
+          "verified_sha256": "8f75a851abae9c486ab9cfa77e8a16def7cef1da8ba521c2a9adf3ca28b189fd",
+          "verified_size": 700,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/enc/pc_3gpp_enc.sv",
+          "exists": true,
+          "line_start": 84,
+          "line_end": 125,
+          "sha256": "1b1e91ec810734f0dd77104dd7706de814c9528777bfea1d83fdaddfe09844f0",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "1b1e91ec810734f0dd77104dd7706de814c9528777bfea1d83fdaddfe09844f0",
+          "verified_size": 11675,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/dec/pc_3gpp_dec.sv",
+          "exists": true,
+          "line_start": 92,
+          "line_end": 144,
+          "sha256": "6da1abb3d641df0564f8aa7e806775770ea970a764b905e85d807efbbd0d8b30",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "6da1abb3d641df0564f8aa7e806775770ea970a764b905e85d807efbbd0d8b30",
+          "verified_size": 18525,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Source1024reliabilitytable, pureF non-systematic N1024K512, float exactSC and integer minsumSC",
+      "fixed_scope": "Integer datapath after explicit quantization; float soft reference; documented width/ties",
+      "limitations": [
+        "Ссылка README на frozen map не является доказательством полного3GPP/5G channel-coding conformance, interleaving или rate matching."
+      ],
+      "numerical_results": {
+        "tests": 4,
+        "profiles": [
+          [
+            1024,
+            512
+          ],
+          [
+            128,
+            64
+          ],
+          [
+            32,
+            16
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "noise_free_payloads_per_profile": 3,
+        "small_matrix_all_payloads": 256,
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "source_hashes": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/pc_3gpp_ts_38_212_tab.svh",
+          "sha256": "89b91d361d94dfe02a1703b8cbbab68721d1f87a08fd8714fc037132c68222f1"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/pc_3gpp_functions.svh",
+          "sha256": "9f3750b2832323691ca5cc273759006cead32eae14bb28049004ff0909a98b4a"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/beh/pc_3gpp_enc_beh.sv",
+          "sha256": "3cbbce8f3bdf7dff0e32b985728b4dd32d7013b3926fb2d81395f4c22da9ca95"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/beh/pc_3gpp_dec_sc_beh.sv",
+          "sha256": "342c822abec871bd4c4feebf758d79725f6f21f1df812b930ee36c3dc6eac9c9"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_polar.py": "58f83277b1373860aeb245f8d1aeba06cf7c2c017d8331ed2161bc69b7f6b62d",
+        "tests/test_ext_code_polar.py": "d534c78d52eb6a0c84069dfca61bb8543f4f71f39ad59b434fab60054567fc2f",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      }
+    },
+    "FEC-TURBO": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_turbo.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_turbo.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Первый ограниченный профиль CCSDS interleaver/trellis и rate1/6; независимый bit-accurate Max-Log-MAP с заданными LLR/extrinsic widths и числом iterations.",
+        "Зафиксировать block lengths, constituent trellises, termination, puncturing/interleaving; перенос encoder/decoder делать по этому контракту."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/README.md",
+          "exists": true,
+          "source_size": 487,
+          "document_id": "0d99ee688963da3d35e59289a5e607416704eefd3110c04085380ec14cc5d6cb",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 487,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_turbo_confirmed.json",
+          "page_text_sha256": "0d99ee688963da3d35e59289a5e607416704eefd3110c04085380ec14cc5d6cb",
+          "verified_sha256": "0d99ee688963da3d35e59289a5e607416704eefd3110c04085380ec14cc5d6cb",
+          "verified_size": 487,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/enc/ccsds_turbo_enc.sv",
+          "exists": true,
+          "line_start": 81,
+          "line_end": 124,
+          "sha256": "96c8c445c560c6802b5cecaeb84b79f6f31de3130571a8780400b6c5a7eb53d6",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "96c8c445c560c6802b5cecaeb84b79f6f31de3130571a8780400b6c5a7eb53d6",
+          "verified_size": 13348,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/dec/ccsds_turbo_dec.sv",
+          "exists": true,
+          "line_start": 110,
+          "line_end": 166,
+          "sha256": "3cefb260127da5f8d69dd1d597cc43ed235dc8dacb8e4823dccd68e5b95fe768",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "3cefb260127da5f8d69dd1d597cc43ed235dc8dacb8e4823dccd68e5b95fe768",
+          "verified_size": 25136,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Source CCSDS16state trellis/interleaver, rate1/6 independent4tail termination, fullframeMaxLogMAP float/integer",
+      "fixed_scope": "Integer metric datapath following explicit signed Qinput quantization; state/extrinsic saturation and traced schedule",
+      "limitations": [
+        "Числа ресурсов/скорости изавторскогоREADME2019—исторические свойства его сборки, не текущая приёмка нашего проекта.",
+        "Only rate1/6; source trellis/interleaver semantics, no full standards conformance or decoder hardware cycle equivalence.",
+        "valid denotes re-encoded hard-channel agreement, not CRC or guaranteed correct payload."
+      ],
+      "numerical_results": {
+        "tests": 5,
+        "all_interleaver_lengths": [
+          1784,
+          3568,
+          7136,
+          8920
+        ],
+        "full_decode_profiles": [
+          {
+            "n": 1784,
+            "iterations": 4,
+            "arithmetic": [
+              "float",
+              "integer"
+            ]
+          },
+          {
+            "n": 8920,
+            "iterations": 10,
+            "arithmetic": [
+              "float",
+              "integer"
+            ]
+          }
+        ],
+        "toy_SISO_oracle": "All16payloads, all16startstates beta0; source32trellis transitions",
+        "noise_measurement": {
+          "n": 1784,
+          "seed": 619,
+          "sigma": 1.2,
+          "iterations": 4,
+          "bypass_errors": 374,
+          "float_errors": 0,
+          "integer_self_corrected_errors": 0
+        },
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "source_hashes": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/ccsds_turbo_trellis.svh",
+          "sha256": "c8f65ffa42f02900ef6a5ace7597e5c5ee4a3fd688f389b1b72d3dc265856df6"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/ccsds_turbo_parameters.svh",
+          "sha256": "d0fbd8cb9023374cfc46e0e0f2c4b77b2739c250c76555baafa8ffb0f4e3ae7f"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/ccsds_turbo_ptable.sv",
+          "sha256": "abd8e0aa4b29e0f220e08defcaf44c07916ec23687e5fd5619e81abe43ae4a0e"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/enc/ccsds_turbo_enc_paddr_gen.sv",
+          "sha256": "cb7687d0e84baab2a8a9afed6e5032e7f683db66f982b4956df17d52cb4852d2"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/enc/ccsds_turbo_enc_punct.sv",
+          "sha256": "9806b86596f70d620fdd21aba1692c016ad22d318591fc7e9c563ae5c5fab317"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/enc/ccsds_turbo_enc_engine.sv",
+          "sha256": "b2a893f4420e44ac15db5a482da9519a71c87bd7feb82531ccd2bd3f65fe24a0"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_turbo.py": "aae985c7d4c2d2946b6cbf35818dff6a42babaf490fda54d7cb315824e0eae9e",
+        "tests/test_ext_code_turbo.py": "1df013aecfaee0e0b95668ad493f6ec4c0e594199125b65d9bc65e85a0d31cd4",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      }
+    },
+    "MOD-LLR": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_llr.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_llr.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Начать с BPSK/QPSK/QAM16/QAM64, сохранив существующие constellation/Gray labels; реализовать per-bit soft output с явными sign/noise-scaling/saturation/tie rules.",
+        "Согласовать новый soft output с положительным LLR дляbit0 и Q8 существующего LDPC входа; расширение доQAM256..4096/oddQAM сделать отдельными профилями после mapping contract."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/llr/README.md",
+          "exists": true,
+          "source_size": 749,
+          "document_id": "194183d20521c308ebdbdade8338674ca591e66e8017444d670fcaaa755bc99f",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 749,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_llr.json",
+          "page_text_sha256": "194183d20521c308ebdbdade8338674ca591e66e8017444d670fcaaa755bc99f",
+          "verified_sha256": "194183d20521c308ebdbdade8338674ca591e66e8017444d670fcaaa755bc99f",
+          "verified_size": 749,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/llr/llr_even_qam_demapper.sv",
+          "exists": true,
+          "line_start": 69,
+          "line_end": 120,
+          "sha256": "b04c36363942829be74a699814de7b0ab232f6030fb96a9b8f3e91a7d56ddc6e",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "b04c36363942829be74a699814de7b0ab232f6030fb96a9b8f3e91a7d56ddc6e",
+          "verified_size": 8957,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/testbench/llr/tb_qam_demapper.sv",
+          "exists": true,
+          "line_start": 8,
+          "line_end": 61,
+          "sha256": "c1d6fa365baf8806320b2a1e6007eceec3233ccf5df6a010b54767cc024a847e",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "c1d6fa365baf8806320b2a1e6007eceec3233ccf5df6a010b54767cc024a847e",
+          "verified_size": 10294,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "BPSK,QPSK,QAM16,QAM64 sourcephysicaltables; explicitGray/indexlabels, exact/maxlog/integerdistance+Q8adapter",
+      "fixed_scope": "Integer datapath after explicit quantization; float soft reference; documented width/ties",
+      "limitations": [
+        "README ссылается на имяtb_qam_mapper.sv; фактически обнаружен и прочитанtb_qam_demapper.sv. Нельзя предполагать идентичность author mapping и current project labels без проверки."
+      ],
+      "numerical_results": {
+        "tests": 3,
+        "profiles": [
+          2,
+          4,
+          16,
+          64
+        ],
+        "integer_vs_float_max_error_budget": 0.01,
+        "complex_variance": "E|noise|²",
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "source_hashes": [
+        {
+          "path": "common/python/psk_fixed.py",
+          "sha256": "264c2821b1cd4f565f47d3011cd4f5c1ce9929146645a076f6b689304e4c635d"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_llr.py": "021d9390affadf09b81a35ae204a6e7f88a4601622f965586dcc2294d05cc098",
+        "tests/test_ext_code_llr.py": "62331359bda7eac81e85e6b9db17d089694e84f2434f7e59676a6045970dadd9",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      }
+    },
+    "MOD-TCM": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_tcm.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_tcm.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Отдельный coded-modem profile: 4D convolutional/set-partition mapper + decoder с branch metrics и traceback; поддержать selectedicode до расширения на все4.",
+        "Точно задать связи между4D input-word, emitted8PSK labels, code rate, state initialization/termination и batching."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/README.md",
+          "exists": true,
+          "source_size": 396,
+          "document_id": "4521b39815e25d998c222c8dbc583aeecd7be53962c1f5802e42fc5c978f4136",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 396,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_tcm.json",
+          "page_text_sha256": "4521b39815e25d998c222c8dbc583aeecd7be53962c1f5802e42fc5c978f4136",
+          "verified_sha256": "4521b39815e25d998c222c8dbc583aeecd7be53962c1f5802e42fc5c978f4136",
+          "verified_size": 396,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/enc/tcm_enc.sv",
+          "exists": true,
+          "line_start": 66,
+          "line_end": 115,
+          "sha256": "cd8b60fdad621bdbc30c890382afa19f27ede58e8b5a5f8889dd145e5999eb96",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "cd8b60fdad621bdbc30c890382afa19f27ede58e8b5a5f8889dd145e5999eb96",
+          "verified_size": 5307,
+          "origin_class": "library"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/dec/tcm_dec.sv",
+          "exists": true,
+          "line_start": 88,
+          "line_end": 145,
+          "sha256": "5bd00e4119c93d9748eff41c959f8c9840bec28a1fbcdfbff9321dfc8f25a6fe",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution",
+          "verified_sha256": "5bd00e4119c93d9748eff41c959f8c9840bec28a1fbcdfbff9321dfc8f25a6fe",
+          "verified_size": 13851,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Sourceicode0:8payloadbits4symbols, differential+64statetrellis+map2.0, Euclidean float/Q12integerViterbi",
+      "fixed_scope": "Integer datapath after explicit quantization; float soft reference; documented width/ties",
+      "limitations": [
+        "Начальные rates следует зафиксировать по реальному source mapping, не выводить полную CCSDS conformance только из ссылки README."
+      ],
+      "numerical_results": {
+        "tests": 5,
+        "source_mapper_words": 512,
+        "source_trellis_transitions": 512,
+        "exhaustive_2group_messages": 65536,
+        "long_group_frame": 12,
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "source_hashes": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/dec/tcm_trellis.svh",
+          "sha256": "63a2bc633297e26048e67756b947d14e3c036615b832f48f9510723028e66db3"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/enc/tcm_enc_dfc.sv",
+          "sha256": "e6ba32c9e81ed11da0457d5787ae10263ab7fdc321df2b5e275352b64c02689a"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/enc/tcm_enc_conv.sv",
+          "sha256": "a602c0ba88f1b61100a8daeb77af83eee23abdc1f740013f1834145b4eafaa94"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/enc/tcm_enc_mapper.sv",
+          "sha256": "112960580f9ea133c9b083a22b9ad34ae157e3d60945907bb2906f2d775c3cf1"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_tcm.py": "76cc6694ae8012adca8d92fbacf83b4a112e5ec8f3a4fc506f21d1236f3e7d01",
+        "tests/test_ext_code_tcm.py": "252716b2879a167e797912579752f13eb7811a7adb919872eacebb8090ff91f5",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      }
+    },
+    "FEC-CRC": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_basics.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_basics_oracles.py"
+      ],
+      "contract": [
+        "Создать независимую побитную GF(2) модель CRC и параллельную модель обновления на 1/8/32 бита; первый профиль Ethernet CRC32, затем явно выбранный CRC16. Для каждого профиля зафиксировать width/poly/init/refin/refout/xorout и порядок байтов.",
+        "Добавить append/check FCS, пустой/короткий кадр, неполное последнее слово и reset между кадрами. Значения контрольных векторов получать независимым полиномиальным делением/известным reference, не из DUT."
+      ],
+      "sources": [
+        {
+          "task": "FEC-CRC",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/README.md",
+          "sha256": "fb668484fc871a5ba083659d1db3229f1be7571bb4f35e56f1bb43ea5d0eda7e",
+          "lines": [
+            1,
+            579
+          ]
+        },
+        {
+          "task": "FEC-CRC",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/lfsr.v",
+          "sha256": "5502c8203b0dfc7246c1a2de93e60c199ded3c1d7840b106350d714f72a9a079",
+          "lines": [
+            85,
+            154
+          ]
+        },
+        {
+          "task": "FEC-CRC",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/axis_eth_fcs.v",
+          "sha256": "9aba0ff55de115dcab4a2f3ed46bf967bf5fb1eb8011bffcbd5842bf2e37a731",
+          "lines": [
+            73,
+            134
+          ]
+        },
+        {
+          "task": "FEC-CRC",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/axis_eth_fcs_check.v",
+          "sha256": "af5c29694f070a5fe550e46557ac07d1f4e276767a275bdcfbb379072cd48a9b",
+          "lines": [
+            29,
+            180
+          ]
+        }
+      ],
+      "model_scope": "Ethernet CRC32 and CCITT-FALSE CRC16 bit/parallel GF2 updates + append/check",
+      "fixed_scope": "Exact GF(2) integer model; serial scalar and compiled GF(2) parallel update variants",
+      "limitations": [
+        "CRC16 — предлагаемый дополнительный профиль, параметры сначала закрепить; не объявлять все стандарты поддержанными. Ethernet framing/MAC не переносится этим пунктом.",
+        "Positional Hamming layout differs from source systematic column permutation; dmin4, not ambiguousREADME dmin5.",
+        "No universal detection guarantee beyond SECDED radius.",
+        "No timing/synthesis/RTL acceptance."
+      ],
+      "numerical_results": {
+        "targeted_tests": 10,
+        "status": "PASS",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "independence": "binascii byteCRC, polynomial division, matrix syndrome/GH orthogonality, scalar PRBS recurrence/full periods7/9",
+        "scope": "targeted/provisional",
+        "bit_mismatch_count": 0,
+        "error_budget": "exact equality",
+        "group_test_count": 59
+      },
+      "external_agents": [
+        {
+          "provider": "pi/openwebui",
+          "model": "~anthropic/claude-haiku-latest",
+          "log": "build/full_dsp_20261030/coding/logs/basics_pi.log",
+          "outcome": "implementation written; outputlimit during followup; independently reviewed and extended locally"
+        },
+        {
+          "provider": "pi/openwebui",
+          "model": "~deepseek/deepseek-v4-flash-latest",
+          "log": "build/full_dsp_20261030/coding/logs/basics_deepseek.log",
+          "outcome": "source/API review; stopped erroneous full-period31 test, no acceptance assigned"
+        },
+        {
+          "provider": "OpenCode/openwebui",
+          "model": "~anthropic/claude-haiku-latest",
+          "outcome": "completed short review; flagged connection-vs-output-characteristic polynomial naming; clarified reciprocal convention without changing frozen recurrence",
+          "log": "build/full_dsp_20261030/coding/logs/basics_opencode_review.log"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_basics.py": "f0a91a0553d89e092ed73a9c7e1e64980f8d8f07bcb5792f4ba6c59d9ee7ecf2",
+        "tests/test_ext_code_basics_oracles.py": "18d5167d1e2a82bf24d004fee60b1eab8093167dc5ac2a58f9a26bc9d8b0a5ae"
+      }
+    },
+    "DSP-PRBS-SCRAMBLER": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_basics.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_basics_oracles.py"
+      ],
+      "contract": [
+        "Создать битовую и word-parallel модели LFSR, PRBS stimulus и additive/self-synchronizing scramble/descramble; профили PRBS7/9/15/31 предлагаемые, каждый с точной полиномиальной и state/shift/bit-order конвенцией.",
+        "Явно задать nonzero seed, запрет all-zero lockup для PRBS, продвижение по принятым битам, сохранение состояния между кусками и политику frame restart. Fibonacci/Galois не считать эквивалентными с одним и тем же seed без преобразования состояния."
+      ],
+      "sources": [
+        {
+          "task": "DSP-PRBS-SCRAMBLER",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/README.md",
+          "sha256": "fb668484fc871a5ba083659d1db3229f1be7571bb4f35e56f1bb43ea5d0eda7e",
+          "lines": [
+            1,
+            579
+          ]
+        },
+        {
+          "task": "DSP-PRBS-SCRAMBLER",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/lfsr.v",
+          "sha256": "5502c8203b0dfc7246c1a2de93e60c199ded3c1d7840b106350d714f72a9a079",
+          "lines": [
+            36,
+            220
+          ]
+        }
+      ],
+      "model_scope": "PRBS7/9/15/31 exact word/bit/jump, additive/self-sync streaming accepted-bits/reset",
+      "fixed_scope": "Exact GF(2) integer model; serial scalar and compiled GF(2) parallel update variants",
+      "limitations": [
+        "Режимы и терминология указаны в референсе, конкретные PRBS профили/seed mapping и accepted-bit интерфейс — наше ТЗ; не скрывать смену полинома или направление сдвига.",
+        "Positional Hamming layout differs from source systematic column permutation; dmin4, not ambiguousREADME dmin5.",
+        "No universal detection guarantee beyond SECDED radius.",
+        "No timing/synthesis/RTL acceptance.",
+        "C(D)=1+D^k+D^n delay-connection polynomial, forward characteristic E^n+E^(n-k)+1; frozen reversed-register wire recurrence is explicit."
+      ],
+      "numerical_results": {
+        "targeted_tests": 10,
+        "status": "PASS",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "independence": "binascii byteCRC, polynomial division, matrix syndrome/GH orthogonality, scalar PRBS recurrence/full periods7/9",
+        "scope": "targeted/provisional",
+        "bit_mismatch_count": 0,
+        "error_budget": "exact equality",
+        "full_periods": {
+          "7": 127,
+          "9": 511
+        },
+        "max_algebraic_jump": 1000000000057,
+        "group_test_count": 59
+      },
+      "external_agents": [
+        {
+          "provider": "pi/openwebui",
+          "model": "~anthropic/claude-haiku-latest",
+          "log": "build/full_dsp_20261030/coding/logs/basics_pi.log",
+          "outcome": "implementation written; outputlimit during followup; independently reviewed and extended locally"
+        },
+        {
+          "provider": "pi/openwebui",
+          "model": "~deepseek/deepseek-v4-flash-latest",
+          "log": "build/full_dsp_20261030/coding/logs/basics_deepseek.log",
+          "outcome": "source/API review; stopped erroneous full-period31 test, no acceptance assigned"
+        },
+        {
+          "provider": "OpenCode/openwebui",
+          "model": "~anthropic/claude-haiku-latest",
+          "outcome": "completed short review; flagged connection-vs-output-characteristic polynomial naming; clarified reciprocal convention without changing frozen recurrence",
+          "log": "build/full_dsp_20261030/coding/logs/basics_opencode_review.log"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_basics.py": "f0a91a0553d89e092ed73a9c7e1e64980f8d8f07bcb5792f4ba6c59d9ee7ecf2",
+        "tests/test_ext_code_basics_oracles.py": "18d5167d1e2a82bf24d004fee60b1eab8093167dc5ac2a58f9a26bc9d8b0a5ae"
+      }
+    },
+    "FEC-DVB-PLS": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_pls.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_pls.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Восстановить точный кодовый набор/порядок 64 бит, scrambling sequence и phase mapping из исходников; создать floating soft metric reference, bit-accurate encoder и Hadamard fast decoder.",
+        "Первый профиль — все 128 входных меток 7-битного idat исходного encoder, каждая даёт 64 кодовых бита; это не утверждение о допустимости всех MODCOD по стандарту. Зафиксировать LLR sign/scale/ties и finite-frame reset; сравнить Hadamard32 с исчерпывающим перебором 128 допустимых кодовых слов этого профиля."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/README.md",
+          "document_id": "e074718e958739ba4dee08a1535262527a6b3d2003a47656a9139e8f74be9dd4",
+          "part": 1,
+          "start_char": 0,
+          "end_char": 306,
+          "raw_read_file": "comms/read_dvb_pls.json",
+          "verified_sha256": "e074718e958739ba4dee08a1535262527a6b3d2003a47656a9139e8f74be9dd4",
+          "verified_size": 306
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_enc.sv",
+          "lines": [
+            115,
+            250
+          ],
+          "verified_sha256": "2a951100e8288720b9f6cc5ea33734900cbbaa043747d2ee4a9abdce2289bfbf",
+          "raw_excerpt_file": "comms/direct_dvb_pls_enc.sv.json",
+          "verified_size": 6720
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_constants.svh",
+          "lines": [
+            1,
+            66
+          ],
+          "verified_sha256": "0720fd2471ae3f9d30649ea5a02c388b877bbc50181aa1146c2237a90611b437",
+          "raw_excerpt_file": "comms/direct_dvb_pls_constants.svh.json",
+          "verified_size": 2738
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_dec_rm_dec.sv",
+          "lines": [
+            1,
+            180
+          ],
+          "verified_sha256": "9f41bc54a22d938dc380ace81454e09420c066bce159ad67e7bdb4ecd158102b",
+          "raw_excerpt_file": "comms/direct_dvb_pls_dec_rm_dec.sv.json",
+          "verified_size": 11335
+        }
+      ],
+      "model_scope": "All128source labels,64bits fixedscramble,sourcepi/2phase,FHT32 float/integerML",
+      "fixed_scope": "Integer datapath after explicit quantization; float soft reference; documented width/ties",
+      "limitations": [
+        "README ссылается на ETSI EN302307v1.2.1, но весь DVB-S2 PHY/стандарт этим пунктом не заявляется. До model oracle дочитать encoder/decoder и scrambling constants в оригинале; опубликованные Fmax — исторические.",
+        "PLS использует фиксированный 64-битный scramble word; зависимость от generic PRBS снята. Входной алфавит 128 — контракт encoder, не полная проверка MODCOD/ETSI compliance."
+      ],
+      "numerical_results": {
+        "tests": 3,
+        "all_source_labels": 128,
+        "random_ML_vectors": 50,
+        "integer_ML_vectors": 50,
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "source_hashes": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_constants.svh",
+          "sha256": "0720fd2471ae3f9d30649ea5a02c388b877bbc50181aa1146c2237a90611b437"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_enc.sv",
+          "sha256": "2a951100e8288720b9f6cc5ea33734900cbbaa043747d2ee4a9abdce2289bfbf"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pi_by_2_bpsk_mapper.sv",
+          "sha256": "5564c75fe704a9571883469d8c70d68c296fd2171caed8bcf9d7213b1d8d0f36"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pi_by_2_bpsk_demapper.sv",
+          "sha256": "9325da53b02f5bf6f66be969409fea785063ed90bc7354becac6f083208f4b0f"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_pls.py": "0a93f1191a0125fb9bd63a3fa1577e29573b433fd9131efa4d9800f505b0b42a",
+        "tests/test_ext_code_pls.py": "6b43571fcd9677096623d5c1b1c8c4422bb198c01dee732fdbde97c25c2d9ed3",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      }
+    },
+    "FEC-HAMMING": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_basics.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_basics_oracles.py"
+      ],
+      "contract": [
+        "Создать H/G matrix construction, systematic encoder и SECDED decoder с явными data/parity/overall-parity positions, syndrome и status clean/corrected/detected-uncorrectable.",
+        "Первые предлагаемые extended profiles(8,4),(16,11),(32,26),(64,57); зафиксировать dmin4, проверив его независимо, и политику вывода при обнаруженных двойных ошибках."
+      ],
+      "sources": [
+        {
+          "task": "FEC-HAMMING",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/README.md",
+          "sha256": "91d21a8115762349d570f7fe888d6f4358df36e97a7ce3f1aa383fd5f6249baa",
+          "lines": [
+            1,
+            10
+          ]
+        },
+        {
+          "task": "FEC-HAMMING",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/hamming_parameters.svh",
+          "sha256": "39a81c66795f18ab284502a6592681f82d38556ff78dae62d80e4721d19f8059",
+          "lines": [
+            8,
+            90
+          ]
+        },
+        {
+          "task": "FEC-HAMMING",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/hamming_enc.sv",
+          "sha256": "00d221054cf57b0944612386eae2a5cf96d6cb4917f9d3d87fedfce54df1d7ba",
+          "lines": [
+            1,
+            180
+          ]
+        }
+      ],
+      "model_scope": "Extended SECDED(8,4),(16,11),(32,26),(64,57), positional G/H matrices",
+      "fixed_scope": "Exact GF(2) integer model; serial scalar and compiled GF(2) parallel update variants",
+      "limitations": [
+        "Запись README(32,26,5) неоднозначна: не трактовать 5 как min distance. pR5 плюс общий parity bit соответствует отдельной расширенной структуре, которую надо сверить с исходником.",
+        "Positional Hamming layout differs from source systematic column permutation; dmin4, not ambiguousREADME dmin5.",
+        "No universal detection guarantee beyond SECDED radius.",
+        "No timing/synthesis/RTL acceptance."
+      ],
+      "numerical_results": {
+        "targeted_tests": 10,
+        "status": "PASS",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "independence": "binascii byteCRC, polynomial division, matrix syndrome/GH orthogonality, scalar PRBS recurrence/full periods7/9",
+        "scope": "targeted/provisional",
+        "bit_mismatch_count": 0,
+        "error_budget": "exact equality",
+        "single_error_vectors": 240,
+        "double_error_vectors": 5320,
+        "exhaustive_codewords_8_4": 16,
+        "minimum_distance_8_4": 4,
+        "group_test_count": 59
+      },
+      "external_agents": [
+        {
+          "provider": "pi/openwebui",
+          "model": "~anthropic/claude-haiku-latest",
+          "log": "build/full_dsp_20261030/coding/logs/basics_pi.log",
+          "outcome": "implementation written; outputlimit during followup; independently reviewed and extended locally"
+        },
+        {
+          "provider": "pi/openwebui",
+          "model": "~deepseek/deepseek-v4-flash-latest",
+          "log": "build/full_dsp_20261030/coding/logs/basics_deepseek.log",
+          "outcome": "source/API review; stopped erroneous full-period31 test, no acceptance assigned"
+        },
+        {
+          "provider": "OpenCode/openwebui",
+          "model": "~anthropic/claude-haiku-latest",
+          "outcome": "completed short review; flagged connection-vs-output-characteristic polynomial naming; clarified reciprocal convention without changing frozen recurrence",
+          "log": "build/full_dsp_20261030/coding/logs/basics_opencode_review.log"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_basics.py": "f0a91a0553d89e092ed73a9c7e1e64980f8d8f07bcb5792f4ba6c59d9ee7ecf2",
+        "tests/test_ext_code_basics_oracles.py": "18d5167d1e2a82bf24d004fee60b1eab8093167dc5ac2a58f9a26bc9d8b0a5ae"
+      }
+    },
+    "FEC-GOLAY24": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_golay.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_golay.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Создать независимую полиномиальную/матричную модель encoder, syndrome hard decoder до 3 ошибок и soft Chase-II с 16 candidates/явными least-reliable positions. Предлагаемый явный Chase-II профиль:4 least-reliable позиции ивсе 16 subsets; сверить с оригиналом до объявления эквивалентности.",
+        "Для soft oracle использовать исчерпывающий поиск по 4096 codewords; различать approximate Chase и globalML, freezeLLR sign,ties,bitorder,uncorrectable/failure policy."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/README.md",
+          "document_id": "f069dc36695e0505cfcd635e3fff91975ddc315ac40cf97af6f92e786db3607a",
+          "part": 1,
+          "start_char": 0,
+          "end_char": 350,
+          "raw_read_file": "comms/read_golay24.json",
+          "verified_sha256": "f069dc36695e0505cfcd635e3fff91975ddc315ac40cf97af6f92e786db3607a",
+          "verified_size": 350
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_functions.svh",
+          "lines": [
+            7,
+            103
+          ],
+          "verified_sha256": "da9ef35d7af94840d5685ad91ee75bb8fb0cf5b7418d581169146ad1e0a80fa2",
+          "raw_excerpt_file": "comms/direct_golay24_functions.svh.json",
+          "verified_size": 3527
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_enc.sv",
+          "lines": [
+            1,
+            131
+          ],
+          "verified_sha256": "bb14c1d7007a1f3608c6aa8ade1efc833f9f9b0f63628bc83cdcb799a043fe06",
+          "raw_excerpt_file": "comms/direct_golay24_enc.sv.json",
+          "verified_size": 3350
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/dec/golay24_dec_candidate_gen.sv",
+          "lines": [
+            1,
+            180
+          ],
+          "verified_sha256": "a60fdf6d8c04736484b3b1e8ca3437c92218dfd650edb4b5305b4fa1df8762d8",
+          "raw_excerpt_file": "comms/direct_golay24_dec_candidate_gen.sv.json",
+          "verified_size": 5449
+        }
+      ],
+      "model_scope": "Exact Golay24 source matrix; hardradius3 and ChaseII16 float/quantized correlation",
+      "fixed_scope": "Explicit signed input quantization; integer metrics; float softmetric reference",
+      "limitations": [
+        "Источник Chase-II16 candidates не доказывает полный softML на всех входах. За пределом гарантированной коррекции возможна miscorrection; не подменять её гарантированным fail."
+      ],
+      "numerical_results": {
+        "tests": 4,
+        "exhaustive_codewords": 4096,
+        "minimum_distance": 8,
+        "radius_error_vectors": 4650,
+        "ML_oracle_codewords": 4096,
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "owned_sha256": {
+        "common/python/ext_code_golay.py": "673ac162cffb316fc6f9658cfcf791db9a6c70bb104a1dfa852bda9b33d73df8",
+        "tests/test_ext_code_golay.py": "fcbee1754472bdee214a79c910dcb97197fc54453d1e9e89f405ca248122bd7f",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      },
+      "source_hashes": [
+        {
+          "task": "FEC-GOLAY24",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/README.md",
+          "sha256": "f069dc36695e0505cfcd635e3fff91975ddc315ac40cf97af6f92e786db3607a",
+          "lines": [
+            1,
+            10
+          ]
+        },
+        {
+          "task": "FEC-GOLAY24",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_functions.svh",
+          "sha256": "da9ef35d7af94840d5685ad91ee75bb8fb0cf5b7418d581169146ad1e0a80fa2",
+          "lines": [
+            7,
+            103
+          ]
+        },
+        {
+          "task": "FEC-GOLAY24",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_enc.sv",
+          "sha256": "bb14c1d7007a1f3608c6aa8ade1efc833f9f9b0f63628bc83cdcb799a043fe06",
+          "lines": [
+            1,
+            131
+          ]
+        },
+        {
+          "task": "FEC-GOLAY24",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/dec/golay24_dec_candidate_gen.sv",
+          "sha256": "a60fdf6d8c04736484b3b1e8ca3437c92218dfd650edb4b5305b4fa1df8762d8",
+          "lines": [
+            1,
+            180
+          ]
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_functions.svh",
+          "sha256": "da9ef35d7af94840d5685ad91ee75bb8fb0cf5b7418d581169146ad1e0a80fa2"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/dec/golay24_dec_candidate_gen.sv",
+          "sha256": "a60fdf6d8c04736484b3b1e8ca3437c92218dfd650edb4b5305b4fa1df8762d8"
+        }
+      ]
+    },
+    "FEC-BTC": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_code_btc.py"
+      ],
+      "tests": [
+        "tests/test_ext_code_btc.py",
+        "tests/test_ext_code_quantization.py"
+      ],
+      "contract": [
+        "Сначала independent2D row/column encoder и soft iterative decoder для SPC8×8 и extendedHamming8×8/16×16; row/column order,extrinsic scaling,LLR widths и iteration stop задаются явно.",
+        "Восстановить component soft decision schedule из исходных engine functions до fixed модели; единственный принятый clock/stream model, без копирования multi-clock hardwarewrapper. Большие 32/64 профили добавлять после первых."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/README.md",
+          "document_id": "1a2e6138bc2fa69069593dad6108c3400119fd06a6ddf5606ca784011fead6d1",
+          "part": 1,
+          "start_char": 0,
+          "end_char": 1083,
+          "raw_read_file": "comms/read_btc.json",
+          "verified_sha256": "1a2e6138bc2fa69069593dad6108c3400119fd06a6ddf5606ca784011fead6d1",
+          "verified_size": 1083
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/btc_parameters.svh",
+          "lines": [
+            10,
+            100
+          ],
+          "verified_sha256": "55bb4527578478a77c5a0347acd91bed38b711cfc9bd7da04254cf5dc56a758e",
+          "raw_excerpt_file": "comms/direct_btc_parameters.svh.json",
+          "verified_size": 8287
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/dec/btc_dec_eham_fchase.sv",
+          "lines": [
+            1,
+            180
+          ],
+          "verified_sha256": "6e97aed3afda5f2defeb2b28379ad7dbf1a1c8c4a2a608c85ae749ba6f0fc67f",
+          "raw_excerpt_file": "comms/direct_btc_dec_eham_fchase.sv.json",
+          "verified_size": 22073
+        }
+      ],
+      "model_scope": "SPC8x8/eHAM8x8/eHAM16x16 product encoder and iterative source FastChase soft decoder",
+      "fixed_scope": "Integer metric datapath following explicit signed Qinput quantization; state/extrinsic saturation and traced schedule",
+      "limitations": [
+        "Не обещать WiMAX conformance: README сам предупреждает bitorder различия иотсутствие shortening. Исторические 8engines/несколькочасовыхдоменов/ресурсы не входятв Python модель.",
+        "Source-inspired component FastChase soft schedule; positional Hamming column permutation differs from source systematic bit order; no WiMAX conformance.",
+        "Only initial SPC8/eHAM8/16 component profiles, no shortening, source32/64 extensions not claimed."
+      ],
+      "numerical_results": {
+        "tests": 3,
+        "profiles": [
+          "SPC8x8",
+          "eHAM8x8",
+          "eHAM16x16"
+        ],
+        "default_iterations": 4,
+        "candidate_counts": [
+          8,
+          16
+        ],
+        "component_reference": "Independent exhaustive16/2048word candidate+metric oracle; exactSPCmaxlog",
+        "status": "PASS",
+        "scope": "targeted/provisional",
+        "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+        "group_test_count": 59,
+        "quantizer_overflow_regression": {
+          "tests": 5,
+          "input_extremes": [
+            "1e308",
+            "-1e308"
+          ],
+          "positive_scales": [
+            "8",
+            "1e308",
+            "1e-308",
+            "5e-324"
+          ],
+          "qfrac_bits": [
+            0,
+            7,
+            24
+          ],
+          "rounding": "nearest/even of exact scaled finite input; existing signed rails retained; TCM coordinates remain wide integers"
+        }
+      },
+      "source_hashes": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/btc_parameters.svh",
+          "sha256": "55bb4527578478a77c5a0347acd91bed38b711cfc9bd7da04254cf5dc56a758e"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/dec/btc_dec_eham_fchase.sv",
+          "sha256": "6e97aed3afda5f2defeb2b28379ad7dbf1a1c8c4a2a608c85ae749ba6f0fc67f"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/dec/btc_dec_spc_decode.sv",
+          "sha256": "136a9ebcdfe97faf0232a3ebfb2193f0202ee78e6ad721927b743a10c6263ff0"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/dec/btc_dec_eham_decision.sv",
+          "sha256": "518256a1027f7991e7f405545f1438348d2f23e417189be1791516f7543639d0"
+        }
+      ],
+      "owned_sha256": {
+        "common/python/ext_code_btc.py": "6a8772fd07df6a14346038cf66983c55109f817b97a67ee20c7b9b4cc4be9e12",
+        "tests/test_ext_code_btc.py": "78efc808b7d9b029473196cf65f6a48e80693060c02f8c23861ab377d4bdfef9",
+        "tests/test_ext_code_quantization.py": "1fbeb83e06c6959ea1e106fb5c2a4b4c1d6a1a1e786bbeb2e0e9f8cc1001d3bb"
+      }
+    }
+  },
+  "frozen": true,
+  "group_results": {
+    "test_command": "python -m unittest discover -s tests -p 'test_ext_code_*.py' -v",
+    "tests": 59,
+    "status": "PASS",
+    "elapsed_seconds": 15.568,
+    "report": "research/full_dsp_20261030/coding/all_targeted.txt",
+    "global_acceptance": "reserved for root",
+    "external_agents_report": "research/full_dsp_20261030/coding/external_agents.json",
+    "quantizer_regression_tests": 5,
+    "quantizer_fix": "Exact rational multiplication before nearest/even rounding avoids finite float product overflow; clipping policies unchanged."
+  },
+  "freeze_revision": "20261030_finite_quantizer_overflow_fix"
+}

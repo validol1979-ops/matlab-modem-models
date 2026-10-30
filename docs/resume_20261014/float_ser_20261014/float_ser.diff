@@ -1,0 +1,662 @@
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tools/uvm_floating_reference.py"	1970-01-01 03:00:00.000000000 +0300
++++ b/tools/uvm_floating_reference.py	2026-10-14 10:15:21.726031554 +0300
+@@ -0,0 +1,151 @@
++"""Independent float receiver on the exact quantized UVM pin waveform.
++
++Decisions come only from the raw Q15 pin rows, the public training labels and,
++for SIMO, the Q15 gain tuple with its relative variances. Payload truth is read
++after decoding, only for scoring; no fixed-point receiver or combiner is used.
++"""
++from pathlib import Path
++import hashlib
++import json
++import sys
++import numpy as np
++ROOT=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(ROOT/'tools'))
++sys.path.insert(0,str(ROOT/'common/python'))
++from bpsk_cases import CONFIGS
++import modem_core as real
++import psk_fixed as profiles
++
++TRAINING=192
++FILES=('float_decisions.txt','float_expected.txt','float_reference.json')
++
++
++def rows(path,width):
++    lines=Path(path).read_text().splitlines()
++    if not lines or len(lines)-1!=int(lines[0]):raise ValueError('Reference header/count')
++    values=np.array([list(map(int,line.split())) for line in lines[1:]],dtype=np.int64)
++    if values.ndim!=2 or values.shape[1]!=width:raise ValueError('Reference column geometry')
++    return values
++
++
++def _profile(name):
++    return next(p for p in profiles.PROFILES if p.name==name)
++
++
++def _frames(folder,profile_name):
++    """Input geometry: raw pin rows split by input TLAST, symbol count from trace rows."""
++    cfg=real.load_config(ROOT/CONFIGS[profile_name]);simo=cfg['diversity_branches']==2
++    raw=rows(folder/'rx_wave.txt',5 if simo else 3)
++    if not np.all((raw[:,:-1]>=-131072)&(raw[:,:-1]<=131071)) or not np.isin(raw[:,-1],[0,1]).all():raise ValueError('Waveform ports')
++    starts=[0]+(np.flatnonzero(raw[:,-1])+1).tolist()
++    ntrace=int((folder/'rx_trace.txt').read_text().split('\n',1)[0])
++    if starts[-1]!=len(raw) or len(starts)<2 or ntrace%(len(starts)-1):raise ValueError('Frame geometry')
++    count=ntrace//(len(starts)-1)
++    if not TRAINING<=count<=4095:raise ValueError('Frame symbol count')
++    return cfg,simo,raw,list(zip(starts,starts[1:])),count
++
++
++def floating_decisions(folder,profile_name):
++    """Per-frame float decisions; reads no truth column."""
++    folder=Path(folder);profile=_profile(profile_name);cfg,simo,raw,spans,count=_frames(folder,profile_name)
++    training=rows(folder/'preamble.txt',1)[:,0]
++    if len(training)!=TRAINING or not np.all((training>=0)&(training<profile.alphabet)):raise ValueError('Training labels')
++    if simo:
++        gains=rows(folder/'gains.txt',6)
++        if len(gains)!=1 or not np.all((gains[0,4:]>=1)&(gains[0,4:]<=65535)):raise ValueError('MRC gain configuration')
++        if not np.all((gains[0,:4]>=-131072)&(gains[0,:4]<=131071)):raise ValueError('Q15 gains')
++        gain=[complex(*gains[0,i:i+2])/32768 for i in (0,2)]
++    result=[]
++    for a,b in spans:
++        wave=(raw[a:b,0]+1j*raw[a:b,1])/32768
++        if simo:wave=real.maximal_ratio_combine([wave,(raw[a:b,2]+1j*raw[a:b,3])/32768],gain,gains[0,4:])
++        decoded=np.asarray(real.receive(cfg,wave,training,count)['data'])
++        if decoded.shape!=(count,) or decoded.dtype.kind not in 'iu' or not np.all((decoded>=0)&(decoded<profile.alphabet)):raise ValueError('Floating decision geometry')
++        result.append(decoded.astype(np.int64))
++    return np.array(result)
++
++
++def original_truth(folder,profile_name,frames):
++    trace=rows(Path(folder)/'rx_trace.txt',10);truth=trace[:,9].reshape(frames,-1)
++    training=rows(Path(folder)/'preamble.txt',1)[:,0]
++    if not np.all((truth>=0)&(truth<_profile(profile_name).alphabet)) or not np.all(truth[:,:TRAINING]==training):raise ValueError('Scoring labels')
++    return truth
++
++
++def score(decisions,truth):
++    if decisions.shape!=truth.shape:raise ValueError('Decision/truth geometry')
++    errors=decisions[:,TRAINING:]!=truth[:,TRAINING:];symbols=decisions.shape[1]-TRAINING
++    return [dict(frame=f,symbols=symbols,errors=int(np.count_nonzero(e)),ser=float(np.mean(e)) if symbols else None,defined=symbols>0) for f,e in enumerate(errors)]
++
++
++def floating_payload_scores(folder,profile_name):
++    decisions=floating_decisions(folder,profile_name)
++    result=score(decisions,original_truth(folder,profile_name,len(decisions)))
++    for item,row in zip(result,decisions):item['decisions']=row.tolist()
++    return result
++
++
++def _sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
++
++
++def _inputs(folder,profile_name):
++    simo=real.load_config(ROOT/CONFIGS[profile_name])['diversity_branches']==2
++    names=['preamble.txt','rx_wave.txt']+(['gains.txt'] if simo else [])
++    return {name:_sha(Path(folder)/name) for name in names}
++
++
++def _truth_digest(truth):return hashlib.sha256(' '.join(map(str,truth.ravel().tolist())).encode()).hexdigest()
++
++
++def write_float_reference(folder,profile_name):
++    """Immutable float decisions, original truth digest, error counts and denominators.
++
++    Must run on the original vectors before any negative mutation is copied."""
++    folder=Path(folder);decisions=floating_decisions(folder,profile_name)
++    truth=original_truth(folder,profile_name,len(decisions));scores=score(decisions,truth)
++    (folder/'float_decisions.txt').write_text(f'{decisions.size}\n'+''.join(f'{v}\n' for v in decisions.ravel()))
++    (folder/'float_expected.txt').write_text(f'{len(scores)}\n'+''.join(f"{s['errors']} {s['symbols']}\n" for s in scores))
++    meta=dict(profile=profile_name,config=CONFIGS[profile_name],frames=len(scores),symbols_per_frame=int(decisions.shape[1]),
++              training=TRAINING,inputs=_inputs(folder,profile_name),original_truth_sha256=_truth_digest(truth),
++              float_decisions_sha256=_sha(folder/'float_decisions.txt'),float_expected_sha256=_sha(folder/'float_expected.txt'),
++              float_payload_errors=[s['errors'] for s in scores],float_payload_symbols=[s['symbols'] for s in scores],
++              method='modem_core.receive (float) on raw Q15 pin rows/32768; SIMO via modem_core.maximal_ratio_combine with Q15 gains and relative variances; truth only for scoring')
++    (folder/'float_reference.json').write_text(json.dumps(meta,indent=2)+'\n')
++    return meta
++
++
++def validate_float_reference(folder,profile_name):
++    """Independent rerun: provenance, decisions, counts and denominators must match exactly."""
++    folder=Path(folder);meta=json.loads((folder/'float_reference.json').read_text())
++    if meta.get('profile')!=profile_name or meta.get('training')!=TRAINING:raise ValueError('Float reference profile')
++    if meta.get('inputs')!=_inputs(folder,profile_name):raise ValueError('Float reference input provenance')
++    if _sha(folder/'float_decisions.txt')!=meta.get('float_decisions_sha256') or _sha(folder/'float_expected.txt')!=meta.get('float_expected_sha256'):
++        raise ValueError('Float reference file digest')
++    decisions=floating_decisions(folder,profile_name)
++    stored=rows(folder/'float_decisions.txt',1)[:,0]
++    if stored.shape!=(decisions.size,) or not np.array_equal(stored,decisions.ravel()):raise ValueError('Float decisions differ from independent rerun')
++    truth=original_truth(folder,profile_name,len(decisions))
++    if _truth_digest(truth)!=meta.get('original_truth_sha256'):raise ValueError('Scoring truth differs from original')
++    scores=score(decisions,truth);expected=rows(folder/'float_expected.txt',2)
++    if expected.tolist()!=[[s['errors'],s['symbols']] for s in scores]:raise ValueError('Float error counts/denominators differ')
++    if meta.get('float_payload_errors')!=[s['errors'] for s in scores] or meta.get('float_payload_symbols')!=[s['symbols'] for s in scores]:
++        raise ValueError('Float metadata counts differ')
++    return meta
++
++
++def mutate_float_metadata(source,target,kind,*,alphabet):
++    """Negative controls: one immutable float field changed, all other inputs byte-identical."""
++    import shutil
++    shutil.copytree(source,target,dirs_exist_ok=True)
++    if kind=='decision':
++        lines=(target/'float_decisions.txt').read_text().splitlines();index=1+200
++        lines[index]=str((int(lines[index])+1)%alphabet);(target/'float_decisions.txt').write_text('\n'.join(lines)+'\n')
++        changed='float_decisions.txt'
++    elif kind in ('errorcount','denominator'):
++        lines=(target/'float_expected.txt').read_text().splitlines();errors,symbols=map(int,lines[1].split())
++        lines[1]=f'{errors+1} {symbols}' if kind=='errorcount' else f'{errors} {symbols-1}'
++        (target/'float_expected.txt').write_text('\n'.join(lines)+'\n');changed='float_expected.txt'
++    else:raise ValueError('Unknown float metadata mutation')
++    for file in Path(source).iterdir():
++        if file.is_file() and (_sha(file)==_sha(target/file.name))==(file.name==changed):raise RuntimeError('Float negative must change exactly one metadata file')
++    return changed
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tools/run_bpsk_uvm.py"	2026-10-13 17:59:14.271393689 +0300
++++ b/tools/run_bpsk_uvm.py	2026-10-14 10:18:35.270041004 +0300
+@@ -11,11 +11,15 @@
+ from regression_evidence import ROOT, begin, finish, write_json, questa_paths, require_unoptimized, digest
+ from run_rtl import execute, SOURCES
+ from bpsk_cases import receiver_vectors, save
++from uvm_floating_reference import write_float_reference, validate_float_reference, mutate_float_metadata, FILES as FLOAT_FILES
+ 
+ SCENARIOS=('stream','stalled','midreset','cfgreset')
+ SUMMARY=r'UVM BPSK PILOT checked=(\d+) frames=(\d+) acquisitions=(\d+) errors=(\d+) payload=(\d+) discarded=(\d+) resets=(\d+) partial_payload_discarded=(\d+) partial_errors_discarded=(\d+)'
+ HANDSHAKES=r'UVM PILOT HANDSHAKES cfg=(\d+) input=(\d+) stalls=(\d+) pending_resets=(\d+)'
+ SER=r'UVM PILOT SER frame=(\d+) errors=(\d+) symbols=(\d+)'
++FLOAT_SER=r'UVM PILOT FLOAT SER frame=(\d+) rtl_errors=(\d+) float_errors=(\d+) delta=(-?\d+) symbols=(\d+)'
++FLOAT_SUMMARY=r'UVM PILOT FLOAT SUMMARY frames=(\d+) rtl_errors=(\d+) float_errors=(\d+) symbols=(\d+)'
++FLOAT_NEGATIVES=('decision','errorcount','denominator')
+ PILOT=ROOT/'rtl/modems/bpsk_costas_2008_08_25'
+ 
+ 
+@@ -47,11 +51,50 @@
+             raise RuntimeError('UVM original payload SER mismatch')
+     if result['payload_errors']!=sum(model['payload_errors']) or result['payload_symbols']!=denominator*expected_frames:
+         raise RuntimeError('UVM aggregate payload count mismatch')
++    if 'float_payload_errors' in model:
++        result.update(parse_float(text,model,rows,denominator))
+     result.update(scenario=scenario,reset_active=reset_active,profile='bpsk',ser=result['payload_errors']/result['payload_symbols'] if result['payload_symbols'] else None,
+                   defined=result['payload_symbols']>0,per_frame=[dict(frame=f,payload_errors=e,payload_symbols=n,ser=e/n if n else None,defined=n>0) for f,e,n in rows])
+     return result
+ 
+ 
++def parse_float(text,model,rows,denominator):
++    """Actual RTL versus independent float SER on the same accepted payload interval."""
++    floats=[tuple(map(int,m)) for m in re.findall(FLOAT_SER,text)];summary=re.findall(FLOAT_SUMMARY,text)
++    if len(floats)!=model['frames'] or len(summary)!=1:raise RuntimeError('UVM float SER markers missing/duplicated')
++    expected=model['float_payload_errors']
++    if model['float_payload_symbols']!=[denominator]*model['frames']:raise RuntimeError('Float denominator metadata differs from payload interval')
++    for index,((frame,rtl,flt,delta,count),(_,errors,symbols)) in enumerate(zip(floats,rows)):
++        if frame!=index or rtl!=errors or count!=symbols or count!=denominator or flt!=expected[index] or delta!=rtl-flt:
++            raise RuntimeError('UVM float/RTL SER comparison mismatch')
++    frames,rtl,flt,symbols=map(int,summary[0])
++    if (frames,rtl,flt,symbols)!=(model['frames'],sum(r[1] for r in floats),sum(expected),denominator*model['frames']):
++        raise RuntimeError('UVM float SER summary mismatch')
++    return dict(float_payload_errors=flt,rtl_minus_float_errors=rtl-flt,float_ser=flt/symbols if symbols else None,
++                float_per_frame=[dict(frame=f,rtl_errors=r,float_errors=e,delta=d,payload_symbols=n,
++                                      rtl_ser=r/n if n else None,float_ser=e/n if n else None,defined=n>0) for f,r,e,d,n in floats])
++
++
++def prepare_float(folder,profile_name,model):
++    # Written and independently re-validated on the original vectors, before any negative copy.
++    meta=write_float_reference(folder,profile_name);validate_float_reference(folder,profile_name)
++    model.update(float_payload_errors=meta['float_payload_errors'],float_payload_symbols=meta['float_payload_symbols'],float_reference=meta)
++    return model
++
++
++def float_negative_folders(folder,output,prefix,profile_name,alphabet,records,artifacts):
++    folders={}
++    for kind in FLOAT_NEGATIVES:
++        target=output/f'{prefix}negative_float_{kind}_vectors'
++        if target.exists():shutil.rmtree(target)
++        changed=mutate_float_metadata(folder,target,kind,alphabet=alphabet)
++        try:validate_float_reference(target,profile_name)
++        except ValueError as exc:records[f'{prefix}validator_rejects_float_{kind}']=dict(changed=changed,rejected=str(exc))
++        else:raise RuntimeError('Independent float validator accepted mutated '+kind)
++        artifacts.extend(target/name for name in FLOAT_FILES);folders[kind]=target
++    return folders
++
++
+ def verify_negative(text, returncode, category):
+     if returncode==0 or re.search(SUMMARY,text) or not re.search(r'UVM_FATAL[^\n]*\['+category+r'\]',text) or not re.search(r'UVM_FATAL\s*:\s*[1-9]',text):
+         raise RuntimeError('UVM negative control not rejected: '+category)
+@@ -60,7 +103,7 @@
+ def prepare_vectors(folder):
+     model=receiver_vectors(folder,frames=4,count=768,seed=19)
+     save(folder/'payload_expected.txt',[(errors,) for errors in model['payload_errors']])
+-    return model
++    return prepare_float(folder,'bpsk',model)
+ 
+ 
+ def poison_truth(source, target, *, alphabet=2):
+@@ -68,8 +111,9 @@
+     lines=(target/'rx_trace.txt').read_text().splitlines();row=lines[193].split()
+     original=row[9];row[9]=str((int(row[9])+1)%alphabet);lines[193]=' '.join(row)
+     (target/'rx_trace.txt').write_text('\n'.join(lines)+'\n')
+-    if digest(source/'payload_expected.txt')!=digest(target/'payload_expected.txt'):
+-        raise RuntimeError('Original expected error metadata was mutated')
++    for name in ('payload_expected.txt',*FLOAT_FILES):
++        if (source/name).is_file() and digest(source/name)!=digest(target/name):
++            raise RuntimeError('Original expected error metadata was mutated')
+     # Prove all numeric trace fields, and all rows except one truth field, survive.
+     src=[line.split() for line in (source/'rx_trace.txt').read_text().splitlines()]
+     changed=[line.split() for line in lines]
+@@ -98,7 +142,7 @@
+                  immutable_warm_error_prefix=errors,cfg_label_max=max(preamble),
+                  decoded_label_max=max(row[7] for row in trace),index_max=max(row[6] for row in trace),
+                  gain_control_scope='One actual SIMO gain tuple per reset epoch' if simo else 'NOT_APPLICABLE: single-branch receiver has no gain configuration ports')
+-    return model
++    return prepare_float(folder,profile.name,model)
+ 
+ 
+ def parse_profile_report(text,model,scenario,reset_active,returncode=0):
+@@ -132,7 +176,7 @@
+     row[9]=str((truth+1)%alphabet if decoded==truth else decoded);lines[index]=' '.join(row)
+     if row[:9]!=original[:9] or row[9]==original[9]:raise RuntimeError('Warm SER fault must change truth only')
+     (target/'rx_trace.txt').write_text('\n'.join(lines)+'\n')
+-    for file in source.glob('*.txt'):
++    for file in [*source.glob('*.txt'),source/'float_reference.json']:
+         if file.name!='rx_trace.txt' and digest(file)!=digest(target/file.name):raise RuntimeError('Warm fault changed immutable input/reference metadata')
+ 
+ 
+@@ -142,7 +186,8 @@
+         name=profile.name;folder=output/f'{name}_vectors';model=prepare_profile_vectors(folder,profile)
+         bad_folder=output/f'{name}_negative_ser_vectors';poison_truth(folder,bad_folder,alphabet=profile.alphabet)
+         warm_bad=output/f'{name}_negative_warm_ser_vectors';poison_profile_warm_truth(folder,warm_bad,alphabet=profile.alphabet)
+-        artifacts.extend(folder.glob('*.txt'));artifacts.extend(bad_folder.glob('*.txt'));artifacts.extend(warm_bad.glob('*.txt'))
++        artifacts.extend(folder.glob('*.txt'));artifacts.extend(bad_folder.glob('*.txt'));artifacts.extend(warm_bad.glob('*.txt'));artifacts.append(folder/'float_reference.json')
++        float_bad=float_negative_folders(folder,output,f'{name}_',name,profile.alphabet,records,artifacts)
+         for active in (1,0):
+             work=output/f'{name}_reset_{active}';work.mkdir(parents=True,exist_ok=True)
+             def run(command,log):
+@@ -160,7 +205,7 @@
+             positive=work/'run.do';negative=work/'negative.do'
+             positive.write_text('onfinish stop\nonerror {quit -code 13}\nrun -all\nquit -code 0\n')
+             negative.write_text('onfinish stop\nonerror {quit -code 13}\nonbreak {quit -code 13}\nrun -all\nquit -code 0\n');artifacts.extend([positive,negative])
+-            base=[bindir/'vsim','-64','-c','-quiet','-dpicpppath',os.environ.get('DPI_CC','/usr/bin/gcc'),'work.bpsk_rx_uvm_top',f'-gTABLE_DIR={PILOT/"tables"}','+SYMBOLS=768','+CHECK_RESET_PREFIX']
++            base=[bindir/'vsim','-64','-c','-quiet','-dpicpppath',os.environ.get('DPI_CC','/usr/bin/gcc'),'work.bpsk_rx_uvm_top',f'-gTABLE_DIR={PILOT/"tables"}','+SYMBOLS=768','+CHECK_RESET_PREFIX','+FLOAT_SER']
+             for scenario in SCENARIOS:
+                 rc,text=run([*base,f'+VECTORS={folder}',f'+SCENARIO={scenario}','-do',positive.name],work/f'{scenario}.log')
+                 records[f'{name}_{scenario}_reset_{active}']=parse_profile_report(text,model,scenario,active,rc)
+@@ -168,6 +213,7 @@
+             controls=[('numeric','NUMERIC',folder,['+INJECT_MISMATCH']),('ser','SER',bad_folder,[]),
+                       ('label_high_bit','NUMERIC',folder,['+INJECT_LABEL_HIGH_BIT']),
+                       ('valid_x','PROTOCOL',folder,['+INJECT_M_VALID_X']),('ready_x','PROTOCOL',folder,['+INJECT_M_READY_X'])]
++            controls += [(f'float_{kind}','FLOAT_SER',float_bad[kind],[]) for kind in FLOAT_NEGATIVES]
+             if model['simo']:controls.append(('gain_ready_x','PROTOCOL',folder,['+INJECT_GAIN_READY_X']))
+             else:records[f'{name}_negative_gain_ready_x_reset_{active}']=dict(status='NOT_APPLICABLE',reason=model['gain_control_scope'])
+             for control,category,vector_dir,flags in controls:
+@@ -278,10 +324,13 @@
+     write_json(target,dict(evidence,status='RUNNING'))
+     try:
+         if args.suite in ('python','all'):
+-            log=output/'test_bpsk_uvm_evidence.log';execute([sys.executable,ROOT/'tests/test_bpsk_uvm_evidence.py'],ROOT,log);artifacts.append(log);records['python']='PASS'
++            for test in ('test_bpsk_uvm_evidence','test_uvm_floating_reference'):
++                log=output/f'{test}.log';execute([sys.executable,ROOT/f'tests/{test}.py'],ROOT,log);artifacts.append(log)
++            records['python']='PASS'
+         if args.suite in ('hdl','all') and args.pilot in ('rx','both') and args.profile in ('all','bpsk'):
+             folder=output/'vectors';model=prepare_vectors(folder);bad_folder=output/'negative_ser_vectors';poison_truth(folder,bad_folder)
+-            artifacts.extend(folder.glob('*.txt'));artifacts.extend(bad_folder.glob('*.txt'))
++            artifacts.extend(folder.glob('*.txt'));artifacts.extend(bad_folder.glob('*.txt'));artifacts.append(folder/'float_reference.json')
++            float_bad=float_negative_folders(folder,output,'',"bpsk",2,records,artifacts)
+             bindir,uvm=questa_paths()
+             for active in (1,0):
+                 work=output/f'reset_{active}';work.mkdir(parents=True,exist_ok=True)
+@@ -292,7 +341,7 @@
+                 positive.write_text('onfinish stop\nonerror {quit -code 13}\nrun -all\nquit -code 0\n')
+                 negative.write_text('onfinish stop\nonerror {quit -code 13}\nonbreak {quit -code 13}\nrun -all\nquit -code 0\n')
+                 artifacts.extend([positive,negative])
+-                base=[bindir/'vsim','-64','-c','-quiet','-dpicpppath',os.environ.get('DPI_CC','/usr/bin/gcc'),'work.bpsk_rx_uvm_top',f'-gTABLE_DIR={PILOT/"tables"}','+SYMBOLS=768']
++                base=[bindir/'vsim','-64','-c','-quiet','-dpicpppath',os.environ.get('DPI_CC','/usr/bin/gcc'),'work.bpsk_rx_uvm_top',f'-gTABLE_DIR={PILOT/"tables"}','+SYMBOLS=768','+FLOAT_SER']
+                 for scenario in SCENARIOS:
+                     command=[*base,f'+VECTORS={folder}',f'+SCENARIO={scenario}','-do',positive.name]
+                     result=subprocess.run([str(x) for x in command],cwd=work,capture_output=True,text=True,timeout=90)
+@@ -300,7 +349,8 @@
+                     records[f'{scenario}_reset_{active}']=parse_report(text,model,scenario,active,result.returncode)
+                     print(f'PASS UVM BPSK pilot {scenario} reset={active}',flush=True)
+                 for name,category,vector_dir,flags in [('numeric','NUMERIC',folder,['+INJECT_MISMATCH']),('ser','SER',bad_folder,[]),
+-                                                      ('valid_x','PROTOCOL',folder,['+INJECT_M_VALID_X']),('ready_x','PROTOCOL',folder,['+INJECT_M_READY_X'])]:
++                                                      ('valid_x','PROTOCOL',folder,['+INJECT_M_VALID_X']),('ready_x','PROTOCOL',folder,['+INJECT_M_READY_X']),
++                                                      *[(f'float_{kind}','FLOAT_SER',float_bad[kind],[]) for kind in FLOAT_NEGATIVES]]:
+                     result=subprocess.run([str(x) for x in [*base,f'+VECTORS={vector_dir}','+SCENARIO=stream',*flags,'-do',negative.name]],cwd=work,capture_output=True,text=True,timeout=90)
+                     text=result.stdout+result.stderr;log=work/f'negative_{name}.log';log.write_text(text);artifacts.append(log)
+                     verify_negative(text,result.returncode,category)
+@@ -311,7 +361,7 @@
+                 bindir,uvm=questa_paths();records.update(run_profile_hdl(output,bindir,uvm,artifacts,selected))
+         if args.suite in ('hdl','all') and args.pilot in ('tx','both'):
+             bindir,uvm=questa_paths();records.update(run_tx_hdl(output,bindir,uvm,artifacts))
+-        write_json(target,dict(finish(evidence,artifacts),status='PASS',records=records,pilot=args.pilot,rx_profile_selection=args.profile,tx_configuration='NOT_APPLICABLE: BPSK_TX has no configuration ports',scope='Real UVM sequencer/driver/monitor/scoreboard around BPSK RX/TX, QPSK_DIFF SIMO RX and PSK8_FB RX pilots selected by CLI. Actual accepted outputs; fixed numeric traces plus immutable original payload error counts. No coverage claim for other modems.'))
++        write_json(target,dict(finish(evidence,artifacts),status='PASS',records=records,pilot=args.pilot,rx_profile_selection=args.profile,tx_configuration='NOT_APPLICABLE: BPSK_TX has no configuration ports',scope='Real UVM sequencer/driver/monitor/scoreboard around BPSK RX/TX, QPSK_DIFF SIMO RX and PSK8_FB RX pilots selected by CLI. Actual accepted outputs; fixed numeric traces plus immutable original payload error counts; actual RTL SER versus independent float receiver SER on the same Q15 pin waveform and payload interval, reported as measured deltas without a tuned budget. No coverage claim for other modems.'))
+     except Exception as exc:
+         write_json(target,dict(evidence,status='FAIL',error=f'{type(exc).__name__}: {exc}'));raise
+     print('PASS BPSK UVM '+args.suite)
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tools/run_tests.py"	2026-10-13 17:59:14.327393692 +0300
++++ b/tools/run_tests.py	2026-10-14 10:19:04.556042434 +0300
+@@ -44,14 +44,24 @@
+                         or type(record.get('reset_active')) is not int
+                         or record['reset_active']!=active):
+                     raise RuntimeError('Incomplete BPSK UVM scenario coverage')
++                if profile!='bpsk_tx':
++                    rows=record.get('float_per_frame')
++                    if (not isinstance(rows,list) or len(rows)!=4
++                            or any(not isinstance(r,dict) or r.get('delta')!=r.get('rtl_errors',0)-r.get('float_errors',0) for r in rows)):
++                        raise RuntimeError('Incomplete BPSK UVM float SER comparison')
++        if profile!='bpsk_tx':
++            for kind in ('decision','errorcount','denominator'):
++                record=records.get(f'{prefix}validator_rejects_float_{kind}')
++                if not isinstance(record,dict) or not record.get('rejected'):
++                    raise RuntimeError('Incomplete independent float validator negatives')
+     for prefix,controls in (
+-            ('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL'}),
++            ('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+             ('tx_',{'numeric':'NUMERIC','s_valid_x':'PROTOCOL','s_ready_x':'PROTOCOL',
+                     'm_valid_x':'PROTOCOL','m_ready_x':'PROTOCOL','data_x':'NUMERIC','held_data':'STALL'}),
+             ('qpsk_diff_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                           'ready_x':'PROTOCOL','gain_ready_x':'PROTOCOL','warm_ser':'SER'}),
++                           'ready_x':'PROTOCOL','gain_ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+             ('psk8_fb_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                        'ready_x':'PROTOCOL','warm_ser':'SER'})):
++                        'ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}})):
+         for name,tag in controls.items():
+             for active in (1,0):
+                 record=records.get(f'{prefix}negative_{name}_reset_{active}')
+@@ -74,7 +84,7 @@
+                  'test_fft_fir_precision.py','test_coverage_report.py','test_stream_rates.py',
+                  'test_bpsk_ser_evidence.py','test_fft_width_sweep.py',
+                  'test_adaptive_precision.py','test_suite_evidence.py',
+-                 'test_bpsk_uvm_evidence.py','test_linear_precision.py',
++                 'test_bpsk_uvm_evidence.py','test_uvm_floating_reference.py','test_linear_precision.py',
+                  'test_sync_adaptive_rates.py','test_state_precision.py',
+                  'test_ldpc_precision.py','test_spectral_precision.py','test_uvm_pilot_coverage.py',
+                  'test_mmse3_rates.py'))
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/rtl/tb/bpsk_rx_uvm_tb.sv"	2026-10-13 17:59:14.271393689 +0300
++++ b/rtl/tb/bpsk_rx_uvm_tb.sv	2026-10-14 10:15:43.450032614 +0300
+@@ -84,6 +84,10 @@
+     item_kind_t kind;
+     int frame_id,symbols,expected_payload_errors;
+     int preamble[],wave_re[],wave_im[],wave_b_re[],wave_b_im[],wave_last[],gains[],expected_partial_errors[];
++    // Immutable float reference (+FLOAT_SER): decisions of the independent
++    // floating receiver on the same pin waveform, its error count and denominator.
++    bit float_enabled;
++    int float_decisions[],float_expected_errors=-1,float_expected_symbols=-1;
+     int actual_config_label,actual_config_count,actual_config_last;
+     trace_t golden[],actual;
+     acquisition_t acquisition;
+@@ -129,6 +133,24 @@
+         frames.push_back(frame);
+       end
+       $fclose(fd);
++      if($test$plusargs("FLOAT_SER")) begin
++        int nfloat,ferrors,fsymbols;
++        fd=$fopen({directory,"/float_decisions.txt"},"r");
++        if(!fd||$fscanf(fd,"%d",nfloat)!=1||nfloat!=symbols*expected_frames) `uvm_fatal("INPUT","Invalid immutable float decision metadata")
++        foreach(frames[f]) begin
++          frames[f].float_enabled=1;frames[f].float_decisions=new[symbols];
++          foreach(frames[f].float_decisions[k]) if($fscanf(fd,"%d",frames[f].float_decisions[k])!=1||!(frames[f].float_decisions[k]>=0&&frames[f].float_decisions[k]<ALPHABET))
++            `uvm_fatal("INPUT","Malformed float decision")
++        end
++        $fclose(fd);
++        fd=$fopen({directory,"/float_expected.txt"},"r");
++        if(!fd||$fscanf(fd,"%d",count)!=1||count!=expected_frames) `uvm_fatal("INPUT","Invalid immutable float error metadata")
++        foreach(frames[f]) begin
++          if($fscanf(fd,"%d %d",ferrors,fsymbols)!=2||ferrors<0||fsymbols<0||ferrors>fsymbols) `uvm_fatal("INPUT","Malformed float error/denominator metadata")
++          frames[f].float_expected_errors=ferrors;frames[f].float_expected_symbols=fsymbols;
++        end
++        $fclose(fd);
++      end
+       fd=$fopen({directory,"/rx_acquire.txt"},"r");
+       if(!fd||$fscanf(fd,"%d",nacq)!=1||nacq!=expected_frames) `uvm_fatal("INPUT","Invalid acquisition count")
+       for(int f=0;f<nacq;f++) begin
+@@ -197,6 +219,7 @@
+         // waveform, noise or payload truth is generated for the warmup.
+         warm=pilot_item::type_id::create("warmup");warm.kind=WARM_FRAME;warm.frame_id=3;warm.symbols=symbols;
+         warm.expected_partial_errors=frames[3].expected_partial_errors;warm.golden=frames[3].golden;warm.acquisition=frames[3].acquisition;warm.expected_payload_errors=frames[3].expected_payload_errors;
++        warm.float_enabled=frames[3].float_enabled;warm.float_decisions=frames[3].float_decisions;warm.float_expected_errors=frames[3].float_expected_errors;warm.float_expected_symbols=frames[3].float_expected_symbols;
+         warm.wave_re=frames[3].wave_re;warm.wave_im=frames[3].wave_im;warm.wave_b_re=frames[3].wave_b_re;warm.wave_b_im=frames[3].wave_b_im;warm.wave_last=frames[3].wave_last;
+         start_item(warm);finish_item(warm);send_control(RESET_DUT);if(`PILOT_SIMO) send_control(GAIN_CONFIGURE);send_control(CONFIGURE);
+       end
+@@ -372,6 +395,7 @@
+     int normal_frames=0,payload_errors=0,payload_symbols=0,frame_errors=0,frame_payload=0;
+     int discarded_partial_payload=0;
+     int discarded_partial_errors=0;
++    int frame_float_errors=0,float_frames=0,float_errors=0,float_symbols=0,float_rtl_errors=0;
+     function new(string name,uvm_component parent);super.new(name,parent);endfunction
+     function void build_phase(uvm_phase phase);
+       expected=new("expected",this);observed=new("observed",this);
+@@ -395,7 +419,7 @@
+         foreach(frames[k]) discarded+=frames[k].symbols-(k==0?row_index:0);
+         discarded_partial_payload+=frame_payload;
+         discarded_partial_errors+=frame_errors;
+-        frames.delete();acquisitions.delete();configs.delete();gains.delete();config_row=0;row_index=0;frame_errors=0;frame_payload=0;resets++;
++        frames.delete();acquisitions.delete();configs.delete();gains.delete();config_row=0;row_index=0;frame_errors=0;frame_payload=0;frame_float_errors=0;resets++;
+       end else if(actual.kind==CONFIG_EVENT) begin
+         if(configs.size()==0) `uvm_fatal("COUNT","Unexpected accepted training label")
+         golden=configs[0];
+@@ -418,7 +442,10 @@
+         if($test$plusargs("INJECT_MISMATCH")&&golden.frame_id==0&&row_index==200) e.re++;
+         if(a.re!==e.re||a.im!==e.im||a.phase!==e.phase||a.frequency!==e.frequency||a.gain!==e.gain||a.correction!==e.correction||a.index!==e.index||a.label!==e.label||a.last!==e.last)
+           `uvm_fatal("NUMERIC",$sformatf("Accepted output row=%0d frame=%0d label=%0d/%0d I=%0d/%0d",row_index,golden.frame_id,a.label,e.label,a.re,e.re))
+-        if(row_index>=192) begin frame_payload++;frame_errors+=a.label!=e.truth;end
++        if(row_index>=192) begin
++          frame_payload++;frame_errors+=a.label!=e.truth;
++          if(golden.float_enabled) frame_float_errors+=golden.float_decisions[row_index]!=e.truth;
++        end
+         checked++;row_index++;
+         if(a.last) begin
+           if(golden.kind!=FRAME||row_index!=golden.symbols||frame_payload!=golden.symbols-192) `uvm_fatal("COUNT","Incomplete/unsolicited frame completion")
+@@ -427,16 +454,29 @@
+           // changes only column9 and must fail here while column7 still matches.
+           if(frame_errors!=golden.expected_payload_errors) `uvm_fatal("SER",$sformatf("Original payload error count mismatch: %0d != %0d",frame_errors,golden.expected_payload_errors))
+           $display("UVM PILOT SER frame=%0d errors=%0d symbols=%0d",golden.frame_id,frame_errors,frame_payload);
++          if(golden.float_enabled) begin
++            // Same accepted payload interval and same truth rows for both receivers.
++            if(frame_payload!=golden.float_expected_symbols)
++              `uvm_fatal("FLOAT_SER",$sformatf("Float denominator differs from actual payload interval: %0d != %0d",golden.float_expected_symbols,frame_payload))
++            if(frame_float_errors!=golden.float_expected_errors)
++              `uvm_fatal("FLOAT_SER",$sformatf("Float decisions give %0d errors, immutable metadata %0d",frame_float_errors,golden.float_expected_errors))
++            $display("UVM PILOT FLOAT SER frame=%0d rtl_errors=%0d float_errors=%0d delta=%0d symbols=%0d",golden.frame_id,frame_errors,frame_float_errors,frame_errors-frame_float_errors,frame_payload);
++            float_frames++;float_errors+=frame_float_errors;float_rtl_errors+=frame_errors;float_symbols+=frame_payload;
++          end
+           payload_errors+=frame_errors;payload_symbols+=frame_payload;completed++;
+-          golden=frames.pop_front();row_index=0;frame_errors=0;frame_payload=0;
++          golden=frames.pop_front();row_index=0;frame_errors=0;frame_payload=0;frame_float_errors=0;
+         end
+       end else `uvm_fatal("PROTOCOL","Unknown observed event")
+     endfunction
+     function void check_phase(uvm_phase phase);
+       if(frames.size()!=0||acquisitions.size()!=0||configs.size()!=0||gains.size()!=0||config_row!=0||row_index!=0||completed!=normal_frames||normal_frames<1||checked+discarded!=expected_symbols)
+         `uvm_error("COUNT","Expected queues/frame accounting did not drain")
++      if($test$plusargs("FLOAT_SER")&&(float_frames!=completed||float_symbols!=payload_symbols||float_rtl_errors!=payload_errors))
++        `uvm_error("FLOAT_SER","Float comparison did not cover every completed payload interval")
+     endfunction
+     function void report_phase(uvm_phase phase);
++      if($test$plusargs("FLOAT_SER"))
++        `uvm_info("RESULT",$sformatf("UVM PILOT FLOAT SUMMARY frames=%0d rtl_errors=%0d float_errors=%0d symbols=%0d",float_frames,float_rtl_errors,float_errors,float_symbols),UVM_LOW)
+       `uvm_info("RESULT",$sformatf("UVM BPSK PILOT checked=%0d frames=%0d acquisitions=%0d errors=%0d payload=%0d discarded=%0d resets=%0d partial_payload_discarded=%0d partial_errors_discarded=%0d",checked,completed,acquired,payload_errors,payload_symbols,discarded,resets,discarded_partial_payload,discarded_partial_errors),UVM_LOW)
+     endfunction
+   endclass
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_bpsk_uvm_evidence.py"	2026-10-13 17:59:14.271393689 +0300
++++ b/tests/test_bpsk_uvm_evidence.py	2026-10-14 10:18:16.706040097 +0300
+@@ -62,9 +62,10 @@
+     def test_truth_negative_preserves_wave_acquisition_numeric_and_original_error_metadata(self):
+         with tempfile.TemporaryDirectory() as folder:
+             folder=Path(folder);source=folder/'source';target=folder/'poison'
+-            model=prepare_vectors(source);self.assertEqual(model,MODEL)
++            model=prepare_vectors(source);self.assertEqual({k:model[k] for k in MODEL},MODEL)
++            self.assertEqual(model['float_payload_errors'],[0,0,0,54]);self.assertEqual(model['float_payload_symbols'],[576]*4)
+             poison_truth(source,target)
+-            for name in ('rx_wave.txt','rx_acquire.txt','preamble.txt','payload_expected.txt'):
++            for name in ('rx_wave.txt','rx_acquire.txt','preamble.txt','payload_expected.txt','float_decisions.txt','float_expected.txt','float_reference.json'):
+                 self.assertEqual(digest(source/name),digest(target/name))
+             original=[line.split() for line in (source/'rx_trace.txt').read_text().splitlines()]
+             poison=[line.split() for line in (target/'rx_trace.txt').read_text().splitlines()]
+@@ -142,11 +143,18 @@
+             self.assertEqual(stops,[39,87,383,1951,8127])
+ 
+ 
++def float_report_text(model):
++    pairs=list(zip(model['payload_errors'],model['float_payload_errors']))
++    return '\n'.join(f'UVM PILOT FLOAT SER frame={f} rtl_errors={r} float_errors={e} delta={r-e} symbols=576' for f,(r,e) in enumerate(pairs))+\
++        f'\nUVM PILOT FLOAT SUMMARY frames={len(pairs)} rtl_errors={sum(model["payload_errors"])} float_errors={sum(model["float_payload_errors"])} symbols={576*len(pairs)}'
++
++
+ def profile_report_text(model,scenario):
+     mid=scenario=='midreset';cfg=scenario=='cfgreset';prefix=247 if model['simo'] else 246
+     total=sum(model['payload_errors']);rows='\n'.join(f'UVM PILOT SER frame={f} errors={e} symbols=576' for f,e in enumerate(model['payload_errors']))
+     checked=3072+(prefix if mid else 0);discarded=768-prefix if mid else 0
+     gaincfg=(1+int(mid or cfg)) if model['simo'] else 0
++    rows+='\n'+float_report_text(model)
+     return (rows+'\n'+f'UVM BPSK PILOT checked={checked} frames=4 acquisitions={4+int(mid)} errors={total} payload=2304 discarded={discarded} resets={2 if mid or cfg else 1} partial_payload_discarded={prefix-192 if mid else 0} partial_errors_discarded={model["immutable_warm_error_prefix"][prefix] if mid else 0}\n'
+             +f'UVM PILOT HANDSHAKES cfg={384 if mid else 288 if cfg else 192} input={model["samples"]+(4200 if mid else 0)} stalls={0 if scenario=="stream" else 100} pending_resets={int(mid)}\n'
+             +f'UVM PILOT PROFILE label_bits={model["label_bits"]} index_bits={model["index_bits"]} gaincfg={gaincfg} cfg_max={model["cfg_label_max"]} label_max={model["decoded_label_max"]} index_max={model["index_max"]}\nUVM_ERROR : 0\nUVM_FATAL : 0\n')
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_uvm_floating_reference.py"	1970-01-01 03:00:00.000000000 +0300
++++ b/tests/test_uvm_floating_reference.py	2026-10-14 10:19:04.555042434 +0300
+@@ -0,0 +1,105 @@
++"""Independent float SER reference for the RX UVM: independence, provenance, negatives."""
++from pathlib import Path
++import copy
++import shutil
++import sys
++import tempfile
++import unittest
++from unittest import mock
++import numpy as np
++
++ROOT=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(ROOT/'tools'))
++sys.path.insert(0,str(ROOT/'common/python'))
++sys.path.insert(0,str(ROOT/'tests'))
++import uvm_floating_reference as ref
++from run_bpsk_uvm import prepare_vectors,prepare_profile_vectors,parse_float,poison_truth,FLOAT_NEGATIVES,RX_PROFILES
++from test_bpsk_uvm_evidence import float_report_text
++
++
++def _banned(*args,**kwargs):raise AssertionError('Fixed-point receiver/combiner used by float reference')
++
++
++class TestUvmFloatingReference(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.temporary=tempfile.TemporaryDirectory();cls.folder=Path(cls.temporary.name)
++        cls.models={'bpsk':prepare_vectors(cls.folder/'bpsk')}
++        for name,profile in RX_PROFILES.items():cls.models[name]=prepare_profile_vectors(cls.folder/name,profile)
++        cls.alphabet=dict(bpsk=2,qpsk_diff=4,psk8_fb=8)
++    @classmethod
++    def tearDownClass(cls):cls.temporary.cleanup()
++
++    def test_original_reference_values_and_shapes(self):
++        expected=dict(bpsk=[0,0,0,54],qpsk_diff=[0,0,16,308],psk8_fb=[0,0,0,408])
++        for name,model in self.models.items():
++            self.assertEqual(model['float_payload_errors'],expected[name]);self.assertEqual(model['float_payload_symbols'],[576]*4)
++            decisions=ref.floating_decisions(self.folder/name,name)
++            self.assertEqual(decisions.shape,(4,768));self.assertTrue(np.all((decisions>=0)&(decisions<self.alphabet[name])))
++            ref.validate_float_reference(self.folder/name,name)
++
++    def test_no_fixed_point_module_participates(self):
++        for name in self.models:
++            original=ref.floating_decisions(self.folder/name,name)
++            patches=[mock.patch.object(module,attr,_banned) for mname,module in list(sys.modules.items())
++                     if mname.endswith('_fixed') and module is not None
++                     for attr,value in vars(module).items() if callable(value) and not isinstance(value,type) and getattr(value,'__module__',None)==mname]
++            self.assertTrue(patches)
++            for p in patches:p.start()
++            try:again=ref.floating_decisions(self.folder/name,name)
++            finally:
++                for p in patches:p.stop()
++            np.testing.assert_array_equal(original,again)
++
++    def test_truth_change_leaves_decisions_and_moves_only_score(self):
++        for name in self.models:
++            target=self.folder/(name+'_truth');poison_truth(self.folder/name,target,alphabet=self.alphabet[name])
++            np.testing.assert_array_equal(ref.floating_decisions(self.folder/name,name),ref.floating_decisions(target,name))
++            with self.assertRaisesRegex(ValueError,'truth'):ref.validate_float_reference(target,name)
++
++    def test_simo_uses_q15_pins_gains_and_relative_variances(self):
++        folder=self.folder/'qpsk_diff';gains=list(map(int,(folder/'gains.txt').read_text().split()[1:]))
++        raw=ref.rows(folder/'rx_wave.txt',5);calls=[];real=ref.real.maximal_ratio_combine
++        def record(branches,g,v):calls.append((branches,g,v));return real(branches,g,v)
++        with mock.patch.object(ref.real,'maximal_ratio_combine',record):ref.floating_decisions(folder,'qpsk_diff')
++        self.assertEqual(len(calls),4)
++        branches,g,v=calls[0];stop=int(np.flatnonzero(raw[:,4])[0])+1
++        self.assertEqual(g,[complex(gains[0],gains[1])/32768,complex(gains[2],gains[3])/32768]);self.assertEqual(list(v),gains[4:])
++        np.testing.assert_array_equal(branches[0],(raw[:stop,0]+1j*raw[:stop,1])/32768)
++        np.testing.assert_array_equal(branches[1],(raw[:stop,2]+1j*raw[:stop,3])/32768)
++
++    def test_metadata_negatives_change_one_file_and_are_rejected(self):
++        for name in self.models:
++            for kind in FLOAT_NEGATIVES:
++                target=self.folder/f'{name}_{kind}'
++                changed=ref.mutate_float_metadata(self.folder/name,target,kind,alphabet=self.alphabet[name])
++                self.assertEqual(changed,'float_decisions.txt' if kind=='decision' else 'float_expected.txt')
++                with self.assertRaises(ValueError):ref.validate_float_reference(target,name)
++                # Even with a recomputed digest the independent rerun must still reject.
++                import json
++                meta=json.loads((target/'float_reference.json').read_text());meta['float_decisions_sha256']=ref._sha(target/'float_decisions.txt')
++                meta['float_expected_sha256']=ref._sha(target/'float_expected.txt');(target/'float_reference.json').write_text(json.dumps(meta))
++                with self.assertRaises(ValueError):ref.validate_float_reference(target,name)
++
++    def test_waveform_or_gain_provenance_change_rejected(self):
++        for name,file in (('bpsk','rx_wave.txt'),('qpsk_diff','gains.txt'),('psk8_fb','preamble.txt')):
++            target=self.folder/f'{name}_provenance';shutil.copytree(self.folder/name,target)
++            lines=(target/file).read_text().splitlines();parts=lines[1].split();parts[0]=str(int(parts[0])^1);lines[1]=' '.join(parts)
++            (target/file).write_text('\n'.join(lines)+'\n')
++            with self.assertRaisesRegex(ValueError,'provenance'):ref.validate_float_reference(target,name)
++
++    def test_uvm_float_markers_parsed_and_tampering_rejected(self):
++        model=self.models['qpsk_diff'];rows=[(f,e,576) for f,e in enumerate(model['payload_errors'])]
++        text=float_report_text(model);r=parse_float(text,model,rows,576)
++        self.assertEqual(r['float_payload_errors'],sum(model['float_payload_errors']))
++        self.assertEqual([x['delta'] for x in r['float_per_frame']],[a-b for a,b in zip(model['payload_errors'],model['float_payload_errors'])])
++        last=f'float_errors={model["float_payload_errors"][3]} delta'
++        for bad in (text.replace(last,f'float_errors={model["float_payload_errors"][3]+1} delta'),text.replace('symbols=576','symbols=575',1),
++                    text.replace('frame=1 ','frame=2 ',1),text.rsplit('\n',1)[0],text+'\n'+text,
++                    text.replace(f'delta={model["payload_errors"][3]-model["float_payload_errors"][3]}','delta=0')):
++            with self.subTest(text=bad),self.assertRaises(RuntimeError):parse_float(bad,model,rows,576)
++        broken=copy.deepcopy(model);broken['float_payload_symbols'][0]=575
++        with self.assertRaises(RuntimeError):parse_float(text,broken,rows,576)
++
++
++if __name__=='__main__':unittest.main()
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_uvm_pilot_coverage.py"	2026-10-13 17:59:14.381393695 +0300
++++ b/tests/test_uvm_pilot_coverage.py	2026-10-14 10:19:04.555042434 +0300
+@@ -21,14 +21,17 @@
+         for scenario in scenarios:
+             for active in (1,0):
+                 records[f'{prefix}{scenario}_reset_{active}']=dict(profile=profile,scenario=scenario,reset_active=active)
++                if profile!='bpsk_tx':records[f'{prefix}{scenario}_reset_{active}']['float_per_frame']=[dict(rtl_errors=3,float_errors=1,delta=2)]*4
++        if profile!='bpsk_tx':
++            for kind in ('decision','errorcount','denominator'):records[f'{prefix}validator_rejects_float_{kind}']=dict(rejected='digest')
+     for prefix,controls in (
+-            ('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL'}),
++            ('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+             ('tx_',{'numeric':'NUMERIC','s_valid_x':'PROTOCOL','s_ready_x':'PROTOCOL','m_valid_x':'PROTOCOL',
+                     'm_ready_x':'PROTOCOL','data_x':'NUMERIC','held_data':'STALL'}),
+             ('qpsk_diff_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                           'ready_x':'PROTOCOL','gain_ready_x':'PROTOCOL','warm_ser':'SER'}),
++                           'ready_x':'PROTOCOL','gain_ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+             ('psk8_fb_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                        'ready_x':'PROTOCOL','warm_ser':'SER'})):
++                        'ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}})):
+         for name,tag in controls.items():
+             for active in (1,0):records[f'{prefix}negative_{name}_reset_{active}']=dict(detected_tag=tag,returncode=13)
+     return records
+@@ -48,12 +51,17 @@
+             log=Path(directory)/'pilot.log';log.write_text('coverage fixture')
+             original=dict(finish(begin(),[log]),status='PASS',pilot='both',rx_profile_selection='all',records=coverage())
+             for fault in ('rx_only','tx_missing','rx_missing','wrong_scenario','reset_bool','wrong_profile',
+-                          'negative_missing','wrong_tag','negative_rc0','negative_bool','no_artifacts','partial_profiles','qpsk_missing','psk_negative_missing'):
++                          'negative_missing','wrong_tag','negative_rc0','negative_bool','no_artifacts','partial_profiles','qpsk_missing','psk_negative_missing',
++                          'float_missing','float_delta','float_negative_missing','validator_missing'):
+                 data=copy.deepcopy(original)
+                 if fault=='rx_only':data['pilot']='rx'
+                 elif fault=='partial_profiles':data['rx_profile_selection']='bpsk'
+                 elif fault=='qpsk_missing':data['records'].pop('qpsk_diff_midreset_reset_0')
+                 elif fault=='psk_negative_missing':data['records'].pop('psk8_fb_negative_warm_ser_reset_1')
++                elif fault=='float_missing':data['records']['qpsk_diff_stream_reset_1'].pop('float_per_frame')
++                elif fault=='float_delta':data['records']['midreset_reset_0']['float_per_frame'][3]=dict(rtl_errors=3,float_errors=1,delta=0)
++                elif fault=='float_negative_missing':data['records'].pop('psk8_fb_negative_float_denominator_reset_0')
++                elif fault=='validator_missing':data['records'].pop('validator_rejects_float_decision')
+                 elif fault=='tx_missing':data['records'].pop('tx_outreset_reset_0')
+                 elif fault=='rx_missing':data['records'].pop('cfgreset_reset_1')
+                 elif fault=='wrong_scenario':data['records']['tx_stream_reset_0']['scenario']='stalled'

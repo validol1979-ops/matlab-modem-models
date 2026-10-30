@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head><script>
+window.__reportErrors=[];
+window.addEventListener('error',function(e){window.__reportErrors.push(e.message||('Resource load failed: '+(e.target.src||e.target.href||e.target.tagName)));},true);
+window.addEventListener('unhandledrejection',function(e){window.__reportErrors.push(String(e.reason));});
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modem Lab · Verification atlas</title>
+  <link rel="stylesheet" href="report.css">
+  <script id="report-data" type="application/json">__REPORT_DATA__</script>
+  <script src="report.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#section=overview"><span class="brand-mark" aria-hidden="true">∿</span><span>MODEM LAB<small>Verification atlas</small></span></a>
+    <div class="header-links"><span class="offline">Offline report</span><a class="button" href="modem_test_report.pdf">Download PDF ↗</a></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">SIGNALS · CONSTELLATIONS · REFERENCE CHECKS</p><h1>See what the tests prove.</h1><p class="lead">Explore actual test signals, inspect the receiver, and compare the evidence across 20 modem models.</p></div>
+      <div class="scope-note"><span class="dot amber"></span><div><strong>Partial original-model equivalence</strong><p>Execution and selected numerical comparisons are verified. Complete equivalence of the historical receivers remains open.</p></div></div>
+    </section>
+    <section class="stats" aria-label="Verification totals">
+      <div><span class="stat-value">20<span>/20</span></span><span class="stat-label">MATLAB simulations & repeats</span></div>
+      <div><span class="stat-value">60</span><span class="stat-label">Portable channel cases replayed</span></div>
+      <div><span class="stat-value">17</span><span class="stat-label">Original mapper blocks matched</span></div>
+      <div><span class="stat-value">1</span><span class="stat-label">MSK transmitter reference</span></div>
+    </section>
+    <nav class="main-tabs" aria-label="Report sections">
+      <button data-section="overview" class="active">01 <span>Coverage</span></button>
+      <button data-section="explorer">02 <span>Signal explorer</span></button>
+      <button data-section="findings">03 <span>Reference findings</span></button>
+      <a href="summary.csv">Export CSV ↓</a>
+    </nav>
+    <section id="overview" class="report-section">
+      <div class="section-heading"><div><p class="eyebrow">THE WHOLE COLLECTION</p><h2>Coverage, without guessing.</h2></div><div class="legend"><span><i class="dot green"></i> Passed check</span><span><i class="dot amber"></i> Compatibility update</span><span><i class="dot gray"></i> Not established</span></div></div>
+      <div class="plot-card"><img src="overview.png" alt="Verification matrix for all 20 modems, with separate execution, mapping, transmitter and receiver equivalence checks"><div class="plot-caption"><span>Each column is a separate claim. A passing simulation is not a complete receiver verification.</span><a href="overview.svg" target="_blank" rel="noopener">Open SVG ↗</a></div></div>
+      <div class="section-heading compact"><h2>Choose a modem to inspect</h2><span class="muted">PNG, SVG and original-capture views for every model</span></div>
+      <div class="table-wrap"><table><thead><tr><th>Modem</th><th>Original compile</th><th>Adapted run</th><th>Mapper check</th><th></th></tr></thead><tbody id="model-table"></tbody></table></div>
+    </section>
+    <section id="explorer" class="report-section" hidden>
+      <div class="explorer-grid">
+        <aside class="model-browser">
+          <label for="model-search">Find a modem</label><input id="model-search" type="search" placeholder="Search name or modulation…">
+          <label class="sr-only" for="family-filter">Modulation family</label><select id="family-filter"><option value="">All modulation families</option></select>
+          <p id="model-count" class="list-count"></p><div id="model-list" class="model-list" role="group" aria-label="Modems"></div>
+        </aside>
+        <div class="explorer-content">
+          <p class="eyebrow" id="model-family"></p><h2 id="model-title"></h2><p id="model-id" class="model-id"></p>
+          <div class="explorer-controls"><div class="source-tabs" role="group" aria-label="Signal source"><button data-view="portable" class="active">Portable test</button><button data-view="matlab">Original MATLAB</button></div><div id="case-control"><label class="sr-only" for="case-select">Channel case</label><select id="case-select"><option value="0">Clean channel</option><option value="1">AWGN + carrier + delay</option><option value="2">Variant stress channel</option></select></div></div>
+          <div id="case-metrics" class="case-metrics"></div><p id="case-description" class="case-description"></p>
+          <div class="plot-card"><a id="figure-open" target="_blank" rel="noopener" title="Open full-resolution SVG"><img id="modem-figure" alt="Selected modem signal plots"></a><div class="plot-caption"><span id="figure-caption"></span><div><a id="svg-download" target="_blank" rel="noopener">Open SVG ↗</a><a id="png-download" download>PNG ↓</a></div></div></div>
+          <div id="source-note" class="source-note"></div>
+          <details class="evidence"><summary>Parameters and verification evidence</summary><pre id="model-evidence"></pre></details>
+        </div>
+      </div>
+    </section>
+    <section id="findings" class="report-section" hidden>
+      <article class="finding"><div class="finding-number">01</div><div class="finding-body"><p class="eyebrow">A DIRECT TRANSMITTER REFERENCE</p><h2>MSK agrees with the original waveform.</h2><p>16,352 captured MATLAB samples match Python, Octave and SystemVerilog, with an error of about 4.8 × 10⁻¹⁴. The test uses 32 samples per symbol and the original 33-sample startup delay. Its input is captured after the scrambler.</p><div class="plot-card"><img loading="lazy" src="msk_reference.png" alt="MSK MATLAB waveform overlay, sample errors and recorded Python, Octave and SystemVerilog comparison maxima"><div class="plot-caption"><span>TX is compared with MATLAB. UVM receiver expectations still come from Python.</span><a href="msk_reference.svg" target="_blank" rel="noopener">Open SVG ↗</a></div></div></div></article>
+      <article class="finding"><div class="finding-number amber-text">02</div><div class="finding-body"><p class="eyebrow">A FINDING THAT A PASS LABEL WOULD HIDE</p><h2>QPSK has a constant label rotation.</h2><p>The original error counter reports 100% symbol errors. After the archived 13-symbol delay, the received labels are shifted by three modulo four. A phase hypothesis chosen earlier in the capture gives zero errors on 5,455 held-out symbols after diagnostic correction.</p><div class="notice">The correction is shown for diagnosis. It has not been added to the original receiver.</div><div class="plot-card"><img loading="lazy" src="qpsk_phase_ambiguity.png" alt="QPSK raw and phase-corrected confusion matrices, with raw and corrected symbol sequences"><div class="plot-caption"><span>The raw result and the corrected diagnostic are shown separately.</span><a href="qpsk_phase_ambiguity.svg" target="_blank" rel="noopener">Open SVG ↗</a></div></div></div></article>
+      <article class="finding"><div class="finding-number">03</div><div class="finding-body"><p class="eyebrow">NEGATIVE CONTROL</p><h2>The tests can see a bad channel.</h2><p id="stress-description"></p><div class="plot-card"><img loading="lazy" src="negative_control.png" alt="BPSK negative control at minus 8 dB sample SNR, showing degraded symbols and decoding errors"><div class="plot-caption"><span>Expected decoding errors demonstrate test sensitivity. This is not a failed nominal regression.</span><a href="negative_control.svg" target="_blank" rel="noopener">Open SVG ↗</a></div></div></div></article>
+    </section>
+    <footer><div><strong>Reproducible, local evidence.</strong><p id="recording-dates"></p><p>Rebuild with <code>python3 tools/visual_report.py</code>. No network connection is required to view this report.</p></div><div class="footer-links"><a href="provenance.json">Source hashes</a><a href="report_data.json">Report data</a><a href="../MATLAB_MODEM_VERIFICATION.md">Verification notes</a></div></footer>
+  </main>
+  <noscript><div class="notice">JavaScript enables modem selection. All plots remain available in <a href="modem_test_report.pdf">the PDF report</a>.</div></noscript>
+</body>
+</html>

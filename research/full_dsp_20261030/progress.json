@@ -1,0 +1,472 @@
+{
+  "date": "2026-10-30",
+  "scope": "All44 Python model stages, no RTL/HDL/vendor compilation",
+  "goal": "Finish all remaining40 with external agents and independent verification",
+  "prior_completed": [
+    "DSP-CIC-DEC",
+    "DSP-CIC-INT",
+    "DSP-CIC-COMP",
+    "DSP-RATIONAL"
+  ],
+  "groups": {
+    "signal": [
+      "DSP-DDS",
+      "DSP-FARROW",
+      "DSP-HILBERT",
+      "DSP-SOS",
+      "DSP-PSD",
+      "DSP-DDC",
+      "DSP-DCT",
+      "DSP-FFT-CONV",
+      "MOD-AM",
+      "MOD-FM",
+      "MOD-SSB"
+    ],
+    "coding": [
+      "FEC-CRC",
+      "DSP-PRBS-SCRAMBLER",
+      "FEC-VIT",
+      "FEC-RS",
+      "FEC-BCH",
+      "FEC-POLAR",
+      "FEC-TURBO",
+      "MOD-LLR",
+      "MOD-TCM",
+      "FEC-DVB-PLS",
+      "FEC-HAMMING",
+      "FEC-GOLAY24",
+      "FEC-BTC"
+    ],
+    "advanced": [
+      "RF-DPD",
+      "ARRAY-MVDR",
+      "ARRAY-DOA",
+      "AUDIO-IMCRA",
+      "AUDIO-EQ16",
+      "CHANNEL-AWGN",
+      "CHANNEL-RAYLEIGH",
+      "OFDM-CFO-ICI",
+      "AUDIO-COMPLIMIT",
+      "AUDIO-NOISEGATE",
+      "RADAR-CHIRP",
+      "RADAR-PULSE-COMP",
+      "RADAR-DOPPLER-MTI",
+      "RADAR-CFAR",
+      "DSP-KALMAN-MATRIX",
+      "SAR-OMEGA-K"
+    ]
+  },
+  "tasks": {
+    "DSP-CIC-DEC": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "prior",
+      "priority": "P1",
+      "dependencies": []
+    },
+    "DSP-CIC-INT": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "prior",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-CIC-DEC"
+      ]
+    },
+    "DSP-DDS": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "DSP-CIC-COMP": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "prior",
+      "priority": "P1",
+      "dependencies": [
+        "DSP-CIC-DEC"
+      ]
+    },
+    "DSP-RATIONAL": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "prior",
+      "priority": "P1",
+      "dependencies": []
+    },
+    "DSP-FARROW": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-RATIONAL"
+      ],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "DSP-HILBERT": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "DSP-SOS": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "DSP-PSD": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "DSP-DDC": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P3",
+      "dependencies": [
+        "DSP-CIC-DEC",
+        "DSP-DDS",
+        "DSP-CIC-COMP",
+        "DSP-RATIONAL"
+      ],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "MOD-AM": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-DDS"
+      ],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "MOD-FM": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-DDS"
+      ],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "MOD-SSB": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-HILBERT",
+        "DSP-DDS"
+      ],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "FEC-VIT": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-RS": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-BCH": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-POLAR": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-TURBO": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "MOD-LLR": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "MOD-TCM": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [
+        "FEC-VIT"
+      ],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "DSP-DCT": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "RF-DPD": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "ARRAY-MVDR": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "ARRAY-DOA": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [
+        "ARRAY-MVDR"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "AUDIO-IMCRA": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "AUDIO-EQ16": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "CHANNEL-AWGN": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "CHANNEL-RAYLEIGH": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-DDS",
+        "CHANNEL-AWGN"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "OFDM-CFO-ICI": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-DDS"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "FEC-CRC": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "DSP-PRBS-SCRAMBLER": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-DVB-PLS": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-HAMMING": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-GOLAY24": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "FEC-BTC": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "coding",
+      "priority": "P2",
+      "dependencies": [
+        "FEC-HAMMING"
+      ],
+      "manifest": "research/full_dsp_20261030/coding/manifest.json"
+    },
+    "DSP-FFT-CONV": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "signal",
+      "priority": "P1",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/signal/manifest.json"
+    },
+    "AUDIO-COMPLIMIT": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "AUDIO-NOISEGATE": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "RADAR-CHIRP": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [
+        "DSP-DDS"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "RADAR-PULSE-COMP": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [
+        "RADAR-CHIRP",
+        "DSP-FFT-CONV"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "RADAR-DOPPLER-MTI": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [
+        "RADAR-CHIRP",
+        "RADAR-PULSE-COMP"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "RADAR-CFAR": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P3",
+      "dependencies": [
+        "RADAR-DOPPLER-MTI"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "DSP-KALMAN-MATRIX": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P2",
+      "dependencies": [],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    },
+    "SAR-OMEGA-K": {
+      "state": "python_models_verified_rtl_not_started",
+      "owner": "advanced",
+      "priority": "P3",
+      "dependencies": [
+        "RADAR-CHIRP"
+      ],
+      "manifest": "research/full_dsp_20261030/advanced/manifest.json"
+    }
+  },
+  "global_acceptance": "PASS",
+  "root_references": [
+    "research/full_dsp_20261030/imcra_reference.json",
+    "research/full_dsp_20261030/dpd_reference.json",
+    "research/full_dsp_20261030/eq16_reference.json"
+  ],
+  "root_review": {
+    "DSP-DDS": "9 targeted tests independently passed; updated SFDR scope verified",
+    "DSP-KALMAN-MATRIX": "5 targeted tests independently passed; quantized covariance rejection fixed; precision sweep pending",
+    "advanced_first12": {
+      "status": "targeted_PASS",
+      "tests_run": 50,
+      "scope": "provisional;4remaining advanced tasks not included",
+      "files": {
+        "common/python/ext_advanced_kalman.py": "9c5bbd941bd0bcfa0064dd8b90a065a4a99bdace1b9dbdf98d3a1297d5321838",
+        "common/python/ext_advanced_radar.py": "8795829df02e757cf405eb775151ae199ab915b477552e426dc1be4d7080cdf7",
+        "common/python/ext_advanced_dpd.py": "b784ab9acbb03311b5316f15ba7a5fab5d5e830db46e8cb91812d64fcf9c7473",
+        "common/python/ext_advanced_arrays.py": "f3ce741b26411667abebd35029fdaa24b376a2e4fda0c513ab031a286fec219d",
+        "common/python/ext_advanced_channels.py": "5b1a551ae650ea223c5a0758831a77372c067cf381c40a0a3b3fe97df136317f",
+        "common/python/ext_advanced_dynamics.py": "7158ee729c503a1fb2e1cc5b33b88a9046ee4cd25954b81737eef00e25fe93b2",
+        "tests/test_ext_advanced_arrays.py": "4948fd1b37921d2fbc53a0525147e6bcabee471df82a63b100e5ef27d6b6f98c",
+        "tests/test_ext_advanced_dynamics.py": "cc8bef991c51d15f364b57f1a5e0fbe8daef522fe753547b1604c67ed52acc46",
+        "tests/test_ext_advanced_dpd.py": "089ab57d82fccaabd4cfe4818d66ba5ad5c35d6938141cd77d60864d1dc27a58",
+        "tests/test_ext_advanced_radar.py": "e8ec6f22fbf33ebdd1fd20e38bfe3174387c544c5a7ae0631692607120a6e61a",
+        "tests/test_ext_advanced_channels.py": "861bc4362805a15396d24d8b0c83daacc70abf053c0e476a6ece7c7af0106635",
+        "tests/test_ext_advanced_kalman.py": "eccf9a4ed21ae49c95a6ae13673a33867ac0e80b3ba225776617f36411e36234"
+      }
+    },
+    "coding_basics": {
+      "status": "targeted_PASS",
+      "tests_run": 10,
+      "scope": "provisional;CRC/PRBS/Hamming only",
+      "files": {
+        "common/python/ext_code_basics.py": "e49718b9679a0b266258288e9073d9fa9877ad4fbf73c1f30e0f90a79a4f1ff3",
+        "tests/test_ext_code_basics_oracles.py": "18d5167d1e2a82bf24d004fee60b1eab8093167dc5ac2a58f9a26bc9d8b0a5ae"
+      }
+    },
+    "AM_stall": {
+      "finding": "floating demodulator did not retain last output on accept=False",
+      "disposition": "fixed and nonzero float/fixed stall regression passes; signal91 tests PASS",
+      "previous_numerical_acceptance_tests": 274,
+      "previous_clean_copy_tests": 274,
+      "current_evidence": "final280 numerical/280 isolated/1093 registered Python PASS"
+    },
+    "coding_quantizer": {
+      "finding": "finite ±1e308 overflowed while scaling before fixed clipping",
+      "disposition": "fixed;5 overflow regressions and3 cross-model tests PASS; coding59 target tests PASS",
+      "peer_review": "BCJR fractional posterior exhaustive checks and extrinsic review passed; no other concrete defect reported",
+      "current_evidence": "final280 numerical/280 isolated/1093 registered Python PASS"
+    }
+  },
+  "groups_frozen": {
+    "signal": true,
+    "coding": true,
+    "advanced": true
+  },
+  "acceptance_plan": "research/full_dsp_20261030/model_plan.json",
+  "model_stages_completed": 44,
+  "model_stages_remaining": 0,
+  "new_model_stages_completed": 40,
+  "numerical_tests": 280,
+  "clean_copy_tests": 280,
+  "registered_python_tests": 1093,
+  "modem_configs": 24,
+  "source_files": 1560,
+  "evidence": "docs/extended_dsp_models_20261030_results.json"
+}

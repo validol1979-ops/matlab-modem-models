@@ -1,0 +1,192 @@
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_psk_fixed.py"	2026-10-06 14:50:15.743667101 +0300
++++ b/tests/test_psk_fixed.py	2026-10-14 12:09:59.363673937 +0300
+@@ -41,6 +41,22 @@
+         for name in ('simo_maximal_ratio_combining_2010_08_27','oqpsk_2_sps_timing_recovery_2019_12_05'):
+             with self.assertRaises(ValueError):p.profile_for(real.load_config(ROOT/'modems'/name/'config.json'))
+ 
++    def test_block_fit_matches_rtl_default(self):
++        # bpsk_rx: BLOCK_FIT=EQUALIZER!=0||ORDER==4; simo_rx and the synthesis top rely on the default.
++        for profile in p.PROFILES:
++            self.assertEqual(profile.block_fit,profile.equalizer!='none' or profile.order==4,profile.name)
++
++    def test_low_snr_acquisition_keeps_unshifted_candidate(self):
++        # -8 dB, channel delay 0: the energy delay lands below -0.5 sample. The candidate is
++        # clamped, not dropped, so the fit stays on the symbol grid and the gain is not railed.
++        labels=np.random.default_rng(19).integers(0,4,512)
++        tx=np.array([complex(*z) for z in p.transmit(p.QPSK,labels)])/32768
++        rows=p.quantize(real.channel(real.load_config(ROOT/'modems/qpsk_script_costas/config.json'),tx,seed=7,snr_db=-8))
++        acq=p.acquire(p.QPSK,p.fir(rows,p.QPSK.rx_shift),labels[:192])
++        self.assertLess(abs(acq['delay']),1<<16);self.assertLess(acq['gain'],16<<20)
++        decoded=np.asarray(p.receive(p.QPSK,rows,labels[:192],512)['data'])
++        self.assertLess(np.count_nonzero(decoded[192:]!=labels[192:]),100)
++
+     def test_qpsk_labels(self):
+         table=real.constellation(QPSK_CFG)
+         for index in range(4):
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_bpsk_uvm_evidence.py"	2026-10-14 11:09:38.438190573 +0300
++++ b/tests/test_bpsk_uvm_evidence.py	2026-10-14 11:38:02.915273799 +0300
+@@ -190,7 +190,6 @@
+                     self.assertEqual(r['profile'],name);self.assertEqual(r['payload_errors'],sum(model['payload_errors']))
+                     if scenario=='midreset':
+                         prefix=r['checked']-model['symbols'];self.assertEqual(r['discarded_partial_errors'],model['immutable_warm_error_prefix'][prefix])
+-                        self.assertNotEqual(r['discarded_partial_errors'],13)
+                         self.assertEqual(r['gain_handshakes'],2 if model['simo'] else 0)
+         # A zero-error partial counter is legal for a genuinely zero-error reference prefix.
+         import copy
+@@ -207,7 +206,7 @@
+                         text.replace(f'cfg_max={model["cfg_label_max"]}','cfg_max=1'),
+                         text.replace(f'label_max={model["decoded_label_max"]}','label_max=1'),
+                         text.replace(f'gaincfg={2 if model["simo"] else 0}','gaincfg=9'),
+-                        text.replace(f'partial_errors_discarded={partial}','partial_errors_discarded=13'),text+text,
++                        text.replace(f'partial_errors_discarded={partial}',f'partial_errors_discarded={partial+1}'),text+text,
+                         text.replace(f'partial_payload_discarded={prefix-192}','partial_payload_discarded=0')):
+                 with self.subTest(profile=model['profile'],text=bad),self.assertRaises(RuntimeError):parse_profile_report(bad,model,'midreset',1)
+ 
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/common/python/psk_fixed.py"	2026-10-06 14:49:28.178664779 +0300
++++ b/common/python/psk_fixed.py	2026-10-14 12:09:22.789600748 +0300
+@@ -115,7 +115,7 @@
+     phase_gain: int=834     # 0.04 rad (feedback) or 626 = 0.03 rad (feedforward)
+     timing_gain: int=3932   # 0.015 symbol, Q17; 0 without a timing loop
+     equalizer: str='none'   # 'none', 'linear' (7-tap NLMS) or 'dfe' (7 forward + 3 feedback)
+-    block_fit: bool=False   # acquisition fits block phases (fit_blocks), robust to echoes
++    block_fit: bool=False   # acquisition fits block phases (fit_blocks): echoes (QAM16 EQ) and low SNR (QPSK)
+     loop_delay: int=LOOP_DELAY  # carrier/timing feedback delay in symbols (8 with an equalizer)
+     tx_amplitude: int=0     # QAM transmit level scale (0: T); QAM64 sends level*2^14 with tx_shift 16
+     tx_shift: int=17        # transmit FIR rounding
+@@ -186,16 +186,18 @@
+ 
+ 
+ BPSK=Profile('bpsk',2,16384,'psk',32768,14,27,True)
+-QPSK=Profile('qpsk',4,23170,'none',23171,15,28,False)
++# All QPSK profiles acquire with block phases: at -8 dB the per-symbol unwrapped fit slips and
++# gives a false slope, which collapses the coherent gain (docs/RTL_BPSK_UVM.md, 2026-10-14).
++QPSK=Profile('qpsk',4,23170,'none',23171,15,28,False,block_fit=True)
+ # Diagonal QPSK at 0.5 per axis, Gray-differential, feedback carrier, Gardner.
+-QPSK_HALF_DIFF=Profile('qpsk_half_diff',4,16384,'psk',32768,14,27,False)
++QPSK_HALF_DIFF=Profile('qpsk_half_diff',4,16384,'psk',32768,14,27,False,block_fit=True)
+ # Unit points on the axes: Gray-differential, feedforward carrier, no timing loop.
+-QPSK_AXIS_DIFF_FF=Profile('qpsk_axis_diff_ff',4,23170,'psk',23171,15,28,False,True,0,626,0)
++QPSK_AXIS_DIFF_FF=Profile('qpsk_axis_diff_ff',4,23170,'psk',23171,15,28,False,True,0,626,0,block_fit=True)
+ # Unit points on the axes, no differential coding, feedback carrier, Gardner.
+-QPSK_AXIS=Profile('qpsk_axis',4,23170,'none',23171,15,28,False,True)
++QPSK_AXIS=Profile('qpsk_axis',4,23170,'none',23171,15,28,False,True,block_fit=True)
+ # Diagonal unit QPSK, Gray-differential, feedback carrier, Gardner: the receiver after
+ # two-branch combining (mrc_fixed); profile_for rejects the two-branch config itself.
+-QPSK_DIFF=Profile('qpsk_diff',4,23170,'psk',23171,15,28,False)
++QPSK_DIFF=Profile('qpsk_diff',4,23170,'psk',23171,15,28,False,block_fit=True)
+ # 8-PSK, unit points, Gray-differential. tx_axis: transmit table at 0 degrees.
+ PSK8_FF=Profile('psk8_ff',8,32768,'psk',1,15,28,False,True,0,626,0)
+ PSK8_FB=Profile('psk8_fb',8,32768,'psk',1,15,28,False,True)
+@@ -310,7 +312,7 @@
+ 
+ 
+ def fit_blocks(profile,wave,ids,candidate):
+-    """Block carrier fit for the equalizer profiles. With a one-symbol echo of 0.45 the
++    """Block carrier fit for the equalizer and QPSK profiles. With a one-symbol echo of 0.45 the
+     per-symbol phases of z_k*conj(level_k) slip; coherent sums over 8 blocks of 16
+     symbols average the interference. Block phases are unwrapped and fitted as in
+     acquire, then rescaled to symbols. Range: 1/32 turn per symbol."""
+@@ -344,8 +346,9 @@
+     delay=round_shift(atan2(im,re),13)
+     candidates=[]
+     for off in (0,8,16):
+-        candidate=delay+(off<<16)
+-        if not -(1<<15)<=candidate<=(16<<16)+(1<<15):continue
++        # Clamp, do not drop: at low SNR the energy delay of a channel near 0 can fall below
++        # -0.5 and dropping the first candidate left only symbol-shifted fits (2026-10-14).
++        candidate=min(max(delay+(off<<16),-(1<<15)),(16<<16)+(1<<15))
+         if profile.block_fit:
+             candidates.append(fit_blocks(profile,wave,ids,candidate));continue
+         phases=[];previous=None;unwrapped=0
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/rtl/modems/bpsk_costas_2008_08_25/bpsk_acquire.sv"	2026-10-06 14:53:41.889677167 +0300
++++ b/rtl/modems/bpsk_costas_2008_08_25/bpsk_acquire.sv	2026-10-14 12:09:48.865295264 +0300
+@@ -8,7 +8,7 @@
+ // ORDER=16: QAM16, label levels (a,b) in +-1/+-3: phase angle(z*conj(a+jb)); amplitude
+ // divide(2*sum(a*re+b*im), sum(a^2+b^2)) with the shared divider. ORDER=64: the same with
+ // levels +-1..+-7 (label in tag bits 8..13).
+-// BLOCK_FIT (QAM16 with equalizers): the fit terms are summed over 8 blocks of 16
++// BLOCK_FIT (QAM16 with equalizers, ORDER=4 QPSK): the fit terms are summed over 8 blocks of 16
+ // symbols and only the block sums enter the CORDIC; the unwrapping, the weighted sums
+ // and the residual run over the 8 block phases (psk_fixed.fit_blocks).
+ module bpsk_acquire #(
+@@ -40,6 +40,8 @@
+  logic [7:0] send_index;
+  logic [1:0] candidate_index;
+  logic signed [31:0] candidate_delay,base_delay;
++ wire signed [31:0] raw_candidate=base_delay+$signed({30'd0,candidate_index})*32'sd524288;
++ localparam logic signed [31:0] DELAY_MIN=-32768,DELAY_MAX=1081344;
+  logic [63:0] best_score;
+  logic [63:0] candidate_score;
+  logic signed [31:0] best_delay,best_slope,best_phase;
+@@ -118,13 +120,30 @@
+   assign fit_x=b_s49_t'(a_re);assign fit_y=b_s49_t'(a_im);
+   assign cordic_label=a_tag[10:8];
+  end else if(ORDER==4) begin:g_qpsk
+-  assign fit_request_valid=(state==FIT_SEND||state==FIT_WAIT)&&a_valid;assign fit_request_symbol=a_tag[7:0];
+   assign cordic_label=0;
++  wire symbol_valid=(state==FIT_SEND||state==FIT_WAIT)&&a_valid;
+   // Label bit 1 is the Q sign, bit0^bit1 the I sign.
+   wire sa=a_tag[9]^a_tag[8],sb=a_tag[9];
+   wire signed [18:0] xr=sa?-$signed({a_re[17],a_re}):$signed({a_re[17],a_re}),xi=sb?-$signed({a_im[17],a_im}):$signed({a_im[17],a_im});
+   wire signed [18:0] yi=sa?-$signed({a_im[17],a_im}):$signed({a_im[17],a_im}),yr=sb?-$signed({a_re[17],a_re}):$signed({a_re[17],a_re});
+-  assign fit_x=b_s49_t'(xr)+b_s49_t'(xi);assign fit_y=b_s49_t'(yi)-b_s49_t'(yr);
++  wire signed [48:0] symbol_x=b_s49_t'(xr)+b_s49_t'(xi),symbol_y=b_s49_t'(yi)-b_s49_t'(yr);
++  if(BLOCK_FIT) begin:g_blocks
++   // As for QAM16: block j = symbol/16 leaves as request j with symbol 16j+15.
++   logic signed [48:0] block_x,block_y;
++   logic block_valid;
++   logic [7:0] block_symbol;
++   always_ff @(posedge clk) begin
++    if(rst==RESET_ACTIVE) block_valid<=0;
++    else block_valid<=symbol_valid&&a_tag[3:0]==4'd15;
++    if(symbol_valid) begin
++     block_x<=(a_tag[3:0]==0?49'sd0:block_x)+symbol_x;block_y<=(a_tag[3:0]==0?49'sd0:block_y)+symbol_y;
++     block_symbol<={4'd0,a_tag[7:4]};
++    end
++   end
++   assign fit_x=block_x;assign fit_y=block_y;assign fit_request_valid=block_valid;assign fit_request_symbol=block_symbol;
++  end else begin:g_symbols
++   assign fit_x=symbol_x;assign fit_y=symbol_y;assign fit_request_valid=symbol_valid;assign fit_request_symbol=a_tag[7:0];
++  end
+  end else begin:g_bpsk
+   assign fit_request_valid=(state==FIT_SEND||state==FIT_WAIT)&&a_valid;assign fit_request_symbol=a_tag[7:0];
+   wire signed [18:0] sum_sample=$signed(a_re)+$signed(a_im),diff_sample=$signed(a_im)-$signed(a_re);
+@@ -307,9 +326,10 @@
+     ANGLE_START:state<=ANGLE_WAIT;
+     ANGLE_WAIT:if(angle_valid&&angle_tag[15]) begin base_delay<=b_s32_t'(b_round(b_s64_t'(angle),13));state<=CANDIDATE;end
+     CANDIDATE:begin
+-     candidate_delay<=base_delay+$signed({30'd0,candidate_index})*32'sd524288;
++     // Clamped to [-0.5, 16.5] samples, never dropped: a low-SNR energy delay below -0.5
++     // must still fit the unshifted symbol grid (psk_fixed.acquire).
++     candidate_delay<=(raw_candidate<DELAY_MIN)?DELAY_MIN:(raw_candidate>DELAY_MAX)?DELAY_MAX:raw_candidate;
+      phase_sum<=0;weighted_sum<=0;send_index<=0;score_sum<=0;state<=FIT_SEND;
+-     if(base_delay+$signed({30'd0,candidate_index})*32'sd524288< -32768||base_delay+$signed({30'd0,candidate_index})*32'sd524288>1081344) state<=NEXT_CANDIDATE;
+     end
+     FIT_SEND:begin send_index<=send_index+1'b1;if(send_index==127) state<=FIT_WAIT;end
+     FIT_WAIT:if(fit_valid_pipe[2]&&fit_last_pipe[2]) state<=DIV_START;
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/rtl/modems/bpsk_costas_2008_08_25/bpsk_rx.sv"	2026-10-06 14:59:52.951695285 +0300
++++ b/rtl/modems/bpsk_costas_2008_08_25/bpsk_rx.sv	2026-10-14 11:34:02.526262061 +0300
+@@ -6,12 +6,13 @@
+ // absorbs the 45 degree offset. cfg_bit and m_bit carry symbol labels of log2(ORDER) bits.
+ // PI4 (ORDER=8): pi/4-QPSK over the 8-point table, 2-bit labels; m_index stays 3 bits.
+ // EQUALIZER (ORDER=16): 1 = NLMS, 2 = DFE; acquisition then fits block phases (BLOCK_FIT).
++// BLOCK_FIT also for ORDER=4: per-symbol phase unwrapping slips at low SNR (psk_fixed block_fit).
+ // ORDER=64: QAM64, AMPLITUDE = T = 8192 after the 1/4-scaled receive filter, 6-bit labels.
+ // Input limit: peak 3.64 per axis at unit channel gain; tested up to gain 1.2.
+ module bpsk_rx #(
+  parameter bit RESET_ACTIVE=1,parameter TABLE_DIR="rtl/modems/bpsk_costas_2008_08_25/tables",parameter int ORDER=2,
+  parameter int AMPLITUDE=ORDER==8?32768:ORDER==4?23170:16384,parameter bit DIFFERENTIAL=ORDER==2,parameter bit FEEDFORWARD=0,parameter bit TIMING_LOOP=1,
+- parameter bit PI4=0,parameter int EQUALIZER=0
++ parameter bit PI4=0,parameter int EQUALIZER=0,parameter bit BLOCK_FIT=EQUALIZER!=0||ORDER==4
+ )(
+  input logic clk,rst,
+  input logic cfg_valid,
+@@ -142,7 +143,7 @@
+  bpsk_samples #(.RESET_ACTIVE(RESET_ACTIVE),.TABLE_DIR(TABLE_DIR)) samples(
+   clk,backend_rst,fv,write_frame,written[write_frame],fre,fim,sample_ce,reading_track?track_qv:acq_qv,process_frame,
+   sample_position[31:8],written[process_frame],reading_track?{18'd0,track_tag}:acq_tag,samples_valid,samples_re,samples_im,samples_tag);
+- bpsk_acquire #(.RESET_ACTIVE(RESET_ACTIVE),.TABLE_DIR(TABLE_DIR),.ORDER(ORDER),.AMPLITUDE(AMPLITUDE),.BLOCK_FIT(EQUALIZER!=0)) acquisition(
++ bpsk_acquire #(.RESET_ACTIVE(RESET_ACTIVE),.TABLE_DIR(TABLE_DIR),.ORDER(ORDER),.AMPLITUDE(AMPLITUDE),.BLOCK_FIT(BLOCK_FIT)) acquisition(
+   clk,backend_rst,acquisition_start,energy_bus,training[160*BITS-1:32*BITS],acquisition_busy,acquisition_done,acquisition_confidence,
+   acquisition_delay,acquisition_frequency,acquisition_phase,acquisition_gain,acquisition_score,
+   acq_qv,acq_pos,acq_tag,samples_valid&&!reading_track,samples_re,samples_im,samples_tag);

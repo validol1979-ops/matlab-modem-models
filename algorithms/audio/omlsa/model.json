@@ -1,0 +1,28 @@
+{
+  "id": "audio/omlsa",
+  "title": "Speech-preserving spectral gain",
+  "category": "audio",
+  "path": "algorithms/audio/omlsa",
+  "operations": [
+    "omlsa"
+  ],
+  "cases": [
+    "calibrated_noise_reduction"
+  ],
+  "limits": "OM-LSA gain with decision-directed prior SNR and estimated speech presence. Noise is calibrated from a stated noise-only prefix; historical IMCRA noise tracking is not reproduced.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/israel_omlsa/omlsa.m",
+      "original": "algorithms/audio/omlsa/original/omlsa.m",
+      "sha256": "d0bd9a2f02736442a2d63e1fb28a1d197c4507f3b4e4b123607c321b3b715684",
+      "bytes": 15046
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

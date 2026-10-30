@@ -1,0 +1,48 @@
+{
+  "name": "dqpsk_19_09_2006",
+  "original_sha256": "84ee37feeb421446785bf47e6d8c1ff83d3318897522e7c9614329dd9a646816",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Error due to multiple causes.",
+  "migration": {
+    "source": "modems/dqpsk_19_09_2006/original/dqpsk_19_09_2006.mdl",
+    "original_sha256": "84ee37feeb421446785bf47e6d8c1ff83d3318897522e7c9614329dd9a646816",
+    "prepared_sha256": "1425fa1702abd6a1e8d857556a814b0c174bee43e90e1af20abd2b09e1ddecc5",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      },
+      {
+        "old": "commdigbbndpm2/",
+        "new": "commdigbbndpm3/",
+        "count": 2
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 26,
+  "finite": true,
+  "captured_values": 223258,
+  "capture_sha256": "f0548476cd906798ec8e9e8a49661c5ce657d6297012cc1d2566afe89fcac464",
+  "mapper_checks": [
+    {
+      "block": "dqpsk_19_09_2006/Modulator/data_mapper",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 8,
+      "alphabet": 8,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

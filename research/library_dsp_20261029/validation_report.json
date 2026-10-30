@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "validated_at_utc": "2026-10-29T15:44:14.106342+00:00",
+  "scope": "Backlog/source provenance validation only; no new DSP implementations accepted",
+  "task_count": 29,
+  "unique_verified_source_files": 52,
+  "source_references": 68,
+  "indexed_rag_references_covered_by_verified_reads": 18,
+  "code_line_ranges_checked": 11,
+  "pdf_page_locators_checked": 16,
+  "todo_links_checked": 72,
+  "rag_read_count": 25,
+  "rag_search_count": 60,
+  "rag_catalog_count": 43,
+  "raw_artifact_hashes_verified": 177,
+  "dependencies_acyclic": true,
+  "independent_review": "/root/fifo_review: PASS; novelty, sources, 29 task IDs, important algorithm caveats",
+  "previous_lms_evidence_preserved": {
+    "result": "PASS",
+    "source_files": 1481,
+    "artifacts": 960
+  },
+  "planning_file_hashes": {
+    "research/library_dsp_20261029/task_catalog.json": "083813b1bc38e8f515e5534083cf8cab37ca659bfcded338711bea8e0df5366b",
+    "research/library_dsp_20261029/rag_evidence.json": "9b7d1b979ff8a23645314a8e47f76ca98e42077d09aefc90f6704f5991e01979",
+    "docs/RTL_TODO.md": "befb2cdebb9a23df4d0f46e9cb2939f0a95ff4176f53e670a289fec7848f00b0"
+  }
+}

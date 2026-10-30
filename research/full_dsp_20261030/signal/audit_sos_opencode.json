@@ -1,0 +1,90 @@
+{
+  "scope": "ext_signal_sos.py numerical review (read-only on model and tests; no network, no RTL)",
+  "command": "PYTHONPATH=. python -m unittest test_ext_signal_sos -v",
+  "unittest_result": {"ran": 6, "passed": 6, "failed": 0, "errors": 0},
+  "issues": [
+    {
+      "id": "SOS-01",
+      "severity": "high",
+      "title": "Complex-dtype ndarray coefficients silently lose imaginary part",
+      "detail": "_sos() calls np.array(sos, dtype=float) which discards imaginary parts with only a ComplexWarning in the float path. Fixed path accepts the result silently, so a complex-valued coefficient becomes a real filter.",
+      "reproduction": "SOSFilterFixed(np.array([[1+1j,0,0,1,0,0]])).sos -> [[268435456,0,0,268435456,0,0]] (no error). SOSFilter(np.array([[1+1j,0,0,1,0,0]])) -> ComplexWarning, coefficient 1.0. Python-list complex input is correctly rejected.",
+      "fix_hint": "Reject np.iscomplexobj(sos) / non-real dtype before conversion."
+    },
+    {
+      "id": "SOS-02",
+      "severity": "medium",
+      "title": "Bool coefficient arrays accepted as numeric",
+      "detail": "True/False coefficients are coerced to 1.0/0.0 without error in both classes. The task asked for this to be an atomic invalid-input check.",
+      "reproduction": "SOSFilterFixed([[True,False,False,True,False,False]]).sos -> [[268435456,0,0,268435456,0,0]]; SOSFilter(same).sos -> [[1,0,0,1,0,0]]",
+      "fix_hint": "Check dtype kind 'b' and bool elements before float conversion."
+    },
+    {
+      "id": "SOS-03",
+      "severity": "medium",
+      "title": "process() is not atomic: a malformed sample mid-batch leaves partial state",
+      "detail": "process() loops over push(); samples before the bad one have already advanced the state. push() itself validates before mutating, so the defect is only batch-level.",
+      "reproduction": "m=SOSFilterFixed([[1,0,0,1,-.5,0]]); s=repr(m.state); m.process([1,2,'bad']) raises ValueError; repr(m.state)!=s is True.",
+      "fix_hint": "Validate the whole batch first, or snapshot and restore state on exception."
+    },
+    {
+      "id": "SOS-04",
+      "severity": "medium",
+      "title": "Zero-input limit cycle in fixed-point (DC offset stuck after impulse)",
+      "detail": "A stable quantized pole at -0.99 keeps a nonzero output forever after one impulse. Rounding deadband holds a constant value. This is a valid zero-input limit cycle, but it is not documented and no tests cover it. A resonator at r=0.999 keeps a residual of about 28 LSB with three clips.",
+      "reproduction": "m=SOSFilterFixed([[1,0,0,1,-.99,0]]); m.push(131071); [m.push(0)[0] for _ in range(5000)][-3:] -> [49,49,49]. r=0.999 resonator at th=0.3: max |y| over last 1000 zero-input samples = 28.",
+      "fix_hint": "Document the limit-cycle amplitude bound, or add a test that asserts the bound."
+    },
+    {
+      "id": "SOS-05",
+      "severity": "low",
+      "title": "Systematic rounding bias for negative ties (floor toward +inf)",
+      "detail": "Rounding is floor((raw+2^(f-1))/2^f). The docstring says negative ties are included, but the result is biased toward +inf: 0.5 gain gives -1->0, 1->1, -3->-1, 3->2. Over symmetric input this is a DC bias of about +0.5 LSB per section output.",
+      "reproduction": "SOSFilterFixed([[.5,0,0,1,0,0]]): inputs (-1,1,-3,3,-5,5) -> (0,1,-1,2,-2,3). Sum bias over -7..7 is +4.0 LSB.",
+      "fix_hint": "Use round-half-away-from-zero or add a documented convergent-rounding option. Add a negative-tie test."
+    },
+    {
+      "id": "SOS-06",
+      "severity": "low",
+      "title": "coef_bits does not bound the coefficient range",
+      "detail": "coef_bits sets only the shift. The overflow check is always signed32 (2^31), so with coef_bits=20 the representable coefficient is up to about 2048 instead of about 8. Not reproduced with an actual overflow; found by code reading.",
+      "reproduction": "Code reading: _sos(sos, frac) checks against (1<<31)-1 regardless of frac.",
+      "fix_hint": "Check against (1<<(coef_bits+3))-1 or the intended Q-format bound."
+    },
+    {
+      "id": "SOS-07",
+      "severity": "low",
+      "title": "Input range and saturation range are inconsistent",
+      "detail": "Input accepts -131072 (signed18 min), but output saturation is symmetric at +/-131071. An input of -131072 is therefore not saturated before the first multiply and is only clipped after it, adding a clip count.",
+      "reproduction": "SOSFilterFixed([[1,0,0,1,0,0]]).push(-131072) -> (-131071,0), clipping_count increments.",
+      "fix_hint": "Use the symmetric range [-131071,131071] for inputs, or document the asymmetry."
+    },
+    {
+      "id": "SOS-08",
+      "severity": "low",
+      "title": "Intermediate section outputs can saturate despite balancing",
+      "detail": "Offline peak-gain balancing equalizes the section peak gains in float. It does not guarantee that intermediate signal amplitudes stay within signed18. Clipping is only counted, not prevented, and no test checks clipping on in-band full-scale input.",
+      "reproduction": "Code reading and clipping_count only; no full-scale in-band case was run.",
+      "fix_hint": "Add a headroom test with a full-scale in-band sinusoid, or report the per-section peak bound."
+    }
+  ],
+  "passed_checks": [
+    "All 6 unittest cases pass (float complex vs scipy.sosfilt, 1/2/4 sections, integer hand recurrence, fixed vs scipy error RMS < 12, state validation and reset, quantized stability, state saturation, parameter rejection).",
+    "Offline peak balancing preserves transfer: max |H_orig - H_balanced| = 6.1e-9 on butter(8, 0.27), at the Q28 quantization level. The product of section scales equals 1 by construction (geometric mean).",
+    "Quantized pole check rejects pole -(1-1e-12) (tested) and accepts -0.999 (tested). Probes show -(1-2^-27) and -(1-2^-28) are also accepted after quantization, which is correct since they are inside the unit circle. Denominator roots are scale-invariant, so the float np.roots check on the quantized integers is valid.",
+    "Per-sample push() validates before mutating state (SOS-03 applies only to process()). Bool samples, floats, NaN, inf, strings, and float IQ pairs are rejected atomically.",
+    "Accepted integer forms: numpy int scalars and numpy int IQ arrays are handled. Python-list complex coefficients are rejected.",
+    "Symmetric output saturation with per-sample clipping count; state values clipped to signed state_bits (40..64). Python ints prevent wrap-around in intermediate products.",
+    "Rounding formula floor((raw+2^(f-1))/2^f) matches the integer hand recurrence in test_integer_hand_recurrence for positive and negative raw values in the tested range.",
+    "Zero-input decay confirmed for r=0.5 resonator and for zero initial state (no spurious output)."
+  ],
+  "limitations": [
+    "The integer hand-recurrence oracle duplicates the implementation's rounding formula, so it is self-consistent rather than independent. Negative ties are not exercised by any test.",
+    "No test covers bool or complex coefficient arrays, process() atomicity, or coef_bits range enforcement.",
+    "Stability is checked only on the quantized denominator using np.roots in float. No margin is enforced, and poles near |z|=1 are sensitive to quantization.",
+    "Scipy comparison uses the float path. The fixed-point error bound (RMS < 12) is loose and was not derived from the quantization noise model.",
+    "No hardware timing or RTL claims were checked, per the task scope.",
+    "The balancing grid (1025 points) is an approximation to the true section peak gain; very sharp resonances between grid points may be under-balanced.",
+    "Probe scripts were run from <local-tmp>; no model or test files were edited."
+  ]
+}

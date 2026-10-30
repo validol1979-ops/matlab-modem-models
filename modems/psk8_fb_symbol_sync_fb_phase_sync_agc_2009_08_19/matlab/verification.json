@@ -1,0 +1,48 @@
+{
+  "name": "psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19",
+  "original_sha256": "f38534e72da61f4dcd3697fcf5c3e58946daf502710c2b92318020d4c746294e",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Error due to multiple causes.",
+  "migration": {
+    "source": "modems/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19/original/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.mdl",
+    "original_sha256": "f38534e72da61f4dcd3697fcf5c3e58946daf502710c2b92318020d4c746294e",
+    "prepared_sha256": "ae230bae5538bc250aec08ea042d32dded5f1b90d15bcf173bff538461943729",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      },
+      {
+        "old": "commdigbbndpm2/",
+        "new": "commdigbbndpm3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 25,
+  "finite": true,
+  "captured_values": 309273,
+  "capture_sha256": "76826ea56b331f5e3b458c485e01cc3e45766ccb0cd5b4f77141e7528c5a2725",
+  "mapper_checks": [
+    {
+      "block": "psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19/Modulator1/data_mapper",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 8,
+      "alphabet": 8,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

@@ -1,0 +1,128 @@
+{
+  "review_isolation_before": {
+    "status": "PASS",
+    "before": {
+      "build/python_results.json": "332253d1163600d9d58b661a567dafb795bbfa38e3e47fca9ce2cb047075bbd3",
+      "build/cross_results.json": "67b95a75f94ee1a95aa0088ee9f7cc334f5e2fc7c4b69f05df60a16f96b05a0d",
+      "build/all_results.json": "c096cccbbad8bd12bf5e1e0a69a0af2387f117452637d0e6d2c1370af676493f",
+      "build/octave.log": "036371acfb08464b6ee1fcd0812def6fef3f0ac06b1c782c8e0d6d5d70c947f3",
+      "build/questa/results.json": "14f09a488a5c93141c3fd59c364cd5e95d7f051beaddbf2274fdbbbd0f50cea3",
+      "build/typed/all_results.json": "7ccfd1e050d08c5edcad7d9eff1ab4fd24f6db70b233da3a15a502dcc0db3e27"
+    },
+    "after": {
+      "build/python_results.json": "332253d1163600d9d58b661a567dafb795bbfa38e3e47fca9ce2cb047075bbd3",
+      "build/cross_results.json": "67b95a75f94ee1a95aa0088ee9f7cc334f5e2fc7c4b69f05df60a16f96b05a0d",
+      "build/all_results.json": "c096cccbbad8bd12bf5e1e0a69a0af2387f117452637d0e6d2c1370af676493f",
+      "build/octave.log": "036371acfb08464b6ee1fcd0812def6fef3f0ac06b1c782c8e0d6d5d70c947f3",
+      "build/questa/results.json": "14f09a488a5c93141c3fd59c364cd5e95d7f051beaddbf2274fdbbbd0f50cea3",
+      "build/typed/all_results.json": "7ccfd1e050d08c5edcad7d9eff1ab4fd24f6db70b233da3a15a502dcc0db3e27"
+    }
+  },
+  "review_matlab_isolation_before": {
+    "status": "PASS",
+    "before": {
+      "build/matlab_originals/compatible/results.json": "d852d9ee64fc2c40fe0d571e820872535392868775d0673b2102ab12a6ebbf49",
+      "build/research_review/matlab_results.json": "84b48e670bd088f331f41be1366f656df0a7d44dc1af42b04c5b5c1a970f48e5"
+    },
+    "after": {
+      "build/matlab_originals/compatible/results.json": "d852d9ee64fc2c40fe0d571e820872535392868775d0673b2102ab12a6ebbf49",
+      "build/research_review/matlab_results.json": "84b48e670bd088f331f41be1366f656df0a7d44dc1af42b04c5b5c1a970f48e5"
+    }
+  },
+  "build/all_results.json": {
+    "status": "PASS",
+    "source_files": 371
+  },
+  "build/typed/all_results.json": {
+    "status": "PASS",
+    "source_files": 371
+  },
+  "build/typed/matlab_results.json": {
+    "status": "PASS",
+    "source_files": 371
+  },
+  "build/contracts/all_results.json": {
+    "status": "PASS",
+    "source_files": 371
+  },
+  "build/contracts/matlab_results.json": {
+    "status": "PASS",
+    "source_files": 371
+  },
+  "matlab_expected_failure": {
+    "status": "PASS",
+    "process_exit_code": 1,
+    "model": "QAM64_2008_11_21",
+    "saved_status": "FAIL"
+  },
+  "research_single_selection": {
+    "status": "PASS",
+    "models": [
+      "oqpsk_2_sps_timing_recovery_2019_12_05"
+    ]
+  },
+  "browser_negative_controls": [
+    {
+      "atlas": "visual_report_assets",
+      "status": "PASS",
+      "caught_errors": [
+        "Error: startup-probe",
+        "Error: promise-probe",
+        "Resource load failed: file://<local-tmp>"
+      ]
+    },
+    {
+      "atlas": "typed_visual_assets",
+      "status": "PASS",
+      "caught_errors": [
+        "Error: startup-probe",
+        "Error: promise-probe",
+        "Resource load failed: file://<local-tmp>"
+      ]
+    }
+  ],
+  "status": "PASS",
+  "checked_at_utc": "2026-09-30T13:18:53.888894+00:00",
+  "build/visual_browser/results.json": {
+    "status": "PASS",
+    "browser": "Firefox / Marionette",
+    "checked_image_views": 80,
+    "filters": [
+      "name",
+      "no results",
+      "QAM family"
+    ],
+    "mobile_width": 500,
+    "horizontal_overflow": false,
+    "javascript_errors": []
+  },
+  "build/typed_browser/results.json": {
+    "status": "PASS",
+    "models": 17,
+    "image_views": 54,
+    "categories": 10,
+    "viewport_width": 500,
+    "javascript_errors": [],
+    "horizontal_overflow": false
+  },
+  "full_run": {
+    "python_tests": 185,
+    "frame_modems": 24,
+    "frame_uvm_transactions": 96,
+    "frame_negative_controls": 24,
+    "typed_cases": 40,
+    "typed_uvm_transactions": 80,
+    "boundary_cases": 27,
+    "expected_input_rejections": 21,
+    "workspace_unittest_entries": 13
+  },
+  "evidence_hashes": {
+    "build/all_results.json": "c096cccbbad8bd12bf5e1e0a69a0af2387f117452637d0e6d2c1370af676493f",
+    "build/typed/all_results.json": "7ccfd1e050d08c5edcad7d9eff1ab4fd24f6db70b233da3a15a502dcc0db3e27",
+    "build/typed/matlab_results.json": "66ca8d1014628dda8865584a07ca44367f25b9877e569c595461e5d66933611b",
+    "build/contracts/all_results.json": "c4a79ccace9a08c32b9eb85631a3466608047d610e605c4bc68b6fb20ed5153c",
+    "build/contracts/matlab_results.json": "7b9b6566bef1388fdd8e9cabafd71c61fb82e4dc827c49ca47d0ba893e532798",
+    "docs/verification_results.json": "0278c986140f1cd349ba1a8fb65199ed9ae269e18b5a6e2548eaa1d158c3452e",
+    "docs/typed_verification_results.json": "3c81dd3a986685598c50774b89c83fbaaca1e546ad86116ff4ef0f7f606d45cd"
+  }
+}

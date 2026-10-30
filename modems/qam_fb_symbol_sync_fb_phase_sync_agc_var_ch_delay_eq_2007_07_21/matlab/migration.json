@@ -1,0 +1,13 @@
+{
+  "source": "modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21/original/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.mdl",
+  "original_sha256": "da569a7a2c91e2096f1ae88301a37d08f9842443684bcf67adb5bae40fc03169",
+  "prepared_sha256": "c72983bede67d91de4396fae80c47406f67648fccde87d35c938fa34bbd5c57f",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

@@ -1,0 +1,197 @@
+workspace,case,metric,value
+modems/ofdm_awgn,2_qam_rx,symbol_errors,0
+modems/ofdm_awgn,2_qam_rx,payload_symbols,256
+modems/ofdm_awgn,2_qam_rx,alphabet,2
+modems/ofdm_awgn,2_qam_rx,negative_control_detected,true
+modems/ofdm_awgn,4_qam_rx,symbol_errors,0
+modems/ofdm_awgn,4_qam_rx,payload_symbols,256
+modems/ofdm_awgn,4_qam_rx,alphabet,4
+modems/ofdm_awgn,4_qam_rx,negative_control_detected,true
+modems/ofdm_awgn,16_qam_rx,symbol_errors,0
+modems/ofdm_awgn,16_qam_rx,payload_symbols,256
+modems/ofdm_awgn,16_qam_rx,alphabet,16
+modems/ofdm_awgn,16_qam_rx,negative_control_detected,true
+modems/ofdm_awgn,64_qam_rx,symbol_errors,0
+modems/ofdm_awgn,64_qam_rx,payload_symbols,256
+modems/ofdm_awgn,64_qam_rx,alphabet,64
+modems/ofdm_awgn,64_qam_rx,negative_control_detected,true
+modems/fsk_text,four_fsk_rx,symbol_errors,0
+modems/fsk_text,four_fsk_rx,payload_symbols,48
+synchronization/symbol_timing,costas_tracking,uncorrected_mse,3.1612611671398585
+synchronization/symbol_timing,costas_tracking,corrected_mse,9.151302492695652e-08
+synchronization/symbol_timing,gardner_tracking,uncorrected_mse,0.012205505134651295
+synchronization/symbol_timing,gardner_tracking,corrected_mse,1.116938939141852e-05
+channelizers/pfb_wola,pfb_decimation_4,desired_to_dc_leakage_db,53.50441789859862
+channelizers/pfb_wola,pfb_decimation_3,desired_to_dc_leakage_db,55.78690682726734
+channelizers/pfb_wola,wola_decimation_4,desired_to_dc_leakage_db,53.50441789859862
+channelizers/pfb_wola,wola_decimation_3,desired_to_dc_leakage_db,55.78690682726734
+filters/windowed_sinc,hamming_lowpass,stopband_peak_db,-60.30749070311349
+filters/windowed_sinc,hamming_lowpass,dc_gain,0.9999999999999999
+adaptive/lms_nlms_rls,lms,initial_mse,0.15244633527395937
+adaptive/lms_nlms_rls,lms,final_mse,5.3301696543518836e-21
+adaptive/lms_nlms_rls,lms,improvement_db,194.5637595618969
+adaptive/lms_nlms_rls,nlms,initial_mse,0.011525829467782897
+adaptive/lms_nlms_rls,nlms,final_mse,5.726914437658119e-33
+adaptive/lms_nlms_rls,nlms,improvement_db,280.6167218962077
+adaptive/lms_nlms_rls,rls,initial_mse,0.0026954973256938866
+adaptive/lms_nlms_rls,rls,final_mse,1.6606700400098266e-11
+adaptive/lms_nlms_rls,rls,improvement_db,82.10355554614276
+coding/ldpc,sum_product,uncoded_errors,1
+coding/ldpc,sum_product,decoded_errors,0
+coding/ldpc,sum_product,syndrome_weight,0
+coding/ldpc,sum_product,negative_control_detected,true
+coding/ldpc,sum_product,rejected_mutations,"[""flipped_decoded_bit"", ""bypassed_decoder""]"
+coding/ldpc,min_sum,uncoded_errors,1
+coding/ldpc,min_sum,decoded_errors,0
+coding/ldpc,min_sum,syndrome_weight,0
+coding/ldpc,min_sum,negative_control_detected,true
+coding/ldpc,min_sum,rejected_mutations,"[""flipped_decoded_bit"", ""bypassed_decoder""]"
+coding/ldpc,normalized_min_sum,uncoded_errors,1
+coding/ldpc,normalized_min_sum,decoded_errors,0
+coding/ldpc,normalized_min_sum,syndrome_weight,0
+coding/ldpc,normalized_min_sum,negative_control_detected,true
+coding/ldpc,normalized_min_sum,rejected_mutations,"[""flipped_decoded_bit"", ""bypassed_decoder""]"
+coding/ldpc,offset_min_sum,uncoded_errors,1
+coding/ldpc,offset_min_sum,decoded_errors,0
+coding/ldpc,offset_min_sum,syndrome_weight,0
+coding/ldpc,offset_min_sum,negative_control_detected,true
+coding/ldpc,offset_min_sum,rejected_mutations,"[""flipped_decoded_bit"", ""bypassed_decoder""]"
+filters/oset,notch_interference,residual_interference_amplitude,0.0017548966293450773
+filters/oset,scalar_kalman,input_mse,0.20542512818391256
+filters/oset,scalar_kalman,output_mse,0.0032208049493364552
+mimo/dsplog,zero_forcing,bit_errors,0
+mimo/dsplog,zero_forcing,payload_bits,256
+mimo/dsplog,mmse,bit_errors,0
+mimo/dsplog,mmse,payload_bits,256
+audio/stft,reconstruction,reconstruction_tolerance,2e-10
+audio/omlsa,calibrated_noise_reduction,input_mse,0.100124380626581
+audio/omlsa,calibrated_noise_reduction,output_mse,0.022641199053570635
+audio/omlsa,calibrated_noise_reduction,improvement_db,6.456404196432603
+arrays/beamforming,spatial_null,interferer_amplitude,3.0
+arrays/beamforming,spatial_null,output_mse,2.8231942053324104e-32
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,symbol_errors,0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,payload_symbols,320
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,ser,0.0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,bit_errors,0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,payload_bits,640
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,ber,0.0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,delay_samples,0.0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,frequency_cycles_per_sample,2.1438527402425606e-23
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,parameters,{}
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Clean,case,"""Clean channel"""
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,symbol_errors,0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,payload_symbols,320
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,ser,0.0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,bit_errors,0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,payload_bits,640
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,ber,0.0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,delay_samples,2.25
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,frequency_cycles_per_sample,0.0001501037631622742
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,parameters,"{""snr_db"": 28, ""gain"": 0.65, ""phase"": 0.38, ""frequency"": 0.00015, ""delay"": 2.25}"
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Impaired,case,"""AWGN + carrier + delay"""
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,symbol_errors,0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,payload_symbols,320
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,ser,0.0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,bit_errors,0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,payload_bits,640
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,ber,0.0
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,delay_samples,7.25
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,frequency_cycles_per_sample,-0.00030008154815567515
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,parameters,"{""snr_db"": 32, ""gain"": 1.3, ""phase"": -0.9, ""frequency"": -0.0003, ""delay"": 7.25, ""echo"": 0, ""drift"": 0, ""phase_noise"": 0}"
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Stress,case,"""Stress channel"""
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Original MATLAB capture,tx_monitor,"""modulator"""
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Original MATLAB capture,rx_monitor,"""1_sps_clock_domain"""
+modems/oqpsk_2_sps_timing_recovery_2019_12_05,Original MATLAB capture,captured_samples,16385
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,symbol_errors,0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,payload_symbols,320
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,ser,0.0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,bit_errors,0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,payload_bits,640
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,ber,0.0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,delay_samples,0.0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,frequency_cycles_per_sample,-4.372174840824252e-09
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,parameters,{}
+modems/qpsk_8_sps_fb_sync_2020_11_25,Clean,case,"""Clean channel"""
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,symbol_errors,0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,payload_symbols,320
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,ser,0.0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,bit_errors,0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,payload_bits,640
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,ber,0.0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,delay_samples,2.25
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,frequency_cycles_per_sample,0.0001502985150116664
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,parameters,"{""snr_db"": 28, ""gain"": 0.65, ""phase"": 0.38, ""frequency"": 0.00015, ""delay"": 2.25}"
+modems/qpsk_8_sps_fb_sync_2020_11_25,Impaired,case,"""AWGN + carrier + delay"""
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,symbol_errors,0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,payload_symbols,320
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,ser,0.0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,bit_errors,0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,payload_bits,640
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,ber,0.0
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,delay_samples,7.25
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,frequency_cycles_per_sample,-0.00029991643956809065
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,parameters,"{""snr_db"": 32, ""gain"": 1.3, ""phase"": -0.9, ""frequency"": -0.0003, ""delay"": 7.25, ""echo"": 0, ""drift"": 0, ""phase_noise"": 0}"
+modems/qpsk_8_sps_fb_sync_2020_11_25,Stress,case,"""Stress channel"""
+modems/qpsk_8_sps_fb_sync_2020_11_25,Original MATLAB capture,tx_monitor,"""modulator"""
+modems/qpsk_8_sps_fb_sync_2020_11_25,Original MATLAB capture,rx_monitor,"""1_sps_clock_domain"""
+modems/qpsk_8_sps_fb_sync_2020_11_25,Original MATLAB capture,captured_samples,16385
+modems/qpsk_script_basic,Clean,symbol_errors,0
+modems/qpsk_script_basic,Clean,payload_symbols,320
+modems/qpsk_script_basic,Clean,ser,0.0
+modems/qpsk_script_basic,Clean,bit_errors,0
+modems/qpsk_script_basic,Clean,payload_bits,640
+modems/qpsk_script_basic,Clean,ber,0.0
+modems/qpsk_script_basic,Clean,delay_samples,0.0
+modems/qpsk_script_basic,Clean,frequency_cycles_per_sample,-4.372174840824252e-09
+modems/qpsk_script_basic,Clean,parameters,{}
+modems/qpsk_script_basic,Clean,case,"""Clean channel"""
+modems/qpsk_script_basic,Impaired,symbol_errors,0
+modems/qpsk_script_basic,Impaired,payload_symbols,320
+modems/qpsk_script_basic,Impaired,ser,0.0
+modems/qpsk_script_basic,Impaired,bit_errors,0
+modems/qpsk_script_basic,Impaired,payload_bits,640
+modems/qpsk_script_basic,Impaired,ber,0.0
+modems/qpsk_script_basic,Impaired,delay_samples,2.25
+modems/qpsk_script_basic,Impaired,frequency_cycles_per_sample,0.0001502985150116664
+modems/qpsk_script_basic,Impaired,parameters,"{""snr_db"": 28, ""gain"": 0.65, ""phase"": 0.38, ""frequency"": 0.00015, ""delay"": 2.25}"
+modems/qpsk_script_basic,Impaired,case,"""AWGN + carrier + delay"""
+modems/qpsk_script_basic,Stress,symbol_errors,0
+modems/qpsk_script_basic,Stress,payload_symbols,320
+modems/qpsk_script_basic,Stress,ser,0.0
+modems/qpsk_script_basic,Stress,bit_errors,0
+modems/qpsk_script_basic,Stress,payload_bits,640
+modems/qpsk_script_basic,Stress,ber,0.0
+modems/qpsk_script_basic,Stress,delay_samples,7.25
+modems/qpsk_script_basic,Stress,frequency_cycles_per_sample,-0.00029991643956809065
+modems/qpsk_script_basic,Stress,parameters,"{""snr_db"": 32, ""gain"": 1.3, ""phase"": -0.9, ""frequency"": -0.0003, ""delay"": 7.25, ""echo"": 0, ""drift"": 0, ""phase_noise"": 0}"
+modems/qpsk_script_basic,Stress,case,"""Stress channel"""
+modems/qpsk_script_costas,Clean,symbol_errors,0
+modems/qpsk_script_costas,Clean,payload_symbols,320
+modems/qpsk_script_costas,Clean,ser,0.0
+modems/qpsk_script_costas,Clean,bit_errors,0
+modems/qpsk_script_costas,Clean,payload_bits,640
+modems/qpsk_script_costas,Clean,ber,0.0
+modems/qpsk_script_costas,Clean,delay_samples,0.0
+modems/qpsk_script_costas,Clean,frequency_cycles_per_sample,-4.372174840824252e-09
+modems/qpsk_script_costas,Clean,parameters,{}
+modems/qpsk_script_costas,Clean,case,"""Clean channel"""
+modems/qpsk_script_costas,Impaired,symbol_errors,0
+modems/qpsk_script_costas,Impaired,payload_symbols,320
+modems/qpsk_script_costas,Impaired,ser,0.0
+modems/qpsk_script_costas,Impaired,bit_errors,0
+modems/qpsk_script_costas,Impaired,payload_bits,640
+modems/qpsk_script_costas,Impaired,ber,0.0
+modems/qpsk_script_costas,Impaired,delay_samples,2.25
+modems/qpsk_script_costas,Impaired,frequency_cycles_per_sample,0.0001502985150116664
+modems/qpsk_script_costas,Impaired,parameters,"{""snr_db"": 28, ""gain"": 0.65, ""phase"": 0.38, ""frequency"": 0.00015, ""delay"": 2.25}"
+modems/qpsk_script_costas,Impaired,case,"""AWGN + carrier + delay"""
+modems/qpsk_script_costas,Stress,symbol_errors,0
+modems/qpsk_script_costas,Stress,payload_symbols,320
+modems/qpsk_script_costas,Stress,ser,0.0
+modems/qpsk_script_costas,Stress,bit_errors,0
+modems/qpsk_script_costas,Stress,payload_bits,640
+modems/qpsk_script_costas,Stress,ber,0.0
+modems/qpsk_script_costas,Stress,delay_samples,7.25
+modems/qpsk_script_costas,Stress,frequency_cycles_per_sample,-0.00029991643956809065
+modems/qpsk_script_costas,Stress,parameters,"{""snr_db"": 32, ""gain"": 1.3, ""phase"": -0.9, ""frequency"": -0.0003, ""delay"": 7.25, ""echo"": 0, ""drift"": 0, ""phase_noise"": 0}"
+modems/qpsk_script_costas,Stress,case,"""Stress channel"""

@@ -1,0 +1,90 @@
+{
+  "audit": "ext_signal_fm.py short independent review",
+  "scope": "Read only ext_signal_fm.py. No external reads, network, or RTL. Production model and tests not modified.",
+  "status": "written immediately after reading; reproductions listed below are to be run, not yet confirmed",
+  "conventions_checked": {
+    "preemphasis_inverse": "Modulator v[n]=(x[n]-a*x[n-1])/(1-a); demod y[n]=y[n-1]+(1-a)(v[n]-y[n-1]). Exact-arithmetic error e[n]=y[n]-x[n] obeys e[n]=a*e[n-1], so the pair is an exact inverse. Fixed path uses aq=round(a*2^30) on both sides, so the pair matches within rounding.",
+    "discriminator_scale": "v=angle*fs*AMP/(dev*2^32) with angle in 2^32/turn. Consistent with modulator inc=dev*v*2^32/(fs*AMP). Verified by algebra.",
+    "phase_convention": "Modulator advances phase before emitting the sample. Demod computes x[n]*conj(p[n-1]), so output n matches modulator input n for n>=1. Demod output 0 for the first sample, so input sample 0 is never recovered.",
+    "cross_product": "re=x0*p0+x1*p1, im=x1*p0-x0*p1 equals x*conj(p). Correct.",
+    "cordic_quadrants": "x<0 with y>=0 maps z to +2^31 and x<0 with y<0 maps to -2^31, then both are negated. Derivation gives angle=+/-pi+angle(-x,-y). Correct. x<0,y=0 returns +pi as documented.",
+    "input_width": "Valid IQ is signed18, so |cross product| <= 2^35. The abs>=2^36 guard never fires on valid input. Consistent with the stated signed36 bound.",
+    "zero_power": "Zero-power IQ resets previous, valid, confidence, state and returns 0. re=im=0 cannot occur after the power check, so atan2_word never receives (0,0) from demod."
+  },
+  "issues": [
+    {
+      "id": "F1",
+      "severity": "low",
+      "where": "FMModulator.push (fixed path)",
+      "problem": "Validation is atomic, but state is mutated before dds.configure/dds.next. self.old and self.phase change first, so an exception from the DDS leaves the modulator advanced without a matching self.last.",
+      "repro": "Monkeypatch dds.next to raise, call push(1000), then inspect old/phase versus last. They diverge.",
+      "fix_hint": "Compute new phase and dds output into locals, then commit old, phase, clippings and last together."
+    },
+    {
+      "id": "F2",
+      "severity": "low",
+      "where": "FMModulator.push / FMDemodulator.push",
+      "problem": "accept=False still runs full input validation, so invalid samples raise even when not accepted. This is not documented. Modulator with accept=False also skips the old update, which is correct only if validation is not expected to be skipped.",
+      "repro": "push(2**20, accept=False) on fixed modulator raises ValueError.",
+      "fix_hint": "Document the contract, or intentionally validate-only when accept=False."
+    },
+    {
+      "id": "F3",
+      "severity": "info",
+      "where": "ATAN table, atan2_word",
+      "problem": "ATAN[30]=1 and ATAN[31]=0 in 2^32/turn units, so the final iterations contribute no angle. Residual angle error is a few LSB. Acceptable but should be stated as the accuracy bound.",
+      "repro": "Compute ATAN[28:32] and compare atan2_word against math.atan2 scaled to 2^32/turn over random vectors."
+    },
+    {
+      "id": "F4",
+      "severity": "info",
+      "where": "FMModulator pre-emphasis",
+      "problem": "Pre-emphasis gain 1/(1-a) is about 30.4 for 400 kHz and 75 us. Full-scale audio steps clip. clippings counts this, but the modulator inverse is not exact on clipped samples (clamp breaks the e[n]=a*e[n-1] identity).",
+      "repro": "Feed a full-scale square wave (+/-AMP) through the fixed modulator and demodulator, then compare output to input and check clippings > 0."
+    },
+    {
+      "id": "F5",
+      "severity": "info",
+      "where": "_parameters",
+      "problem": "aq=round(a*2^30) is allowed to be 0 when fs*tau is very small (no emphasis), and the float path then uses a near 0. This degenerate case is accepted silently, with no warning.",
+      "repro": "fs=400000, tau=1e-12 with fixed=True gives aq=0."
+    },
+    {
+      "id": "F6",
+      "severity": "info",
+      "where": "_rounddiv",
+      "problem": "(2a+b)//(2b) rounds half toward +infinity, so negative half-LSB values round toward zero. The bias is at most 0.5 LSB, not cumulative, but it is asymmetric.",
+      "repro": "_rounddiv(-1,2) == 0 and _rounddiv(1,2) == 1."
+    },
+    {
+      "id": "F7",
+      "severity": "limitation",
+      "where": "Integer width claims",
+      "problem": "Python integers are unbounded. The 64-bit and 96-bit widths are analytic only, enforced just by the atan2_word input guard and _sat(...,64) on the state. This is intentional per the brief, but no overflow check exists for the 96-bit IIR products.",
+      "repro": "Not applicable; analytic only."
+    },
+    {
+      "id": "F8",
+      "severity": "limitation",
+      "where": "DDS dependency",
+      "problem": "DDS(0), configure and next come from ext_signal_core, which was not read. The default 12-bit phase LUT quantizes the 32-bit phase to 2*pi/4096 steps, which limits the discriminator's phase accuracy and adds spurs. Not measured here. No timing claims."
+    },
+    {
+      "id": "F9",
+      "severity": "limitation",
+      "where": "float vs fixed parity",
+      "problem": "Float path uses exact a, fixed path uses aq/2^30. Output parity is only approximate, and no cross-check is included in this file."
+    }
+  ],
+  "validation_summary": {
+    "parameters": "Rejects bool, non-real, non-finite, non-positive, deviation>=fs/2, non-integer fs/dev in fixed mode, and aq outside [0,2^30). aq=2^30 is rejected, so the emphasis denominator never becomes zero.",
+    "audio": "Fixed requires an integral value in +/-131071. Float requires |x|<=1. Both reject bool and non-finite.",
+    "iq": "Fixed requires a 2-element signed18 integral sequence. Float requires a finite number. Zero power is handled without error.",
+    "zero_amplitude": "Zero IQ is handled by the power==0 branch. Zero audio gives zero discriminator output after the reset-time transient."
+  },
+  "not_done": [
+    "No test generation, no test run, no RTL or external reads.",
+    "No timing claims.",
+    "ext_signal_core.DDS behavior not verified."
+  ]
+}

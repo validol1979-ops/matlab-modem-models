@@ -1,0 +1,31 @@
+{
+  "status": "PAUSED_DRAFT_NOT_VERIFIED",
+  "recorded_at_utc": "2026-10-13T15:04:23.790415+00:00",
+  "reason": "User requested stop today and continuation tomorrow; floating SER not integrated",
+  "workspace": "<local-tmp>",
+  "draft_file": "<local-tmp>",
+  "patch": "<local-tmp>",
+  "draft_sha256": "cb0e120ebee6628705df0169c3c1b29c9996a85c3756c6b961b387bde3e3a1ce",
+  "source_changes_only": [
+    "tools/uvm_floating_reference.py"
+  ],
+  "existing_rx_files_unchanged": {
+    "rtl/tb/bpsk_rx_uvm_tb.sv": true,
+    "tools/run_bpsk_uvm.py": true,
+    "tests/test_bpsk_uvm_evidence.py": true
+  },
+  "cli_attempt_started": false,
+  "active_cli_process_group": null,
+  "tests_run_this_batch": [],
+  "uvm_integration_done": false,
+  "next_steps": [
+    "Run exactly one bounded Pi attempt idle90/hard240 before implementation; stop backend failure",
+    "Add independent float helper tests: fixed receive/combine banned, truth changes decisions unchanged, Q15 gains and shapes",
+    "Write immutable float decisions/original truth and payload errors/denominators before existing truth negatives",
+    "Validate metadata against independent float rerun and exact pin input provenance",
+    "Extend real RX UVM scoreboard for per-frame actual RTL versus float error counts and delta while retaining all numeric/SER/reset gates",
+    "Add metadata decision/errorcount/denominator negative controls: independent validator rejection and actual UVM FLOAT_SER fatal/nonzero/no completion",
+    "Run targeted tests then final defaultboth/all gate for all3RX profiles and TX; verify fresh source/artifact evidence",
+    "Deliver staged files and diff to root for review; no root copies or synthesis"
+  ]
+}

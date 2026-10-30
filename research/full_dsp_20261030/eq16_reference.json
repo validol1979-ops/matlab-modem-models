@@ -1,0 +1,15 @@
+{
+  "source": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+  "source_sha256": "f8c3194caa0f2a2e96629f0d6c90fb51dbafa043d7224bccd7c769c3bbe55bf9",
+  "N": 510,
+  "cutoff_normalized_nyquist": 0.0625,
+  "rolloff": 0.92,
+  "window": "kaiser",
+  "beta": 4.4,
+  "delay_convention": "a[0]=0; a[1:512]=b511 from source one-sample IntegerDelay1; h=sqrt(8)*a",
+  "group_delay_samples": 256,
+  "formula_crosscheck_max_error": 2.7755575615628914e-17,
+  "extraction": "MatData DataTag0 uu6bit unpack; miDOUBLE tag9 payload4088 at decoded byte9592",
+  "fixture": "tests/data/eq16_source_prototype_20261030.json",
+  "fixture_sha256": "74b333a9e8eebb2d6df8aaec7b31a7ece6d5cfd01ab5fbdd383d5dc68b0ebf98"
+}

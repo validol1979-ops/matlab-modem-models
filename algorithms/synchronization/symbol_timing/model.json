@@ -1,0 +1,114 @@
+{
+  "id": "synchronization/symbol_timing",
+  "title": "Carrier and symbol synchronization",
+  "category": "synchronization",
+  "path": "algorithms/synchronization/symbol_timing",
+  "operations": [
+    "costas",
+    "timing"
+  ],
+  "cases": [
+    "costas_tracking",
+    "gardner_tracking"
+  ],
+  "limits": "Explicit Gardner PI timing loop and decision-directed QPSK Costas loop. The five original TED modes, all interpolators and MATLAB System Objects are not reproduced by this smaller contract.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/timing/README.md",
+      "original": "algorithms/synchronization/symbol_timing/original/README.md",
+      "sha256": "dce3d5b6a046768421ea3601a9a3065b4506c2d61378df1069d65ee70f568a02",
+      "bytes": 3683
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/calcSCurve.m",
+      "original": "algorithms/synchronization/symbol_timing/original/calcSCurve.m",
+      "sha256": "070e9c500df1066dd6d2834b3c59943d6f45961a6cc47c64c10fc35c40fd68e7",
+      "bytes": 3486
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/calcTedKp.m",
+      "original": "algorithms/synchronization/symbol_timing/original/calcTedKp.m",
+      "sha256": "91ca33193216f627348d2bb188acfc796663de3e8c0775cb0efac78241c01dc3",
+      "bytes": 1825
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/derivativeMf.m",
+      "original": "algorithms/synchronization/symbol_timing/original/derivativeMf.m",
+      "sha256": "960877dd55ad314274fb6a6bf9cf7636443bc62f701e6af0da5cf2dc22a8d253",
+      "bytes": 679
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/docs/receiver_diagram_timing_sync.png",
+      "original": "algorithms/synchronization/symbol_timing/original/docs/receiver_diagram_timing_sync.png",
+      "sha256": "77a4ac2dc047eb79c439ee1f9bea33dcd782228c63ccf6cc7d2a718769c10efa",
+      "bytes": 35218
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/experiments.md",
+      "original": "algorithms/synchronization/symbol_timing/original/experiments.md",
+      "sha256": "5abfeff00f4b64cd041b4da24d92501e353b6ea44185f0df471c862047fcc4cf",
+      "bytes": 4979
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/genTestVector.m",
+      "original": "algorithms/synchronization/symbol_timing/original/genTestVector.m",
+      "sha256": "2908e39c3a1a99e819fe05f9d53727e17c8a0afc6a5f613859057f475efb055f",
+      "bytes": 3006
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/main.m",
+      "original": "algorithms/synchronization/symbol_timing/original/main.m",
+      "sha256": "7e11fc30d5192206fdda7be722df64e66bf04148801829b18a06106ec756c77e",
+      "bytes": 6036
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/piLoopConstants.m",
+      "original": "algorithms/synchronization/symbol_timing/original/piLoopConstants.m",
+      "sha256": "58aa55257eb5c7c17c52d7d0caaf1b4680864a3513c8609c60282f6845d24ffb",
+      "bytes": 1192
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/plotTedGain.m",
+      "original": "algorithms/synchronization/symbol_timing/original/plotTedGain.m",
+      "sha256": "3b8cc6140d0a07b28e99c4e84d9f735ace50c4f943e450b156009d1529fc3471",
+      "bytes": 495
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/polyDecomp.m",
+      "original": "algorithms/synchronization/symbol_timing/original/polyDecomp.m",
+      "sha256": "c0809813974ecdb9a15ee1ecb6c2c0c6ad4271e045a3640f246e249b475504eb",
+      "bytes": 1229
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/polyInterpFilt.m",
+      "original": "algorithms/synchronization/symbol_timing/original/polyInterpFilt.m",
+      "sha256": "9e91524a591d2da94a71b0525f671bae2343f1a4a5b5d1539024b39202614b4d",
+      "bytes": 6911
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/sCurveDemo.mlx",
+      "original": "algorithms/synchronization/symbol_timing/original/sCurveDemo.mlx",
+      "sha256": "8603166f66cb17ea6dc4bb3602e7389d0fcedfb78a8f186d482a6ae23422de64",
+      "bytes": 315517
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/simSCurve.m",
+      "original": "algorithms/synchronization/symbol_timing/original/simSCurve.m",
+      "sha256": "113cbcf995f3f627ac0f882008063ac3685a59efb664ec24bcd345d0e6e79444",
+      "bytes": 4691
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/timing/symbolTimingSync.m",
+      "original": "algorithms/synchronization/symbol_timing/original/symbolTimingSync.m",
+      "sha256": "d0836f501f38b124ce50f88583ca62d633068d3a48ac8e615a41d1ae956c8ee6",
+      "bytes": 27414
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

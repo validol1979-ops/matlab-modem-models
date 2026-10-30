@@ -1,0 +1,14 @@
+{
+  "external_agent": "OpenCode openwebui/~anthropic/claude-haiku-latest via Qulab",
+  "cli_result": "exit0",
+  "issues": {
+    "SOS-01": "fixed explicit complex dtype rejection",
+    "SOS-02": "fixed bool coefficient rejection",
+    "SOS-03": "fixed atomic process rollback, regression test",
+    "SOS-04": "characterized r=.995 tail12LSB and pole.99 deadband49LSB; documented limitations",
+    "SOS-05": "halfup ties+infinity intentional contract, explicit negative-tie test",
+    "SOS-06": "signed32storage fixed; coef_bits definesfraction only, documented",
+    "SOS-07": "fullsigned18input/symmetricoutput intentional explicitcontract/test",
+    "SOS-08": "balancing doesnot guaranteeheadroom; clipping diagnostic, explicitlimitation"
+  }
+}

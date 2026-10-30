@@ -1,0 +1,97 @@
+Reading pref.tcl
+
+# 2024.1
+
+# vsim -64 -c -quiet -dpicpppath /usr/bin/gcc work.bpsk_rx_uvm_top "+SYMBOLS=768" "+CHECK_RESET_PREFIX" "+FLOAT_SER" "+WARM_SAMPLES=5600" "+VECTORS=<local-path>" "+SCENARIO=stalled" -do "run.do" -gTABLE_DIR=<local-path> 
+# Start time: 12:14:12 on Oct 15,2026
+# ** Warning: (vsim-7032) The 64-bit glibc RPM does not appear to be installed on this machine.  Calls to gcc may fail.
+# 
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2024.1 linux_x86_64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# ** Warning: (vsim-7032) The 64-bit glibc RPM does not appear to be installed on this machine.  Calls to gcc may fail.
+# 
+# do run.do
+# UVM_INFO ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test pilot_test...
+# UVM_INFO ~/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM PILOT SER frame=0 errors=0 symbols=576
+# UVM PILOT FLOAT SER frame=0 rtl_errors=0 float_errors=0 delta=0 symbols=576
+# UVM PILOT SER frame=1 errors=0 symbols=576
+# UVM PILOT FLOAT SER frame=1 rtl_errors=0 float_errors=0 delta=0 symbols=576
+# UVM PILOT SER frame=2 errors=0 symbols=576
+# UVM PILOT FLOAT SER frame=2 rtl_errors=0 float_errors=0 delta=0 symbols=576
+# UVM PILOT SER frame=3 errors=66 symbols=576
+# UVM PILOT FLOAT SER frame=3 rtl_errors=66 float_errors=64 delta=2 symbols=576
+# UVM_INFO ~/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1270) @ 265335000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO <local-path>) @ 265335000: uvm_test_top.env.scoreboard [INPUTS] UVM RX INPUTS checked=24731 expected=24731 discarded=0
+# UVM_INFO <local-path>) @ 265335000: uvm_test_top.env.scoreboard [RESULT] UVM PILOT FLOAT SUMMARY frames=4 rtl_errors=66 float_errors=64 symbols=2304
+# UVM_INFO <local-path>) @ 265335000: uvm_test_top.env.scoreboard [RESULT] UVM PACKET PILOT checked=3072 frames=4 acquisitions=4 errors=66 payload=2304 discarded=0 resets=1 partial_payload_discarded=0 partial_errors_discarded=0
+# UVM_INFO <local-path>) @ 265335000: uvm_test_top [KIND] UVM RX KIND packet=3 gaps=0
+# UVM_INFO <local-path>) @ 265335000: uvm_test_top [EPOCHS] UVM RX EPOCHS frames=4 checks=4168
+# UVM_INFO <local-path>) @ 265335000: uvm_test_top [COVER] UVM PILOT HANDSHAKES cfg=192 input=24731 stalls=3568 pending_resets=0
+# UVM_INFO <local-path>) @ 265335000: uvm_test_top [PROFILE] UVM PILOT PROFILE label_bits=1 index_bits=1 gaincfg=0 cfg_max=1 label_max=1 index_max=1
+# UVM_INFO ~/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 265335000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   11
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COVER]     1
+# [EPOCHS]     1
+# [INPUTS]     1
+# [KIND]     1
+# [PROFILE]     1
+# [RESULT]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# 
+# ** Note: $finish    : ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 265335 ns  Iteration: 70  Instance: /bpsk_rx_uvm_top
+# Break in Task uvm_pkg/uvm_root::run_test at ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh line 517
+# Stopped at ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh line 517
+# End time: 12:14:13 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.

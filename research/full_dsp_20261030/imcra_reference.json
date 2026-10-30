@@ -1,0 +1,349 @@
+{
+  "source": "algorithms/audio/omlsa/original/omlsa.m",
+  "source_sha256": "d0bd9a2f02736442a2d63e1fb28a1d197c4507f3b4e4b123607c321b3b715684",
+  "reference_sha256": "d97ffe73aa91b77f27c4c73c0a7c856fc3eb3f803bee3f7b04091500c2af77a1",
+  "transformations": [
+    "rename function and add trace output",
+    "disable GUI waitbar creation/update/close",
+    "capture existing locals after eta_2term feedback update; no arithmetic edits"
+  ],
+  "rate": 16000,
+  "samples": 64000,
+  "frames": 497,
+  "seed": 20261030,
+  "fields": [
+    "Ya2",
+    "gamma",
+    "eta",
+    "v",
+    "lambda_d",
+    "lambda_dav",
+    "lambda_dav_long",
+    "S",
+    "Smin",
+    "St",
+    "Smint",
+    "SMact",
+    "SMactt",
+    "qhat",
+    "phat",
+    "q",
+    "PH1",
+    "GH1",
+    "GH0",
+    "G",
+    "eta_2term",
+    "Sy",
+    "xi",
+    "P_local",
+    "P_global"
+  ],
+  "stimulus_sha256": "484210fad7ce2d4710d2c4fc811fa96607e32de4933b5e85f33b48538c2007fc",
+  "scenario": "four seconds PCM16 mono; nonstationary Gaussian noise, stationary 1kHz tone, gated harmonic signal",
+  "fixture": "tests/data/imcra_source_reference_20261030.npz",
+  "fixture_sha256": "926d27f15eebcafbd00a17e3a3bea8ff1ccc3233d26afb0934c167d0a8b9c9c6",
+  "fixture_bytes": 1745895,
+  "indices_zero_based": [
+    0,
+    1,
+    13,
+    14,
+    15,
+    28,
+    29,
+    30,
+    118,
+    119,
+    120,
+    121,
+    178,
+    179,
+    180,
+    238,
+    239,
+    240,
+    358,
+    359,
+    360,
+    478,
+    479,
+    480,
+    496
+  ],
+  "fixture_schema": "Ya2 all497 columns; remaining2D fields at indices; scalar traces at indices; each column is one source frame",
+  "reference_validation": {
+    "status": "PASS",
+    "frames": 497,
+    "bins": 257,
+    "rollovers": 33,
+    "feedback_exact": true,
+    "trace_sha256": "de62b3982e3ff0759740bf2f82a4e6a7e7cdde2ed425ac99897b9f67ff0fcac2",
+    "fields": {
+      "Ya2": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 4.056144945159172e-12,
+        "max": 1.0678827097483992
+      },
+      "gamma": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 3.282752492964394e-08,
+        "max": 16467.07876239196
+      },
+      "eta": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.015848931924611134,
+        "max": 16463.3309185011
+      },
+      "v": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 5.121639561875457e-10,
+        "max": 16466.058435172305
+      },
+      "lambda_d": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 2.8986561355422664e-07,
+        "max": 0.19297513548798356
+      },
+      "lambda_dav": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831913e-07,
+        "max": 0.1314096938971628
+      },
+      "lambda_dav_long": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831913e-07,
+        "max": 0.11730939783260531
+      },
+      "S": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831915e-07,
+        "max": 0.9619928303220571
+      },
+      "Smin": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831915e-07,
+        "max": 0.11353919704300003
+      },
+      "St": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831915e-07,
+        "max": 0.1260091451351932
+      },
+      "Smint": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831915e-07,
+        "max": 0.11353919704300003
+      },
+      "SMact": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831915e-07,
+        "max": 0.958177670951483
+      },
+      "SMactt": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831915e-07,
+        "max": 0.12231659406479542
+      },
+      "qhat": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 8.681689907419354e-06,
+        "max": 1.0
+      },
+      "phat": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "q": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 0.998
+      },
+      "PH1": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "GH1": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.08804225106054689,
+        "max": 516.5657135252975
+      },
+      "GH0": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.0007490978860599949,
+        "max": 0.19994258215038602
+      },
+      "G": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.002154199694807557,
+        "max": 100.79065533955354
+      },
+      "eta_2term": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.008759701229569022,
+        "max": 16465.038171173794
+      },
+      "Sy": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 1.9738890946831918e-07,
+        "max": 0.975170569523448
+      },
+      "xi": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.015848931924611138,
+        "max": 16215.815557498361
+      },
+      "P_local": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.005,
+        "max": 1.0
+      },
+      "P_global": {
+        "shape": [
+          257,
+          497
+        ],
+        "finite": true,
+        "min": 0.005,
+        "max": 1.0
+      },
+      "frame": {
+        "shape": [
+          497
+        ],
+        "finite": true,
+        "min": 1.0,
+        "max": 497.0
+      },
+      "rollover": {
+        "shape": [
+          497
+        ],
+        "finite": true,
+        "min": 0.0,
+        "max": 14.0
+      },
+      "first_nonzero": {
+        "shape": [
+          497
+        ],
+        "finite": true,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "mean_local": {
+        "shape": [
+          497
+        ],
+        "finite": true,
+        "min": 0.008965130189525,
+        "max": 0.9779583692379131
+      },
+      "frame_presence": {
+        "shape": [
+          497
+        ],
+        "finite": true,
+        "min": 0.005,
+        "max": 1.0
+      }
+    }
+  }
+}

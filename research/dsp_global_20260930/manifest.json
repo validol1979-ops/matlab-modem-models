@@ -1,0 +1,2345 @@
+{
+  "checked_date": "2026-09-30",
+  "purpose": "Расширение поиска MATLAB-моделей и модулей ЦОС, включая Китай, Иран, Индию, Израиль.",
+  "collections": [
+    {
+      "id": "timing",
+      "region": "International",
+      "title": "Symbol timing recovery",
+      "description": "Пять TED: Gardner, Mueller–Müller, early/late, zero-crossing, ML; четыре интерполятора; расчёт PI-петли и S-кривых.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "main.m; symbolTimingSync.m",
+      "dependencies_and_limits": "Демо использует comm.*, dsp.*, awgn, rcosdesign. Нужны соответствующие MathWorks toolbox; конкретная версия не проверена.",
+      "license_notes": "Отдельный LICENSE в репозитории не найден.",
+      "files": [
+        {
+          "path": "sources/timing/README.md",
+          "bytes": 3683,
+          "sha256": "dce3d5b6a046768421ea3601a9a3065b4506c2d61378df1069d65ee70f568a02",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/calcSCurve.m",
+          "bytes": 3486,
+          "sha256": "070e9c500df1066dd6d2834b3c59943d6f45961a6cc47c64c10fc35c40fd68e7",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/calcTedKp.m",
+          "bytes": 1825,
+          "sha256": "91ca33193216f627348d2bb188acfc796663de3e8c0775cb0efac78241c01dc3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/derivativeMf.m",
+          "bytes": 679,
+          "sha256": "960877dd55ad314274fb6a6bf9cf7636443bc62f701e6af0da5cf2dc22a8d253",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/docs/receiver_diagram_timing_sync.png",
+          "bytes": 35218,
+          "sha256": "77a4ac2dc047eb79c439ee1f9bea33dcd782228c63ccf6cc7d2a718769c10efa",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/experiments.md",
+          "bytes": 4979,
+          "sha256": "5abfeff00f4b64cd041b4da24d92501e353b6ea44185f0df471c862047fcc4cf",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/genTestVector.m",
+          "bytes": 3006,
+          "sha256": "2908e39c3a1a99e819fe05f9d53727e17c8a0afc6a5f613859057f475efb055f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/main.m",
+          "bytes": 6036,
+          "sha256": "7e11fc30d5192206fdda7be722df64e66bf04148801829b18a06106ec756c77e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/piLoopConstants.m",
+          "bytes": 1192,
+          "sha256": "58aa55257eb5c7c17c52d7d0caaf1b4680864a3513c8609c60282f6845d24ffb",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/plotTedGain.m",
+          "bytes": 495,
+          "sha256": "3b8cc6140d0a07b28e99c4e84d9f735ace50c4f943e450b156009d1529fc3471",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/polyDecomp.m",
+          "bytes": 1229,
+          "sha256": "c0809813974ecdb9a15ee1ecb6c2c0c6ad4271e045a3640f246e249b475504eb",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/polyInterpFilt.m",
+          "bytes": 6911,
+          "sha256": "9e91524a591d2da94a71b0525f671bae2343f1a4a5b5d1539024b39202614b4d",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/sCurveDemo.mlx",
+          "bytes": 315517,
+          "sha256": "8603166f66cb17ea6dc4bb3602e7389d0fcedfb78a8f186d482a6ae23422de64",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/simSCurve.m",
+          "bytes": 4691,
+          "sha256": "113cbcf995f3f627ac0f882008063ac3685a59efb664ec24bcd345d0e6e79444",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/timing/symbolTimingSync.m",
+          "bytes": 27414,
+          "sha256": "d0836f501f38b124ce50f88583ca62d633068d3a48ac8e615a41d1ae956c8ee6",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "source_url": "https://github.com/igorauad/symbol_timing_sync",
+      "commit": "f78a5658c9a5b4c279b47f9b8e68deff09505095",
+      "region_basis": "Международная площадка; страна не назначалась.",
+      "archive": {
+        "path": "archives/timing.zip",
+        "bytes": 375486,
+        "sha256": "1a71e22a7365b532aff1f9d593f09dc7a8479ba8bde9bdd3da48d4398c47b731",
+        "same_hash_in_existing_project": []
+      },
+      "download_url": "https://codeload.github.com/igorauad/symbol_timing_sync/zip/f78a5658c9a5b4c279b47f9b8e68deff09505095",
+      "matlab_file_count": 12,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 416361
+    },
+    {
+      "id": "channelizer",
+      "region": "International",
+      "title": "PFB/WOLA channelizer",
+      "description": "Полифазный и WOLA-канализатор, максимальная и немаксимальная децимация.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "pfb_channelizer_demo.m; wola_channelizer_demo.m",
+      "dependencies_and_limits": "Ядра без сторонних toolbox по README. Для демо подключить соседний sources/wsinc. Для необязательного C++ MEX нужны FFTW3 и C++17.",
+      "license_notes": "Отдельный LICENSE в репозитории не найден.",
+      "files": [
+        {
+          "path": "sources/channelizer/README.md",
+          "bytes": 7425,
+          "sha256": "2953c814b4ae2b3cd13d1279b95cb378edce2d753af88e948fbeb695f978488f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/images/example_1a.png",
+          "bytes": 38565,
+          "sha256": "f3cf53b928e8f1bd544deda889b01572c0ef779a647f393b8a150c4d701ed6cd",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/images/example_1b.png",
+          "bytes": 38565,
+          "sha256": "8d1de10ed845b97dd2e154bd598baa2e8fdb02eaab0f1d9ef44359702f35e6ce",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/images/example_2.png",
+          "bytes": 92057,
+          "sha256": "20e1a7f76ce73262765ab068106c8b073f3e93489f957b87207db40e1c4b7cd1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/images/pfb_flow.png",
+          "bytes": 40265,
+          "sha256": "f901b3a0153d832508a38580ffdd5c89cce1f2013680b5b3d8d61d202744bd8b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/images/pfb_flow_2.png",
+          "bytes": 67367,
+          "sha256": "567a821b19ff4d0c86d2ed017d68e929b8439b3535ec9397adc2263e53b36931",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/images/wola_flow.png",
+          "bytes": 83078,
+          "sha256": "46690a14d98f30a78476066decb29f0ed411ba3fda156c927b6eadf65c2da9eb",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/images/wola_flow_2.png",
+          "bytes": 43367,
+          "sha256": "1316d5c8342a76bd631d203755bb3e9fd4c9cf3920f8eb8fcb845ef22c540be2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/mex/build.txt",
+          "bytes": 106,
+          "sha256": "fc01485e85c3c5ca5c8c1fdce78a708940ddac5dc9d25bf4a957ee3374fcea56",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/mex/wola_chanex.cc",
+          "bytes": 4493,
+          "sha256": "4d9d4021367f52dfab65a4078e53b8051edbf317737c937a81a36885fcad1595",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/pfb_chanex.m",
+          "bytes": 2964,
+          "sha256": "fc1a3188bcd7135849ecaa6cfe89d13bbbab8bc1a893f38fff47533e243cfa6e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/pfb_channelizer_demo.m",
+          "bytes": 3254,
+          "sha256": "e2faecd913015c9d49e9dd8fba3a456f3acb60dccda01e8c99fec3d23e180b43",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/wola_chanex.m",
+          "bytes": 2593,
+          "sha256": "ec4f148310e4cfe4ea15860476e60fff4e55f08e4b0e1efc8576a45e16a20216",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/channelizer/wola_channelizer_demo.m",
+          "bytes": 3199,
+          "sha256": "2b2695aadee567c64ac06306af0f77278d8feffe0948bebbcdd77c42196baae6",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "source_url": "https://github.com/markagold1/channelizer",
+      "commit": "052c136b4cc056dc694743f9520516fe77f63cb1",
+      "region_basis": "Международная площадка; страна не назначалась.",
+      "archive": {
+        "path": "archives/channelizer.zip",
+        "bytes": 400281,
+        "sha256": "82ad118399ccf4ae21b94bf149daf33c65bb67348e203cccb105b6729065bb60",
+        "same_hash_in_existing_project": []
+      },
+      "download_url": "https://codeload.github.com/markagold1/channelizer/zip/052c136b4cc056dc694743f9520516fe77f63cb1",
+      "discovered_via": [
+        "https://dsp.stackexchange.com/questions/97872/dft-filter-bank-design-using-matlab",
+        "https://www.mathworks.com/matlabcentral/fileexchange/181238-channelizer"
+      ],
+      "matlab_file_count": 4,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 427298
+    },
+    {
+      "id": "wsinc",
+      "region": "International",
+      "title": "Windowed-sinc FIR design",
+      "description": "Проектирование LP/HP/BP FIR с разными окнами; сравнение сложности, полосы и подавления. Зависимость демо channelizer.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "compare_filters.m; wsinc.m",
+      "dependencies_and_limits": "Сохранён целый репозиторий. MATLAB/Octave по документации автора.",
+      "license_notes": "Отдельный LICENSE в репозитории не найден.",
+      "files": [
+        {
+          "path": "sources/wsinc/README.md",
+          "bytes": 13776,
+          "sha256": "97107c298024d27d9edb9a481b1d618cc38cdf64ff182978dfb2dca85bb865a4",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/compare_filters.m",
+          "bytes": 17841,
+          "sha256": "bb6520f72b5cb09f27a086dfba45b6a0779a4a16945716de24b5b17b5f8feb1f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/find_ntaps.m",
+          "bytes": 7528,
+          "sha256": "1d23c3fbd3d5eb3e68c51b591ff00d8ca8f780094a8cf0a6a3edf0b0f541401a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/images/example_1.png",
+          "bytes": 37881,
+          "sha256": "424984cad0a8d9c205548fae51acf191533a60c4b56020a75990b3202f3d8e01",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/images/example_2.png",
+          "bytes": 44325,
+          "sha256": "8d7bbe078c835b96cc3e68e7e6e00474658a0764e590b08df54530f785bed804",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/images/example_3.png",
+          "bytes": 32480,
+          "sha256": "00176d75eec65710574cf10ba1a976ae0551def47466e74ec807760cdcb7127c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/images/example_4.png",
+          "bytes": 38489,
+          "sha256": "ee292f49b6fcb5ccba108058d01771d1fd09d58d66c4815d7a442a05d4d4f4db",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/images/example_5.png",
+          "bytes": 32124,
+          "sha256": "d15daf084d21c6544fcf3f17f01c5cb9be02d2af1c1264a66d2f07ef04fe9074",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/images/example_6.png",
+          "bytes": 32480,
+          "sha256": "bd1fff78805161581e1fc4e76b6a46e22bf0f3ff7efa13c9c90a21ce61dc76d2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/plotres.m",
+          "bytes": 3553,
+          "sha256": "c9c49f3f28f90b839fa9f78133e863dae2db097624166fa7dfa3e05870b434ba",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/pm_freqz.m",
+          "bytes": 666,
+          "sha256": "8224550ca0c45e50fd0ab46df7bbb16de42ccfea72d6d3e72c98a2e778fb7707",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/test_compare.m",
+          "bytes": 804,
+          "sha256": "75b4942cedbcec389690993f1031a7cfc84936d74c6ff7d1ff43a6117311c6ec",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/test_compare.txt",
+          "bytes": 2212,
+          "sha256": "cb9ac4e6f8fd9d0908cc6ac8070aeb7dffc4cf26cbba920b1a85e43a775d259b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/wsinc/wsinc.m",
+          "bytes": 5010,
+          "sha256": "0573ad01136ae89539ae18a5136ba47a05db02c767add01fb999fddab2997510",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "source_url": "https://github.com/markagold1/wsinc",
+      "commit": "9126732f1a4b2488d6d53ac621fa79b41d9a932c",
+      "region_basis": "Международная площадка; страна не назначалась.",
+      "archive": {
+        "path": "archives/wsinc.zip",
+        "bytes": 229818,
+        "sha256": "32ef66e72e0263ccbaf90d6f729393bf2859a8f7e74bcd57f366d212966e6604",
+        "same_hash_in_existing_project": []
+      },
+      "download_url": "https://codeload.github.com/markagold1/wsinc/zip/9126732f1a4b2488d6d53ac621fa79b41d9a932c",
+      "discovered_via": [
+        "https://www.mathworks.com/matlabcentral/fileexchange/181174-wsinc",
+        "https://github.com/markagold1/channelizer"
+      ],
+      "matlab_file_count": 6,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 269169
+    },
+    {
+      "id": "china_qpsk",
+      "region": "China / Chinese-language",
+      "title": "QPSK MATLAB reference for FPGA",
+      "description": "Базовый QPSK, вариант с петлёй Costas, формирующий фильтр. Verilog-проект содержит Gardner, но MATLAB-подборка не считается полной копией RTL.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "matlab/qpsk_modem_basic.m; matlab/qpsk_modem_costas.m",
+      "dependencies_and_limits": "Скачаны только MATLAB-папка и авторский README, без RTL-проекта. Статически найдены функции фильтрации и моделирования канала; запуск не проверен.",
+      "license_notes": "Отдельный LICENSE в репозитории не найден.",
+      "files": [
+        {
+          "path": "sources/china_qpsk/README.md",
+          "bytes": 31340,
+          "sha256": "b62aeec759060f28abfc460d60b4940463ed5f13a3211f7401a7bf880dd1ee9f",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/lauchinyuan/FPGA_QPSK-modem/b15ff1e26063145c327b87f8c9070d741112be58/README.md",
+          "git_blob_sha1": "ab5c37aa662d5e559a707d2b1bb0ba3c25625cfa",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/china_qpsk/matlab/demo_lowpass.m",
+          "bytes": 900,
+          "sha256": "28209e57f890b7c72ae1f7d0bb9e081e16e3345f60298816e01d3b5af097a327",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/lauchinyuan/FPGA_QPSK-modem/b15ff1e26063145c327b87f8c9070d741112be58/matlab/demo_lowpass.m",
+          "git_blob_sha1": "ac560b2b142bff0e7882a0aac7f6517bc8cc8f75",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/china_qpsk/matlab/qpsk_modem_basic.m",
+          "bytes": 12972,
+          "sha256": "3b98a10b0f69be83afda13d002dadf3c6a639719b2cf4156351d171700d74c34",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/lauchinyuan/FPGA_QPSK-modem/b15ff1e26063145c327b87f8c9070d741112be58/matlab/qpsk_modem_basic.m",
+          "git_blob_sha1": "40c0a8fb0d5f83ccb5f0c42b7224995fab626359",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/china_qpsk/matlab/qpsk_modem_costas.m",
+          "bytes": 14516,
+          "sha256": "8239e73118a1cde5b68b2c4db631e885f874d64b70514ba0f92eab5d9d3e55d8",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/lauchinyuan/FPGA_QPSK-modem/b15ff1e26063145c327b87f8c9070d741112be58/matlab/qpsk_modem_costas.m",
+          "git_blob_sha1": "a28b452105273068014e778b3018cea418314a13",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/china_qpsk/matlab/rcosfilter.m",
+          "bytes": 1026,
+          "sha256": "a62cb383a5d2f35a9c3c8c94174a35c5ed658e844c02ce9e452f0841125ce1ef",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/lauchinyuan/FPGA_QPSK-modem/b15ff1e26063145c327b87f8c9070d741112be58/matlab/rcosfilter.m",
+          "git_blob_sha1": "037a7b8289e597bf254762b779ca9224b271f6d4",
+          "git_blob_verified": true
+        }
+      ],
+      "source_url": "https://github.com/lauchinyuan/FPGA_QPSK-modem",
+      "commit": "b15ff1e26063145c327b87f8c9070d741112be58",
+      "region_basis": "Китайскоязычная авторская документация; текущее местонахождение автора и сервера не выводилось из имени.",
+      "matlab_file_count": 4,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 60754
+    },
+    {
+      "id": "china_adaptive",
+      "region": "China / Chinese-language",
+      "title": "LMS/NLMS/RLS and ANC",
+      "description": "Три реализации адаптивного фильтра, примеры подавления эха/шума и сравнения алгоритмов; WAV-примеры сохранены.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "demo1.m; demo2.m; demo3.m",
+      "dependencies_and_limits": "Полный небольшой репозиторий, включая звуковые данные.",
+      "license_notes": "README ссылается на Anti-996; самостоятельного LICENSE нет. Условия автоматически не приравнивались к MIT/BSD.",
+      "files": [
+        {
+          "path": "sources/china_adaptive/README.md",
+          "bytes": 944,
+          "sha256": "c5a220d1f75bd3e1e93d96418a5cac2bbb88d1dd04fc7a770927530112be17f2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/demo1.m",
+          "bytes": 3141,
+          "sha256": "1cbafba8420679649bfc89a2916fe285497df13fcaede196af3a100648f1b9d3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/demo2.m",
+          "bytes": 3206,
+          "sha256": "0930de2fb9a71ab92d62191a42fa8991fed941c83170ea3fda19505115dad261",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/demo3.m",
+          "bytes": 3135,
+          "sha256": "efce82adebfccb46d2737439bf86448dc5df643ae06633d1b934a2870525b006",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/handel.wav",
+          "bytes": 146270,
+          "sha256": "0a91ee1116b4e3a6e231a88cfc3f300b73e71af8b35d240a76c041bd327224c6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/handel_echo.wav",
+          "bytes": 146270,
+          "sha256": "fa154d1a70672742a7ea9b791591c818e1bcdced85a4a4f52ba1a634f27fb949",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/myLMS.m",
+          "bytes": 1199,
+          "sha256": "4dbb1937bc67d158b09988b59fd2ac73379f422870941346e76d96ee8c6beded",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/myNLMS.m",
+          "bytes": 1277,
+          "sha256": "f740cca84b6df9efc0d6486c586503bd64221bfec5f5971f0264719fe032baa8",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_adaptive/myRLS.m",
+          "bytes": 1363,
+          "sha256": "8f552a820dd6c079f48481e5ec005fcca6216ec372c67546f984cd84c06b96a8",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "source_url": "https://github.com/LiXirong/AdaptiveFilterandActiveNoiseCancellation",
+      "commit": "4f56a9afc08131f61ee1e6f7b2319547d56faf7c",
+      "region_basis": "Китайскоязычная авторская документация; текущее местонахождение автора и сервера не выводилось из имени.",
+      "archive": {
+        "path": "archives/china_adaptive.zip",
+        "bytes": 228552,
+        "sha256": "f5bd2890532a4be881380d8c3b9e3ee3644c21b8f26732a7568c2ce8bd60a818",
+        "same_hash_in_existing_project": []
+      },
+      "download_url": "https://codeload.github.com/LiXirong/AdaptiveFilterandActiveNoiseCancellation/zip/4f56a9afc08131f61ee1e6f7b2319547d56faf7c",
+      "matlab_file_count": 6,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 306805
+    },
+    {
+      "id": "china_ldpc",
+      "region": "China / Chinese-language",
+      "title": "LDPC encoder and four decoders",
+      "description": "LDPC (2016,1008), BPSK/AWGN; SP, MS, normalized MS, offset MS; расчёт BER/FER.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "Comparisonof4Algorithms.m; SearchBestAlpha.m; SearchBestBeta.m",
+      "dependencies_and_limits": "Полный комплект с Matrix(2016,1008)Block56.mat. По README длительные Monte Carlo-прогоны могут занимать часы.",
+      "license_notes": "GPL-3.0; исходный LICENSE сохранён.",
+      "files": [
+        {
+          "path": "sources/china_ldpc/Comparisonof4Algorithms.m",
+          "bytes": 5857,
+          "sha256": "6d80ca403fb18cdf1b703c0555eb4e0cd9f19db07ab9b2674b102e66d9a7f2e0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Decoder/LDPCDecoder_MS.m",
+          "bytes": 1913,
+          "sha256": "379a3a731ac347b9299d6e9d76d58fbfe83f1b251f78c3b3982287c51cd2ceb7",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Decoder/LDPCDecoder_NMS.m",
+          "bytes": 2060,
+          "sha256": "a89d76fbadb47f44c5c83098ce4cf3df7927c3ebfa3fd7bc18716a5d65c7fbd0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Decoder/LDPCDecoder_OMS.m",
+          "bytes": 2051,
+          "sha256": "bfcb60616a655196abe073f3611dbcb16fde78cb6e5fcd249768a1fc86920d7e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Decoder/LDPCDecoder_SP.m",
+          "bytes": 2293,
+          "sha256": "3aca24ae90828328924ab04d0d36c47c8719235d1b91932842a29fa9cb981ef3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Encoder/Encoder2.m",
+          "bytes": 823,
+          "sha256": "4f0d246749c8ba0949335527a308a064023b0a6b65f7aa9a210f254d3bd16dc7",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Encoder/HxMatrixGen.m",
+          "bytes": 1267,
+          "sha256": "a94168a630c9fd9de9f632981dfc598a14d36f269233c23ef1056c7ae66d266a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/LICENSE",
+          "bytes": 35823,
+          "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Matrix(2016,1008)Block56.mat",
+          "bytes": 343,
+          "sha256": "3fe29f89db7b815594440950467e94c9af23c9d2c57b503b350f5f8e18654044",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/BERComparison.png",
+          "bytes": 82514,
+          "sha256": "dc1926c57cc932b79cde43f821944bb89660b6073a48c71d5adf6a2400818255",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/BestAlpha.png",
+          "bytes": 37169,
+          "sha256": "efe23f062f09b8db6456bdcc79fd5b2064106456dd1e7077be4b413fa6e15d47",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/BestBeta.png",
+          "bytes": 41276,
+          "sha256": "5e50df98848aa9f67f4228421fc4190ce50e9aba5329771e288ad0a882540dcc",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/FERComparison.png",
+          "bytes": 123999,
+          "sha256": "6a8cb3ac33d9e85ffc14d5f432f1cb8d3745b834f8988eb9aa543ee309daf077",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/两种编码算法的时间复杂度对比.png",
+          "bytes": 25399,
+          "sha256": "28740fd6855e0d1e91c98a56076d5951853625e334b4941789cad77302170bdd",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/仿真步骤.png",
+          "bytes": 37550,
+          "sha256": "d3f520cbe1a79441b1ac9ebab58da4777d7aab678937d982706e0ad7c80b3b1c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/修改信噪比仿真范围.png",
+          "bytes": 3663,
+          "sha256": "712c3368fb3c0ac720038f1e125fdc70d8f275bc5e567f4963d90a5dac26306d",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/和积算法初始化步骤的二分图.png",
+          "bytes": 63956,
+          "sha256": "686bb1b5eee3ee4d7df97bbb791f8d3238760fc1059f507012a1343a63e9f68e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/和积算法变量节点传递置信度给校验节点步骤的二分图.png",
+          "bytes": 75064,
+          "sha256": "c167baed882918586fc9e5ec1f77b86e22dea8e40609c96742bf09742189dae4",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/和积算法校验节点传递置信度给变量节点步骤的二分图.png",
+          "bytes": 82630,
+          "sha256": "7c8bb8f13aeb008d5c961477fd3422ca1b4bb1b65348a6294673038d4935bad0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/源码文件说明.png",
+          "bytes": 360084,
+          "sha256": "8928d566cb0c41a84050d7e0b1710e45e1011a7c0cb2d9d38af0949749fbd6b1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/Pic/程序脚本停止条件.png",
+          "bytes": 3224,
+          "sha256": "3ea79f5297353069bb26e6a613e251da8769dd3ae69b6cdc36ea592b66f62351",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/README.md",
+          "bytes": 16202,
+          "sha256": "f4b76adbe4ee74a75b49d45b94b9ce6330f6162c3dc815b23507ad4a657ae828",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/README.pdf",
+          "bytes": 1131051,
+          "sha256": "35fa575e0618d5eef7351810c608a372e89a27623d2daa195932e1faf8d4eb5f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/SearchBestAlpha.m",
+          "bytes": 2054,
+          "sha256": "cb2409b23740e48fd9aae1d0ecbec4e319deb0821f64c906af77a38b7df60d34",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/china_ldpc/SearchBestBeta.m",
+          "bytes": 2159,
+          "sha256": "253d24f7a29913de6d6b89bb89743d3cac0df890a3ce148e0a70f0a6900108d8",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "source_url": "https://github.com/PKU-HunterWu/LDPC-Encoder-Decoder",
+      "commit": "9e7363cbc5a40b44f3b337b9d30cbe930c7c2079",
+      "region_basis": "Китайскоязычная авторская документация; текущее местонахождение автора и сервера не выводилось из имени.",
+      "archive": {
+        "path": "archives/china_ldpc.zip",
+        "bytes": 1962062,
+        "sha256": "267523f9e7c88aad198474f72a42b7032408ef279ca1c20badbd061225e667a6",
+        "same_hash_in_existing_project": []
+      },
+      "download_url": "https://codeload.github.com/PKU-HunterWu/LDPC-Encoder-Decoder/zip/9e7363cbc5a40b44f3b337b9d30cbe930c7c2079",
+      "matlab_file_count": 9,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 2140424
+    },
+    {
+      "id": "iran_tehran",
+      "region": "Iran",
+      "title": "University of Tehran communications exercises",
+      "description": "FSK-кодирование/декодирование текста, FFT-анализ и амплитудное кодирование из курса Signals and Systems.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "Fourier Analysis & Frequency-Based Communication/code/p2.m; freq_coding.m; freq_decoding.m",
+      "dependencies_and_limits": "Выбраны шесть .m по связи/FFT; изображения, SVM и задачи обработки изображений не включены. Локальные функции внутри скриптов могут требовать современного MATLAB.",
+      "license_notes": "MIT; исходный LICENSE сохранён.",
+      "files": [
+        {
+          "path": "sources/iran_tehran/Communication System Simulation & Diabetes Classification/code/p1.m",
+          "bytes": 7273,
+          "sha256": "ca9140a10ce49144015c8adf8d9d02d749e1795e2dfda80dcb2fab36dbbc3d77",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/Communication%20System%20Simulation%20%26%20Diabetes%20Classification/code/p1.m",
+          "git_blob_sha1": "eab4efb310299ce26e8cdf2fb388c62acee9d8bc",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/freq_coding.m",
+          "bytes": 1055,
+          "sha256": "46002f0f592fc31b4d62390db6d53c35c4ed852e5515d7f613963ca1ec35e73f",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/Fourier%20Analysis%20%26%20Frequency-Based%20Communication/code/freq_coding.m",
+          "git_blob_sha1": "078e257de12d226922c0f276c56ce40ee09d6c7b",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/freq_decoding.m",
+          "bytes": 1654,
+          "sha256": "68e60f2f2543e25a5987b637edd9b4a6a7bd409a9e9e25d9f1559c9210ce36ea",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/Fourier%20Analysis%20%26%20Frequency-Based%20Communication/code/freq_decoding.m",
+          "git_blob_sha1": "a0f7f931c754b7cc99570d101e3f457ce73c40a1",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/p1_1.m",
+          "bytes": 732,
+          "sha256": "15643b1b5f68fd3928314de72b495f7986deb2aef7784d5e92a512cc0101feb1",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/Fourier%20Analysis%20%26%20Frequency-Based%20Communication/code/p1_1.m",
+          "git_blob_sha1": "1aa99e23f81c114f01d67b388ea5be933623d762",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/p1_2.m",
+          "bytes": 1144,
+          "sha256": "40e5c2de610eaac976e4d47923c6782680e9cd1d664de5bd3ee78da51a15a906",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/Fourier%20Analysis%20%26%20Frequency-Based%20Communication/code/p1_2.m",
+          "git_blob_sha1": "238a00246d034295625f957040285d9393721f3a",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_tehran/Fourier Analysis & Frequency-Based Communication/code/p2.m",
+          "bytes": 2545,
+          "sha256": "f42fe46dac8557aefcc6cb086e10328d852ae9474172540998f0dd80852d61f5",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/Fourier%20Analysis%20%26%20Frequency-Based%20Communication/code/p2.m",
+          "git_blob_sha1": "3defae537905b1c87cd0e0e19184f580989f9330",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_tehran/LICENSE",
+          "bytes": 1069,
+          "sha256": "6864f6681b54348a456a3f305b9e225ffc072242436f2fddb0fd86c2861eb630",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/LICENSE",
+          "git_blob_sha1": "83e6e3aac7ed6a09cb61329eea9059b52fb6d63d",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_tehran/README.md",
+          "bytes": 2517,
+          "sha256": "c9b8ead68eb9ef4160495e20a7bccb4ade7aa60b2fbb98b1e719098a94a2224d",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/ParsaBukani/Signals-Systems/5b98c3712c7479560bf13c382a82895c58ea4c8b/README.md",
+          "git_blob_sha1": "913bf4ffd23d7122fad098aec86ce1a00e79dc49",
+          "git_blob_verified": true
+        }
+      ],
+      "source_url": "https://github.com/ParsaBukani/Signals-Systems",
+      "commit": "5b98c3712c7479560bf13c382a82895c58ea4c8b",
+      "region_basis": "Авторский README прямо называет University of Tehran.",
+      "matlab_file_count": 6,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 17989
+    },
+    {
+      "id": "iran_oset",
+      "region": "Iran (historical origin)",
+      "title": "OSET generic DSP subset",
+      "description": "13 функций: LMS/RLS, Kalman/ARMA, notch, комплексный FIR, DFT-фильтрация, спектральный эквалайзер, цветной шум.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "matlab/tools/generic/; matlab/tools/modeling/colored_noise_gen.m",
+      "dependencies_and_limits": "Выбраны универсальные функции, не весь биомедицинский toolbox. Helper conditional_median_filter включён. Часть функций использует filtfilt/firpm/firminphase; KFNotch вызывает dare. Проверять Signal Processing/DSP/Control System toolbox по выбранной функции.",
+      "license_notes": "BSD-3-Clause текущего репозитория; исходный LICENSE сохранён.",
+      "files": [
+        {
+          "path": "sources/iran_oset/LICENSE",
+          "bytes": 1519,
+          "sha256": "f362542b186cb0821249b861b51e7e53fe395bd9a870a53ac5b5a437ca4e7080",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/LICENSE",
+          "git_blob_sha1": "d0e57bcd5731db17560b4358ca49c06210509f7b",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/README.md",
+          "bytes": 2193,
+          "sha256": "b33fe677e41cf3f321d3ad5f3220bfc5a2bff1bf53c468911cd48141c5923a17",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/README.md",
+          "git_blob_sha1": "1fd42737d456b277ff4944ca578870356ac077d9",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/KFNotch.m",
+          "bytes": 6391,
+          "sha256": "71adda78a043db46cc5ee361461e5aaa0c7c9c405ff65778cca7815f32de5fc5",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/KFNotch.m",
+          "git_blob_sha1": "c48b6c286a33fd7575ea04c60c109b4047e0ce9f",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/adaptive_filter.m",
+          "bytes": 1770,
+          "sha256": "b5f7b775b5825a44d8e9516ef28316ad7d4dcf46a309e2b352e699111c619e68",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/adaptive_filter.m",
+          "git_blob_sha1": "991e2c98b4f63e1ec8bedda5d37efe6111a8c145",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/adaptive_filter_multi_lag.m",
+          "bytes": 2600,
+          "sha256": "980f7d35027cb9dded57cf06c1752d5f466cc3e0f36f582ec7221476e30e3159",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/adaptive_filter_multi_lag.m",
+          "git_blob_sha1": "2ef4ce497b3de2bf955d9482326d763dfeb1592e",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/arma_kalman_filter.m",
+          "bytes": 7671,
+          "sha256": "356f3187184842495e6b7bf2f336b2857d8feb425ad6826b5bcdd5a6e883ca31",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/arma_kalman_filter.m",
+          "git_blob_sha1": "b0fb1926d638ef59ca5cfda6477f6f0cd29d3392",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/bp_filter_complex_equiripple.m",
+          "bytes": 1838,
+          "sha256": "326e3e1b0738626dbd30b3b5bfa83d41969f9893a6f306e7a7bd316df1721568",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/bp_filter_complex_equiripple.m",
+          "git_blob_sha1": "66db718aa06fed6dbd8a3b75947c59155db96015",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/bp_filter_dft_windowed.m",
+          "bytes": 1916,
+          "sha256": "1c11b1417da0b2b3f8b0accc7c21c954f64c08826181e77daa2aef315c380bfa",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/bp_filter_dft_windowed.m",
+          "git_blob_sha1": "dca2a3b1487ca05d499b0dab38d32bb5b8bc3bba",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/equalizer_filter_design.m",
+          "bytes": 5815,
+          "sha256": "ba99bd25e7c4e1cd25b812bf979724723ac33935b49e118ec840d650c4b34edb",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/equalizer_filter_design.m",
+          "git_blob_sha1": "5bf28b153db24cc2288565e08b0de28effdc7ef5",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/lp_filter_zero_phase.m",
+          "bytes": 1080,
+          "sha256": "0d9a8e605cfda94c793f2f9b5acfff216b1cf6a79fa37c744cc027b00d003bdb",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/lp_filter_zero_phase.m",
+          "git_blob_sha1": "90d1cb32b341d9497c3599dc2e554a6acc749b18",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/lp_filter_zero_phase_2nd.m",
+          "bytes": 3145,
+          "sha256": "1704a4b343913f6449baea75cd585446a0440c734ae400a1b95a78669a990079",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/lp_filter_zero_phase_2nd.m",
+          "git_blob_sha1": "d65c7a4f22927a15ffb44e6ed0eca8cac9e59318",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/notch_filter_cls.m",
+          "bytes": 2658,
+          "sha256": "f32002ec3648b701d282907576da92ea9d23dd7828fab71441c219087d6deb1d",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/notch_filter_cls.m",
+          "git_blob_sha1": "29a85e643fb943fc7713ad8c989df0f7d9ce6b77",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/rls.m",
+          "bytes": 1887,
+          "sha256": "f4d0ac144f45b661392c9b8df95328300cbdb28d21756f3ba0110c199be67d54",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/rls.m",
+          "git_blob_sha1": "73bef30b0fed485b66d714df50e1c4ad64803487",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/modeling/colored_noise_gen.m",
+          "bytes": 1898,
+          "sha256": "f719ddc178956c954fedcbeae2649b991697f991aadfe5f66d9eb3a8d929003c",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/modeling/colored_noise_gen.m",
+          "git_blob_sha1": "aa5201caf8d821629703360198547ee37cadb739",
+          "git_blob_verified": true
+        },
+        {
+          "path": "sources/iran_oset/matlab/tools/generic/conditional_median_filter.m",
+          "bytes": 3422,
+          "sha256": "56eb8856cb7db4a5a888514ad2b0517e4e34862015d114e5edaa08dfd3b627c5",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://raw.githubusercontent.com/alphanumericslab/OSET/892968a1e6783972a25830c5f5845b4063ddacd5/matlab/tools/generic/conditional_median_filter.m",
+          "git_blob_sha1": "96bd2081e7f26dd61a50272e2cecbc9efbb8a231",
+          "git_blob_verified": true
+        }
+      ],
+      "source_url": "https://github.com/alphanumericslab/OSET",
+      "commit": "892968a1e6783972a25830c5f5845b4063ddacd5",
+      "region_basis": "Историческая связь автора с Shiraz University подтверждена страницей PhysioNet; текущий проект международный.",
+      "region_source": "https://archive.physionet.org/physiotools/other.shtml",
+      "matlab_file_count": 13,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 45803
+    },
+    {
+      "id": "india_dsplog",
+      "region": "India",
+      "title": "DSPLog communication simulations",
+      "description": "Четыре скрипта: MIMO ZF, MMSE-SIC, Alamouti 2x2, BPSK в ISI-канале с ZF.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "script_ber_mimo_zf_bpsk_rayleigh_channel.m; остальные script_*.m",
+      "dependencies_and_limits": "Скрипты автора для MATLAB/Octave, теоретические и имитационные BER. Численно здесь не проверялись.",
+      "license_notes": "Заголовки сохраняют copyright автора и запрет перераспространения без разрешения; файлы скачаны для локального изучения.",
+      "files": [
+        {
+          "path": "sources/india_dsplog/script_ber_mimo_zf_bpsk_rayleigh_channel.m",
+          "bytes": 3061,
+          "sha256": "bbb8368f9dd8c2daedf2f63f2dc47795fafad835fbcc098fea25d0656958d811",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://dsplog.com/db-install/wp-content/uploads/2008/10/script_ber_mimo_zf_bpsk_rayleigh_channel.m",
+          "article_url": "https://dsplog.com/2008/10/24/mimo-zero-forcing/"
+        },
+        {
+          "path": "sources/india_dsplog/script_ber_mimo_mmse_sic_bpsk_rayleigh_channel.m",
+          "bytes": 5691,
+          "sha256": "cc99b4d44944007be59b9dd1b1d29a7b3f8b53f3f3898eea0e01bac83a6e5b60",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://dsplog.com/db-install/wp-content/uploads/2008/12/script_ber_mimo_mmse_sic_bpsk_rayleigh_channel.m",
+          "article_url": "https://dsplog.com/2008/12/06/mimo-with-mmse-sic-and-optimal-ordering/"
+        },
+        {
+          "path": "sources/india_dsplog/script_ber_bpsk_isi_zf_equalization.m",
+          "bytes": 2281,
+          "sha256": "a1ff2b81ff6547be5e5ced33b4851289fe094513b58af5242b62448ebf02496c",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://dsplog.com/db-install/wp-content/uploads/2009/11/script_ber_bpsk_isi_zf_equalization.m",
+          "article_url": "https://dsplog.com/2009/11/29/ber-bpsk-isi-channel-zero-forcing-equalization/"
+        },
+        {
+          "path": "sources/india_dsplog/script_ber_2x2_alamouti_stbc_code_bpsk_rayleigh_channel.m",
+          "bytes": 3109,
+          "sha256": "8897c5e6622f340dbb8a4ea359cadbb486ef465ad82a245929f1fc9f2887bf6f",
+          "same_hash_in_existing_project": [],
+          "source_url": "https://dsplog.com/db-install/wp-content/uploads/2009/03/script_ber_2x2_alamouti_stbc_code_bpsk_rayleigh_channel.m",
+          "article_url": "https://dsplog.com/2009/03/15/alamouti-stbc-2-receive-antenna/"
+        }
+      ],
+      "source_url": "https://dsplog.com/about/",
+      "region_basis": "Автор сам указывает Bangalore, India на странице About.",
+      "matlab_file_count": 4,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 14142
+    },
+    {
+      "id": "israel_stft",
+      "region": "Israel",
+      "title": "STFT / ISTFT",
+      "description": "Пять функций оконного преобразования Фурье и обратного преобразования, вспомогательные окна и сдвиги.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "stft.m; istft.m; biorwin.m",
+      "dependencies_and_limits": "Полный опубликованный ZIP.",
+      "license_notes": "Copyright Israel Cohen / All rights reserved; отдельная permissive license не найдена.",
+      "files": [
+        {
+          "path": "sources/israel_stft/lnshift.m",
+          "bytes": 524,
+          "sha256": "90bf4fc94823d9ea79fcb3b627dbff7db32627e69cff904ae3fa5d3234c7a5bc",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_stft/shiftcir.m",
+          "bytes": 791,
+          "sha256": "c4d90773f82e0ce990300658d3f141acccc7a61d02be95e65861b212fddf7688",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_stft/stft.m",
+          "bytes": 2260,
+          "sha256": "199ef8f1596d4dfd510667bc9e2ad42c289641cef9c97729dce8e587b241a570",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_stft/istft.m",
+          "bytes": 1319,
+          "sha256": "f90b8f3ad8ea55df6f77825f4e6ea7d0cdff386466139e252f390ca5a3759efe",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_stft/biorwin.m",
+          "bytes": 861,
+          "sha256": "6d77eb9cf4a212aa1528635aca8258c680b6ce6cd0c90d8084ff0a1a60aed0f3",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "archive": {
+        "path": "archives/israel_stft.zip",
+        "bytes": 3383,
+        "sha256": "ad29e3182a076e4a5138d3044fe2ed9c7034536093352d7a1f819b8bb78515ae",
+        "same_hash_in_existing_project": []
+      },
+      "source_url": "https://israelcohen.com/software/",
+      "region_basis": "Авторская страница профессора Technion, Israel.",
+      "download_url": "https://israelcohen.com/wp-content/uploads/2018/05/stft.zip",
+      "matlab_file_count": 5,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 5755
+    },
+    {
+      "id": "israel_omlsa",
+      "region": "Israel",
+      "title": "OM-LSA / IMCRA",
+      "description": "Одноканальное шумоподавление и оценивание спектра шума; функция принимает входной и выходной WAV-файлы.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "omlsa.m",
+      "dependencies_and_limits": "Нужен пользовательский WAV. В скачанной версии используется audioread.",
+      "license_notes": "Copyright Israel Cohen / All rights reserved; отдельная permissive license не найдена.",
+      "files": [
+        {
+          "path": "sources/israel_omlsa/omlsa.m",
+          "bytes": 15046,
+          "sha256": "d0bd9a2f02736442a2d63e1fb28a1d197c4507f3b4e4b123607c321b3b715684",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "archive": {
+        "path": "archives/israel_omlsa.zip",
+        "bytes": 4330,
+        "sha256": "198dbb31b3bdcdce823316ec0584a5b8ad5ab90434777a6cbccd26a58e720029",
+        "same_hash_in_existing_project": []
+      },
+      "source_url": "https://israelcohen.com/software/",
+      "region_basis": "Авторская страница профессора Technion, Israel.",
+      "download_url": "https://israelcohen.com/wp-content/uploads/2020/11/omlsa.zip",
+      "matlab_file_count": 1,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 15046
+    },
+    {
+      "id": "israel_beamforming",
+      "region": "Israel",
+      "title": "Signal enhancement and array processing",
+      "description": "188 .m-файлов к книге Fundamentals of Signal Enhancement and Array Signal Processing: учебные рисунки и вспомогательные функции.",
+      "status": "downloaded_static_inspection_only",
+      "entrypoints": "Fig*.m; db_polar_m.m",
+      "dependencies_and_limits": "Учебные скрипты по главам, не 188 независимых готовых модемов. Полный опубликованный ZIP.",
+      "license_notes": "Авторский учебный комплект; автоматического разрешения на перелицензирование не предполагается.",
+      "files": [
+        {
+          "path": "sources/israel_beamforming/db_polar_m.m",
+          "bytes": 5903,
+          "sha256": "7f3b00eccc3c7b934a1386b40ef1bd6b79c44071de8991079a2457736dd92f7b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/f1.wav",
+          "bytes": 108998,
+          "sha256": "7e2571384eb39f96bc692e00f4f897824625f05a402deadca54bd277901e38f3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/f6.wav",
+          "bytes": 74378,
+          "sha256": "d5dfdf5269be4fc1cd1d8fc0ebca151559b4b96cc59b9360487171ab65bb7293",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_1.m",
+          "bytes": 2240,
+          "sha256": "13f49132ea7725785da0f0597b2087cca92d24d72e787938cae226d55af9f64a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_10.m",
+          "bytes": 2019,
+          "sha256": "32c734bf0ea4cc269e3523b74b5a360df1b93bb9102f251be90d915c618977b6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_11.m",
+          "bytes": 2025,
+          "sha256": "947f1435fe665551b49f8c0abde14f5d5305d6b7cac5926872ef681e7e0e6039",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_12.m",
+          "bytes": 2030,
+          "sha256": "89d5486a22e4b6922eada3c1fc07c84f38ff20c988f98b403fd7f815607f2f45",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_13.m",
+          "bytes": 2042,
+          "sha256": "1ab45a5e41386bc7406195e00cbfed7e7fcbb477a0e2134c349ff84e9f6b0b5a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_14.m",
+          "bytes": 4397,
+          "sha256": "4b7f5498d11e58f8a461a19c34ad55ff2c5130755112fa84cca4b7ec2fa599c5",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_15.m",
+          "bytes": 4381,
+          "sha256": "0ce750a307637977fb90339822624b49cdee1fd6128cac935bf881ce5f6d4ec2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_16.m",
+          "bytes": 1945,
+          "sha256": "9ffd9774e0da8a501a5e5cba156c54d8ba2fa27fa2883f6155369136e8bc7af2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_17.m",
+          "bytes": 2178,
+          "sha256": "0551abaea5e441eac631520b52cfa0468964419a42470eedda3b67f50d5f0f7f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_18.m",
+          "bytes": 2554,
+          "sha256": "8ae56609805172bb73d90c1ed268d8c362788f58173b47ef27e0e827344a660b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_19.m",
+          "bytes": 2550,
+          "sha256": "16e1ef36a3e48a168d1f3dc0772d7e2458f301e5a0e55742a5da5ca27e9b99d7",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_2.m",
+          "bytes": 4239,
+          "sha256": "c8401ae655926c12bd2cd0f87bedd5836c780e941365526ac81953f63c305133",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_20.m",
+          "bytes": 2356,
+          "sha256": "66dcaddc5be9ffbe019a428f951ee65f9e1714ee06d8a0ac8b363121b6e99037",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_21.m",
+          "bytes": 2168,
+          "sha256": "432c29ad50ddff2827875f8dc6e87c6431812e8dfda83d9b05fd91d6877d2924",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_22.m",
+          "bytes": 3218,
+          "sha256": "32e5baa9dfbccde5caf9946ec42ee9c79189e3b45682942dafa0093bfef7f494",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_23.m",
+          "bytes": 2437,
+          "sha256": "95ccd888ffb217cd5c95bb7da0548db766a57e557f86f1dc7df156ea0fd03df6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_24.m",
+          "bytes": 3313,
+          "sha256": "8fa714454fb9849a6e1401a1ab9a1c16847118e548f632f3ae817dfc5b180557",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_25.m",
+          "bytes": 2538,
+          "sha256": "3f3a79c2cfd20b0a6f6a4782e5bddbd1450a1ae93ec95b4e96f5b3bb68dc388f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_3.m",
+          "bytes": 4219,
+          "sha256": "d3c7529168ec0408980fecc682773e72799659bb8b828c6d103bb652413331d2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_4.m",
+          "bytes": 2098,
+          "sha256": "3636372fe9a3b3b5909742166c7344ffb9f6471745a38925a980151f0a19e9ff",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_5.m",
+          "bytes": 2104,
+          "sha256": "97ff2dfbb0c653d147aaa1045878d28505df86d18eb32ebceea8a9c3d6003872",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_6.m",
+          "bytes": 2109,
+          "sha256": "e990b7d6b9f6dd98efae0fe0251a1dde4772f14a97e7059331583c6a987e5207",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_7.m",
+          "bytes": 2121,
+          "sha256": "465c8b26b937f8bc7bd01961185c9f3dfbce1f68d16c8b6149461c6c381a0247",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_8.m",
+          "bytes": 4027,
+          "sha256": "3b6a86cf51b39a0049a68bdaa1b446b835c9c25a703597f698a4b8a1f0f86c00",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig10_9.m",
+          "bytes": 4007,
+          "sha256": "c986fae27073cc02bb5f06aca7ceb903b15052fda3af5697e9fc460b01039316",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_10.m",
+          "bytes": 3094,
+          "sha256": "e334d1f0d049438e4ff532ace8167463f1a2fd1defa11e77818a61148d170259",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_11.m",
+          "bytes": 6858,
+          "sha256": "05bcb255a1978761a0bab0a16a33c92584890d62b535398c01f322292576b8fa",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_12.m",
+          "bytes": 3150,
+          "sha256": "f56c159f1eed0b8f891edb8229cae12741f1defb91b67eb156534959a22d6e95",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_13.m",
+          "bytes": 5523,
+          "sha256": "39b0d4463c6713644475b1f17d1ad7ad05a6a807e0b112e485e6a5045b1f453b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_14.m",
+          "bytes": 3316,
+          "sha256": "bf0e893e43e93036d7b0818aa0c921b9bd78b703204c6b3b1166b4eb67d639c0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_15.m",
+          "bytes": 7531,
+          "sha256": "25f8cdc16aa3226999b3f5c2f108f4a0fd1885b68de709cfa340eddb86e6f31d",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_16.m",
+          "bytes": 3436,
+          "sha256": "b6b21c451be1c77df5fd8c2a27bfd279af5a1dcb1571d1a3d40a758d3065cc1d",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_17.m",
+          "bytes": 4128,
+          "sha256": "944eb7ce0f106f4569af0a48993827d8456331f40a29e57021b7c038bfc1f4de",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_18.m",
+          "bytes": 5509,
+          "sha256": "ad67810f3249b7eed8966bf5eb5b29b1e640c0afa59ba40ed606921794612888",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_19.m",
+          "bytes": 4243,
+          "sha256": "6648d305d10e54c732bae67c60a4383062cc7852bd4c884d75f745110b24b88b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_20.m",
+          "bytes": 5753,
+          "sha256": "a7ef7f857bc6309fef4c54bcd614aea47c3a850299889c34b1d6f2b07705bdf9",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_21.m",
+          "bytes": 4079,
+          "sha256": "d8b1c6ee97c4508cf085bfbf5a7b1888c4d86661121d78ee964ec9658f8da99a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_22.m",
+          "bytes": 4078,
+          "sha256": "37597f1cddb3678341f2858e22cdca9c84b057b1de94d83e47d1705e187e8e2c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_23.m",
+          "bytes": 4343,
+          "sha256": "e92b27fd3b492bf380f1a0bfeb8032149f91d19a87a7024f4315aa5a8647858a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_24.m",
+          "bytes": 6178,
+          "sha256": "ab4c015d6358d425dc180fd188890ef64ee936b650b46ba05181dfe22f5dc51e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_25.m",
+          "bytes": 4421,
+          "sha256": "4559230fbc9a19699af85c571022be234298db408a134b20c29a3be242a564b9",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_26.m",
+          "bytes": 6376,
+          "sha256": "8e3e88bbcd005b9ff63d238cfb1bf06a45602d0d8ae30d9070b30535bc9a8d8c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_27.m",
+          "bytes": 3304,
+          "sha256": "f370622b64aa24b40eea55eb17c47bfa68aae3cb75c0d220e4c8d9ba6c26e396",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_28.m",
+          "bytes": 5559,
+          "sha256": "9b858b003b869617c73eb6c9b60a19861e7880ca78f301920e93b576a4629310",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_29.m",
+          "bytes": 3307,
+          "sha256": "d5ebad774d4bf9cb4c39d29b3d41ab948f8c4b1843ae86eaae87aaae373525ac",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_3.m",
+          "bytes": 4499,
+          "sha256": "1d8a02cc316d0d972ece0c937b2ef938521a18b21ca2ab485648a4d8032508e5",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_30.m",
+          "bytes": 5547,
+          "sha256": "90e3ea2a93d4a5ee5608e72e60c3c1ad753f823dbefff4d6f602abf8cc4f703d",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_31.m",
+          "bytes": 3561,
+          "sha256": "44073fc3d43c2710b29f2051d0e47723a2fe493c1086c6de1673a591152f426c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_32.m",
+          "bytes": 6306,
+          "sha256": "d56dc8a9b1048344cc28f23a379b29710dccd65e16d4bbfe2b32fa08a43592e9",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_33.m",
+          "bytes": 3777,
+          "sha256": "72b0e3ca4fc8b43160a0039219a17897bf1187cd49c901dcdd6c0d8e98f7a4a6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_34.m",
+          "bytes": 7251,
+          "sha256": "27e1c775fef0bea9deb9466014c387182aab0f9721de7f1b247c7626612c060b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_35.m",
+          "bytes": 5082,
+          "sha256": "9e91c5997a4abe8ce1de7f03c3c594dec598d197094d71cf1d06127b7eead51c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_4.m",
+          "bytes": 4499,
+          "sha256": "93bd87a3b160c0b9814192f5c3a80551ab295a31b878b4e776f97220a1920e5a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_5.m",
+          "bytes": 4496,
+          "sha256": "f8111ee28270595caa5a0a7e9469f9855e9f773ab625c3ad3bc735681d5839ba",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_6.m",
+          "bytes": 2883,
+          "sha256": "82f2c6764f1c17c0f5d2f0a03822fd1ac2b09d84339b0cdefb0fd082c92def72",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_7.m",
+          "bytes": 6825,
+          "sha256": "d763b474dbc4cae57e6d613042f724381171ccd8cdb8bf87b5125ac3babaea09",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_8.m",
+          "bytes": 6889,
+          "sha256": "8170d851991e8d161b60ef8a36b90831fe1b0fb006dab9b39c426094e95fd80e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig11_9.m",
+          "bytes": 6891,
+          "sha256": "c44fbb00e42e628852d7037e29829037da9a52267d67f6ae6a95c10994c03148",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_10.m",
+          "bytes": 3186,
+          "sha256": "4acfab818011a8b526af19f4f9ae57904f141314ea0e9196841a0d887b621f63",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_11.m",
+          "bytes": 5285,
+          "sha256": "c3d1edace0006e82760beb8cc3747be10662956c3ed732c2da32acf0e53587fe",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_15.m",
+          "bytes": 1908,
+          "sha256": "84c9f5346a3eb83d938301e4430af07069236655c2bf45ae91159866c9190e2d",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_16.m",
+          "bytes": 1884,
+          "sha256": "89ba5dc13d11aea96e88ddf5112265811e78043f23e62bd3ae8cbc1e0acccc63",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_2.m",
+          "bytes": 1333,
+          "sha256": "70e1f74d8f4f61191a5b80aaa1a3762eaa4e286791bd494e4eb38d0646bb2ffe",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_3.m",
+          "bytes": 1183,
+          "sha256": "69d5f075d39032d0557ab8356148f08934309584d1aecc66c597e661293490dd",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_4.m",
+          "bytes": 1512,
+          "sha256": "2de3369e12f1f4e093dac73bf236aca74a7a3505b90b5c14933b82b6839fdeb6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_5.m",
+          "bytes": 848,
+          "sha256": "898205b3c49e2068bdcef07a29f6eedd27a4ab53a38b4b1f6699cbc4f0b2039a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_6.m",
+          "bytes": 4015,
+          "sha256": "21d5b6925e5dc5ee6dde10107e3e6b41c44126c50f38ff7e910b4e6e3a22e5a9",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_7.m",
+          "bytes": 3967,
+          "sha256": "6bfeb94d0de5083891f1eed84b5f64ff28ae30f1e493eafbd24416ed191f2d39",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_8.m",
+          "bytes": 5113,
+          "sha256": "652528065778d57af0b39ec13fa4a4e3aef9de011850662e3441ba99e20067d0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig2_9.m",
+          "bytes": 5111,
+          "sha256": "f2e9be4f15c9753d83b44297ce840be7012b9a17d32d09d3b25bfe4cd3868326",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_10.m",
+          "bytes": 4416,
+          "sha256": "5b6cd5e58d0c0041fb0b298fedf175cf75592e1814c09d80f6c2a521b47424bd",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_11.m",
+          "bytes": 4429,
+          "sha256": "8c945eec859770e8ca1f0fdf76edb0d1d417cb48df44a4b7d33bac6e52f0b9fa",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_12.m",
+          "bytes": 1830,
+          "sha256": "b54b4ec2983fa7f0b0957c2b06829cff6e85ff5a67838c1f798e9dff0964b9f0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_13.m",
+          "bytes": 4441,
+          "sha256": "412ae33bcaae4297113e35ee12488bdd9b1c6a553c9096f5a945dc8f08a5fd1e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_14.m",
+          "bytes": 4454,
+          "sha256": "d16f77518a8eedb0934ba68d27f49ba3f152719e0b0fd56ba73b223b401ee60c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_18.m",
+          "bytes": 912,
+          "sha256": "34c0c407326b8ff09c2827909cb5a9ca14f7c2a6671c18850a611b7dac5c201b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_19.m",
+          "bytes": 3979,
+          "sha256": "b5a2712e9205d2f3b4693e26d280fc806417b5e80a3836c60e72ec32997a8ee8",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_2.m",
+          "bytes": 1188,
+          "sha256": "127f2a7fb15097584049645a0a0f06ceaa0dc0c97c66143a871a17d05d80ff25",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_20.m",
+          "bytes": 4527,
+          "sha256": "3755149275d2dd8ad3973c60b156a36dd2b3df099d6149820ce968d272627306",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_3.m",
+          "bytes": 1894,
+          "sha256": "959adf488feae51207b25d3dfc22e99b121903eeb396b21f9ce424271663555f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_4.m",
+          "bytes": 1921,
+          "sha256": "adaaba3685c65b557f4116d4ea4551550262087ffde8e7ab395c0662082fbed3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_5.m",
+          "bytes": 1614,
+          "sha256": "ccab45e23089f5edb3b8499da55d6119ff1283680071f32aaea9a66abb458238",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_6.m",
+          "bytes": 2526,
+          "sha256": "495023e59ff5aab01c4d6e57556181aa421fcbff0d07e351189fdcc401eb0964",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_7.m",
+          "bytes": 3874,
+          "sha256": "448cc2d5bc1e020e892910d5bba2704d4a970c3cffc5d3a44af5e05a73e1f116",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_8.m",
+          "bytes": 3909,
+          "sha256": "406557af2ec55e9489ce723e7ab74eb95732110ec1801d9fbac2417a17f883ab",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig3_9.m",
+          "bytes": 1727,
+          "sha256": "e827ec4da4d0e610f9bdd46b2513d890ac80990df533e16a71c75cba55fd8c3a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_10.m",
+          "bytes": 5086,
+          "sha256": "c937d0011f30109cc94bee4d5993705bfef2236c8595b17420b8dcf737b083c6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_11.m",
+          "bytes": 5073,
+          "sha256": "1ddb96ed33516d901ea8779c0d2237bed1273397764660f05c6811060206cf01",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_12.m",
+          "bytes": 5783,
+          "sha256": "b3b6c7b1c963c609be7efd639014d6f71f4207c8978c189379470c6db69821e5",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_13.m",
+          "bytes": 5811,
+          "sha256": "49c34cba88fe9ca1c4849485254b9f272d35aca11663739cbc3b66b65f36fd60",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_3.m",
+          "bytes": 2695,
+          "sha256": "d9e0c51215f327b96868b1256e1d3a58c859f43dece5d64a5826edb9bb268460",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_4.m",
+          "bytes": 4200,
+          "sha256": "0badd29a3917a905547f54d6e82c80ccf8837fd9c6920acb72f38a75e23ec21c",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_5.m",
+          "bytes": 4079,
+          "sha256": "558ff47bb2cc60fcd585c010728d1258c8c9cd11e92a78ae077011e5bab578f0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_6.m",
+          "bytes": 4259,
+          "sha256": "c04fd9a2b24a577017f6cfc8a1f9039b831d273932a692d121738bfe6b5818ab",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_7.m",
+          "bytes": 4247,
+          "sha256": "0e6aa61ac10efd3e53633a9678b7918804ed84f4736e48ccb160f3b2b9ac8930",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig4_8.m",
+          "bytes": 4274,
+          "sha256": "d6a5b17ef5261ec9885a7953b5184723534e502724f3caff560a45f0d81192f1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_10.m",
+          "bytes": 2292,
+          "sha256": "74c0003ae89fe8df842591f8e7d9fb2c3592b505d2b52eecd4ba17da18d21d67",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_11.m",
+          "bytes": 4772,
+          "sha256": "a4be16dab8ae1a84639eec01713a8b9bef7a4daae3c75db381bbb7b2bc94dec0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_12.m",
+          "bytes": 4797,
+          "sha256": "252bbffcc60486c58c29c1561f80686ee94a1eea521cecec189fde320943ee6a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_13.m",
+          "bytes": 4791,
+          "sha256": "3ee1526be376769e63ee006094b4c1714e5778accfe10b641d11810b61b7afd3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_16.m",
+          "bytes": 865,
+          "sha256": "fdb851c2f2bff6446d289c5a5167c191f8528eaa93a58184d5061567cca05ea7",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_17.m",
+          "bytes": 5124,
+          "sha256": "e01728ae3130b13e782c7b35722d602e1edab2137877e9cdc79251442b343cad",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_18.m",
+          "bytes": 6965,
+          "sha256": "cdddf2023a9b6b922d428520beb0f117f874f9083d76a344f5324eb4135c5fca",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_2.m",
+          "bytes": 4259,
+          "sha256": "05c1ce63084c6dfab60d3a25f843be105dddd96f41f8db986a4b758448710e50",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_3.m",
+          "bytes": 4597,
+          "sha256": "186b4fe00e2889d375929fda844ee56605c94756be63ea18a91219ad39d2934b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_4.m",
+          "bytes": 3958,
+          "sha256": "565b05fe3d73d61f41dd6c580fd76b727a34135c3c1eaef3c96eb9519c2b2ca0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_5.m",
+          "bytes": 4035,
+          "sha256": "e3858e538bef4b5222c90d82fcecd30fcaf292216938a1ee6fd3fbfd0d917695",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_6.m",
+          "bytes": 4604,
+          "sha256": "c00183c41599822ba5f6861ea9ec4597777de0112775d857efb60f6e51edf7c1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_7.m",
+          "bytes": 4599,
+          "sha256": "afbd09d144bf1e76e2edd8018d3a2d6530c0bd6ed454a891b183431008fbb279",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig5_8.m",
+          "bytes": 4765,
+          "sha256": "c90a45e6de1459bcaea9a3c276fa9696979334262976558fa94ac05439894df3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_10.m",
+          "bytes": 3678,
+          "sha256": "549b5a1cc2ca34d2262cf41da882e69c581bbe89ab936999979a9daff27b0d96",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_11.m",
+          "bytes": 3593,
+          "sha256": "0c7323b7682f9f9f40a2aa52436cf81e5efa6607eca3c983be457697dce8d7c6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_2.m",
+          "bytes": 3267,
+          "sha256": "1cac2a94e4e9a5da8bb4f0c4d8c039a5e6a97a36480adc85b0decc223a78dfc8",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_3.m",
+          "bytes": 2550,
+          "sha256": "5a76631e99b1bc9c812982774fb15345724730c6d34c05e8bdab4e98e0b48e07",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_4.m",
+          "bytes": 3380,
+          "sha256": "f80e3aa73e3b26003b202dcd5213c7917b9552442982f67aa5e60f87205ae245",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_5.m",
+          "bytes": 3266,
+          "sha256": "6d2c449d79888a5223dbfcc0be877695f455746174f10f7e298d49f29abd0c56",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_6.m",
+          "bytes": 2927,
+          "sha256": "49b151f266e365c6b3deae9087b687a54e64e0693153e01cc822585e63af1e14",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_7.m",
+          "bytes": 2714,
+          "sha256": "3578ba71ba0289e1c3e464872693a3f53c42d9a207e348fb9620b1797f992719",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_8.m",
+          "bytes": 3510,
+          "sha256": "5a54ef25012fc9558d46f9db4280e7d2db130e15d6e0a8b638ee4563265806d1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig6_9.m",
+          "bytes": 3528,
+          "sha256": "a10f2f4b3a89dfcab04273321aad295b54a25437e1aa120adb39c5b3f9427e4f",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_10.m",
+          "bytes": 2138,
+          "sha256": "49312fb543f1bda617738ec2b159ea87427a9d6053432ea4c8d11709098e8e33",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_11.m",
+          "bytes": 2140,
+          "sha256": "d0d0468bb6cf284480e95426c6ee5046b40a204f8393554cfb5facd8715c64ab",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_12.m",
+          "bytes": 3662,
+          "sha256": "530d5f6c1740303ce53e7d6f3bc6926d943357e3a31092236033fd4f27e51700",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_13.m",
+          "bytes": 3680,
+          "sha256": "dfcddcb30b412388aa95f882c020762eb7c9296b4cfc116f983d0869387797f0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_14.m",
+          "bytes": 4207,
+          "sha256": "59385c979e2054bf25644fcbf736931cf98bd0877e20426ad228822f5e1e2cfc",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_15.m",
+          "bytes": 4229,
+          "sha256": "5944deff942cabe873e2ae8d670ca890169993d410444d7b5dc9cde7b70c9276",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_16.m",
+          "bytes": 2369,
+          "sha256": "c3f7eb32ae075a3b3e5933c0494d2556921cd8a2c4e8bd94e44a2f55e4d0d391",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_17.m",
+          "bytes": 2368,
+          "sha256": "b640d1484d069cc8c595cec4b7b9747c89b315dd83794e85df58c86640964543",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_18.m",
+          "bytes": 2366,
+          "sha256": "e0073005c10ecc186920b0864c067542b11b0e1b969d7395db36c86271c67628",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_19.m",
+          "bytes": 3779,
+          "sha256": "7a9dbdb87006ecf190a4ee6bb7f32e4a769bbf27b1ebc6643e3838ba6fd5e3a9",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_2.m",
+          "bytes": 864,
+          "sha256": "3bec850e2b83404f85c6abcc86d0f394bfcd0712ae184429284ffd959204b8d1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_20.m",
+          "bytes": 4472,
+          "sha256": "956aa6039ef6d03007415a7e33e9b7cb220f7d03e806964bc77edfeccce224c7",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_21.m",
+          "bytes": 2921,
+          "sha256": "8440c46e9db22e5ace05d7bc042cecb08c9c14449b6203558a4edbef374e3137",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_22.m",
+          "bytes": 2921,
+          "sha256": "c0edc5c539b10718fc89b04b25b5186da3d666e23caa16aa8cee7c7359061fa0",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_23.m",
+          "bytes": 2918,
+          "sha256": "faf29e02ca38be965a5727d5345cd29e98a49f2523c466fa2160673b20a3d991",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_24.m",
+          "bytes": 1351,
+          "sha256": "84c2d420a3f0c33104e3e9bb8c6502fc81621efd0abd4d217231aceff038610b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_25.m",
+          "bytes": 1328,
+          "sha256": "b7dc5f6ad5187bb88b513c61508543ecc8d40969ddf4798efa2218bd7245e644",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_26.m",
+          "bytes": 2695,
+          "sha256": "a3a07ad5b10495e7137a4e6034f9d51157da4eba336ea77e1294d7dec7e9e09e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_27.m",
+          "bytes": 2693,
+          "sha256": "bacb919cad29e99f4dbb2a42d9ead9d53940b93e1ecd7b551d67e3d747a14994",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_28.m",
+          "bytes": 2695,
+          "sha256": "71d599aeba4f28d7b34fbaa85da58eab6a196cb0002f04147d6578cd24555041",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_29.m",
+          "bytes": 2695,
+          "sha256": "491cac66a8b8c2624463cdf0dc3d2a07876f75bc01a89bd80f3f6c3eacc4a9de",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_3.m",
+          "bytes": 2734,
+          "sha256": "f5ba002475dbf28a90b764ed8eade68143f2258d33537021c5791f42b9d45178",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_4.m",
+          "bytes": 1765,
+          "sha256": "aa0a11aef0303895edab4e72804d7b81215e02dab3564a981db383aa135f1bca",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_5.m",
+          "bytes": 1764,
+          "sha256": "4c06809aa5c4a840bc718b815ba88c8b2b2c605a662b8c39ba1047b6b2e90fe8",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_6.m",
+          "bytes": 1762,
+          "sha256": "a646e9a953245d03524ffa25074c6623b6a793a30d84bf2e0f8dbd6e3eb5415d",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_7.m",
+          "bytes": 2861,
+          "sha256": "71d73189d07114d50619c239e05f690f7b155d7ccabfa1efab225d8f12177c60",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_8.m",
+          "bytes": 2871,
+          "sha256": "c28d44701a330278273f3e4bef85c13e0b41608411be1cd66abb3c9cfab24b1e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig7_9.m",
+          "bytes": 2141,
+          "sha256": "f35c912beae7d53cd850031112f93f357a447fd5d7c440bfb17b42b5d8e2a3b2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_1.m",
+          "bytes": 4807,
+          "sha256": "013f2ce661acc3eda8d7983733bc453d664b4ca1d9899ecf5b9317fa3dd93686",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_10.m",
+          "bytes": 7590,
+          "sha256": "20afdb2bdead39d085e42ae06459b1935675c67c5f12c82adbc6730b1ada50c8",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_11.m",
+          "bytes": 8271,
+          "sha256": "3cb2178e0d31da2998cc91165d857968c07043037ca5bbb91d55f7b4c538f8dd",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_12.m",
+          "bytes": 7855,
+          "sha256": "688d09457f7d0bab575dbb2adb7628f5558cdafe4b8507d069be752381a8ad1a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_13.m",
+          "bytes": 6369,
+          "sha256": "b92c14a2024c2b81e4213ad9930aec0eec35602b2adb1c397f14d53933942ce9",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_14.m",
+          "bytes": 6704,
+          "sha256": "17df51ce691f249a4e388c3bf01cf10f94a4c6d2caf3bc62880979031beb2f5a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_2.m",
+          "bytes": 4297,
+          "sha256": "6a7deda9955ea474dd0430bc037ba1c9353e35691be7105a2c604b864e5af266",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_3.m",
+          "bytes": 4841,
+          "sha256": "cab0d2e4cf80b71956f4063c9717a975bba92f3de92a4c849683bb7aa195bca8",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_4.m",
+          "bytes": 4311,
+          "sha256": "f480d3d9a89be4ff7450e700a174834ebc8946e1d5fdbf149120afcdb4d93aaa",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_5.m",
+          "bytes": 4863,
+          "sha256": "b854f66628a1c3dbdded08509c0a3544106f392dedbeb1f46e4b7130ebac9dd5",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_6.m",
+          "bytes": 4333,
+          "sha256": "a6a5b37e4263818ba21681fbdd412d3757fd64ad9fcb03bb1a63356cd522f5ea",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_7.m",
+          "bytes": 4951,
+          "sha256": "53ed3fb061ead81ac15639bca22c647fb81dd5743914d5f656a8097de4e4d57a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_8.m",
+          "bytes": 4422,
+          "sha256": "a4caf98f495fb676b60021919cc91451cd9e0d1748f666c061fb4326759768e3",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig8_9.m",
+          "bytes": 8014,
+          "sha256": "4dcad1fe17a778f4773fa8106fd38e936861d92b8cd9184dc58d9b435ddddced",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_1.m",
+          "bytes": 956,
+          "sha256": "91cb4da12be039bf2a12f339b7e38973308c35c01f243ed03cda13da78781af1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_10.m",
+          "bytes": 2117,
+          "sha256": "bc05dd368bf54ccd2a74bb1e5e08959e44d5bf00c2b6fa957799d71b77f4bc12",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_11.m",
+          "bytes": 2152,
+          "sha256": "789da0aab942a5ed5a5c6cf4817078ba315cf034b3bf990d8b5259372c898d55",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_12.m",
+          "bytes": 2221,
+          "sha256": "d302bb5c5451ca6a63e8f6c433956b5f15ab9646c894db272802682b085d33eb",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_13.m",
+          "bytes": 2257,
+          "sha256": "c3793fb2307439a2f8cdd13384461b9b7f45f9a331013c9221283ebb5d29b4c4",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_14.m",
+          "bytes": 2209,
+          "sha256": "6e517c219aa9d15f442ec24b3ae1365aa9730d20265a38170ac2c3c27fc68812",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_15.m",
+          "bytes": 2330,
+          "sha256": "d7b99d975f9cfca3b54a2c010f6fbe8e5a9548055222c9e96274b71f78d19599",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_16.m",
+          "bytes": 2167,
+          "sha256": "de6f67cf72cd40f7933dbdd278a58d55694b2e2e11720f3f3b08bcdac29b9473",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_17.m",
+          "bytes": 4089,
+          "sha256": "eec17ebf6c994116c69d1ff3e99e18165971accce46a2f86f0a3485059e4f4d7",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_18.m",
+          "bytes": 4378,
+          "sha256": "1012058c020e373ba71f235df241d54457a20f152aa4acb07be65f1df9291ac6",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_19.m",
+          "bytes": 4446,
+          "sha256": "695205350aaeea5b31de55ada270a9b6f14f6cf7a9606213857336f16c5ec71e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_2.m",
+          "bytes": 1034,
+          "sha256": "9e8f3c038dedaa5e9cfddde0047c023b03933ac19082171672018f6d898ec4bb",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_21.m",
+          "bytes": 2458,
+          "sha256": "7ef560eb5313206438949c4da4225ddf6e27d2b66a2951865d8d1b5a58ae308b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_22.m",
+          "bytes": 2391,
+          "sha256": "0ad40d3b1a5e84dae461a5de2fb6963d2c43b3160d2846be6a90a214a2e958fc",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_23.m",
+          "bytes": 2381,
+          "sha256": "7bb002cbe39b1261ff85ea29585a8603f3a68d600ff8b582ec70e04ff7355456",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_3.m",
+          "bytes": 1194,
+          "sha256": "d4fea59c6d87c6580a6b7832c8f9dd4667122bee34a69652dbbfe46c37379e2b",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_4.m",
+          "bytes": 1836,
+          "sha256": "2fbdcf6f4bfb349cb4bbb29a10deb6a4165d7af3c23dcef1c74d07c5032125c2",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_5.m",
+          "bytes": 1832,
+          "sha256": "12a6b11709e0abb24320033704dc0faf1cce3c8f4cdee66f0442922674ba0825",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_6.m",
+          "bytes": 1834,
+          "sha256": "ba9951a82aef3f5e8bcac1090df8f8e925726c05248ac9ab189ba8f1c57e0cf1",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_7.m",
+          "bytes": 1834,
+          "sha256": "bc7efe5dbfdc77ca434589fc880521e97bceecb0e67ca99f0967a910808c7d44",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_8.m",
+          "bytes": 3716,
+          "sha256": "aa4183f9740b6a4a41adae0c5f9ff7894cec39c58b032e936a4c9e6bd0048522",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/Fig9_9.m",
+          "bytes": 3692,
+          "sha256": "4a95e09f16c0f3b532e78b04eaa770f1aca8b34402b0386819b499542e579d91",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/jeig.m",
+          "bytes": 88,
+          "sha256": "a2be805d3d9d61c316c47cb2eaf4870edebc497c1f6426279d9a376f9752f70e",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/myfunc3.m",
+          "bytes": 301,
+          "sha256": "4c781d65c57abc50b1e0b94b54a50ee96bb941ffc19dc2d9c19071031d4ac3c9",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/n2.wav",
+          "bytes": 818832,
+          "sha256": "f3c098d7fb15f46c83c9a2a54a4878b6a3288497a21f6a18301cbedb3186cb2a",
+          "same_hash_in_existing_project": []
+        },
+        {
+          "path": "sources/israel_beamforming/spec.m",
+          "bytes": 536,
+          "sha256": "ceaa6acbb66c4a91da23d25bc79798188d143b095ca9fbd9828a6fa574f8749f",
+          "same_hash_in_existing_project": []
+        }
+      ],
+      "archive": {
+        "path": "archives/israel_beamforming.zip",
+        "bytes": 981227,
+        "sha256": "b8d3f3c8e5fe69d0a70979eb6753ea66711766086342090e343f21c79623ee6b",
+        "same_hash_in_existing_project": []
+      },
+      "source_url": "https://israelcohen.com/software/",
+      "region_basis": "Авторская страница профессора Technion, Israel.",
+      "download_url": "https://israelcohen.com/wp-content/uploads/2020/11/Matlab_Figures.zip",
+      "matlab_file_count": 188,
+      "same_hash_existing_matlab_files": [],
+      "total_saved_source_bytes": 1671913
+    }
+  ],
+  "forum_and_followup_sources": [
+    {
+      "platform": "MATLAB Central / File Exchange",
+      "region": "International",
+      "url": "https://www.mathworks.com/matlabcentral/fileexchange/6742-carrier-symbol-timing-recovery-for-n-qam",
+      "finding": "Dick Benson: QAM 2–256, carrier + symbol recovery, Farrow; версия 1.6.0.1.",
+      "status": "Страница и зависимости проверены. Download требует входа MathWorks; архив не скачан."
+    },
+    {
+      "platform": "MATLAB Central / DSP StackExchange",
+      "region": "International",
+      "url": "https://dsp.stackexchange.com/questions/97872/dft-filter-bank-design-using-matlab",
+      "finding": "Авторский PFB/WOLA channelizer, далее ссылка на File Exchange и GitHub.",
+      "status": "Исходники скачаны из опубликованного автором репозитория; добавлена зависимость WSINC."
+    },
+    {
+      "platform": "DSPRelated",
+      "region": "International",
+      "url": "https://www.dsprelated.com/showarticle/1312/model-signal-impairments-at-complex-baseband.php",
+      "finding": "QAM TX/RX и модели AWGN, phase noise, multipath, interfering carrier; код в приложениях к авторскому PDF.",
+      "status": "Подтверждён полезный источник; отдельный пакет кода в подборку не извлекался."
+    },
+    {
+      "platform": "DSPRelated",
+      "region": "International",
+      "url": "https://www.dsprelated.com/showarticle/1375.php",
+      "finding": "MATLAB-примеры CIC interpolation/decimation и спектральных образов.",
+      "status": "Авторский материал с inline-кодом; сохранена ссылка."
+    },
+    {
+      "platform": "EDAboard",
+      "region": "International",
+      "url": "https://www.edaboard.com/threads/basic-ofdm-matlab-code.290991/",
+      "finding": "Обсуждение базового OFDM и MATLAB-кода.",
+      "status": "Прочитан поисковый текст. Полный комплект зависимостей не подтверждён; не включён как готовая модель."
+    },
+    {
+      "platform": "EDAboard",
+      "region": "International",
+      "url": "https://www.edaboard.com/threads/no-diversity-1x1-and-alamouti-stbc-2x1-and-2x2-with-qpsk-modulation-matlab-code.316108/",
+      "finding": "Упоминание MATLAB QPSK/Alamouti и приложенного отчёта.",
+      "status": "Прямое чтение вернуло антибот-страницу; вложения не скачаны."
+    },
+    {
+      "platform": "Elecfans",
+      "region": "China",
+      "url": "https://bbs.elecfans.com/jishu_2115128_1_1.html",
+      "finding": "Публикация по OFDM/MATLAB; видимое вложение обозначено PDF.",
+      "status": "Наличие исходников не подтверждено; не считать моделью."
+    },
+    {
+      "platform": "Elecfans",
+      "region": "China",
+      "url": "https://bbs.elecfans.com/jishu_1831359_1_1.html",
+      "finding": "FIR/CIC, децимация 50 и рациональное изменение частоты 25/6, MATLAB-код проектирования.",
+      "status": "Полезное обсуждение; самостоятельный проверенный архив не получен."
+    },
+    {
+      "platform": "MATLAB China (ilovematlab.cn)",
+      "region": "China",
+      "url": "https://www.ilovematlab.cn/",
+      "finding": "Попытка просмотра математического сообщества.",
+      "status": "SSL timeout; наличие конкретных вложений не проверено."
+    },
+    {
+      "platform": "ECA forums",
+      "region": "Iran",
+      "url": "https://www.eca.ir/forums/",
+      "finding": "Попытка просмотра иранского электронного форума.",
+      "status": "HTTP 503 Service Unavailable; работоспособные архивы из форума не подтверждены."
+    },
+    {
+      "platform": "Iran-Eng",
+      "region": "Iran",
+      "url": "https://www.iran-eng.ir/",
+      "finding": "Попытка просмотра инженерного форума.",
+      "status": "TLS wrong version number; сайт прочитать не удалось."
+    },
+    {
+      "platform": "ElectricalMatlab public community",
+      "region": "Iran / Persian-language",
+      "url": "https://telegram.me/s/ElectricalMatlab?before=253",
+      "finding": "В публичной ленте указан MATLAB for Digital Communication, RAR 142.6 KB.",
+      "status": "Наличие упоминания подтверждено поиском; содержимое архива и авторство не проверены, файл не скачан."
+    },
+    {
+      "platform": "HWzone",
+      "region": "Israel",
+      "url": "https://hwzone.co.il/community/forum/31-%D7%90%D7%9C%D7%A7%D7%98%D7%A8%D7%95%D7%A0%D7%99%D7%A7%D7%94-%D7%95%D7%9E%D7%95%D7%93%D7%99%D7%A0%D7%92/",
+      "finding": "Поиск MATLAB/обработки сигналов; встречались обсуждения Fourier и программирования.",
+      "status": "В просмотренной поисковой выборке готовых релевантных пакетов не подтверждено; использованы авторские академические источники."
+    },
+    {
+      "platform": "Weizmann / Technion MWC",
+      "region": "Israel",
+      "url": "https://www.weizmann.ac.il/math/yonina/software-hardware/software/sub-nyquist-sampling-modulated-wideband-converter",
+      "finding": "Modulated Wideband Converter: analog sampling, multiband recovery; AnalogSimulation.zip и Demo_MWC.zip.",
+      "status": "Страница подтверждена. Архивы на старом tx.technion.ac.il вернули timeout, не скачаны."
+    },
+    {
+      "platform": "JCT / Shlomo Engelberg",
+      "region": "Israel",
+      "url": "https://homedir.jct.ac.il/~shlomoe/Public/dsp_matlab.html",
+      "finding": "MATLAB-материалы по DSP, ссылки из университетских заданий.",
+      "status": "SSL timeout; файлы не получены."
+    },
+    {
+      "platform": "GaussianWaves",
+      "region": "India-linked author community",
+      "url": "https://www.gaussianwaves.com/downloads/",
+      "finding": "Книги и MATLAB-примеры связи, OFDM, QAM, AWGN.",
+      "status": "Часть полных комплектов связана с покупкой книги; покупок не было, в подборку включены открытые DSPLog-файлы."
+    }
+  ],
+  "statistics": {
+    "collections": 12,
+    "matlab_files_by_extension": {
+      ".m": 257,
+      ".mlx": 1
+    },
+    "matlab_file_paths": 258,
+    "source_files": 306,
+    "existing_hash_matches": 0
+  },
+  "verification": {
+    "executed_matlab_or_octave": false,
+    "executed_downloaded_code": false,
+    "zip_crc_checked": true,
+    "raw_github_blob_sha1_checked": true,
+    "all_saved_files_sha256_recorded": true,
+    "scope": "Статическая проверка форматов, контрольных сумм, комплектности выбранных файлов и явных зависимостей. Это не подтверждение численной корректности или совместимости."
+  },
+  "workspace": "Создана только новая папка research/dsp_global_20260930; действующие models/sources/modems/tools проекта не изменялись.",
+  "country_note": "Регион определяется площадкой, языком документации или явным указанием учебного заведения/автора; национальность и местонахождение серверов не предполагались."
+}

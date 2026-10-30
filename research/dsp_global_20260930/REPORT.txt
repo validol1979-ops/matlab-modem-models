@@ -1,0 +1,117 @@
+Модели MATLAB и модули ЦОС: расширенный поиск — 30.09.2026
+
+Скачано 12 подборок; 258 файлов MATLAB ({'.m': 257, '.mlx': 1}).
+Число файлов не равно числу готовых модемов: 188 .m — учебные примеры к книге по обработке сигналов и антенным решёткам.
+Архивы сохранены в archives/, извлечённые исходники — в sources/.
+Контрольные суммы, привязка к источнику и Git commit: manifest.json. Краткий каталог: catalog.csv.
+Проверены CRC ZIP, Git blob SHA-1 для отдельных файлов и SHA-256 сохранённого содержимого.
+MATLAB/Octave и скачанный код НЕ запускались. Совместимость и численная корректность пока не проверены.
+
+ПРИОРИТЕТ ДЛЯ ПРОЕКТА МОДЕМОВ
+1. timing: symbolTimingSync.m, main.m — тактовая синхронизация и интерполяторы.
+2. channelizer + wsinc: PFB/WOLA, децимация, оконный FIR. WSINC скачан, потому что от него зависят демо канализатора.
+3. china_qpsk: qpsk_modem_basic.m и qpsk_modem_costas.m — MATLAB-эталон рядом с FPGA-проектом.
+4. china_ldpc: кодирование и SP/MS/NMS/OMS-декодеры, матрица (2016,1008) в комплекте.
+5. india_dsplog: MIMO ZF/MMSE-SIC, Alamouti, эквализация ISI.
+6. china_adaptive и iran_oset: адаптивные фильтры, notch, цветной шум, эквалайзер.
+7. iran_tehran: учебный FSK/амплитудный канал и FFT-анализ.
+8. israel_stft, israel_omlsa, israel_beamforming: оконный спектральный анализ, шумоподавление и решётки.
+
+timing | International | MATLAB-файлов: 12
+Пять TED: Gardner, Mueller–Müller, early/late, zero-crossing, ML; четыре интерполятора; расчёт PI-петли и S-кривых.
+Источник: https://github.com/igorauad/symbol_timing_sync
+Точка входа: main.m; symbolTimingSync.m
+Зависимости/границы: Демо использует comm.*, dsp.*, awgn, rcosdesign. Нужны соответствующие MathWorks toolbox; конкретная версия не проверена.
+Условия источника: Отдельный LICENSE в репозитории не найден.
+
+channelizer | International | MATLAB-файлов: 4
+Полифазный и WOLA-канализатор, максимальная и немаксимальная децимация.
+Источник: https://github.com/markagold1/channelizer
+Точка входа: pfb_channelizer_demo.m; wola_channelizer_demo.m
+Зависимости/границы: Ядра без сторонних toolbox по README. Для демо подключить соседний sources/wsinc. Для необязательного C++ MEX нужны FFTW3 и C++17.
+Условия источника: Отдельный LICENSE в репозитории не найден.
+
+wsinc | International | MATLAB-файлов: 6
+Проектирование LP/HP/BP FIR с разными окнами; сравнение сложности, полосы и подавления. Зависимость демо channelizer.
+Источник: https://github.com/markagold1/wsinc
+Точка входа: compare_filters.m; wsinc.m
+Зависимости/границы: Сохранён целый репозиторий. MATLAB/Octave по документации автора.
+Условия источника: Отдельный LICENSE в репозитории не найден.
+
+china_qpsk | China / Chinese-language | MATLAB-файлов: 4
+Базовый QPSK, вариант с петлёй Costas, формирующий фильтр. Verilog-проект содержит Gardner, но MATLAB-подборка не считается полной копией RTL.
+Источник: https://github.com/lauchinyuan/FPGA_QPSK-modem
+Точка входа: matlab/qpsk_modem_basic.m; matlab/qpsk_modem_costas.m
+Зависимости/границы: Скачаны только MATLAB-папка и авторский README, без RTL-проекта. Статически найдены функции фильтрации и моделирования канала; запуск не проверен.
+Условия источника: Отдельный LICENSE в репозитории не найден.
+
+china_adaptive | China / Chinese-language | MATLAB-файлов: 6
+Три реализации адаптивного фильтра, примеры подавления эха/шума и сравнения алгоритмов; WAV-примеры сохранены.
+Источник: https://github.com/LiXirong/AdaptiveFilterandActiveNoiseCancellation
+Точка входа: demo1.m; demo2.m; demo3.m
+Зависимости/границы: Полный небольшой репозиторий, включая звуковые данные.
+Условия источника: README ссылается на Anti-996; самостоятельного LICENSE нет. Условия автоматически не приравнивались к MIT/BSD.
+
+china_ldpc | China / Chinese-language | MATLAB-файлов: 9
+LDPC (2016,1008), BPSK/AWGN; SP, MS, normalized MS, offset MS; расчёт BER/FER.
+Источник: https://github.com/PKU-HunterWu/LDPC-Encoder-Decoder
+Точка входа: Comparisonof4Algorithms.m; SearchBestAlpha.m; SearchBestBeta.m
+Зависимости/границы: Полный комплект с Matrix(2016,1008)Block56.mat. По README длительные Monte Carlo-прогоны могут занимать часы.
+Условия источника: GPL-3.0; исходный LICENSE сохранён.
+
+iran_tehran | Iran | MATLAB-файлов: 6
+FSK-кодирование/декодирование текста, FFT-анализ и амплитудное кодирование из курса Signals and Systems.
+Источник: https://github.com/ParsaBukani/Signals-Systems
+Точка входа: Fourier Analysis & Frequency-Based Communication/code/p2.m; freq_coding.m; freq_decoding.m
+Зависимости/границы: Выбраны шесть .m по связи/FFT; изображения, SVM и задачи обработки изображений не включены. Локальные функции внутри скриптов могут требовать современного MATLAB.
+Условия источника: MIT; исходный LICENSE сохранён.
+
+iran_oset | Iran (historical origin) | MATLAB-файлов: 13
+13 функций: LMS/RLS, Kalman/ARMA, notch, комплексный FIR, DFT-фильтрация, спектральный эквалайзер, цветной шум.
+Источник: https://github.com/alphanumericslab/OSET
+Точка входа: matlab/tools/generic/; matlab/tools/modeling/colored_noise_gen.m
+Зависимости/границы: Выбраны универсальные функции, не весь биомедицинский toolbox. Helper conditional_median_filter включён. Часть функций использует filtfilt/firpm/firminphase; KFNotch вызывает dare. Проверять Signal Processing/DSP/Control System toolbox по выбранной функции.
+Условия источника: BSD-3-Clause текущего репозитория; исходный LICENSE сохранён.
+
+india_dsplog | India | MATLAB-файлов: 4
+Четыре скрипта: MIMO ZF, MMSE-SIC, Alamouti 2x2, BPSK в ISI-канале с ZF.
+Источник: https://dsplog.com/about/
+Точка входа: script_ber_mimo_zf_bpsk_rayleigh_channel.m; остальные script_*.m
+Зависимости/границы: Скрипты автора для MATLAB/Octave, теоретические и имитационные BER. Численно здесь не проверялись.
+Условия источника: Заголовки сохраняют copyright автора и запрет перераспространения без разрешения; файлы скачаны для локального изучения.
+
+israel_stft | Israel | MATLAB-файлов: 5
+Пять функций оконного преобразования Фурье и обратного преобразования, вспомогательные окна и сдвиги.
+Источник: https://israelcohen.com/software/
+Точка входа: stft.m; istft.m; biorwin.m
+Зависимости/границы: Полный опубликованный ZIP.
+Условия источника: Copyright Israel Cohen / All rights reserved; отдельная permissive license не найдена.
+
+israel_omlsa | Israel | MATLAB-файлов: 1
+Одноканальное шумоподавление и оценивание спектра шума; функция принимает входной и выходной WAV-файлы.
+Источник: https://israelcohen.com/software/
+Точка входа: omlsa.m
+Зависимости/границы: Нужен пользовательский WAV. В скачанной версии используется audioread.
+Условия источника: Copyright Israel Cohen / All rights reserved; отдельная permissive license не найдена.
+
+israel_beamforming | Israel | MATLAB-файлов: 188
+188 .m-файлов к книге Fundamentals of Signal Enhancement and Array Signal Processing: учебные рисунки и вспомогательные функции.
+Источник: https://israelcohen.com/software/
+Точка входа: Fig*.m; db_polar_m.m
+Зависимости/границы: Учебные скрипты по главам, не 188 независимых готовых модемов. Полный опубликованный ZIP.
+Условия источника: Авторский учебный комплект; автоматического разрешения на перелицензирование не предполагается.
+
+ФОРУМЫ И НЕДОСТУПНЫЕ МАТЕРИАЛЫ
+Список конкретных страниц и статусов: forum_sources.csv.
+MATLAB Central, DSP StackExchange и DSPRelated дали наиболее прямые ссылки на авторские реализации.
+Elecfans содержит полезные FIR/CIC/OFDM обсуждения, но видимый PDF не приравнивался к исходникам.
+ECA ответил HTTP 503; Iran-Eng — ошибкой TLS; MATLAB China и JCT — timeout.
+В изученной выборке HWzone самостоятельный комплект ЦОС не подтверждён; из Израиля скачаны авторские материалы профессора Israel Cohen (Technion).
+Модель QAM 2–256 Dick Benson найдена на MATLAB Central, но кнопка Download требует аккаунт MathWorks.
+Ссылки Weizmann на AnalogSimulation.zip и Demo_MWC.zip подтверждены; старый сервер Technion недоступен.
+Китайская группа означает китайскоязычные авторские проекты, а не проверенную национальность разработчиков.
+Иран: Tehran подтверждён README курса; OSET имеет историческую связь с Shiraz University, сейчас это международный проект.
+Часть кода имеет GPL/BSD/MIT или особые авторские условия: исходные лицензии и copyright сохранены, общей новой лицензии не присваивалось.
+
+Результаты предыдущего FTP/ELECTRONIX-поиска: ../electronix_20260930/REPORT.txt.
+Существующие рабочие файлы проекта не изменялись.

@@ -1,0 +1,1185 @@
+{
+  "scope": "provisional_targeted",
+  "tasks": {
+    "RF-DPD": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_dpd.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_dpd.py"
+      ],
+      "contract": [
+        "Разделить offline обучение коэффициентов и переносимый потоковый polynomial runtime с явным состоянием памяти и атомарной cfg.",
+        "Начать с фиксированной конфигурации M=5,K=5 источника; зафиксировать порядок коэффициентов и transient discard/offset, затем выбрать разрядности.",
+        "Опциональную adaptive ILA/LMS отложить отдельным этапом; RPEM и hardware acquisition не подразумеваются первым runtime.",
+        "Измерять NMSE/спектральное разрастание на независимом PA эталоне, отдельно публиковать сценарии насыщения."
+      ],
+      "sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/СВЧ и моделирование радиочастотных цепей/DPD_Example/main/DPD.pdf",
+          "file_pages": [
+            3,
+            4,
+            7,
+            8,
+            11
+          ],
+          "sections": [
+            "Phase2 Equations1/2",
+            "Phase4 Going Adaptive"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/СВЧ и моделирование радиочастотных цепей/DPD_Example/main/DPD.pdf",
+          "source_sha256": "9b16719c12be043dc4a7ff58e3880488d9ec2a0f2977d0300f9c515216381cfd",
+          "verified_sha256": "9b16719c12be043dc4a7ff58e3880488d9ec2a0f2977d0300f9c515216381cfd",
+          "verified_size": 829452,
+          "origin_class": "library"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "sources/DPD_Example/main/fit_memory_poly_model.m",
+          "lines": [
+            1,
+            24
+          ],
+          "source_path": "sources/DPD_Example/main/fit_memory_poly_model.m",
+          "source_sha256": "d6762999a22743b177f580ef9082f9933cdef41db523d8d4164f2b2c12127693",
+          "original_lines": [
+            1,
+            24
+          ],
+          "verified_sha256": "d6762999a22743b177f580ef9082f9933cdef41db523d8d4164f2b2c12127693",
+          "verified_size": 1179,
+          "origin_class": "preserved_project_original"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "sources/DPD_Example/main/DPD_analysis.m",
+          "lines": [
+            1,
+            95
+          ],
+          "source_path": "sources/DPD_Example/main/DPD_analysis.m",
+          "source_sha256": "8eb07d23a802b5543db37af2b3cdd0e5eb71f35ea2e2da4a57f2b731c0382daf",
+          "original_lines": [
+            1,
+            95
+          ],
+          "verified_sha256": "8eb07d23a802b5543db37af2b3cdd0e5eb71f35ea2e2da4a57f2b731c0382daf",
+          "verified_size": 4318,
+          "origin_class": "preserved_project_original"
+        }
+      ],
+      "model_scope": "Allpower chronological M5K5 memory polynomial; offline fit and indirect learning; atomic same-shape coefficients",
+      "fixed_scope": "Integer sqrt Q17 magnitude/powers, Q24 coefficients complex multiplyaccumulate, signed18 saturation, streaming state",
+      "limitations": [
+        "Offline identification is floating; no online adaptation/RPEM",
+        "Synthetic PA only, no measured device claim"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_dpd.py": "b784ab9acbb03311b5316f15ba7a5fab5d5e830db46e8cb91812d64fcf9c7473",
+          "tests/test_ext_advanced_dpd.py": "089ab57d82fccaabd4cfe4818d66ba5ad5c35d6938141cd77d60864d1dc27a58"
+        },
+        "tests": 6,
+        "Octave_basis_and_fit": true,
+        "fixed_float_maxerr_bound": 2e-05,
+        "synthetic_NMSE_improvement_dB_min": 20,
+        "two_tone_regrowth_power_reduction_min": 100
+      }
+    },
+    "ARRAY-MVDR": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_arrays.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_arrays.py"
+      ],
+      "contract": [
+        "Первый контракт M=4/8, вход snapshot complexsigned18, накопление Hermitian R, diagonal loading и отдельный поток коэффициентов; размеры — проектный выбор.",
+        "Проверять distortionless constraint, Hermitian symmetry, поведение при сингулярномR и подавление заданной помехи на NumPy/Matlab reference.",
+        "Обучение/решение и runtime beamform разделить; не обещать обновление матрицы заодинтакт или физические100МГц безсинтеза.",
+        "Текущий beamform делит результат на энергию входного вектора весов; для MVDR нужен явный unnormalized dot-product/масштабный адаптер, иначе distortionless constraint изменится. Существующий MMSE solver не является готовым generic inverse-R API; reuse ограничить доказанными арифметическими примитивами/раскладкой."
+      ],
+      "sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "file_pages": [
+            483,
+            484,
+            492,
+            501,
+            502,
+            503
+          ],
+          "sections": [
+            "8.2 Array Signals and Noise",
+            "8.3.2 Capon",
+            "8.4.2 Adaptive Nulling"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "source_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e",
+          "verified_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e",
+          "verified_size": 14026963,
+          "origin_class": "library"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/arrays/beamforming/original/Fig7_16.m",
+          "lines": [
+            1,
+            29
+          ],
+          "source_path": "algorithms/arrays/beamforming/original/Fig7_16.m",
+          "source_sha256": "c3f7eb32ae075a3b3e5933c0494d2556921cd8a2c4e8bd94e44a2f55e4d0d391",
+          "original_lines": [
+            1,
+            29
+          ],
+          "verified_sha256": "c3f7eb32ae075a3b3e5933c0494d2556921cd8a2c4e8bd94e44a2f55e4d0d391",
+          "verified_size": 2369,
+          "origin_class": "preserved_project_original"
+        },
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/arrays/beamforming/original/Fig10_14.m",
+          "lines": [
+            1,
+            65
+          ],
+          "source_path": "algorithms/arrays/beamforming/original/Fig10_14.m",
+          "source_sha256": "4b7f5498d11e58f8a461a19c34ad55ff2c5130755112fa84cca4b7ec2fa599c5",
+          "original_lines": [
+            1,
+            65
+          ],
+          "verified_sha256": "4b7f5498d11e58f8a461a19c34ad55ff2c5130755112fa84cca4b7ec2fa599c5",
+          "verified_size": 4397,
+          "origin_class": "preserved_project_original"
+        }
+      ],
+      "model_scope": "ULA M4/8; covariance/MVDR distortionless solve; MUSIC and ESPRIT K1/2",
+      "fixed_scope": "Integer outerproduct covariance; Q24 weight dotproduct; integer MUSIC noiseprojection/squared denominator",
+      "limitations": [
+        "Weight and eigen/subspace identification offline FLOAT including ESPRIT rotation eigenproblem",
+        "Fixed scope explicitly excludes eigensolver; this is partitioned matrix model",
+        "Broadside sin theta convention maps original endfire cos theta"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_arrays.py": "f3ce741b26411667abebd35029fdaa24b376a2e4fda0c513ab031a286fec219d",
+          "tests/test_ext_advanced_arrays.py": "4948fd1b37921d2fbc53a0525147e6bcabee471df82a63b100e5ef27d6b6f98c"
+        },
+        "tests": 4,
+        "KKT_independent_oracle_atol": 2e-14,
+        "DOA_grid_degrees": 0.25,
+        "fixed_beamforming_error_bound": 1e-05
+      }
+    },
+    "ARRAY-DOA": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_arrays.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_arrays.py"
+      ],
+      "contract": [
+        "Первый этап — floating reference для ULA M=4/8 и известного числа источников K=1/2; затем отдельное ТЗ на Hermitian eigensolver и fixed-point угловой поиск.",
+        "Сначала MUSIC с фиксированной сеткойуглов; ESPRIT добавить после подтверждения eigenspace/kernel.",
+        "Проверять выделение отдельных источников вограниченных SNR/angle scenarios; coherent sources и calibration errors — отдельные стресс-режимы, не гарантированныйPASS."
+      ],
+      "sources": [
+        {
+          "kind": "local_pdf_text_layer_fallback_not_indexed",
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "file_pages": [
+            492,
+            493,
+            494,
+            497,
+            498
+          ],
+          "sections": [
+            "8.3.3 MUSIC",
+            "8.3.6 ESPRIT"
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/Антенны/MATLAB/Haupt R. L. - Antenna Arrays. A Computational Approach - 2010.pdf",
+          "source_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e",
+          "verified_sha256": "773e0b0b9157efe4dc84d7062644213b10f1f24f8602dc13bc6206be7558f71e",
+          "verified_size": 14026963,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "ULA M4/8; covariance/MVDR distortionless solve; MUSIC and ESPRIT K1/2",
+      "fixed_scope": "Integer outerproduct covariance; Q24 weight dotproduct; integer MUSIC noiseprojection/squared denominator",
+      "limitations": [
+        "Weight and eigen/subspace identification offline FLOAT including ESPRIT rotation eigenproblem",
+        "Fixed scope explicitly excludes eigensolver; this is partitioned matrix model",
+        "Broadside sin theta convention maps original endfire cos theta"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_arrays.py": "f3ce741b26411667abebd35029fdaa24b376a2e4fda0c513ab031a286fec219d",
+          "tests/test_ext_advanced_arrays.py": "4948fd1b37921d2fbc53a0525147e6bcabee471df82a63b100e5ef27d6b6f98c"
+        },
+        "tests": 4,
+        "KKT_independent_oracle_atol": 2e-14,
+        "DOA_grid_degrees": 0.25,
+        "fixed_beamforming_error_bound": 1e-05
+      }
+    },
+    "AUDIO-IMCRA": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_imcra.py",
+        "common/python/ext_advanced_imcra_fixed.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_imcra.py",
+        "tests/test_ext_advanced_imcra_fixed.py"
+      ],
+      "contract": [
+        "Выделить IMCRA tracker с согласованным интерфейсом спектральной мощности и состояния prior-SNR/gain: eta, v и предыдущее GH1^2*gamma. Выходы — noise PSD и вероятность присутствия речи. До RTL зафиксировать порядок вычисления gamma/eta/v, IMCRA, gain и обновления eta_2term, reset, инициализацию и rollover минимумов.",
+        "Повторить исходный floating schedule на синтетических stationary/ramped/noise-step + speech наборах, затем оценить fixed-point ширины и LUT.",
+        "Первый аппаратный размер N=32/HOP=8 можно выбрать для совместимости с существующим RTL; это отклонение от исходного M=512/Fs=16 kHz, требующее отдельного эталона и объяснения."
+      ],
+      "sources": [
+        {
+          "kind": "preserved_original_code",
+          "path": "algorithms/audio/omlsa/original/omlsa.m",
+          "function": "omlsa",
+          "lines": [
+            1,
+            336
+          ],
+          "source_path": "algorithms/audio/omlsa/original/omlsa.m",
+          "source_sha256": "d0bd9a2f02736442a2d63e1fb28a1d197c4507f3b4e4b123607c321b3b715684",
+          "original_lines": [
+            1,
+            336
+          ],
+          "verified_sha256": "d0bd9a2f02736442a2d63e1fb28a1d197c4507f3b4e4b123607c321b3b715684",
+          "verified_size": 15046,
+          "origin_class": "preserved_project_original"
+        },
+        {
+          "kind": "preserved_source_provenance",
+          "path": "research/dsp_global_20260930/manifest.json",
+          "entry_id": "israel_omlsa",
+          "source_path": "research/dsp_global_20260930/manifest.json",
+          "source_sha256": "89b94736f6b97f5217cf58f8f95350d56f2474a46b6e85b29c73f96b944a714e",
+          "verified_sha256": "89b94736f6b97f5217cf58f8f95350d56f2474a46b6e85b29c73f96b944a714e",
+          "verified_size": 107830,
+          "origin_class": "preserved_project_original"
+        }
+      ],
+      "model_scope": "Exact original omlsa schedule/full spectralstate +normalized hamming512/hop128/zerosbins3+Nyquist/OLA audio; explicit original timeframe activation",
+      "fixed_scope": "ALL spectral recurrence/minima/noise/SNR/probability/gains/eta feedback Q48 integer; integer mantissaLUT log/exp/E1 +isqrt; Q31 gainoutput; integer Q17 spectralapplygain",
+      "limitations": [
+        "Fixed scope spectraltracker+gain only: window/FFT/IFFT/OLA frontend remains floating model or caller-supplied fixed frontend",
+        "fs16000/M512 exactsourceprofile only; fixed nonstatmedium/tone/broad true",
+        "Signed120 scalar range; power bounded0..1024; Python arithmetic model no cycle/area promise",
+        "Constants and nonlinearity tables built offline in float; tests forbid floating dynamicconversion and constantquantization during runtime",
+        "Stable fixed phat evaluates den/(den+q*(1+eta)*exp(-v)) to define qhat rounding to unity as probability0, avoiding division byzero"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_imcra.py": "209fe6f1517924545badd381dd738653215b376df844056bad3eb91e27f20634",
+          "common/python/ext_advanced_imcra_fixed.py": "47681c88454e320582ad1eacfe57951f59bc6e77b666463c37c0b054206f3e3e",
+          "tests/test_ext_advanced_imcra.py": "7ca3f338afb6aabba22a133a42378df0acd6d9b3eae4cde8e7311178896e63f8",
+          "tests/test_ext_advanced_imcra_fixed.py": "db5a8fb69d3f5ab111e3882070ad48c51d79646060ae64b85d27d6f9447f319e"
+        },
+        "float_targeted_tests": 22,
+        "fixed_targeted_tests": 4,
+        "source_trace_frames": 497,
+        "source_trace_bins": 257,
+        "source_comparison_frames": 25,
+        "minima_rollovers": 33,
+        "float_max_relative_error_observed": 1.4e-12,
+        "float_comparison_rtol": 1e-10,
+        "fixed_comparison_rtol": 2e-05,
+        "fixed_comparison_atol": 2e-06,
+        "fixed_gain_maxabs_error_observed": 1.103734e-06,
+        "fixed_eta_feedback_maxabs_error_observed": 7.857598e-07
+      },
+      "dependencies": [
+        "tests/data/imcra_source_reference_20261030.npz"
+      ]
+    },
+    "AUDIO-EQ16": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_eq.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_eq.py"
+      ],
+      "contract": [
+        "Отдельная задача synthesis PFB: сначала восстановить коэффициенты/нормировку/frame convention из исходных MDL, затем добавить per-band gain interface и analysis→gain→synthesis reconstruction tests; существующий analysis PFB переиспользовать.",
+        "Не дублировать уже имеющийся анализатор и не объявлять source architecture бикуадным каскадом."
+      ],
+      "sources": [
+        {
+          "kind": "preserved_original_model",
+          "path": "sources/graphic_equalizer_16_band_2011_05_17/graphic_equalizer_16_band_2011_05_17.mdl",
+          "blocks": [
+            "Downsample",
+            "IFFT",
+            "IFFT1",
+            "equalizer_coeff",
+            "prototype_impulse_response"
+          ],
+          "source_path": "sources/graphic_equalizer_16_band_2011_05_17/graphic_equalizer_16_band_2011_05_17.mdl",
+          "source_sha256": "cb24f61ab2f2286a81d37e1d133d4c9cc6b0f1fc86292e8e779d403ff53efcc9",
+          "verified_sha256": "cb24f61ab2f2286a81d37e1d133d4c9cc6b0f1fc86292e8e779d403ff53efcc9",
+          "verified_size": 71671,
+          "origin_class": "preserved_project_original"
+        },
+        {
+          "kind": "preserved_original_model",
+          "path": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+          "source_path": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+          "source_sha256": "f8c3194caa0f2a2e96629f0d6c90fb51dbafa043d7224bccd7c769c3bbe55bf9",
+          "verified_sha256": "f8c3194caa0f2a2e96629f0d6c90fb51dbafa043d7224bccd7c769c3bbe55bf9",
+          "verified_size": 46310,
+          "origin_class": "preserved_project_original"
+        }
+      ],
+      "model_scope": "M16/D8 oversampled complex modulated PFB, source exact RRC511 with PREPENDEDzero512/sqrt8, existing analysisbank reused, same-sign twoIFFT synthesis, latency512",
+      "fixed_scope": "Integer Q24 prototype FIR, existing fft_fixed.inverse, Q24 gain and integer overlap-add, signed18 output saturation",
+      "limitations": [
+        "Complex16-band bank; conjugate linked gains required for real output",
+        "Windowed RRC source prototype gives approximate PR: unity relative error<.002, not exact identity",
+        "Fixed Q24 accumulator profile explicitly differs existing pfb_fixed Q15/Q17 scaling, reuses FFT arithmetic"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_eq.py": "5aca8169d58d8783e35b197483ac4c7327ed5fde2eb8bbf4870ebba0e6c88ad6",
+          "tests/test_ext_advanced_eq.py": "7a31eeea5f62aa23fac87e66ad3c9ede58bda741ccc0b21d2054fa790baf4ce3"
+        },
+        "targeted_tests": 4,
+        "source_fixture_match_atol": 1e-16,
+        "unity_relative_error_bound": 0.002,
+        "fixed_error_bound": 0.0005
+      },
+      "dependencies": [
+        "common/python/research_core.py",
+        "common/python/fft_fixed.py",
+        "tests/data/eq16_source_prototype_20261030.json"
+      ]
+    },
+    "CHANNEL-AWGN": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_channels.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_channels.py"
+      ],
+      "contract": [
+        "Создать отдельную переносимую Python fixed-модель и RTL PRNG→Box–Muller→complex gain→AWGN adder; сохранить явную seed-normalization get_seed, определить Q-formats и sample-SNR convention. Параметры seed, gain, output width; продвижение RNG только при продвижении/принятии слова, удержание выходного слова при backpressure. Библиотечный tb.v использовать как точку входа, но написать собственный численный scoreboard."
+      ],
+      "sources": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/gaus_rng_06122022/gaus_rng.v",
+          "locator": "lines55–95,121–215",
+          "kind": "direct_original",
+          "exists": true,
+          "sha256": "7eb747aee3313a62b7bf2bd75701505cd43083c2bca60be2c118f688d251b21f",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/gaus_rng_06122022/gaus_rng.v",
+          "verified_sha256": "7eb747aee3313a62b7bf2bd75701505cd43083c2bca60be2c118f688d251b21f",
+          "verified_size": 5993,
+          "origin_class": "library"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/gaus_rng_06122022/tausworthe_urng.v",
+          "locator": "lines81–121; get_seed",
+          "kind": "direct_original",
+          "exists": true,
+          "sha256": "ade8597ebf84560cf580411843c4c16aca0c8a0e7c11ce4f6a4eb90e1f1a965d",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/gaus_rng_06122022/tausworthe_urng.v",
+          "verified_sha256": "ade8597ebf84560cf580411843c4c16aca0c8a0e7c11ce4f6a4eb90e1f1a965d",
+          "verified_size": 3325,
+          "origin_class": "library"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/gaus_rng_06122022/tb.v",
+          "locator": "module tb_rng, lines3–61",
+          "kind": "direct_original",
+          "exists": true,
+          "sha256": "c957ea81c78fe862f17022af27be94bc73515a7420a7f22f2606385a5a4c41eb",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/gaus_rng_06122022/tb.v",
+          "verified_sha256": "c957ea81c78fe862f17022af27be94bc73515a7420a7f22f2606385a5a4c41eb",
+          "verified_size": 1173,
+          "origin_class": "library"
+        },
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Цифровая обработка сигналов/Recipes for Communication and Signal Processing_2023.pdf",
+          "locator": "file pages18–20; §1.2 Noise Calibration in Simulation of Communication Systems",
+          "kind": "direct_pdf",
+          "exists": true,
+          "sha256": "c6e13f4dd0ed119132459acf6a0f25d71102b4d7f521ed9ffbee213d00b84053",
+          "file_pages": [
+            18,
+            19,
+            20
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Цифровая обработка сигналов/Recipes for Communication and Signal Processing_2023.pdf",
+          "verified_sha256": "c6e13f4dd0ed119132459acf6a0f25d71102b4d7f521ed9ffbee213d00b84053",
+          "verified_size": 2257480,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Source exact Taus get_seed/oldstate; float BoxMuller and complex Clarke SoS, normalized multipath delays",
+      "fixed_scope": "Integer RNG, 16bit radius/phase LUTs, Q17 noise/gain multiply, phase32 SoS, signed24 Q17 coefficients and signed18 channel output",
+      "limitations": [
+        "BoxMuller LUT profile is project derived, not original gaus_log/CORDIC pipeline bitmatch",
+        "AWGN signed18 clipping changes highsigma tails; statistics validated sigma.08",
+        "Rayleigh eigentime/isotropy uses PCG64 offline angle/phase configurations"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_channels.py": "5b1a551ae650ea223c5a0758831a77372c067cf381c40a0a3b3fe97df136317f",
+          "tests/test_ext_advanced_channels.py": "861bc4362805a15396d24d8b0c83daacc70abf053c0e476a6ece7c7af0106635"
+        },
+        "tests": 8,
+        "AWGN_samples": 180000,
+        "Rayleigh_independent_realizations": 5000,
+        "Rayleigh_J0_realizations": 500,
+        "Rayleigh_power_budget": 0.045,
+        "modem_BER_budget": 0.015,
+        "modem_disabled_excess_BER": 0.1
+      }
+    },
+    "CHANNEL-RAYLEIGH": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_channels.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_channels.py"
+      ],
+      "contract": [
+        "Реализовать детерминированный от seed комплексный h[n] методом SoS (первый профиль Clarke из §1.3), регулируемые normalized Doppler, power и число синусоид; подключить SISO multiplication, затем описать расширение на несколько time-varying taps по §1.4. Использовать комплексные x/y из SoS, а не envelope-only рисунок Smith. Разрядности и темп рассчитать отдельно, не объявлять генерацию 1/cycle до проверки."
+      ],
+      "sources": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Цифровая обработка сигналов/Recipes for Communication and Signal Processing_2023.pdf",
+          "locator": "file pages20–26; §§1.3–1.4",
+          "kind": "direct_pdf",
+          "exists": true,
+          "sha256": "c6e13f4dd0ed119132459acf6a0f25d71102b4d7f521ed9ffbee213d00b84053",
+          "file_pages": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Цифровая обработка сигналов/Recipes for Communication and Signal Processing_2023.pdf",
+          "verified_sha256": "c6e13f4dd0ed119132459acf6a0f25d71102b4d7f521ed9ffbee213d00b84053",
+          "verified_size": 2257480,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Source exact Taus get_seed/oldstate; float BoxMuller and complex Clarke SoS, normalized multipath delays",
+      "fixed_scope": "Integer RNG, 16bit radius/phase LUTs, Q17 noise/gain multiply, phase32 SoS, signed24 Q17 coefficients and signed18 channel output",
+      "limitations": [
+        "BoxMuller LUT profile is project derived, not original gaus_log/CORDIC pipeline bitmatch",
+        "AWGN signed18 clipping changes highsigma tails; statistics validated sigma.08",
+        "Rayleigh eigentime/isotropy uses PCG64 offline angle/phase configurations"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_channels.py": "5b1a551ae650ea223c5a0758831a77372c067cf381c40a0a3b3fe97df136317f",
+          "tests/test_ext_advanced_channels.py": "861bc4362805a15396d24d8b0c83daacc70abf053c0e476a6ece7c7af0106635"
+        },
+        "tests": 8,
+        "AWGN_samples": 180000,
+        "Rayleigh_independent_realizations": 5000,
+        "Rayleigh_J0_realizations": 500,
+        "Rayleigh_power_budget": 0.045,
+        "modem_BER_budget": 0.015,
+        "modem_disabled_excess_BER": 0.1
+      }
+    },
+    "OFDM-CFO-ICI": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_cfo.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_cfo.py"
+      ],
+      "contract": [
+        "Сначала создать Python-прототип CF, ограниченного root-search и CFO correction поверх существующего OFDM FFT/CP. Зафиксировать pilot layout, normalized CFO range, число итераций, zero/near-zero denominator и failure flag по статьe. Только после воспроизведения численного примера выбрать fixed-point RTL профиль. Не подменять статью методом Schmidl–Cox: он этой проверенной публикацией не описан."
+      ],
+      "sources": [
+        {
+          "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Цифровая обработка сигналов/OFDM_Carrier_Frequency_Offset_Correction_Using.pdf",
+          "locator": "file pages1–5, §§II–III; CFO characteristic function",
+          "kind": "direct_pdf",
+          "exists": true,
+          "sha256": "f80ea2e97ee560011acb74ace5638621d232672bd47e4fb15d175fbee88bbe4d",
+          "file_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Цифровая обработка сигналов/OFDM_Carrier_Frequency_Offset_Correction_Using.pdf",
+          "verified_sha256": "f80ea2e97ee560011acb74ace5638621d232672bd47e4fb15d175fbee88bbe4d",
+          "verified_size": 663522,
+          "origin_class": "library"
+        }
+      ],
+      "model_scope": "Hoseyni/Ilow eq12/17/19 paper_sinc determinantreal roots +complexpilotresidual/condition/ambiguity rejection; separate finiteFFT Dirichlet adaptation",
+      "fixed_scope": "Offline Q24 inversepilotrows on bounded1025grid for N8; runtime integer complex residual/candidate checks; integer phase32 LUT16 Q17 time correction",
+      "limitations": [
+        "Fixed FFT-Dirichlet grid pilot-residual is project adaptation: real zeros differ from Cramer when determinant complex",
+        "Noisy singlepilot wide-range FFT-Dirichlet estimator can frequently reject and accept wrongroots; not production acquisition guarantee",
+        "Default noiseless residualtol1e-7; noisy paper profile uses tol.15 with measured conditional errors and rejection",
+        "Only flat channel, known pilotindex0; no channelfrequencyselective division claim"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_cfo.py": "6e8d9737cc57b50deb097cb60c98df29ee205cc496eb2308f3f89f8c74a35c3a",
+          "tests/test_ext_advanced_cfo.py": "c1eba2a8e89fef3e34996285ebef1656cc204d6681f9e6a90c309143b1db58d0"
+        },
+        "targeted_tests": 6,
+        "paper_noiseless_N": [
+          16,
+          64
+        ],
+        "paper_noiseless_CFO": [
+          -0.3,
+          0,
+          0.2,
+          0.3
+        ],
+        "fixed_grid_error_bound": 0.0017,
+        "noise_SNR_dB": 25,
+        "noise_frames": 32,
+        "noise_paper_conditional_RMSE_bound": 0.07,
+        "noise_paper_accepted_min": 16,
+        "noise_corrected_MSE_ratio_bound": 0.15,
+        "noise_corrected_SER_ratio_bound": 0.6,
+        "wide_fft_16QAM_characterization": {
+          "accepted": 4,
+          "rejected": 28,
+          "conditional_CFO_RMSE": 0.4940905701,
+          "note": "separate deterministic seed99 sequential profile characterization; shows weakness, not PASS accuracy claim"
+        },
+        "noise_characterization": [
+          {
+            "model": "paper_sinc",
+            "qam": 16,
+            "n": 16,
+            "frames": 32,
+            "snr_db": 25,
+            "cfo": 0.2,
+            "bounds": [
+              -0.8,
+              0.8
+            ],
+            "complex_residual_tolerance": 0.15,
+            "accepted": 21,
+            "rejected": 11,
+            "conditional_cfo_RMSE": 0.035915954625937045,
+            "conditional_uncorrected_MSE": 0.11093087703322321,
+            "conditional_corrected_MSE": 0.005933554174082677,
+            "conditional_uncorrected_SER": 0.28888888888888886,
+            "conditional_corrected_SER": 0.0
+          },
+          {
+            "model": "fft_dirichlet",
+            "qam": 16,
+            "n": 16,
+            "frames": 32,
+            "snr_db": 25,
+            "cfo": 0.2,
+            "bounds": [
+              -0.8,
+              0.8
+            ],
+            "complex_residual_tolerance": 0.15,
+            "accepted": 4,
+            "rejected": 28,
+            "conditional_cfo_RMSE": 0.49409057010124624,
+            "conditional_uncorrected_MSE": 0.42126462492168776,
+            "conditional_corrected_MSE": 0.3514699812057581,
+            "conditional_uncorrected_SER": 0.75,
+            "conditional_corrected_SER": 0.23333333333333334
+          },
+          {
+            "model": "paper_sinc",
+            "qam": 64,
+            "n": 16,
+            "frames": 32,
+            "snr_db": 25,
+            "cfo": 0.2,
+            "bounds": [
+              -0.8,
+              0.8
+            ],
+            "complex_residual_tolerance": 0.15,
+            "accepted": 23,
+            "rejected": 9,
+            "conditional_cfo_RMSE": 0.036048952264188784,
+            "conditional_uncorrected_MSE": 0.10637066719555277,
+            "conditional_corrected_MSE": 0.006066717784663204,
+            "conditional_uncorrected_SER": 0.7159420289855073,
+            "conditional_corrected_SER": 0.02608695652173913
+          },
+          {
+            "model": "fft_dirichlet",
+            "qam": 64,
+            "n": 16,
+            "frames": 32,
+            "snr_db": 25,
+            "cfo": 0.2,
+            "bounds": [
+              -0.8,
+              0.8
+            ],
+            "complex_residual_tolerance": 0.15,
+            "accepted": 3,
+            "rejected": 29,
+            "conditional_cfo_RMSE": 0.036816050105126556,
+            "conditional_uncorrected_MSE": 0.44806321964042456,
+            "conditional_corrected_MSE": 0.023480437503559395,
+            "conditional_uncorrected_SER": 0.9777777777777777,
+            "conditional_corrected_SER": 0.3111111111111111
+          }
+        ]
+      },
+      "dependencies": [
+        "common/python/research_core.py"
+      ]
+    },
+    "AUDIO-COMPLIMIT": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_dynamics.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_dynamics.py"
+      ],
+      "contract": [
+        "Первый профиль: mono/stereo feedforward compressor с threshold dBFS, ratio, knee, attack/release, makeup gain и peak/RMS detector; определить Fs, silence floor, transient state и стереосвязь.",
+        "Вывести дискретный gain computer в dB и attack/release one-pole коэффициенты из заданной time-constant convention; затем floating и fixed. Runtime-параметры менять с заданным smoothing и проверяемым пределом изменения gain.",
+        "Feedback, lookahead и true-peak limiting — отдельные расширения после первого профиля; feedback требует собственного вывода закона сжатия, а не копии feedforward gain law.",
+        "Ограничить gain reduction и обеспечить finite-state поведение при нулевом/тишине."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/Douglas Self - Small Signal Audio Design - 2024.epub",
+          "document_id": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "part": 33,
+          "start_char": 14300,
+          "end_char": 19300,
+          "raw_read_file": "spectral/raw_self_comp_lim.json",
+          "origin_class": "indexed_rag_read",
+          "verified_sha256": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "verified_size": 51644039
+        }
+      ],
+      "model_scope": "Feedforward compressor peak/RMS/maxstereolink/softknee/makeup/lookahead; gate hysteresis/hold/range/sidechainHP/LP",
+      "fixed_scope": "Q17 sample/peak Q34 RMS state Q31 poles Q24 gain table integer recurrences and saturation",
+      "limitations": [
+        "Digital equations are project derived from Self behavior",
+        "Finite ratio softlimiter has no brickwall/truepeak guarantee",
+        "Tau is63.2percent exponentialstep time; no audibleclick subjective claim"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_dynamics.py": "7158ee729c503a1fb2e1cc5b33b88a9046ee4cd25954b81737eef00e25fe93b2",
+          "tests/test_ext_advanced_dynamics.py": "cc8bef991c51d15f364b57f1a5e0fbe8daef522fe753547b1604c67ed52acc46"
+        },
+        "tests": 6,
+        "compressor_floatfixed_error_bound": 0.0002,
+        "gate_floatfixed_error_bound": 0.0003,
+        "samplerates_tested": [
+          8000,
+          48000
+        ]
+      }
+    },
+    "AUDIO-NOISEGATE": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_dynamics.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_dynamics.py"
+      ],
+      "contract": [
+        "Потоковый gate: threshold, hysteresis, attack, hold, release, range/max attenuation, sidechain high-pass/low-pass, optional lookahead, bypass.",
+        "Состояние open/closed с гистерезисом и hold-таймером; gain interpolation для плавного открытия/закрытия; при закрытии применять заданный range, а не жёсткий ноль.",
+        "Поддержать stereo-linked sidechain и runtime-изменение параметров без zipper noise."
+      ],
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/Douglas Self - Small Signal Audio Design - 2024.epub",
+          "document_id": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "part": 33,
+          "start_char": 24500,
+          "end_char": 29500,
+          "raw_read_file": "spectral/raw_self_gate.json",
+          "origin_class": "indexed_rag_read",
+          "verified_sha256": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "verified_size": 51644039
+        }
+      ],
+      "model_scope": "Feedforward compressor peak/RMS/maxstereolink/softknee/makeup/lookahead; gate hysteresis/hold/range/sidechainHP/LP",
+      "fixed_scope": "Q17 sample/peak Q34 RMS state Q31 poles Q24 gain table integer recurrences and saturation",
+      "limitations": [
+        "Digital equations are project derived from Self behavior",
+        "Finite ratio softlimiter has no brickwall/truepeak guarantee",
+        "Tau is63.2percent exponentialstep time; no audibleclick subjective claim"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_dynamics.py": "7158ee729c503a1fb2e1cc5b33b88a9046ee4cd25954b81737eef00e25fe93b2",
+          "tests/test_ext_advanced_dynamics.py": "cc8bef991c51d15f364b57f1a5e0fbe8daef522fe753547b1604c67ed52acc46"
+        },
+        "tests": 6,
+        "compressor_floatfixed_error_bound": 0.0002,
+        "gate_floatfixed_error_bound": 0.0003,
+        "samplerates_tested": [
+          8000,
+          48000
+        ]
+      }
+    },
+    "RADAR-CHIRP": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_radar.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_radar.py"
+      ],
+      "contract": [
+        "Создать floating и fixed генераторы комплексного LFM с параметрами Fs,N,f0,slope,amplitude,initial phase; явно выбрать t=n/Fs и политику округления длительности N (в исходном 125 MHz*0.5 us=62.5 отсчёта).",
+        "Добавить повторяемые импульсы, pulse/PRI, задержку и комплексную амплитуду нескольких точечных целей, нормированный Doppler. Начать с малых N=64/256/1024 и полосы ниже Nyquist; это наши профили, не обещание радиуса действия исходного радара."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "document_id": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "part": 12,
+          "file_page": null,
+          "start_char": 11500,
+          "end_char": 17000,
+          "raw_read_file": "root/read_chen_chirp.json",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/8_Utils/Python/Generic_Ramp_Frequency.py",
+          "lines": [
+            5,
+            16
+          ],
+          "verified_sha256": "2970fa0046f728a47b5b226a0f813cf05359186c291119f9584049ec75f8b9d5",
+          "verified_size": 988
+        }
+      ],
+      "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+      "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+      "limitations": [
+        "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+        "CFAR is independently specified; source is fixedthreshold placeholder",
+        "No physicalrange/velocity without wavelength or timing/vendorclaims"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_radar.py": "b87fad6f858a430924c9742ad534493fb6f663ea1f9610dc1c0b5f732ad54c9f",
+          "tests/test_ext_advanced_radar.py": "0da4a6ceaedb78e808f8130d25adb416020eb473f63f1aadca1fdd8541afef91"
+        },
+        "tests": 21,
+        "CFAR_independent_windows_per_profile": 100001,
+        "CFAR_profiles": 12,
+        "CFAR_binomial_confidence": 0.999,
+        "CFAR_tests_actual_DUT": true
+      },
+      "dependencies": [
+        "common/python/ext_signal_core.py"
+      ]
+    },
+    "RADAR-PULSE-COMP": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_radar.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_radar.py"
+      ],
+      "contract": [
+        "Начать с независимого floating matched filter h[n]=conj(s[L-1-n]) и полного linear convolution; зафиксировать lag, peak index и нормировку по энергии опорного chirp.",
+        "Затем сравнить FFT-реализацию с корректным zero padding/overlap-save/partitioned convolution и fixed квантованием; отделить linear correlation от circular wrap и выдачу хвоста."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/frequency_matched_filter.v",
+          "lines": [
+            8,
+            112
+          ],
+          "verified_sha256": "0012db0c5059458bafe6cbbe020fc38eda964f260c41289ad190f9aeb1ded320",
+          "verified_size": 3881
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/matched_filter_multi_segment.v",
+          "lines": [
+            41,
+            55
+          ],
+          "verified_sha256": "f5af79b45cbc648713fa077cce1536ab97d345458cce3ac6437d06ec7b64778f",
+          "verified_size": 15620
+        }
+      ],
+      "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+      "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+      "limitations": [
+        "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+        "CFAR is independently specified; source is fixedthreshold placeholder",
+        "No physicalrange/velocity without wavelength or timing/vendorclaims"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_radar.py": "b87fad6f858a430924c9742ad534493fb6f663ea1f9610dc1c0b5f732ad54c9f",
+          "tests/test_ext_advanced_radar.py": "0da4a6ceaedb78e808f8130d25adb416020eb473f63f1aadca1fdd8541afef91"
+        },
+        "tests": 21,
+        "CFAR_independent_windows_per_profile": 100001,
+        "CFAR_profiles": 12,
+        "CFAR_binomial_confidence": 0.999,
+        "CFAR_tests_actual_DUT": true
+      },
+      "dependencies": [
+        "common/python/ext_signal_spectral.py"
+      ]
+    },
+    "RADAR-DOPPLER-MTI": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_radar.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_radar.py"
+      ],
+      "contract": [
+        "Сначала Python range×pulse массив, оконная slow-time FFT с Np=16/32/64, явным порядком осей, FFT scaling, Doppler-bin→Hz через PRI и wrap/Nyquist.",
+        "До FFT добавить отдельные предлагаемые MTI FIR [1,-1] и [1,-2,1], затем сравнить с вычитанием среднего; задать startup/edge policy и состояние между CPI. Velocity выдавать только при заданной длине волны."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/doppler_processor.v",
+          "lines": [
+            3,
+            56
+          ],
+          "verified_sha256": "5a61feb4036255c5884447f2a8e0b5e7c275ee0df0ef217dcbc6e7035558114b",
+          "verified_size": 11500
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/doppler_processor.v",
+          "lines": [
+            212,
+            295
+          ],
+          "verified_sha256": "5a61feb4036255c5884447f2a8e0b5e7c275ee0df0ef217dcbc6e7035558114b",
+          "verified_size": 11500
+        }
+      ],
+      "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+      "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+      "limitations": [
+        "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+        "CFAR is independently specified; source is fixedthreshold placeholder",
+        "No physicalrange/velocity without wavelength or timing/vendorclaims"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_radar.py": "b87fad6f858a430924c9742ad534493fb6f663ea1f9610dc1c0b5f732ad54c9f",
+          "tests/test_ext_advanced_radar.py": "0da4a6ceaedb78e808f8130d25adb416020eb473f63f1aadca1fdd8541afef91"
+        },
+        "tests": 21,
+        "CFAR_independent_windows_per_profile": 100001,
+        "CFAR_profiles": 12,
+        "CFAR_binomial_confidence": 0.999,
+        "CFAR_tests_actual_DUT": true
+      }
+    },
+    "RADAR-CFAR": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_radar.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_radar.py"
+      ],
+      "contract": [
+        "Первый этап — самостоятельное математическое ТЗ CA-CFAR: noncoherent power, CUT, guard/training cells, средняя оценка фона, edge policy и Pfa. Для i.i.d. exponential noise вывести alpha=T*(Pfa^(-1/T)-1), где T — общее число training cells; это наша постановка, не формула из найденного кода.",
+        "После независимого вывода — floating и fixed модель; предложенные начальные профили G=1/2/4,T=16/32 и Pfa1e-2/1e-3. GO/SO/OS и 2D расширения ставить отдельно после доказательства первой версии."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/radar_system_top.v",
+          "lines": [
+            298,
+            323
+          ],
+          "verified_sha256": "7e539effac2636c341b06ab988f14c25cbbb4b7e206968ff8122afd27fd00e3e",
+          "verified_size": 14645
+        }
+      ],
+      "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+      "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+      "limitations": [
+        "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+        "CFAR is independently specified; source is fixedthreshold placeholder",
+        "No physicalrange/velocity without wavelength or timing/vendorclaims"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_radar.py": "b87fad6f858a430924c9742ad534493fb6f663ea1f9610dc1c0b5f732ad54c9f",
+          "tests/test_ext_advanced_radar.py": "0da4a6ceaedb78e808f8130d25adb416020eb473f63f1aadca1fdd8541afef91"
+        },
+        "tests": 21,
+        "CFAR_independent_windows_per_profile": 100001,
+        "CFAR_profiles": 12,
+        "CFAR_binomial_confidence": 0.999,
+        "CFAR_tests_actual_DUT": true
+      }
+    },
+    "DSP-KALMAN-MATRIX": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_kalman.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_kalman.py"
+      ],
+      "contract": [
+        "Сначала независимый линейный KF для state dimension2/4 и measurement dimension1/2, параметров F,H,Q,R,P0,x0; innovation solve через разложение, без явного inverse в реализации.",
+        "Зафиксировать симметрию/PSD covariance, Joseph-form update как наше численно устойчивое решение, policy для missing measurements и singular/invalid covariance; затем fixed precision sweep. EKF/Jacobians этим пунктом не обещаются."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "document_id": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "part": 17,
+          "file_page": null,
+          "start_char": 16000,
+          "end_char": 22500,
+          "raw_read_file": "root/read_chen_kalman.json",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        },
+        {
+          "origin_class": "direct_original_mathml",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "locator": "EPUB OEBPS/xhtml/ch06.xhtml, формула6.29a; оригинал MathML проверен",
+          "raw_excerpt_file": "root/chen_equation_6_29a_markup.txt",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        }
+      ],
+      "model_scope": "Linear KF innovation solve/Joseph covariance; scalar/2/4state,1/2measurement, missing/reset",
+      "fixed_scope": "Integer Q16/24/32 matrix operations, exact rational innovation solve; signed63 storage overflow rejection",
+      "limitations": [
+        "Python Fraction solve models arithmetic without cycle/latency promise",
+        "Quantized PSD config rejected if invalid; small Joseph rounding PSD tolerance measured"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_kalman.py": "9c5bbd941bd0bcfa0064dd8b90a065a4a99bdace1b9dbdf98d3a1297d5321838",
+          "tests/test_ext_advanced_kalman.py": "eccf9a4ed21ae49c95a6ae13673a33867ac0e80b3ba225776617f36411e36234"
+        },
+        "tests": 6,
+        "precision_budgets": {
+          "Q16": 0.001,
+          "Q24": 1e-05,
+          "Q32": 5e-08
+        },
+        "independent_batch_LS_atol": 2e-14
+      }
+    },
+    "SAR-OMEGA-K": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_advanced_sar.py"
+      ],
+      "tests": [
+        "tests/test_ext_advanced_sar.py"
+      ],
+      "contract": [
+        "Первый этап — floating forward model малой stripmap геометрии с одной/несколькими point targets; полностью задать fast/slow sampling, chirp rate, speed,reference range и units.",
+        "Реализовать 2D FFT→RFM→Stolt resampling→2D IFFT, с явными valid support, interpolation, amplitude/Jacobian convention и grid registration. Fixed модель только после воспроизведения point-spread tests; полную геофизическую scattering simulator не переносить."
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "document_id": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "part": 12,
+          "file_page": null,
+          "start_char": 11500,
+          "end_char": 17000,
+          "raw_read_file": "root/read_chen_chirp.json",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        }
+      ],
+      "model_scope": "Physical-form synthetic stripmap point echoes, FFT2/RFM/inverseStolt linear interpolation/supportzero/IFFT2; independent direct matched-backprojection",
+      "fixed_scope": "Q21 lifted input +existing integer forwardFFT2, Q20 RFM +integer CartesianStolt, unnormalized integer inverseFFT2, Q17 output; SatStats internal clipping rejected",
+      "limitations": [
+        "Synthetic normalized propagation c=100 for tests, not electromagnetic propagation/radarhardware range",
+        "Unit Stolt Jacobian chosen for reference-normalized focus, not radiometric calibrated amplitude",
+        "Fixed relativeerror<.02 only demonstrated amplitude.01,Nfast128/Nslow64; other amplitudes mayreject headroom/internalclipping",
+        "Finite sampled stationary-phase OmegaK is approximate; BP validates peak/pointspread, not pixelwise exact equivalence"
+      ],
+      "numerical_results": {
+        "status": "PASS",
+        "scope": "provisional_targeted",
+        "source_sha256": {
+          "common/python/ext_advanced_sar.py": "21ffcb7a69ca0b7f4147beeb6e05c706c8ff235fdd4080226abc30f32f4ec4aa",
+          "tests/test_ext_advanced_sar.py": "ef3ab55f205190e02aac6c3b78c67e63bd310e123e5248d4e167dcd5510c59e7"
+        },
+        "targeted_tests": 5,
+        "point_targets": [
+          [
+            0,
+            100
+          ],
+          [
+            8,
+            112
+          ],
+          [
+            -12,
+            90
+          ]
+        ],
+        "float_Nfast": 256,
+        "float_Nslow": 128,
+        "azimuth_peak_error_max_m": 1,
+        "range_peak_error_max_bins": 1,
+        "offreference_Stolt_peak_improvement_min": 2,
+        "pointspread_sidelobe_ratio_min_dB": 9,
+        "fixed_Nfast": 128,
+        "fixed_Nslow": 64,
+        "fixed_amplitude": 0.01,
+        "fixed_max_error_bound": 0.0003,
+        "fixed_relative_error_bound": 0.02,
+        "high_amplitude_clip_rejection": 0.4
+      },
+      "dependencies": [
+        "common/python/fft_fixed.py",
+        "common/python/sat_diag.py"
+      ]
+    }
+  },
+  "all_16_ready_for_root_review": true,
+  "targeted_results": "research/full_dsp_20261030/advanced/targeted_results.json",
+  "targeted_tests_total": 92,
+  "external_agent_evidence": "research/full_dsp_20261030/advanced/external_agents.json",
+  "cfo_noise_characterization": "research/full_dsp_20261030/advanced/cfo_characterization.json",
+  "frozen_for_root_review": true
+}

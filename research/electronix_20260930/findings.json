@@ -1,0 +1,1185 @@
+{
+  "checked_date": "2026-09-30",
+  "scope": {
+    "ftp_index_url": "ftp://ftp.electronix-portal.org/pub/pub.lst",
+    "ftp_index_sha256": "32d817bfd1c9e3d06f73bd716bc13ccec87f48d173da017f9b2634cda874898a",
+    "ftp_index_bytes": 15221362,
+    "ftp_index_entries": 192583,
+    "ftp_search": "Поиск путей по всему индексу pub; выборочная проверка подходящих архивов. Архивы всего сервера рекурсивно не распаковывались. Просмотрены upload/DSP, upload/MODELING, upload/CODE, upload/DOC, upload/RF&Microwave.",
+    "forum_main_topic": "https://electronix.ru/forum/topic/23652-model-8psk-modema/",
+    "forum_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  "downloaded": [
+    {
+      "name": "oqpsk_2_sps_timing_recovery_2019_12_05.mdl",
+      "kind": "Simulink model",
+      "description": "OQPSK: совместная фазовая и тактовая синхронизация, 2 отсчёта на символ.",
+      "status": "downloaded_integrity_checked_not_simulated",
+      "declared_matlab_release": "R2016b",
+      "model_format_version": "8.8",
+      "public_download_url": "https://yadi.sk/d/fXmOuwO7eqqDXg",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/13/#comment-1660469",
+      "archive": {
+        "path": "archives/oqpsk_2_sps_timing_recovery_2019_12_05.zip",
+        "bytes": 45883,
+        "sha256": "15ba72fa6752c307860ec5910f7db31de98c7b1fd15a233c07461714ea3fcb3a"
+      },
+      "files": [
+        {
+          "path": "models/oqpsk_2_sps_timing_recovery_2019_12_05.mdl",
+          "bytes": 293988,
+          "sha256": "4a1bc1134b97fa0bf8705b0149d86bca1a5670ea0ec87ac4503654f1bc497b08"
+        }
+      ],
+      "same_hash_in_existing_project": false,
+      "referenced_libraries": [
+        "commchan3",
+        "commrflib2",
+        "dsparch4",
+        "dspindex",
+        "dspsigops",
+        "simulink"
+      ],
+      "dependency_note": "Ссылки на Communications System Toolbox и DSP System Toolbox; совместимость с установленным MATLAB не проверялась."
+    },
+    {
+      "name": "qpsk_8_sps_fb_sync_2020_11_25.mdl",
+      "kind": "Simulink model",
+      "description": "QPSK: синхронизация с обратной связью, 8 отсчётов на символ.",
+      "status": "downloaded_integrity_checked_not_simulated",
+      "declared_matlab_release": "R2016b",
+      "model_format_version": "8.8",
+      "public_download_url": "https://yadi.sk/d/W0pylxJZBTnvFg",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/13/#comment-1723985",
+      "archive": {
+        "path": "archives/qpsk_8_sps_fb_sync_2020_11_25.zip",
+        "bytes": 41684,
+        "sha256": "33020ac6bec4e2043c86c977b69650647d8b11a34fddc1c3e25402dcb3382e76"
+      },
+      "files": [
+        {
+          "path": "models/qpsk_8_sps_fb_sync_2020_11_25.mdl",
+          "bytes": 263134,
+          "sha256": "5f510030297f837ed73ac94bde43cbd8788c14df91e0f4d5dd0bbec244c92795"
+        }
+      ],
+      "same_hash_in_existing_project": false,
+      "referenced_libraries": [
+        "commchan3",
+        "commrflib2",
+        "dsparch4",
+        "dspbuff3",
+        "dspindex",
+        "dspsigops",
+        "simulink"
+      ],
+      "dependency_note": "Ссылки на Communications System Toolbox и DSP System Toolbox; совместимость с установленным MATLAB не проверялась."
+    },
+    {
+      "name": "Ofdm Awgn Sim.m",
+      "kind": "MATLAB script, incomplete dependency set",
+      "description": "OFDM в AWGN; ветви BPSK, QPSK, 16QAM и 64QAM. Исходный скрипт сохранён без изменений.",
+      "status": "downloaded_incomplete_not_executable_standalone",
+      "source_url": "ftp://ftp.electronix-portal.org/pub/DOC/STANDARDS/OFDM/Ofdm%20Awgn%20Sim.m",
+      "files": [
+        {
+          "path": "support/ofdm/Ofdm Awgn Sim.m",
+          "bytes": 9535,
+          "sha256": "d583497cda14fca3f387abab3ddec4473f9e9fa252daa994cf1d519a47fa4834"
+        }
+      ],
+      "missing_functions": [
+        "tx_make_int_num_ofdm_syms",
+        "tx_modulate",
+        "tx_add_pilot",
+        "tx_freq_to_time",
+        "rx_time_to_freq",
+        "rx_demodulate"
+      ]
+    },
+    {
+      "name": "Harger Communications and Digital Signal Processing",
+      "kind": "Auxiliary DSP examples",
+      "description": "34 MATLAB .m-файла: фильтры, спектральный анализ и учебные примеры. В архиве также Mathcad и данные. Полноценный модем не выявлен.",
+      "status": "downloaded_integrity_checked_not_executed",
+      "source_url": "ftp://ftp.electronix-portal.org/pub/BOOKS/Mathematics/_Matlab_/Matlab%20Book%20-%20Communications%20And%20Digital%20Signal%20Processing%20%28Robert%20Harger%29.zip",
+      "archive": {
+        "path": "archives/harger_communications_dsp.zip",
+        "bytes": 1037377,
+        "sha256": "f67d26f47dfbcaee44e2cec7aa26fc78a163d48bb14f3dacf7560e35dd9c2b83"
+      },
+      "matlab_script_count": 34,
+      "files": [
+        {
+          "path": "support/harger/Unsorted/31_bk.mcd",
+          "bytes": 80709,
+          "sha256": "da48e9cbaa7eecba5886708f37f9505a09bcb96e9aeca5c43db5c5619833f372"
+        },
+        {
+          "path": "support/harger/Unsorted/3_BK.MCD",
+          "bytes": 77138,
+          "sha256": "e7feba6c538cd6b9d6245050324f4b5cf56217b32ee0030c4ba6282dd3ec610a"
+        },
+        {
+          "path": "support/harger/Unsorted/4_BK.MCD",
+          "bytes": 177179,
+          "sha256": "da4733ba2cf21be21a4b2e7b5eaab7f6e3ccdded34fc04241320abc00d15f316"
+        },
+        {
+          "path": "support/harger/Unsorted/5_BK.MCD",
+          "bytes": 76692,
+          "sha256": "3c80dd599876ef29bd76ff4e9a1838175f8c54b0af75724d46d5f792b0ec1c13"
+        },
+        {
+          "path": "support/harger/Unsorted/6_BK.MCD",
+          "bytes": 70527,
+          "sha256": "b278b4c6fe27d673bf9e1b5af8a0243b4e7c520db5b8b9aeb6e007a99d08e584"
+        },
+        {
+          "path": "support/harger/Unsorted/7_BK.MCD",
+          "bytes": 168045,
+          "sha256": "593467ab685038046302feb168cae8f8e28177dfb547e3c549d282c96c462ab9"
+        },
+        {
+          "path": "support/harger/Unsorted/cheetah.64",
+          "bytes": 14567,
+          "sha256": "b3d11a339d2558d222fd9347ee1e0854c6868a81814c0bfae418ae4c68795dba"
+        },
+        {
+          "path": "support/harger/Unsorted/chirp.mcd",
+          "bytes": 7149,
+          "sha256": "1adfd91e3bed17a83d933fdb5fc123f54c7a9c648160ab04276fef67b9ecf5ee"
+        },
+        {
+          "path": "support/harger/Unsorted/ex2_1.m",
+          "bytes": 400,
+          "sha256": "f957a256f10ba8106235efd05aef5105cf0e08f28de406de5ebf1326c3686681"
+        },
+        {
+          "path": "support/harger/Unsorted/ex2_2.m",
+          "bytes": 268,
+          "sha256": "767fd4cc3462a0bd8da5a7429360020b476c43c87eeb9190b3c707d243569a4a"
+        },
+        {
+          "path": "support/harger/Unsorted/ex2_3.m",
+          "bytes": 1105,
+          "sha256": "faa1f6cd199fc603675689563b17d2fcdf97aed6a711d3335e3bf5bd800b0fce"
+        },
+        {
+          "path": "support/harger/Unsorted/ex2_4.m",
+          "bytes": 890,
+          "sha256": "d91301c664772f1aa9e7e535f7e77b526bfb72d86c301e509cab16194ce059be"
+        },
+        {
+          "path": "support/harger/Unsorted/ex2_5.m",
+          "bytes": 1312,
+          "sha256": "df72c8dd45eb7727c483583eb6c0398ad07f4eabc89e4c4072856638ed2248c8"
+        },
+        {
+          "path": "support/harger/Unsorted/ex2_6.m",
+          "bytes": 1482,
+          "sha256": "c56e2206dc54960e443137fad5cc3a9c8e8c997954065099a90025712b6e041e"
+        },
+        {
+          "path": "support/harger/Unsorted/ex2_7.m",
+          "bytes": 1318,
+          "sha256": "839d063ade7b677b4299519dcb316635e3ebe167defd32818b6bde7e72858164"
+        },
+        {
+          "path": "support/harger/Unsorted/ex3_1.m",
+          "bytes": 493,
+          "sha256": "27e5fe986dc5e281fa5a44c091fc52b2ee6dc05cc603b63562695cfcef781a1d"
+        },
+        {
+          "path": "support/harger/Unsorted/ex3_5.m",
+          "bytes": 374,
+          "sha256": "da143235636a9817eba21721902bfa2256518648f712f3e0b88a19c24353acc3"
+        },
+        {
+          "path": "support/harger/Unsorted/ex3_6.m",
+          "bytes": 1518,
+          "sha256": "7f397f3fc3ac1e4663bc60ab0219ef80fb63526887f7e3fac80de12853ad7142"
+        },
+        {
+          "path": "support/harger/Unsorted/ex3_7.m",
+          "bytes": 1322,
+          "sha256": "19688f3d568b585baa1bd92dc760ebcd063bb7da96614112fc06e98f218f67ec"
+        },
+        {
+          "path": "support/harger/Unsorted/ex3_8.m",
+          "bytes": 258,
+          "sha256": "a17a2bc7ff9c270b8cfbb50f9cd190e1840d4ff149f2f19c800d08de39b00268"
+        },
+        {
+          "path": "support/harger/Unsorted/ex5_1.m",
+          "bytes": 533,
+          "sha256": "3c382890cc1fb8f3ba65d631d10fd2d07625b98f3910f5000d53587cf21a218e"
+        },
+        {
+          "path": "support/harger/Unsorted/ex5_2.m",
+          "bytes": 595,
+          "sha256": "debec8ea4d4c85028a23ae3d9baae22fc4ecc759d370797eb22373423d9abf03"
+        },
+        {
+          "path": "support/harger/Unsorted/ex5_3.m",
+          "bytes": 586,
+          "sha256": "6136629a6817b24b2ade4e53f89c772566b2c8e3e8bf14f768bf039b414f63dc"
+        },
+        {
+          "path": "support/harger/Unsorted/ex6_1.m",
+          "bytes": 1388,
+          "sha256": "127ee8be26e91d79c8c7e82a5a2b14fe7920783352d57d20642d8d3241f58e06"
+        },
+        {
+          "path": "support/harger/Unsorted/ex6_2.m",
+          "bytes": 1715,
+          "sha256": "bb15bdef8736da835b8141a0ee6783fa234975c0106aa2dd30d9b38f23b6a1fd"
+        },
+        {
+          "path": "support/harger/Unsorted/ex6_3.m",
+          "bytes": 1388,
+          "sha256": "957f3584cd3684312af45814c777e98a535b9e27ed55f5c61ef7b22e22557eb8"
+        },
+        {
+          "path": "support/harger/Unsorted/ex6_4.m",
+          "bytes": 1126,
+          "sha256": "a3a614e30b1508d5234d79d5f28588d83c2415e43a57329a8ccf40d1fade53a3"
+        },
+        {
+          "path": "support/harger/Unsorted/ex6_5.m",
+          "bytes": 2077,
+          "sha256": "f3ebe66dcbc3153c1123c3646971e7d29ce5572468c86bae613a25d98b6463ed"
+        },
+        {
+          "path": "support/harger/Unsorted/ex7_1.m",
+          "bytes": 620,
+          "sha256": "9cf03ac3bc1ed5098d9863bf4efabf1eb826162a76c7fc8ed6b4cd6cc5ee0a5e"
+        },
+        {
+          "path": "support/harger/Unsorted/ex7_2.m",
+          "bytes": 840,
+          "sha256": "f2a762e089bc815128f0aa0402dcf1c8f36c4c3d313384e1de30427514a7fcb0"
+        },
+        {
+          "path": "support/harger/Unsorted/exm2_10_pgrm.MCD",
+          "bytes": 23371,
+          "sha256": "0a887e7de7e99139cf880d0379cfebfa7e67ace57c44cf53f4013550f44002c7"
+        },
+        {
+          "path": "support/harger/Unsorted/face.64",
+          "bytes": 14808,
+          "sha256": "d6579e9301d37d929e49ae00b428227d2681e32be812989952a476aec72e641f"
+        },
+        {
+          "path": "support/harger/Unsorted/fnlprj_1.MCD",
+          "bytes": 167605,
+          "sha256": "356bb774850ae1c70b2d62760a84bb6ed2fa678f107dd143267c9a515d4ce2d6"
+        },
+        {
+          "path": "support/harger/Unsorted/fnlprj_2.mcd",
+          "bytes": 58864,
+          "sha256": "39b2c78d88e735b7e7138ff7fc4ba61732ae9f348fe604cb152155bb0ae1357d"
+        },
+        {
+          "path": "support/harger/Unsorted/fnlprj_3.mcd",
+          "bytes": 46463,
+          "sha256": "9c57c0d99ad1c8f3b4679d98c223c93fede8ad875f0681f55fa88b103093e3c7"
+        },
+        {
+          "path": "support/harger/Unsorted/fnlprj_4.mcd",
+          "bytes": 88483,
+          "sha256": "bc900430a4567595b55c7734032fc3976c9564453253924840fb36eff2356f76"
+        },
+        {
+          "path": "support/harger/Unsorted/freqs.m",
+          "bytes": 1939,
+          "sha256": "a0f652c1cb390f3b021a3f43fcf7f49427b93e143ab62e5ebe5c506b716410a0"
+        },
+        {
+          "path": "support/harger/Unsorted/freqz.m",
+          "bytes": 4979,
+          "sha256": "56255e30b258ba0720d80a8994532bf3f35b7bb1df556240797d245afbfc8eda"
+        },
+        {
+          "path": "support/harger/Unsorted/fsk_dbit.mcd",
+          "bytes": 36595,
+          "sha256": "fab7eaabd0b276917e2aef2a56e6e349ab608b135cedd44ac677da4723f56935"
+        },
+        {
+          "path": "support/harger/Unsorted/gold128.prn",
+          "bytes": 131328,
+          "sha256": "44de673f216d010e4f6cc40ee954d891a075424d2332c59a247cbf1b227b2280"
+        },
+        {
+          "path": "support/harger/Unsorted/gold64.prn",
+          "bytes": 32896,
+          "sha256": "1f5fb4fba2e07c1756b41e4bf41ed817eb75c86a13e79e72cf62597c98457db1"
+        },
+        {
+          "path": "support/harger/Unsorted/intro_bk.mcd",
+          "bytes": 69220,
+          "sha256": "bec4c215e3d156d21973e4a38faba699a4959e211132c9af2c99b5dfcfe180ae"
+        },
+        {
+          "path": "support/harger/Unsorted/jaguar.64",
+          "bytes": 13746,
+          "sha256": "764abbce892551c18d8ed2c83e8099bd8e2da3fa16742e7a6a950dc70a2e33e1"
+        },
+        {
+          "path": "support/harger/Unsorted/njk_prj4.m",
+          "bytes": 3541,
+          "sha256": "a2f024c47ddfebbbb65d873e7107c0e2affdc79ecdb4e856f97a4463c6fd09e7"
+        },
+        {
+          "path": "support/harger/Unsorted/output.wav",
+          "bytes": 66086,
+          "sha256": "3af2eadf280261ad8709e3a2e57dd638eca70970e67949209ccadb4df658b85f"
+        },
+        {
+          "path": "support/harger/Unsorted/p2_21d.m",
+          "bytes": 1106,
+          "sha256": "2197674248fe429dd6dbf78465c0e8ccdb688efdac04e20c4ff68b7105a52295"
+        },
+        {
+          "path": "support/harger/Unsorted/p2_44a.m",
+          "bytes": 848,
+          "sha256": "155102ded03479303133c4b5d865993627f1b9a1254949b0a6b32d7f33d8e2da"
+        },
+        {
+          "path": "support/harger/Unsorted/p3_28b.m",
+          "bytes": 647,
+          "sha256": "5456d7189ffde0077d99394a31ecbbff0108854f49fc54ae4786a7bdcc76997c"
+        },
+        {
+          "path": "support/harger/Unsorted/phunwrap.mcd",
+          "bytes": 5183,
+          "sha256": "914adaab9f4951755cd1b162f47fdeea2df6c3d789b4dddc74b18bf6efbdcb1f"
+        },
+        {
+          "path": "support/harger/Unsorted/pref_bk.mcd",
+          "bytes": 2515,
+          "sha256": "4df275cedbf9dbbb7c11a2c65f40c8bcbadf0ebfdf18079366dcfb40762e66d8"
+        },
+        {
+          "path": "support/harger/Unsorted/prj_1.m",
+          "bytes": 1405,
+          "sha256": "80f5a5a462973378f3356901045442fb102319ca2a9055b4f6b3d8ef9f57a415"
+        },
+        {
+          "path": "support/harger/Unsorted/Proj2_2.mcd",
+          "bytes": 42063,
+          "sha256": "afb9ce699fc64cd86e39720da8e3553ef84da55039b1129bd660c210494513ef"
+        },
+        {
+          "path": "support/harger/Unsorted/project 4.2 extended for 2-D images.MCD",
+          "bytes": 14861,
+          "sha256": "68a895fe9dfefd37095050812fc9234407f11fa05f89168485f255aba66072be"
+        },
+        {
+          "path": "support/harger/Unsorted/project 7.MCD",
+          "bytes": 24818,
+          "sha256": "51547d8ecacb74780b166c5bba86938a4acc9ba312787e835f1ca668160fdbb4"
+        },
+        {
+          "path": "support/harger/Unsorted/project10_3.mcd",
+          "bytes": 59638,
+          "sha256": "81e7006f8d5c6cb58de1a1928f9229c76582927bf01a4c5b10735fd450ef999e"
+        },
+        {
+          "path": "support/harger/Unsorted/project4.mcd",
+          "bytes": 43709,
+          "sha256": "e7a28d3cb17579a86186a7923c6b229d1819b348272f84b139af55d7113baab0"
+        },
+        {
+          "path": "support/harger/Unsorted/pzk_plot.m",
+          "bytes": 832,
+          "sha256": "a36e59a1f58ba0f271190dfacd932a91a22eba1aebb5da6985168f3272c022f0"
+        },
+        {
+          "path": "support/harger/Unsorted/pzk_plta.m",
+          "bytes": 1082,
+          "sha256": "b247a81a31c9a8017398a69529acfd0d72654938a101bf8883944261438c88ee"
+        },
+        {
+          "path": "support/harger/Unsorted/rhm_prj5.m",
+          "bytes": 12164,
+          "sha256": "abc172b7923933bb3ef6040b99779141f8fb3ba3f1492d19b8b42d237e8239d8"
+        },
+        {
+          "path": "support/harger/Unsorted/ripple.wav",
+          "bytes": 66086,
+          "sha256": "d5c96aa623c981ca889132ed9c47b5db9796e6f60ab658296a132e55612ea5fa"
+        },
+        {
+          "path": "support/harger/Unsorted/rohhmpg.mcd",
+          "bytes": 6198,
+          "sha256": "27be40a581b83e3195a0f0daecc5d9cdfda2a61a4b3657770c44eac64e1263e6"
+        },
+        {
+          "path": "support/harger/Unsorted/spectral.dat",
+          "bytes": 2050,
+          "sha256": "2dfed4eb0a736ea5f3ea3750a9ab83263710e93ff97f73d43afd52fa8bd6e948"
+        },
+        {
+          "path": "support/harger/Unsorted/synch.m",
+          "bytes": 303,
+          "sha256": "81a03b975bb3e31585613ca71f73dfeb0db4730e4ead3cbbffeaa7de100f9dd9"
+        },
+        {
+          "path": "support/harger/Unsorted/text_img.60",
+          "bytes": 28920,
+          "sha256": "0824079396915a9227eb9b1adbf02d34e4cca9c678230eee715256ef7b79433d"
+        },
+        {
+          "path": "support/harger/Unsorted/toc_bk.mcd",
+          "bytes": 8178,
+          "sha256": "1a0e4b919d4cb6d31bb97a6bd5e18d72dc743f100b675394ff7a91c6b4633913"
+        },
+        {
+          "path": "support/harger/Unsorted/tpm_bk.mcd",
+          "bytes": 45427,
+          "sha256": "113616a5eac1668560231045758aeea29ba6871e50ab8a91b6596ce4581e33c6"
+        },
+        {
+          "path": "support/harger/Unsorted/tweeter.wav",
+          "bytes": 66086,
+          "sha256": "c04c66505982dd5ecf2d7e833810ef415470d589ad565723b123b1785472b214"
+        },
+        {
+          "path": "support/harger/Unsorted/waterfal.96",
+          "bytes": 29566,
+          "sha256": "6ce06d1cd3ca58306dd3d9e61dc6ab7b62385816ca5b3896ea79a1a661b54d6e"
+        },
+        {
+          "path": "support/harger/Unsorted/waterfall.MCD",
+          "bytes": 14706,
+          "sha256": "ef667e6346dd8061019ea661fee338117469861a9ecfd6a889e4b80360e07ea7"
+        },
+        {
+          "path": "support/harger/Unsorted/woofer.wav",
+          "bytes": 66086,
+          "sha256": "bd3f5a2e44313d2e4de4391e0f955edd0bd7c5b9da842604f956e380a15594ca"
+        },
+        {
+          "path": "support/harger/Unsorted/zplane.m",
+          "bytes": 4939,
+          "sha256": "422339f202aa914dcca867ec6a4a495ad0de1589fa490052306c64cda95737fc"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420sad.mcd",
+          "bytes": 6617,
+          "sha256": "19bd98c5337c69922c5232813eb50616d57affdd7b38d26ff7413ddfd9073930"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420sapd.mcd",
+          "bytes": 1875,
+          "sha256": "3fe3d66d428c88e18c6380bb9ee7174b7650fb8b9b73103f941ad692b132148e"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420scd.mcd",
+          "bytes": 1864,
+          "sha256": "db73e38f00322d20d8e2e2fd9cb2296a6b8cd0114ebf71f87e26a7cdde544cfe"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420seq.mcd",
+          "bytes": 7978,
+          "sha256": "aa9e847b9dffb6024c8b87399cdec2e0f8831b7fcd09592e522e6d03b5094d1d"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420seqa.mcd",
+          "bytes": 7928,
+          "sha256": "86af3e693e9499fcb42e0026e66464d66572e23b8839395148346a2a52c2ec6e"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420seqr.mcd",
+          "bytes": 8392,
+          "sha256": "29cfdf3c0e2e027cd7e25ad178167ea29f728dfbd039d814607e7fc9b544abd9"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420spd.mcd",
+          "bytes": 1781,
+          "sha256": "2207ad71a4b882324009f99bad30eca8944b5989493e152bba0463871a11e285"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420sqd.mcd",
+          "bytes": 6356,
+          "sha256": "1cb198c00b27a323a639917d46fe59fec96cd100d37b1eadf875eae31ffc0658"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420squ.mcd",
+          "bytes": 4794,
+          "sha256": "4e84ad21e65ed9e4313283f2a731fc071e5948e90540503add13090420ab4cd4"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420squm.mcd",
+          "bytes": 4424,
+          "sha256": "9dfff0e3e875286b37352cdc02417cf11f6f1b7f2fe41554bc61fb6a3b078623"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/420squp.mcd",
+          "bytes": 5388,
+          "sha256": "f49fa1b1b6692be2cddd4b2fcd9f00538558ac688b832392cb0c5311e99a0793"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/bessel.mcd",
+          "bytes": 6771,
+          "sha256": "1a22b4fd10e8f8c38a0f07b4b96791a034439faa2a89d72eba02775fa26dc93b"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/cmnp_1.mcd",
+          "bytes": 17225,
+          "sha256": "5f51af7d5306027aab0b7c356ff9013521944b0775c741ce27c736cb97ec8c4e"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/cmnp_3.mcd",
+          "bytes": 20159,
+          "sha256": "fb9462ba30f77e553dca82f6170afd4f1d09453ef1772cfc8fc0d36f63ce7383"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/dsbsc_am.mcd",
+          "bytes": 10313,
+          "sha256": "7f059aef792cf9d13b0b2230f589b1980c8392133f5b31bc19c5b3e4a2bcebf3"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/dsbtc_am.mcd",
+          "bytes": 20097,
+          "sha256": "624157fed92c547061c91ec6722600e09d38f539907dec7f8b965a2f58103230"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/dsphowbk.mcd",
+          "bytes": 4779,
+          "sha256": "1cfbbb24233c45dcc0784117d3f2f87b476c440acc2df5430f95a7f3a7e91774"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/fm2.mcd",
+          "bytes": 39700,
+          "sha256": "7aa497a2bbc37c7c84ed514dcd98f498d22d0b9be0307fc992409373dbbf2e12"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/fm2lim.mcd",
+          "bytes": 44816,
+          "sha256": "dfcb323f347c01e1754c8a905c8b7a56c9abe2b06219c34f3dd8190449baf381"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/fm_1.mcd",
+          "bytes": 12300,
+          "sha256": "3c80418b87965a772df28f2cbc7371dc8341ce7a473ebe84b4da8a06647fc950"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/gib3_1.mcd",
+          "bytes": 16027,
+          "sha256": "455817eb3d98d6a0b1f9e7edbc37f9f071c52e0b134717dd48f0e110041d77bb"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/gib3_2.mcd",
+          "bytes": 16696,
+          "sha256": "8927ba0aed2a4f51fe02195f631da73329fbbed08e7d22ec6ca9c5fc2d324a18"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/gib3_27.mcd",
+          "bytes": 11962,
+          "sha256": "585037d13cf54de305cb56093b78d124a8af4846e5cbf6649f5e072c06a56a0a"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/gib3_3.mcd",
+          "bytes": 13319,
+          "sha256": "8845c2b75dae8ebe30e4b4c9ba645b4c62b0ce06e84bd4cd51b9b75dc3952d98"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/grpdelay.mcd",
+          "bytes": 7135,
+          "sha256": "932a953623733132630bca708b7726817e5a25644210db12ba552bc6f371cdc5"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/mnchstr.mcd",
+          "bytes": 11960,
+          "sha256": "9bf4436ba4580a97a71168e600424eae11367ca0685ad7fb66773320d8a80c36"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/mulaw.mcd",
+          "bytes": 5200,
+          "sha256": "7c1a82c6dc4ccf1ea7c89b3c6d3e938c4473ba708000e08515d4df9fa3b3e033"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/pll_1.mcd",
+          "bytes": 7157,
+          "sha256": "8e0d998338fc247c02131f1235ac3ab9a668df60d9763f017ee38bd30314ca65"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/psk.mcd",
+          "bytes": 22792,
+          "sha256": "6d1dbc2eb6ed14bff1867952b9cdc1ae9d25ddfa25ba71fdbd564b32df42baed"
+        },
+        {
+          "path": "support/harger/Analog and Digital Communications/toc_com (table of contents).mcd",
+          "bytes": 13998,
+          "sha256": "4e6db2bb911c2039b46fc99311f10197aec082b57508a63c95f7b3a0a80b7216"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/1_bk.mcd",
+          "bytes": 137430,
+          "sha256": "b1a4de253236e61970716e3bfb9dfecf2e95ea522efac1dd75b6732918a37e8c"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/29_bk.mcd",
+          "bytes": 90879,
+          "sha256": "51137d5adf13596ccb5697822359b80e9900814eeeb02b93e5b8ffc63a930232"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/2_bk.mcd",
+          "bytes": 155220,
+          "sha256": "8f426afd636f1cfc533bc7e6fe3d22b0b0f4638a253212a84690c0e7d21bc495"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/firexa.mcd",
+          "bytes": 13898,
+          "sha256": "f19cfdc35144b92ec13b16be8482549c839e001f90e1fa4b53659b7a270dd980"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj18_2.mcd",
+          "bytes": 18545,
+          "sha256": "aead6ff88a2b8aa791327c1c59239501cac86aa5a4d7af9b182ded3cb6eebfea"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj1_2.mcd",
+          "bytes": 10627,
+          "sha256": "c3b17ff313faba04579437818caaea3e1868a1ab119567ca199ed9555b331d40"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj2_2.mcd",
+          "bytes": 38073,
+          "sha256": "83b306f32ce120aec725b47950c428b142738e2e20696d1e04c7ccc561cc097f"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj3_2.mcd",
+          "bytes": 19653,
+          "sha256": "bdf013361595910db90a1cb12b013d40d9783e80faa961c6e8ecfd55e57ab5c3"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj4_2.mcd",
+          "bytes": 78609,
+          "sha256": "a4c1bebfdc35770aee8c9fb96890a3abdd19c7a364603778b5af354df5bccb55"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj7_1.mcd",
+          "bytes": 27897,
+          "sha256": "9e9544d3c793d6a43c42aa739ebadd3c078e90dc119d769cd1863dafb670865a"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj8_1.mcd",
+          "bytes": 20987,
+          "sha256": "114aab32e05d4f0021d6d46e378d3f200a17753984e7c529e1d54d9329997701"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj8_2.mcd",
+          "bytes": 13442,
+          "sha256": "493d278b06f7ee03d8a85dd5e4b9e60ab1d2fff1964c3866309a39c370a66f9e"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/prj9_1.mcd",
+          "bytes": 13141,
+          "sha256": "a0b980221f33702070f3c4549883fa04a7a6aaa7af641ccf820e2971fab02a45"
+        },
+        {
+          "path": "support/harger/Digital Signal and Image Processing/toc_dsp (table of contents).mcd",
+          "bytes": 8396,
+          "sha256": "b0f28dcc9e38d82beddce833fbf0bb84c5f26f975a047224ae1c61fe55bf890f"
+        }
+      ],
+      "dependency_note": "В архиве есть собственные freqz.m, freqs.m и zplane.m; при подключении в MATLAB учитывать совпадение имён со стандартными функциями."
+    }
+  ],
+  "forum_candidates": [
+    {
+      "name": "psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=8274",
+      "date": "2006-11-16T10:15:45Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-176819",
+      "already_present_name": false,
+      "already_present_equivalent_name": true,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "af21155a566bdb1fdabec3e7dc77b78231006c698dc69b54ba918211c1c77bf4"
+    },
+    {
+      "name": "qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=10674",
+      "date": "2007-04-06T15:14:25Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-233576",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=11533",
+      "date": "2007-05-21T13:10:52Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-252974",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=11987",
+      "date": "2007-06-18T18:20:12Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-262954",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "qam_modulatort2400baud8000dac_2007_07_10.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=12371",
+      "date": "2007-07-10T09:08:18Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-270746",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "1308dd6ca1bc20e4ebafb0177863a45b111138e12974b4f67a3ba0111ffed11a"
+    },
+    {
+      "name": "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=12563",
+      "date": "2007-07-18T11:57:39Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-273730",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=12688",
+      "date": "2007-07-24T17:35:22Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-275790",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=12754",
+      "date": "2007-07-27T13:29:55Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-277091",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=20938",
+      "date": "2008-05-12T11:42:58Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-409703",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=21052",
+      "date": "2008-05-15T12:30:28Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-411669",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "msk_modulator_2008_06_22.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=22192",
+      "date": "2008-06-22T09:52:39Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/#comment-429138",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "bpsk_costas_2008_08_25.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=24165",
+      "date": "2008-08-25T13:51:23Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/2/#comment-459853",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "fir_filter_identification_2008_09_11.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=24657",
+      "date": "2008-09-11T09:28:33Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/2/#comment-468489",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "d766702b1b3b257eb1d3ed269cd78340f20624a69b62134df11598c99bb72611"
+    },
+    {
+      "name": "psk8_clock_feedforward.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=25573",
+      "date": "2008-10-08T08:24:15Z",
+      "author": "links",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/2/#comment-482491",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "4cf262c24d308aba11e172e5a6a9b0ac04ed5dd2207c9d8d7b499de191097d81"
+    },
+    {
+      "name": "fmt_timing_freq_tracking_primer_2008_12_08.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=27550",
+      "date": "2008-12-08T13:25:11Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/2/#comment-513268",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "08f8ae53365f7c1347561e3fbc6eee7d2e541ea330f0fb3b626fb650f9869c9d"
+    },
+    {
+      "name": "qpsk_fast_dfe_2009_06_26.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=34026",
+      "date": "2009-06-27T15:37:39Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/2/#comment-614446",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "a35317420f5232ea003a1fe12ed4d2366a76c06aaa7b78e0397e1aa01cd57597"
+    },
+    {
+      "name": "psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=35490",
+      "date": "2009-08-19T11:26:19Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/3/#comment-637237",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "qam_fb_gardner_costac.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=42849",
+      "date": "2010-04-10T14:29:27Z",
+      "author": "voloda",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/3/#comment-742695",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "98bed7f33a733af229836d5e60f344e450e40f629c5185652a1dd95db6d882db"
+    },
+    {
+      "name": "qam_fb_gardner_conj_soft_decision.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=43466",
+      "date": "2010-04-27T13:08:53Z",
+      "author": "voloda",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/3/#comment-750765",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "05ce42b852f38b110f02eab9b57f7c484a599e04adf7a45337e2baf04b992056"
+    },
+    {
+      "name": "pi4_qpsk_2010_05_07.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=43855",
+      "date": "2010-05-07T09:12:27Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/3/#comment-755554",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "a97f80665f2f66a7dbad7899a13477683948a82a393a0b488fac0bf96c354e79"
+    },
+    {
+      "name": "qpsk_frame_based.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=44034",
+      "date": "2010-05-14T08:17:27Z",
+      "author": "voloda",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/4/#comment-758407",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "fdb7bcd77dbc656f598baa18b7f4c918879da0985f9b74c6d76192b988b78ce4"
+    },
+    {
+      "name": "qam_16_frame_based.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=44374",
+      "date": "2010-05-25T13:36:09Z",
+      "author": "voloda",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/5/#comment-762973",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "28f1c69ae7548caa4f989376e6a342bccec354b917013f6da4987b6a6211d648"
+    },
+    {
+      "name": "modem_qpsk_gardner_bandwidth_R14.zip",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=45478",
+      "date": "2010-07-02T03:16:37Z",
+      "author": "des00",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/7/#comment-780144",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "172306f88ab0700ea41c0c90e06801c8cbd3dd8e004113772a27778618b8dbb9"
+    },
+    {
+      "name": "pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=45854",
+      "date": "2010-07-15T10:08:38Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/8/#comment-785491",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "simo_maximal_ratio_combining_2010_08_27.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=47182",
+      "date": "2010-08-27T13:33:50Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/9/#comment-803139",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "gmsk_coherent_demodulation_2010_10_03.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=48306",
+      "date": "2010-10-03T09:10:13Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/10/#comment-818746",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "graphic_equalizer_16_band_2011_05_17.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=56670",
+      "date": "2011-05-17T11:35:06Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/11/#comment-929325",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "milewski_sequence_2011_05_19.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=56765",
+      "date": "2011-05-19T08:59:06Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/11/#comment-930251",
+      "already_present_name": true,
+      "already_present_equivalent_name": false,
+      "download_status": "not_requested_existing_name"
+    },
+    {
+      "name": "pi4_qpsk_2_sps_timing_recovery_2015_09_19.mdl.zip",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=95457",
+      "date": "2015-09-19T21:37:15Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/11/#comment-1366022",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "abf2fbfa61709f3652d1cbe887f3e1a04776582b86410fb5121b01482ecaefca"
+    },
+    {
+      "name": "perfect_reconstruction_kaiser_window_fir_2015_10_28.slx.zip",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=96381",
+      "date": "2015-10-28T19:03:16Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/11/#comment-1376492",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "41340cda2a02c005722641a7a399b3f7124abab125ddc9dacabcd4220e5b7c45"
+    },
+    {
+      "name": "jacobsen_trick_2015_11_11.slx.zip",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=96642",
+      "date": "2015-11-11T17:05:29Z",
+      "author": "petrov",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/12/#comment-1380116",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "4e225130372878b0075925ab5e5cdff7b13fc67ef82ce32d62a5bf38cb9b6e97"
+    },
+    {
+      "name": "lab2.rar",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=101044",
+      "date": "2016-05-30T20:35:14Z",
+      "author": "lexadedok",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/12/#comment-1429320",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "c8190de80d01a07affe846e0fdb064d84b41c19776b28419cb52bdca12132772"
+    },
+    {
+      "name": "Decision_feedback_equalizer_13_weigths.slx",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=138653",
+      "date": "2021-06-27T11:21:51Z",
+      "author": "GrishaRezn",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/13/#comment-1760980",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "5c744e5e60ede0a182fbabc1e2ecb35daf53fab713c465d1088501ed823ac0b2"
+    },
+    {
+      "name": "FTRLS.slx",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=139096",
+      "date": "2021-07-14T19:45:09Z",
+      "author": "GrishaRezn",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/14/#comment-1764374",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "6f0e90384dbfe469bdfab0b4e040f30f3263f15d965e4f225a0b006a5a32cfdc"
+    },
+    {
+      "name": "FTF_simulink.slx",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=139229",
+      "date": "2021-07-18T19:45:01Z",
+      "author": "GrishaRezn",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/14/#comment-1765036",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "77edf1aea31925ec0a00785e1c8e6c039d92919f0c682a104ef55e6c8871b965"
+    },
+    {
+      "name": "FK_DFE.slx",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=139416",
+      "date": "2021-07-25T19:31:31Z",
+      "author": "GrishaRezn",
+      "forum_url": "https://electronix.ru/forum/topic/23652-model-8psk-modema/page/14/#comment-1766331",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "error": "Вложение недоступно; удалено или ограничены права. Причина без авторизации форума не установлена.",
+      "response_sha256": "954ea5b602002fb91a15ada09a5242054c68d4509694b3b2e610865b6f2943f9"
+    },
+    {
+      "name": "qpsk_electronix.slx",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=133471",
+      "forum_url": "https://electronix.ru/forum/topic/159056-simvolnaya-sinhronizatsiya-qpsk-detektor-gardnera-petlevoy-filtr-modulo-1-counter/#comment-1723565",
+      "date": "2020-11-24T09:36:05Z",
+      "author": "Zalman_",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "note": "Модели qpsk_electronix опубликованы как проблемный пример, не проверенный эталон."
+    },
+    {
+      "name": "qpsk_electronix_18b.slx",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=133472",
+      "forum_url": "https://electronix.ru/forum/topic/159056-simvolnaya-sinhronizatsiya-qpsk-detektor-gardnera-petlevoy-filtr-modulo-1-counter/#comment-1723565",
+      "date": "2020-11-24T09:36:05Z",
+      "author": "Zalman_",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "note": "Модели qpsk_electronix опубликованы как проблемный пример, не проверенный эталон."
+    },
+    {
+      "name": "fast_equalizing.zip",
+      "url": "https://electronix.ru/forum/applications/core/interface/file/attachment.php?id=25615",
+      "forum_url": "https://electronix.ru/forum/topic/53651-adaptivnyy-ekvalayzer-dlya-tdma-modema/#comment-483369",
+      "date": "2008-10-09T10:36:48Z",
+      "author": "fontp",
+      "already_present_name": false,
+      "already_present_equivalent_name": false,
+      "download_status": "unavailable_2C171_1",
+      "note": "Пример обсуждается в теме адаптивного эквалайзера TDMA."
+    }
+  ],
+  "new_unavailable_candidate_count": 22,
+  "rejected_ftp_archives": [
+    {
+      "source_url": "ftp://ftp.electronix-portal.org/pub/BOOKS/Interfaces/_Modem_/THEORY_AND_PRACTICE_OF_MODEM_Design.rar",
+      "reason": "DOC-документы; MATLAB-файлов нет.",
+      "sha256": "6fc4be8d5bf74faf9be1e96a76ee17367eb0e50e17ff646145523497e48ff3bb"
+    },
+    {
+      "source_url": "ftp://ftp.electronix-portal.org/pub/BOOKS/Interfaces/_Modem_/modem.rar",
+      "reason": "HTML-книга и изображения; MATLAB-файлов нет.",
+      "sha256": "6acf3a8423ac66b3e183573ae45cff98d6b95cc286d89ab102850c1e5e0c065a"
+    },
+    {
+      "source_url": "ftp://ftp.electronix-portal.org/pub/DOC/STANDARDS/OFDM/briz.rar",
+      "reason": "DOC/WMF-документы; MATLAB-файлов нет.",
+      "sha256": "a466bc846356053cee3e9f75ae0727c6f46ea29050f0096df207b9f7e2da7b7d"
+    }
+  ],
+  "existing_external_model": {
+    "name": "pi4_qpsk_8_sps_ff_sync_2021_05_27.mdl",
+    "public_url": "https://disk.yandex.ru/d/xktdAddyNLfHrw",
+    "status": "already_present_by_name_not_downloaded"
+  },
+  "limitations": [
+    "MATLAB/Simulink не запускался; проверены форматы, CRC ZIP и SHA-256, выполнен статический просмотр.",
+    "Предоставленная авторизация использовалась только для FTP. Форум просматривался без входа.",
+    "Содержимое действующих каталогов проекта не менялось.",
+    "Вложения с ошибкой не сохранены как будто это модели."
+  ],
+  "related_topics": [
+    {
+      "url": "https://electronix.ru/forum/topic/159056-simvolnaya-sinhronizatsiya-qpsk-detektor-gardnera-petlevoy-filtr-modulo-1-counter/",
+      "label": "gardner"
+    },
+    {
+      "url": "https://electronix.ru/forum/topic/53651-adaptivnyy-ekvalayzer-dlya-tdma-modema/",
+      "label": "tdma"
+    },
+    {
+      "url": "https://electronix.ru/forum/topic/109403-model-priemnika-ofdm-s-ekvalayzerom/",
+      "label": "OFDM-эквалайзер; упомянут WiMax scanner (ссылка на старый Google Code, код не проверялся)."
+    }
+  ]
+}

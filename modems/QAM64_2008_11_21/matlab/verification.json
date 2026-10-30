@@ -1,0 +1,51 @@
+{
+  "name": "QAM64_2008_11_21",
+  "original_sha256": "95e9b2b8ea25b7df2b48f2befdc9c3fd8717a85beb14abe36194dad04957186b",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Failed to load library 'commchan2' referenced by 'QAM64_2008_11_21/AWGN Channel'.",
+  "migration": {
+    "source": "modems/QAM64_2008_11_21/original/QAM64_2008_11_21.mdl",
+    "original_sha256": "95e9b2b8ea25b7df2b48f2befdc9c3fd8717a85beb14abe36194dad04957186b",
+    "prepared_sha256": "3182f1311a5096130574b5b4cca66479fc5f119fb833be9ef4783ba47f2433b9",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "ode45",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 20,
+  "finite": true,
+  "captured_values": 188436,
+  "capture_sha256": "e80d641ddf9318f96e4043e077a06d56cc27f508be345c2b0c58c6194a72f020",
+  "mapper_checks": [
+    {
+      "block": "QAM64_2008_11_21/Modulator/Data Mapper IM",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 64,
+      "alphabet": 64,
+      "status": "PASS"
+    },
+    {
+      "block": "QAM64_2008_11_21/Modulator/Data Mapper RE",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 64,
+      "alphabet": 64,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

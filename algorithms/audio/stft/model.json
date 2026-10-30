@@ -1,0 +1,54 @@
+{
+  "id": "audio/stft",
+  "title": "STFT analysis and reconstruction",
+  "category": "audio",
+  "path": "algorithms/audio/stft",
+  "operations": [
+    "istft",
+    "stft"
+  ],
+  "cases": [
+    "analysis",
+    "reconstruction"
+  ],
+  "limits": "Complex full-spectrum STFT with sqrt-Hann window and normalized overlap-add. Original dual-window and frequency-decimation conventions differ; exact finite-frame reconstruction is tested.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/israel_stft/biorwin.m",
+      "original": "algorithms/audio/stft/original/biorwin.m",
+      "sha256": "6d77eb9cf4a212aa1528635aca8258c680b6ce6cd0c90d8084ff0a1a60aed0f3",
+      "bytes": 861
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/israel_stft/istft.m",
+      "original": "algorithms/audio/stft/original/istft.m",
+      "sha256": "f90b8f3ad8ea55df6f77825f4e6ea7d0cdff386466139e252f390ca5a3759efe",
+      "bytes": 1319
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/israel_stft/lnshift.m",
+      "original": "algorithms/audio/stft/original/lnshift.m",
+      "sha256": "90bf4fc94823d9ea79fcb3b627dbff7db32627e69cff904ae3fa5d3234c7a5bc",
+      "bytes": 524
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/israel_stft/shiftcir.m",
+      "original": "algorithms/audio/stft/original/shiftcir.m",
+      "sha256": "c4d90773f82e0ce990300658d3f141acccc7a61d02be95e65861b212fddf7688",
+      "bytes": 791
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/israel_stft/stft.m",
+      "original": "algorithms/audio/stft/original/stft.m",
+      "sha256": "199ef8f1596d4dfd510667bc9e2ad42c289641cef9c97729dce8e587b241a570",
+      "bytes": 2260
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

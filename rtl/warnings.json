@@ -1,0 +1,32 @@
+{
+  "xilinx": {
+    "Synth 8-7080": "Small blocks do not meet the heuristic for parallel synthesis; sequential synthesis is complete.",
+    "Netlist 29-101": {
+      "reason": "Floorplanning advisory for inferred DSP datapaths; place/route and timing remain mandatory.",
+      "pattern": "^WARNING: \\[Netlist 29-101\\] Netlist 'rtl_synth_top' is not ideal for floorplanning, since the cellview 'bpsk_[a-z_]+' contains a large number of primitives\\.  Please consider enabling hierarchy in synthesis if you want to do floorplanning\\.$"
+    },
+    "Synth 8-3936": {
+      "reason": "Known width trimming of sign extension, constant unity gain, partial-product and acquisition fit-term registers (only the low 48 bits reach the 32-bit phase and residual). Numeric equivalence is independently checked.",
+      "pattern": "^WARNING: \\[Synth 8-3936\\] Found unconnected internal register '(?:gained_(?:re|im)_reg|gain_pipe_reg\\[[0-3]\\]|intercept_reg|phase_mean_reg|score_offset_reg|(?:g_timing\\.)?inverse_product_reg|gain_product_reg)' and it is trimmed from '\\d+' to '\\d+' bits\\. \\[.*/bpsk_(?:rotate|acquire|track)\\.sv:\\d+\\]$"
+    },
+    "Synth 8-3332": {
+      "reason": "DSP absorption of known arithmetic pipeline registers; no control/valid registers may be removed. fxp_mrc2: the weight multiplier output register is absorbed into the cascaded DSP P registers. QAM16: the gain-error reciprocal product register is absorbed the same way.",
+      "pattern": "^WARNING: \\[Synth 8-3332\\] Sequential element \\((?:gained_(?:re|im)_reg__\\d+|(?:g_timing\\.)?timing_normalized_reg\\[\\d+\\](?:__\\d+)?|g_qam16_decision\\.gain_scaled_reg\\[\\d+\\]|g_bpsk_tx\\.dut/(?:g_[bq]psk\\.)?filter/(?:real_axis/|g_complex\\.imag_axis/)?sum2(?:_re)?_reg\\[4\\]\\[-\\d+\\]|(?:g_mrc\\.dut/)?product_q_reg\\[\\d+\\])\\) is unused and will be removed from module (?:bpsk_rotate(?:__\\d+)?|bpsk_track|fxp_mrc2|rtl_synth_top)\\.$"
+    },
+    "Synth 8-7129": {
+      "reason": "Optional imaginary input is unused only in the real-only BPSK transmitter filter variant.",
+      "pattern": "^WARNING: \\[Synth 8-7129\\] Port s_im\\[(?:[0-9]|1[0-7])\\] in module bpsk_fir is either unconnected or has no load$"
+    }
+  },
+  "altera": {
+    "10335": "Foreign synthesis attributes are ignored; Quartus uses its own inference and IO packing hints.",
+    "10030": {
+      "reason": "Read-only inferred M10K exposes unused write data/address/enable ports. Quartus ties them to zero; only these three internal ROM ports are permitted (a one-bit ROM address, as in the 4-point FFT twiddle ROM, names the port with its bit index).",
+      "pattern": "^Warning \\(10030\\): Net \"memory\\.(data_a|waddr_a|we_a)(?:\\[\\d+\\])?\" at sync_rom\\.sv\\(\\d+\\) has no driver or initial value, using a default initial value '0'(?: File: .*/sync_rom\\.sv Line: \\d+)?$"
+    },
+    "10036": {
+      "reason": "Intentional ignored phase fraction, padded metadata and optional diagnostic outputs in the BPSK pilot; no other unused object is accepted.",
+      "pattern": "^Warning \\(10036\\): Verilog HDL or VHDL warning at bpsk_(?:fir|acquire|track|rx)\\.sv\\(\\d+\\): object \"unused_(?:im|gain_rotation_phase|angle_tag|rotated_tag|divider_busy|acquisition_busy|tracking_busy|position_fraction)\" assigned a value but never read(?: File: .* Line: \\d+)?$"
+    }
+  }
+}

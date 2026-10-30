@@ -1,0 +1,263 @@
+{
+  "scope": "One current read-only Codex Luna audit versus all preserved continuation_20261012 status files; heterogeneous tasks, not a controlled model benchmark",
+  "luna": {
+    "task": "luna_pfb_review",
+    "model": "gpt-6-luna",
+    "started_at_utc": "2026-10-19T11:56:09Z",
+    "completed_at_utc": "2026-10-19T11:56:40Z",
+    "elapsed_seconds": 31,
+    "completed": true,
+    "findings": 0,
+    "tests_passed": 14,
+    "subtests_passed": 36,
+    "exec_calls_reported": 5,
+    "shell_commands_reported": 15,
+    "clock_reads_reported": 2,
+    "files_changed": false,
+    "questa_run": false,
+    "source": "Subagent completion report",
+    "token_usage": null,
+    "cost": null
+  },
+  "historical_summary": {
+    "pi": {
+      "runs": 7,
+      "completed": 5,
+      "stopped": 2,
+      "median_completed_seconds": 210.0,
+      "total_seconds": 2570.3
+    },
+    "opencode": {
+      "runs": 7,
+      "completed": 5,
+      "stopped": 2,
+      "median_completed_seconds": 262.1,
+      "total_seconds": 2090.5
+    },
+    "kilo": {
+      "runs": 7,
+      "completed": 1,
+      "stopped": 6,
+      "median_completed_seconds": 146.0,
+      "total_seconds": 2092.5
+    }
+  },
+  "historical_runs": [
+    {
+      "agent": "pi",
+      "pid": 2615772,
+      "status": "STOPPED",
+      "returncode": 143,
+      "reason": "deadline",
+      "elapsed": 600.1,
+      "path": "build/rtl/continuation_20261012_adaptive/pi_status.json",
+      "sha256": "8e62bb3b8028801603f153375f1cee01df61926e18767e7c1033f4178d9be3b9"
+    },
+    {
+      "agent": "pi",
+      "pid": 1383811,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 582.1,
+      "path": "build/rtl/continuation_20261012_dsp/pi_status.json",
+      "sha256": "87424dd12940b1df3bce7a94777f8310f69fe6e0daebffa727aceaaf26602bf5"
+    },
+    {
+      "agent": "pi",
+      "pid": 126637,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 146.0,
+      "path": "build/rtl/continuation_20261012_embedded_fft/pi_status.json",
+      "sha256": "293f47921ca9f06066e0c00f34886fd58980d5e71fbda2f2e2b6cf1504033a59"
+    },
+    {
+      "agent": "pi",
+      "pid": 936553,
+      "status": "STOPPED",
+      "returncode": 143,
+      "reason": "deadline",
+      "elapsed": 600.1,
+      "path": "build/rtl/continuation_20261012_fft/pi_status.json",
+      "sha256": "edbc0fb9d65e93a29d0e4b5df2efcbcf05019d865a184363d0603201cb28f37a"
+    },
+    {
+      "agent": "pi",
+      "pid": 346192,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 256.0,
+      "path": "build/rtl/continuation_20261012_fsk_ldpc/pi_status.json",
+      "sha256": "de50bf4e8b5d0690839cafbb423f0e8fe498404673e26eb6665738ade871a7fe"
+    },
+    {
+      "agent": "pi",
+      "pid": 3052860,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 176.0,
+      "path": "build/rtl/continuation_20261012_spectral/pi_status.json",
+      "sha256": "ebdd73e8fabd2fdaf7a1e9ad4effc91ed56ed4b4394cbcf7f2e9c3b5b7a41e5b"
+    },
+    {
+      "agent": "pi",
+      "pid": 782438,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 210.0,
+      "path": "build/rtl/continuation_20261012_sync_grad/pi_status.json",
+      "sha256": "30585caa55490d0016979fb6e166a970efb96e7dd0102b48461cf9a78e9f36c4"
+    },
+    {
+      "agent": "opencode",
+      "pid": 2614928,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "no activity",
+      "elapsed": 356.1,
+      "path": "build/rtl/continuation_20261012_adaptive/opencode_status.json",
+      "sha256": "91f80c54fb49024492f57f46dcde807395a352ec131d9ff45368cb8f5cf357ac"
+    },
+    {
+      "agent": "opencode",
+      "pid": 1383872,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 370.1,
+      "path": "build/rtl/continuation_20261012_dsp/opencode_status.json",
+      "sha256": "ba5515244440a4d88ee255a409abf76c9d633212e5c08709ae1a46e95f650fd8"
+    },
+    {
+      "agent": "opencode",
+      "pid": 126178,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 262.1,
+      "path": "build/rtl/continuation_20261012_embedded_fft/opencode_status.json",
+      "sha256": "9843f05531a391e0fbd8e15e52df3aa0ccb327cab9589a10919fde9f48bd1c5e"
+    },
+    {
+      "agent": "opencode",
+      "pid": 962235,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 98.0,
+      "path": "build/rtl/continuation_20261012_fft/opencode_status.json",
+      "sha256": "d92e53c3e2e40871254328ff22325842c4546f529ce48778942d35f877c5ce41"
+    },
+    {
+      "agent": "opencode",
+      "pid": 346494,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 228.0,
+      "path": "build/rtl/continuation_20261012_fsk_ldpc/opencode_status.json",
+      "sha256": "5413925ad7ede9c1a59b58944e2ceb8c3b875500f783072dc95304a240903b3d"
+    },
+    {
+      "agent": "opencode",
+      "pid": 3052588,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 356.1,
+      "path": "build/rtl/continuation_20261012_spectral/opencode_status.json",
+      "sha256": "20ed3b38807971271edc635163decfd3f797bfb68de33f05e440151e9b36e897"
+    },
+    {
+      "agent": "opencode",
+      "pid": 782227,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "deadline",
+      "elapsed": 420.1,
+      "path": "build/rtl/continuation_20261012_sync_grad/opencode_status.json",
+      "sha256": "b19b6465dd8a11e29874c2983c0a4b24230a697f3a85f3fb2f63ba2e5401ac8a"
+    },
+    {
+      "agent": "kilo",
+      "pid": 2623169,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "Read-only audit exceeded requested time budget without delivering a report",
+      "elapsed": 320.0,
+      "path": "build/rtl/continuation_20261012_adaptive/kilo_status.json",
+      "sha256": "91e24a8d8f95ed0d0f4a05940b4b1c4199892be0ae70546f6bbba2d1c8705910"
+    },
+    {
+      "agent": "kilo",
+      "pid": 1383801,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "coordinator stopped incorrect DUT-scope prototype",
+      "elapsed": 576.1,
+      "path": "build/rtl/continuation_20261012_dsp/kilo_status.json",
+      "sha256": "f02c90f8efcab22cf30a2903ef47099e8033799a90188418c4ee3516f5e208ae"
+    },
+    {
+      "agent": "kilo",
+      "pid": 126914,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "deadline",
+      "elapsed": 150.1,
+      "path": "build/rtl/continuation_20261012_embedded_fft/kilo_status.json",
+      "sha256": "e136498a42f9f1e6d712dbf99fc45c3721bf0fdddf26398520312bfc36c0ad96"
+    },
+    {
+      "agent": "kilo",
+      "pid": 936568,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "deadline",
+      "elapsed": 600.1,
+      "path": "build/rtl/continuation_20261012_fft/kilo_status.json",
+      "sha256": "e3e8fcf55074c81cea0969f9f1359c96d544fb3f837bac928b0938fde8f7f683"
+    },
+    {
+      "agent": "kilo",
+      "pid": 346258,
+      "status": "COMPLETE",
+      "returncode": 0,
+      "reason": null,
+      "elapsed": 146.0,
+      "path": "build/rtl/continuation_20261012_fsk_ldpc/kilo_status.json",
+      "sha256": "b6af5ee7aab51cc8017abecb90989c7b8be73eebb078ee543efa317cb69d36b0"
+    },
+    {
+      "agent": "kilo",
+      "pid": 3052999,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "deadline",
+      "elapsed": 150.1,
+      "path": "build/rtl/continuation_20261012_spectral/kilo_status.json",
+      "sha256": "d142053e238ca2292642094a22072406d74e1e08694998dfd099c6b7a1244503"
+    },
+    {
+      "agent": "kilo",
+      "pid": 782214,
+      "status": "STOPPED",
+      "returncode": -15,
+      "reason": "deadline",
+      "elapsed": 150.1,
+      "path": "build/rtl/continuation_20261012_sync_grad/kilo_status.json",
+      "sha256": "2c7fdefcdf38db9b1f77280c546dea09c4938402a837ec3999b954b878606d4a"
+    }
+  ],
+  "limitations": [
+    "Historical tasks and deadlines differ; rc0 is not correctness acceptance.",
+    "Pi/OpenCode/Kilo are CLI clients, not stable model identities.",
+    "One Luna audit cannot establish reliability or relative defect-detection ability.",
+    "No comparable token or monetary-cost records available."
+  ]
+}

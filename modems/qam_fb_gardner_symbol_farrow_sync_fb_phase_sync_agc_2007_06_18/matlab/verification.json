@@ -1,0 +1,43 @@
+{
+  "name": "qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18",
+  "original_sha256": "a292e1b503732fcf20ce0b525ba2cf9e23e763be6b6d284e7f8dadd5ecb3674b",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Failed to load library 'commchan2' referenced by 'qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18/AWGN Channel'.",
+  "migration": {
+    "source": "modems/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18/original/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.mdl",
+    "original_sha256": "a292e1b503732fcf20ce0b525ba2cf9e23e763be6b6d284e7f8dadd5ecb3674b",
+    "prepared_sha256": "db0fb062adfd62ab851c1898f606a547243d583a833ca66855ec1e95b8d44f64",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 28,
+  "finite": true,
+  "captured_values": 325660,
+  "capture_sha256": "f530be14cd24b6714d9aa6295ed2f0cd8fe4791bf9ffe0e75ce3fd82aab23f0f",
+  "mapper_checks": [
+    {
+      "block": "qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18/Modulator/data_mapper",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 16,
+      "alphabet": 16,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

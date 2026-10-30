@@ -1,0 +1,32 @@
+{
+  "name": "msk_modulator_2008_06_22",
+  "original_sha256": "29630662de47a67fbf00001ae17bfa97fea7af1c8d73c490be0e8fe634efe8af",
+  "original_load": "PASS",
+  "original_compile": "PASS",
+  "original_error": "",
+  "migration": {
+    "source": "modems/msk_modulator_2008_06_22/original/msk_modulator_2008_06_22.mdl",
+    "original_sha256": "29630662de47a67fbf00001ae17bfa97fea7af1c8d73c490be0e8fe634efe8af",
+    "prepared_sha256": "29630662de47a67fbf00001ae17bfa97fea7af1c8d73c490be0e8fe634efe8af",
+    "changes": [],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.03125,
+  "stop_time": 512,
+  "requested_steps": 16384,
+  "signal_count": 19,
+  "finite": true,
+  "captured_values": 198675,
+  "capture_sha256": "fc4540e46391c7e7f1d6c4bad43efec2d91d4601106a82c2173a6b7813cfa859",
+  "mapper_checks": [],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED",
+  "constant_envelope": {
+    "maximum_error": 2.220446049250313e-16,
+    "status": "PASS"
+  }
+}

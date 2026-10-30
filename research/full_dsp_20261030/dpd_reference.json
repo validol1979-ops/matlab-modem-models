@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "source": "sources/DPD_Example/main/fit_memory_poly_model.m",
+  "source_sha256": "d6762999a22743b177f580ef9082f9933cdef41db523d8d4164f2b2c12127693",
+  "transformation": "rename function; add x_terms output; no arithmetic edits",
+  "memory": 5,
+  "degrees": 5,
+  "training_rows": 2048,
+  "seed": 20261030,
+  "basis_order": "columns k outer1..5, memory j inner0..4 ascending chronological x[n+j]; targety[n+M-1]",
+  "basis_max_error_numpy": 1.2412670766236366e-16,
+  "coefficient_max_error_known": 1.629147794753794e-14,
+  "condition_number": 3036.9521442529185,
+  "fixture": "tests/data/dpd_source_reference_20261030.npz",
+  "fixture_sha256": "34edca07e1756c1cc5d36a630d209b528ed8c24cff24969a540bd08010a07ec4",
+  "fixture_bytes": 850137
+}

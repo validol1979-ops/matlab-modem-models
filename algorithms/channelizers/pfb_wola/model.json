@@ -1,0 +1,110 @@
+{
+  "id": "channelizers/pfb_wola",
+  "title": "PFB and WOLA analysis banks",
+  "category": "channelizers",
+  "path": "algorithms/channelizers/pfb_wola",
+  "operations": [
+    "pfb",
+    "wola"
+  ],
+  "cases": [
+    "pfb_decimation_4",
+    "pfb_decimation_3",
+    "wola_decimation_4",
+    "wola_decimation_3"
+  ],
+  "limits": "Two kernel names expose the same defined FIR/DFT analysis-bank transform, with decimation equal to or smaller than the channel count. Source startup indexing and optional FFTW MEX are not reproduced.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/README.md",
+      "original": "algorithms/channelizers/pfb_wola/original/README.md",
+      "sha256": "2953c814b4ae2b3cd13d1279b95cb378edce2d753af88e948fbeb695f978488f",
+      "bytes": 7425
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/images/example_1a.png",
+      "original": "algorithms/channelizers/pfb_wola/original/images/example_1a.png",
+      "sha256": "f3cf53b928e8f1bd544deda889b01572c0ef779a647f393b8a150c4d701ed6cd",
+      "bytes": 38565
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/images/example_1b.png",
+      "original": "algorithms/channelizers/pfb_wola/original/images/example_1b.png",
+      "sha256": "8d1de10ed845b97dd2e154bd598baa2e8fdb02eaab0f1d9ef44359702f35e6ce",
+      "bytes": 38565
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/images/example_2.png",
+      "original": "algorithms/channelizers/pfb_wola/original/images/example_2.png",
+      "sha256": "20e1a7f76ce73262765ab068106c8b073f3e93489f957b87207db40e1c4b7cd1",
+      "bytes": 92057
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/images/pfb_flow.png",
+      "original": "algorithms/channelizers/pfb_wola/original/images/pfb_flow.png",
+      "sha256": "f901b3a0153d832508a38580ffdd5c89cce1f2013680b5b3d8d61d202744bd8b",
+      "bytes": 40265
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/images/pfb_flow_2.png",
+      "original": "algorithms/channelizers/pfb_wola/original/images/pfb_flow_2.png",
+      "sha256": "567a821b19ff4d0c86d2ed017d68e929b8439b3535ec9397adc2263e53b36931",
+      "bytes": 67367
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/images/wola_flow.png",
+      "original": "algorithms/channelizers/pfb_wola/original/images/wola_flow.png",
+      "sha256": "46690a14d98f30a78476066decb29f0ed411ba3fda156c927b6eadf65c2da9eb",
+      "bytes": 83078
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/images/wola_flow_2.png",
+      "original": "algorithms/channelizers/pfb_wola/original/images/wola_flow_2.png",
+      "sha256": "1316d5c8342a76bd631d203755bb3e9fd4c9cf3920f8eb8fcb845ef22c540be2",
+      "bytes": 43367
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/mex/build.txt",
+      "original": "algorithms/channelizers/pfb_wola/original/mex/build.txt",
+      "sha256": "fc01485e85c3c5ca5c8c1fdce78a708940ddac5dc9d25bf4a957ee3374fcea56",
+      "bytes": 106
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/mex/wola_chanex.cc",
+      "original": "algorithms/channelizers/pfb_wola/original/mex/wola_chanex.cc",
+      "sha256": "4d9d4021367f52dfab65a4078e53b8051edbf317737c937a81a36885fcad1595",
+      "bytes": 4493
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/pfb_chanex.m",
+      "original": "algorithms/channelizers/pfb_wola/original/pfb_chanex.m",
+      "sha256": "fc1a3188bcd7135849ecaa6cfe89d13bbbab8bc1a893f38fff47533e243cfa6e",
+      "bytes": 2964
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/pfb_channelizer_demo.m",
+      "original": "algorithms/channelizers/pfb_wola/original/pfb_channelizer_demo.m",
+      "sha256": "e2faecd913015c9d49e9dd8fba3a456f3acb60dccda01e8c99fec3d23e180b43",
+      "bytes": 3254
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/wola_chanex.m",
+      "original": "algorithms/channelizers/pfb_wola/original/wola_chanex.m",
+      "sha256": "ec4f148310e4cfe4ea15860476e60fff4e55f08e4b0e1efc8576a45e16a20216",
+      "bytes": 2593
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/channelizer/wola_channelizer_demo.m",
+      "original": "algorithms/channelizers/pfb_wola/original/wola_channelizer_demo.m",
+      "sha256": "2b2695aadee567c64ac06306af0f77278d8feffe0948bebbcdd77c42196baae6",
+      "bytes": 3199
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

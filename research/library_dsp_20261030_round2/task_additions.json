@@ -1,0 +1,1355 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "created_at_utc": "2026-10-30T08:31:25.128226+00:00",
+  "scope": "Second local-library RAG discovery; model-stage tasks only, no implementations",
+  "previous_catalog": "research/library_dsp_20261029/task_catalog.json",
+  "previous_task_count": 29,
+  "additions": 15,
+  "combined_task_count": 44,
+  "model_stages_completed": 2,
+  "policy": "Existing proof-bound catalog and model evidence are retained unchanged; this file is a supplement.",
+  "tasks": [
+    {
+      "id": "FEC-CRC",
+      "title": "Параметризованный CRC и проверка/формирование FCS",
+      "priority": "P1",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "comms_coding",
+      "source_facts": [
+        "RAG Ethernet README описывает generic parallel LFSR/CRC. axis_eth_fcs.v задаёт WIDTH32, polynomial0x04C11DB7, начальное FFFFFFFF и инверсию результата; lfsr.v документирует polynomial и порядок битов."
+      ],
+      "project_derived_spec": [
+        "Создать независимую побитную GF(2) модель CRC и параллельную модель обновления на 1/8/32 бита; первый профиль Ethernet CRC32, затем явно выбранный CRC16. Для каждого профиля зафиксировать width/poly/init/refin/refout/xorout и порядок байтов.",
+        "Добавить append/check FCS, пустой/короткий кадр, неполное последнее слово и reset между кадрами. Значения контрольных векторов получать независимым полиномиальным делением/известным reference, не из DUT."
+      ],
+      "acceptance": [
+        "Побитное и параллельное обновление совпадают на случайных разбивках; проверка 123456789 и residue по явному профилю.",
+        "Перебор одиночных ошибок и избранных burst errors, неправильный порядок битов/байтов и повреждённый FCS отклоняются; проверить final partial word."
+      ],
+      "novelty": "GF2 encoder и optional CRC в Polar-задаче не являются общим параметризованным CRC/FCS API; существующие проверки zip_crc относятся к архивам, не к DSP pipeline. Новый shared CRC/FCS компонент должен переиспользоваться задачей FEC-POLAR, а не дублироваться в ней.",
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/README.md",
+          "document_id": "fb668484fc871a5ba083659d1db3229f1be7571bb4f35e56f1bb43ea5d0eda7e",
+          "part": 1,
+          "start_char": 8100,
+          "end_char": 9300,
+          "raw_read_file": "comms/read_eth_lfsr.json",
+          "verified_sha256": "fb668484fc871a5ba083659d1db3229f1be7571bb4f35e56f1bb43ea5d0eda7e",
+          "verified_size": 20642
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/lfsr.v",
+          "lines": [
+            85,
+            154
+          ],
+          "verified_sha256": "5502c8203b0dfc7246c1a2de93e60c199ded3c1d7840b106350d714f72a9a079",
+          "raw_excerpt_file": "comms/direct_lfsr.v.json",
+          "verified_size": 16327
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/axis_eth_fcs.v",
+          "lines": [
+            73,
+            134
+          ],
+          "verified_sha256": "9aba0ff55de115dcab4a2f3ed46bf967bf5fb1eb8011bffcbd5842bf2e37a731",
+          "raw_excerpt_file": "comms/direct_axis_eth_fcs.v.json",
+          "verified_size": 3824
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/axis_eth_fcs_check.v",
+          "lines": [
+            29,
+            180
+          ],
+          "verified_sha256": "af5c29694f070a5fe550e46557ac07d1f4e276767a275bdcfbb379072cd48a9b",
+          "raw_excerpt_file": "comms/direct_axis_eth_fcs_check.v.json",
+          "verified_size": 10249
+        }
+      ],
+      "dependencies": [],
+      "source_caveats": [
+        "CRC16 — предлагаемый дополнительный профиль, параметры сначала закрепить; не объявлять все стандарты поддержанными. Ethernet framing/MAC не переносится этим пунктом."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_code_basics.py"
+        ],
+        "tests": [
+          "tests/test_ext_code_basics_oracles.py"
+        ],
+        "contract": [
+          "Создать независимую побитную GF(2) модель CRC и параллельную модель обновления на 1/8/32 бита; первый профиль Ethernet CRC32, затем явно выбранный CRC16. Для каждого профиля зафиксировать width/poly/init/refin/refout/xorout и порядок байтов.",
+          "Добавить append/check FCS, пустой/короткий кадр, неполное последнее слово и reset между кадрами. Значения контрольных векторов получать независимым полиномиальным делением/известным reference, не из DUT."
+        ],
+        "manifest": "research/full_dsp_20261030/coding/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Ethernet CRC32 and CCITT-FALSE CRC16 bit/parallel GF2 updates + append/check",
+        "fixed_scope": "Exact GF(2) integer model; serial scalar and compiled GF(2) parallel update variants",
+        "limitations": [
+          "CRC16 — предлагаемый дополнительный профиль, параметры сначала закрепить; не объявлять все стандарты поддержанными. Ethernet framing/MAC не переносится этим пунктом.",
+          "Positional Hamming layout differs from source systematic column permutation; dmin4, not ambiguousREADME dmin5.",
+          "No universal detection guarantee beyond SECDED radius.",
+          "No timing/synthesis/RTL acceptance."
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "DSP-PRBS-SCRAMBLER",
+      "title": "PRBS/LFSR, скремблер и дескремблер",
+      "priority": "P1",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "comms_coding",
+      "source_facts": [
+        "lfsr.v описывает Fibonacci/Galois, parallel update, reverse и feed-forward варианты; RAG README подтверждает generic LFSR/CRC module."
+      ],
+      "project_derived_spec": [
+        "Создать битовую и word-parallel модели LFSR, PRBS stimulus и additive/self-synchronizing scramble/descramble; профили PRBS7/9/15/31 предлагаемые, каждый с точной полиномиальной и state/shift/bit-order конвенцией.",
+        "Явно задать nonzero seed, запрет all-zero lockup для PRBS, продвижение по принятым битам, сохранение состояния между кусками и политику frame restart. Fibonacci/Galois не считать эквивалентными с одним и тем же seed без преобразования состояния."
+      ],
+      "acceptance": [
+        "Эквивалентность битового и параллельного шага на любых разбиениях; scramble→descramble round-trip, ошибка бита и ограниченное распространение self-synchronizing варианта.",
+        "Полный период проверяется для малых степеней, для 31 — независимые GF2 transition/jump checks; reset/nonzero seed/обратный порядок битов и negative controls."
+      ],
+      "novelty": "CHANNEL-AWGN в очереди не задаёт бинарные PRBS polynomial sequences и scrambler API; исторический MSK scrambler исключён из прежней приёмки.",
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/README.md",
+          "document_id": "fb668484fc871a5ba083659d1db3229f1be7571bb4f35e56f1bb43ea5d0eda7e",
+          "part": 1,
+          "start_char": 8100,
+          "end_char": 9300,
+          "raw_read_file": "comms/read_eth_lfsr.json",
+          "verified_sha256": "fb668484fc871a5ba083659d1db3229f1be7571bb4f35e56f1bb43ea5d0eda7e",
+          "verified_size": 20642
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/lfsr.v",
+          "lines": [
+            36,
+            220
+          ],
+          "verified_sha256": "5502c8203b0dfc7246c1a2de93e60c199ded3c1d7840b106350d714f72a9a079",
+          "raw_excerpt_file": "comms/direct_lfsr.v.json",
+          "verified_size": 16327
+        }
+      ],
+      "dependencies": [],
+      "source_caveats": [
+        "Режимы и терминология указаны в референсе, конкретные PRBS профили/seed mapping и accepted-bit интерфейс — наше ТЗ; не скрывать смену полинома или направление сдвига."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_code_basics.py"
+        ],
+        "tests": [
+          "tests/test_ext_code_basics_oracles.py"
+        ],
+        "contract": [
+          "Создать битовую и word-parallel модели LFSR, PRBS stimulus и additive/self-synchronizing scramble/descramble; профили PRBS7/9/15/31 предлагаемые, каждый с точной полиномиальной и state/shift/bit-order конвенцией.",
+          "Явно задать nonzero seed, запрет all-zero lockup для PRBS, продвижение по принятым битам, сохранение состояния между кусками и политику frame restart. Fibonacci/Galois не считать эквивалентными с одним и тем же seed без преобразования состояния."
+        ],
+        "manifest": "research/full_dsp_20261030/coding/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "PRBS7/9/15/31 exact word/bit/jump, additive/self-sync streaming accepted-bits/reset",
+        "fixed_scope": "Exact GF(2) integer model; serial scalar and compiled GF(2) parallel update variants",
+        "limitations": [
+          "Режимы и терминология указаны в референсе, конкретные PRBS профили/seed mapping и accepted-bit интерфейс — наше ТЗ; не скрывать смену полинома или направление сдвига.",
+          "Positional Hamming layout differs from source systematic column permutation; dmin4, not ambiguousREADME dmin5.",
+          "No universal detection guarantee beyond SECDED radius.",
+          "No timing/synthesis/RTL acceptance.",
+          "C(D)=1+D^k+D^n delay-connection polynomial, forward characteristic E^n+E^(n-k)+1; frozen reversed-register wire recurrence is explicit."
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "FEC-DVB-PLS",
+      "title": "DVB-S2 PLS: кодирование, scrambling, π/2-BPSK и Hadamard decoding",
+      "priority": "P2",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "comms_coding",
+      "source_facts": [
+        "RAG dvb_pls README описывает PLS/PSL, scrambling и pi/2BPSK; decoder использует Hadamard32 и maximum-likelihood decision. dvb_pls_enc.sv указывает non-systematic encoder, LSB-first и 64 transmitted bits.",
+        "do_encode формирует 32-битный rm_code по 6 младшим битам, затем 64 бита парным кодированием с dat[6] и XOR фиксированного cSCRAMBLE_WORD; не требует genericPRBS core."
+      ],
+      "project_derived_spec": [
+        "Восстановить точный кодовый набор/порядок 64 бит, scrambling sequence и phase mapping из исходников; создать floating soft metric reference, bit-accurate encoder и Hadamard fast decoder.",
+        "Первый профиль — все 128 входных меток 7-битного idat исходного encoder, каждая даёт 64 кодовых бита; это не утверждение о допустимости всех MODCOD по стандарту. Зафиксировать LLR sign/scale/ties и finite-frame reset; сравнить Hadamard32 с исчерпывающим перебором 128 допустимых кодовых слов этого профиля."
+      ],
+      "acceptance": [
+        "Перебрать все 128 входных меток 0…127; noiseless encode/decode и фазовое соответствиеπ/2-BPSK.",
+        "Сравнить fast decoder с independent exhaustive soft ML, weak/tied metrics, ограниченные noise/sign/scrambling negative cases; bit/phase reversal должны обнаруживаться."
+      ],
+      "novelty": "Универсальный PSK или Viterbi/Polar/LDPC не реализует короткий physical-layer signalling code и его Hadamard decoder.",
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/README.md",
+          "document_id": "e074718e958739ba4dee08a1535262527a6b3d2003a47656a9139e8f74be9dd4",
+          "part": 1,
+          "start_char": 0,
+          "end_char": 306,
+          "raw_read_file": "comms/read_dvb_pls.json",
+          "verified_sha256": "e074718e958739ba4dee08a1535262527a6b3d2003a47656a9139e8f74be9dd4",
+          "verified_size": 306
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_enc.sv",
+          "lines": [
+            115,
+            250
+          ],
+          "verified_sha256": "2a951100e8288720b9f6cc5ea33734900cbbaa043747d2ee4a9abdce2289bfbf",
+          "raw_excerpt_file": "comms/direct_dvb_pls_enc.sv.json",
+          "verified_size": 6720
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_constants.svh",
+          "lines": [
+            1,
+            66
+          ],
+          "verified_sha256": "0720fd2471ae3f9d30649ea5a02c388b877bbc50181aa1146c2237a90611b437",
+          "raw_excerpt_file": "comms/direct_dvb_pls_constants.svh.json",
+          "verified_size": 2738
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_dec_rm_dec.sv",
+          "lines": [
+            1,
+            180
+          ],
+          "verified_sha256": "9f41bc54a22d938dc380ace81454e09420c066bce159ad67e7bdb4ecd158102b",
+          "raw_excerpt_file": "comms/direct_dvb_pls_dec_rm_dec.sv.json",
+          "verified_size": 11335
+        }
+      ],
+      "dependencies": [],
+      "source_caveats": [
+        "README ссылается на ETSI EN302307v1.2.1, но весь DVB-S2 PHY/стандарт этим пунктом не заявляется. До model oracle дочитать encoder/decoder и scrambling constants в оригинале; опубликованные Fmax — исторические.",
+        "PLS использует фиксированный 64-битный scramble word; зависимость от generic PRBS снята. Входной алфавит 128 — контракт encoder, не полная проверка MODCOD/ETSI compliance."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_code_pls.py"
+        ],
+        "tests": [
+          "tests/test_ext_code_pls.py",
+          "tests/test_ext_code_quantization.py"
+        ],
+        "contract": [
+          "Восстановить точный кодовый набор/порядок 64 бит, scrambling sequence и phase mapping из исходников; создать floating soft metric reference, bit-accurate encoder и Hadamard fast decoder.",
+          "Первый профиль — все 128 входных меток 7-битного idat исходного encoder, каждая даёт 64 кодовых бита; это не утверждение о допустимости всех MODCOD по стандарту. Зафиксировать LLR sign/scale/ties и finite-frame reset; сравнить Hadamard32 с исчерпывающим перебором 128 допустимых кодовых слов этого профиля."
+        ],
+        "manifest": "research/full_dsp_20261030/coding/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "All128source labels,64bits fixedscramble,sourcepi/2phase,FHT32 float/integerML",
+        "fixed_scope": "Integer datapath after explicit quantization; float soft reference; documented width/ties",
+        "limitations": [
+          "README ссылается на ETSI EN302307v1.2.1, но весь DVB-S2 PHY/стандарт этим пунктом не заявляется. До model oracle дочитать encoder/decoder и scrambling constants в оригинале; опубликованные Fmax — исторические.",
+          "PLS использует фиксированный 64-битный scramble word; зависимость от generic PRBS снята. Входной алфавит 128 — контракт encoder, не полная проверка MODCOD/ETSI compliance."
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "FEC-HAMMING",
+      "title": "Расширенный Hamming SECDED encoder/decoder",
+      "priority": "P2",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "comms_coding",
+      "source_facts": [
+        "RAG Hamming README задаёт systematic code, automatic check-matrix generation и syndrome decoding. hamming_parameters.svh задаёт pR как число check bits и systematic permutation."
+      ],
+      "project_derived_spec": [
+        "Создать H/G matrix construction, systematic encoder и SECDED decoder с явными data/parity/overall-parity positions, syndrome и status clean/corrected/detected-uncorrectable.",
+        "Первые предлагаемые extended profiles(8,4),(16,11),(32,26),(64,57); зафиксировать dmin4, проверив его независимо, и политику вывода при обнаруженных двойных ошибках."
+      ],
+      "acceptance": [
+        "Исчерпывающая проверка кодовых слов для малых профилей, min-distance инулевой syndrome.",
+        "Все одиночные идвойные ошибки по всем позициям для выбранных payload: singles корректируются, doubles детектируются; >2 ошибки не объявлять гарантированно обнаружимыми."
+      ],
+      "novelty": "Один GF2 matrix encoder не задаёт systematic Hamming layout, SECDED status икоррекцию ошибок.",
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/README.md",
+          "document_id": "91d21a8115762349d570f7fe888d6f4358df36e97a7ce3f1aa383fd5f6249baa",
+          "part": 1,
+          "start_char": 0,
+          "end_char": 290,
+          "raw_read_file": "comms/read_hamming.json",
+          "verified_sha256": "91d21a8115762349d570f7fe888d6f4358df36e97a7ce3f1aa383fd5f6249baa",
+          "verified_size": 290
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/hamming_parameters.svh",
+          "lines": [
+            8,
+            90
+          ],
+          "verified_sha256": "39a81c66795f18ab284502a6592681f82d38556ff78dae62d80e4721d19f8059",
+          "raw_excerpt_file": "comms/direct_hamming_parameters.svh.json",
+          "verified_size": 2480
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/hamming_enc.sv",
+          "lines": [
+            1,
+            180
+          ],
+          "verified_sha256": "00d221054cf57b0944612386eae2a5cf96d6cb4917f9d3d87fedfce54df1d7ba",
+          "raw_excerpt_file": "comms/direct_hamming_enc.sv.json",
+          "verified_size": 5695
+        }
+      ],
+      "dependencies": [],
+      "source_caveats": [
+        "Запись README(32,26,5) неоднозначна: не трактовать 5 как min distance. pR5 плюс общий parity bit соответствует отдельной расширенной структуре, которую надо сверить с исходником."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_code_basics.py"
+        ],
+        "tests": [
+          "tests/test_ext_code_basics_oracles.py"
+        ],
+        "contract": [
+          "Создать H/G matrix construction, systematic encoder и SECDED decoder с явными data/parity/overall-parity positions, syndrome и status clean/corrected/detected-uncorrectable.",
+          "Первые предлагаемые extended profiles(8,4),(16,11),(32,26),(64,57); зафиксировать dmin4, проверив его независимо, и политику вывода при обнаруженных двойных ошибках."
+        ],
+        "manifest": "research/full_dsp_20261030/coding/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Extended SECDED(8,4),(16,11),(32,26),(64,57), positional G/H matrices",
+        "fixed_scope": "Exact GF(2) integer model; serial scalar and compiled GF(2) parallel update variants",
+        "limitations": [
+          "Запись README(32,26,5) неоднозначна: не трактовать 5 как min distance. pR5 плюс общий parity bit соответствует отдельной расширенной структуре, которую надо сверить с исходником.",
+          "Positional Hamming layout differs from source systematic column permutation; dmin4, not ambiguousREADME dmin5.",
+          "No universal detection guarantee beyond SECDED radius.",
+          "No timing/synthesis/RTL acceptance."
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "FEC-GOLAY24",
+      "title": "Расширенный Golay(24,12,8): hard и soft Chase-II decoder",
+      "priority": "P2",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "comms_coding",
+      "source_facts": [
+        "RAG README задаёт g(x)=x11+x10+x6+x5+x4+x2+1(0xC75), extended(24,12,8), syndrome encoder и Chase-II16 candidates. golay24_functions.svh содержит 4096 codeword tables, systematicLSB-first encode."
+      ],
+      "project_derived_spec": [
+        "Создать независимую полиномиальную/матричную модель encoder, syndrome hard decoder до 3 ошибок и soft Chase-II с 16 candidates/явными least-reliable positions. Предлагаемый явный Chase-II профиль:4 least-reliable позиции ивсе 16 subsets; сверить с оригиналом до объявления эквивалентности.",
+        "Для soft oracle использовать исчерпывающий поиск по 4096 codewords; различать approximate Chase и globalML, freezeLLR sign,ties,bitorder,uncorrectable/failure policy."
+      ],
+      "acceptance": [
+        "Все 4096 сообщений: encode,syndrome,round-trip иминимальное расстояние 8.",
+        "Все error masks веса≤3 на выбранных словах; weight≥4 публиковать отдельно без обещания гарантированной детекции. Soft Chase quality сравнивать с exhaustive ML, а не обещать обязательное совпадение на любом шуме."
+      ],
+      "novelty": "Новый короткий error-correcting code с soft list decoding, не дубликат BCH/RS/Viterbi и GF2encoder.",
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/README.md",
+          "document_id": "f069dc36695e0505cfcd635e3fff91975ddc315ac40cf97af6f92e786db3607a",
+          "part": 1,
+          "start_char": 0,
+          "end_char": 350,
+          "raw_read_file": "comms/read_golay24.json",
+          "verified_sha256": "f069dc36695e0505cfcd635e3fff91975ddc315ac40cf97af6f92e786db3607a",
+          "verified_size": 350
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_functions.svh",
+          "lines": [
+            7,
+            103
+          ],
+          "verified_sha256": "da9ef35d7af94840d5685ad91ee75bb8fb0cf5b7418d581169146ad1e0a80fa2",
+          "raw_excerpt_file": "comms/direct_golay24_functions.svh.json",
+          "verified_size": 3527
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_enc.sv",
+          "lines": [
+            1,
+            131
+          ],
+          "verified_sha256": "bb14c1d7007a1f3608c6aa8ade1efc833f9f9b0f63628bc83cdcb799a043fe06",
+          "raw_excerpt_file": "comms/direct_golay24_enc.sv.json",
+          "verified_size": 3350
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/dec/golay24_dec_candidate_gen.sv",
+          "lines": [
+            1,
+            180
+          ],
+          "verified_sha256": "a60fdf6d8c04736484b3b1e8ca3437c92218dfd650edb4b5305b4fa1df8762d8",
+          "raw_excerpt_file": "comms/direct_golay24_dec_candidate_gen.sv.json",
+          "verified_size": 5449
+        }
+      ],
+      "dependencies": [],
+      "source_caveats": [
+        "Источник Chase-II16 candidates не доказывает полный softML на всех входах. За пределом гарантированной коррекции возможна miscorrection; не подменять её гарантированным fail."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_code_golay.py"
+        ],
+        "tests": [
+          "tests/test_ext_code_golay.py",
+          "tests/test_ext_code_quantization.py"
+        ],
+        "contract": [
+          "Создать независимую полиномиальную/матричную модель encoder, syndrome hard decoder до 3 ошибок и soft Chase-II с 16 candidates/явными least-reliable positions. Предлагаемый явный Chase-II профиль:4 least-reliable позиции ивсе 16 subsets; сверить с оригиналом до объявления эквивалентности.",
+          "Для soft oracle использовать исчерпывающий поиск по 4096 codewords; различать approximate Chase и globalML, freezeLLR sign,ties,bitorder,uncorrectable/failure policy."
+        ],
+        "manifest": "research/full_dsp_20261030/coding/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Exact Golay24 source matrix; hardradius3 and ChaseII16 float/quantized correlation",
+        "fixed_scope": "Explicit signed input quantization; integer metrics; float softmetric reference",
+        "limitations": [
+          "Источник Chase-II16 candidates не доказывает полный softML на всех входах. За пределом гарантированной коррекции возможна miscorrection; не подменять её гарантированным fail."
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "FEC-BTC",
+      "title": "Блоковый произведённый код SPC/eHamming иитеративное soft decoding",
+      "priority": "P2",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "comms_coding",
+      "source_facts": [
+        "RAG BTC README описывает Turbo Product Code с SPC/eHAM компонентами 8/16/32/64,LLR4 и 4 iterations как пример; явно предупреждает no shortening ивозможный нестандартный bitorder. btc_parameters.svh задаёт типы иразмерыкомпонент."
+      ],
+      "project_derived_spec": [
+        "Сначала independent2D row/column encoder и soft iterative decoder для SPC8×8 и extendedHamming8×8/16×16; row/column order,extrinsic scaling,LLR widths и iteration stop задаются явно.",
+        "Восстановить component soft decision schedule из исходных engine functions до fixed модели; единственный принятый clock/stream model, без копирования multi-clock hardwarewrapper. Большие 32/64 профили добавлять после первых."
+      ],
+      "acceptance": [
+        "Нулевые row/column syndromes, encode/decode round-trip, selected injected errors исравнение component decoder с independent exhaustive small-code oracle.",
+        "Проверить iteration/extrinsic trajectories, LLR clipping, перестановку row/column иневерный bit-order; reported iteration performance против fullyspecifiedreference."
+      ],
+      "novelty": "Product-code iterations не равны convolutional CCSDS Turbo/MaxLogMAP уже вочереди; компонентные Hamming/SPC переиспользуются.",
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/README.md",
+          "document_id": "1a2e6138bc2fa69069593dad6108c3400119fd06a6ddf5606ca784011fead6d1",
+          "part": 1,
+          "start_char": 0,
+          "end_char": 1083,
+          "raw_read_file": "comms/read_btc.json",
+          "verified_sha256": "1a2e6138bc2fa69069593dad6108c3400119fd06a6ddf5606ca784011fead6d1",
+          "verified_size": 1083
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/btc_parameters.svh",
+          "lines": [
+            10,
+            100
+          ],
+          "verified_sha256": "55bb4527578478a77c5a0347acd91bed38b711cfc9bd7da04254cf5dc56a758e",
+          "raw_excerpt_file": "comms/direct_btc_parameters.svh.json",
+          "verified_size": 8287
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/dec/btc_dec_eham_fchase.sv",
+          "lines": [
+            1,
+            180
+          ],
+          "verified_sha256": "6e97aed3afda5f2defeb2b28379ad7dbf1a1c8c4a2a608c85ae749ba6f0fc67f",
+          "raw_excerpt_file": "comms/direct_btc_dec_eham_fchase.sv.json",
+          "verified_size": 22073
+        }
+      ],
+      "dependencies": [
+        "FEC-HAMMING"
+      ],
+      "source_caveats": [
+        "Не обещать WiMAX conformance: README сам предупреждает bitorder различия иотсутствие shortening. Исторические 8engines/несколькочасовыхдоменов/ресурсы не входятв Python модель."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_code_btc.py"
+        ],
+        "tests": [
+          "tests/test_ext_code_btc.py",
+          "tests/test_ext_code_quantization.py"
+        ],
+        "contract": [
+          "Сначала independent2D row/column encoder и soft iterative decoder для SPC8×8 и extendedHamming8×8/16×16; row/column order,extrinsic scaling,LLR widths и iteration stop задаются явно.",
+          "Восстановить component soft decision schedule из исходных engine functions до fixed модели; единственный принятый clock/stream model, без копирования multi-clock hardwarewrapper. Большие 32/64 профили добавлять после первых."
+        ],
+        "manifest": "research/full_dsp_20261030/coding/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "SPC8x8/eHAM8x8/eHAM16x16 product encoder and iterative source FastChase soft decoder",
+        "fixed_scope": "Integer metric datapath following explicit signed Qinput quantization; state/extrinsic saturation and traced schedule",
+        "limitations": [
+          "Не обещать WiMAX conformance: README сам предупреждает bitorder различия иотсутствие shortening. Исторические 8engines/несколькочасовыхдоменов/ресурсы не входятв Python модель.",
+          "Source-inspired component FastChase soft schedule; positional Hamming column permutation differs from source systematic bit order; no WiMAX conformance.",
+          "Only initial SPC8/eHAM8/16 component profiles, no shortening, source32/64 extensions not claimed."
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "title": "Потоковая FFT overlap-save / overlap-add свёртка с произвольным размером блока",
+      "priority": "P1",
+      "source_facts": [
+        "Abood §7.5 задаёт линейную свёртку через DFT: дополнить h(n) и x(n) нулями до N ≥ N1+N2−1, вычислить N-точечные DFT, перемножить Y(k)=H(k)X(k), затем взять IDFT.",
+        "Это даёт точную линейную (не циклическую) свёртку при указанном условии на N.",
+        "В индексированном тексте приведены шаги алгоритма и примеры DFT/IDFT, но нет отдельного описания секционированной overlap-save процедуры."
+      ],
+      "project_derived_spec": [
+        "Реализовать потоковый блочный конвольвер: фиксированный FFT-размер N, длина FIR M, hop L=N−M+1; хранить последние M−1 входных отсчётов, дополнять/сдвигать блок, умножать на предвычисленный H(k), отбрасывать первые M−1 выходных отсчётов и выдавать L валидных.",
+        "Поддержать real/complex IQ, precomputed filter spectrum, явную нормировку FFT/IFFT и смену коэффициентов после flush/reset. Определить выдачу хвоста и конечную длину; сначала floating, затем fixed с выбранными округлениями.",
+        "Явно задать sample-index alignment, буферизацию блока и состояние между вызовами; аппаратная latency/ready-valid этим модельным этапом не доказывается."
+      ],
+      "acceptance": [
+        "Для случайных x и h результат потоковой свёртки совпадает с прямой линейной свёрткой с заданным допуском при любом разбиении x на блоки.",
+        "Проверка h длиной 1, M=N, M>N (ошибка конфигурации), нулевого входа и смены фильтра между блоками.",
+        "Проверить точное выравнивание по sample indices и выдачу M-1 хвостовых отсчётов после flush, включая неполный последний блок, без потери/дублирования результатов.",
+        "Сравнение overlap-save и overlap-add даёт одинаковый результат."
+      ],
+      "novelty": "Отличается от уже реализованных FFT/IFFT и analysis PFB/WOLA: это exact streaming linear-convolution primitive с секционированием, состоянием между блоками и контролем задержки, а не фильтрбанк и не одиночный FFT.",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+          "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "part": 16,
+          "start_char": 23277,
+          "end_char": 27477,
+          "raw_read_file": "spectral/raw_abood_ch7_conv.json",
+          "origin_class": "indexed_rag_read",
+          "verified_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "verified_size": 9221616
+        }
+      ],
+      "id": "DSP-FFT-CONV",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "spectral_audio",
+      "dependencies": [],
+      "source_caveats": [
+        "Индексированный источник подтверждает только линейную свёртку через DFT с zero-padding N ≥ N1+N2−1. Конкретная overlap-save/overlap-add секционированная схема является project-derived расширением, а не дословно описанным в книге алгоритмом."
+      ],
+      "original_finding_id": "DSP-OVLPSAVE",
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_signal_spectral.py"
+        ],
+        "tests": [
+          "tests/test_ext_signal_spectral.py",
+          "tests/test_ext_signal_spectral_oracles.py"
+        ],
+        "contract": "research/full_dsp_20261030/signal/contracts/DSP-FFT-CONV.txt",
+        "manifest": "research/full_dsp_20261030/signal/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+        "fixed_scope": "Existing integer FFT23input/24internal; exact5bit lifts ofinput andQ17taps; HFFTq22,signalFFTq5; complexproductN/2^22 to23bitQ5; inverse24bitQ5; OLA24bitQ5; finalroundshift5/18sat.",
+        "limitations": [
+          "Python numerical models only, no RTL/vendor/timing claims.",
+          "Runtime FFT stage arithmetic actualinteger fft_fixed, no final-output-only approximation.",
+          "Product/output/OLA clipping counted; FFTinternal24bit saturation follows fft_fixed and is not included in exposedcounter.",
+          "Filter L1gain/headroom caller responsibility; coefficient Q17quantization and twiddleQ16 documented."
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "title": "Цифровой compressor/soft limiter с knee и attack/release",
+      "priority": "P2",
+      "source_facts": [
+        "Douglas Self описывает compressor/limiter как gain-control устройство: compressor начинает снижение усиления при более низком пороге и имеет умеренный наклон (пример 3:1), limiter — более высокий порог и почти плоский наклон (пример 10:1).",
+        "Sidechain содержит rectifier с fast-attack/slow-decay; возможны peak или RMS sensing; gain-control element управляется напряжением, пропорциональным превышению порога.",
+        "Описаны hard knee и soft knee (плавное увеличение compression ratio около порога), а также feedforward и feedback конфигурации; в feedback закон сжатия менее зависит от закона управления gain-элемента.",
+        "Указаны практические эффекты быстрых изменений control voltage и необходимость более сложного управления, чем два простых time-constant attack/decay."
+      ],
+      "project_derived_spec": [
+        "Первый профиль: mono/stereo feedforward compressor с threshold dBFS, ratio, knee, attack/release, makeup gain и peak/RMS detector; определить Fs, silence floor, transient state и стереосвязь.",
+        "Вывести дискретный gain computer в dB и attack/release one-pole коэффициенты из заданной time-constant convention; затем floating и fixed. Runtime-параметры менять с заданным smoothing и проверяемым пределом изменения gain.",
+        "Feedback, lookahead и true-peak limiting — отдельные расширения после первого профиля; feedback требует собственного вывода закона сжатия, а не копии feedforward gain law.",
+        "Ограничить gain reduction и обеспечить finite-state поведение при нулевом/тишине."
+      ],
+      "acceptance": [
+        "Статическая кривая: ниже threshold коэффициент усиления 0 dB; выше threshold наклон соответствует заданному ratio с допуском; soft-knee непрерывен в точке threshold±knee/2. Статическую кривую измерять с makeup=0, после установления detector/gain.",
+        "Проверить attack/release step trajectories по независимой формуле и выбранной τ-конвенции; измерять допустимые gain steps вместо безусловного обещания отсутствия щелчков.",
+        "Peak и RMS detector дают ожидаемо разные показания на импульсном и шумовом сигналах.",
+        "First feedforward profile: finite silence/startup, заданный gain-reduction limit, clipping и fixed-error budget. Устойчивость feedback проверять только после отдельного согласованного контракта."
+      ],
+      "novelty": "В existing_tasks нет compressor/limiter; это time-varying dynamics processing, не обычный IIR biquad (DSP-SOS) и не EQ/IMCRA. Модуль добавляет detector, gain computer и сглаживание, которых нет в очереди.",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/Douglas Self - Small Signal Audio Design - 2024.epub",
+          "document_id": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "part": 33,
+          "start_char": 14300,
+          "end_char": 19300,
+          "raw_read_file": "spectral/raw_self_comp_lim.json",
+          "origin_class": "indexed_rag_read",
+          "verified_sha256": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "verified_size": 51644039
+        }
+      ],
+      "id": "AUDIO-COMPLIMIT",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "spectral_audio",
+      "dependencies": [],
+      "source_caveats": [
+        "Источник — практическая аудио-монография с описанием топологии и поведения, но без готовых цифровых уравнений/коэффициентов. Конкретная дискретная реализация, единицы dBFS и тестовые допуски являются project-derived. Часть текста посвящена аналоговым gain-элементам; их схемотехника не переносится.",
+        "Первая версия soft limiter с конечным ratio и attack не является brickwall/true-peak защитой. Аналоговые очень короткие времена к цифровому Fs не переносятся без квантования по отсчётам."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_dynamics.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_dynamics.py"
+        ],
+        "contract": [
+          "Первый профиль: mono/stereo feedforward compressor с threshold dBFS, ratio, knee, attack/release, makeup gain и peak/RMS detector; определить Fs, silence floor, transient state и стереосвязь.",
+          "Вывести дискретный gain computer в dB и attack/release one-pole коэффициенты из заданной time-constant convention; затем floating и fixed. Runtime-параметры менять с заданным smoothing и проверяемым пределом изменения gain.",
+          "Feedback, lookahead и true-peak limiting — отдельные расширения после первого профиля; feedback требует собственного вывода закона сжатия, а не копии feedforward gain law.",
+          "Ограничить gain reduction и обеспечить finite-state поведение при нулевом/тишине."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Feedforward compressor peak/RMS/maxstereolink/softknee/makeup/lookahead; gate hysteresis/hold/range/sidechainHP/LP",
+        "fixed_scope": "Q17 sample/peak Q34 RMS state Q31 poles Q24 gain table integer recurrences and saturation",
+        "limitations": [
+          "Digital equations are project derived from Self behavior",
+          "Finite ratio softlimiter has no brickwall/truepeak guarantee",
+          "Tau is63.2percent exponentialstep time; no audibleclick subjective claim"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "title": "Noise gate с hysteresis, hold и плавным gain",
+      "priority": "P2",
+      "source_facts": [
+        "Douglas Self описывает noise gate: сигнал проходит только выше порога; ниже порога gate закрывается и сигнал ослабляется или прекращается.",
+        "Sidechain noise gate похож на sidechain compressor/limiter, но с акцентом на очень быстрое attack (порядка 50 µs или меньше) и специальную схему быстрого заряда timing capacitor.",
+        "У многих gate есть range control, позволяющий уменьшить offness; в аналоговом примере offness может превышать −80 dB."
+      ],
+      "project_derived_spec": [
+        "Потоковый gate: threshold, hysteresis, attack, hold, release, range/max attenuation, sidechain high-pass/low-pass, optional lookahead, bypass.",
+        "Состояние open/closed с гистерезисом и hold-таймером; gain interpolation для плавного открытия/закрытия; при закрытии применять заданный range, а не жёсткий ноль.",
+        "Поддержать stereo-linked sidechain и runtime-изменение параметров без zipper noise."
+      ],
+      "acceptance": [
+        "Проверить состояния open/hold/release, пороги и gain trajectory по независимому дискретному эталону; различать τ и время полного закрытия.",
+        "При range=−60 dB остаточный уровень близок к −60 dB, при range=0 gate не ослабляет.",
+        "Проверить hysteresis/chatter на near-threshold сигнале и явно выбранную границу изменения gain; отсутствие слышимых щелчков не считать доказанным одним step test.",
+        "Импульсные и тональные bursts, Fs-dependent квантование attack/hold/release, silence/reset и независимый fixed saturation check."
+      ],
+      "novelty": "Отдельный dynamics-модуль, отсутствующий в 29 задачах; не дублирует compressor/limiter, поскольку имеет latch/hold/hysteresis и range/offness, а не непрерывную кривую сжатия.",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/Douglas Self - Small Signal Audio Design - 2024.epub",
+          "document_id": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "part": 33,
+          "start_char": 24500,
+          "end_char": 29500,
+          "raw_read_file": "spectral/raw_self_gate.json",
+          "origin_class": "indexed_rag_read",
+          "verified_sha256": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+          "verified_size": 51644039
+        }
+      ],
+      "id": "AUDIO-NOISEGATE",
+      "status": "python_models_verified_rtl_not_started",
+      "group": "spectral_audio",
+      "dependencies": [],
+      "source_caveats": [
+        "Индексный фрагмент содержит описание поведения и аналоговой схемы, но не цифровые уравнения. Hold/hysteresis/lookahead и точные допуски — project-derived. Аналоговая схемотехника FET/op-amp не является частью цифровой спецификации."
+      ],
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_dynamics.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_dynamics.py"
+        ],
+        "contract": [
+          "Потоковый gate: threshold, hysteresis, attack, hold, release, range/max attenuation, sidechain high-pass/low-pass, optional lookahead, bypass.",
+          "Состояние open/closed с гистерезисом и hold-таймером; gain interpolation для плавного открытия/закрытия; при закрытии применять заданный range, а не жёсткий ноль.",
+          "Поддержать stereo-linked sidechain и runtime-изменение параметров без zipper noise."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Feedforward compressor peak/RMS/maxstereolink/softknee/makeup/lookahead; gate hysteresis/hold/range/sidechainHP/LP",
+        "fixed_scope": "Q17 sample/peak Q34 RMS state Q31 poles Q24 gain table integer recurrences and saturation",
+        "limitations": [
+          "Digital equations are project derived from Self behavior",
+          "Finite ratio softlimiter has no brickwall/truepeak guarantee",
+          "Tau is63.2percent exponentialstep time; no audibleclick subjective claim"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "RADAR-CHIRP",
+      "title": "Параметрическая LFM/PLFM chirp-модель и генератор тестового эха",
+      "priority": "P2",
+      "source_facts": [
+        "RAG PLFM_RADAR описывает LFM chirps; Generic_Ramp_Frequency.py задаёт Fs=125 MHz, Tb=0.5 us, fmin=10 MHz, fmax=30 MHz и квадратичную фазу.",
+        "Chen, часть 12, формулы 1.25–1.26 описывают LFM echo с fast/slow time и задержкой 2R/c."
+      ],
+      "project_derived_spec": [
+        "Создать floating и fixed генераторы комплексного LFM с параметрами Fs,N,f0,slope,amplitude,initial phase; явно выбрать t=n/Fs и политику округления длительности N (в исходном 125 MHz*0.5 us=62.5 отсчёта).",
+        "Добавить повторяемые импульсы, pulse/PRI, задержку и комплексную амплитуду нескольких точечных целей, нормированный Doppler. Начать с малых N=64/256/1024 и полосы ниже Nyquist; это наши профили, не обещание радиуса действия исходного радара."
+      ],
+      "acceptance": [
+        "Сравнить фазу и мгновенную частоту с независимой прямой формулой; up/down chirp, нулевая скорость sweep, фаза на границах, длительности и alias rejection.",
+        "Проверить расположение эха по известной задержке и Doppler; reset/repeat seed/перезапуск импульса, fixed ошибка и случаи насыщения."
+      ],
+      "novelty": "DDS в очереди имеет постоянный phase-step; здесь частота меняется по времени, есть огибающая, PRI и физически согласованное тестовое эхо.",
+      "dependencies": [
+        "DSP-DDS"
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "document_id": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "part": 12,
+          "file_page": null,
+          "start_char": 11500,
+          "end_char": 17000,
+          "raw_read_file": "root/read_chen_chirp.json",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/8_Utils/Python/Generic_Ramp_Frequency.py",
+          "lines": [
+            5,
+            16
+          ],
+          "verified_sha256": "2970fa0046f728a47b5b226a0f813cf05359186c291119f9584049ec75f8b9d5",
+          "verified_size": 988
+        }
+      ],
+      "source_caveats": [
+        "Исходный y=1+sin(theta) — real waveform с DC offset; комплексный IQ, многолучевое эхо и политика отсчётной длительности — наше явно заданное расширение."
+      ],
+      "status": "python_models_verified_rtl_not_started",
+      "group": "radar_estimators",
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_radar.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_radar.py"
+        ],
+        "contract": [
+          "Создать floating и fixed генераторы комплексного LFM с параметрами Fs,N,f0,slope,amplitude,initial phase; явно выбрать t=n/Fs и политику округления длительности N (в исходном 125 MHz*0.5 us=62.5 отсчёта).",
+          "Добавить повторяемые импульсы, pulse/PRI, задержку и комплексную амплитуду нескольких точечных целей, нормированный Doppler. Начать с малых N=64/256/1024 и полосы ниже Nyquist; это наши профили, не обещание радиуса действия исходного радара."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+        "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+        "limitations": [
+          "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+          "CFAR is independently specified; source is fixedthreshold placeholder",
+          "No physicalrange/velocity without wavelength or timing/vendorclaims"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "RADAR-PULSE-COMP",
+      "title": "Согласованная фильтрация LFM и сжатие импульсов",
+      "priority": "P2",
+      "source_facts": [
+        "RAG README содержит pulse compression. frequency_matched_filter.v реализует умножение FFT входа на сопряжённый FFT опорного chirp, формула(ac+bd)+j(bc-ad).",
+        "matched_filter_multi_segment.v задаёт BUFFER_SIZE1024, LONG_CHIRP3000, SHORT_CHIRP50, OVERLAP128."
+      ],
+      "project_derived_spec": [
+        "Начать с независимого floating matched filter h[n]=conj(s[L-1-n]) и полного linear convolution; зафиксировать lag, peak index и нормировку по энергии опорного chirp.",
+        "Затем сравнить FFT-реализацию с корректным zero padding/overlap-save/partitioned convolution и fixed квантованием; отделить linear correlation от circular wrap и выдачу хвоста."
+      ],
+      "acceptance": [
+        "Задержанные одиночные/две цели: точный индекс и комплексная амплитуда пика; PSLR/ISLR, ошибка Doppler mismatch и near/far dynamic range.",
+        "Сравнить прямую свёртку и FFT на коротких/длинных chirp, неполных блоках и границах сегментов; отрицательные контроли сопряжения, длины FFT и overlap."
+      ],
+      "novelty": "Существующий FIR/FFT и RRC модемов не задают самостоятельный chirp-reference processor с lag/energy normalization и линейным сжатием импульсов.",
+      "dependencies": [
+        "RADAR-CHIRP",
+        "DSP-FFT-CONV"
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/frequency_matched_filter.v",
+          "lines": [
+            8,
+            112
+          ],
+          "verified_sha256": "0012db0c5059458bafe6cbbe020fc38eda964f260c41289ad190f9aeb1ded320",
+          "verified_size": 3881
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/matched_filter_multi_segment.v",
+          "lines": [
+            41,
+            55
+          ],
+          "verified_sha256": "f5af79b45cbc648713fa077cce1536ab97d345458cce3ac6437d06ec7b64778f",
+          "verified_size": 15620
+        }
+      ],
+      "source_caveats": [
+        "OVERLAP128 не является универсальным правилом для фильтра длиной 3000: вывести нужное перекрытие/разбиение заново. Исходные signed16 произведения и 32-битные суммы не считать эталоном полной точности; нормировки/разрядности и clipping проверить независимо. Vendor FFT и исторический pipeline не переносить."
+      ],
+      "status": "python_models_verified_rtl_not_started",
+      "group": "radar_estimators",
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_radar.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_radar.py"
+        ],
+        "contract": [
+          "Начать с независимого floating matched filter h[n]=conj(s[L-1-n]) и полного linear convolution; зафиксировать lag, peak index и нормировку по энергии опорного chirp.",
+          "Затем сравнить FFT-реализацию с корректным zero padding/overlap-save/partitioned convolution и fixed квантованием; отделить linear correlation от circular wrap и выдачу хвоста."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+        "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+        "limitations": [
+          "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+          "CFAR is independently specified; source is fixedthreshold placeholder",
+          "No physicalrange/velocity without wavelength or timing/vendorclaims"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "RADAR-DOPPLER-MTI",
+      "title": "Range–Doppler обработка и подавление неподвижного clutter (MTI)",
+      "priority": "P2",
+      "source_facts": [
+        "RAG README задаёт Doppler FFT и MTI. doppler_processor.v использует 32 chirp, slow-time window и FFT32 по каждому range bin; содержит vendor xfft_32."
+      ],
+      "project_derived_spec": [
+        "Сначала Python range×pulse массив, оконная slow-time FFT с Np=16/32/64, явным порядком осей, FFT scaling, Doppler-bin→Hz через PRI и wrap/Nyquist.",
+        "До FFT добавить отдельные предлагаемые MTI FIR [1,-1] и [1,-2,1], затем сравнить с вычитанием среднего; задать startup/edge policy и состояние между CPI. Velocity выдавать только при заданной длине волны."
+      ],
+      "acceptance": [
+        "Синтетические неподвижные/движущиеся цели: clutter suppression, bin-centred/off-bin Doppler, leakage и амплитуда с coherent window-gain correction.",
+        "Проверить оси/транспонирование, положительную/отрицательную скорость, CPI boundaries и fixed roundoff; нулевой/неверный PRI отклоняется."
+      ],
+      "novelty": "Новый двумерный range–pulse контракт и slow-time MTI, а не ещё одно FFT-ядро или PSD.",
+      "dependencies": [
+        "RADAR-CHIRP",
+        "RADAR-PULSE-COMP"
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/doppler_processor.v",
+          "lines": [
+            3,
+            56
+          ],
+          "verified_sha256": "5a61feb4036255c5884447f2a8e0b5e7c275ee0df0ef217dcbc6e7035558114b",
+          "verified_size": 11500
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/doppler_processor.v",
+          "lines": [
+            212,
+            295
+          ],
+          "verified_sha256": "5a61feb4036255c5884447f2a8e0b5e7c275ee0df0ef217dcbc6e7035558114b",
+          "verified_size": 11500
+        }
+      ],
+      "source_caveats": [
+        "README называет MTI, но проверенный doppler_processor не задаёт алгоритм MTI: указанные FIR — наше проектное решение. Таблицу с пометкой Hamming пересчитать по выбранной формуле и проверить симметрию/нормировку, не считать исходные константы golden."
+      ],
+      "status": "python_models_verified_rtl_not_started",
+      "group": "radar_estimators",
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_radar.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_radar.py"
+        ],
+        "contract": [
+          "Сначала Python range×pulse массив, оконная slow-time FFT с Np=16/32/64, явным порядком осей, FFT scaling, Doppler-bin→Hz через PRI и wrap/Nyquist.",
+          "До FFT добавить отдельные предлагаемые MTI FIR [1,-1] и [1,-2,1], затем сравнить с вычитанием среднего; задать startup/edge policy и состояние между CPI. Velocity выдавать только при заданной длине волны."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+        "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+        "limitations": [
+          "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+          "CFAR is independently specified; source is fixedthreshold placeholder",
+          "No physicalrange/velocity without wavelength or timing/vendorclaims"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "RADAR-CFAR",
+      "title": "Исследовательская модель CA-CFAR с контролем ложной тревоги",
+      "priority": "P3",
+      "status": "python_models_verified_rtl_not_started",
+      "source_facts": [
+        "RAG README обещает CFAR; реальный radar_system_top.v298–323 явно содержит простую симуляцию: |I|+|Q|>10000, а не адаптивную оценку фонового шума."
+      ],
+      "project_derived_spec": [
+        "Первый этап — самостоятельное математическое ТЗ CA-CFAR: noncoherent power, CUT, guard/training cells, средняя оценка фона, edge policy и Pfa. Для i.i.d. exponential noise вывести alpha=T*(Pfa^(-1/T)-1), где T — общее число training cells; это наша постановка, не формула из найденного кода.",
+        "После независимого вывода — floating и fixed модель; предложенные начальные профили G=1/2/4,T=16/32 и Pfa1e-2/1e-3. GO/SO/OS и 2D расширения ставить отдельно после доказательства первой версии."
+      ],
+      "acceptance": [
+        "Monte Carlo noise-only с биномиальным доверительным интервалом для Pfa, независимые target+noise/cell-boundary случаи и увеличение общего уровня шума.",
+        "Негативный контроль fixed-threshold вместо CA-CFAR обязан нарушить масштабную инвариантность; проверить CUT/guard exclusion, края, малый/нулевой фон и fixed saturation."
+      ],
+      "novelty": "Нового detector с заданным Pfa нет; фиксированный порог в чужом проекте не закрывает задачу CFAR.",
+      "dependencies": [
+        "RADAR-DOPPLER-MTI"
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md",
+          "document_id": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "part": 1,
+          "file_page": null,
+          "start_char": 2500,
+          "end_char": 5700,
+          "raw_read_file": "root/read_radar_pipeline.json",
+          "verified_sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+          "verified_size": 6341
+        },
+        {
+          "origin_class": "direct_original_after_rag",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/radar_system_top.v",
+          "lines": [
+            298,
+            323
+          ],
+          "verified_sha256": "7e539effac2636c341b06ab988f14c25cbbb4b7e206968ff8122afd27fd00e3e",
+          "verified_size": 14645
+        }
+      ],
+      "source_caveats": [
+        "Это исследовательская постановка по обнаруженному пробелу. В библиотечном исходнике готового CFAR алгоритма нет; агент сначала выводит и проверяет теорию, не объявляет порт существующего CFAR или стандартную radar-performance приёмку."
+      ],
+      "group": "radar_estimators",
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_radar.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_radar.py"
+        ],
+        "contract": [
+          "Первый этап — самостоятельное математическое ТЗ CA-CFAR: noncoherent power, CUT, guard/training cells, средняя оценка фона, edge policy и Pfa. Для i.i.d. exponential noise вывести alpha=T*(Pfa^(-1/T)-1), где T — общее число training cells; это наша постановка, не формула из найденного кода.",
+          "После независимого вывода — floating и fixed модель; предложенные начальные профили G=1/2/4,T=16/32 и Pfa1e-2/1e-3. GO/SO/OS и 2D расширения ставить отдельно после доказательства первой версии."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Parametric complex LFM, absolute-time delayedDoppler echo, full linear matchedfilter, valid MTI1/2 slowtime FFT, CA-CFAR derived exponentialPfa",
+        "fixed_scope": "Integer phase32/steprecurrence LUT/Q17 echo; exact integer matchedconvolution; integer MTI Q16window existing fixedFFT; exact Pythonint CA-CFAR comparator",
+        "limitations": [
+          "Pulsecompression fixed directreference, not fixedFFT streaming implementation",
+          "CFAR is independently specified; source is fixedthreshold placeholder",
+          "No physicalrange/velocity without wavelength or timing/vendorclaims"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "DSP-KALMAN-MATRIX",
+      "title": "Матричный Kalman state-space estimator",
+      "priority": "P2",
+      "source_facts": [
+        "Chen, часть 17, уравнения 6.25–6.30 содержат матричные observation/transition и covariance prediction/update; это многомерная state-space постановка.",
+        "В RAG-тексте и исходном MathML ch06.xhtml формулы 6.29a отсутствует явный обратный оператор у innovation covariance; формулу нельзя копировать механически."
+      ],
+      "project_derived_spec": [
+        "Сначала независимый линейный KF для state dimension2/4 и measurement dimension1/2, параметров F,H,Q,R,P0,x0; innovation solve через разложение, без явного inverse в реализации.",
+        "Зафиксировать симметрию/PSD covariance, Joseph-form update как наше численно устойчивое решение, policy для missing measurements и singular/invalid covariance; затем fixed precision sweep. EKF/Jacobians этим пунктом не обещаются."
+      ],
+      "acceptance": [
+        "Свести размер 1 к известному scalar Kalman; отдельный P=2,H=1,R=3 даёт gain2/5 и ловит неправильное умножение вместо solve.",
+        "Проверить linear constant-velocity trajectory, innovations/covariance против независимого batch least squares, Hermitian/symmetry/PSD, restart и отказ отрицательных Q/R."
+      ],
+      "novelty": "Текущий kalman_scalar — одномерный random-walk; матричная динамика, несколько измерений и устойчивое covariance update отсутствуют. MMSE solver не является готовым рекурсивным KF API.",
+      "dependencies": [],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "document_id": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "part": 17,
+          "file_page": null,
+          "start_char": 16000,
+          "end_char": 22500,
+          "raw_read_file": "root/read_chen_kalman.json",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        },
+        {
+          "origin_class": "direct_original_mathml",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "locator": "EPUB OEBPS/xhtml/ch06.xhtml, формула6.29a; оригинал MathML проверен",
+          "raw_excerpt_file": "root/chen_equation_6_29a_markup.txt",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        }
+      ],
+      "source_caveats": [
+        "Не считать отсутствие inverse только ошибкой extraction: проверенная EPUB-разметка тоже его не показывает. Правильное innovation solve и Joseph form должны быть независимо выведены/проверены как наше ТЗ. Книга применяет KF для обучения сети/радиолокационной инверсии; generic tracker — проектное расширение."
+      ],
+      "status": "python_models_verified_rtl_not_started",
+      "group": "radar_estimators",
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_kalman.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_kalman.py"
+        ],
+        "contract": [
+          "Сначала независимый линейный KF для state dimension2/4 и measurement dimension1/2, параметров F,H,Q,R,P0,x0; innovation solve через разложение, без явного inverse в реализации.",
+          "Зафиксировать симметрию/PSD covariance, Joseph-form update как наше численно устойчивое решение, policy для missing measurements и singular/invalid covariance; затем fixed precision sweep. EKF/Jacobians этим пунктом не обещаются."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Linear KF innovation solve/Joseph covariance; scalar/2/4state,1/2measurement, missing/reset",
+        "fixed_scope": "Integer Q16/24/32 matrix operations, exact rational innovation solve; signed63 storage overflow rejection",
+        "limitations": [
+          "Python Fraction solve models arithmetic without cycle/latency promise",
+          "Quantized PSD config rejected if invalid; small Joseph rounding PSD tolerance measured"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    },
+    {
+      "id": "SAR-OMEGA-K",
+      "title": "Исследовательский Omega-K/Stolt SAR focusing",
+      "priority": "P3",
+      "status": "python_models_verified_rtl_not_started",
+      "source_facts": [
+        "Chen, часть 12, уравнения 1.25–1.32 описывают synthetic-aperture echo, reference function multiplication, Stolt mapping и финальное 2D inverse transform; прямо названы RD/Omega-K/Chirp-Scaling."
+      ],
+      "project_derived_spec": [
+        "Первый этап — floating forward model малой stripmap геометрии с одной/несколькими point targets; полностью задать fast/slow sampling, chirp rate, speed,reference range и units.",
+        "Реализовать 2D FFT→RFM→Stolt resampling→2D IFFT, с явными valid support, interpolation, amplitude/Jacobian convention и grid registration. Fixed модель только после воспроизведения point-spread tests; полную геофизическую scattering simulator не переносить."
+      ],
+      "acceptance": [
+        "Сравнить focus/point-spread у reference-range и off-reference targets, измерить peak coordinates, mainlobe/sidelobe и defocus при отключённом Stolt.",
+        "Проверить Fourier signs, complex phase, interpolation/support boundary; сравнить с независимым малым backprojection/прямым суммированием, а не тем же FFT pipeline."
+      ],
+      "novelty": "Существующие FFT, MVDR/DOA и новый range–Doppler processor не выполняют SAR focusing с range migration/Stolt transform.",
+      "dependencies": [
+        "RADAR-CHIRP"
+      ],
+      "sources": [
+        {
+          "origin_class": "indexed_rag_read",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub",
+          "document_id": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "part": 12,
+          "file_page": null,
+          "start_char": 11500,
+          "end_char": 17000,
+          "raw_read_file": "root/read_chen_chirp.json",
+          "verified_sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+          "verified_size": 21035107
+        }
+      ],
+      "source_caveats": [
+        "RAG flattening не сохраняет надёжно все корни/индексы формул; перед реализацией сверить MathML или изображение оригинала. Это исследовательский алгоритм, не готовый SAR receiver, radiated hardware или физическая дальность радара."
+      ],
+      "group": "radar_estimators",
+      "model_progress": {
+        "date": "2026-10-30",
+        "implementations": [
+          "common/python/ext_advanced_sar.py"
+        ],
+        "tests": [
+          "tests/test_ext_advanced_sar.py"
+        ],
+        "contract": [
+          "Первый этап — floating forward model малой stripmap геометрии с одной/несколькими point targets; полностью задать fast/slow sampling, chirp rate, speed,reference range и units.",
+          "Реализовать 2D FFT→RFM→Stolt resampling→2D IFFT, с явными valid support, interpolation, amplitude/Jacobian convention и grid registration. Fixed модель только после воспроизведения point-spread tests; полную геофизическую scattering simulator не переносить."
+        ],
+        "manifest": "research/full_dsp_20261030/advanced/manifest.json",
+        "runner": "tools/run_extended_dsp_models.py",
+        "evidence": "docs/extended_dsp_models_20261030_results.json",
+        "model_scope": "Physical-form synthetic stripmap point echoes, FFT2/RFM/inverseStolt linear interpolation/supportzero/IFFT2; independent direct matched-backprojection",
+        "fixed_scope": "Q21 lifted input +existing integer forwardFFT2, Q20 RFM +integer CartesianStolt, unnormalized integer inverseFFT2, Q17 output; SatStats internal clipping rejected",
+        "limitations": [
+          "Synthetic normalized propagation c=100 for tests, not electromagnetic propagation/radarhardware range",
+          "Unit Stolt Jacobian chosen for reference-normalized focus, not radiometric calibrated amplitude",
+          "Fixed relativeerror<.02 only demonstrated amplitude.01,Nfast128/Nslow64; other amplitudes mayreject headroom/internalclipping",
+          "Finite sampled stationary-phase OmegaK is approximate; BP validates peak/pointspread, not pixelwise exact equivalence"
+        ],
+        "scope": "Python model stage only; full RTL task remains open"
+      }
+    }
+  ],
+  "verified_source_files": {
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/README.md": {
+      "sha256": "fb668484fc871a5ba083659d1db3229f1be7571bb4f35e56f1bb43ea5d0eda7e",
+      "size": 20642
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/lfsr.v": {
+      "sha256": "5502c8203b0dfc7246c1a2de93e60c199ded3c1d7840b106350d714f72a9a079",
+      "size": 16327
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/axis_eth_fcs.v": {
+      "sha256": "9aba0ff55de115dcab4a2f3ed46bf967bf5fb1eb8011bffcbd5842bf2e37a731",
+      "size": 3824
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-ethernet-master/rtl/axis_eth_fcs_check.v": {
+      "sha256": "af5c29694f070a5fe550e46557ac07d1f4e276767a275bdcfbb379072cd48a9b",
+      "size": 10249
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/README.md": {
+      "sha256": "e074718e958739ba4dee08a1535262527a6b3d2003a47656a9139e8f74be9dd4",
+      "size": 306
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_enc.sv": {
+      "sha256": "2a951100e8288720b9f6cc5ea33734900cbbaa043747d2ee4a9abdce2289bfbf",
+      "size": 6720
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_constants.svh": {
+      "sha256": "0720fd2471ae3f9d30649ea5a02c388b877bbc50181aa1146c2237a90611b437",
+      "size": 2738
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/dvb_pls/dvb_pls_dec_rm_dec.sv": {
+      "sha256": "9f41bc54a22d938dc380ace81454e09420c066bce159ad67e7bdb4ecd158102b",
+      "size": 11335
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/README.md": {
+      "sha256": "91d21a8115762349d570f7fe888d6f4358df36e97a7ce3f1aa383fd5f6249baa",
+      "size": 290
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/hamming_parameters.svh": {
+      "sha256": "39a81c66795f18ab284502a6592681f82d38556ff78dae62d80e4721d19f8059",
+      "size": 2480
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/hamming/hamming_enc.sv": {
+      "sha256": "00d221054cf57b0944612386eae2a5cf96d6cb4917f9d3d87fedfce54df1d7ba",
+      "size": 5695
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/README.md": {
+      "sha256": "f069dc36695e0505cfcd635e3fff91975ddc315ac40cf97af6f92e786db3607a",
+      "size": 350
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_functions.svh": {
+      "sha256": "da9ef35d7af94840d5685ad91ee75bb8fb0cf5b7418d581169146ad1e0a80fa2",
+      "size": 3527
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/golay24_enc.sv": {
+      "sha256": "bb14c1d7007a1f3608c6aa8ade1efc833f9f9b0f63628bc83cdcb799a043fe06",
+      "size": 3350
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/golay24/dec/golay24_dec_candidate_gen.sv": {
+      "sha256": "a60fdf6d8c04736484b3b1e8ca3437c92218dfd650edb4b5305b4fa1df8762d8",
+      "size": 5449
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/README.md": {
+      "sha256": "1a2e6138bc2fa69069593dad6108c3400119fd06a6ddf5606ca784011fead6d1",
+      "size": 1083
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/btc_parameters.svh": {
+      "sha256": "55bb4527578478a77c5a0347acd91bed38b711cfc9bd7da04254cf5dc56a758e",
+      "size": 8287
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/btc/dec/btc_dec_eham_fchase.sv": {
+      "sha256": "6e97aed3afda5f2defeb2b28379ad7dbf1a1c8c4a2a608c85ae749ba6f0fc67f",
+      "size": 22073
+    },
+    "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub": {
+      "sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+      "size": 9221616
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/Douglas Self - Small Signal Audio Design - 2024.epub": {
+      "sha256": "8541c4ac3a25837aad96e2da130d59b1800ecbc4b5e2d58636113e9e90600c4b",
+      "size": 51644039
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/README.md": {
+      "sha256": "c74776665b3119f2a0ec4aa42cce134fc9a5ba8422ce10bfa3de3808d0ddbb2c",
+      "size": 6341
+    },
+    "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Chen K.-S. - Radar Scattering and Imaging of Rough Surfaces with MATLAB (2021).epub": {
+      "sha256": "b96b1ad91c21d15f61b508aac252f2564dd3cbbe5d1da03aba0077efbb238ffa",
+      "size": 21035107
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/8_Utils/Python/Generic_Ramp_Frequency.py": {
+      "sha256": "2970fa0046f728a47b5b226a0f813cf05359186c291119f9584049ec75f8b9d5",
+      "size": 988
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/frequency_matched_filter.v": {
+      "sha256": "0012db0c5059458bafe6cbbe020fc38eda964f260c41289ad190f9aeb1ded320",
+      "size": 3881
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/matched_filter_multi_segment.v": {
+      "sha256": "f5af79b45cbc648713fa077cce1536ab97d345458cce3ac6437d06ec7b64778f",
+      "size": 15620
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/doppler_processor.v": {
+      "sha256": "5a61feb4036255c5884447f2a8e0b5e7c275ee0df0ef217dcbc6e7035558114b",
+      "size": 11500
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Радиотехника/PLFM_RADAR-main/9_Firmware/9_2_FPGA/radar_system_top.v": {
+      "sha256": "7e539effac2636c341b06ab988f14c25cbbb4b7e206968ff8122afd27fd00e3e",
+      "size": 14645
+    }
+  },
+  "deferred_candidates": [
+    {
+      "candidate": "Cross-correlation / GCC-PHAT delay estimation",
+      "reason": "В индексированных passage'ах Abood correlation лишь анонсирована во введении к главе 3; реальных уравнений взаимной корреляции, GCC-PHAT или оценки задержки не найдено. Поисковые хиты относятся к другим темам (radar scattering, README проекта, hardware delay)."
+    },
+    {
+      "candidate": "Real cepstrum / homomorphic deconvolution",
+      "reason": "Поиск cepstrum не дал ни одного индексированного passage; нет определения, формул или кода. Название в toolbox-списке недостаточно."
+    },
+    {
+      "candidate": "AR/LPC/Burg/Levinson/Yule-Walker parametric spectral estimation",
+      "reason": "В индексированных текстах есть только имена функций lpc/prony/stmcb и общие ссылки на parametric modeling; нет реальных AR-уравнений, Levinson recursion, Burg algorithm или LPC-вывода. Нельзя выдавать toolbox name list за спецификацию."
+    },
+    {
+      "candidate": "Goertzel bank / DTMF detector",
+      "reason": "Нет индексированного вывода Goertzel или DTMF-алгоритма; есть только упоминание DTMF в списке возможностей SDR-софта и toolbox-имена. Недостаточно для спецификации."
+    },
+    {
+      "candidate": "DWT / wavelet denoising",
+      "reason": "Найденные passage'ы — оглавления, общие списки toolbox или посторонние совпадения DWT; нет фильтров, decomposition/reconstruction уравнений или thresholding-алгоритма."
+    },
+    {
+      "candidate": "Welch periodogram",
+      "reason": "Индексированный источник содержит обычный PSD через |FFT|^2 и autocorrelation; Welch с сегментацией/перекрытием/окнами не выведен. PSD уже стоит в existing_tasks (DSP-PSD), поэтому добавление было бы дубликатом или необоснованным."
+    },
+    {
+      "candidate": "Dolby-B compander",
+      "reason": "Douglas Self даёт содержательное описание HF-only sidechain и взаимно обратного encode/decode, но без уравнений, цифровых коэффициентов и точной спецификации. Как отдельный кандидат слабее compressor/limiter и noise gate; оставлен в rejected из-за недостаточной формализации."
+    },
+    {
+      "candidate": "Обычные FIR/FFT, простая autocorrelation/PSD, генерация окон",
+      "reason": "Уже реализованы или стоят в existing_tasks; согласно заданию не должны подаваться как новая работа."
+    }
+  ],
+  "source_notes": [
+    "RAG index is partial; failures/name-only hits do not establish absence from the physical library.",
+    "Source facts and proposed project specifications are distinct; CFAR and SAR require algorithm specification first.",
+    "No scan/import/OCR/service changes, implementation, HDL or vendor tool runs in this discovery."
+  ],
+  "current_model_stage_acceptance": {
+    "date": "2026-10-30",
+    "combined_tasks": 44,
+    "completed_model_stages": 44,
+    "new_in_this_pass": 40,
+    "evidence": "docs/extended_dsp_models_20261030_results.json",
+    "rtl_started_in_this_pass": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source": "modems/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12/original/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.mdl",
+  "original_sha256": "80f762f8915f39ad23cc3502b63c1b53406893437b1e92993cc580ace111b21b",
+  "prepared_sha256": "9255bc508770756c3f0a5a99e6be25318aec3587f25e7d57f91ae84d687f2621",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    },
+    {
+      "old": "commdigbbndpm2/",
+      "new": "commdigbbndpm3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

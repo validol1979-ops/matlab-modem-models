@@ -1,0 +1,21 @@
+build/
+__pycache__/
+*.pyc
+core
+core.*
+*.wlf
+transcript
+vsim_stacktrace.vstf
+*.slxc
+slprj/
+
+.Xil/
+clockInfo.txt
+
+# Local reference books and temporary compatibility/synthesis experiments
+/matlab/
+/work/
+tools/export_scrub.local.tsv
+.claude/
+.venv/
+.pytest_cache/

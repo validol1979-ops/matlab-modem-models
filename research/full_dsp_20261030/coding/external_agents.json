@@ -1,0 +1,95 @@
+{
+  "scope": "actual external calls only; no claim all algorithms authored externally",
+  "concurrency_limit": 1,
+  "provider": "openwebui/Qulab",
+  "calls": [
+    {
+      "tool": "pi",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "task": "basics implementation",
+      "cli_exit_status": 143,
+      "outcome": "partial_implementation",
+      "result_scope": "CRC/PRBS/Hamming module written; later outputlimit, stopped and independently completed/reviewed",
+      "log_path": "build/full_dsp_20261030/coding/logs/basics_pi.log",
+      "log_sha256": "304f518dd8850fd259acc60e88cdef5f8737997aa94dab2a14d862258db54df1",
+      "thinking": "low/default"
+    },
+    {
+      "tool": "pi",
+      "model_id": "~deepseek/deepseek-v4-flash-latest",
+      "task": "basics review/test",
+      "cli_exit_status": 143,
+      "outcome": "review_only_interrupted",
+      "result_scope": "Read source/API; erroneous attempted PRBS31 full-period loop child stopped; no acceptance",
+      "log_path": "build/full_dsp_20261030/coding/logs/basics_deepseek.log",
+      "log_sha256": "5dd2b06209e4e804788c4e2ad554677d9823e4616a3331005431be8a107fa029",
+      "thinking": "low/default"
+    },
+    {
+      "tool": "pi",
+      "model_id": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "task": "trellis/LLR/TCM implementation attempt",
+      "cli_exit_status": 0,
+      "outcome": "no_accepted_implementation",
+      "result_scope": "Model stopReason length:16384reasoning tokens, no source files",
+      "log_path": "build/full_dsp_20261030/coding/logs/trellis_qwen.log",
+      "log_sha256": "c57bdc071b0967466247db9a375314c1b769f1e4b8a8f72eaad9551a703f85dc",
+      "thinking": "low/default"
+    },
+    {
+      "tool": "OpenCode",
+      "model_id": "openwebui/~anthropic/claude-haiku-latest",
+      "task": "basics independent review",
+      "cli_exit_status": 0,
+      "outcome": "completed_review",
+      "result_scope": "Flagged reciprocal PRBS polynomial naming; documented Ddelay vs Eforward without changing frozen sequence",
+      "log_path": "build/full_dsp_20261030/coding/logs/basics_opencode_review.log",
+      "log_sha256": "2d55633582364aa099d6776a0329e8d5b5d0b782cff48672708180fcf89be176",
+      "thinking": "low/default"
+    },
+    {
+      "tool": "pi",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "task": "source K7 soft Viterbi implementation/test",
+      "cli_exit_status": 0,
+      "outcome": "accepted_implementation_with_local_review",
+      "result_scope": "Source MSBcurrent171/133 encoder/Viterbi and9initial tests; locally added soft-vs-hard counterexample and independently reviewed",
+      "log_path": "build/full_dsp_20261030/coding/logs/vit_haiku_off.log",
+      "log_sha256": "3e2fc51a5edfb0723c931549d281c0570a6b01815caad670f79b5bbca2051bef",
+      "thinking": "off"
+    },
+    {
+      "tool": "pi",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "task": "RS/GF independent algebraic review",
+      "cli_exit_status": 0,
+      "outcome": "completed_review",
+      "result_scope": "Reviewed Forney-erasure syndrome, BM/Chien roots, Vandermonde magnitudes; no concrete algebra bug found",
+      "log_path": "build/full_dsp_20261030/coding/logs/block_review_haiku_off.log",
+      "log_sha256": "8a7e688b912e975f99fab9605a39c6c8f9f2f3a2ca60f7877a45677d04c9181f",
+      "thinking": "off"
+    },
+    {
+      "tool": "pi",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "task": "CCSDS Turbo implementation attempt",
+      "cli_exit_status": 0,
+      "outcome": "no_accepted_implementation",
+      "result_scope": "Model stopReason length output16384, no source files; implemented locally after failure",
+      "log_path": "build/full_dsp_20261030/coding/logs/turbo_haiku_off.log",
+      "log_sha256": "6d06c6b3747c4af68737d4a535d835b369e791cedb4b488bfb9dd072e68ac183",
+      "thinking": "off"
+    },
+    {
+      "tool": "pi",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "task": "CCSDS Turbo independent review",
+      "cli_exit_status": 0,
+      "outcome": "completed_review_bug_fixed",
+      "result_scope": "Found beta trace off-by-one; fixed and added exhaustive beta0 oracle; demux/interleave/metric conventions confirmed",
+      "log_path": "build/full_dsp_20261030/coding/logs/turbo_review_haiku_off.log",
+      "log_sha256": "04aacdfbbfd5e80121efeb30b36c267badfc11c65929a16321608a5a92dc5dd1",
+      "thinking": "off"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+Reading pref.tcl
+
+# 2024.1
+
+# vsim -64 -c -quiet -dpicpppath /usr/bin/gcc work.bpsk_rx_uvm_top "+SYMBOLS=768" "+CHECK_RESET_PREFIX" "+FLOAT_SER" "+WARM_SAMPLES=5600" "+VECTORS=<local-path>" "+SCENARIO=stalled" -do "run.do" -gTABLE_DIR=<local-path> 
+# Start time: 12:05:40 on Oct 15,2026
+# ** Warning: (vsim-7032) The 64-bit glibc RPM does not appear to be installed on this machine.  Calls to gcc may fail.
+# 
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2024.1 linux_x86_64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# ** Warning: (vsim-7032) The 64-bit glibc RPM does not appear to be installed on this machine.  Calls to gcc may fail.
+# 
+# do run.do
+# UVM_INFO ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test pilot_test...
+# UVM_INFO ~/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM PILOT SER frame=0 errors=0 symbols=576
+# UVM PILOT FLOAT SER frame=0 rtl_errors=0 float_errors=0 delta=0 symbols=576
+# UVM_FATAL <local-path>) @ 98115000: uvm_test_top.env.scoreboard [NUMERIC] Acquisition frame=1 got(0,712312,212133361) expected(147367,642923,262461949)
+# UVM_INFO ~/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 98115000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    3
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    1
+# ** Report counts by id
+# [NUMERIC]     1
+# [RNTST]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# 
+# ** Note: $finish    : ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(135)
+#    Time: 98115 ns  Iteration: 3  Region: /uvm_pkg::uvm_task_phase::execute
+# Break in Function uvm_pkg/uvm_root::die at ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh line 135
+# Stopped at ~/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh line 135
+# End time: 12:05:40 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.

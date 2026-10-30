@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-30",
+  "updated_at_utc": "2026-10-30T07:34:59.044676+00:00",
+  "user_scope": "Python models only; agents through pi/OpenCode; Haiku, DeepSeek, Qwen from Qulab",
+  "tasks": {
+    "DSP-CIC-DEC": {
+      "model_stage": "PASS",
+      "overall_task": "open",
+      "rtl_stage": "not_started",
+      "source_catalog": "research/library_dsp_20261029/task_catalog.json"
+    },
+    "DSP-CIC-INT": {
+      "model_stage": "PASS",
+      "overall_task": "open",
+      "rtl_stage": "not_started",
+      "source_catalog": "research/library_dsp_20261029/task_catalog.json"
+    }
+  },
+  "implementation": "common/python/cic_model.py",
+  "independent_reference": "common/python/cic_reference.py",
+  "tests": "tests/test_cic_models.py",
+  "runner": "tools/run_cic_models.py",
+  "verified_model_matrix": {
+    "python_tests": 16,
+    "profiles": 512,
+    "signal_cases": 2048,
+    "output_words": 286976,
+    "numeric_negative_controls": [
+      {
+        "kind": "decimate",
+        "tag": "NUMERIC",
+        "rejected": true
+      },
+      {
+        "kind": "interpolate",
+        "tag": "NUMERIC",
+        "rejected": true
+      }
+    ],
+    "production_rtl_unchanged": 64,
+    "agents": {
+      "implementation": "pi openwebui/Qwen/Qwen3.8-Flash-Next-FP8",
+      "independent_reference": "OpenCode openwebui/~anthropic/claude-haiku-latest",
+      "independent_tests": "pi openwebui/~deepseek/deepseek-v4-flash-latest",
+      "endpoint": "<internal-llm-endpoint>"
+    }
+  },
+  "numeric_contract": {
+    "decimation_phase": "R-1,2R-1,...",
+    "interpolation_phases": "0..R-1 for each accepted input",
+    "arithmetic": "Common-width signed modular integrator/comb state; no intermediate rounding",
+    "normalization": "Exact CIC gain division, nearest with ties toward positive infinity, signed saturation",
+    "frames": "State continuous on TLAST; reject premature decimator TLAST without mutation; reset/configure clear state",
+    "accumulator_default": "input_width + ceil(log2(kind-specific gain at max_rate))",
+    "tail": "Not flushed",
+    "scheduling": "Accepted-sample model; does not establish ready/valid cycle behavior"
+  },
+  "evidence": "docs/cic_models_20261030_results.json",
+  "source_hashes": {
+    "common/python/cic_model.py": "136dc72f36c34e76000949f2e1e2513078531a5b2f2d454bcfc52807741be78f",
+    "common/python/cic_reference.py": "c2eb3f01bbb17df4bcb2d59761d73047b240bed7c6752c00d7f3be4100b0d5ce",
+    "tests/test_cic_models.py": "4e5e5a4eb0ff3b6fa396f5f1545dea2d4b01edef01eb47adae3a82721bb8a246",
+    "tools/run_cic_models.py": "d62e0ea74f71328e8a50dbe10310e8ec6b10d3218ec013317d5e991ecdf28438",
+    "research/library_dsp_20261029/task_catalog.json": "9d1ea8b5ec7717d868fa13ed9da6bb815857a1b13d4483e3133f7245336831e5"
+  },
+  "scope_limits": [
+    "No RTL was implemented or simulated. No Quartus/Vivado/ISE compilation or synthesis was run.",
+    "The published2026-10-29 planning validation describes its initial snapshot; model progress changed catalog metadata on2026-10-30.",
+    "Earlier HDL acceptance results are historical source snapshots; this stage publishes Python-only evidence."
+  ],
+  "clean_model_checkout_check": {
+    "status": "PASS",
+    "agent_provenance_available": false,
+    "profiles": 512,
+    "output_words": 286976,
+    "source": "build/cic_models_20261030/clean_model_check/build/results.json",
+    "note": "No authoring logs, provider configs, credentials or library originals are required to execute numerical acceptance."
+  },
+  "unchanged_rtl_source_set_files": 104,
+  "registered_python_tests": 829,
+  "registered_modem_configurations": 24
+}

@@ -1,0 +1,43 @@
+{
+  "name": "qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15",
+  "original_sha256": "60ef0039feea5b14ce9dbc63c9d93d5413fec3caae79903f9cab3ae9fbe692b2",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Failed to load library 'commchan2' referenced by 'qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15/AWGN Channel'.",
+  "migration": {
+    "source": "modems/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15/original/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.mdl",
+    "original_sha256": "60ef0039feea5b14ce9dbc63c9d93d5413fec3caae79903f9cab3ae9fbe692b2",
+    "prepared_sha256": "d6f901b8937260eaf756fef4262b435b9b05a72cc50749d6edcfb5f55219c506",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 29,
+  "finite": true,
+  "captured_values": 358429,
+  "capture_sha256": "e072cf622aabea124b7d95118c49e5331d696e49d4ea5d2491c9e47a7aa7f0f2",
+  "mapper_checks": [
+    {
+      "block": "qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15/Modulator/data_mapper",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 4,
+      "alphabet": 4,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

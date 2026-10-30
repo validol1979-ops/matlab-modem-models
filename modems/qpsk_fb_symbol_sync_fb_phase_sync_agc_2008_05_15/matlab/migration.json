@@ -1,0 +1,13 @@
+{
+  "source": "modems/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15/original/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.mdl",
+  "original_sha256": "60ef0039feea5b14ce9dbc63c9d93d5413fec3caae79903f9cab3ae9fbe692b2",
+  "prepared_sha256": "d6f901b8937260eaf756fef4262b435b9b05a72cc50749d6edcfb5f55219c506",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

@@ -1,0 +1,28 @@
+{
+  "name": "pi4_qpsk_8_sps_ff_sync_2021_05_27",
+  "original_sha256": "b71051e631ba2a554059d95d435064dd6c814f18bac54c7f0f16b1b533fadd4e",
+  "original_load": "PASS",
+  "original_compile": "PASS",
+  "original_error": "",
+  "migration": {
+    "source": "modems/pi4_qpsk_8_sps_ff_sync_2021_05_27/original/pi4_qpsk_8_sps_ff_sync_2021_05_27.mdl",
+    "original_sha256": "b71051e631ba2a554059d95d435064dd6c814f18bac54c7f0f16b1b533fadd4e",
+    "prepared_sha256": "b71051e631ba2a554059d95d435064dd6c814f18bac54c7f0f16b1b533fadd4e",
+    "changes": [],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 44,
+  "finite": true,
+  "captured_values": 618543,
+  "capture_sha256": "71af63a491c2a4dc41283a72c43d6d289fff9b2503ca693ccd7a1258da3936a7",
+  "mapper_checks": [],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

@@ -1,0 +1,593 @@
+{
+  "task": "Read-only library discovery for modulation/demodulation/synchronization/coding candidates",
+  "status": "COMPLETE",
+  "candidate_count": 10,
+  "method": "Local home-rag catalog -> document-filtered lexical search --no-rerank -> read; direct-original SV line corroboration, no source execution.",
+  "index_scope": "Partial library index; empty catalog/search is not evidence that an algorithm is absent from the entire library.",
+  "common_acceptance": [
+    "Сначала зафиксировать bit/byte order, sign/round/saturation, framing, latency/throughput и разрешённые конфигурации; построить независимый floating/integer reference и bit-accurate Python-модель.",
+    "Затем переносимый плоский ready/valid RTL, обе полярности reset, reset/configuration/frame collisions, backpressure и TLAST; проверка каждого выходного слова/флага.",
+    "Численные и протокольные отрицательные контроли должны достигать указанного состояния и завершаться ожидаемым тегом и Questa rc13; результаты связывать с source/artifact hashes.",
+    "Синтез и физический тайминг оставлять на существующей паузе; приведённые авторами частоты/ресурсы не считать нашей приёмкой."
+  ],
+  "findings": [
+    {
+      "id": "MOD-AM",
+      "title": "AM-модулятор и демодулятор огибающей",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/SDR/David_Clark_Paul_Clark_PracticalSDR.epub",
+          "exists": true,
+          "source_size": 107119828,
+          "document_id": "038d94200bc5b1d88096454a9848e9e44abd01a6e2c5268d7cad57bc2a8ecb83",
+          "title": "David_Clark_Paul_Clark_PracticalSDR",
+          "part": 15,
+          "position": "EPUB spine 15: OEBPS/xhtml/chapter6.xhtml",
+          "start_char": 29500,
+          "end_char": 36000,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_practical_am.json",
+          "page_text_sha256": "284f9f4e0ece1ac4ee31aca10afa7b337d04bbd8151ad7bdc3d3e15df1c8a430"
+        }
+      ],
+      "confirmed_in_read_text": "Прочитана часть15 PracticalSDR, chars29500–36000: раздел Demodulation описывает амплитудную модуляцию, envelope/product detectors, AM Demod complex→float, channel rate400k и внутреннюю аудио LPF5k.",
+      "proposed_project_spec": [
+        "Новый workspace аналогового AM: real audio→complex IQ и complex IQ→real audio. Предлагаемый начальный профиль — full-carrier AM с нормированным входом и настраиваемой глубиной модуляции, затем envelope magnitude + DC removal + audio LPF.",
+        "Формулу full-carrier AM и численные форматы утвердить как наше ТЗ: прочитанная книга задаёт функциональный тракт, а не готовый fixed-point/RTL контракт."
+      ],
+      "acceptance": [
+        "Тон, двухтональный сигнал и прямоугольная огибающая: восстановление частоты/амплитуды после документированного transient/DC removal; независимый аналитический эталон.",
+        "Проверить крайние разрешённые глубины, комплексную фазу несущей, нулевой сигнал, clipping и выбранный overmodulation negative case; затем общие stream/reset gates."
+      ],
+      "novelty_vs_project": "В существующих MODEM_CATALOG/TYPED_MODELS нет аналогового AM; PSK/QAM изменяют дискретные символы и не реализуют AM audio envelope receiver.",
+      "source_modules": [],
+      "scope_limits": [],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "MOD-FM",
+      "title": "FM-модулятор, discriminator и pre/de-emphasis",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016).epub",
+          "exists": true,
+          "source_size": 47741964,
+          "document_id": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+          "title": "David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016)",
+          "part": 43,
+          "position": "EPUB spine 43: OEBPS/part0042.xhtml",
+          "start_char": 0,
+          "end_char": 7416,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_clark_fm_tx.json",
+          "page_text_sha256": "2f959f6ebc310bbc58b4c171927ad3c68d0516cef6aa8b05c793325074442683"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016).epub",
+          "exists": true,
+          "source_size": 47741964,
+          "document_id": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+          "title": "David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016)",
+          "part": 17,
+          "position": "EPUB spine 17: OEBPS/part0016.xhtml",
+          "start_char": 0,
+          "end_char": 7153,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_clark_fm_model.json",
+          "page_text_sha256": "02bf11f4a3b98599f8a64ae81ece8e16a6a97e52064e21ae18b02c2a98b04b5e"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016).epub",
+          "exists": true,
+          "source_size": 47741964,
+          "document_id": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+          "title": "David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016)",
+          "part": 47,
+          "position": "EPUB spine 47: OEBPS/part0046.xhtml",
+          "start_char": 0,
+          "end_char": 6564,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_clark_fm_loopback.json",
+          "page_text_sha256": "180430ac0df9e477f523994618e07338298974c8d6c8f1842151a6b856c01dac"
+        }
+      ],
+      "confirmed_in_read_text": "Clark2016 BasicAnalogRadio part43 chars0–7416 задаёт WBFM Transmit, MaxDeviation75e3, Tau75e-6, working sample rate400k; part17 иpart47 дополнительно прочитаны: real→complex Frequency Mod/Sensitivity и TX→RX loopback сWBFMReceive.",
+      "proposed_project_spec": [
+        "Отдельный FM baseband TX/RX: параметризованный накопитель фазы + complex oscillator; proposed discriminator arg(y[n]*conj(y[n-1])) с явной обработкой phase wrap, малой/нулевой амплитуды.",
+        "Добавить отдельные параметры deviation, Fs, pre/de-emphasis time constant; первый библиотечный профиль Fs400k, deviation75k, tau75us."
+      ],
+      "acceptance": [
+        "Независимые тесты DC-input→заданное смещение частоты, синусоидальная FM→восстановление baseband, непрерывность фазового wrap, разрывы valid/ready.",
+        "Проверить сопряжённость pre/de-emphasis и transient; targeted zero-amplitude/confidence case, фиксированное шумовое loopback и отрицательный контроль отключённого/неверного discriminator."
+      ],
+      "novelty_vs_project": "Имеющиеся MSK/GMSK/FSK — цифровые семейства с символными решениями; аналоговый FM discriminator/audio chain не реализован.",
+      "source_modules": [],
+      "scope_limits": [
+        "arg-difference discriminator — предлагаемая реализация, прочитанный фрагмент описывает GNU Radio WBFM blocks и параметры.",
+        "Вpart43 книга отдельно признаёт округление400/48→8 и≈4%замедление. Наш контракт не должен копировать это округление; здесь первый FM core работает на фиксированном Fs, rate conversion задаётся отдельно."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "MOD-SSB",
+      "title": "SSB USB/LSB модем с выбором боковой полосы",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/Радио/Laufer C. - The Hobbyist's Guide to the RTL-SDR. Cheap Software Defined Radio (2014).epub",
+          "exists": true,
+          "source_size": 6671732,
+          "document_id": "16f1b2fa4eb7f4768a8e23b3aa906e4f8260e700bb179d5e32d4390524cce196",
+          "title": "Laufer C. - The Hobbyist's Guide to the RTL-SDR. Cheap Software Defined Radio (2014)",
+          "part": 58,
+          "position": "EPUB spine 58: text/part0009.html",
+          "start_char": 3000,
+          "end_char": 5200,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_laufer_ssb.json",
+          "page_text_sha256": "7c1dd0c558f64e9c042f6534bfe62acda8bc03bd7cc5aee7de81471636903653"
+        }
+      ],
+      "confirmed_in_read_text": "Laufer2014 part58 chars3000–5200 определяет SSB, USB/LSB, меньшую полосу относительно AM и изменение высоты аудио при неточной настройке.",
+      "proposed_project_spec": [
+        "Новый аналоговый workspace для USB/LSB: формирование однополосного complex IQ из real audio и синхронное восстановление выбранной боковой полосы.",
+        "Hilbert/phasing, фильтр аналитического сигнала и структура frequency translation — НАШЕ предлагаемое ТЗ, НЕ подтверждённые формулы прочитанного раздела. До RTL отдельно выбрать/обосновать точный алгоритм и фиксированную спецификацию фильтра."
+      ],
+      "acceptance": [
+        "Однотональный и двухтональный тесты: энергия в выбранной боковой полосе, измеренное подавление зеркальной полосы против утверждённого бюджета.",
+        "USB↔LSB переключение, известное расстройство несущей→предсказуемое смещение аудиотона, loopback и все stream/reset/negative gates."
+      ],
+      "novelty_vs_project": "Готовые комплексные PSK/QAM/OFDM модуляторы не являются аналоговым SSB audio modem.",
+      "source_modules": [],
+      "scope_limits": [
+        "Источник подтверждает семейство и свойства, но не даёт в прочитанном фрагменте формул Hilbert/phasing или готового RTL."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "FEC-VIT",
+      "title": "Свёрточный кодер и soft-input Viterbi K=7",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/README.md",
+          "exists": true,
+          "source_size": 629,
+          "document_id": "56e4fb632c6950a6a57db54642eb4dc02fa89888b88905a4b21c602315f9f90b",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 629,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_viterbi.json",
+          "page_text_sha256": "56e4fb632c6950a6a57db54642eb4dc02fa89888b88905a4b21c602315f9f90b"
+        }
+      ],
+      "confirmed_in_read_text": "README part1 chars0–629: non-recursive1/N convolutional code, RAM traceback, отдельный3/4 вариант. Direct source vit_trellis.svh24–26: K7 и генераторы octal171,133.",
+      "proposed_project_spec": [
+        "Первый профиль: rate1/2,K7,g=[171,133]octal; независимый trellis model, затем параметризованный кодер и soft-input Viterbi с RAM traceback.",
+        "Явно определить zero-tail/flush policy, начальное/конечное состояние, tie-breaking, metric overflow и traceback latency; после этого отдельным расширением3/4."
+      ],
+      "acceptance": [
+        "Для коротких сообщений сравнить с независимым exhaustive maximum-likelihood path; для длинных — codeword/soft-LLR/error-injection vectors.",
+        "Проверить хвост, flush, tie metrics, metric wrap/normalization, прерывание кадра/reset/backpressure и decoder numerical negative."
+      ],
+      "novelty_vs_project": "В проекте есть LDPC/GF2 и комментарий о Viterbi в GMSK reference, но нет реализованного convolutional encoder/Viterbi decoder.",
+      "source_modules": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_trellis.svh",
+          "exists": true,
+          "line_start": 24,
+          "line_end": 26,
+          "sha256": "9569c8aff4e4cf878806570cc2119e8062ba9c81be178f705b776e248330a9cf",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_enc.sv",
+          "exists": true,
+          "line_start": 77,
+          "line_end": 125,
+          "sha256": "a0087a294378b1eb0a57023d13d4d515859db7382d83f2c2839a361645a68d3f",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/viterbi/vit_1byN/vit_dec.sv",
+          "exists": true,
+          "line_start": 92,
+          "line_end": 150,
+          "sha256": "e9d48cf37a0ec0ecd5e2d9cfc184ea90094919a596eb20ed0df0e75439c6e6fe",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        }
+      ],
+      "scope_limits": [
+        "README пишет(171,131), тогда как реальный активный параметр кода—(171,133). В ТЗ использовать проверенный source variant и сохранить оговорку; не переносить typo молча."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "FEC-RS",
+      "title": "Reed–Solomon encoder/decoder с error/erasure contract",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/README.md",
+          "exists": true,
+          "source_size": 1055,
+          "document_id": "c756c26970ed3a3b16f49867b05587e01ba7a792ae51cb4b78e685844b863fb8",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 1055,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_rs_confirmed.json",
+          "page_text_sha256": "c756c26970ed3a3b16f49867b05587e01ba7a792ae51cb4b78e685844b863fb8"
+        }
+      ],
+      "confirmed_in_read_text": "README part1 chars0–1055: inversion-less Berlekamp/RIBM, Chien search, simple и erasure decoder, отсутствие внутренних FIFO. include/rs_parameters.svh12–29: m8,irrpol285,n240,check30,genstart0,rootspace1.",
+      "proposed_project_spec": [
+        "Первый явный профиль shortened RS(240,210),GF(2^8),irreducible polynomial0x11d,30 parity symbols,t15; независимые GF arithmetic/poly model и codec.",
+        "Раздельно задать errors-only и errors+erasures, fail/output policy и полностью буферизованный/согласованный ready/valid wrapper вокруг исходной жёсткой синхронизации."
+      ],
+      "acceptance": [
+        "Нулевой синдром кодовых слов, known/seeded сообщения и symbol errors0,1,t; erasure cases в утверждённой границе2e+v≤30.",
+        "Проверить выбранные beyond-bound/fail cases, flags и output-retention policy; не обещать обнаружение всех паттернов за пределами correcting radius."
+      ],
+      "novelty_vs_project": "GF2 systematic encoder проекта работает над бинарной матрицей; он не реализует GF(256) RS symbol-error/erasure decoder.",
+      "source_modules": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/rs_parameters.svh",
+          "exists": true,
+          "line_start": 12,
+          "line_end": 29,
+          "sha256": "15143f7d013363d45d0b3fa5a63d499d9a9d10ba7ec65f9720bfb9220fdc1456",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/rs_enc.sv",
+          "exists": true,
+          "line_start": 77,
+          "line_end": 120,
+          "sha256": "b7a2f734340b0d842b04b8f11ec865ea5a56497681870b7145c2c6459bdfd546",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/rs/rs_dec.sv",
+          "exists": true,
+          "line_start": 88,
+          "line_end": 147,
+          "sha256": "d254e10842cbbbfb52696eb411ea57330fe4f817eec613eb482470237e2c86a1",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        }
+      ],
+      "scope_limits": [
+        "README явно предупреждает, что simple decoder не восстанавливает исходные symbols при decoder-fail, а erasure decoder восстанавливает; это должно стать явным output contract."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "FEC-BCH",
+      "title": "BCH encoder/decoder с IBM/RIBM и Chien search",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/README.md",
+          "exists": true,
+          "source_size": 1174,
+          "document_id": "82ba71e78f7e8e89e4f79837aab03182985940a50a862dea49d3c116c23bfdf6",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 1174,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_bch_confirmed.json",
+          "page_text_sha256": "82ba71e78f7e8e89e4f79837aab03182985940a50a862dea49d3c116c23bfdf6"
+        }
+      ],
+      "confirmed_in_read_text": "README part1 chars0–1174: IBM/RIBM, Chien search, три варианта decoder, пример BCH(255,223,t4/d9). Параметрические варианты физически присутствуют в include/bch_parameters.svh.",
+      "proposed_project_spec": [
+        "Первый выбранный профиль BCH(255,223,t4), затем один shortening profile; определить GF polynomial, generator и bit order по явным параметрам, не полагаться на текущий default source file.",
+        "Переносимый готовый codec с syndrome/error-locator/Chien и документированным fail policy, а не только GF2 matrix encoder."
+      ],
+      "acceptance": [
+        "Нулевые синдромы, bit-error injection0..t, граничные позиции и shortening; небольшие коды проверять exhaustive, большой255 — направленно/seeded.",
+        "Выбранные непоправимые паттерны/fail policy, reset между фазами decoder, packet boundaries и numeric negative controls."
+      ],
+      "novelty_vs_project": "LDPC/GF2 кодирование уже есть, но отдельного BCH correction pipeline нет.",
+      "source_modules": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/include/bch_parameters.svh",
+          "exists": true,
+          "line_start": 76,
+          "line_end": 87,
+          "sha256": "9303a4b4813fa76babf81a9b6793ae911a8eeca1c2cd866a48b453a276b5505b",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/bch_enc.sv",
+          "exists": true,
+          "line_start": 76,
+          "line_end": 117,
+          "sha256": "513389ae2c1a7dfe1eeaf810fe74bfa36c4248e8c44940adb65174e93b15816e",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/bch/bch_dec.sv",
+          "exists": true,
+          "line_start": 86,
+          "line_end": 147,
+          "sha256": "326c55a6df9e733708821843d08d5d7b874ec7377890062795a8811619c075cc",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        }
+      ],
+      "scope_limits": [
+        "Пример README — предлагаемая первая конфигурация, не утверждение, что он является активным default всех файлов."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "FEC-POLAR",
+      "title": "Polar encoder/SC decoder с frozen map и optional CRC",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/README.md",
+          "exists": true,
+          "source_size": 700,
+          "document_id": "8f75a851abae9c486ab9cfa77e8a16def7cef1da8ba521c2a9adf3ca28b189fd",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 700,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_polar.json",
+          "page_text_sha256": "8f75a851abae9c486ab9cfa77e8a16def7cef1da8ba521c2a9adf3ca28b189fd"
+        }
+      ],
+      "confirmed_in_read_text": "README part1 chars0–700: non-systematic Polar,N1024,frozen map изTS38.212V15.1.1,rateK/1024,optionalCRC,fast serial successive cancellation; beh source folder имеется.",
+      "proposed_project_spec": [
+        "Первый профиль N1024,K512,frozen-bit map по локальной таблице; сначала независимый SC/reference и comparison с preserved behavioural source, затем stream-ready RTL.",
+        "Optional CRC включать отдельным профилем после явной проверки его polynomial/initial/final/bit-order; не объявлять CRC-aided SCL, если реализован только SC."
+      ],
+      "acceptance": [
+        "Сравнить encoding/frozen positions, decode в noiseless channel и на deterministic LLR vectors; quantization/ties/saturation/CRC flags.",
+        "Сверить несколькоK и граничные configured lengths, frame-reset/backpressure и targeted wrong-decision/CRC negative."
+      ],
+      "novelty_vs_project": "sources/polar_code уже сохранён как вспомогательный архив, но MODEM_CATALOG прямо исключает его полную conversion/testing; рабочего принятого Polar codec в common/python/rtl/common нет.",
+      "source_modules": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/enc/pc_3gpp_enc.sv",
+          "exists": true,
+          "line_start": 84,
+          "line_end": 125,
+          "sha256": "1b1e91ec810734f0dd77104dd7706de814c9528777bfea1d83fdaddfe09844f0",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/pc_3gpp/dec/pc_3gpp_dec.sv",
+          "exists": true,
+          "line_start": 92,
+          "line_end": 144,
+          "sha256": "6da1abb3d641df0564f8aa7e806775770ea970a764b905e85d807efbbd0d8b30",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        }
+      ],
+      "scope_limits": [
+        "Ссылка README на frozen map не является доказательством полного3GPP/5G channel-coding conformance, interleaving или rate matching."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "FEC-TURBO",
+      "title": "CCSDS Turbo encoder и Max-Log-MAP decoder",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/README.md",
+          "exists": true,
+          "source_size": 487,
+          "document_id": "0d99ee688963da3d35e59289a5e607416704eefd3110c04085380ec14cc5d6cb",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 487,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_turbo_confirmed.json",
+          "page_text_sha256": "0d99ee688963da3d35e59289a5e607416704eefd3110c04085380ec14cc5d6cb"
+        }
+      ],
+      "confirmed_in_read_text": "README part1 chars0–487: convolution turbo изCCSDS130.1-G-2,Max-Log-MAP,extrinsic self-correction; пример8920bits,rate1/6,10iterations. Topdecoder физически имеет pLLR_W,pLLR_FP,pMMAX_TYPE,pUSE_SC_MODE.",
+      "proposed_project_spec": [
+        "Первый ограниченный профиль CCSDS interleaver/trellis и rate1/6; независимый bit-accurate Max-Log-MAP с заданными LLR/extrinsic widths и числом iterations.",
+        "Зафиксировать block lengths, constituent trellises, termination, puncturing/interleaving; перенос encoder/decoder делать по этому контракту."
+      ],
+      "acceptance": [
+        "Сверить encoder/parity/interleaver permutations, noiseless decode и deterministic internal alpha/beta/extrinsic trajectories на выбранных блоках.",
+        "Проверить iteration stopping/count, metric saturation/self-correction и reset/backpressure/fail cases; шумовая точка с bounded documented BER measurement и negative bypass."
+      ],
+      "novelty_vs_project": "Имеющийся LDPC decoder не является Turbo/BCJR/Max-Log-MAP iterative decoder.",
+      "source_modules": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/enc/ccsds_turbo_enc.sv",
+          "exists": true,
+          "line_start": 81,
+          "line_end": 124,
+          "sha256": "96c8c445c560c6802b5cecaeb84b79f6f31de3130571a8780400b6c5a7eb53d6",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/ccsds_turbo/dec/ccsds_turbo_dec.sv",
+          "exists": true,
+          "line_start": 110,
+          "line_end": 166,
+          "sha256": "3cefb260127da5f8d69dd1d597cc43ed235dc8dacb8e4823dccd68e5b95fe768",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        }
+      ],
+      "scope_limits": [
+        "Числа ресурсов/скорости изавторскогоREADME2019—исторические свойства его сборки, не текущая приёмка нашего проекта."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "MOD-LLR",
+      "title": "Soft LLR demapper и Gray mapper с явным адаптером к LDPC",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/llr/README.md",
+          "exists": true,
+          "source_size": 749,
+          "document_id": "194183d20521c308ebdbdade8338674ca591e66e8017444d670fcaaa755bc99f",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 749,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_llr.json",
+          "page_text_sha256": "194183d20521c308ebdbdade8338674ca591e66e8017444d670fcaaa755bc99f"
+        }
+      ],
+      "confirmed_in_read_text": "README part1 chars0–749: Gray mapper BPSK..QAM4096 и соответствующий LLR demapper; evenQAM произвольнаяLLRширина,oddQAM только4bits; реально прочитан evenQAM module и testbench/llr/tb_qam_demapper.sv.",
+      "proposed_project_spec": [
+        "Начать с BPSK/QPSK/QAM16/QAM64, сохранив существующие constellation/Gray labels; реализовать per-bit soft output с явными sign/noise-scaling/saturation/tie rules.",
+        "Согласовать новый soft output с положительным LLR дляbit0 и Q8 существующего LDPC входа; расширение доQAM256..4096/oddQAM сделать отдельными профилями после mapping contract."
+      ],
+      "acceptance": [
+        "Независимые distance/likelihood reference на точках constellation и dense boundary grid, правильный hard-decision sign и scaling versus variance.",
+        "Побитно проверить fixed intermediate/output, clipping/ties, framebackpressure, deterministic noisy demapper→LDPC chain и отрицательный контроль sign/order одногоLLR."
+      ],
+      "novelty_vs_project": "Проект умеет hard-symbol PSK/QAM и принимает готовыеLLR вLDPC, но generic per-bit soft demapper между IQ и decoder отсутствует.",
+      "source_modules": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/llr/llr_even_qam_demapper.sv",
+          "exists": true,
+          "line_start": 69,
+          "line_end": 120,
+          "sha256": "b04c36363942829be74a699814de7b0ab232f6030fb96a9b8f3e91a7d56ddc6e",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/testbench/llr/tb_qam_demapper.sv",
+          "exists": true,
+          "line_start": 8,
+          "line_end": 61,
+          "sha256": "c1d6fa365baf8806320b2a1e6007eceec3233ccf5df6a010b54767cc024a847e",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        }
+      ],
+      "scope_limits": [
+        "README ссылается на имяtb_qam_mapper.sv; фактически обнаружен и прочитанtb_qam_demapper.sv. Нельзя предполагать идентичность author mapping и current project labels без проверки."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    },
+    {
+      "id": "MOD-TCM",
+      "title": "4D-TCM-8PSK coded mapper и Viterbi demodulator",
+      "sources": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/README.md",
+          "exists": true,
+          "source_size": 396,
+          "document_id": "4521b39815e25d998c222c8dbc583aeecd7be53962c1f5802e42fc5c978f4136",
+          "title": "README",
+          "part": 1,
+          "position": "текстовая копия; позиции символов",
+          "start_char": 0,
+          "end_char": 396,
+          "printed_page": null,
+          "source_state": "metadata_unchanged",
+          "text_origin": "raw; not visually verified against original",
+          "read_artifact": "build/library_dsp_rag_20261029/modems/read_fec_tcm.json",
+          "page_text_sha256": "4521b39815e25d998c222c8dbc583aeecd7be53962c1f5802e42fc5c978f4136"
+        }
+      ],
+      "confirmed_in_read_text": "README part1 chars0–396:4D-TCM-8PSK изCCSDS413.0-G-2,variable coderate иViterbi; tcm_enc.sv95 имеетicode0..3 для2/2.25/2.5/2.75,4D framing interface.",
+      "proposed_project_spec": [
+        "Отдельный coded-modem profile: 4D convolutional/set-partition mapper + decoder с branch metrics и traceback; поддержать selectedicode до расширения на все4.",
+        "Точно задать связи между4D input-word, emitted8PSK labels, code rate, state initialization/termination и batching."
+      ],
+      "acceptance": [
+        "Перебор разрешённых mapper inputs и сравнение trellis-path metrics с независимым4D reference на коротких кадрах.",
+        "Noiseless roundtrip, фазовые/амплитудные границы, directed error/tie/flush/reset/backpressure и wrong-path negative."
+      ],
+      "novelty_vs_project": "Наличие uncoded8PSK модулятора/демодулятора не реализует4D trellis-coded modulation, set partitioning и межсимвольное Viterbi решение.",
+      "source_modules": [
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/enc/tcm_enc.sv",
+          "exists": true,
+          "line_start": 66,
+          "line_end": 115,
+          "sha256": "cd8b60fdad621bdbc30c890382afa19f27ede58e8b5a5f8889dd145e5999eb96",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        },
+        {
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main/rtl/TCM_4D_8PSK/dec/tcm_dec.sv",
+          "exists": true,
+          "line_start": 88,
+          "line_end": 145,
+          "sha256": "5bd00e4119c93d9748eff41c959f8c9840bec28a1fbcdfbff9321dfc8f25a6fe",
+          "method": "Direct-original fallback/corroboration: read-only source lines; no import or execution"
+        }
+      ],
+      "scope_limits": [
+        "Начальные rates следует зафиксировать по реальному source mapping, не выводить полную CCSDS conformance только из ссылки README."
+      ],
+      "implementation_status": "TODO candidate only; no implementation or source reuse performed"
+    }
+  ],
+  "read_instructions": [
+    "local-library/MY_PROJECT/Домашняя библиотека ИИ.md",
+    "local-library/MY_PROJECT/PROJECTS/Компьютеры и FPGA/Home_AI_RAG_Server/docs/11_AGENTS.md"
+  ],
+  "source_package": {
+    "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DES00/FEC-main",
+    "license": "MIT",
+    "license_read_artifact": "build/library_dsp_rag_20261029/modems/fec_parameters_and_license_reads.json",
+    "primary_variant": "DES00/FEC-main",
+    "duplicate_variant_not_counted": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/FEC-main"
+  },
+  "exclusions": [
+    "Existing BPSK/QPSK/8PSK/pi4/QAM/MSK/GMSK/OQPSK/OFDM/FSK and LDPC/GF2 are not counted as new families.",
+    "Library copies of current project documentation and old MATLAB modem archives are not counted.",
+    "No separate generic CRC/scrambler task is proposed: only the optional Polar CRC is confirmed in the read source.",
+    "No hardware Fmax/resources or standards-conformance claim is inferred from an author README."
+  ],
+  "project_presence_evidence": {
+    "catalogs": [
+      "docs/MODEM_CATALOG.md",
+      "docs/TYPED_MODELS.md"
+    ],
+    "scan_artifact": "build/library_dsp_rag_20261029/modems/project_presence_scan.txt",
+    "scan_command": [
+      "rg",
+      "-n",
+      "-i",
+      "scrambl|crc|am_demod|fm_demod|viterbi|reed.solomon|soft.*demap|llr",
+      "rtl",
+      "common/python",
+      "docs/TYPED_MODELS.md",
+      "docs/MODEM_CATALOG.md"
+    ]
+  }
+}

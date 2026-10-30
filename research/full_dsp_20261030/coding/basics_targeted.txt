@@ -1,0 +1,15 @@
+test_fcs_residue_and_corruption (test_ext_code_basics_oracles.CRCOracles.test_fcs_residue_and_corruption) ... ok
+test_polynomial_division_and_chunks (test_ext_code_basics_oracles.CRCOracles.test_polynomial_division_and_chunks) ... ok
+test_standard_byte_oracles (test_ext_code_basics_oracles.CRCOracles.test_standard_byte_oracles) ... ok
+test_all_single_and_double_locations (test_ext_code_basics_oracles.HammingOracles.test_all_single_and_double_locations) ... ok
+test_small_code_distance_and_parity_matrix (test_ext_code_basics_oracles.HammingOracles.test_small_code_distance_and_parity_matrix) ... ok
+test_period_recurrence_jump (test_ext_code_basics_oracles.LFSROracles.test_period_recurrence_jump) ... ok
+test_scramblers (test_ext_code_basics_oracles.LFSROracles.test_scramblers) ... ok
+test_crc_parallel_matrix_and_fcs (test_ext_code_basics_oracles.ParallelAndStreamingOracles.test_crc_parallel_matrix_and_fcs) ... ok
+test_h_g_matrix_orthogonality_and_bit_types (test_ext_code_basics_oracles.ParallelAndStreamingOracles.test_h_g_matrix_orthogonality_and_bit_types) ... ok
+test_parallel_prbs_and_stalled_chunkcarry (test_ext_code_basics_oracles.ParallelAndStreamingOracles.test_parallel_prbs_and_stalled_chunkcarry) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.094s
+
+OK

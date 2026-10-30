@@ -1,0 +1,36 @@
+{
+  "id": "modems/ofdm_awgn",
+  "title": "OFDM over AWGN",
+  "category": "modems",
+  "path": "modems/ofdm_awgn",
+  "operations": [
+    "ofdm_rx",
+    "ofdm_tx"
+  ],
+  "cases": [
+    "2_qam_tx",
+    "2_qam_rx",
+    "4_qam_tx",
+    "4_qam_rx",
+    "16_qam_tx",
+    "16_qam_rx",
+    "64_qam_tx",
+    "64_qam_rx"
+  ],
+  "limits": "Independent complete block-OFDM analogue. Missing historical helpers are replaced by an explicit FFT/IFFT and cyclic-prefix contract; pilot placement and the original 48/64 carrier map are not reproduced.",
+  "sources": [
+    {
+      "source": "research/electronix_20260930/support/ofdm/Ofdm Awgn Sim.m",
+      "original": "modems/ofdm_awgn/original/Ofdm Awgn Sim.m",
+      "sha256": "d583497cda14fca3f387abab3ddec4473f9e9fa252daa994cf1d519a47fa4834",
+      "bytes": 9535
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

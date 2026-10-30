@@ -1,0 +1,1081 @@
+{
+  "scope": "targeted",
+  "tasks": {
+    "DSP-DDS": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_core.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_core.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-DDS.txt",
+      "sources": {
+        "id": "DSP-DDS",
+        "group": "filters",
+        "title": "Общий NCO/DDS с непрерывной фазой и runtime phase-step",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "Phase accumulator",
+          "parameter PHASE_WIDTH = 32,"
+        ],
+        "project_derived_spec": [
+          "32-bit phase/step, signed18 I/Q от общей ROM, атомарные phase-load/step-update и documented приоритет при одновременном sample/config. Фазу продвигать на принятый/порождаемый отсчёт по одному согласованному handshake contract; при backpressure не пропускать и не повторять фазы. Старые fsk_tx и Costas контракты сохранить."
+        ],
+        "acceptance": [
+          "Побитный accumulator/table oracle, независимый float sinusoid для квантования и SFDR report.",
+          "step=0, wrap через 2^32, отрицательная частота как unsigned step, четверть оборота I/Q.",
+          "Изменение step/phase на границе stalled output, held-valid и обе reset polarities."
+        ],
+        "novelty": "В fsk_tx уже есть внутренний NCO с reset фазы на символ и cos ROM; bpsk_rotate принимает готовую фазу. Новая работа — выделенный общий continuous-phase DDS с явной конфигурацией и timing contract; арифметику/ROM переиспользовать.",
+        "sources": [
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/phase_accumulator.v",
+            "document_id": null,
+            "original_lines": [
+              30,
+              86
+            ],
+            "excerpt": "Phase accumulator",
+            "source_sha256": "c6541d318b549dfa8be86754e4c1ad93e702205b660e38ca7d0f0d72686fa375",
+            "note": "README was found through RAG catalog as id217fe4539512bba814b46a3fa6a45f5a27a3de3f6443e69b1c39c6ade6b89994, statusneeds_ocr/chunks0; this .v text was read directly and is not claimed indexed. MIT source, adapt and preserve attribution if reused.",
+            "source_size": 2683,
+            "source_mtime_ns": 1529524725000000000,
+            "verified_sha256": "c6541d318b549dfa8be86754e4c1ad93e702205b660e38ca7d0f0d72686fa375",
+            "verified_size": 2683,
+            "origin_class": "library"
+          },
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/sine_dds.v",
+            "document_id": null,
+            "original_lines": [
+              32,
+              105
+            ],
+            "excerpt": "parameter PHASE_WIDTH = 32,",
+            "source_sha256": "ab9f74a259d88b2f82d14557bff35742ec5fe6e7f686967001fa8ad88e49af42",
+            "note": "README was found through RAG catalog as id217fe4539512bba814b46a3fa6a45f5a27a3de3f6443e69b1c39c6ade6b89994, statusneeds_ocr/chunks0; this .v text was read directly and is not claimed indexed. MIT source, adapt and preserve attribution if reused.",
+            "source_size": 3277,
+            "source_mtime_ns": 1529524725000000000,
+            "verified_sha256": "ab9f74a259d88b2f82d14557bff35742ec5fe6e7f686967001fa8ad88e49af42",
+            "verified_size": 3277,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_filters.json",
+          "id": "DSP-DDS"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "32-bit modular accepted-sample phase accumulator; signed18 shared-phase ROM. Floating sinusoid oracle independent.",
+      "limitations": [
+        "Python accepted-sample model; no cycles or synthesis claims.",
+        "Default12-bit phase LUT truncation yields about72dB SFDR on 65536-point coherent tone; aligned4096-point tone has amplitudequantizationfloor130dB."
+      ],
+      "numerical_results": {
+        "targeted_unittest_tests": 9,
+        "result": "PASS",
+        "rom_max_error_lsb": 0.6949,
+        "coherent_sfdr_db": 130.34,
+        "agent": "pi Haiku via Qulab; files/tests completed, final commentary generation interrupted after results artifact.",
+        "sfdr_65536_phase_truncation_db": 72.18922215458855,
+        "scope": "targeted"
+      },
+      "contract_sha256": "24b08174ce606c5dccb1719bdda86e2f6b337e7d31dc164052a6f617969ab6b4"
+    },
+    "DSP-HILBERT": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_core.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_hilbert.py",
+        "tests/test_ext_signal_oracles.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-HILBERT.txt",
+      "sources": {
+        "id": "DSP-HILBERT",
+        "group": "filters",
+        "title": "Потоковый Hilbert/analytic-signal real→I/Q",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "8.5 Hilbert Transform Band-Pass Filter",
+          "8.5.1 Applying the Hilbert Transform Filter"
+        ],
+        "project_derived_spec": [
+          "Нечётный antisymmetric FIR для Hilbert Q и задержанная real I, общий ready/valid; сначала taps31/63 и unity-rate, затем optional decimate2 как отдельный режим. Согласовать factor2 convention аналитического сигнала, group delay и краевые DC/Nyquist."
+        ],
+        "acceptance": [
+          "Impulse/sine/cosine, Q phase ±π/2 и точная задержка I.",
+          "Измерить подавление отрицательных частот и passband gain на комплексном spectrum; независимо сверить с ideal frequency-domain analytic reference.",
+          "Reset/backpressure/frame restart; mirrored coefficients и пределы signed18."
+        ],
+        "novelty": "FIR/PFB/complex arithmetic есть, но real→analytic Hilbert block с согласованной задержкой I и Q отсутствует; эта операция не равна complex FFT или готовому modem rotator.",
+        "sources": [
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+            "document_id": null,
+            "file_page": 286,
+            "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+            "extraction_char_range": [
+              1459,
+              2320
+            ],
+            "excerpt": "8.5 Hilbert Transform Band-Pass Filter",
+            "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_286_1459.json",
+            "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "source_size": 27930222,
+            "source_mtime_ns": 1697707381836721600,
+            "verified_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "verified_size": 27930222,
+            "origin_class": "library"
+          },
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+            "document_id": null,
+            "file_page": 287,
+            "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+            "extraction_char_range": [
+              1599,
+              2190
+            ],
+            "excerpt": "8.5.1 Applying the Hilbert Transform Filter",
+            "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_287_1599.json",
+            "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "source_size": 27930222,
+            "source_mtime_ns": 1697707381836721600,
+            "verified_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "verified_size": 27930222,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_filters.json",
+          "id": "DSP-HILBERT"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "Signed18 inputs; offline Q17 antisymmetric taps; integer64 dot; halfup ties toward positive infinity; Qsigned18saturation, Iexactdelay.",
+      "limitations": [
+        "Hilbert finite FIR has transitions near DC/Nyquist and nonzero passband ripple.",
+        "Source family and delayed analytic convention are project derived. No hardware timing claims."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 11,
+        "independent_extra_tests": 4,
+        "min_image_rejection_db_31": 54.9,
+        "min_image_rejection_db_63": 59.5,
+        "max_tone_fixed_error_lsb": 0.305,
+        "external_agent": "pi Qwen; coordinator corrected negative-image ratio test, delayed-I oracle, sampled-peak assumption, and negative rounding convention."
+      },
+      "contract_sha256": "046e530f3269067de0f5fa64459dcd53944fb80002760545ae053f709f3f531a"
+    },
+    "DSP-SOS": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_sos.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_sos.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-SOS.txt",
+      "sources": {
+        "id": "DSP-SOS",
+        "group": "filters",
+        "title": "Общий IIR biquad и каскад SOS с конфигурируемыми коэффициентами",
+        "priority": "P1",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "14.3 Cascade (Series) Realization",
+          "The direct-form II realization of the second-order IIR filter"
+        ],
+        "project_derived_spec": [
+          "Начать с direct-formII (или явно equivalent transposed form), 1/2/4 SOS sections; signed18 input, задаваемая coefficient precision/state guard widths. Проверять устойчивость после квантования, задать perstage saturation и reset/state persistence; коэффициенты менять только при пустом тракте."
+        ],
+        "acceptance": [
+          "Independent scipy.signal.sosfilt/difference equation, raw stage/state integer checks.",
+          "Butterworth low/highpass, resonator near unit circle, impulse/step/DC/rails; deliberate unstable-config rejection.",
+          "Limit-cycle/zero-input decay characterization, both resets and backpressure without lost recursive updates."
+        ],
+        "novelty": "notch_iir — специализированный режектор, kalman_scalar — отдельная recurrence. Универсального cascaded SOS b0,b1,b2,a1,a2 с scale persection и общим fixed contract нет.",
+        "sources": [
+          {
+            "provenance": "indexed",
+            "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+            "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "part": 23,
+            "position": "EPUB spine 23: OEBPS/xhtml/chapter14.xhtml",
+            "char_range": [
+              3353,
+              3386
+            ],
+            "excerpt": "14.3 Cascade (Series) Realization",
+            "verified_against_stored_text": true,
+            "text_origin": "raw; not visually verified against original",
+            "source_state": "metadata_unchanged",
+            "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_sos.json",
+            "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_cascade.json",
+            "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "source_size": 9221616,
+            "source_mtime_ns": 1646398878000000000,
+            "verified_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "verified_size": 9221616,
+            "origin_class": "library"
+          },
+          {
+            "provenance": "indexed",
+            "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+            "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "part": 23,
+            "position": "EPUB spine 23: OEBPS/xhtml/chapter14.xhtml",
+            "char_range": [
+              3005,
+              3066
+            ],
+            "excerpt": "The direct-form II realization of the second-order IIR filter",
+            "verified_against_stored_text": true,
+            "text_origin": "raw; not visually verified against original",
+            "source_state": "metadata_unchanged",
+            "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_sos.json",
+            "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_cascade.json",
+            "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "source_size": 9221616,
+            "source_mtime_ns": 1646398878000000000,
+            "verified_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "verified_size": 9221616,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_filters.json",
+          "id": "DSP-SOS"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "Offline peak-gain balancing; signed32 Q28 coefficients, signed64 DF2T state, eachsection18bit rounding/saturation, IQseparate.",
+      "limitations": [
+        "Models only, no cycle/synthesis claims.",
+        "Offline floating design/stability checks; fixed runtime uses declared integer arithmetic.",
+        "Per-section 18-bit feedback can sustain a bounded zero-input limit cycle; tested r=.995 conjugate resonator tail reported, not claimed zero for all stable systems."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 8,
+        "max_fixed_scipy_rms_lsb": 0.7007954337801636,
+        "rms_by_lp_hp_sections": [
+          0.37369521131064437,
+          0.37081877109396155,
+          0.5064922661219409,
+          0.4969287993524362,
+          0.7007954337801636,
+          0.6916966717505967
+        ],
+        "near_unit_r": 0.995,
+        "zero_input_tail_max_lsb": 12,
+        "zero_input_tail_budget_lsb": 15,
+        "review": "audit_sos_opencode.json + audit_sos_closure.json",
+        "pole_point99_limit_cycle_lsb": 49
+      },
+      "contract_sha256": "de501bb0749ca3dbe9d75a160b7d78c3aab0d5a8c69f7b75311a5b679ea951d0"
+    },
+    "DSP-FARROW": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_farrow.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_farrow.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-FARROW.txt",
+      "sources": {
+        "id": "DSP-FARROW",
+        "group": "filters",
+        "title": "Farrow-конвертер с произвольной дробной задержкой и меняющимся rate",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "7.6 Farrow Filter",
+          "7.6 Farrow Filter",
+          "Table 7.3 Polynomial filter for output at ∆."
+        ],
+        "project_derived_spec": [
+          "Реализовать polynomial filter-bank + Horner evaluator и явный input-time accumulator (integer+fraction) для каждого output. Начать с degree3/4, настраиваемые коэффициенты и frac≥16bits; атомарное изменение phase-step между заданными boundaries. Коэффициенты заново вычислять из интерполяционной задачи; округлённые книжные таблицы не считать bit-exact golden."
+        ],
+        "acceptance": [
+          "Независимая evaluation полиномов/float fractional interpolation, constant/ramp/полиномы до степени P.",
+          "Δ=0,Δ→1, перенос integer index, меняющийся input/output ratio и pause на переносе.",
+          "Тональная amplitude/phase error и alias response vs coefficient quantization; обе reset polarities."
+        ],
+        "novelty": "bpsk_samples уже делает 4-point cubic interpolation по ROM для модемного адреса. Новое ТЗ — общий streaming arbitrary-rate scheduler и polynomial-bank Farrow степени3/4, не переименование существующего cubic kernel.",
+        "sources": [
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+            "document_id": null,
+            "file_page": 259,
+            "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+            "extraction_char_range": [
+              385,
+              1985
+            ],
+            "excerpt": "7.6 Farrow Filter",
+            "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_259_385.json",
+            "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "source_size": 27930222,
+            "source_mtime_ns": 1697707381836721600,
+            "verified_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "verified_size": 27930222,
+            "origin_class": "library"
+          },
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+            "document_id": null,
+            "file_page": 268,
+            "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+            "extraction_char_range": [
+              64,
+              1664
+            ],
+            "excerpt": "7.6 Farrow Filter",
+            "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_268_64.json",
+            "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "source_size": 27930222,
+            "source_mtime_ns": 1697707381836721600,
+            "verified_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "verified_size": 27930222,
+            "origin_class": "library"
+          },
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+            "document_id": null,
+            "file_page": 270,
+            "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+            "extraction_char_range": [
+              117,
+              1717
+            ],
+            "excerpt": "Table 7.3 Polynomial filter for output at ∆.",
+            "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_270_117.json",
+            "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "source_size": 27930222,
+            "source_mtime_ns": 1697707381836721600,
+            "verified_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "verified_size": 27930222,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [
+          "DSP-RATIONAL"
+        ],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_filters.json",
+          "id": "DSP-FARROW"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "Exact Fraction-derived degree3/4 polynomial coefficients offline; Q27signed32 coefficientbank, signed64 branch/Horner results with wide product, Q16..32 inputtime and fractionalmu; output18sat.",
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Causal Lagrange interpolation uses zero prehistory and needs ceil(t) sample; no anti-alias filter for downsampling.",
+        "Rate[1/16,16] quantized at configured16..32fractionbits, preserves nextscheduledtime when changed."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 13,
+        "max_fixed_float_error_lsb": 0.5,
+        "external_agent": "pi Haiku via Qulab; completed model and independent SciPy/Lagrange/integer tests"
+      },
+      "contract_sha256": "a66de1cd1454e586db0362157de0bb6474e52770f25f635bec312f80ab490573"
+    },
+    "DSP-PSD": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_psd.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_psd.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-PSD.txt",
+      "sources": {
+        "id": "DSP-PSD",
+        "group": "filters",
+        "title": "Нормированный periodogram/PSD поверх существующего FFT",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "8.3 Power Spectral Density Using Square Magnitude and Autocorrelation",
+          "px1=abs(fft(x).^2);"
+        ],
+        "project_derived_spec": [
+          "Взять production FFT/window frontend; вычислять Re²+Im² с точной полной шириной и задокументированным восстановлением FFT-stage scaling. Нормировка PSD по Fs·Σwindow², отдельный contract one-/two-sided spectrum (DC/Nyquist не удваивать), optional average K frames. Книжный demo не использовать как готовый нормированный PSD oracle: его plotting/normalization упрощены."
+        ],
+        "acceptance": [
+          "Parseval sum-of-bins против входной мощности, coherent tone amplitude, impulse, white-noise statistics.",
+          "Independent NumPy FFT periodogram с теми же Fs/window/counts; integers checked before divide/round.",
+          "Frame averaging K=1/2/16, accumulator range, pause/TLAST/reset and bin identity."
+        ],
+        "novelty": "fft_r2sdf и STFT уже готовы, но power bins/physical PSD normalization и averaging по frames не выделены в проверенный блок. Повторный FFT не нужен.",
+        "sources": [
+          {
+            "provenance": "indexed",
+            "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+            "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "part": 17,
+            "position": "EPUB spine 17: OEBPS/xhtml/chapter8.xhtml",
+            "char_range": [
+              8474,
+              8543
+            ],
+            "excerpt": "8.3 Power Spectral Density Using Square Magnitude and Autocorrelation",
+            "verified_against_stored_text": true,
+            "text_origin": "raw; not visually verified against original",
+            "source_state": "metadata_unchanged",
+            "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_psd.json",
+            "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_autocorrelation.json",
+            "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "source_size": 9221616,
+            "source_mtime_ns": 1646398878000000000,
+            "verified_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "verified_size": 9221616,
+            "origin_class": "library"
+          },
+          {
+            "provenance": "indexed",
+            "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+            "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "part": 17,
+            "position": "EPUB spine 17: OEBPS/xhtml/chapter8.xhtml",
+            "char_range": [
+              9364,
+              9383
+            ],
+            "excerpt": "px1=abs(fft(x).^2);",
+            "verified_against_stored_text": true,
+            "text_origin": "raw; not visually verified against original",
+            "source_state": "metadata_unchanged",
+            "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_psd.json",
+            "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_autocorrelation.json",
+            "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "source_size": 9221616,
+            "source_mtime_ns": 1646398878000000000,
+            "verified_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "verified_size": 9221616,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_filters.json",
+          "id": "DSP-PSD"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "UnsignedQ17window multiplication to18bits, existing24bitinteger FFT withQ16twiddles and1/N scaling, full Pythoninteger re²+im² and K-frame accumulation; finalPSDdensitydivision afterintegerprocessing.",
+      "limitations": [
+        "Models only; no timing claims.",
+        "Fixed PSD units rawcount²/Hz; caller can divide by chosen fullscale².",
+        "Symmetric Hann uses np.hanning; window restricted nonnegative<=1.",
+        "Averages are disjoint batches K1/2/16, no overlap/Welch detrending."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "profiles": "N32/128, K1/2/16, realonesided/DC/Nyquist/noise/complex, Hann/boxcar",
+        "fixed_tone_integrated_power_relative_budget": 0.001,
+        "fixed_hann_noise_l1_relative_budget": 0.002,
+        "max_hann_noise_l1_relative_error": 0.0006919150008841397
+      },
+      "contract_sha256": "a66de1cd1454e586db0362157de0bb6474e52770f25f635bec312f80ab490573"
+    },
+    "DSP-DCT": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_dct.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_dct.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-DCT.txt",
+      "sources": {
+        "id": "DSP-DCT",
+        "group": "review",
+        "title": "DCT/IDCT и усечение коэффициентов аудиоблока",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "Alasooly §3.2.2 Audio Compressing делит WAV на блоки8192 и вызывает dct/idct с сохранением1/2,1/4,1/8 коэффициентов. Это реальный код раздела, не только оглавление."
+        ],
+        "project_derived_spec": [
+          "Сначала зафиксировать нормировку DCT-II/IDCT и обработку неполного хвоста; MATLAB dct/idct — независимый исходный эталон.",
+          "Для первого RTL ограничить размеры N=32/128, K=N,N/2,N/4,N/8 и signed18 вход; это проектный выбор, в книге блок8192.",
+          "Проверять round-trip и энергию приK=N, а приусечении — точное соответствие coefficient mask/reconstruction, не обещать заданное качество сжатия без измерений."
+        ],
+        "acceptance": [
+          "DCT/IDCT round-trip и нормировка при K=N; coefficient masks K=N/2,N/4,N/8 совпадают с независимым MATLAB/SciPy эталоном.",
+          "Parseval/energy и импульс/DC/тон; хвост неполного блока, паузы, reset и численный отрицательный контроль."
+        ],
+        "novelty": "Есть FFT/IFFT/STFT и OM-LSA, но DCT/IDCT нет ни в production Python, ни в RTL. Не называть это готовым аудиокодеком: энтропийное кодирование и битстрим источник не задаёт.",
+        "sources": [
+          {
+            "kind": "indexed_rag_read",
+            "path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Matlab/Alasooly H.M. - Case Studies on Signal, Audio and Image Processing Using Matlab.epub",
+            "document_id": "010d67cef8dff4ef703ccf0314a014a8723e337d486557ee3702606f2a2e218e",
+            "part": 9,
+            "epub_path": "OEBPS/dr-hedaya-mahmood-alasooly-some-case-studies-on-signal-audio-and-image-processing-using-matlab_6.html",
+            "section": "3.2.2 Audio Compressing",
+            "start_char": 7000,
+            "end_char": 9200,
+            "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Matlab/Alasooly H.M. - Case Studies on Signal, Audio and Image Processing Using Matlab.epub",
+            "source_sha256": "010d67cef8dff4ef703ccf0314a014a8723e337d486557ee3702606f2a2e218e",
+            "verified_sha256": "010d67cef8dff4ef703ccf0314a014a8723e337d486557ee3702606f2a2e218e",
+            "verified_size": 6466161,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_review.json",
+          "id": "dct_audio"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "Offline signed18Q17 orthonormal matrix, integer64 dot, encoded24/decoded18 stage rounding and clipping.",
+      "limitations": [
+        "Models only, no cycle/synthesis claims.",
+        "Offline floating design/stability checks; fixed runtime uses declared integer arithmetic."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "max_fixed_decode_error_lsb": 1.0009883889752018
+      },
+      "contract_sha256": "6f4d4f4a7944c9802330f66e6465beb04d8810b0a489c73317c7317b49d652f1"
+    },
+    "DSP-FFT-CONV": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_spectral.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_spectral.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-FFT-CONV.txt",
+      "sources": {
+        "title": "Потоковая FFT overlap-save / overlap-add свёртка с произвольным размером блока",
+        "priority": "P1",
+        "source_facts": [
+          "Abood §7.5 задаёт линейную свёртку через DFT: дополнить h(n) и x(n) нулями до N ≥ N1+N2−1, вычислить N-точечные DFT, перемножить Y(k)=H(k)X(k), затем взять IDFT.",
+          "Это даёт точную линейную (не циклическую) свёртку при указанном условии на N.",
+          "В индексированном тексте приведены шаги алгоритма и примеры DFT/IDFT, но нет отдельного описания секционированной overlap-save процедуры."
+        ],
+        "project_derived_spec": [
+          "Реализовать потоковый блочный конвольвер: фиксированный FFT-размер N, длина FIR M, hop L=N−M+1; хранить последние M−1 входных отсчётов, дополнять/сдвигать блок, умножать на предвычисленный H(k), отбрасывать первые M−1 выходных отсчётов и выдавать L валидных.",
+          "Поддержать real/complex IQ, precomputed filter spectrum, явную нормировку FFT/IFFT и смену коэффициентов после flush/reset. Определить выдачу хвоста и конечную длину; сначала floating, затем fixed с выбранными округлениями.",
+          "Явно задать sample-index alignment, буферизацию блока и состояние между вызовами; аппаратная latency/ready-valid этим модельным этапом не доказывается."
+        ],
+        "acceptance": [
+          "Для случайных x и h результат потоковой свёртки совпадает с прямой линейной свёрткой с заданным допуском при любом разбиении x на блоки.",
+          "Проверка h длиной 1, M=N, M>N (ошибка конфигурации), нулевого входа и смены фильтра между блоками.",
+          "Проверить точное выравнивание по sample indices и выдачу M-1 хвостовых отсчётов после flush, включая неполный последний блок, без потери/дублирования результатов.",
+          "Сравнение overlap-save и overlap-add даёт одинаковый результат."
+        ],
+        "novelty": "Отличается от уже реализованных FFT/IFFT и analysis PFB/WOLA: это exact streaming linear-convolution primitive с секционированием, состоянием между блоками и контролем задержки, а не фильтрбанк и не одиночный FFT.",
+        "sources": [
+          {
+            "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+            "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "part": 16,
+            "start_char": 23277,
+            "end_char": 27477,
+            "raw_read_file": "spectral/raw_abood_ch7_conv.json",
+            "origin_class": "indexed_rag_read",
+            "verified_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+            "verified_size": 9221616
+          }
+        ],
+        "id": "DSP-FFT-CONV",
+        "status": "planned_model_stage_not_implemented",
+        "group": "spectral_audio",
+        "dependencies": [],
+        "source_caveats": [
+          "Индексированный источник подтверждает только линейную свёртку через DFT с zero-padding N ≥ N1+N2−1. Конкретная overlap-save/overlap-add секционированная схема является project-derived расширением, а не дословно описанным в книге алгоритмом."
+        ],
+        "original_finding_id": "DSP-OVLPSAVE"
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "Existing integer FFT23input/24internal; exact5bit lifts ofinput andQ17taps; HFFTq22,signalFFTq5; complexproductN/2^22 to23bitQ5; inverse24bitQ5; OLA24bitQ5; finalroundshift5/18sat.",
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Runtime FFT stage arithmetic actualinteger fft_fixed, no final-output-only approximation.",
+        "Product/output/OLA clipping counted; FFTinternal24bit saturation follows fft_fixed and is not included in exposedcounter.",
+        "Filter L1gain/headroom caller responsibility; coefficient Q17quantization and twiddleQ16 documented."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "fixed_error_budget_lsb": 120,
+        "profiles": "N32/128,M1/7/N,bothmodes,complexrandominput,arbitrarychunks,fulltail,clipping",
+        "max_fixed_direct_error_lsb": 3.6778835193284256
+      },
+      "contract_sha256": "8796f6e8464f2e416fa904e09741e6e3c585b7b196ac95b95adaef949e4f8606"
+    },
+    "MOD-AM": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_am.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_am.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/MOD-AM.txt",
+      "sources": {
+        "id": "MOD-AM",
+        "group": "modems",
+        "title": "AM-модулятор и демодулятор огибающей",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "Прочитана часть15 PracticalSDR, chars29500–36000: раздел Demodulation описывает амплитудную модуляцию, envelope/product detectors, AM Demod complex→float, channel rate400k и внутреннюю аудио LPF5k."
+        ],
+        "project_derived_spec": [
+          "Новый workspace аналогового AM: real audio→complex IQ и complex IQ→real audio. Предлагаемый начальный профиль — full-carrier AM с нормированным входом и настраиваемой глубиной модуляции, затем envelope magnitude + DC removal + audio LPF.",
+          "Формулу full-carrier AM и численные форматы утвердить как наше ТЗ: прочитанная книга задаёт функциональный тракт, а не готовый fixed-point/RTL контракт."
+        ],
+        "acceptance": [
+          "Тон, двухтональный сигнал и прямоугольная огибающая: восстановление частоты/амплитуды после документированного transient/DC removal; независимый аналитический эталон.",
+          "Проверить крайние разрешённые глубины, комплексную фазу несущей, нулевой сигнал, clipping и выбранный overmodulation negative case; затем общие stream/reset gates."
+        ],
+        "novelty": "В существующих MODEM_CATALOG/TYPED_MODELS нет аналогового AM; PSK/QAM изменяют дискретные символы и не реализуют AM audio envelope receiver.",
+        "sources": [
+          {
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/SDR/David_Clark_Paul_Clark_PracticalSDR.epub",
+            "exists": true,
+            "source_size": 107119828,
+            "document_id": "038d94200bc5b1d88096454a9848e9e44abd01a6e2c5268d7cad57bc2a8ecb83",
+            "title": "David_Clark_Paul_Clark_PracticalSDR",
+            "part": 15,
+            "position": "EPUB spine 15: OEBPS/xhtml/chapter6.xhtml",
+            "start_char": 29500,
+            "end_char": 36000,
+            "printed_page": null,
+            "source_state": "metadata_unchanged",
+            "text_origin": "raw; not visually verified against original",
+            "read_artifact": "build/library_dsp_rag_20261029/modems/read_practical_am.json",
+            "page_text_sha256": "284f9f4e0ece1ac4ee31aca10afa7b337d04bbd8151ad7bdc3d3e15df1c8a430",
+            "verified_sha256": "038d94200bc5b1d88096454a9848e9e44abd01a6e2c5268d7cad57bc2a8ecb83",
+            "verified_size": 107119828,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [
+          "DSP-DDS"
+        ],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_modems.json",
+          "id": "MOD-AM"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "DDS32/LUT18carrier; Q17depth/amplitude andintegercomplexmultiply; math.isqrt envelope; Q30DC/audioonepoles with64bitQ17fractionstates/wideintegerproducts; output18sat.",
+      "limitations": [
+        ".5headroom TXformula: amplitude=.5*(1+depth*m), not unitcarrier+potential2xovershoot.",
+        "RX removes DC by20Hzonepole then5kHzaudiolowpass, DCstartup ~16000samples for5tau defaultFs400k.",
+        "Fixedaudio[-131071,131071], IQfullsigned18 ordinarytuple; fixedQ30cutoffs must be representable.",
+        "SourcepracticalSDR defines AMenvelope/400k/5kfilter, preciseonepoledesign isproject-derived.",
+        "Numericalmodels only, no timing/synthesisclaims."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 17,
+        "external_agent": "pi DeepSeek viaQulab completedexit0; coordinator addedstableexpm1 coefficients andquantizedcutoffrejection",
+        "fixed_float_max_error_lsb": 1.4,
+        "expected_recovered_amplitude": 0.049029538,
+        "measured_float_peak": 0.049012635,
+        "measured_fixed_peak": 0.049015419,
+        "tx_clips": 0,
+        "rx_clips": 0,
+        "stall_regression": {
+          "case": "nonzero float/fixed demod output,3 rejected samples, unchangedstate and next accepted output vs unstalledcontrol",
+          "before_fix": "float returned0 instead of0.03775551170469672; fixedpassed",
+          "after_fix": "float andfixedPASS; AM17testsPASS",
+          "model_change": "float branch assigns self._held=float(self._lp), then returns self._held",
+          "negative_log_path": "build/full_dsp_20261030/signal/logs/am_stall_before_fix.log",
+          "negative_log_sha256": "c3bbf1defea09d7f79264390d341d455febeef4e4f6174847805c769825440e8",
+          "positive_log_path": "build/full_dsp_20261030/signal/logs/am_stall_after_fix.log",
+          "positive_log_sha256": "f9d1ab87b4be519bc3d20ffa333cff73acb426f3945451c553b45d8f333b59de"
+        }
+      },
+      "contract_sha256": "7e73edf4134d48538f3a529ee7d693c15ef2672c39d6ddca128da73efbb3cb15"
+    },
+    "MOD-FM": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_fm.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_fm.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/MOD-FM.txt",
+      "sources": {
+        "id": "MOD-FM",
+        "group": "modems",
+        "title": "FM-модулятор, discriminator и pre/de-emphasis",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "Clark2016 BasicAnalogRadio part43 chars0–7416 задаёт WBFM Transmit, MaxDeviation75e3, Tau75e-6, working sample rate400k; part17 иpart47 дополнительно прочитаны: real→complex Frequency Mod/Sensitivity и TX→RX loopback сWBFMReceive."
+        ],
+        "project_derived_spec": [
+          "Отдельный FM baseband TX/RX: параметризованный накопитель фазы + complex oscillator; proposed discriminator arg(y[n]*conj(y[n-1])) с явной обработкой phase wrap, малой/нулевой амплитуды.",
+          "Добавить отдельные параметры deviation, Fs, pre/de-emphasis time constant; первый библиотечный профиль Fs400k, deviation75k, tau75us."
+        ],
+        "acceptance": [
+          "Независимые тесты DC-input→заданное смещение частоты, синусоидальная FM→восстановление baseband, непрерывность фазового wrap, разрывы valid/ready.",
+          "Проверить сопряжённость pre/de-emphasis и transient; targeted zero-amplitude/confidence case, фиксированное шумовое loopback и отрицательный контроль отключённого/неверного discriminator."
+        ],
+        "novelty": "Имеющиеся MSK/GMSK/FSK — цифровые семейства с символными решениями; аналоговый FM discriminator/audio chain не реализован.",
+        "sources": [
+          {
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016).epub",
+            "exists": true,
+            "source_size": 47741964,
+            "document_id": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+            "title": "David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016)",
+            "part": 43,
+            "position": "EPUB spine 43: OEBPS/part0042.xhtml",
+            "start_char": 0,
+            "end_char": 7416,
+            "printed_page": null,
+            "source_state": "metadata_unchanged",
+            "text_origin": "raw; not visually verified against original",
+            "read_artifact": "build/library_dsp_rag_20261029/modems/read_clark_fm_tx.json",
+            "page_text_sha256": "2f959f6ebc310bbc58b4c171927ad3c68d0516cef6aa8b05c793325074442683",
+            "verified_sha256": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+            "verified_size": 47741964,
+            "origin_class": "library"
+          },
+          {
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016).epub",
+            "exists": true,
+            "source_size": 47741964,
+            "document_id": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+            "title": "David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016)",
+            "part": 17,
+            "position": "EPUB spine 17: OEBPS/part0016.xhtml",
+            "start_char": 0,
+            "end_char": 7153,
+            "printed_page": null,
+            "source_state": "metadata_unchanged",
+            "text_origin": "raw; not visually verified against original",
+            "read_artifact": "build/library_dsp_rag_20261029/modems/read_clark_fm_model.json",
+            "page_text_sha256": "02bf11f4a3b98599f8a64ae81ece8e16a6a97e52064e21ae18b02c2a98b04b5e",
+            "verified_sha256": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+            "verified_size": 47741964,
+            "origin_class": "library"
+          },
+          {
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016).epub",
+            "exists": true,
+            "source_size": 47741964,
+            "document_id": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+            "title": "David Clark, Paul Clark - Field Expedient SDR_ Basic Analog Radio-Meadow Registry Press (2016)",
+            "part": 47,
+            "position": "EPUB spine 47: OEBPS/part0046.xhtml",
+            "start_char": 0,
+            "end_char": 6564,
+            "printed_page": null,
+            "source_state": "metadata_unchanged",
+            "text_origin": "raw; not visually verified against original",
+            "read_artifact": "build/library_dsp_rag_20261029/modems/read_clark_fm_loopback.json",
+            "page_text_sha256": "180430ac0df9e477f523994618e07338298974c8d6c8f1842151a6b856c01dac",
+            "verified_sha256": "f009e8d96d1e74ddbba49a93b4e7245110eaede0df6a927068d1384b9d87afde",
+            "verified_size": 47741964,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [
+          "DSP-DDS"
+        ],
+        "source_caveats": [
+          "arg-difference discriminator — предлагаемая реализация, прочитанный фрагмент описывает GNU Radio WBFM blocks и параметры.",
+          "Вpart43 книга отдельно признаёт округление400/48→8 и≈4%замедление. Наш контракт не должен копировать это округление; здесь первый FM core работает на фиксированном Fs, rate conversion задаётся отдельно."
+        ],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_modems.json",
+          "id": "MOD-FM"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "32bitphase/DDS18; Q30 matchedz emphasis,64bitstate with17fractionbits,96bit IIRproducts,80bit phase/discriminatorproducts; genuine32iteration integer CORDIC64bitvector.",
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Preemphasis clips when its inverse onepole exceeds normalizedaudio; clipping diagnostic exposed.",
+        "Discriminator zeroIQ clears previous/state, outputs0/validFalse; firstvalidsampleoutputs0.",
+        "FixedFs/deviation must be integral; DDS12bit phaseaddress limits modulationphaseprecision.",
+        "No approximate400/48 resampling; supplied same-rate audio/IQprofile.",
+        "FixedFs bounded1..2**30-1 tokeepdeclared80bitphase/discriminatorproducts valid."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 6,
+        "cordic_angle_budget_word_units": 20,
+        "fixed_emphasis_loopback_budget_lsb": 25,
+        "fs": 400000,
+        "deviation": 75000,
+        "tau_seconds": 7.5e-05,
+        "independent_review": "audit_fm_pi.json + audit_fm_closure.json (read-only, probesnotexecuted)",
+        "max_fixed_loopback_error_lsb": 3,
+        "max_cordic_error_word_units": 6
+      },
+      "contract_sha256": "d97d3b6440c60e0d45e88294f9f8602fb33d15b07afa95af4ec898ca1b3fae42"
+    },
+    "MOD-SSB": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_ssb.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_ssb.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/MOD-SSB.txt",
+      "sources": {
+        "id": "MOD-SSB",
+        "group": "modems",
+        "title": "SSB USB/LSB модем с выбором боковой полосы",
+        "priority": "P2",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "Laufer2014 part58 chars3000–5200 определяет SSB, USB/LSB, меньшую полосу относительно AM и изменение высоты аудио при неточной настройке."
+        ],
+        "project_derived_spec": [
+          "Новый аналоговый workspace для USB/LSB: формирование однополосного complex IQ из real audio и синхронное восстановление выбранной боковой полосы.",
+          "Hilbert/phasing, фильтр аналитического сигнала и структура frequency translation — НАШЕ предлагаемое ТЗ, НЕ подтверждённые формулы прочитанного раздела. До RTL отдельно выбрать/обосновать точный алгоритм и фиксированную спецификацию фильтра."
+        ],
+        "acceptance": [
+          "Однотональный и двухтональный тесты: энергия в выбранной боковой полосе, измеренное подавление зеркальной полосы против утверждённого бюджета.",
+          "USB↔LSB переключение, известное расстройство несущей→предсказуемое смещение аудиотона, loopback и все stream/reset/negative gates."
+        ],
+        "novelty": "Готовые комплексные PSK/QAM/OFDM модуляторы не являются аналоговым SSB audio modem.",
+        "sources": [
+          {
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/Радио/Laufer C. - The Hobbyist's Guide to the RTL-SDR. Cheap Software Defined Radio (2014).epub",
+            "exists": true,
+            "source_size": 6671732,
+            "document_id": "16f1b2fa4eb7f4768a8e23b3aa906e4f8260e700bb179d5e32d4390524cce196",
+            "title": "Laufer C. - The Hobbyist's Guide to the RTL-SDR. Cheap Software Defined Radio (2014)",
+            "part": 58,
+            "position": "EPUB spine 58: text/part0009.html",
+            "start_char": 3000,
+            "end_char": 5200,
+            "printed_page": null,
+            "source_state": "metadata_unchanged",
+            "text_origin": "raw; not visually verified against original",
+            "read_artifact": "build/library_dsp_rag_20261029/modems/read_laufer_ssb.json",
+            "page_text_sha256": "7c1dd0c558f64e9c042f6534bfe62acda8bc03bd7cc5aee7de81471636903653",
+            "verified_sha256": "16f1b2fa4eb7f4768a8e23b3aa906e4f8260e700bb179d5e32d4390524cce196",
+            "verified_size": 6671732,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [
+          "DSP-HILBERT",
+          "DSP-DDS"
+        ],
+        "source_caveats": [
+          "Источник подтверждает семейство и свойства, но не даёт в прочитанном фрагменте формул Hilbert/phasing или готового RTL."
+        ],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_modems.json",
+          "id": "MOD-SSB"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "Existing signed18integer Hilbert Q17FIR + DDS32/LUT18; signedwidecomplexinteger multiply/131071 halfup and18sat, coherentrealprojection receiver.",
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Hilbertphasing formula project-derived; Laufer source documents SSBfamily only.",
+        "Coherentreceiver requires supplied carrierstep; no automaticCFO/phaserecovery.",
+        "FIR transitions nearDC/Nyquist; no factor2 analytic normalization."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 3,
+        "min_image_rejection_gate_db": 40,
+        "fixed_loopback_budget_lsb": 30,
+        "sidebands": [
+          "usb",
+          "lsb"
+        ],
+        "min_measured_fixed_image_rejection_db": 59.45473523397098
+      },
+      "contract_sha256": "d20d9dabd67443002dff4115d0c11c2ab1c0deef50e5f578c980d9fd4d5e5078"
+    },
+    "DSP-DDC": {
+      "state": "ready_for_root_review",
+      "modules": [
+        "common/python/ext_signal_ddc.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_ddc.py"
+      ],
+      "contract": "research/full_dsp_20261030/signal/contracts/DSP-DDC.txt",
+      "sources": {
+        "id": "DSP-DDC",
+        "group": "filters",
+        "title": "Составной цифровой down-converter DDS→CIC→2 half-band",
+        "priority": "P3",
+        "status": "planned_not_implemented",
+        "source_facts": [
+          "Standard digital down converter with CIC and half-band filters."
+        ],
+        "project_derived_spec": [
+          "После компонентной приёмки собрать portable real18→complex18 DDC: quadrature DDS mixer, CIC N5 R10, compensating decimate2 FIR и второй decimate2 FIR; baseline total40:1 (при100MHz моделируемый выход2.5Mcomplex/s). Физические100MHz не заявлять до синтеза; отдельно задать pass/stopband и допустимый mixer/normalization gain."
+        ],
+        "acceptance": [
+          "Multi-tone input вокруг IF, показать перенос desired tone к baseband, image/alias suppression и gain.",
+          "Каждый intermediate поток сверить с независимой float и fixed chain; exact transfer counts40:1 и phase continuity.",
+          "Вычислить actual service/burst/FIFO budgets при backpressure; reset и переконфигурация только на documented drain boundary."
+        ],
+        "novelty": "Внутренние modem mixers и PFB есть, но отдельного ADC-real→decimated-complex DDC front-end с согласованными multirate interfaces нет. Это integration task, использующий новые CIC/DDS и existing FIR.",
+        "sources": [
+          {
+            "provenance": "direct-original",
+            "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+            "document_id": null,
+            "file_page": 533,
+            "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+            "extraction_char_range": [
+              680,
+              2280
+            ],
+            "excerpt": "Standard digital down converter with CIC and half-band filters.",
+            "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_533_680.json",
+            "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "source_size": 27930222,
+            "source_mtime_ns": 1697707381836721600,
+            "verified_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+            "verified_size": 27930222,
+            "origin_class": "library"
+          }
+        ],
+        "dependencies": [
+          "DSP-CIC-DEC",
+          "DSP-DDS",
+          "DSP-CIC-COMP",
+          "DSP-RATIONAL"
+        ],
+        "source_caveats": [],
+        "original_finding_reference": {
+          "file": "research/library_dsp_20261029/findings_filters.json",
+          "id": "DSP-DDC"
+        }
+      },
+      "model_scope": "Accepted-sample Python numerical model only. No RTL or vendor compilation.",
+      "fixed_scope": "DDS32/LUT18 mixer -> existing modular CIC5/10 normalize18 -> existing compensationQ17 RationalFixed1/2 -> sparsehalfbandQ17 RationalFixed1/2; 40:1 overall.",
+      "limitations": [
+        "Accepted-sample model; no vendor/timing claims.",
+        "No implicit zero-tail flush; output count ceil(floor(N/10)/4). Reconfigure clears all stages.",
+        "Offline float coefficient design; independent float convolution oracle.",
+        "Both stoptones quantized tozero; only <=-80dB amplitude bound (1LSB/10000counts) is reported, not a -280dB analogclaim."
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "tone_offsets_input_fs": [
+          0.002,
+          0.005,
+          0.008,
+          0.035,
+          0.045
+        ],
+        "gain_db": [
+          0.008532397792887541,
+          0.004623625352785197,
+          -0.00198624306946162,
+          null,
+          null
+        ],
+        "max_error_lsb": 8.920866397853613,
+        "stopband_conservative_upper_bound_db": -80
+      },
+      "contract_sha256": "cc300ad5a3e4f05ab589f24a924e536914d29dbe294778f7407f7d7732468a2d"
+    }
+  },
+  "own_file_sha256": {
+    "common/python/ext_signal_am.py": "f38cc0cabe591962a62fe5952231aae1f2331d5ef41d575dda34a01bd41c803d",
+    "common/python/ext_signal_core.py": "cee46e4e47def673d6cd915bac2c7dd06e0bb4e516f5ce75934aab52cee5d3af",
+    "common/python/ext_signal_dct.py": "f65b63b87167da96c4a8d2a5f6230063546953a20c848fd44869a96a340ab9c4",
+    "common/python/ext_signal_ddc.py": "8a50d852b951ef81adbd74708582301d6652f739835ab46eae83267702b4bf8b",
+    "common/python/ext_signal_farrow.py": "d103527c61f15e3e3c3803ddc9c6548c5df7d2d02b4c156d07db3d3022d8febf",
+    "common/python/ext_signal_fm.py": "60f0a2c3d68b4b949b5848b1152fb0a687212fdb63155643625376416a99647a",
+    "common/python/ext_signal_psd.py": "461980fa5cd20e16f882af2f2d8d983b1d87ba79db53c6a7db4f6ee764825dde",
+    "common/python/ext_signal_sos.py": "68a1433866f804b1b6778952d153db8752d7045538aff9d67137dc58ad65852f",
+    "common/python/ext_signal_spectral.py": "ad1a3de57929e07a418dad8682f0351304c6c55af8d632e69e53a3cf1e5898a5",
+    "common/python/ext_signal_ssb.py": "581c449975c2317cf041d901ef6cb8f98588b0570e6234ab7ddc45ba1c8c24fe",
+    "tests/test_ext_signal_am.py": "7982cef056d09b8fe38b151ea1192b3be3fbc94762077089f12f415508b4a177",
+    "tests/test_ext_signal_core.py": "9d257bfa8195c75fb916ebb430d81b9d34f8b7237dc7ad99270cf4b76f2c5e73",
+    "tests/test_ext_signal_dct.py": "a2d0dad9609b564816dc67ae9b54718392c79283c110505c0f22be3f7aea87ee",
+    "tests/test_ext_signal_ddc.py": "08177d5ae5bbb432094ef999112ce18298c3e1139a4a36fd1375cd3499734429",
+    "tests/test_ext_signal_farrow.py": "4fccadd62464eee1211bcbc3b9b7ed68c56be8eab277390a43ffe605c0e49106",
+    "tests/test_ext_signal_fm.py": "962cc99b84cd7bfc0ddfe7d21c109b5fbc057c18dcf7feec761c1917f45d7921",
+    "tests/test_ext_signal_hilbert.py": "c4e633a893ff13c4beb319e3cb5158a2555f81bab64a021d5d0a276d662037bd",
+    "tests/test_ext_signal_oracles.py": "fb85271c0e5e93ed0eb2adad679dfbc3b778b1547eb1dbc51f21338aecb0e8a8",
+    "tests/test_ext_signal_psd.py": "52a6d1bf6b3fea45e39b9089e547e12805f6c671b2d39efd3dc07fb79fecc409",
+    "tests/test_ext_signal_sos.py": "02ab6486ebd52a5de1797cd13e18ba59c6c92ba6d803d003edb6280232d60c1c",
+    "tests/test_ext_signal_spectral.py": "7e6944d92bc3e22295c55cb59bad83248110f313263379db4b2329f9eefde6f9",
+    "tests/test_ext_signal_spectral_oracles.py": "9d29a2272d4ebae3d524d9834ba231650dcc8ec4d20339434a81e10bf89e452a",
+    "tests/test_ext_signal_ssb.py": "d7439f4e3fa4017fb6d86aacb5b7e2763b69c06477b846c2dfe02579fc4dfe60"
+  },
+  "external_agents_report": "research/full_dsp_20261030/signal/external_agents.json",
+  "targeted_validation": {
+    "command": "python -m unittest discover -s tests -p 'test_ext_signal*.py' -v",
+    "tests": 91,
+    "exit_status": 0,
+    "elapsed_seconds": 5.331,
+    "scope": "targeted group only; no global/RTL proof",
+    "log_path": "build/full_dsp_20261030/signal/logs/targeted_am_stall_fix.log",
+    "log_sha256": "7a94c649809069391a422b49d0c9dac58dd567f8cd30fafeddae309cdafd9003"
+  },
+  "freeze": {
+    "state": "frozen_for_root_review",
+    "modules": 10,
+    "test_files": 13,
+    "task_count": 11,
+    "outstanding_blockers": [],
+    "note": "Re-frozen after authorized AM float demod held-output fix and17AM/91group tests PASS; all other model/test SHA unchanged. No further mutations until root asks."
+  }
+}

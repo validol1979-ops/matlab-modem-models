@@ -1,0 +1,91 @@
+{
+  "scope": "actual_external_agent_attempts",
+  "attempts": [
+    {
+      "tool": "pi",
+      "provider": "openwebui",
+      "requested_model_id": "~anthropic/claude-haiku-latest",
+      "task": "4radarimplementation",
+      "exit_status": "terminated_SIGTERM",
+      "result_scope": "Outputlimit retries; no accepted module",
+      "log_path": "build/full_dsp_20261030/advanced/logs/radar_haiku.log",
+      "log_sha256": "220c87b99c3a74768453f3c6d78a704423a4e08e6ad6e73ba8079cf80c616dff",
+      "isolated_workdir": true,
+      "max_external_concurrency_from_group": 1,
+      "observed_response_model_id": "anthropic/claude-haiku-5.5",
+      "final_verdict_available": false
+    },
+    {
+      "tool": "pi",
+      "provider": "openwebui",
+      "requested_model_id": "~deepseek/deepseek-v4-flash-latest",
+      "task": "4radarimplementation",
+      "exit_status": 0,
+      "result_scope": "Produced isolated chirp/echo/pulsecompression/MTI/CFAR and20tests; coordinator reviewed, changed actualDUTMonteCarlo and integrated dependencies",
+      "log_path": "build/full_dsp_20261030/advanced/logs/radar_deepseek.log",
+      "log_sha256": "1cf91285d8d856cbb691079b245db7205a75dab10dd81c8a496a514266cd40df",
+      "isolated_workdir": true,
+      "max_external_concurrency_from_group": 1,
+      "observed_response_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "final_verdict_available": true
+    },
+    {
+      "tool": "pi",
+      "provider": "openwebui",
+      "requested_model_id": "~anthropic/claude-haiku-latest",
+      "task": "IMCRA exactsourceport",
+      "exit_status": 0,
+      "result_scope": "Model length termination after mistaken binaryfixture read; no accepted module",
+      "log_path": "build/full_dsp_20261030/advanced/logs/imcra_haiku.log",
+      "log_sha256": "365300a8bc785e942949b40e3f8967a28144882c3f3a0e1f60877dd646198644",
+      "isolated_workdir": true,
+      "max_external_concurrency_from_group": 1,
+      "observed_response_model_id": "anthropic/claude-haiku-5.5",
+      "final_verdict_available": false
+    },
+    {
+      "tool": "pi",
+      "provider": "openwebui",
+      "requested_model_id": "~deepseek/deepseek-v4-flash-latest",
+      "task": "IMCRA exactsourceport",
+      "exit_status": 0,
+      "result_scope": "Produced exactfloatstate/audio and21pytesttests; coordinator added unittestadapter, exactaudioactivation/configvalidation and separate fullfixedbackend",
+      "log_path": "build/full_dsp_20261030/advanced/logs/imcra_deepseek.log",
+      "log_sha256": "a20ed81fb83a6a2011555f7dc1217c21d7b8d702988114cc6cd3c1cd6273899a",
+      "isolated_workdir": true,
+      "max_external_concurrency_from_group": 1,
+      "observed_response_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "final_verdict_available": true
+    },
+    {
+      "tool": "opencode",
+      "provider": "openwebui",
+      "requested_model_id": "openwebui/~anthropic/claude-haiku-latest",
+      "task": "Read-only CFO/SAR mathematicalreview",
+      "exit_status": 0,
+      "result_scope": "Tools read local copies; model length termination, no finalverdict; not counted as independentapproval",
+      "log_path": "build/full_dsp_20261030/advanced/logs/opencode_review.log",
+      "log_sha256": "5b2b443adc5610e52f3b0dbd66191aca1246c8d70cad06e81f3d818b38103d05",
+      "isolated_workdir": true,
+      "max_external_concurrency_from_group": 1,
+      "observed_response_model_id": null,
+      "final_verdict_available": false
+    },
+    {
+      "tool": "pi",
+      "provider": "openwebui",
+      "requested_model_id": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "task": "Read-only CFO/SAR mathematicalreview",
+      "exit_status": 0,
+      "result_scope": "Localcodeinspection; reasoninglengthtermination16384tokens despite thinkingoff; no finalverdict, not independentapproval",
+      "log_path": "build/full_dsp_20261030/advanced/logs/review_qwen.log",
+      "log_sha256": "b71f1ea531695302cc6361ebe7ac7873ca786c1d2c1e5e75d04ec3b209aaae64",
+      "isolated_workdir": true,
+      "max_external_concurrency_from_group": 1,
+      "observed_response_model_id": null,
+      "final_verdict_available": false
+    }
+  ],
+  "authorization": "User explicitly requested pi/OpenCode subagents, Haiku/Deepseek/Qwen via Qulab; Python models only",
+  "coordinator_validation": "Only model code independently reviewed and targetedtested by coordinator is ready; interrupted/length-limitedreviews are not PASS verdicts"
+}

@@ -1,0 +1,13 @@
+{
+  "source": "modems/bpsk_costas_2008_08_25/original/bpsk_costas_2008_08_25.mdl",
+  "original_sha256": "001a1c7c5fb3832eb801074c44668bbf6e37ec820bebc40446b9966e602753bf",
+  "prepared_sha256": "7d397fd2de8486ab1a18aac9fd0595982c0dcd2935c4ac639e9fc5255f0a1335",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

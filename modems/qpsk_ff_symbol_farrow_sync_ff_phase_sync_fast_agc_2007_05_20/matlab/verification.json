@@ -1,0 +1,48 @@
+{
+  "name": "qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20",
+  "original_sha256": "9174a037f09ea37cb5a27d2e70c4cd3c857b544a5d44fb861fa0aed7332fb478",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Error due to multiple causes.",
+  "migration": {
+    "source": "modems/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20/original/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.mdl",
+    "original_sha256": "9174a037f09ea37cb5a27d2e70c4cd3c857b544a5d44fb861fa0aed7332fb478",
+    "prepared_sha256": "5391fa5b0219dc4a4438fd516f9f122d884be145d64185a2295861e5d34d15e2",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      },
+      {
+        "old": "commdigbbndpm2/",
+        "new": "commdigbbndpm3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 31,
+  "finite": true,
+  "captured_values": 401439,
+  "capture_sha256": "f57961347966f2a5d5166920e64796811358269b3140d77b364e6c2ec3a69530",
+  "mapper_checks": [
+    {
+      "block": "qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20/Modulator/data_mapper",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 4,
+      "alphabet": 4,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

@@ -1,0 +1,90 @@
+{
+  "original_review": {
+    "review_scope": "6 proposed tasks in coordinator_findings.json, checked against coordinator_findings.json and existing_tasks.json only. Raw read_*/direct_* excerpts were not opened (read-call limit), so source-fact checks rely on the coordinator's recorded facts plus internal arithmetic.",
+    "overall": "FAIL",
+    "overall_reason": "2 of 6 items need correction before the findings are used (DSP-PRBS-SCRAMBLER novelty references a non-existent queue task; FEC-DVB-PLS has an unverified dependency and an ambiguous acceptance scope). The other items pass with notes.",
+    "items": [
+      {
+        "id": "FEC-CRC",
+        "verdict": "PASS",
+        "issues": [],
+        "notes": [
+          "Novelty overlaps partly with existing FEC-POLAR, which already includes an optional CRC. State that the CRC/FCS module is a shared component that FEC-POLAR should consume, not a duplicate.",
+          "CRC16 profile parameters are correctly marked as not yet fixed; no standard is claimed."
+        ]
+      },
+      {
+        "id": "DSP-PRBS-SCRAMBLER",
+        "verdict": "FAIL",
+        "issues": [
+          "novelty cites 'AWGN/Tausworthe в очереди', but existing_tasks.json has no Tausworthe task. The only related queued task is CHANNEL-AWGN. Correct the novelty text to reference CHANNEL-AWGN only, or remove the Tausworthe mention."
+        ],
+        "notes": [
+          "Source facts (generic LFSR, Fibonacci/Galois, parallel update) are consistent with the coordinator's recorded lfsr.v excerpt (sha256 5502c820...)."
+        ]
+      },
+      {
+        "id": "FEC-DVB-PLS",
+        "verdict": "FAIL",
+        "issues": [
+          "dependencies lists DSP-PRBS-SCRAMBLER, but the source facts do not show that DVB PLS scrambling uses a generic PRBS/LFSR. The scrambling sequence must be confirmed from dvb_pls source before this dependency is kept; otherwise remove it.",
+          "acceptance says 'Перебрать все значения поля PLS' without stating the field width or the number of valid PLS values. Specify the input alphabet explicitly (the project_derived_spec refers to 'весь входной алфавит исходного PLS', which needs a concrete count)."
+        ],
+        "notes": [
+          "Caveat on ETSI EN302307 and the 'do not claim full DVB-S2' limit is appropriate.",
+          "Only dvb_pls_enc.sv was recorded as a direct source; the decoder and scrambling constants are listed as to-be-read, which is acceptable as a planning state."
+        ]
+      },
+      {
+        "id": "FEC-HAMMING",
+        "verdict": "PASS",
+        "issues": [],
+        "notes": [
+          "Profiles (8,4), (16,11), (32,26), (64,57) are consistent with extended Hamming (2^r-1 shortened plus overall parity): each has d_min=4.",
+          "The (32,26,5) README ambiguity is already flagged in source_caveats; keep that caveat.",
+          "Novelty is reasonable; FEC-BCH overlap is conceptual only (BCH generalises Hamming), so no duplicate."
+        ]
+      },
+      {
+        "id": "FEC-GOLAY24",
+        "verdict": "PASS",
+        "issues": [],
+        "notes": [
+          "g(x)=x^11+x^10+x^6+x^5+x^4+x^2+1 equals 0xC75, matching the recorded source fact.",
+          "Extended Golay (24,12,8): t=3 hard decoding and 4096 codewords are consistent.",
+          "Chase-II with 16 candidates implies 4 least-reliable positions; state this explicitly in the spec.",
+          "Miscorrection beyond t=3 is already flagged as a caveat."
+        ]
+      },
+      {
+        "id": "FEC-BTC",
+        "verdict": "PASS",
+        "issues": [],
+        "notes": [
+          "Dependency on FEC-HAMMING is justified (extended Hamming is the component code).",
+          "WiMAX non-conformance and no-shortening caveats are correct; keep them.",
+          "Novelty vs FEC-TURBO (CCSDS convolutional) is distinct."
+        ]
+      }
+    ],
+    "required_fixes_before_pass": [
+      {
+        "id": "DSP-PRBS-SCRAMBLER",
+        "fix": "Remove or correct the 'Tausworthe в очереди' reference in novelty; use CHANNEL-AWGN if a reference is needed."
+      },
+      {
+        "id": "FEC-DVB-PLS",
+        "fix": "Confirm or remove dependency on DSP-PRBS-SCRAMBLER; state the exact PLS input alphabet size in acceptance."
+      }
+    ],
+    "no_edits_made": true
+  },
+  "coordinator_resolution": {
+    "DSP-PRBS-SCRAMBLER": "Novelty references CHANNEL-AWGN explicitly; its underlying PRNG name is not used as a separate task ID.",
+    "FEC-DVB-PLS": "Removed PRBS dependency; directly read encoder115..250 and constants. Explicit7-bit input0..127,64-bit output, fixed scramble word; no MODCOD conformance claim.",
+    "FEC-CRC": "Shared CRC/FCS is marked as a dependency to reuse in optional Polar CRC, not another duplicate implementation.",
+    "FEC-GOLAY24": "Proposed4 least-reliable bit/16 subsets Chase profile is explicit; does not claim unconditional globalML."
+  },
+  "residual_blockers": [],
+  "scope": "Review covered6 communication candidates; coordinator separately checked selected RAG reads and original excerpts for all15 tasks. The original FAIL review is retained, not relabeled."
+}

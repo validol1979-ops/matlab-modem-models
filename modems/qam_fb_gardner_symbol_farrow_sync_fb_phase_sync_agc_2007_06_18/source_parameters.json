@@ -1,0 +1,1857 @@
+[
+  {
+    "Output": "Magnitude and angle",
+    "SampleTime": "-1",
+    "source_line": 423
+  },
+  {
+    "Output": "Real and imag",
+    "SampleTime": "-1",
+    "source_line": 428
+  },
+  {
+    "Value": "1",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "source_line": 433
+  },
+  {
+    "Outputs": "4",
+    "DisplayOption": "none",
+    "source_line": 443
+  },
+  {
+    "Numerator": "[1]",
+    "Denominator": "[1 2]",
+    "SampleTime": "1",
+    "RTWStateStorageClass": "Auto",
+    "Realization": "auto",
+    "source_line": 449
+  },
+  {
+    "Format": "short",
+    "Decimation": "10",
+    "SampleTime": "-1",
+    "source_line": 458
+  },
+  {
+    "StatesWhenEnabling": "held",
+    "source_line": 465
+  },
+  {
+    "OutFrame": "Frame based",
+    "source_line": 471
+  },
+  {
+    "Gain": "1",
+    "Multiplication": "Element-wise(K.*u)",
+    "ParameterDataTypeMode": "Same as input",
+    "ParameterDataType": "sfix(16)",
+    "ParameterScalingMode": "Best Precision: Matrix-wise",
+    "ParameterScaling": "2^0",
+    "OutDataTypeMode": "Same as input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 475
+  },
+  {
+    "BusObject": "BusObject",
+    "PortDimensions": "-1",
+    "SampleTime": "-1",
+    "DataType": "auto",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "source_line": 494
+  },
+  {
+    "Operator": "AND",
+    "Inputs": "2",
+    "OutDataTypeMode": "Logical (see Configuration Parameters: Optimization)",
+    "LogicDataType": "uint(8)",
+    "SampleTime": "-1",
+    "source_line": 507
+  },
+  {
+    "InputValues": "[-4:5]",
+    "OutputValues": " rand(1,10)-0.5",
+    "LookUpMeth": "Interpolation-Extrapolation",
+    "OutDataTypeMode": "Same as input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "LUTDesignTableMode": "Redesign Table",
+    "LUTDesignDataSource": "Block Dialog",
+    "LUTDesignFunctionName": "sqrt(x)",
+    "LUTDesignRelError": "0.01",
+    "LUTDesignAbsError": "1e-6",
+    "source_line": 517
+  },
+  {
+    "RowIndex": "[0 1]",
+    "ColumnIndex": "[0 1]",
+    "OutputValues": "[0 0;0 0]",
+    "LookUpMeth": "Interpolation-Extrapolation",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "LUTDesignTableMode": "Redesign Table",
+    "LUTDesignDataSource": "Block Dialog",
+    "LUTDesignFunctionName": "sqrt(x)",
+    "LUTDesignRelError": "0.01",
+    "LUTDesignAbsError": "1e-6",
+    "source_line": 536
+  },
+  {
+    "Input": "Magnitude and angle",
+    "ConstantPart": "0",
+    "SampleTime": "-1",
+    "source_line": 557
+  },
+  {
+    "Operator": "exp",
+    "OutputSignalType": "auto",
+    "SampleTime": "-1",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "source_line": 563
+  },
+  {
+    "BlockType": "M-S-Function",
+    "MFile": "mlfile",
+    "source_line": 575
+  },
+  {
+    "Inputs": "4",
+    "DisplayOption": "none",
+    "BusObject": "BusObject",
+    "source_line": 579
+  },
+  {
+    "Port": "1",
+    "BusObject": "BusObject",
+    "PortDimensions": "-1",
+    "SampleTime": "-1",
+    "DataType": "auto",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "OutputWhenDisabled": "held",
+    "InitialOutput": "[]",
+    "source_line": 586
+  },
+  {
+    "ProbeWidthDataType": "double",
+    "ProbeSampleTimeDataType": "double",
+    "ProbeComplexityDataType": "double",
+    "ProbeDimensionsDataType": "double",
+    "ProbeFrameDataType": "double",
+    "source_line": 601
+  },
+  {
+    "Inputs": "2",
+    "Multiplication": "Element-wise(.*)",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Zero",
+    "SampleTime": "-1",
+    "source_line": 614
+  },
+  {
+    "Operator": ">=",
+    "LogicOutDataTypeMode": "Logical (see Configuration Parameters: Optimization)",
+    "LogicDataType": "uint(8)",
+    "SampleTime": "-1",
+    "source_line": 627
+  },
+  {
+    "Operator": "floor",
+    "SampleTime": "-1",
+    "source_line": 637
+  },
+  {
+    "TickLabels": "OneTimeTick",
+    "ZoomMode": "on",
+    "Grid": "on",
+    "TimeRange": "auto",
+    "YMin": "-5",
+    "YMax": "5",
+    "SaveName": "ScopeData",
+    "MaxDataPoints": "5000",
+    "Decimation": "1",
+    "SampleTime": "0",
+    "source_line": 642
+  },
+  {
+    "InputType": "Vector",
+    "IndexMode": "One-based",
+    "ElementSrc": "Internal",
+    "Elements": "1",
+    "RowSrc": "Internal",
+    "Rows": "1",
+    "ColumnSrc": "Internal",
+    "Columns": "1",
+    "InputPortWidth": "-1",
+    "OutputPortSize": "1",
+    "source_line": 660
+  },
+  {
+    "BlockType": "S-Function",
+    "FunctionName": "system",
+    "PortCounts": "[]",
+    "SFunctionModules": "''",
+    "source_line": 674
+  },
+  {
+    "Permissions": "ReadWrite",
+    "PermitHierarchicalResolution": "All",
+    "SystemSampleTime": "-1",
+    "RTWFcnNameOpts": "Auto",
+    "RTWFileNameOpts": "Auto",
+    "DataTypeOverride": "UseLocalSettings",
+    "MinMaxOverflowLogging": "UseLocalSettings",
+    "source_line": 680
+  },
+  {
+    "IconShape": "rectangular",
+    "Inputs": "++",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 692
+  },
+  {
+    "X0": "0",
+    "SampleTime": "1",
+    "RTWStateStorageClass": "Auto",
+    "source_line": 705
+  },
+  {
+    "Name": "AWGN\\nChannel",
+    "SourceBlock": "commchan2/AWGN\\nChannel",
+    "SourceType": "AWGN Channel",
+    "seed": "67",
+    "noiseMode": "Signal to noise ratio  (Eb/No)",
+    "EbNodB": "13",
+    "EsNodB": "10",
+    "SNRdB": "10",
+    "bitsPerSym": "4",
+    "Ps": "0.039",
+    "Tsym": "1",
+    "variance": "1",
+    "source_line": 744
+  },
+  {
+    "Name": "CIC",
+    "RTWSystemCode": "Auto",
+    "source_line": 762
+  },
+  {
+    "Name": "in",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 782
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "1/2^14",
+    "source_line": 790
+  },
+  {
+    "Name": "Integer Delay10",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "2^14",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 796
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 808
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 820
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 829
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 838
+  },
+  {
+    "Name": "Complex to\\nReal-Imag",
+    "Output": "Real and imag",
+    "source_line": 900
+  },
+  {
+    "Name": "Constant2",
+    "Orientation": "left",
+    "source_line": 907
+  },
+  {
+    "Name": "Constant4",
+    "Orientation": "up",
+    "Value": "-0.5",
+    "source_line": 913
+  },
+  {
+    "Name": "Discrete-Time\\nScatter Plot\\nScope1",
+    "Tag": "ScatterPlot",
+    "SourceBlock": "commsink2/Discrete-Time\\nScatter Plot\\nScope",
+    "SourceType": "Discrete-Time Scatter Plot Scope",
+    "sampPerSymb": "1",
+    "offsetEye": "0",
+    "numTraces": "1000",
+    "numNewFrames": "300",
+    "LineMarkers": ".",
+    "LineColors": "b",
+    "xMin": "-2",
+    "xMax": "2",
+    "yMin": "-2",
+    "yMax": "2",
+    "inphaseLabel": "In-phase Amplitude",
+    "quadratureLabel": "Quadrature Amplitude",
+    "FigPos": "[232 118 560 560]",
+    "figTitle": "Scatter Plot",
+    "numLinesMax": "8",
+    "block_type_": "scatter",
+    "source_line": 921
+  },
+  {
+    "Name": "Downsample1",
+    "SourceBlock": "dspsigops/Downsample",
+    "SourceType": "Downsample",
+    "N": "8",
+    "phase": "0",
+    "ic": "0",
+    "smode": "Allow multirate",
+    "fmode": "Maintain input frame size",
+    "source_line": 952
+  },
+  {
+    "Name": "Downsample2",
+    "SourceBlock": "dspsigops/Downsample",
+    "SourceType": "Downsample",
+    "N": "8",
+    "phase": "0",
+    "ic": "0",
+    "smode": "Allow multirate",
+    "fmode": "Maintain input frame size",
+    "source_line": 965
+  },
+  {
+    "Name": "Downsample3",
+    "SourceBlock": "dspsigops/Downsample",
+    "SourceType": "Downsample",
+    "N": "8",
+    "phase": "0",
+    "ic": "0",
+    "smode": "Allow multirate",
+    "fmode": "Maintain input frame size",
+    "source_line": 978
+  },
+  {
+    "Name": "FIR RRC Filter",
+    "SourceBlock": "dspddes3/Digital FIR Raised\\nCosine Filter Design",
+    "SourceType": "Digital FIR Raised Cosine Filter Design",
+    "filter_order": "32",
+    "upper_cutoff_freq": "1/8",
+    "rolloff_type": "Rolloff factor",
+    "transition_bw": "0.4",
+    "rolloff_factor": "1",
+    "window_type": "Boxcar",
+    "Rs": "5",
+    "Kbeta": "3.4",
+    "InitCond": "0",
+    "source_line": 991
+  },
+  {
+    "Name": "Farrow_interpolator",
+    "RTWSystemCode": "Auto",
+    "source_line": 1011
+  },
+  {
+    "Name": "in",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 1031
+  },
+  {
+    "Name": "mu",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 1039
+  },
+  {
+    "Name": "Gain1",
+    "Gain": "1/6",
+    "source_line": 1047
+  },
+  {
+    "Name": "Gain10",
+    "Gain": "-1/6",
+    "source_line": 1053
+  },
+  {
+    "Name": "Gain11",
+    "source_line": 1059
+  },
+  {
+    "Name": "Gain12",
+    "Gain": "-1/2",
+    "source_line": 1064
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "-1/2",
+    "source_line": 1070
+  },
+  {
+    "Name": "Gain3",
+    "Gain": "0",
+    "source_line": 1076
+  },
+  {
+    "Name": "Gain4",
+    "Gain": "1/2",
+    "source_line": 1082
+  },
+  {
+    "Name": "Gain5",
+    "Gain": "1/2",
+    "source_line": 1088
+  },
+  {
+    "Name": "Gain6",
+    "Gain": "-1",
+    "source_line": 1094
+  },
+  {
+    "Name": "Gain7",
+    "Gain": "-1/6",
+    "source_line": 1100
+  },
+  {
+    "Name": "Gain8",
+    "Gain": "-1/3",
+    "source_line": 1106
+  },
+  {
+    "Name": "Gain9",
+    "Gain": "1/2",
+    "source_line": 1112
+  },
+  {
+    "Name": "Integer Delay1",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1118
+  },
+  {
+    "Name": "Integer Delay10",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1132
+  },
+  {
+    "Name": "Integer Delay11",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1146
+  },
+  {
+    "Name": "Integer Delay2",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1160
+  },
+  {
+    "Name": "Integer Delay3",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1174
+  },
+  {
+    "Name": "Integer Delay4",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1188
+  },
+  {
+    "Name": "Integer Delay5",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1202
+  },
+  {
+    "Name": "Integer Delay6",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1216
+  },
+  {
+    "Name": "Integer Delay7",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1230
+  },
+  {
+    "Name": "Integer Delay8",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1244
+  },
+  {
+    "Name": "Integer Delay9",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1258
+  },
+  {
+    "Name": "Product",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1272
+  },
+  {
+    "Name": "Product1",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1281
+  },
+  {
+    "Name": "Product2",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1290
+  },
+  {
+    "Name": "Sum",
+    "Inputs": "++++",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1299
+  },
+  {
+    "Name": "Sum1",
+    "Inputs": "++++",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1309
+  },
+  {
+    "Name": "Sum13",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 1319
+  },
+  {
+    "Name": "Sum2",
+    "Inputs": "++++",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1328
+  },
+  {
+    "Name": "Sum3",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 1338
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 1347
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 1356
+  },
+  {
+    "Name": "Farrow_interpolator1",
+    "RTWSystemCode": "Auto",
+    "source_line": 1675
+  },
+  {
+    "Name": "in",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 1695
+  },
+  {
+    "Name": "mu",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 1703
+  },
+  {
+    "Name": "Gain1",
+    "Gain": "1/6",
+    "source_line": 1711
+  },
+  {
+    "Name": "Gain10",
+    "Gain": "-1/6",
+    "source_line": 1717
+  },
+  {
+    "Name": "Gain11",
+    "source_line": 1723
+  },
+  {
+    "Name": "Gain12",
+    "Gain": "-1/2",
+    "source_line": 1728
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "-1/2",
+    "source_line": 1734
+  },
+  {
+    "Name": "Gain3",
+    "Gain": "0",
+    "source_line": 1740
+  },
+  {
+    "Name": "Gain4",
+    "Gain": "1/2",
+    "source_line": 1746
+  },
+  {
+    "Name": "Gain5",
+    "Gain": "1/2",
+    "source_line": 1752
+  },
+  {
+    "Name": "Gain6",
+    "Gain": "-1",
+    "source_line": 1758
+  },
+  {
+    "Name": "Gain7",
+    "Gain": "-1/6",
+    "source_line": 1764
+  },
+  {
+    "Name": "Gain8",
+    "Gain": "-1/3",
+    "source_line": 1770
+  },
+  {
+    "Name": "Gain9",
+    "Gain": "1/2",
+    "source_line": 1776
+  },
+  {
+    "Name": "Integer Delay1",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1782
+  },
+  {
+    "Name": "Integer Delay10",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1796
+  },
+  {
+    "Name": "Integer Delay11",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1810
+  },
+  {
+    "Name": "Integer Delay2",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1824
+  },
+  {
+    "Name": "Integer Delay3",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1838
+  },
+  {
+    "Name": "Integer Delay4",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1852
+  },
+  {
+    "Name": "Integer Delay5",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1866
+  },
+  {
+    "Name": "Integer Delay6",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1880
+  },
+  {
+    "Name": "Integer Delay7",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1894
+  },
+  {
+    "Name": "Integer Delay8",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1908
+  },
+  {
+    "Name": "Integer Delay9",
+    "Orientation": "down",
+    "NamePlacement": "alternate",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1922
+  },
+  {
+    "Name": "Product",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1936
+  },
+  {
+    "Name": "Product1",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1945
+  },
+  {
+    "Name": "Product2",
+    "NamePlacement": "alternate",
+    "RndMeth": "Floor",
+    "source_line": 1954
+  },
+  {
+    "Name": "Sum",
+    "Inputs": "++++",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1963
+  },
+  {
+    "Name": "Sum1",
+    "Inputs": "++++",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1973
+  },
+  {
+    "Name": "Sum13",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 1983
+  },
+  {
+    "Name": "Sum2",
+    "Inputs": "++++",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1992
+  },
+  {
+    "Name": "Sum3",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 2002
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "+|||+||||",
+    "source_line": 2011
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 2020
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "2",
+    "source_line": 2339
+  },
+  {
+    "Name": "Integer Delay1",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "0",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2345
+  },
+  {
+    "Name": "Integer Delay2",
+    "Orientation": "left",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2357
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "magnitude^2",
+    "source_line": 2370
+  },
+  {
+    "Name": "Modulator",
+    "RTWSystemCode": "Auto",
+    "source_line": 2377
+  },
+  {
+    "Name": "Constant3",
+    "Value": "4",
+    "source_line": 2397
+  },
+  {
+    "Name": "FIR RRC Filter",
+    "SourceBlock": "dspddes3/Digital FIR Raised\\nCosine Filter Design",
+    "SourceType": "Digital FIR Raised Cosine Filter Design",
+    "filter_order": "32",
+    "upper_cutoff_freq": "1/8",
+    "rolloff_type": "Rolloff factor",
+    "transition_bw": "0.4",
+    "rolloff_factor": "1",
+    "window_type": "Boxcar",
+    "Rs": "5",
+    "Kbeta": "3.4",
+    "InitCond": "0",
+    "source_line": 2403
+  },
+  {
+    "Name": "Gain1",
+    "Orientation": "up",
+    "Gain": "4",
+    "source_line": 2423
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "1/4",
+    "source_line": 2430
+  },
+  {
+    "Name": "Gain3",
+    "Gain": "4",
+    "source_line": 2436
+  },
+  {
+    "Name": "Grey_encoder",
+    "DialogController": "Simulink.DDGSource",
+    "InputValues": "[0:3]",
+    "OutputValues": "[0 1 3 2]",
+    "source_line": 2442
+  },
+  {
+    "Name": "Integer Delay2",
+    "Orientation": "left",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2451
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "Operator": "mod",
+    "source_line": 2464
+  },
+  {
+    "Name": "Rounding\\nFunction2",
+    "source_line": 2471
+  },
+  {
+    "Name": "Scrambler",
+    "SourceBlock": "commsequence2/Scrambler",
+    "SourceType": "Scrambler",
+    "M": "16",
+    "poly": "[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]",
+    "ini_sta": "[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]",
+    "source_line": 2476
+  },
+  {
+    "Name": "Sum1",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 2490
+  },
+  {
+    "Name": "Sum3",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2499
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "++|",
+    "source_line": 2508
+  },
+  {
+    "Name": "Unit Delay",
+    "source_line": 2517
+  },
+  {
+    "Name": "Upsample",
+    "SourceBlock": "dspsigops/Upsample",
+    "SourceType": "Upsample",
+    "N": "8",
+    "phase": "0",
+    "ic": "0",
+    "mode": "Maintain input frame size",
+    "source_line": 2522
+  },
+  {
+    "Name": "constant",
+    "Value": "5",
+    "source_line": 2534
+  },
+  {
+    "Name": "data_mapper",
+    "DialogController": "Simulink.DDGSource",
+    "InputValues": "[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]",
+    "OutputValues": "[1.5+1.5i 0.5+1.5i 1.5+0.5i 0.5+0.5i -1.5+1.5i -1.5+0.5i -0.5+1.5i  -0.5+0.5i -1.5-1.5i -0.5-1.5i -1.5-0.5i -0.5-0.5i 1.5-1.5i 1.5-0.5i 0.5-1.5i 0.5-0.5i]",
+    "LookUpMeth": "Use Input Nearest",
+    "source_line": 2540
+  },
+  {
+    "Name": "out1",
+    "IconDisplay": "Port number",
+    "source_line": 2551
+  },
+  {
+    "Name": "NCO",
+    "Orientation": "left",
+    "RTWSystemCode": "Auto",
+    "source_line": 2693
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 2714
+  },
+  {
+    "Name": "Constant1",
+    "Value": "4",
+    "source_line": 2722
+  },
+  {
+    "Name": "Constant5",
+    "Value": "0",
+    "source_line": 2728
+  },
+  {
+    "Name": "Enabled\\nSubsystem",
+    "RTWSystemCode": "Auto",
+    "source_line": 2734
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 2754
+  },
+  {
+    "Name": "Enable",
+    "source_line": 2762
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 2768
+  },
+  {
+    "Name": "Integer Delay1",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2783
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "mod",
+    "source_line": 2795
+  },
+  {
+    "Name": "Relational\\nOperator",
+    "Operator": "<=",
+    "source_line": 2802
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|-+",
+    "source_line": 2809
+  },
+  {
+    "Name": "overflow",
+    "IconDisplay": "Port number",
+    "source_line": 2818
+  },
+  {
+    "Name": "mu",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 2825
+  },
+  {
+    "Name": "Phase/\\nFrequency\\nOffset",
+    "SourceBlock": "commrflib2/Phase//\\nFrequency\\nOffset",
+    "SourceType": "Phase/Frequency Offset",
+    "freqOffset": "1/2^9",
+    "phaseOffset": "45",
+    "source_line": 2909
+  },
+  {
+    "Name": "Product1",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 2920
+  },
+  {
+    "Name": "Scope4",
+    "BackgroundColor": "darkGreen",
+    "NumInputPorts": "2",
+    "ZoomMode": "xonly",
+    "source_line": 2929
+  },
+  {
+    "Name": "Scope5",
+    "BackgroundColor": "darkGreen",
+    "NumInputPorts": "1",
+    "ZoomMode": "xonly",
+    "source_line": 2951
+  },
+  {
+    "Name": "Sum4",
+    "Orientation": "left",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 2972
+  },
+  {
+    "Name": "one_sps_clock_domain",
+    "RTWSystemCode": "Auto",
+    "source_line": 2982
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3002
+  },
+  {
+    "Name": "Enable",
+    "source_line": 3010
+  },
+  {
+    "Name": "Constant1",
+    "source_line": 3016
+  },
+  {
+    "Name": "Integer Delay1",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 3022
+  },
+  {
+    "Name": "Integer Delay2",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 3034
+  },
+  {
+    "Name": "Mux",
+    "Inputs": "3",
+    "DisplayOption": "bar",
+    "source_line": 3046
+  },
+  {
+    "Name": "NCO",
+    "RTWSystemCode": "Auto",
+    "source_line": 3055
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3075
+  },
+  {
+    "Name": "Constant1",
+    "Value": "2",
+    "source_line": 3083
+  },
+  {
+    "Name": "Gain",
+    "Gain": "1/2",
+    "source_line": 3089
+  },
+  {
+    "Name": "Integer Delay1",
+    "Orientation": "left",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0.5",
+    "reset_popup": "None",
+    "source_line": 3095
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "mod",
+    "source_line": 3108
+  },
+  {
+    "Name": "Rounding\\nFunction",
+    "Operator": "round",
+    "source_line": 3115
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 3121
+  },
+  {
+    "Name": "ena_signal",
+    "RTWSystemCode": "Auto",
+    "source_line": 3130
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3150
+  },
+  {
+    "Name": "Integer Delay3",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 3158
+  },
+  {
+    "Name": "Logical\\nOperator",
+    "source_line": 3170
+  },
+  {
+    "Name": "Logical\\nOperator1",
+    "Operator": "NOT",
+    "source_line": 3177
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 3185
+  },
+  {
+    "Name": "overflow",
+    "IconDisplay": "Port number",
+    "source_line": 3226
+  },
+  {
+    "Name": "one_sps_clock_domain\\n",
+    "RTWSystemCode": "Auto",
+    "source_line": 3293
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3313
+  },
+  {
+    "Name": "soft_for_gardner",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 3321
+  },
+  {
+    "Name": "Enable",
+    "source_line": 3329
+  },
+  {
+    "Name": "Complex to\\nReal-Imag1",
+    "Output": "Real and imag",
+    "source_line": 3335
+  },
+  {
+    "Name": "Constant4",
+    "Orientation": "up",
+    "Value": "4",
+    "source_line": 3342
+  },
+  {
+    "Name": "Descrambler1",
+    "SourceBlock": "commsequence2/Descrambler",
+    "SourceType": "Descrambler",
+    "M": "16",
+    "poly": "[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]",
+    "ini_sta": "[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]",
+    "source_line": 3350
+  },
+  {
+    "Name": "Gain4",
+    "Gain": "1/4",
+    "source_line": 3363
+  },
+  {
+    "Name": "Gain5",
+    "Gain": "4",
+    "source_line": 3369
+  },
+  {
+    "Name": "Gain6",
+    "Orientation": "up",
+    "Gain": "4",
+    "source_line": 3375
+  },
+  {
+    "Name": "Gardner\\ntiming error detector",
+    "RTWSystemCode": "Auto",
+    "source_line": 3382
+  },
+  {
+    "Name": "soft",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3402
+  },
+  {
+    "Name": "Complex to\\nReal-Imag2",
+    "Output": "Real",
+    "source_line": 3410
+  },
+  {
+    "Name": "Demux",
+    "BackgroundColor": "black",
+    "Outputs": "3",
+    "source_line": 3417
+  },
+  {
+    "Name": "Product",
+    "RndMeth": "Floor",
+    "source_line": 3426
+  },
+  {
+    "Name": "Sum1",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 3434
+  },
+  {
+    "Name": "conj",
+    "Operator": "conj",
+    "source_line": 3443
+  },
+  {
+    "Name": "error",
+    "IconDisplay": "Port number",
+    "source_line": 3450
+  },
+  {
+    "Name": "Grey_decoder",
+    "DialogController": "Simulink.DDGSource",
+    "InputValues": "[0:3]",
+    "OutputValues": "[0 1 3 2]",
+    "source_line": 3510
+  },
+  {
+    "Name": "Integer Delay1",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 3519
+  },
+  {
+    "Name": "Math\\nFunction",
+    "OutputSignalType": "complex",
+    "source_line": 3531
+  },
+  {
+    "Name": "Math\\nFunction2",
+    "Operator": "mod",
+    "source_line": 3538
+  },
+  {
+    "Name": "Product",
+    "RndMeth": "Floor",
+    "source_line": 3545
+  },
+  {
+    "Name": "Rounding\\nFunction3",
+    "source_line": 3553
+  },
+  {
+    "Name": "Sum5",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 3558
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "++|",
+    "source_line": 3567
+  },
+  {
+    "Name": "Sum7",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 3576
+  },
+  {
+    "Name": "data_demapper",
+    "DialogController": "Simulink.DDGSource",
+    "RowIndex": "[-1.5 -0.5 0.5 1.5]",
+    "ColumnIndex": "[-1.5 -0.5 0.5 1.5]",
+    "OutputValues": "[8 10 5 4;9 11 7 6;14 15 3 1;12 13 2 0]",
+    "LookUpMeth": "Use Input Nearest",
+    "source_line": 3585
+  },
+  {
+    "Name": "decision",
+    "RTWSystemCode": "Auto",
+    "source_line": 3597
+  },
+  {
+    "Name": "soft",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3617
+  },
+  {
+    "Name": "Constant",
+    "Value": "1/2+(1/2)*i",
+    "source_line": 3625
+  },
+  {
+    "Name": "Rounding\\nFunction",
+    "source_line": 3631
+  },
+  {
+    "Name": "Sum",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 3636
+  },
+  {
+    "Name": "decision",
+    "IconDisplay": "Port number",
+    "source_line": 3647
+  },
+  {
+    "Name": "decision_phase_error_detector",
+    "RTWSystemCode": "Auto",
+    "source_line": 3681
+  },
+  {
+    "Name": "decision",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3701
+  },
+  {
+    "Name": "soft",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 3709
+  },
+  {
+    "Name": "Complex to\\nMagnitude-Angle",
+    "Output": "Angle",
+    "source_line": 3717
+  },
+  {
+    "Name": "Complex to\\nMagnitude-Angle1",
+    "Output": "Angle",
+    "source_line": 3724
+  },
+  {
+    "Name": "Sum1",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 3731
+  },
+  {
+    "Name": "error",
+    "IconDisplay": "Port number",
+    "source_line": 3742
+  },
+  {
+    "Name": "gain_error",
+    "RTWSystemCode": "Auto",
+    "source_line": 3782
+  },
+  {
+    "Name": "soft",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3802
+  },
+  {
+    "Name": "Constant1",
+    "Value": "sum([2*0.5^2 2*(0.5^2+1.5^2) 2*1.5^2]) / 4",
+    "source_line": 3810
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "magnitude^2",
+    "source_line": 3817
+  },
+  {
+    "Name": "Sum3",
+    "IconShape": "round",
+    "Inputs": "|-+",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 3824
+  },
+  {
+    "Name": "gain_error",
+    "IconDisplay": "Port number",
+    "source_line": 3835
+  },
+  {
+    "Name": "gain_error_loop_filter",
+    "RTWSystemCode": "Auto",
+    "source_line": 3869
+  },
+  {
+    "Name": "in",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3889
+  },
+  {
+    "Name": "Gain3",
+    "Gain": "1/2^11",
+    "source_line": 3897
+  },
+  {
+    "Name": "integrator",
+    "RTWSystemCode": "Auto",
+    "source_line": 3903
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 3923
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "1",
+    "reset_popup": "None",
+    "source_line": 3931
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 3943
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 3952
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 3987
+  },
+  {
+    "Name": "phase_offset_loop_filter",
+    "RTWSystemCode": "Auto",
+    "source_line": 4014
+  },
+  {
+    "Name": "in",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 4034
+  },
+  {
+    "Name": "Gain1",
+    "Gain": "1/2^4",
+    "source_line": 4042
+  },
+  {
+    "Name": "Gain3",
+    "Gain": "1/2^8",
+    "source_line": 4049
+  },
+  {
+    "Name": "Sum2",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 4056
+  },
+  {
+    "Name": "integrator1",
+    "RTWSystemCode": "Auto",
+    "source_line": 4065
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 4085
+  },
+  {
+    "Name": "Constant1",
+    "Value": "2*pi",
+    "source_line": 4093
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 4099
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "mod",
+    "source_line": 4111
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 4118
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 4127
+  },
+  {
+    "Name": "integrator2",
+    "RTWSystemCode": "Auto",
+    "source_line": 4176
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 4196
+  },
+  {
+    "Name": "Constant",
+    "Value": "2*pi",
+    "source_line": 4204
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 4210
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "mod",
+    "source_line": 4222
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 4229
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 4238
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 4287
+  },
+  {
+    "Name": "sqrt(-1)",
+    "Gain": "i",
+    "source_line": 4341
+  },
+  {
+    "Name": "timing_error_loop_filter",
+    "RTWSystemCode": "Auto",
+    "source_line": 4347
+  },
+  {
+    "Name": "in",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 4367
+  },
+  {
+    "Name": "Gain1",
+    "Gain": "1/2^8",
+    "source_line": 4375
+  },
+  {
+    "Name": "Gain3",
+    "Gain": "1/2^16",
+    "source_line": 4382
+  },
+  {
+    "Name": "Sum2",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 4389
+  },
+  {
+    "Name": "integrator",
+    "RTWSystemCode": "Auto",
+    "source_line": 4398
+  },
+  {
+    "Name": "In1",
+    "Port": "1",
+    "IconDisplay": "Port number",
+    "source_line": 4418
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 4426
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 4438
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 4447
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 4482
+  },
+  {
+    "Name": "scatter",
+    "IconDisplay": "Port number",
+    "source_line": 4530
+  },
+  {
+    "Name": "data",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 4537
+  },
+  {
+    "Name": "gain_control",
+    "Port": "3",
+    "IconDisplay": "Port number",
+    "source_line": 4545
+  },
+  {
+    "Name": "timing_error",
+    "Port": "4",
+    "IconDisplay": "Port number",
+    "source_line": 4553
+  },
+  {
+    "Name": "scatter",
+    "IconDisplay": "Port number",
+    "source_line": 4785
+  },
+  {
+    "Name": "data",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 4792
+  },
+  {
+    "Name": "agc",
+    "Port": "3",
+    "IconDisplay": "Port number",
+    "source_line": 4800
+  },
+  {
+    "Name": "timing_error\\n",
+    "Port": "4",
+    "IconDisplay": "Port number",
+    "source_line": 4808
+  },
+  {
+    "Name": "signal_power(Watts)",
+    "Decimation": "1",
+    "SampleTime": "2^14",
+    "source_line": 4903
+  }
+]

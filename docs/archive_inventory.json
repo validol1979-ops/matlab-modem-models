@@ -1,0 +1,4035 @@
+[
+  {
+    "archive": "arxiv/DPD_Example.zip",
+    "sha256": "646142e6a7deea610675a07e7425695149e8613516baed8274adb971ee0ce03d",
+    "aliases": [],
+    "directory": "sources/DPD_Example",
+    "files": [
+      {
+        "path": "sources/DPD_Example/main/DPD.pdf",
+        "sha256": "9b16719c12be043dc4a7ff58e3880488d9ec2a0f2977d0300f9c515216381cfd",
+        "size": 829452
+      },
+      {
+        "path": "sources/DPD_Example/main/DPD_analysis.m",
+        "sha256": "8eb07d23a802b5543db37af2b3cdd0e5eb71f35ea2e2da4a57f2b731c0382daf",
+        "size": 4318
+      },
+      {
+        "path": "sources/DPD_Example/main/ILA_CONFIGSS.slx",
+        "sha256": "f5130e06790e1fb158a019d34b7558e67c25ba25d810fda4bfb911657a5bd30e",
+        "size": 17918
+      },
+      {
+        "path": "sources/DPD_Example/main/README.pdf",
+        "sha256": "6528bc81e51c2b80f3c467b0ab15ee240a3f10dbe83f64645cb49e265086d34b",
+        "size": 545917
+      },
+      {
+        "path": "sources/DPD_Example/main/dpd_adapt_verify.slx",
+        "sha256": "4e88197641c45b2afcbd53b4c8d73fe4defabc9368377dccd335e868b71e2a51",
+        "size": 57613
+      },
+      {
+        "path": "sources/DPD_Example/main/dpd_adapt_verify.slx.r2014a",
+        "sha256": "6c38cd5868b016e7a7fff42004be0ce501accc8db17435b6649a997c1771723e",
+        "size": 51739
+      },
+      {
+        "path": "sources/DPD_Example/main/dpd_adapt_verify.slxc",
+        "sha256": "5d44ea185eef93cc4bcc859992cebe9252332857302c10141baa2d6a6134a217",
+        "size": 5120
+      },
+      {
+        "path": "sources/DPD_Example/main/dpd_image.png",
+        "sha256": "d587e1d474a0059d3ac0d91e0980ea7e27d5b4ee81a9178c5dc3bfd80aec8ddc",
+        "size": 18383
+      },
+      {
+        "path": "sources/DPD_Example/main/dpd_static_verify.slx",
+        "sha256": "34dbf1d7f9089593053bfc61199a44a1ee64b644d25623c9fe7ddfeb06f28394",
+        "size": 41407
+      },
+      {
+        "path": "sources/DPD_Example/main/dpd_static_verify.slxc",
+        "sha256": "c0ad420ad9e9988f40f1e93c4626bd817b5c25e3b6e535002f5e59b83f1af62b",
+        "size": 5147
+      },
+      {
+        "path": "sources/DPD_Example/main/fit_memory_poly_model.m",
+        "sha256": "d6762999a22743b177f580ef9082f9933cdef41db523d8d4164f2b2c12127693",
+        "size": 1179
+      },
+      {
+        "path": "sources/DPD_Example/main/license.txt",
+        "sha256": "588dd9923345084d539eeac3c21c673c2ab88635b1512dc150b24b97b3ee57dd",
+        "size": 1312
+      },
+      {
+        "path": "sources/DPD_Example/main/pa_measure.slx",
+        "sha256": "bd676edf6c991082b68bbcc68207b3cc7db4b7076c5117a7318d9c92b206d2f4",
+        "size": 45471
+      },
+      {
+        "path": "sources/DPD_Example/main/pa_measure.slxc",
+        "sha256": "8b74da186f0a47dc7dee3efdf08e3a0d49e1e295d45e2587ff40889b8b72c2e4",
+        "size": 5037
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_jitprj/jitEngineAccessInfo.mat",
+        "sha256": "7b3f6aa10ad83d812651e5b2ef1e700742c800c8cc4d9f08c82cd7fc8626aa6a",
+        "size": 734
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_jitprj/sf9PDBOxwzIh1IY6KME7y6D.l",
+        "sha256": "f042e2f7ea73389430e300b0ddbd9d61333c6dd7a7d29701d7202256f39b6303",
+        "size": 13948
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_jitprj/sf9PDBOxwzIh1IY6KME7y6D.mat",
+        "sha256": "0af19edc57103c2f8cc128d5c611bbb2c22f122cf98f9ab3bc36dee57d40754f",
+        "size": 1051
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_sfprj/EMLReport/emlReportAccessInfo.mat",
+        "sha256": "d0b33aa13b544174e714b8c751243e38d887d1f9a97ea6d34158aaa7d5089e49",
+        "size": 733
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_sfprj/EMLReport/sf9PDBOxwzIh1IY6KME7y6D.mat",
+        "sha256": "41378da2b710144d2279fb5a00676a80ef944d7fb919b5a744371f5ee7a5856d",
+        "size": 34216
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_sfprj/dpd_static_verify/_self/sfun/info/binfo.mat",
+        "sha256": "debf718c501cf9f2a14a45059a6f1b87bbfbf516cb2316108a09a8e065361196",
+        "size": 764
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_sfprj/dpd_static_verify/amsi_serial.mat",
+        "sha256": "17f0d1116ae6a24b0b8eb83b03668ae0f56fed8ddfcf895d5443475bbdf35e0c",
+        "size": 238
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_sfprj/precompile/8LyLvWZDNon23mnJIMIFgC.mat",
+        "sha256": "b6d2f1e8c2305e0e76349562049238aad6b80a86e82461454063211ba089526b",
+        "size": 672
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_sfprj/precompile/Q7UH0bWnGFcaj5RGy0JVbG.mat",
+        "sha256": "0fb516ab3385caa8ba8b7d4bbaf99e289d10bbbdc291c6c37307df8415a11d87",
+        "size": 698
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/_sfprj/precompile/autoInferAccessInfo.mat",
+        "sha256": "ca1fcaeca236442270fbeb4c1a858e7d716d9d828223cf6b7f514f53fa69e81d",
+        "size": 778
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/dpd_adapt_verify/checksumOfCache.mat",
+        "sha256": "5e936096b96d2b05d0a73a469f11ce7ef593822ceb443e297464c048da00121d",
+        "size": 392
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/dpd_adapt_verify/tmwinternal/simulink_cache.xml",
+        "sha256": "1540f97ba9bd2641b5287759bf95d9481f6ffd33b14eb90ea491a404f2799641",
+        "size": 307
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/dpd_adapt_verify/varInfo.mat",
+        "sha256": "0fef8f6b0328a060d45b6b457a48a0d40634c1f9b9f6d487b0ad9d43309b108a",
+        "size": 2784
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/dpd_static_verify/checksumOfCache.mat",
+        "sha256": "989966ac7cc6edbdc53c12c505977e34cc7067f00e8afcf055e92387ec55d3a2",
+        "size": 392
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/dpd_static_verify/tmwinternal/simulink_cache.xml",
+        "sha256": "64778417020fd10f8b0314c3f758a859b39244105e8cd1c1704379a0a807ef54",
+        "size": 307
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/dpd_static_verify/varInfo.mat",
+        "sha256": "75ea490ae6e1dc417106141d0903412069d4711ff01ae04c1ac7e7b7c42af565",
+        "size": 2776
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/pa_measure/checksumOfCache.mat",
+        "sha256": "d91cd45eefa60ee25e10de66dfb56207519563ba081b6704be6df85f03c9b2d4",
+        "size": 392
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/pa_measure/tmwinternal/simulink_cache.xml",
+        "sha256": "3935343a6087c7152857d4c29e9e747d2d21b62c48ad58c7b42eb6eb241311b3",
+        "size": 307
+      },
+      {
+        "path": "sources/DPD_Example/main/slprj/sim/varcache/pa_measure/varInfo.mat",
+        "sha256": "0136e08405921afb21d0db2893cd79b9c025de06b61d9ebff7d8bab3bd410c1c",
+        "size": 1384
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip",
+    "sha256": "8c89cba5fa128ba89320f38f9f324872e030937656bae3b326da95e41fb4a0a6",
+    "aliases": [],
+    "directory": "sources/Modems",
+    "files": [
+      {
+        "path": "sources/Modems/Modems/QAM64_2008_11_21.rar",
+        "sha256": "64c4c15a9bb8fcb58e6256409a34534152f5ffd9f096b6ace29d349baecae728",
+        "size": 20368
+      },
+      {
+        "path": "sources/Modems/Modems/bpsk_costas_2008_08_25.rar",
+        "sha256": "2e0b186dc8f3ac44dc8c7aa0cb757d3347930b8a93ddfef4080c2dbe5047e5ac",
+        "size": 15212
+      },
+      {
+        "path": "sources/Modems/Modems/dqpsk_19_09_2006.rar",
+        "sha256": "0a32da3bbd164a6c5603799fdbf6d0b601a5986315bffbf423d64f8441e5d9d5",
+        "size": 10683
+      },
+      {
+        "path": "sources/Modems/Modems/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.rar",
+        "sha256": "da3a14c10d1a7c42cfb65314c004c80ea2f8a383cc8fa650a2e98412936c716d",
+        "size": 13942
+      },
+      {
+        "path": "sources/Modems/Modems/gmsk_coherent_demodulation_2010_10_03.rar",
+        "sha256": "7b1359faee92d0241217c63db5d7c3f7ef7f992e9b95c88769fb01ba45157867",
+        "size": 24480
+      },
+      {
+        "path": "sources/Modems/Modems/graphic_equalizer_16_band_2011_05_17.rar",
+        "sha256": "851217bbe7dbb6a43ae9d6eb18aa6367f597fadce60c0463649d09d0b8787f50",
+        "size": 19537
+      },
+      {
+        "path": "sources/Modems/Modems/milewski_sequence_2011_05_19.rar",
+        "sha256": "48e190a6aff585ea2d5f3292b123956a54f2aa4b3c652a6253db0a01dd643c9a",
+        "size": 9735
+      },
+      {
+        "path": "sources/Modems/Modems/msk_modulator_2008_06_22.rar",
+        "sha256": "dc5b238904daf6620501ac6699a0ecc35875962d745d23ed019c70e06a269472",
+        "size": 7086
+      },
+      {
+        "path": "sources/Modems/Modems/pi4_qpsk_8_sps_ff_sync_2021_05_27.zip",
+        "sha256": "ac31889fc462cdb66a65217bd6d8f97831c1ddd7782a43e9c36d3cece681ce57",
+        "size": 54717
+      },
+      {
+        "path": "sources/Modems/Modems/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15.rar",
+        "sha256": "123aa11fea915ab205788589999063fa253dd9137f62939efcd12ed49980c427",
+        "size": 26248
+      },
+      {
+        "path": "sources/Modems/Modems/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15.zip",
+        "sha256": "81355d40c995bb0af6cf11a8a84723f330951684521c83d3e918ac7becac000d",
+        "size": 13188
+      },
+      {
+        "path": "sources/Modems/Modems/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.rar",
+        "sha256": "becdc852ed352170bc9f3d9a9693313d6f79db90c93349d4414345787ae63c9d",
+        "size": 15615
+      },
+      {
+        "path": "sources/Modems/Modems/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.rar",
+        "sha256": "9142c70c167a80e8a2644e3f9c1c7b64e80ea4dbb5028b3b5b3c09269fd29154",
+        "size": 14818
+      },
+      {
+        "path": "sources/Modems/Modems/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26.rar",
+        "sha256": "3923073e12614122232f1547131ae55cbc475d6f62639f2a112e7c1ffec03d4f",
+        "size": 19386
+      },
+      {
+        "path": "sources/Modems/Modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.rar",
+        "sha256": "64fb777eebf01b867aa905a433525e58ef9e0755c25e7d600de8c2b0359e6b10",
+        "size": 15812
+      },
+      {
+        "path": "sources/Modems/Modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.rar",
+        "sha256": "2395d6b8824cae01f952c98b6a0061ce1d22f8742bff301a21d38103f7389ab7",
+        "size": 17911
+      },
+      {
+        "path": "sources/Modems/Modems/qpsk_demod_with_phase_noise.zip",
+        "sha256": "b605e6177d6b9d5427d6a601dd8be984f351038c73560b41ce6331a6dbf5a7f5",
+        "size": 13485
+      },
+      {
+        "path": "sources/Modems/Modems/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.rar",
+        "sha256": "2eb320718eed1076e116b8039972f45a6f9c0fd50a82708c50ee564a1f1111d2",
+        "size": 12236
+      },
+      {
+        "path": "sources/Modems/Modems/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.rar",
+        "sha256": "b9de90895a671ebc40bfc80e9189a39de7f7202296e40a06d748e53988735f40",
+        "size": 15450
+      },
+      {
+        "path": "sources/Modems/Modems/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.rar",
+        "sha256": "20512fecba2400be2a9ca1c2739cb0aeb3de10d28d661fb59895d13e8cbb38c4",
+        "size": 14051
+      },
+      {
+        "path": "sources/Modems/Modems/qpsk_phase_noise_phase_sync_2009_04_12.rar",
+        "sha256": "1549a34666b76c6f9b4f0df06830a2c912444bc78608bc938fc182eef25b4ed9",
+        "size": 9017
+      },
+      {
+        "path": "sources/Modems/Modems/simo_maximal_ratio_combining_2010_08_27.rar",
+        "sha256": "f5567223258eedf104b385e53f65b74cd51d1342d39b9c215835e3a2c5e8427a",
+        "size": 27965
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/QAM64_2008_11_21.rar",
+    "sha256": "64c4c15a9bb8fcb58e6256409a34534152f5ffd9f096b6ace29d349baecae728",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/QAM64_2008_11_21.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/QAM64_2008_11_21.rar"
+    ],
+    "directory": "sources/QAM64_2008_11_21",
+    "files": [
+      {
+        "path": "sources/QAM64_2008_11_21/QAM64_2008_11_21.mdl",
+        "sha256": "95e9b2b8ea25b7df2b48f2befdc9c3fd8717a85beb14abe36194dad04957186b",
+        "size": 126132
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/adaptdemos.zip",
+    "sha256": "24b2ee295c0d8a5f37d5ed9b7e178685b62ec8cefa8a646f0aa001b99da67235",
+    "aliases": [],
+    "directory": "sources/adaptdemos",
+    "files": [
+      {
+        "path": "sources/adaptdemos/adaptecdemo.m",
+        "sha256": "9382f8ea7ec74af9cfbdf72dd10c33d342784627d5e94405472828c0af2b60f7",
+        "size": 7185
+      },
+      {
+        "path": "sources/adaptdemos/adaptecdemo.pdf",
+        "sha256": "2afae0a99a888e8f4713d7cb14d5398ecdb5a8c96c255fceb9f01efc9921eb8b",
+        "size": 155090
+      },
+      {
+        "path": "sources/adaptdemos/adaptequaldemo.m",
+        "sha256": "cd981e62d3eb5b85f4fa9f875867e487325749c4e8eea50c1e8e23a4fcbc52dc",
+        "size": 6090
+      },
+      {
+        "path": "sources/adaptdemos/adaptequaldemo.pdf",
+        "sha256": "f4e6af5d7f1b0892d4a2a7eb828856ff715be9b834c4378d356558fe8b73534d",
+        "size": 120025
+      },
+      {
+        "path": "sources/adaptdemos/adaptfxlmsdemo.m",
+        "sha256": "a15532d6723e6bf4321eef833bb8a769640701ac36a8c67faecd6c59876ca8a7",
+        "size": 7914
+      },
+      {
+        "path": "sources/adaptdemos/adaptfxlmsdemo.pdf",
+        "sha256": "d9d7f46169f432b7d4f69d7a38c6d945cbe1d1800e7c309f410643c4226d58a4",
+        "size": 134199
+      },
+      {
+        "path": "sources/adaptdemos/adaptgettingstarted.m",
+        "sha256": "470b28d837cb38e13ce37d5d4e62553661e51aaae983256f85c7e72156d6a3a2",
+        "size": 7293
+      },
+      {
+        "path": "sources/adaptdemos/adaptgettingstarted.pdf",
+        "sha256": "14080dadfa3d12de79afbb8847deb0ebc5bd18f6bb7e53e29925fd4522319f9e",
+        "size": 104182
+      },
+      {
+        "path": "sources/adaptdemos/adaptncdemo.m",
+        "sha256": "f7cfab287cdd0de8ccc4c8be266ac3358f430f3b739ff29201f7c1d49a2d94cc",
+        "size": 5070
+      },
+      {
+        "path": "sources/adaptdemos/adaptncdemo.pdf",
+        "sha256": "d95a297fac7a8ca1b94fdd14a97c1c4092c4b4ce45788b1ccddfb7265b7c679f",
+        "size": 106950
+      },
+      {
+        "path": "sources/adaptdemos/adaptnlmsdemo.m",
+        "sha256": "26986ba1e84f321dd7fc3e5909fe9123148194e8828ac8e5adade249a55f316f",
+        "size": 2026
+      },
+      {
+        "path": "sources/adaptdemos/adaptnlmsdemo.pdf",
+        "sha256": "6e087ba6d50377502d67d664f14de1c8e5686b8fa1b2a0d00a01e61fe17ffe0c",
+        "size": 88184
+      },
+      {
+        "path": "sources/adaptdemos/adaptrlsdemo.m",
+        "sha256": "799262a6dc2233d0b295df2861334042f66c8ede6ea9d3f249dcaec9fae62442",
+        "size": 3378
+      },
+      {
+        "path": "sources/adaptdemos/adaptrlsdemo.pdf",
+        "sha256": "d3de9455a4ad5bb46f25db497a6ae05725b4a46cae356c8d67016ab2c58f090a",
+        "size": 97841
+      },
+      {
+        "path": "sources/adaptdemos/aledemo.m",
+        "sha256": "86788c303398c41778015c062c359788252c1d66f3d6a9c1a3ed8d5beabbfd02",
+        "size": 8606
+      },
+      {
+        "path": "sources/adaptdemos/aledemo.pdf",
+        "sha256": "3f1c035c81e37d1ef76f6c85d38b30594a53255266a7ac2815836f35a5b0da63",
+        "size": 136048
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/ams_r2006a_2007a.7z",
+    "sha256": "2d1eb7ffee5de274357eb3dd5157f63469cb8306241c0275a2725f1015fedf1d",
+    "aliases": [],
+    "directory": "sources/ams_r2006a_2007a",
+    "files": [
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/AMS_sel.txt",
+        "sha256": "689059d60f52069806c219945c92bf852be4fac8c52886351eff29adca75e82a",
+        "size": 3714
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/README_NOW.TXT",
+        "sha256": "a32f0f837adf86478af6a8bee19441774c2e57b5db3c370fe34d0b9383828a90",
+        "size": 1120
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/adc/dspsdadc2.mdl",
+        "sha256": "1e681c00f02ce3157d615e50b47642066bf1a25bbbf21c5ce40020850fc0462a",
+        "size": 28456
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/adc/dspsdadc3.mdl",
+        "sha256": "b35e22de1b512af01f967e9bf5efadd01749ffc64ca0bc99aa10071d7ed486d8",
+        "size": 38092
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/adc/dspsdadc4.mdl",
+        "sha256": "d1601414ef4e466d7c298af990978008e73bcaaa007dd35dc4dc00137a64dd6c",
+        "size": 31323
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/adc/plot_signal.m",
+        "sha256": "396b084f10feda11defbc53b0462b3e5c7f0efac41f31c4d427592a1a8ce72a4",
+        "size": 873
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/ams.m",
+        "sha256": "ba85a25b8757b625a63024f9d589c523a5a7c0b7bec239725a270899e24b9f98",
+        "size": 71
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/add_cur.p",
+        "sha256": "529265bce09c1123a0df498ff9f2253975e0aae76ffd5cc7738c6250ab7579d2",
+        "size": 81363
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/band_pass_spar.mdl",
+        "sha256": "04e4670c017f75440273fb9806655a2836684cf25500851fe493a16e2c434048",
+        "size": 157610
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/base_band_spar.mdl",
+        "sha256": "ff2a12e2248a61da07871172d7219c56b143286bd0aa1426bbe89032693de17e",
+        "size": 176320
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/bessel_1.m",
+        "sha256": "b7db985c42b19529038069626b0e583c5e6aa85536ab513bff5fda0e9fb391cb",
+        "size": 274
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/c6_p8x.mdl",
+        "sha256": "716f249c1af7f940dfcc7f49769bc5c5b76c71f21c6db68a5d53c475f50e4402",
+        "size": 136431
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/circuitbreaker_1.mdl",
+        "sha256": "fd336498fe49c9014b4ddd6e89d15b2f378fa55da68072a7ea47591f707ccfa5",
+        "size": 40561
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/circuitbreaker_2.mdl",
+        "sha256": "485a1e93a824e13455f8caf585ac1fe0cce522edb7d96bbe0097a37531790107",
+        "size": 51840
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/circuitbreaker_3.mdl",
+        "sha256": "73734651eb3d31a6b3e3e955f1bfff61d27efc71c8ed69f53d8788fa1628c385",
+        "size": 51771
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/cl_e_5x.mdl",
+        "sha256": "8d92f472f9eea91f1ae4bcf6e9f27411f33b45a6c5ba9fc31047de9a94de7426",
+        "size": 63453
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/constant_gain_variable_Q.mdl",
+        "sha256": "f99c3585760523d9726d0fc124d76a73593e0e45b80be40272f292ceaf304639",
+        "size": 82092
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/constant_gain_variable_Q_sfun.mexw32",
+        "sha256": "e5b8f9b07d0cc0740ceea79efcc63090d24fea2b68caa4c2c780504bd949cca0",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/coupled_inductor_test.mdl",
+        "sha256": "c091d4e4989bcaf00665164143d1e6a767498d38b407708a74f66bef850c38c9",
+        "size": 94049
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/coupled_inductor_test_sfun.mexw32",
+        "sha256": "cad5be7b3a98cb50b9e70866ef4d86a631093a593d59d4da76dc5760ce65137b",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/d4_coeff.mat",
+        "sha256": "f3a973900f9285f1b711579240b1b0a50e875453888e608e94c482087987c8f8",
+        "size": 512
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/diode_3.mdl",
+        "sha256": "c439e17a8cec74c2c11abded2b8d2e81abcf44794fd71f61f652b38e292bf41b",
+        "size": 55611
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/dut_lib.mdl",
+        "sha256": "f2ada7d49bc8b3084d27f147abc1c016dc50ea490a060eb11ac860c5bd26b5e6",
+        "size": 96083
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/ebbers_moll_1.mdl",
+        "sha256": "446cda3a21737ebb6f543832c2eac0090b2bab0280c8e328869788ab39d03c5e",
+        "size": 45709
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/ebbers_moll_2.mdl",
+        "sha256": "11a24316206bc95766da4d231bf4750c4e88eb3aa805c98155701c074808683a",
+        "size": 85216
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/ebbers_moll_3.mdl",
+        "sha256": "22e689ad1dc92a185400778ea33159d4fd21de612712b0be877f07c0085ed104",
+        "size": 127869
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/essentials.mdl",
+        "sha256": "ce738420dae0b4ad161234978a2bf708fdbdbf48611c841398a7dcb23a85a591",
+        "size": 20818
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/four_pole_bw_lpf_100mhz.mdl",
+        "sha256": "2e57b6980bb62af08be352b0c43339d41da9ef87801257b40e14f0fba786c2c3",
+        "size": 28146
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/ftoa.m",
+        "sha256": "9de7a581a6847b40115d73a9442245ede74db7e2a92d1600b4dc8a22a2a6dcac",
+        "size": 3083
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/lc_ladder.mdl",
+        "sha256": "b9d1fe623d2447cd76c3243a8c475af6d33602326a0779eaf264f2bd332dc306",
+        "size": 55290
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/lcvalues.mat",
+        "sha256": "677bc6dfcb3fa287455497334819670b9f1e0fbbe4290aba87c2fd434c54bc3e",
+        "size": 384
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/lpf_coefs.mat",
+        "sha256": "9c3c774af5376faf20115949b1e738d431921706383d4a74af59b1440e30ed58",
+        "size": 376
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/match_1.mdl",
+        "sha256": "9d315a3020d7ce000ad5a36da48ae090338beadb3e3728c641724267552be484",
+        "size": 191957
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/mix_1.mdl",
+        "sha256": "258676144c5d0f1e80f494aab66561945421985fd76ffa5e0596a6b04965e7d1",
+        "size": 117224
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/op_amp.mdl",
+        "sha256": "eabb02f0ad91a0b34f40b4ade9faccd7cb531713f85d32b7d934612926943c0d",
+        "size": 33178
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/osc_1.mdl",
+        "sha256": "dd9046bb170cf72e5bb871a9f5b150e7174db0c3feb5af19d8df2f04ecc1161c",
+        "size": 45118
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/osc_2.mdl",
+        "sha256": "2587428ff4fbd5cf3c27a5e05b9a86b3fa80f169d774b365a0e8f64705450d14",
+        "size": 45145
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/pi_match_1.mdl",
+        "sha256": "bfba92d9228deff45182937bcd1af8142968ba96cdb0a76008c262acf7a1b153",
+        "size": 130972
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/plot_spar.m",
+        "sha256": "df4d7d544f5536a33c4856a8d4c942fb4ffab21d5c3e1c650879fff63d188fcd",
+        "size": 1218
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/pwm_8.mdl",
+        "sha256": "bc430c213baf3af15ce408bbd238d77520b96995669458932a8980e8372e361c",
+        "size": 27898
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/pwr_amp_1.mdl",
+        "sha256": "733573bcf09eab0d5ee2ac10b9c9a41bfa15cd9a2b32bbaeb80bc748f356a652",
+        "size": 68490
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/pwr_amp_2.mdl",
+        "sha256": "0501391fbf330fd3beb7bab67e5a7125e4ab34f0c8c70b9a5cf9169ec4001dd0",
+        "size": 80520
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/rauch_c.mdl",
+        "sha256": "53678e4f58b9cb3acccbe1c1def642b9346d43ba183d45b6cfa7cbbfcaa649e1",
+        "size": 179532
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/rauch_c_sfun.mexw32",
+        "sha256": "b7ac8287105db1455d30415bc77fdc9477884784a541bfab1f6260a20d48cf1c",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/razavi_fig_1_1.mdl",
+        "sha256": "79e55ed4f39b6c3a96ac799f4e9738605caab48ff75d3e911c71884223421fca",
+        "size": 38957
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/razavi_fig_1_1PB.mdl",
+        "sha256": "c6e0a946a3273a68a23d1e9f304cc8dccc1a1e944caff8eb38ec40e02df9841e",
+        "size": 39748
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/razavi_fig_1_1_rab.mdl",
+        "sha256": "97c7a7863dec5a51abbe92c41e22abe8b5d599088314c38a77016fb150ba92b1",
+        "size": 44975
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/rfna_plot.fig",
+        "sha256": "108f2bf5c946f01486320e1b328e74dde4f52f3256a5cc6e4f74441b0034904b",
+        "size": 13832
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/rfna_plot.m",
+        "sha256": "dd5278956775ea36c828d9ee9477578e3f18825549fad0a1061eb7e7196a99ea",
+        "size": 10761
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/rlc.mdl",
+        "sha256": "217b7e382037beca4a94f5f11baa01df311520af520f71a08c0e6815b7fa4a72",
+        "size": 15600
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/s2n.m",
+        "sha256": "ad2753f9d9781b6591f1ff7a3b65fe77d954f2b13e7371abd6d0d8f335b4f370",
+        "size": 416
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/info/binfo.mat",
+        "sha256": "70366ecc4a02755da6b55416f6e4a14789d1d6f59cf90ad75f15170dd7f524eb",
+        "size": 839
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/c4_constant_gain_variable_Q.c",
+        "sha256": "0e59def843049e0f796c4b3e794ff23cc209e904dcc2cc0860a1c578552e7035",
+        "size": 18138
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/c4_constant_gain_variable_Q.h",
+        "sha256": "8d258d7c503ac4b96d5263f64f8a988861df8accfbc19455eb4c1fc1b2f08c5e",
+        "size": 865
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/c4_constant_gain_variable_Q.obj",
+        "sha256": "2215312ecc1de116bf008c3345c56ce092fbd8bb8d7d71f87baaec426dd63fa4",
+        "size": 16111
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.bat",
+        "sha256": "e5f7e7f15bfa05279f66a1a433c94d8dcf60cad10e20bc350979f382f5447ee8",
+        "size": 70
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.c",
+        "sha256": "12d68a53e4fe039fd5c022c3a7516d341c9842da295a24182a241b3df05335e2",
+        "size": 6162
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.exp",
+        "sha256": "e94eecb6e8424a47a17fb6ec15cd4b2455f44d22019366cc997b7a0b8f60f3f2",
+        "size": 66
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.h",
+        "sha256": "97f5efa444ebd8d0a4d25be9f20cedafe4597f39412687acc89a6ba957e7fac4",
+        "size": 1033
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.lib",
+        "sha256": "8655c000ce8b24f44b4a5e9857985dbc0ccafdeb7c83dc402e4e47a15c9bac73",
+        "size": 2924
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.lmk",
+        "sha256": "ae99dfe00a72a77d6478ad1d70e80c8736f3a583ef4b5abd492f2f1c83b0af2b",
+        "size": 1854
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.lmko",
+        "sha256": "2e9b5168dc831743fdc7846e65fc8fb4988d972571bbce714acc7ca9bdc55deb",
+        "size": 527
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun.obj",
+        "sha256": "0a9d5b837343ebee61976b6aa8c32169b6ba10ff3e5bff347c5a95cf247ceb26",
+        "size": 5794
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun_debug_macros.h",
+        "sha256": "833baa0b378e033d23dc5c155644525b37844259f345ed67cf64469ccee1e571",
+        "size": 13539
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun_registry.c",
+        "sha256": "160553c3235e418ba6c1ea3056c6374fff69d03c6bb2013d9c499a34fbc69e41",
+        "size": 5779
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/constant_gain_variable_Q_sfun_registry.obj",
+        "sha256": "1f9f33ca427dfba52d5290e0a51c43097fca848b077afd4ddc8c32700b395385",
+        "size": 29586
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/constant_gain_variable_Q/sfun/src/lccstub.obj",
+        "sha256": "d3421072e388e0a8034d556510899fefd868e409c11b80f2d3abcee058556ab0",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/info/binfo.mat",
+        "sha256": "5a2703f237dc471ec5deb8bb15ae28b5ceb8b13627dc04a574a08dede8608493",
+        "size": 840
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/c4_coupled_inductor_test.c",
+        "sha256": "0218ce54f97074d7dac81203c5efff53a5562004e71256a80a8402b8676fd08b",
+        "size": 17950
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/c4_coupled_inductor_test.h",
+        "sha256": "2340a5e6652e1955aef4d35c299ad852d2250375b8138b11bcee9141bcc55b87",
+        "size": 843
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/c4_coupled_inductor_test.obj",
+        "sha256": "e1f7b1e1200c9f83e815c75df7e4f0c5707fcb89b8761f75b9cc7359ff6d5ad6",
+        "size": 16043
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.bat",
+        "sha256": "7caac5793e9089e494555bc4cd84affcc736e9e7540b00f8105253334b281403",
+        "size": 67
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.c",
+        "sha256": "0745ee83b1c939098e61cce96ac7da4b8582e7317bd08b840d205e30c1617255",
+        "size": 6085
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.exp",
+        "sha256": "a1869841f102af4fdff76685ca435bfa912b5e148b3a9f6dde17f164c8360797",
+        "size": 63
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.h",
+        "sha256": "d9c2c2f47ffeffe72cbdcf602333ed927102399a18e83ffb179933a734f59ba0",
+        "size": 1018
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.lib",
+        "sha256": "3a5386525e3865303745fbe71e8750eb970bc18d37f39cf130b81bbf4d301dc5",
+        "size": 2896
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.lmk",
+        "sha256": "ea57819e05aa7bc7fe469c09b417379948e4f07a8b2e66ffbcfc83b57c70b5a4",
+        "size": 1806
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.lmko",
+        "sha256": "c3b7df511a0149fbecb35b283432c0a0dd27acc71dd1638a19bfa3139220d003",
+        "size": 518
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun.obj",
+        "sha256": "6e101f2a22239126e3d684c0310959901ed86ede6dcbcf96329b0329570417bd",
+        "size": 5755
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun_debug_macros.h",
+        "sha256": "39fa39f875588a91bbc14fec96b42e28f212927a25504b7e9921b8114153429c",
+        "size": 13377
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun_registry.c",
+        "sha256": "254d9aa4ade959f45ee90a20543ef8a4865917774566b139b3e50b84e67638b0",
+        "size": 5722
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/coupled_inductor_test_sfun_registry.obj",
+        "sha256": "0338564ff7a7c3cc65148f4540069341ff9ed381aeb97a33c7400d29a5f7999b",
+        "size": 29558
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/coupled_inductor_test/sfun/src/lccstub.obj",
+        "sha256": "479cca14a5f0cc3b17a1cd380a479ae005958fb4fe457386c449058eb331ad32",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/info/binfo.mat",
+        "sha256": "2c634fc1111f87bfcd480326398f7e9f2d376d36e595c4e4852196ae54fa5998",
+        "size": 834
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/c4_rauch_c.c",
+        "sha256": "19fd8f63959c735649a7c39f14a226cae3e8ba918fb37398b32576b2df980fee",
+        "size": 17048
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/c4_rauch_c.h",
+        "sha256": "259ec253d81ce4688b2c7f9e5618a894b2b9b5da09da2735c28e5f2c95ddf009",
+        "size": 743
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/c4_rauch_c.obj",
+        "sha256": "9db125fa516acd594723dd66f2c63ec5b94b91bcd8f8f3d923262666135c807b",
+        "size": 15721
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/lccstub.obj",
+        "sha256": "f05a125b32d0adcfc2681716d3f56992e8d171bac43ccab50de617ec13ca8fa0",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.bat",
+        "sha256": "d3e85741a9d5eae656f05db7a0ab08368fef66bce9a8bb4f28680bebeae871b9",
+        "size": 53
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.c",
+        "sha256": "6621ff7c5ae12451c7e5bed58950d619bbcae3f741a3158c098f5f6ddafaeb4a",
+        "size": 5750
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.exp",
+        "sha256": "a52ee2aa92eb6c3876c5dca647ecfd0cf211ec7f7575f60e2ec761eabd1f9830",
+        "size": 49
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.h",
+        "sha256": "99ff7feffaa093aa3fec2ae5c2774facbab705995f01a3e270d7bc1af999ad9c",
+        "size": 948
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.lib",
+        "sha256": "1f4873733743eddcdeb7290d344e561474f44974a12fe428e5b5b7b909de4964",
+        "size": 2756
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.lmk",
+        "sha256": "b3a61e7dbaa728c00660e017229670032630c12cb4627c1e0c0889b27e3774f5",
+        "size": 1582
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.lmko",
+        "sha256": "ffa1045dda284f788f7f8ce3bf48c8b83248174b455df857fe183d1f9d35feb0",
+        "size": 476
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun.obj",
+        "sha256": "b19f4e394e27e1be82be0a34d04e129170e9d19c50d85e2f4a2e34077a178317",
+        "size": 5539
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun_debug_macros.h",
+        "sha256": "658d8879d8859127450f2fb7ea4020994d4e8b7e00eb2c852c6b7d200631b676",
+        "size": 12621
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun_registry.c",
+        "sha256": "de60d90034f02299b86f8df9e78502b0d97d522799d3c5d79026f78d991512b2",
+        "size": 5461
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/rauch_c/sfun/src/rauch_c_sfun_registry.obj",
+        "sha256": "dec60c6a9bbaa009c0e5c7378f7a1a8be96d1054d26d27d5882394503eab7b49",
+        "size": 29416
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/info/binfo.mat",
+        "sha256": "6c7cb9da35db59bf9c14b9f3c5cf2b8f2d335c0da0fd2cee2899732791683252",
+        "size": 840
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/c4_varactor_test.c",
+        "sha256": "d26a69db118ef39c141d80e9df6a9bd76c77db87b42c2608c593f17d92666833",
+        "size": 17430
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/c4_varactor_test.h",
+        "sha256": "3199be0772a584ac0704951c7cddcc36b0b5459aaabc4dbfd786d2abfa744dee",
+        "size": 787
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/c4_varactor_test.obj",
+        "sha256": "4504d7a5a16dbc57ffe40b760192616dd17747a3ff1a2803d538614c59afd176",
+        "size": 15849
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/lccstub.obj",
+        "sha256": "415622d464242c2ad15963e35625f787e0b6095b14fa93e835d0c90f56917b71",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.bat",
+        "sha256": "c8af05f3e59eca93540374bbb6b289a8e2e97d9970df8bd154d3d8f4a81b802f",
+        "size": 59
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.c",
+        "sha256": "86b29222ff45053618bb3493d17fb95481611b462f2dfea99e5f4657cc8fca68",
+        "size": 5897
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.exp",
+        "sha256": "3fd7d42bdb19049da847a5571c1a2c1e3a5eb84cefa57a0c6c3a1628cf0c1a3d",
+        "size": 55
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.h",
+        "sha256": "ccbc407a18e8b1c114c81b73db182a8fbbafc7ca5024ca6b7de4b0c78e8a84cf",
+        "size": 978
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.lib",
+        "sha256": "86ce46b919f5255c9705ed059fb008fd3cae4ced15e401440f8148bab53c218c",
+        "size": 2816
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.lmk",
+        "sha256": "54871d0ab878ef0cb3056997cd76bc1bd197b18aac05ee8757b04a93f6bac0f1",
+        "size": 1678
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.lmko",
+        "sha256": "cdc7f658bc6c09621b21d39202c58bcb8317639fb0f01687e51b2e3bc07b8c85",
+        "size": 494
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun.obj",
+        "sha256": "8f432e05bcaccbdb136b10cd46f3694c0fcf44807089172696fb5ea35da6b930",
+        "size": 5643
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun_debug_macros.h",
+        "sha256": "eeb560f1d017943afba48907d769eae832a4f5aa6e134f737c1b1a0e5041da46",
+        "size": 12945
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun_registry.c",
+        "sha256": "d3d4a94b8afd0034f7668b59f30f0cf09a91aec6a4a92d258ddb35a48ef0afcd",
+        "size": 5572
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/varactor_test/sfun/src/varactor_test_sfun_registry.obj",
+        "sha256": "46925c21b9e52eb5e321f278181ee9d19dd85ee8969c7874788bc6de182686c2",
+        "size": 29468
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/info/binfo.mat",
+        "sha256": "e47ccf8e9b8470c2ce4e0663b9a868b93a875c2754f836b54c05315f6b5883c3",
+        "size": 841
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/c4_xistor_1.c",
+        "sha256": "ec5beae3c2cbf4f275685f721784585f69772fa7b2d54ba3e015e7a7a189535f",
+        "size": 17109
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/c4_xistor_1.h",
+        "sha256": "d7115c13b6d30341bb8e5c38d0aa242bf62ae311d4a1790c9a7f79462e019ec2",
+        "size": 752
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/c4_xistor_1.obj",
+        "sha256": "e1a6c6ee11d106496e6dc0077a18f3c6fcd73eb42910ef082f40e3b4ad110537",
+        "size": 15741
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/lccstub.obj",
+        "sha256": "9162510665eab8f27489a6bcbfc6e6755a00cdd0802461e9ac64f076404b10d2",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.bat",
+        "sha256": "ba28a4eb6ef04021dd72927db04a5158b027242a5972953c48533e01773de981",
+        "size": 54
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.c",
+        "sha256": "5ffcd9d71b00130723139acb14d5f4f76100233d2e5ce8eeb37caa69cf9bf44f",
+        "size": 5772
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.exp",
+        "sha256": "8569690f18d7c54be46e520075baace906e4d0a048df7d73044be6c4cdac2255",
+        "size": 50
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.h",
+        "sha256": "aabbff453623f0ce1662bd9666cc82df525b5ddc7578253af1995beae755a115",
+        "size": 953
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.lib",
+        "sha256": "a0a5192a12c29ceaa4b7084619fca1610e867a6f3d9df3fe93131093df0cd2a0",
+        "size": 2764
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.lmk",
+        "sha256": "998a1d52eb440c1cd3494790541b25cd7f3aba6f258fde780178b080af5e6be6",
+        "size": 1598
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.lmko",
+        "sha256": "6dae017ae871cf8b532a7d0caeb015ac78cfb385f17598587a61fed1300f3f11",
+        "size": 479
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun.obj",
+        "sha256": "600b07be7427d257f0005baac56cc2b7b3521687f6b6c4b44f3c23d851b85665",
+        "size": 5552
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun_debug_macros.h",
+        "sha256": "49189d429de8b650c7cdf31d88e849674b4f6386a881b32191d10dac44a8943b",
+        "size": 12675
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun_registry.c",
+        "sha256": "dbb9ee77d781d1c68c187ad830ec1d141bc40da334cd22e7949110073c679f7f",
+        "size": 5479
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_1/sfun/src/xistor_1_sfun_registry.obj",
+        "sha256": "90e7b6aff7514975bb9a425504db8c8845ec872f00e8d78dd4f9159a320443ef",
+        "size": 29424
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/info/binfo.mat",
+        "sha256": "d8caa3528f422675eab83e298c40ba026af2b025f948ff3b0e965858ec4f29a7",
+        "size": 840
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/c4_xistor_2.c",
+        "sha256": "ec4e5f3b99fcc53ddf219ff550645af402fd18508df3a07f383764ca0104dfba",
+        "size": 17109
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/c4_xistor_2.h",
+        "sha256": "1fbbe7225f17b2454e021d33dd6d6370b447c41e7e250880e3b1e8319d7dfd94",
+        "size": 752
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/c4_xistor_2.obj",
+        "sha256": "71c63d49f28119307acead5dfbf117c30894c816efc819c72f6bb4665f617a12",
+        "size": 15741
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/lccstub.obj",
+        "sha256": "09219dece2e2d180f369d73e204c3b4a4671c194df9e4e18611568995748bb61",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.bat",
+        "sha256": "4657e9f901b30b02e512573e7eec6b2162efe71fb0e4c6346f58acc0449c98f5",
+        "size": 54
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.c",
+        "sha256": "5f6dec664083ea616a45b5d831a2335d36c60346e0aa22cc58bb90344d2bd160",
+        "size": 5776
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.exp",
+        "sha256": "15fbefeee7bbdd2e0148311753e287dcbbb7761a77bea7c5a97df6497e92b50f",
+        "size": 50
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.h",
+        "sha256": "e0f1053386f96a976c42c6fb01b2881ebf221cfc9a171ab3bef558dbb80767cf",
+        "size": 953
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.lib",
+        "sha256": "54f7cecad64728f13f141b397bf941c7c8202e71009b0f1a4418ac4f3a48f4c9",
+        "size": 2764
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.lmk",
+        "sha256": "0b8fa6f2ea01953dad2be3dd7696d4257bb10e8c8b97d8acfdd08eb3e8c52e5d",
+        "size": 1598
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.lmko",
+        "sha256": "f1b1be950350477e7b8e79ad3b39e2a8b28321eae7808ac87285d2319320b0ed",
+        "size": 479
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun.obj",
+        "sha256": "d175c8d967ad8054e4bf5e5ac7cfefcfdf541132bdc5f9130e1c1a8ed9f189c0",
+        "size": 5552
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun_debug_macros.h",
+        "sha256": "f3e40ab997ceb4d62c8fe31211ff1551cbf39d95828376e26fa97237d63e785e",
+        "size": 12675
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun_registry.c",
+        "sha256": "45e4444930ea2af7bb92633f46055ed899c2d42679a85b140b690e3c7c0d9598",
+        "size": 5479
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sfprj/build/xistor_2/sfun/src/xistor_2_sfun_registry.obj",
+        "sha256": "140f680d057447c0a7a519f0c00ce8e3c41f9c61d3c89a0820275651abed47d2",
+        "size": 29424
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/sigma2nd_d.mdl",
+        "sha256": "4aeff3a6d7b2f30c90f7290698ae81a9a9e35b7b499c9d6f65e96b9e870df62f",
+        "size": 199727
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/simpower_extensions_1.mdl",
+        "sha256": "d46f75a1efa902bf7503dade85fb1f608394709cca727d21fa2304fbfed3bf57",
+        "size": 441747
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/spar_data.mat",
+        "sha256": "d3165f8afad20f094f671af15bc28c1de6e198dd92b0872d649369fb804a9235",
+        "size": 24816
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/swps_2.mdl",
+        "sha256": "5adf66f9ecc83cdd51bf075fcd3dfa429f03e36694133475e1bf9ddc93855de8",
+        "size": 63528
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/transformer_1.mdl",
+        "sha256": "31adb55e43109bd29ff869ce368a03d8cf9fb703def2125eabdfe6e5fdc71ad0",
+        "size": 35224
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/varactor_test.mdl",
+        "sha256": "e6dcc3144181cbcad8e48681da1f75c85f296e6455063c2a78c9689135195eb8",
+        "size": 108035
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/varactor_test_sfun.mexw32",
+        "sha256": "510cc407e89b800f764a1efb346705872d05300ab38f4265e2554b346a9047a4",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/vco_2.mdl",
+        "sha256": "0415d4de8f1c4cd6d9006442b03dc4e5363f2e2b7670816aa52ffad4e29d780a",
+        "size": 53910
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/xistor_1.mdl",
+        "sha256": "2a6de5b438d9f548d9de0912391fb960228a36d6e5d774ac481b0892125101e5",
+        "size": 84412
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/xistor_1_sfun.mexw32",
+        "sha256": "43154bf5a85ab8216792d375f23521115267e1b709e0d815727d755cdde3a207",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/xistor_2.mdl",
+        "sha256": "d5a750a57fbd99f629a04e7cf54801f3f794d9c544aea2e3018bce2434041026",
+        "size": 91940
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/circuit_level/xistor_2_sfun.mexw32",
+        "sha256": "709c5027ec57e7ebce2841612f8d93a8e9b77342c86f62ed20d0718c9720b35e",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/example_sel2html.m",
+        "sha256": "545c991720b430a13e9000e22cbacece57e3c9ada4c999481afcbb65614c597e",
+        "size": 4654
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/Ftoa.m",
+        "sha256": "3072482ed884c94c9f67b3fc93556b2c3bf9151eabffa3def69b82de4ea123d5",
+        "size": 3097
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/color_h.m",
+        "sha256": "c784ae02b696ac3f7e78bf6103cbdf5e533ead8238e48070c6baac0bca94729b",
+        "size": 2966
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/lc_filt_2.mdl",
+        "sha256": "5be28b519e78435e3f1f8e2284d934b6e48212390f753be25be07afd8af0e030",
+        "size": 73844
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/lc_filt_2_sfun.mexw32",
+        "sha256": "c00f1c32579e38074a0b935b2d2db9f0e9687dea88399d999c3936182200239a",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/lcvalues.mat",
+        "sha256": "6e86452a82903147a64232f69c8a8faff91b3d9b75335750bbaa0f1bd91665a3",
+        "size": 384
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/lpf_coefs.mat",
+        "sha256": "6abcb719d2523ee20954d97b12f2690db1bb2d7f1d29800acc4d8e70044cb509",
+        "size": 376
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/my_color.mat",
+        "sha256": "64e2117e99890aa61b292725e6a267545a9ec5e04b45e4a2e6a484d4e7d00574",
+        "size": 1271
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/qsynth.m",
+        "sha256": "809d45c1dad86d40cca5b33ff16b2bec69e00278c5622a7ac831d5d205687d46",
+        "size": 18831
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/rf_bb_1.mdl",
+        "sha256": "c77c5bb611abc79b27172694a897cb8fdfd316947e1f595f762733e066483560",
+        "size": 61327
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/rf_bb_1_sfun.mexw32",
+        "sha256": "a06a6b792bf9a40a6bca2b0bc326921480ce61d57f8c765981a77e905c2e1aa1",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/rf_bp_1.mdl",
+        "sha256": "2913526da7c7760d6545cbfb2db541b4debd061b734684e2851e26758a4114da",
+        "size": 69326
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/rf_bp_1_sfun.mexw32",
+        "sha256": "4b1ed9cf42f84f7c544f6ddc4407dc69d04c8b7e8926243752a2ecc11a7a3e12",
+        "size": 213504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/s2n.m",
+        "sha256": "ad2753f9d9781b6591f1ff7a3b65fe77d954f2b13e7371abd6d0d8f335b4f370",
+        "size": 416
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/info/binfo.mat",
+        "sha256": "73e925c67314c00224793151fd85705959a907d38e73ade469089d476cf556b2",
+        "size": 839
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/c4_lc_filt_2.c",
+        "sha256": "731c846da2fc7f4fa54b4f060c478a8d764aa712d542858b264a629df9585884",
+        "size": 17170
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/c4_lc_filt_2.h",
+        "sha256": "521de090f2997b9ec01f0add7a51a545d644737f65839ce88a9558d81be4dd5d",
+        "size": 759
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/c4_lc_filt_2.obj",
+        "sha256": "dcb6afcd6baeea126ac73eec582e8b91133b32ecedd4017b8000d8e94fe0aa84",
+        "size": 15761
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.bat",
+        "sha256": "ce1d14e927ae2b61b15dd43c340066a74f7a5ea6761d456ff6a461637747524f",
+        "size": 55
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.c",
+        "sha256": "99d864da08cc053718b706b52185884c674bf8844a215fc5fa45cfc837998e63",
+        "size": 5799
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.exp",
+        "sha256": "2e888148f0e4226d78615f6bc39559d0e18a0a59361536b018dfadcfdc76144a",
+        "size": 51
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.h",
+        "sha256": "54510d9ec67f599571d9faa7ac43abb8b99e11dc47b4dfdf7191bf2e94558f65",
+        "size": 958
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.lib",
+        "sha256": "66a637354edf404ac2fdeab5e54ee9e04ae96de02d00baf265d721123b85c197",
+        "size": 2776
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.lmk",
+        "sha256": "637dc38e048748764e9cf6b801f0a2bef7ff69b6899691cde72a22ed463a9805",
+        "size": 1608
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.lmko",
+        "sha256": "1b043a4a7b4052bc4ef8be93fd4f483726337a17975f21377283d69b92ac99e4",
+        "size": 482
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun.obj",
+        "sha256": "acc903bcab6390e453c4917679b427cc5bd95587452f8d657626b52307db5dc2",
+        "size": 5565
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun_debug_macros.h",
+        "sha256": "cec4c12292a08383d0c5530e0c189478888850f3dab92dab5488b32324cf6830",
+        "size": 12729
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun_registry.c",
+        "sha256": "9215e27a551d7ba44e89f629fece495443ac155f0803f6445271abbad75d88ea",
+        "size": 5497
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lc_filt_2_sfun_registry.obj",
+        "sha256": "6934caffb24932b295a6de0b6fee854072c8a95798f323beb81ded9f501da8f7",
+        "size": 29432
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/lc_filt_2/sfun/src/lccstub.obj",
+        "sha256": "93dc1d65fb86cbfafd3a7441bc1ecfe6c3ea38d3ccb88055f163e83fa5ab2a47",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/info/binfo.mat",
+        "sha256": "ae6721586497ee7d82c293367e7936e5eb691e9a8fda6c45fa5139bd39c882ff",
+        "size": 843
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/c4_rf_bb_1.c",
+        "sha256": "a18c7f08ca2d33e661f9195f1110e8c5e7e0e2a87db9e111f06046ded2efc659",
+        "size": 17048
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/c4_rf_bb_1.h",
+        "sha256": "d203ed72293bf893fe316d049aae48b6986b660a32a6dbb14cee8e84c72ff87b",
+        "size": 743
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/c4_rf_bb_1.obj",
+        "sha256": "dc24be5b5767245a08c548c92f17a1eb9fdc31c0309bf07584c083dc4e975629",
+        "size": 15721
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/lccstub.obj",
+        "sha256": "b6f24edccf1802bfb3c7d044bf21302d036496b79be77ebfceaf6665f3ece67b",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.bat",
+        "sha256": "f05c7f7493a3932e46af3f7c71a7853f7e567813eef92a4ee6cdab9a7c036f54",
+        "size": 53
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.c",
+        "sha256": "1a29100f54759964fdce4acf65894a50d76bb799289eb6400c4aacec9d89b4c5",
+        "size": 5753
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.exp",
+        "sha256": "b98294eb13cce2bf70ef4b29e628da30e58daab0cea4978530d16cd188faacd8",
+        "size": 49
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.h",
+        "sha256": "477869a8504e50269ff52cb6c3738abdf5ebad2a5fd8b1cc19018a693ef7b972",
+        "size": 948
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.lib",
+        "sha256": "ac5fb66ea53769247601aa3cb40039f947fcf7ad0e7bc383708e3c05dc7785f0",
+        "size": 2756
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.lmk",
+        "sha256": "3f5f86fcbb5168e7175ead011f73dc19b0ba883047de883feee36877fc9190f8",
+        "size": 1576
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.lmko",
+        "sha256": "b2ca79864d1ecd740f6c44d4843b6df8293e7264fe475d116cafa78201146682",
+        "size": 476
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun.obj",
+        "sha256": "7e0460cf3116c5d8fcea248d0d16d7af32e6ba4fe78293e0d96cf9c936d0bb5d",
+        "size": 5539
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun_debug_macros.h",
+        "sha256": "133fac0044b866a3717c393f813b639c647a5fa65fbbdcd0deb4096f11d592c4",
+        "size": 12621
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun_registry.c",
+        "sha256": "d71f53739175948156b57240064ad490e375b27f3dc8897c04bf867ea8dfae4b",
+        "size": 5461
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bb_1/sfun/src/rf_bb_1_sfun_registry.obj",
+        "sha256": "1646b35a297d130393788ace450d773acc0a7fc28c9269fcd4c8c3e7df03f514",
+        "size": 29416
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/info/binfo.mat",
+        "sha256": "c9b409a63c436b41e108160e1c4bc39b7a276ad940bbe803cca939ef8b3e7766",
+        "size": 840
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/c4_rf_bp_1.c",
+        "sha256": "a4fff9ddddffbe98926a527066d82d9b7cd67c23e00b553129d7fab7cf453b7f",
+        "size": 17048
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/c4_rf_bp_1.h",
+        "sha256": "27aebb8192a2c2410710c4f346405173f4bb64db5d661ae370c2ff951e4bddb1",
+        "size": 743
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/c4_rf_bp_1.obj",
+        "sha256": "de949b8dea71c3f87937c2701e57e061f7b4931207a9f0c7f618e38b712c0fae",
+        "size": 15721
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/lccstub.obj",
+        "sha256": "1465da72d289abd360731412e740a2d60a2cc9b1626e7c8b0f4fdcb19ded8b2c",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.bat",
+        "sha256": "c6f03c1b72de90a364b112840d370e64d356b936ab878de964f3e8e32463cd39",
+        "size": 53
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.c",
+        "sha256": "73bc35535986daa6e84f8f28e05c1795b374f7ccbe4770908bcf409351552501",
+        "size": 5750
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.exp",
+        "sha256": "7dd028183af53ce3727216f432a5110cbce1ab8ac0a24bd1c974eadbace3a788",
+        "size": 49
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.h",
+        "sha256": "44fb03fbcf406573ab3e7ecef5566c898c83f70905e0853b4621a3c4cea26353",
+        "size": 948
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.lib",
+        "sha256": "4c79ec4d236c9cb51b6eb3771144f230920f896fc97820bb50aaa34a83cebff3",
+        "size": 2756
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.lmk",
+        "sha256": "c6b56007d5930021370e3738db587824c03d14162f5b2c445049b026cb7a16f3",
+        "size": 1576
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.lmko",
+        "sha256": "3f7579f25fadfcee5c0f6f37ef2bdda29281af3ee5736e65ba930b4403199b62",
+        "size": 476
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun.obj",
+        "sha256": "c177f71605222522b815f172f89d94c9a7448b1740e68e306d99320a8334dbbf",
+        "size": 5539
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun_debug_macros.h",
+        "sha256": "dff371c1d423a3373dc78b2cb52896f09e842817890747f4f4351b61cfacf15b",
+        "size": 12621
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun_registry.c",
+        "sha256": "0788bc3b8457efae3d7b616f847691cd139ca0c7322bd8ff75081fe809110db6",
+        "size": 5461
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/lc_passive/sfprj/build/rf_bp_1/sfun/src/rf_bp_1_sfun_registry.obj",
+        "sha256": "29d795303a619dc9ac0377d4a5779f493b311dbd16a5f50bb4cf84c6ecf0b978",
+        "size": 29416
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/carrier_timing.mdl",
+        "sha256": "49be7a51c1c3dfbf379ea5768bda29a9d31d41bc4d723dc90f1afb7fe4c26b22",
+        "size": 121130
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/f_inv.mat",
+        "sha256": "dd554f9e3c64af85bba05164b2fe8a726fd4090a0df5ec5b34cf1b2088b8522a",
+        "size": 1203
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/fractional_4.mdl",
+        "sha256": "69fbded5644ef8f755d908b612b6bdfa5e583e5eba811262e567b73cfb879ec8",
+        "size": 97517
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/fractional_6.mdl",
+        "sha256": "2fe87c035e41b1bc726b248addd8e6db30683b11f82eef3b229cecd7929fafa7",
+        "size": 149477
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/phase_noise/f_inv.mat",
+        "sha256": "102c209b9daa46e99755fe06215407a1fa5a9f4a252fd1ced109d4f3b8d65b32",
+        "size": 2155
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/phase_noise/noise_inv_f.m",
+        "sha256": "31d08d2a2912d402613aa340ad241dc33267b4294e41d905c925ae39bbf973c9",
+        "size": 2023
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/phase_noise/vco_phase_noise.mdl",
+        "sha256": "c48e7df5e54d991fb318bf32d398eabcf7680cfd39fe8f650527ff9894552248",
+        "size": 71887
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/pll_d0_fncd.err",
+        "sha256": "90d872367e9dd114e5dcf320f3b8323e5765a1c64a708117d807892c81c3629f",
+        "size": 41125
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/pll_d0_fncd.mat",
+        "sha256": "d4c475ff27e173aadf804c70c7bdef0fb750f3a2564ef6c89ee724ec105ee48a",
+        "size": 1103
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/pll_d0_fncd.mdl",
+        "sha256": "6cc23408d391cf92d2b0017b06ecc0e2d229d78d697a3b32977c6aff4908afe4",
+        "size": 45285
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/pll_d0_fncd_optim.mat",
+        "sha256": "29eac2f63571bffcc547daf20ac1fc7088a97cea466d373cb184135eb218feef",
+        "size": 1195
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/pll_d1.mdl",
+        "sha256": "ac0d91de7213c5af02fead1d2bbe60e74042e397eecd013bed8aceeac9af3df8",
+        "size": 113417
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/real_world.mat",
+        "sha256": "fb105594c68186abe8b836bfca0097ff9eb2182b989a66f73ec2320e4140b9bf",
+        "size": 1320376
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/simple_pll_3.mdl",
+        "sha256": "d1e81c11136ae0b87054c92778a9cd4f05a16653048150cfca39d534817dc3b8",
+        "size": 75127
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/pll/timing_recovery_1.mdl",
+        "sha256": "e9b553640d95f3778d146436eb03c57047a7884ca1346e056e1f87e5c4db78fe",
+        "size": 199099
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rf_amps/feed_fwd_2.mdl",
+        "sha256": "aee40925460f640107e05ec56136888f3cf74b9a6e8313067980d0e2ec1f4ada",
+        "size": 63725
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/bpf_2_compare.mdl",
+        "sha256": "dadb8b11cb8cbbe923dae8754b497029bd3816febe67581c9a9ad6a3a86fb7c7",
+        "size": 60956
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/bpf_2_compare_sfun.mexw32",
+        "sha256": "66e0329694c1623626b5df9b09e8722a7b2f65222e3d4cd146c9a50223e64659",
+        "size": 214016
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/cascaded_filter_rab.mdl",
+        "sha256": "b462d3cec9deb0bb5d3605e9f04f8ce9b10da6638eabeceb38484f20eb376e77",
+        "size": 71980
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/cascaded_filter_rab_sfun.mexw32",
+        "sha256": "1edca79d1e3038ad633f941eafee1288d7051dfa10200c7b64158e40821f16ad",
+        "size": 214016
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/cascaded_system_rab.mdl",
+        "sha256": "734b5a5b0336ce467c7c133378db67f6eeb2ec7d547b88fe3c18ee901c9cf209",
+        "size": 79917
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/cascaded_system_rab_sfun.mexw32",
+        "sha256": "8b83437296e3d908a0adaa23091fc5cf2a08bd27af960ca90ebd5048e3b28de8",
+        "size": 214016
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/ladder_filter_rab.mdl",
+        "sha256": "4372b2d1c9744c58d1a407eb03b41689e482f2b5e7995255103d82ba48d453e7",
+        "size": 62661
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/ladder_filter_rab_sfun.mexw32",
+        "sha256": "e491738e2a021c8b5afa46a4b3aceb464cf875b3d731f66ac6626c9cc802043a",
+        "size": 214016
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/math_filter_rab.mdl",
+        "sha256": "e4b7614f5d0c24c0854689e54d396aa88707836780356a4d688e7b5843f20102",
+        "size": 55454
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/math_filter_rab_sfun.mexw32",
+        "sha256": "fe9ac3461c6087462a89202ca4cf6a2bccf40c73173236177f31149d10292ce0",
+        "size": 214016
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/rab_bpf_2.s2p",
+        "sha256": "fca49831e4cd52301bfcbdb505af4ab2c18fa0051ca248a8318d891b1cde2ca0",
+        "size": 50640
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/rab_filter.m",
+        "sha256": "c1f72050720da41bf1e91bb7fe1084ffa3efdd55123e8e8d567d9be8df198eb9",
+        "size": 1357
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/info/binfo.mat",
+        "sha256": "1b26048239d693dea2f14cb5ef687256cd8067237fc9f2ef128233ebe47bfd7d",
+        "size": 842
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.bat",
+        "sha256": "65f6a1a5d4fc8dc706d590cbcbebab9a74a669187e0dc268d8c90dca3589b886",
+        "size": 59
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.c",
+        "sha256": "afd4208e54889ad83cf537db98c2c78104f5c4b36a1b4808fd216919f64d412a",
+        "size": 5897
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.exp",
+        "sha256": "b50e89a43960d22b4965ee0640e326aa58d25bab9d6dbb82c6c4769426d6c253",
+        "size": 55
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.h",
+        "sha256": "baff50fe889201b8b6670e22d41e95ec455d790abb22b4ecdb7a806eee91cb8b",
+        "size": 978
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.lib",
+        "sha256": "bfc02982cb45bf307bb9de742ad6f19996bfb2c90db816f92c1ffc5f37ff55fd",
+        "size": 2816
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.lmk",
+        "sha256": "9b82a805e1aa63a4532ae70184b6fdd3f56d077818943358b8dfd3d461d32db1",
+        "size": 1672
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.lmko",
+        "sha256": "e245b453a53a9c8e4720e1e038f7081abd4d6557ca16e0bf149dadf17756d638",
+        "size": 494
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun.obj",
+        "sha256": "97e84fbf666f8003282a0ff31106f9fd92facdd43ebd010f0024e6bb7d5694a2",
+        "size": 5643
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun_debug_macros.h",
+        "sha256": "358a1e4999ddbe4425d10d0fed5193b71dd90ac234b55bc94c02f56295c037c3",
+        "size": 12945
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun_registry.c",
+        "sha256": "3c051dff10f2ec95c5d16c71ae929f022e3c4ed28eb5fd4882c66db1141ef03b",
+        "size": 5572
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/bpf_2_compare_sfun_registry.obj",
+        "sha256": "0f13523c00ca32267dd94625cf0707c81caf117ed9c1db45f156c129a83f4879",
+        "size": 29468
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/c4_bpf_2_compare.c",
+        "sha256": "ff0a0ff11a704bbf69efb879e8743962b32f4309c647418ec3c252931ad790ac",
+        "size": 18922
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/c4_bpf_2_compare.h",
+        "sha256": "31aebe58863fe097f63da362cab26a269058d83c88af4fb7acc27d632f4751a4",
+        "size": 787
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/c4_bpf_2_compare.obj",
+        "sha256": "86d13ea80df5eca9a516ec1148bceba5e2f3716ca6807cf720347c43a4882f93",
+        "size": 17167
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/bpf_2_compare/sfun/src/lccstub.obj",
+        "sha256": "75df58a14a98507eebb17dff36ab0c9f09d5f52297b45511f33202afc072c1f6",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/info/binfo.mat",
+        "sha256": "482ec9323b67d4e7783f91deb17b76cf72496669336d58d20e4ac7533099a08a",
+        "size": 845
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/c4_cascaded_filter_rab.c",
+        "sha256": "db4f8f3759e2df5c638ef9bab4e6191a3eca1512b8991d5189298b98571131e3",
+        "size": 19312
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/c4_cascaded_filter_rab.h",
+        "sha256": "19ab89e48a45a8c1c4bacf9d71906251a2f1c627ebd0655c0edf103d94cfc2a8",
+        "size": 829
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/c4_cascaded_filter_rab.obj",
+        "sha256": "8d134c637932552e2628c3c4fca96efdfb4491e967da51056aca5267ea47d7b1",
+        "size": 17321
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.bat",
+        "sha256": "a73e779ecd459a369016bd2349b07e2034e7c5686874c13aeaaa953749c61a58",
+        "size": 65
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.c",
+        "sha256": "9bc1370139624311e742c98582086778e51db5af522dc1d9fd2acafad0e5eaff",
+        "size": 6028
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.exp",
+        "sha256": "a41bd43ad994087db090010188bce8d641c06902d5175372ae529ec35e1be5ac",
+        "size": 61
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.h",
+        "sha256": "6a3c9587e4f4d9a7b221fe8bf0c6242d9726a9f1324fa162008d2df4589ee392",
+        "size": 1008
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.lib",
+        "sha256": "88cfe77a2a452834eda090d5b01ade8e513614a4cc44d4c8813423e571271659",
+        "size": 2876
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.lmk",
+        "sha256": "ce6423dea6f7e7aa6918e2264a0748a62b683c420e56c1dce84b717abdefb918",
+        "size": 1768
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.lmko",
+        "sha256": "cad84196cbd36812ad9d880169905e9617333e8a05217a2cf0d63fb1d77508ad",
+        "size": 512
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun.obj",
+        "sha256": "b3611c8affc9220f92a064ba7a3024a74645c5196ceed51d0b848eea72e26f4c",
+        "size": 5729
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun_debug_macros.h",
+        "sha256": "ed0127075097f085e7fc3be9d7e73c6c4f5a9734b914af33a13df30e2fbb0785",
+        "size": 13269
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun_registry.c",
+        "sha256": "1f6f5e494397afdacc37f1a864d3960e483a2930c5fdc0e3f8e223795b4c014b",
+        "size": 5685
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/cascaded_filter_rab_sfun_registry.obj",
+        "sha256": "c638f273b14a109cbb11b98db2cfa919c04ff78bfc893ec350adb76fd0a2b3b7",
+        "size": 29524
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_filter_rab/sfun/src/lccstub.obj",
+        "sha256": "ce6b63b6f0d676ee4560fc577108a3545d6b6308ce6beec97abf737467f5e81a",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/info/binfo.mat",
+        "sha256": "3f8744a7d55d4b122d04c5be5b1bf57f313df728faa8a82e4234feba8973330b",
+        "size": 844
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/c4_cascaded_system_rab.c",
+        "sha256": "1db6c0a7fa690f0191ad74e8657fbaa3f9a8673d659f95c08605de3f0bee00df",
+        "size": 19310
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/c4_cascaded_system_rab.h",
+        "sha256": "d39b5992b880410b9de4952c25f548ffafda0cbd245639b6d08795c0032d1e12",
+        "size": 829
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/c4_cascaded_system_rab.obj",
+        "sha256": "447764a33792c6a6f0ad461302d322ea265c431828ec8b0b5770e1a26039e02d",
+        "size": 17321
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.bat",
+        "sha256": "bceda5b919ba27b8b6974969f22017576fb3128896373e3aea91bdf3fd07d5cd",
+        "size": 65
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.c",
+        "sha256": "7f32383bc43b39ed9ebe26d1d70d7d48c950420286ea3fc848d210997eed0fd9",
+        "size": 6030
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.exp",
+        "sha256": "bb54c808d8134ab11ccd3d185240cbbaa724ca34a260d1930742e212b045126a",
+        "size": 61
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.h",
+        "sha256": "259e8e1772a630723c4966764c10ecc88be75f29ee1d22b362db84bfbd39e9e8",
+        "size": 1008
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.lib",
+        "sha256": "c30a188ab16b4f6bd4607761982be125d281141ebf71cab90c4ee34ce7439188",
+        "size": 2876
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.lmk",
+        "sha256": "252307ea20ff873bc05e9e2c39d9a129f66341200fff6f10d9e9b310cec8c52e",
+        "size": 1768
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.lmko",
+        "sha256": "ff02ec93ea1b4482c46514a1ead36e8b089bd19b86afa97c5110760e8918e871",
+        "size": 512
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun.obj",
+        "sha256": "7b80336f61f1b62a6c8c279624a106047c2964e70565fb0b4f3b0405dbbb6d3d",
+        "size": 5729
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun_debug_macros.h",
+        "sha256": "d15cc4d752baf9b0803c71d2c46ca6b5ac8035b2aacd9ea0879c619f4ba890f8",
+        "size": 13269
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun_registry.c",
+        "sha256": "59689e8637fdd59b29d3797a1a0e37abcffd4b214a23f209c58bedff167089a8",
+        "size": 5685
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/cascaded_system_rab_sfun_registry.obj",
+        "sha256": "02cc2f82093e6b6e540a38f77768366de68e33171f8564a29f8d5b770eba1a98",
+        "size": 29524
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/cascaded_system_rab/sfun/src/lccstub.obj",
+        "sha256": "3667b4df1ca42b8f5c892b8267033a95230f2e169b40472af34115e2172f287a",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/info/binfo.mat",
+        "sha256": "89b5670627d1538f5eec2f852b5b46091a49c32977d02d7a11023ff584aba6fc",
+        "size": 845
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/c4_ladder_filter_rab.c",
+        "sha256": "9da554f159e039990f38a5a1152112b0456a7b6c4bd8ba290abf2b650486ac7b",
+        "size": 19183
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/c4_ladder_filter_rab.h",
+        "sha256": "7ea9d10b600915652fbd7b3479617ba1c05d38aa6a9a6f6dee30df65c2004674",
+        "size": 815
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/c4_ladder_filter_rab.obj",
+        "sha256": "eb54657690dfe0c0e3f5bff9de7b36e15eca81b01e3b80c3f490c548d41e3a38",
+        "size": 17273
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.bat",
+        "sha256": "f72e5e8f62fc1939e5f54fd51998ff0d931ecfdb7051187d9fbdafb4a0ba7f55",
+        "size": 63
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.c",
+        "sha256": "87c3007b14ae87daad11f075fc3057eac7b2d7469b8834f3a09f7130f444e43a",
+        "size": 5987
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.exp",
+        "sha256": "4e2c3eec10c363bd7774fcfcf25f81a91c2c11d66473df9b9763eb212c5461bf",
+        "size": 59
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.h",
+        "sha256": "927f07f145c2943daac36947a472c99a5b391c518e8fceb40e3f038c59ac4103",
+        "size": 998
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.lib",
+        "sha256": "f506e9531b750d5c3657af848d6c0122cb0d337c0aff3c6c3d68185695b873ae",
+        "size": 2856
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.lmk",
+        "sha256": "864713a438e5aba5efec8bfc78cae77abab871991d04102f9d6ef847c87e85cb",
+        "size": 1736
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.lmko",
+        "sha256": "9ef9b9c4f2d008f9115c50a4e3408ae718c79ec4d7cab126252b73760de66552",
+        "size": 506
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun.obj",
+        "sha256": "d1189ee788bc98d3ecc617141d4ee85a6687ce45633c67b2b9ca5e69ea7d7621",
+        "size": 5695
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun_debug_macros.h",
+        "sha256": "e784d7623d2edf3c892fafe4f0e76a3543439537cebb6423dcb6fae5a009d27c",
+        "size": 13161
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun_registry.c",
+        "sha256": "010531b8a0f18c8bc897131f2b892c73dcfa80160ebde6632ca0ced8476185e5",
+        "size": 5646
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/ladder_filter_rab_sfun_registry.obj",
+        "sha256": "8af13622fd1a257ea06b9d9b4a4d7baa21e52e3feb56e0de6de64e6fad3ee62e",
+        "size": 29504
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/ladder_filter_rab/sfun/src/lccstub.obj",
+        "sha256": "2af0746443f04a841ae6b7fa3f8c3137a65c1f3adf03ddb0b4f275db60826b06",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/info/binfo.mat",
+        "sha256": "0d32874f676af262b18762f3fa907c4cfc54d372539134811b88afde0263631c",
+        "size": 845
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/c4_math_filter_rab.c",
+        "sha256": "811c99b8c34a257df7d708b4a90a910e07d414bc6e936fc97513358252d739cf",
+        "size": 19054
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/c4_math_filter_rab.h",
+        "sha256": "c43565bb73f45705ddab487806efc49256924816d1ec976407862353cf9c2f04",
+        "size": 801
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/c4_math_filter_rab.obj",
+        "sha256": "c3103697c0ace3b9db63acfceeb9b3b2c17c022dc351929833deb8d3f60f80a7",
+        "size": 17233
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/lccstub.obj",
+        "sha256": "73da9c8732541ad5f9dc362304e59ecc93588a435d9f2d7bac9d5a6bfe75935a",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.bat",
+        "sha256": "f7ce98ea3a9c49c4a056647494777ed3b55be149f24b7e69cdfdcfb88f38f8a9",
+        "size": 61
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.c",
+        "sha256": "6dea9dc8e19d1a7c97790e3fe18cfc16702ca12d87f466c82350e492c5e851fc",
+        "size": 5937
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.exp",
+        "sha256": "16529a227ea45272e52773e665b75140779e96b85978447df894d01ab1a71c6c",
+        "size": 57
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.h",
+        "sha256": "141fe39044d2c83a371956252e06ce9a3a72791aa9bcc92435217c4c41e35231",
+        "size": 988
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.lib",
+        "sha256": "ca358f416ab58d121a66a2ba1d32d25025f9fa03dbbca5d8bc455cd4b82eb7f9",
+        "size": 2836
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.lmk",
+        "sha256": "a8b068aa3c62f70ec27b2c2b516b1a58418ff0f75465f08ade02e1a45a3cf6ea",
+        "size": 1704
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.lmko",
+        "sha256": "fc66797711020ddd7971ca40a5919ce68a9922834e6f13fb3c887e8dbe4e27db",
+        "size": 500
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun.obj",
+        "sha256": "ddbef54fd4a69d07253748e92d5ad3e8190a70a1fab4317b6695e68ea87a32e5",
+        "size": 5669
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun_debug_macros.h",
+        "sha256": "bba0d457a443aa6c79f805196e5514d2f71995946ca360ec14b8d72e4b33a488",
+        "size": 13053
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun_registry.c",
+        "sha256": "d3624bbef50bf7efdae400a09943707b6a9b30b8e911802260896e006db3bce1",
+        "size": 5608
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/math_filter_rab/sfun/src/math_filter_rab_sfun_registry.obj",
+        "sha256": "82e00c8ed9fc17d0365fcd4864f1bbeaba01dfe4f5aa154b130f97c833a6e51c",
+        "size": 29488
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/info/binfo.mat",
+        "sha256": "799e057349fd177165ff842bc946ab2614559366814c56832ba763a4ba0714a9",
+        "size": 1250
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/c4_sparam_amp_rab.c",
+        "sha256": "8980389af7aa8b190d47143417e70696f034ad39d7a2fb4fcda68264414484f5",
+        "size": 16417
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/c4_sparam_amp_rab.h",
+        "sha256": "23ef70b6f370c337149a6ea9b29fc7a0ee4285fd267c9e92e6443020bf5494c2",
+        "size": 676
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/c4_sparam_amp_rab.obj",
+        "sha256": "0746c6129871525edd3a8329a8645a37a601aa79bee5fa04e21957a6ad45212b",
+        "size": 15140
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/lccstub.obj",
+        "sha256": "2ec1095fa5605f9baf1175653d145c717395a5b447f68deca6833904024e7ff7",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.bat",
+        "sha256": "305a9c8ec6d29dc5ce5cfd4a66862aa88d99ca100137784911113ddb97bc37cd",
+        "size": 60
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.c",
+        "sha256": "9d4def2e4ad0f22774a992f9368db9917dc3bf25ffaf1977ce5981b51691bba1",
+        "size": 5015
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.exp",
+        "sha256": "8ae99917abb126f2e10e54738ff6f9762a2656d9cf8b2afe78b36a6d97b23e19",
+        "size": 56
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.h",
+        "sha256": "a726682932936c1f1f62f5248d344a8d37361f77cc3e7a920578f476b160d6b6",
+        "size": 983
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.lib",
+        "sha256": "0fc004a596864dd4421d8bdb33476cba1faf8b0e0ede3a3c525e711094aa046d",
+        "size": 2824
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.lmk",
+        "sha256": "bd297794556f96207b5c26c0c47fa2b18bbe1f73b5cdb12a093f9786953c5afb",
+        "size": 1688
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.lmko",
+        "sha256": "65529b060830267ce56401e17aa6b66b6590e41486caee83eba36b69190a2b8d",
+        "size": 497
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun.obj",
+        "sha256": "6d4f450b844565482ed4f63a2959335e496a408dd07afed05a99b674e9258ddc",
+        "size": 5097
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun_debug_macros.h",
+        "sha256": "f9e1bf576a1a46e12067305e9511927975dbf676a43825fc6f3786a971dd5ba1",
+        "size": 12983
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun_registry.c",
+        "sha256": "5f73bb975a6ef341951c1697b819a2ed2ba741325b1735b8bdd8b9c5e6a28ec8",
+        "size": 5030
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_amp_rab/sfun/src/sparam_amp_rab_sfun_registry.obj",
+        "sha256": "308b65dfa5dd5a6a36f01ef7a202834b770d8f8ccc47b6c024d551276dcb0386",
+        "size": 28116
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/info/binfo.mat",
+        "sha256": "8ef9ec8c118fe1aed2167641efbfc01ba0ffbcaa92cbd142c0fc526f1bf5cee7",
+        "size": 1258
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/c4_sparam_filter_rab.c",
+        "sha256": "a03e58a2b2ed49aed3596ef41a05970d03e5e9efc45d9c323bbf45eea2e1ce11",
+        "size": 16676
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/c4_sparam_filter_rab.h",
+        "sha256": "c72963d2cbcd9ab1757a608b178102f0e231b463d0887d484136e477666578c1",
+        "size": 694
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/c4_sparam_filter_rab.obj",
+        "sha256": "fe8e1e12bd4c39b1faf8dc1e13d4abff794ea937b244c286f7f0a0b49a94f783",
+        "size": 15212
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/lccstub.obj",
+        "sha256": "c94ad1ac2757bc9cd538b9daa83c504adff703293a05b08bc008e71ca48c70d9",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.bat",
+        "sha256": "b52d6b90fa483412f0d8de261d785035563a6802b4ad0c3d051b26bcc27d44f9",
+        "size": 63
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.c",
+        "sha256": "b52ced96d0e3d33392a03645f1f2c2b699cc09f4af5f99d2bd87e8d4adcd1b29",
+        "size": 5078
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.exp",
+        "sha256": "2a913d651653422be252666cec5fe1d6962c4bedc57ddf7b3701488ff362ca11",
+        "size": 59
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.h",
+        "sha256": "5834cb980d63bf8bf89a4779cb7fa98f9d3eae0b4b1d27057a3e151cfd461162",
+        "size": 998
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.lib",
+        "sha256": "e22d0454cb5557980bbe2ed8e0408c0e7e8ced645c11d408d0f01f06cb37a239",
+        "size": 2856
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.lmk",
+        "sha256": "7dd1a40d14999ab8c6c92db841cbf3a324b639c8af3808a4756b1edfb3a6e1b5",
+        "size": 1736
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.lmko",
+        "sha256": "bd6d0c0e4ea00a67f1a3c239de668c7935ab3257d4d35a8de53aee05c7b03722",
+        "size": 506
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun.obj",
+        "sha256": "05edcd3537fa5b75147458eeb9ebb50020809a1e9a478df93a6e90ff840352e3",
+        "size": 5134
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun_debug_macros.h",
+        "sha256": "644bcfb6690548838f54b9f2907acc6aeada98548a234aba070916e847d61c3f",
+        "size": 13145
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun_registry.c",
+        "sha256": "f95b01a9a93a6e36bb4892adfe1b80b772cbb7e0923b003493415e484df59ab6",
+        "size": 5077
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/sparam_filter_rab/sfun/src/sparam_filter_rab_sfun_registry.obj",
+        "sha256": "7d8732f5709111bee2929a79f0e9a9bb111c54cc6b8ea8a317d47e51a6b7710d",
+        "size": 28137
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/info/binfo.mat",
+        "sha256": "0d654a268d17154a58fcfdbdba31fa45c613bec2fd5f0b4ce17d6202b1b9797b",
+        "size": 1253
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/c4_txline_filter_rab.c",
+        "sha256": "5ac2231aca2de249522247763415b3775691ec8ac5161204765dfd4427e0c712",
+        "size": 17835
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/c4_txline_filter_rab.h",
+        "sha256": "d4c8a89cab2044e36ce6a63a78803c85dfaca8dcb73374b54b6beddc2e7d6b19",
+        "size": 694
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/c4_txline_filter_rab.obj",
+        "sha256": "966b4280cde1ff482b31b3099322eb7d0ca3738b9a928520f58aae0dd20ae4e5",
+        "size": 16274
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/lccstub.obj",
+        "sha256": "edeb6c7c1f96f108620c9bdb6a38457c8b6115ab6273eb7b0c3c26d2975fd772",
+        "size": 366
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.bat",
+        "sha256": "11b3483e30ad5613c41fc2e5c708d1db4791704b112e294ec355ed67a0aef4c6",
+        "size": 63
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.c",
+        "sha256": "e7059b67803f8a419b6f1bf8d8465ec31a4d0c5e868de89fe03afb5f25de98c7",
+        "size": 5077
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.exp",
+        "sha256": "abcb0bbd964074bfa7143c176960e29cca4e2fef3e758df20826e11af030be0c",
+        "size": 59
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.h",
+        "sha256": "c5a2fefec4784d356fae31f7854666d67a775b597cab71c15e7743d1733adeb5",
+        "size": 998
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.lib",
+        "sha256": "c52dc68dcc0851b84fff025baffcb12d14a4d76098f03bd16065c7f8effca1a2",
+        "size": 2856
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.lmk",
+        "sha256": "ea08a91e5a3062eb2dc1ef07196eb945017b30623678ef7fe8a4df097b4c32af",
+        "size": 1736
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.lmko",
+        "sha256": "b7a4344075b89a21abaa2e2cf2f97471afe6b327de2255195ec7e6ce1fad3cf0",
+        "size": 506
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun.obj",
+        "sha256": "8f6129ff0d629f9cef8533049dbe618e1f2694de07a06bb01c8d0f1bded84ac2",
+        "size": 5134
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun_debug_macros.h",
+        "sha256": "c348a07f4127052fc8bff511d14476b252ad8d75130977065c8dfca9c9bc73ef",
+        "size": 13145
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun_registry.c",
+        "sha256": "7e8f93e79f00d58f030989d519aeaaae1ee5b339a75805d3a609aea04cb18c1c",
+        "size": 5077
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sfprj/build/txline_filter_rab/sfun/src/txline_filter_rab_sfun_registry.obj",
+        "sha256": "8c5efaf322651844d3712fe61805c1fc328322251c4704a9d439fb04a17bc3c4",
+        "size": 28137
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sparam_amp_rab.mdl",
+        "sha256": "7f1de62bd3d3cf95db20a2fac4eb73bf517e6d11b374e47a8e172ca9c63790a5",
+        "size": 69794
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sparam_amp_rab_sfun.mexw32",
+        "sha256": "9b5d8249b712c99b2cdf2007783b4ffe8706aac7f7c5e0b69038b145068c7e48",
+        "size": 205824
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sparam_filter_rab.mdl",
+        "sha256": "52abe662b88f67a6c889471c320c8932a9d9019f4c74206a723cbb8dca8db808",
+        "size": 60686
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/sparam_filter_rab_sfun.mexw32",
+        "sha256": "87cbac5efa5cdd200ce0cb5f2d1b78944097cf50adc094172a06441dbb9bd405",
+        "size": 205824
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/txline_filter_rab.mdl",
+        "sha256": "6c8caab956cb941a5dc8eb2b17ee0a23092e004783adb0a4a1998cb078b28b26",
+        "size": 73117
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/rfblockset/txline_filter_rab_sfun.mexw32",
+        "sha256": "c27a9a837db59b3e1d9b3f289cd2f556509b03c450d9f0403e6147a7a156a125",
+        "size": 206848
+      },
+      {
+        "path": "sources/ams_r2006a_2007a/ams_r2006a_2007a/sampling/sampling_101.mdl",
+        "sha256": "01e55e12391c00df6f147fbcdb6ac4400957adc9b7c37d0b5a3124761d41273e",
+        "size": 43566
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/bpsk_costas_2008_08_25.rar",
+    "sha256": "2e0b186dc8f3ac44dc8c7aa0cb757d3347930b8a93ddfef4080c2dbe5047e5ac",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/bpsk_costas_2008_08_25.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/bpsk_costas_2008_08_25.rar"
+    ],
+    "directory": "sources/bpsk_costas_2008_08_25",
+    "files": [
+      {
+        "path": "sources/bpsk_costas_2008_08_25/bpsk_costas_2008_08_25.mdl",
+        "sha256": "001a1c7c5fb3832eb801074c44668bbf6e37ec820bebc40446b9966e602753bf",
+        "size": 124379
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/dqpsk_19_09_2006.rar",
+    "sha256": "0a32da3bbd164a6c5603799fdbf6d0b601a5986315bffbf423d64f8441e5d9d5",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/dqpsk_19_09_2006.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/dqpsk_19_09_2006.rar"
+    ],
+    "directory": "sources/dqpsk_19_09_2006",
+    "files": [
+      {
+        "path": "sources/dqpsk_19_09_2006/dqpsk_19_09_2006.mdl",
+        "sha256": "84ee37feeb421446785bf47e6d8c1ff83d3318897522e7c9614329dd9a646816",
+        "size": 57252
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.rar",
+    "sha256": "da3a14c10d1a7c42cfb65314c004c80ea2f8a383cc8fa650a2e98412936c716d",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.rar"
+    ],
+    "directory": "sources/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12",
+    "files": [
+      {
+        "path": "sources/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.mdl",
+        "sha256": "80f762f8915f39ad23cc3502b63c1b53406893437b1e92993cc580ace111b21b",
+        "size": 108711
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/msk_modulator_2008_06_22.rar",
+    "sha256": "dc5b238904daf6620501ac6699a0ecc35875962d745d23ed019c70e06a269472",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/msk_modulator_2008_06_22.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/msk_modulator_2008_06_22.rar"
+    ],
+    "directory": "sources/msk_modulator_2008_06_22",
+    "files": [
+      {
+        "path": "sources/msk_modulator_2008_06_22/msk_modulator_2008_06_22.mdl",
+        "sha256": "29630662de47a67fbf00001ae17bfa97fea7af1c8d73c490be0e8fe634efe8af",
+        "size": 28352
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/petrov_modems_electronix.7z",
+    "sha256": "69fd70e90dd687104da20090ee5dbe7f574c7df452609ed2d2b74b1362febdd3",
+    "aliases": [],
+    "directory": "sources/petrov_modems_electronix",
+    "files": [
+      {
+        "path": "sources/petrov_modems_electronix/rar/QAM64_2008_11_21.rar",
+        "sha256": "64c4c15a9bb8fcb58e6256409a34534152f5ffd9f096b6ace29d349baecae728",
+        "size": 20368
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/bpsk_costas_2008_08_25.rar",
+        "sha256": "2e0b186dc8f3ac44dc8c7aa0cb757d3347930b8a93ddfef4080c2dbe5047e5ac",
+        "size": 15212
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/dqpsk_19_09_2006.rar",
+        "sha256": "0a32da3bbd164a6c5603799fdbf6d0b601a5986315bffbf423d64f8441e5d9d5",
+        "size": 10683
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12.rar",
+        "sha256": "da3a14c10d1a7c42cfb65314c004c80ea2f8a383cc8fa650a2e98412936c716d",
+        "size": 13942
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/gmsk_coherent_demodulation_2010_10_03.rar",
+        "sha256": "7b1359faee92d0241217c63db5d7c3f7ef7f992e9b95c88769fb01ba45157867",
+        "size": 24480
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/graphic_equalizer_16_band_2011_05_17.rar",
+        "sha256": "851217bbe7dbb6a43ae9d6eb18aa6367f597fadce60c0463649d09d0b8787f50",
+        "size": 19537
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/milewski_sequence_2011_05_19.rar",
+        "sha256": "48e190a6aff585ea2d5f3292b123956a54f2aa4b3c652a6253db0a01dd643c9a",
+        "size": 9735
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/msk_modulator_2008_06_22.rar",
+        "sha256": "dc5b238904daf6620501ac6699a0ecc35875962d745d23ed019c70e06a269472",
+        "size": 7086
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/pi4_qpsk_8_sps_ff_sync_2021_05_27.zip",
+        "sha256": "ac31889fc462cdb66a65217bd6d8f97831c1ddd7782a43e9c36d3cece681ce57",
+        "size": 54717
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15.rar",
+        "sha256": "123aa11fea915ab205788589999063fa253dd9137f62939efcd12ed49980c427",
+        "size": 26248
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15.zip",
+        "sha256": "81355d40c995bb0af6cf11a8a84723f330951684521c83d3e918ac7becac000d",
+        "size": 13188
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.rar",
+        "sha256": "becdc852ed352170bc9f3d9a9693313d6f79db90c93349d4414345787ae63c9d",
+        "size": 15615
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.rar",
+        "sha256": "9142c70c167a80e8a2644e3f9c1c7b64e80ea4dbb5028b3b5b3c09269fd29154",
+        "size": 14818
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26.rar",
+        "sha256": "3923073e12614122232f1547131ae55cbc475d6f62639f2a112e7c1ffec03d4f",
+        "size": 19386
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.rar",
+        "sha256": "64fb777eebf01b867aa905a433525e58ef9e0755c25e7d600de8c2b0359e6b10",
+        "size": 15812
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.rar",
+        "sha256": "2395d6b8824cae01f952c98b6a0061ce1d22f8742bff301a21d38103f7389ab7",
+        "size": 17911
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qpsk_demod_with_phase_noise.zip",
+        "sha256": "b605e6177d6b9d5427d6a601dd8be984f351038c73560b41ce6331a6dbf5a7f5",
+        "size": 13485
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.rar",
+        "sha256": "2eb320718eed1076e116b8039972f45a6f9c0fd50a82708c50ee564a1f1111d2",
+        "size": 12236
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.rar",
+        "sha256": "b9de90895a671ebc40bfc80e9189a39de7f7202296e40a06d748e53988735f40",
+        "size": 15450
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.rar",
+        "sha256": "20512fecba2400be2a9ca1c2739cb0aeb3de10d28d661fb59895d13e8cbb38c4",
+        "size": 14051
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/qpsk_phase_noise_phase_sync_2009_04_12.rar",
+        "sha256": "1549a34666b76c6f9b4f0df06830a2c912444bc78608bc938fc182eef25b4ed9",
+        "size": 9017
+      },
+      {
+        "path": "sources/petrov_modems_electronix/rar/simo_maximal_ratio_combining_2010_08_27.rar",
+        "sha256": "f5567223258eedf104b385e53f65b74cd51d1342d39b9c215835e3a2c5e8427a",
+        "size": 27965
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/polar_code.zip",
+    "sha256": "d5d0dbd0b939f2e5426291e4c9e00c2c07c0090fa77d7ddb15055e595f5506cc",
+    "aliases": [],
+    "directory": "sources/polar_code",
+    "files": [
+      {
+        "path": "sources/polar_code/PolarC/CMakeLists.txt",
+        "sha256": "88ceb92b3dd2bb084ba4516704d2eb01ca58e3f7b55285466b4307a8dc13ef2c",
+        "size": 276
+      },
+      {
+        "path": "sources/polar_code/PolarC/PolarCode.cpp",
+        "sha256": "4c0bc47a569e99474d0fad9945f7340b5763a63411aaab93d14e6a8e131bd9fc",
+        "size": 27374
+      },
+      {
+        "path": "sources/polar_code/PolarC/PolarCode.h",
+        "sha256": "069fabc654a92122582d98bf07c82b103ac5a95d2ad7e2a6e6baf3bdbe3fdcd3",
+        "size": 2819
+      },
+      {
+        "path": "sources/polar_code/PolarC/main.cpp",
+        "sha256": "0f2096825cf0186bb8eed73bd5bb757e05d03c2c488be70220f1ef2152177894",
+        "size": 1328
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-0.25.mat",
+        "sha256": "6987bf760df2a3fefebcb3453389525bedff15e22eba45c5cd5fbe28d78e1783",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-0.5.mat",
+        "sha256": "e3f632e8ec4403b15a23549bbf6012e0d386faf836b4186459bb3ea344fc9b1c",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-0.75.mat",
+        "sha256": "1b003a55b87fcc8dc3b04f611963042c0e3f0319e4e816c55717f510931ca2df",
+        "size": 212
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-1.25.mat",
+        "sha256": "e26a94dca70ee3940f56bb4e66aa97f2271b53848e9caec5b2566a15ba97c57f",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-1.5.mat",
+        "sha256": "03412a5c678939ec0038b73fcd656ebca4579ffbfa73241f569862db599ce657",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-1.75.mat",
+        "sha256": "953a87ab0d57f1171ca7a7b7ccb7d9d849b085ffc89fcad14af16b0ad8afeab7",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-1.mat",
+        "sha256": "6dc0bb7ce3cc55ba2d997e2022e6ebe9cde6882a1c07cad8ed0fceb81a69f8ea",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-10.mat",
+        "sha256": "089d966670eff96367917296a86e3111bfb8bb33580744a46f08b0d5b1606a75",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-2.25.mat",
+        "sha256": "34542ed4af28e0d08eb6eab73ad7ac06653d23aa2866e6425fc53b21583be49d",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-2.5.mat",
+        "sha256": "221fc044527a826677806bd79b23f4958a0d678f507946fa2579e662c802f52f",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-2.75.mat",
+        "sha256": "09248fa16cc0c9d0946d011bcdd69f38aed035af0e87609757d9fe1619d065f2",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-2.mat",
+        "sha256": "69904d20170d6dc411435748b0b5d7a9e1aabd482e457cd2e2b45182bc1a94ec",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-3.25.mat",
+        "sha256": "ce19c6eb76d630bbe5a13c43ad0631ba9f15ab702524725481f1a3f68aaf1725",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-3.5.mat",
+        "sha256": "2fe9551314989804a6026fc9823ea6e4f546d83bdb5ac4bf2eaaeb6ac206c85e",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-3.75.mat",
+        "sha256": "cf9497d97628ef8c55fed48986f8ab8d0c29d678b19bf4c864d1c340aa2a9a9f",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-3.mat",
+        "sha256": "1da6e705b55391caab11a1ed2f4c84f953fc03f9d31857211afdf84f2acc9d92",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-4.25.mat",
+        "sha256": "7c87a8a87007c68f02bd587e116fdaf78d4d7c59e3b359a0faf3a50ed11fea75",
+        "size": 212
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-4.5.mat",
+        "sha256": "fc60ad98443515599a1c546e23aa37a6ffaafe5a2854056f878cc5e9531eec4b",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-4.75.mat",
+        "sha256": "88c3e58f71e0f51de3218138d2d430c761128be4ebf939437b93fe55791af2b8",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-4.mat",
+        "sha256": "24eecd041d2aec9bec7a182432c2ba385b5ad2e6b1719813c72f2050a115651b",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-5.25.mat",
+        "sha256": "1bfc2da5ee6269a11beadcd9af546770d47a75dbac431b3a23685a67eb749528",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-5.5.mat",
+        "sha256": "76fdf792b7c80a21949dea3d3502e4d78bf6480b25be431a5990a641f9d350bc",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-5.75.mat",
+        "sha256": "f96952a1b464690b9098896cf205856a0d73cdd9d876f1bd61faf7d0d0cec141",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-5.mat",
+        "sha256": "3b9585297b64211f78d65a5b02040764eda64da48de53af34f3372d5f1886380",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-6.25.mat",
+        "sha256": "02661c584f73c0af127b6528e869835fec4608a7799dae886f985bcce0d25024",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-6.5.mat",
+        "sha256": "c2d062be71b5bf9e16c869060ce5e36c181cc91afc79d99f150317d61c842e6c",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-6.75.mat",
+        "sha256": "a19205c8800681931651e58a80bf3f908716c383f90e5cbf024422d75527fa3d",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-6.mat",
+        "sha256": "7298b49af01a5ae7f72f42b2a830d65409323dff9587f8f5bc673514df4d121b",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-7.25.mat",
+        "sha256": "ce509dae2605e69ca6b661093e62d5eb987cc1d6c29579e67a978c688fcd12d5",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-7.5.mat",
+        "sha256": "c4137a8901760d63f9d9798d7de6a46700ffa567096412a848eb3f9c19015179",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-7.75.mat",
+        "sha256": "f763d2c720ed01671986a3aa029f8e140187e223a87f153d4061daf84f47c396",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-7.mat",
+        "sha256": "d1ff17a6fefc9a73d775280e04ab597bfae7ab1bc7e5a30e39c68b2f9d650097",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-8.25.mat",
+        "sha256": "e18802759b9e3624e10453ce97710effa7d81e7cab027438a655918cbca20456",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-8.5.mat",
+        "sha256": "f5934977204a64440861016ef57b1ef9d2d1e02c3c1cd386ab129c66a568f57d",
+        "size": 212
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-8.75.mat",
+        "sha256": "b68cfccf8d9562932ce592093408e8039629b79376aac3b26d76ba98330d917e",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-8.mat",
+        "sha256": "3d8e344955e6fbd2d2310fe2ac7356d42c67c697a2c915de83676bca3e4c1f39",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-9.25.mat",
+        "sha256": "360a7ebfb199ae1f7e077d5b33ceb70652a2ce31f27fb0a328d17f5ef0b97247",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-9.5.mat",
+        "sha256": "c90dd3298db3434e7c1432a39b5ffe86ad687e6a8f54c2c214eddd8237cb2a7b",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-9.75.mat",
+        "sha256": "296a504d044f06ea7148d33df06b6d7b1fbdb44acf585293511b5010922b6699",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_-9.mat",
+        "sha256": "6c3f094e6d14780b22430d07451a3c16fd83ad33f95bb0874ff6b1e53d94f51d",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_0.25.mat",
+        "sha256": "a00cc6463d1f372c4009ed70e720723c9acbbe3f5aa86ad33798bf7c67dfe016",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_0.5.mat",
+        "sha256": "1778e2c2e0b67ab388f72042ef9361a7e14da563f77eca43989c8345c266d286",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_0.75.mat",
+        "sha256": "2137fa4ee20c8a21b12beeb50eb519a0295b426c0caa12a6b2fe16ec967d42a0",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_0.mat",
+        "sha256": "128e3b1719a0a2ba475bb7ed64d0eb8f50745fffc49a5c8b39f6e9a86e9d8eb4",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_1.25.mat",
+        "sha256": "8cc1257e132e121247694aaf93a6617818f6fbfe968271947f9fc092384ebb79",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_1.5.mat",
+        "sha256": "9171962842c44a6f63e32f44bfa8695b4531dfdee77092d6783a6c5d36f9b951",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_1.75.mat",
+        "sha256": "a5878c18594cbbc08376eca17cc4674a0844286252f51994b36111fa5e5abc6f",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_1.mat",
+        "sha256": "df280f88fa14d30e9614b1eccd99fbdc3759941b13b8bcddcffbeb8175ed7be4",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_10.25.mat",
+        "sha256": "e3be040dcabc79cffa2faae779e5da7a2d323b2533d8160857611af5f7f584f9",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_10.5.mat",
+        "sha256": "6d667e0dcbdfb9b799aead2c295b25073adec854811b4a80a1768db4cad7bcfd",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_10.75.mat",
+        "sha256": "a51a405a79ca2320ce4eeba86e4442d9994ce6f77ff779c57726306d0a90c50c",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_10.mat",
+        "sha256": "3406fc348da80f06ebd5755745b58e7b4d2f6d5c9a0a5b42b46e91e8d88cd476",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_11.25.mat",
+        "sha256": "1f8beb0d6951d10ed173338401870ff6db815cc3bd1925652a581588af0f9409",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_11.5.mat",
+        "sha256": "4ca37fc3563d260233bdfc449a758eeaaedf7975a8d5775a885dabd5db69c6c7",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_11.75.mat",
+        "sha256": "78255b8c4135c911f22ec3bad88b21851e0046b53a3b6ac144253fd3cffadbdf",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_11.mat",
+        "sha256": "1ffd77021a2e5823124e6fc3bad05d7523a76b449cca4388cdb6d685428d0ad6",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_12.25.mat",
+        "sha256": "2ae6099b259f9e1c239be2291bab4e8b3152235066b08da5caa67f0b6ce1649c",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_12.5.mat",
+        "sha256": "5c2e2e4ebf59b05318ba27da10b0bd172dbe7bf8d480e44b50e2bc9da8678337",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_12.75.mat",
+        "sha256": "976863d840f533a60524022f8d87c0e6d0145f103638e4f6fd409a66914fd315",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_12.mat",
+        "sha256": "cf80dccc9ffbe14fe9ca78433ca7c20c3abfb36ea2c20181d61c60b14dd009c2",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_13.25.mat",
+        "sha256": "b89639619917c9dba723b4db966ccc96403100a1cfe05e9604eb535af347edbf",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_13.5.mat",
+        "sha256": "8c3617019e4b5033d9e5c20602354316392870978bd70f37dac225afe96f27b5",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_13.75.mat",
+        "sha256": "1997985bcedf3f62dc20b2a4c502fd07a20ce14a69aaa3f8aa024c4d027c906b",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_13.mat",
+        "sha256": "b8b1b4d991c5fbcde794bd84199d23c70eaf5ad484e167fba288d5b98b19a985",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_14.25.mat",
+        "sha256": "d7b5a9433251f874e29b88cdeded255928012991b551754f33b924598da55536",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_14.5.mat",
+        "sha256": "caaac997e9b1571324e49b8f2bb6e4db54225cab88fa07ed4242be543e8eba0d",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_14.75.mat",
+        "sha256": "86fd4d99a6e5541b56535b8d4d91772cdc5e2e7ec49d91079715548b48f255b0",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_14.mat",
+        "sha256": "7204a1d8f09ce1a5f185ab474163b752278d2f9887cb98502145e9b72d94f508",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_15.25.mat",
+        "sha256": "60856cd3b0c78c0489e2c46a6ab853396fc45f8a56923d1a1888454d3978608b",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_15.5.mat",
+        "sha256": "e2f37d33ed0121c6bab9ffd90649dbd7a133ee487283cf18f1baadc17c626313",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_15.75.mat",
+        "sha256": "a53e74b14ddebe96116a767c60241b10da526d0992de99a403a448afc2112265",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_15.mat",
+        "sha256": "fb5e0f3dea9141149067c49b6d97afd27d41aede8866f4669d2f5ea614c592e9",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_16.25.mat",
+        "sha256": "b973d3893c36bf1605ff7b8508ae3f4fe707dd215ced51a025429001b277ab3c",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_16.5.mat",
+        "sha256": "2f8b58ed924ac99857db281f43f290f475b98dcdb100be86bf1228af4ce3174d",
+        "size": 209
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_16.75.mat",
+        "sha256": "07f2b6a1435fc946f9b2ff1d0093c5a500b3eafdcd0c2c9df364ac1402902264",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_16.mat",
+        "sha256": "3d4a3852c36a906249eb12eea8b2d419e2194665c146916c331de9931ff7379b",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_17.25.mat",
+        "sha256": "3b72435d5174ab341e243cf118de09d29a86ae81765fcd8cae40070d66f8a81f",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_17.5.mat",
+        "sha256": "3d86de9bb849f86ad44ce97f7faa15d6e69472c31782ebcd313c246b14a98af9",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_17.75.mat",
+        "sha256": "485c26d9f32086abe6994ecfa7b97031216e592f2d3e0d18606743a8f23f6762",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_17.mat",
+        "sha256": "b93979861a7030220d992c49e9fc1f4b484bf9fcdee830a484d1fd8747fe499b",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_18.25.mat",
+        "sha256": "2b9c99599cd9cab925fb421ddfd865f42fd94726975309938ebb5fa6cbd4c7e1",
+        "size": 215
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_18.5.mat",
+        "sha256": "6d8add28293895f1934edf8ebfc5a2755e6a398738eeeddd14d0a690ae2a221b",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_18.75.mat",
+        "sha256": "68674843e4adca2212eee8c629dc1cadbae03f3bd24a2950961f3ba911455ed9",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_18.mat",
+        "sha256": "a1f0efdc0ffede552ce0996b73a2a392b2b2a60b0c5c65bdd48cf20453023eae",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_19.25.mat",
+        "sha256": "aa41360ee1198362c968046b920f4d2e397d6536978aaa57ee665c9eb47f1a6e",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_19.5.mat",
+        "sha256": "bb521ec7afacdcef44c0e0e69ec1a8aea46bd5c17e23c019ad12510f48789a7b",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_19.75.mat",
+        "sha256": "c9bd36b058abf7ce66e6477c912d5054b8c500579a3b1f419986db61ed2389e1",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_19.mat",
+        "sha256": "830aaeca7100d0fb9e670266308687152b53f4be17f9887bccb7443b91397000",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_2.25.mat",
+        "sha256": "32d712486ae421ef7c0df9bdad38380d24724532496109f09c37e6d5405f57dc",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_2.5.mat",
+        "sha256": "2aae80e0927d45172f99f1fd9b7f9f82f5bf5984158ef7fba7bfa14ba82818ce",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_2.75.mat",
+        "sha256": "be6c28def885390b11eb38f6716a1ae389dad81107a51ddef64e8beb8faf9e68",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_2.mat",
+        "sha256": "2a5ceb8b18aaee1a810dc0f894a8eb68f54978c405ffc3c72242dbbffcba7d29",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_20.25.mat",
+        "sha256": "af37db3cd578010fc8d6e8298359f0aa4b578a9e7e26bd0d53d2060212d5b59b",
+        "size": 215
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_20.5.mat",
+        "sha256": "2b4a06b1398c17a6972a86b6fbdd20a2d9aaf189e6001c4061c28ac4f1ac52d8",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_20.75.mat",
+        "sha256": "2fedfdd6362086f341a6cad0640da300461912c1c80e2fcf636cdcbb53bda25b",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_20.mat",
+        "sha256": "8213cac632b9197c57977f7dab26230d36c864e3763a539216152030e8adfeb2",
+        "size": 210
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_21.25.mat",
+        "sha256": "e16eb0f7bbf67e36f22fe20de48577fde8682391251272d103f9af6db2ac8a36",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_21.5.mat",
+        "sha256": "96c3f589e67accecd0381d68cee5d42d99964d266c175c9abe95ae6c6b5dd557",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_21.75.mat",
+        "sha256": "e39fc84ae031fbd9025bc22e07737a70323bdc23f740c6c8aad6374fe0a50755",
+        "size": 209
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_21.mat",
+        "sha256": "9c7998dcff127ad0e49df921f4fd77fe6ecce3956f2c69d5b573d289c6459851",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_22.25.mat",
+        "sha256": "5e3aeddc00f068bfa5513952bb261951f4ae2a5f8797333a1bf4c2bb98ccad99",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_22.5.mat",
+        "sha256": "8d627eb20ce0a52c2e5f295a91ded9cf9bf752e60b7408857ccc3b3c0365ea22",
+        "size": 208
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_22.75.mat",
+        "sha256": "1e198a04db4b447936dff1bb9279a8e15542af46a24d0637477dd3cd24136cf6",
+        "size": 212
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_22.mat",
+        "sha256": "a608f801562a6916dee10eb9f73b8497c4766b33cb1e4f4ecdc060f092fc3c81",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_3.25.mat",
+        "sha256": "80132cfc7a3299416960a2af04798f501376d0b9eb7a852b2b59d6467adeec4c",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_3.5.mat",
+        "sha256": "3886bc284ed5f689c2c1cb4630771ecaa3112cb5110546128188987c5b6bebda",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_3.75.mat",
+        "sha256": "af75daff63a98c35371f16ffd442f3bc910004809126e73a9198db90602dd50a",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_3.mat",
+        "sha256": "aa24e36bc1d7595702b1848526c822177f0feabe00b4812a8a4c3051c6720bd5",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_4.25.mat",
+        "sha256": "67d0731fd95bb20cb604ece1afdf30ff0c84ea35baffeefb6b57cb836bce4c05",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_4.5.mat",
+        "sha256": "5ece12ddcd262453993436abff42b0c959423af07f1126ff8d4fa6a4a716b005",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_4.75.mat",
+        "sha256": "0cbdddc42671d62353a0de0e838d23b99fac6e57e7beeea75252319f7285ed25",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_4.mat",
+        "sha256": "a387308a7c0dc1f24bb6f878045f7c66a0f900f21076c05276d0595f08f03a09",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_5.25.mat",
+        "sha256": "0e620eb70671cae9cb83a04b70e54fb21874c809bb656642fb8918ed08bcc0c7",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_5.5.mat",
+        "sha256": "77a61eb5ee5724964d4996908a2cc6e001f2487d46627c0c25ad13d4a293147c",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_5.75.mat",
+        "sha256": "e34b2c5f325c6cd8a1172378f9fce8c1f32aa3b12e9c6e20fc64e061d1ddea81",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_5.mat",
+        "sha256": "204ce29721f7af6a8869f49457485ddb903772a816ca2ac36285ddc56f43809f",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_6.25.mat",
+        "sha256": "473e76fad78063eb72bd326c1cafd9d4946bdbf4638426db4f15f81380ae8240",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_6.5.mat",
+        "sha256": "03e29ce031a44cab127e9603b55cffc632b2b65f1dad781ce3139b98a80e81ed",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_6.75.mat",
+        "sha256": "14f931d0e5f2b03ff18787c5f23a215c55ddceab1bb053fb97b47f70e10f6e19",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_6.mat",
+        "sha256": "b099acfc7e3d20ad59e387bf71fb9427b9ecea00bcfb67c46ec80c5c3129231f",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_7.25.mat",
+        "sha256": "3b5ae96cc739ab6e529f9834aa6d4d892d974fb03efb85f8d732341261af3a52",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_7.5.mat",
+        "sha256": "069e31c7c357d9cf9038f59d5bb6827cfca6554523ec3a6012bc8ad095aca437",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_7.75.mat",
+        "sha256": "a88a932e21171c3b068c6676e31243e7b45f868ab0a1d7d8affd3acf50fdf957",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_7.mat",
+        "sha256": "541a2fa9adf0faf6ba1eeab22d0f927b9bbb7830a317f5a1e1a50e61360c7277",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_8.25.mat",
+        "sha256": "ab6d41eab86d4b262188658ce7774c1f1e99c5968e0c93f94929dc563fda4355",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_8.5.mat",
+        "sha256": "01ee406f972473397dddbe5971025531710598e44edbcb2b314b07c6d9041b29",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_8.75.mat",
+        "sha256": "ae5f38810bd23b88fa0645b63d427a1411e05b256e1856a0c1caa33000bc7c3f",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_8.mat",
+        "sha256": "b14cfa0dd2fa34a29dd74930752f0ee12985bfd26bc05e4e039b5cd46af91287",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_9.25.mat",
+        "sha256": "52abe1e9dc16ded366dbd758b98f19dd82f5a606342779374c56badbc9d96c23",
+        "size": 213
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_9.5.mat",
+        "sha256": "bd9c39e2cf694b5be6d9e98ece2bb095ef540231e65747d10d27bf7e6ff7774d",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_9.75.mat",
+        "sha256": "c0da14c3d13ba36d6b1dcbee84de3f6f26bd70b3f38a63508a03daf1d8d96b08",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask16-gray_snr_9.mat",
+        "sha256": "f3cb305370a1cbfb4e14a8b08ec734b7949bd247615037f268fef22adbb352e7",
+        "size": 214
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-0.25.mat",
+        "sha256": "32e6eef91e3abe2f68c805c684e4376e981d09b50cd0ef99b34f8c6af6a5b39d",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-0.5.mat",
+        "sha256": "186a63cab76d25eaa26c242881d4e904dfc0366757005afd7b0cd9eff201990e",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-0.75.mat",
+        "sha256": "590735ed7b8f13afec601784cac947dadd402a87a11dc986b222c83487849526",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-1.25.mat",
+        "sha256": "6d35414c77b4d13cc9fac3781423fd5210fbc1d8c4b94c4ac616509b76a52df7",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-1.5.mat",
+        "sha256": "edbfb98e2d91add82ed1fa2eaf740e4d61cd6afcd5be6e054b8bb2d7afc612e6",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-1.75.mat",
+        "sha256": "419c7e8c688e7bf3deca5d068e83bf66d48121e41695ab20d17b44bb6451503c",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-1.mat",
+        "sha256": "c13303467bc03c685f7a1abdd1a5607477301f67d44a62d1ab4463fef3eff95b",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-10.mat",
+        "sha256": "9d4e88e259b6bbef94997e37b478902cf543f08c4e4deb9acb81b02414f869ac",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-2.25.mat",
+        "sha256": "94dfd83125c0ca0821bfdf7cdfe617f0af16fa0b585d6d7a85a2995401efc4d1",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-2.5.mat",
+        "sha256": "198ab5e3a1ac9e110f4faf0802fedd193b3fd7d92763a846689b37faa04d5a51",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-2.75.mat",
+        "sha256": "f196b40e99794f82d35d51f0980b00d454f9574c415234149941d2e3539a18ce",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-2.mat",
+        "sha256": "f9f2b7ef9259f85f3d494a099de45ef4f92651fc4c7216437377bd948ed13f70",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-3.25.mat",
+        "sha256": "3548324ada77ed7de9518813eaca1e584750a9b51d6c4395d938efe3e06169d0",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-3.5.mat",
+        "sha256": "2c60ce41ae982ffcd0ab6cdb0cb6bdb460b74990865e4b9bc2f79f5160a04762",
+        "size": 196
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-3.75.mat",
+        "sha256": "c1c3b2af3784544aee115ffc31358ae646510e9cbc7bac95f7485163577571f9",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-3.mat",
+        "sha256": "55445b1389be03c2a86f662916e0f55e32418435da611eefca7e859e1bdf0383",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-4.25.mat",
+        "sha256": "5a4ae91a3cb8e78318f4dc088590e8421be54815cbebbcec12f4fcaf830edabb",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-4.5.mat",
+        "sha256": "0eb24c5085a854e96dfd6909db3e9185a12f306c9b266b499a160260ffc3cc0b",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-4.75.mat",
+        "sha256": "47cda6541ec227a87898759e804d186473a41972e3eea3eb03db561fc8998129",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-4.mat",
+        "sha256": "7212e4de6a1164e4e648cbb8144f7b592930e9ac9d30e1e7ec222f47dfd08dc6",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-5.25.mat",
+        "sha256": "e3ea2798410f6a003ef56feecdb313df5be19a4cfb0318a5786d00dbc407e388",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-5.5.mat",
+        "sha256": "098d6e2092cb3267015a164c03bed9c3ccf300dc1db93107da68dc7ffb0d88ab",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-5.75.mat",
+        "sha256": "bcb5c2fb89dd8014a32d0a90ef56e137e3eb6d6d7fc3cf73a9e79a3a78e9d68b",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-5.mat",
+        "sha256": "c10224cebc509f2cdbf79d1b09be4ad36c3b8de6a6565ae0db308cacb942781b",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-6.25.mat",
+        "sha256": "cc593a40c53c1086d39c5369aa4ea160e3dcd69c83342d96f6c3ca8b83433411",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-6.5.mat",
+        "sha256": "3a823d0e4f9ef4e10c5ce08a7d083c976b26a3b9a52a4754d2c95cd9e1432b17",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-6.75.mat",
+        "sha256": "595b387a10199a4ff501735b70ef5e5d670390599194789dc2d0797eccd64ae9",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-6.mat",
+        "sha256": "f8e9b5a37a0a2bbcbc4975ad07a83cd60f7d4c8c9ca636b7a38f8af7658cb97c",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-7.25.mat",
+        "sha256": "e56360d39952999af9c5ddad2c09362e859bf40539b4b5ca5d7b34d720539088",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-7.5.mat",
+        "sha256": "62ca204f60601533b1f5a74419faa307c6ed7809b2781058076be66e49120e05",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-7.75.mat",
+        "sha256": "08e697fed11575788d3aef4770c0543ba9e3e172be671d2196049cc3e854de8f",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-7.mat",
+        "sha256": "26c665113b01d7ed4230eb97471fe23c01a1e7b5cb65a5ac3d86771ae67aa956",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-8.25.mat",
+        "sha256": "9515492570348145daa49808c7fe0c68eef48402a3e661b4f4260e89351b4be0",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-8.5.mat",
+        "sha256": "145f4770defe7dc0e1d954e2b491187b4076c9a443b8f0c048dfa3b18d473bfd",
+        "size": 196
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-8.75.mat",
+        "sha256": "41465532f522a9d96f41fa71ecd1c31a796f090f3941126f89c2a93bd6ea619a",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-8.mat",
+        "sha256": "1ce548e599a34e95bc991eab715c144ec7abbb5d6f10f49abad007dc9c16ce98",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-9.25.mat",
+        "sha256": "ecfd634cbec5c80f36b02b61e1a079e94e0bb411a1c797625a46a1a2bf6f7e11",
+        "size": 196
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-9.5.mat",
+        "sha256": "17f9b9b1b50f02db35aea366ce16367acf9aba9899153b372e2c42e3b6c4c737",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-9.75.mat",
+        "sha256": "e335986da0b789fe2d5f1d1b17291a3b15a2118d282328cfaec2c7cc47c739c7",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_-9.mat",
+        "sha256": "0cd3ec1d1bd47dfebdf185e38f61c24e75fc78e7b43d4a4e357718c20e4299aa",
+        "size": 196
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_0.25.mat",
+        "sha256": "4ffc4b98aa0f3b7d88456d2a6a9fd1ad746820f8e632d3230c2c3cd6ac4bc3d1",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_0.5.mat",
+        "sha256": "2a80e4b424d52b1b55e1ff2e234320ea2176dfdd803b0963bb14f157a1600ab8",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_0.75.mat",
+        "sha256": "047951854b624ace481ef770c982de9ebb581c2cf5c5af3fa1b8392f26c2b1ef",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_0.mat",
+        "sha256": "9f142adfb2b5d85c0e9cfe8c12ca056a055aa150d56fd0d7a2c85939338ac952",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_1.25.mat",
+        "sha256": "031b52505e39c33eb1abb513806985e2bf49085e287692c47d1b38a594f431a9",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_1.5.mat",
+        "sha256": "d934365a02177c12dd6c02a6d3df2e6ceb00614e6e0bdb481bd85aacf2f9cb06",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_1.75.mat",
+        "sha256": "543dca022b7a12c30e0be631435d2a07f1df91d96f02910ee66ae03267de14a9",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_1.mat",
+        "sha256": "56660ea89d62d6a790f59db057644a1ec1114da91835b1bf3f2ea62391207bf0",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_10.25.mat",
+        "sha256": "a9dc23a576d18d1147b61ed3f3ad9b713fea4cece187bc50f74a405dd659e807",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_10.5.mat",
+        "sha256": "6a0b81025df5e7190eeb32ebf6c25cc5be36f5cad408b27c36a8db7e192c4b2a",
+        "size": 193
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_10.75.mat",
+        "sha256": "5f5173a8ae3793e1b29bf9db5998e1bec7cd90476e04bf1fb6801de50097814b",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_10.mat",
+        "sha256": "52c23218653e3c4ed2fca8b4d4921b5178f099dcb48b41da9e1f9c0a804435c0",
+        "size": 193
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_11.25.mat",
+        "sha256": "be2182ce7b1535658bf872f9881b2317e2c75a03929e13f66944c0f4951961c1",
+        "size": 193
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_11.5.mat",
+        "sha256": "3f8df4cff4606ce90d43bf6fdf8eaeddcd0bb5fb7892dca58f5f09c71d8ee2a3",
+        "size": 192
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_11.75.mat",
+        "sha256": "392a8e6ad0eecb9f006dbb457d8bd85195997e5f2c1277873cc73f301947b4bf",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_11.mat",
+        "sha256": "2293d15cb1a7630a943cc170265fee08fc9bfe2a035ab9a246a95ba345452f60",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_2.25.mat",
+        "sha256": "41199530bb19a3b28b6a0f9605d1934013a2e27af5a524aeb21be1a1731198a7",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_2.5.mat",
+        "sha256": "024711697a2a2a657aaef75d6df39113f81f13769ab88e48fa53b00f9e15757d",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_2.75.mat",
+        "sha256": "43a4b91403bfa0ab1e07f95bc5a8afd43ab8feda0de49123a3ae0c9477819d96",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_2.mat",
+        "sha256": "fbeb100f84912777699be97c6a902419579703f140aef81abd0b0325ac3046e8",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_3.25.mat",
+        "sha256": "0681c9aaab578c5b58ddcb3e9942e54eba343c83ea2e371fbee111eebbfd9110",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_3.5.mat",
+        "sha256": "048450e36efb89e155e8a354eccf262f9e7fd75afc78dbcd4c51a3e61dbdc3a0",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_3.75.mat",
+        "sha256": "050c77a422eecb22d616d84766017e58e2ca3d1d2dfe59c05429f78ca391243e",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_3.mat",
+        "sha256": "340b8d078d0af3f3755861af0a9b20805fd9ddc068eb5bfc210da8d97c0ef7ad",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_4.25.mat",
+        "sha256": "89aea8eda56ea80128ed421351dc69509c885991c094ca3a0128b00aa191a5ac",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_4.5.mat",
+        "sha256": "cc9c32a7befdfd90f9cf1c144edd2aabc3fb60ea2ab7e26c85c588ae8a5c0159",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_4.75.mat",
+        "sha256": "36008fbc7043e3fcca0f8244b1b8a970b3a611e05b6699b40ccc205c1c9ab9af",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_4.mat",
+        "sha256": "acbb5e156926029c7a8e4839bfb825ec79e890c2b63172d9fda1c75d927e90e2",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_5.25.mat",
+        "sha256": "3df7af8ced65caaac53002ea0d6158c5661919176c072f18238f701014b54d91",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_5.5.mat",
+        "sha256": "d51dc582e142ddcc423497d54da37dc2d30a994e959eb8f685ad07bc49281ba3",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_5.75.mat",
+        "sha256": "d4591194db19bd4da7076080ffba6f0a6bb5ae18f76fa8eff0dab0ba8656f448",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_5.mat",
+        "sha256": "523436408f992c449db86fb43e8f40299c6610acbd7ad384cc9f331e6dad7bcf",
+        "size": 196
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_6.25.mat",
+        "sha256": "a8c053ce66ed06c73ad00855ebb0228ecb01bd9730a1acf19acae1396abf5454",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_6.5.mat",
+        "sha256": "60e11530b8c55a5e07c5dadecb586acf5c0a7c954722d26694c8d4b8814a024a",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_6.75.mat",
+        "sha256": "d123f0616f6ccac8fd20d1d4905bd698798ce57dff218347cbb37b8ec8ed2eff",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_6.mat",
+        "sha256": "d525ad9f625fbe93e5e7e7a057a6998ce943054444e7292274a6fb14973aff45",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_7.25.mat",
+        "sha256": "54638f1347c113ef9854a3325d0fe29c3ce570ebe5bab9cd662649cd46f22956",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_7.5.mat",
+        "sha256": "f83fb3eccf0379e524979772ab892ec5ff92057d502b0feb4670b470aa57c13a",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_7.75.mat",
+        "sha256": "48297345f3edec55f2b6dfab996042d41ddc65b74d24968c1993070b883449d5",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_7.mat",
+        "sha256": "02e794e4e648d29f17e1727df48cadbd52bd041783c171d3419e91906ad0eef2",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_8.25.mat",
+        "sha256": "cc0d629894cfb63316f97bcf29bef5b4984be5be0b21f4ba373f957f5aafc031",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_8.5.mat",
+        "sha256": "35493bc95407c83cb752a03279c057100c05574e629cc3dcc81c7185961169d7",
+        "size": 198
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_8.75.mat",
+        "sha256": "2d2c424ed4b1cb12335440a0c3fcc5aa044dcc916b20e447a1b21800a9901b0d",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_8.mat",
+        "sha256": "ddf88d6f1f2033343a554464fd9ae57824faff6028dc5d13ae8110e0432e409e",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_9.25.mat",
+        "sha256": "d29701971204905bb40389133f300239658da81447abb5e6e3f00121216f92ab",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_9.5.mat",
+        "sha256": "e53edb81f6d0780e9c29eaebdc7cb17917bfb19cd036f4b36ed35e2769f3fd94",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_9.75.mat",
+        "sha256": "341baabf08d0d08b5e6e02c38895af7fa732b79d531cbe1c2acbfc8464e9eeae",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/PolarizedCapacityData/ask4-gray_snr_9.mat",
+        "sha256": "607de6962124824606a4223d58c6041d1ed62df95f6ee71e2b00dabe63d45190",
+        "size": 197
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/bpsk_cap.mat",
+        "sha256": "bd6a46ff797d2e6585a28f5ca5091abfe3335f4ac2fcde02b57cdef2a1f09f96",
+        "size": 33630
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/get_bpsk_cap.m",
+        "sha256": "ac677d65581c8364fa3ab1ac519a434687f88cd8de9934484269a72bd8a45152",
+        "size": 696
+      },
+      {
+        "path": "sources/polar_code/PolarM/CapacityHelper/get_bpsk_llr_for_capacity.m",
+        "sha256": "424716d756037d0dd21d912a03cde1eca182c394ae9baee2b863de9443d8fad0",
+        "size": 593
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_-0.5_bpsk_bicm.txt",
+        "sha256": "886e2e4e714660a0a760e00c1b2e684722846cb4dd748960f142b1fbbccdd0e3",
+        "size": 4906
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_-0.5_bpsk_bicm_250000.txt",
+        "sha256": "02868b295ae2c1223af3a4d96eaa474e0bc65bdf2c655eee3fca1d9c1935d485",
+        "size": 5240
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_12_ask16-sp_mlc.txt",
+        "sha256": "bcf495ff316e04dac96f26e861ebe3e1c7a33a60b15aee0ac5a9110791eee91b",
+        "size": 5020
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_12_ask16-sp_mlc_250000.txt",
+        "sha256": "14d780060f4e6d788d32f7b6094e4ef26717f3800f5bf899dde5ca4f3d4c06d3",
+        "size": 5435
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_13_ask16-gray_bicm.txt",
+        "sha256": "8b384adc9363578645ab1aac35d8f6c389bda232605bc463e3f480d4c738f4bc",
+        "size": 5069
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_13_ask16-gray_bicm_250000.txt",
+        "sha256": "f228f3321381d3b7217f1a6af2d808158043ae5a83aa10da0e944127ab3ee646",
+        "size": 5472
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_4.5_ask4-gray_bicm.txt",
+        "sha256": "9f4aed0233c8e5338c872f43c8d7cefadcd5f234fabe06a63b26e6f3b21ff080",
+        "size": 5004
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_4.5_ask4-gray_bicm_250000.txt",
+        "sha256": "af138658728864fafc0dd556ef8ac57a4dfd8ed5cd2415ecfbe0ae5d0ec2ede0",
+        "size": 5379
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_4.5_ask4-sp_mlc.txt",
+        "sha256": "07f531834a7d511afe6b03c24680ede80691fa86678609b7917428db42432cb0",
+        "size": 4985
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_4.5_ask4-sp_mlc_250000.txt",
+        "sha256": "cc1e7a00fecdf400eafc81348e6f73cccadf72b2573fbb6167e90e608e280a20",
+        "size": 5354
+      },
+      {
+        "path": "sources/polar_code/PolarM/CodeConstructionData/MC_block_length_1024_512_cc_method_monte-carlo_cc_param_9_ask8-gray_bicm_250000.txt",
+        "sha256": "7f9feb7468bf6fac13ee09c531b7a28c14b4722d0ab7929f7dbc27976d3d0cbb",
+        "size": 5403
+      },
+      {
+        "path": "sources/polar_code/PolarM/Constellation.m",
+        "sha256": "897d2954df48f1b89e941db337e8ac7a6fbfd53acf879d66f6d1c9b2debf2591",
+        "size": 15542
+      },
+      {
+        "path": "sources/polar_code/PolarM/GaussianApproximation/calculate_awgn_polarization.m",
+        "sha256": "c1a801d6188175e19d5f9dbc45fb93735fb97bfe8c4b0c47d08bb5a44887e48f",
+        "size": 497
+      },
+      {
+        "path": "sources/polar_code/PolarM/GaussianApproximation/initialize_phi.m",
+        "sha256": "6a85ddf98ee0e9cd943efd3b3428e477278e305b7cb312798bb0b2f37dfc3a4e",
+        "size": 1635
+      },
+      {
+        "path": "sources/polar_code/PolarM/GaussianApproximation/phi_test.m",
+        "sha256": "1a20e9fe761628ee6d4572fdadfca86cd565af8990171fb4e43d4544bfcb64fe",
+        "size": 1282
+      },
+      {
+        "path": "sources/polar_code/PolarM/GaussianApproximation/phi_x.m",
+        "sha256": "23a4c5883f4771806ad825e0f606644a602206bedd69c3ca89f2fe4cca2842f0",
+        "size": 171
+      },
+      {
+        "path": "sources/polar_code/PolarM/GaussianApproximation/phi_x_inv.m",
+        "sha256": "64f58540cd4ea20440d2b7c9af976677fd7d6b7f83ce2809c4bd7ddcef25130d",
+        "size": 442
+      },
+      {
+        "path": "sources/polar_code/PolarM/GaussianApproximation/phi_x_table.m",
+        "sha256": "7e9c5458556a16da576724e5d47d17fd24b15432de644a204552a355164cd921",
+        "size": 219
+      },
+      {
+        "path": "sources/polar_code/PolarM/PolarCode.m",
+        "sha256": "3f26389e8b7103764755b892ab36fe6221157d734fd689419d303ebba789c42c",
+        "size": 42690
+      },
+      {
+        "path": "sources/polar_code/PolarM/main.m",
+        "sha256": "f56751a484a0e36d43e3f082880ef961ac86bc1c1fb0c83ec7cc30ae81dde4b9",
+        "size": 306
+      },
+      {
+        "path": "sources/polar_code/PolarM/main_GA_CC_Comparison.m",
+        "sha256": "a5b7cae8d05314ded2cea08ae28271143f692c5c0ac2fbc1dd37f6df2c531aef",
+        "size": 2444
+      },
+      {
+        "path": "sources/polar_code/PolarM/main_MC_CC_Comparison.m",
+        "sha256": "18914f07ec0a1be0c5b4945425555ae7b10aacb155553e5cb2f5beea1f388058",
+        "size": 4394
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.rar",
+    "sha256": "becdc852ed352170bc9f3d9a9693313d6f79db90c93349d4414345787ae63c9d",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.rar"
+    ],
+    "directory": "sources/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19",
+    "files": [
+      {
+        "path": "sources/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.mdl",
+        "sha256": "f38534e72da61f4dcd3697fcf5c3e58946daf502710c2b92318020d4c746294e",
+        "size": 127528
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.rar",
+    "sha256": "9142c70c167a80e8a2644e3f9c1c7b64e80ea4dbb5028b3b5b3c09269fd29154",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.rar"
+    ],
+    "directory": "sources/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18",
+    "files": [
+      {
+        "path": "sources/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18.mdl",
+        "sha256": "a292e1b503732fcf20ce0b525ba2cf9e23e763be6b6d284e7f8dadd5ecb3674b",
+        "size": 121006
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26.rar",
+    "sha256": "3923073e12614122232f1547131ae55cbc475d6f62639f2a112e7c1ffec03d4f",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26.rar"
+    ],
+    "directory": "sources/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26",
+    "files": [
+      {
+        "path": "sources/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26.mdl",
+        "sha256": "fbdd59d3326ecc523bbcd25b6f6a579fc91309e04a90394e4cd3b3749abc2102",
+        "size": 176807
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.rar",
+    "sha256": "64fb777eebf01b867aa905a433525e58ef9e0755c25e7d600de8c2b0359e6b10",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.rar"
+    ],
+    "directory": "sources/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10",
+    "files": [
+      {
+        "path": "sources/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.mdl",
+        "sha256": "1131b6f59b4a82b4d45a84bced5ff319a30598a3a7f227ba209aa2330c8b33ce",
+        "size": 128856
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.rar",
+    "sha256": "2395d6b8824cae01f952c98b6a0061ce1d22f8742bff301a21d38103f7389ab7",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.rar"
+    ],
+    "directory": "sources/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21",
+    "files": [
+      {
+        "path": "sources/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21.mdl",
+        "sha256": "da569a7a2c91e2096f1ae88301a37d08f9842443684bcf67adb5bae40fc03169",
+        "size": 155685
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qpsk_demod_with_phase_noise.zip",
+    "sha256": "b605e6177d6b9d5427d6a601dd8be984f351038c73560b41ce6331a6dbf5a7f5",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qpsk_demod_with_phase_noise.zip",
+      "arxiv/petrov_modems_electronix.7z!rar/qpsk_demod_with_phase_noise.zip"
+    ],
+    "directory": "sources/qpsk_demod_with_phase_noise",
+    "files": [
+      {
+        "path": "sources/qpsk_demod_with_phase_noise/costas_loop_qpsk_complex_realization.mdl",
+        "sha256": "f0257d476709cfc6d821a99d7b25060303fb9d0107a8461656318911444531d4",
+        "size": 76010
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.rar",
+    "sha256": "2eb320718eed1076e116b8039972f45a6f9c0fd50a82708c50ee564a1f1111d2",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.rar"
+    ],
+    "directory": "sources/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06",
+    "files": [
+      {
+        "path": "sources/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.mdl",
+        "sha256": "e877698474eba4a9f2dc9e7628b84e13eafe88fcd701d0ee44baaaeb25e3f0ec",
+        "size": 79001
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.rar",
+    "sha256": "b9de90895a671ebc40bfc80e9189a39de7f7202296e40a06d748e53988735f40",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.rar"
+    ],
+    "directory": "sources/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15",
+    "files": [
+      {
+        "path": "sources/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15.mdl",
+        "sha256": "60ef0039feea5b14ce9dbc63c9d93d5413fec3caae79903f9cab3ae9fbe692b2",
+        "size": 126953
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.rar",
+    "sha256": "20512fecba2400be2a9ca1c2739cb0aeb3de10d28d661fb59895d13e8cbb38c4",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.rar"
+    ],
+    "directory": "sources/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20",
+    "files": [
+      {
+        "path": "sources/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20.mdl",
+        "sha256": "9174a037f09ea37cb5a27d2e70c4cd3c857b544a5d44fb861fa0aed7332fb478",
+        "size": 108846
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/qpsk_phase_noise_phase_sync_2009_04_12.rar",
+    "sha256": "1549a34666b76c6f9b4f0df06830a2c912444bc78608bc938fc182eef25b4ed9",
+    "aliases": [
+      "arxiv/Modems.zip!Modems/qpsk_phase_noise_phase_sync_2009_04_12.rar",
+      "arxiv/petrov_modems_electronix.7z!rar/qpsk_phase_noise_phase_sync_2009_04_12.rar"
+    ],
+    "directory": "sources/qpsk_phase_noise_phase_sync_2009_04_12",
+    "files": [
+      {
+        "path": "sources/qpsk_phase_noise_phase_sync_2009_04_12/qpsk_phase_noise_phase_sync_2009_04_12.mdl",
+        "sha256": "149865d0d0c9c16c89eaac56c85405818643b88762b4e18a990bb8329550a21a",
+        "size": 48676
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip!Modems/gmsk_coherent_demodulation_2010_10_03.rar",
+    "sha256": "7b1359faee92d0241217c63db5d7c3f7ef7f992e9b95c88769fb01ba45157867",
+    "aliases": [
+      "arxiv/petrov_modems_electronix.7z!rar/gmsk_coherent_demodulation_2010_10_03.rar"
+    ],
+    "directory": "sources/gmsk_coherent_demodulation_2010_10_03",
+    "files": [
+      {
+        "path": "sources/gmsk_coherent_demodulation_2010_10_03/gmsk_coherent_demodulation_2010_10_03.mdl",
+        "sha256": "5c3048003695f03abcb88cbdb34c1eabe4a72d43e3c97a374eb817b6fe614374",
+        "size": 187552
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip!Modems/graphic_equalizer_16_band_2011_05_17.rar",
+    "sha256": "851217bbe7dbb6a43ae9d6eb18aa6367f597fadce60c0463649d09d0b8787f50",
+    "aliases": [
+      "arxiv/petrov_modems_electronix.7z!rar/graphic_equalizer_16_band_2011_05_17.rar"
+    ],
+    "directory": "sources/graphic_equalizer_16_band_2011_05_17",
+    "files": [
+      {
+        "path": "sources/graphic_equalizer_16_band_2011_05_17/before_gen_coeff_to_workspace_2011_05_17.mdl",
+        "sha256": "f8c3194caa0f2a2e96629f0d6c90fb51dbafa043d7224bccd7c769c3bbe55bf9",
+        "size": 46310
+      },
+      {
+        "path": "sources/graphic_equalizer_16_band_2011_05_17/graphic_equalizer_16_band_2011_05_17.mdl",
+        "sha256": "cb24f61ab2f2286a81d37e1d133d4c9cc6b0f1fc86292e8e779d403ff53efcc9",
+        "size": 71671
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip!Modems/milewski_sequence_2011_05_19.rar",
+    "sha256": "48e190a6aff585ea2d5f3292b123956a54f2aa4b3c652a6253db0a01dd643c9a",
+    "aliases": [
+      "arxiv/petrov_modems_electronix.7z!rar/milewski_sequence_2011_05_19.rar"
+    ],
+    "directory": "sources/milewski_sequence_2011_05_19",
+    "files": [
+      {
+        "path": "sources/milewski_sequence_2011_05_19/before_gen_sequence_to_workspace_2011_05_19.mdl",
+        "sha256": "261e09278390cce177df674e91b4047b424809da662b8953b87797ea79c6e894",
+        "size": 25407
+      },
+      {
+        "path": "sources/milewski_sequence_2011_05_19/milewski_sequence_2011_05_19.mdl",
+        "sha256": "85e7643749c9d0d9c1be0fe5e6b78c20b5508f40a125780de2e58e4e9b7ebfd4",
+        "size": 37708
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip!Modems/pi4_qpsk_8_sps_ff_sync_2021_05_27.zip",
+    "sha256": "ac31889fc462cdb66a65217bd6d8f97831c1ddd7782a43e9c36d3cece681ce57",
+    "aliases": [
+      "arxiv/petrov_modems_electronix.7z!rar/pi4_qpsk_8_sps_ff_sync_2021_05_27.zip"
+    ],
+    "directory": "sources/pi4_qpsk_8_sps_ff_sync_2021_05_27",
+    "files": [
+      {
+        "path": "sources/pi4_qpsk_8_sps_ff_sync_2021_05_27/pi4_qpsk_8_sps_ff_sync_2021_05_27.mdl",
+        "sha256": "b71051e631ba2a554059d95d435064dd6c814f18bac54c7f0f16b1b533fadd4e",
+        "size": 374475
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip!Modems/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15.rar",
+    "sha256": "123aa11fea915ab205788589999063fa253dd9137f62939efcd12ed49980c427",
+    "aliases": [
+      "arxiv/petrov_modems_electronix.7z!rar/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15.rar"
+    ],
+    "directory": "sources/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15",
+    "files": [
+      {
+        "path": "sources/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15.mdl",
+        "sha256": "67963f4130fb4c2837a2ac0cd1f7d397e054424e4e85794947ee3aa266deb880",
+        "size": 212117
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip!Modems/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15.zip",
+    "sha256": "81355d40c995bb0af6cf11a8a84723f330951684521c83d3e918ac7becac000d",
+    "aliases": [
+      "arxiv/petrov_modems_electronix.7z!rar/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15.zip"
+    ],
+    "directory": "sources/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15",
+    "files": [
+      {
+        "path": "sources/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15.mdl",
+        "sha256": "b53a50c0f07ade0ce635e7310415906e256bccdc30c3c1c7bc8d9e72bb6c2f0e",
+        "size": 79668
+      }
+    ]
+  },
+  {
+    "archive": "arxiv/Modems.zip!Modems/simo_maximal_ratio_combining_2010_08_27.rar",
+    "sha256": "f5567223258eedf104b385e53f65b74cd51d1342d39b9c215835e3a2c5e8427a",
+    "aliases": [
+      "arxiv/petrov_modems_electronix.7z!rar/simo_maximal_ratio_combining_2010_08_27.rar"
+    ],
+    "directory": "sources/simo_maximal_ratio_combining_2010_08_27",
+    "files": [
+      {
+        "path": "sources/simo_maximal_ratio_combining_2010_08_27/simo_maximal_ratio_combining_2010_08_27.mdl",
+        "sha256": "fcec1dadd6c5ab3f092935b9f36c31475636c480f0bd59d6cbae2c7e2a08a4ec",
+        "size": 238466
+      }
+    ]
+  }
+]

@@ -1,0 +1,177 @@
+{
+  "id": "coding/ldpc",
+  "title": "LDPC coding",
+  "category": "coding",
+  "path": "algorithms/coding/ldpc",
+  "operations": [
+    "gf2_encode",
+    "ldpc"
+  ],
+  "cases": [
+    "systematic_encode",
+    "sum_product",
+    "min_sum",
+    "normalized_min_sum",
+    "offset_min_sum"
+  ],
+  "limits": "Generic systematic GF(2) encoder and SP/MS/NMS/OMS decoders. Portable regression uses an explicit short sparse code; the original (2016,1008) matrix is retained and original-length checks are reported separately.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Comparisonof4Algorithms.m",
+      "original": "algorithms/coding/ldpc/original/Comparisonof4Algorithms.m",
+      "sha256": "6d80ca403fb18cdf1b703c0555eb4e0cd9f19db07ab9b2674b102e66d9a7f2e0",
+      "bytes": 5857
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Decoder/LDPCDecoder_MS.m",
+      "original": "algorithms/coding/ldpc/original/Decoder/LDPCDecoder_MS.m",
+      "sha256": "379a3a731ac347b9299d6e9d76d58fbfe83f1b251f78c3b3982287c51cd2ceb7",
+      "bytes": 1913
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Decoder/LDPCDecoder_NMS.m",
+      "original": "algorithms/coding/ldpc/original/Decoder/LDPCDecoder_NMS.m",
+      "sha256": "a89d76fbadb47f44c5c83098ce4cf3df7927c3ebfa3fd7bc18716a5d65c7fbd0",
+      "bytes": 2060
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Decoder/LDPCDecoder_OMS.m",
+      "original": "algorithms/coding/ldpc/original/Decoder/LDPCDecoder_OMS.m",
+      "sha256": "bfcb60616a655196abe073f3611dbcb16fde78cb6e5fcd249768a1fc86920d7e",
+      "bytes": 2051
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Decoder/LDPCDecoder_SP.m",
+      "original": "algorithms/coding/ldpc/original/Decoder/LDPCDecoder_SP.m",
+      "sha256": "3aca24ae90828328924ab04d0d36c47c8719235d1b91932842a29fa9cb981ef3",
+      "bytes": 2293
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Encoder/Encoder2.m",
+      "original": "algorithms/coding/ldpc/original/Encoder/Encoder2.m",
+      "sha256": "4f0d246749c8ba0949335527a308a064023b0a6b65f7aa9a210f254d3bd16dc7",
+      "bytes": 823
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Encoder/HxMatrixGen.m",
+      "original": "algorithms/coding/ldpc/original/Encoder/HxMatrixGen.m",
+      "sha256": "a94168a630c9fd9de9f632981dfc598a14d36f269233c23ef1056c7ae66d266a",
+      "bytes": 1267
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/LICENSE",
+      "original": "algorithms/coding/ldpc/original/LICENSE",
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+      "bytes": 35823
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Matrix(2016,1008)Block56.mat",
+      "original": "algorithms/coding/ldpc/original/Matrix(2016,1008)Block56.mat",
+      "sha256": "3fe29f89db7b815594440950467e94c9af23c9d2c57b503b350f5f8e18654044",
+      "bytes": 343
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/BERComparison.png",
+      "original": "algorithms/coding/ldpc/original/Pic/BERComparison.png",
+      "sha256": "dc1926c57cc932b79cde43f821944bb89660b6073a48c71d5adf6a2400818255",
+      "bytes": 82514
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/BestAlpha.png",
+      "original": "algorithms/coding/ldpc/original/Pic/BestAlpha.png",
+      "sha256": "efe23f062f09b8db6456bdcc79fd5b2064106456dd1e7077be4b413fa6e15d47",
+      "bytes": 37169
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/BestBeta.png",
+      "original": "algorithms/coding/ldpc/original/Pic/BestBeta.png",
+      "sha256": "5e50df98848aa9f67f4228421fc4190ce50e9aba5329771e288ad0a882540dcc",
+      "bytes": 41276
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/FERComparison.png",
+      "original": "algorithms/coding/ldpc/original/Pic/FERComparison.png",
+      "sha256": "6a8cb3ac33d9e85ffc14d5f432f1cb8d3745b834f8988eb9aa543ee309daf077",
+      "bytes": 123999
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u4e24\u79cd\u7f16\u7801\u7b97\u6cd5\u7684\u65f6\u95f4\u590d\u6742\u5ea6\u5bf9\u6bd4.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u4e24\u79cd\u7f16\u7801\u7b97\u6cd5\u7684\u65f6\u95f4\u590d\u6742\u5ea6\u5bf9\u6bd4.png",
+      "sha256": "28740fd6855e0d1e91c98a56076d5951853625e334b4941789cad77302170bdd",
+      "bytes": 25399
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u4eff\u771f\u6b65\u9aa4.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u4eff\u771f\u6b65\u9aa4.png",
+      "sha256": "d3f520cbe1a79441b1ac9ebab58da4777d7aab678937d982706e0ad7c80b3b1c",
+      "bytes": 37550
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u4fee\u6539\u4fe1\u566a\u6bd4\u4eff\u771f\u8303\u56f4.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u4fee\u6539\u4fe1\u566a\u6bd4\u4eff\u771f\u8303\u56f4.png",
+      "sha256": "712c3368fb3c0ac720038f1e125fdc70d8f275bc5e567f4963d90a5dac26306d",
+      "bytes": 3663
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u548c\u79ef\u7b97\u6cd5\u521d\u59cb\u5316\u6b65\u9aa4\u7684\u4e8c\u5206\u56fe.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u548c\u79ef\u7b97\u6cd5\u521d\u59cb\u5316\u6b65\u9aa4\u7684\u4e8c\u5206\u56fe.png",
+      "sha256": "686bb1b5eee3ee4d7df97bbb791f8d3238760fc1059f507012a1343a63e9f68e",
+      "bytes": 63956
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u548c\u79ef\u7b97\u6cd5\u53d8\u91cf\u8282\u70b9\u4f20\u9012\u7f6e\u4fe1\u5ea6\u7ed9\u6821\u9a8c\u8282\u70b9\u6b65\u9aa4\u7684\u4e8c\u5206\u56fe.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u548c\u79ef\u7b97\u6cd5\u53d8\u91cf\u8282\u70b9\u4f20\u9012\u7f6e\u4fe1\u5ea6\u7ed9\u6821\u9a8c\u8282\u70b9\u6b65\u9aa4\u7684\u4e8c\u5206\u56fe.png",
+      "sha256": "c167baed882918586fc9e5ec1f77b86e22dea8e40609c96742bf09742189dae4",
+      "bytes": 75064
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u548c\u79ef\u7b97\u6cd5\u6821\u9a8c\u8282\u70b9\u4f20\u9012\u7f6e\u4fe1\u5ea6\u7ed9\u53d8\u91cf\u8282\u70b9\u6b65\u9aa4\u7684\u4e8c\u5206\u56fe.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u548c\u79ef\u7b97\u6cd5\u6821\u9a8c\u8282\u70b9\u4f20\u9012\u7f6e\u4fe1\u5ea6\u7ed9\u53d8\u91cf\u8282\u70b9\u6b65\u9aa4\u7684\u4e8c\u5206\u56fe.png",
+      "sha256": "7c8bb8f13aeb008d5c961477fd3422ca1b4bb1b65348a6294673038d4935bad0",
+      "bytes": 82630
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u6e90\u7801\u6587\u4ef6\u8bf4\u660e.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u6e90\u7801\u6587\u4ef6\u8bf4\u660e.png",
+      "sha256": "8928d566cb0c41a84050d7e0b1710e45e1011a7c0cb2d9d38af0949749fbd6b1",
+      "bytes": 360084
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/Pic/\u7a0b\u5e8f\u811a\u672c\u505c\u6b62\u6761\u4ef6.png",
+      "original": "algorithms/coding/ldpc/original/Pic/\u7a0b\u5e8f\u811a\u672c\u505c\u6b62\u6761\u4ef6.png",
+      "sha256": "3ea79f5297353069bb26e6a613e251da8769dd3ae69b6cdc36ea592b66f62351",
+      "bytes": 3224
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/README.md",
+      "original": "algorithms/coding/ldpc/original/README.md",
+      "sha256": "f4b76adbe4ee74a75b49d45b94b9ce6330f6162c3dc815b23507ad4a657ae828",
+      "bytes": 16202
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/README.pdf",
+      "original": "algorithms/coding/ldpc/original/README.pdf",
+      "sha256": "35fa575e0618d5eef7351810c608a372e89a27623d2daa195932e1faf8d4eb5f",
+      "bytes": 1131051
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/SearchBestAlpha.m",
+      "original": "algorithms/coding/ldpc/original/SearchBestAlpha.m",
+      "sha256": "cb2409b23740e48fd9aae1d0ecbec4e319deb0821f64c906af77a38b7df60d34",
+      "bytes": 2054
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_ldpc/SearchBestBeta.m",
+      "original": "algorithms/coding/ldpc/original/SearchBestBeta.m",
+      "sha256": "253d24f7a29913de6d6b89bb89743d3cac0df890a3ce148e0a70f0a6900108d8",
+      "bytes": 2159
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

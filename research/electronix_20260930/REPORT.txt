@@ -1,0 +1,40 @@
+Поиск моделей MATLAB/Simulink на ELECTRONIX — 30.09.2026
+
+Скачаны две новые модели Петрова, отсутствующие по имени и SHA-256 среди arxiv/ и sources/:
+  models/oqpsk_2_sps_timing_recovery_2019_12_05.mdl
+  models/qpsk_8_sps_fb_sync_2020_11_25.mdl
+Автор указывает MATLAB/Simulink R2016b. Обе модели имеют формат Version 8.8.
+OQPSK: совместная фазовая и тактовая синхронизация при 2 отсчётах на символ.
+QPSK: синхронизация с обратной связью при 8 отсчётах на символ.
+Исходные ZIP сохранены в archives/. CRC архивов проверен. Запуск MATLAB не выполнялся.
+Есть ссылки на блоки Communications System Toolbox и DSP System Toolbox.
+Источник: https://electronix.ru/forum/topic/23652-model-8psk-modema/page/13/
+
+На FTP дополнительно скачаны:
+  support/ofdm/Ofdm Awgn Sim.m — OFDM/AWGN, BPSK/QPSK/16QAM/64QAM.
+  В комплекте не найдены tx_make_int_num_ofdm_syms, tx_modulate, tx_add_pilot,
+  tx_freq_to_time, rx_time_to_freq, rx_demodulate. Самостоятельный запуск невозможен без них.
+  support/harger/ — сборник учебных примеров ЦОС, 34 файла .m и вспомогательные данные.
+  Это дополнительный материал по фильтрам и спектральному анализу, не 34 готовых модема.
+  В сборнике есть собственные freqz.m, freqs.m, zplane.m; подключать папку обдуманно.
+
+Найдены ещё 22 новых для проекта вложения форума; все проверенные ссылки
+вернули страницу ошибки 2C171/1 («вложение недоступно»). Причина может быть
+в удалении файла либо правах доступа; необходимость входа не подтверждена.
+Полный каталог имён и ссылок: forum_candidates.csv. В нём отмечены и имеющиеся модели.
+Особенно интересны для расширения:
+  fmt_timing_freq_tracking_primer_2008_12_08.rar — многотональный FMT, синхронизация;
+  qpsk_fast_dfe_2009_06_26.rar — QPSK и быстрый DFE;
+  qpsk_frame_based.rar, qam_16_frame_based.rar — пакетные QPSK/QAM16;
+  pi4_qpsk_2_sps_timing_recovery_2015_09_19.mdl.zip — 2 sps, интерполятор Фарроу 5-го порядка;
+  Decision_feedback_equalizer_13_weigths.slx — RLS DFE (MATLAB R2020b);
+  FTRLS.slx, FTF_simulink.slx, FK_DFE.slx — варианты быстрых адаптивных эквалайзеров;
+  qam_modulatort2400baud8000dac_2007_07_10.rar — QAM, 2400 бод / ЦАП 8000 Гц.
+Часть вложений — вспомогательные алгоритмы или отладочные модели, не готовые модемы.
+
+Область поиска: весь индекс pub (192583 пути), 14 страниц основной темы и связанные темы.
+Архивы THEORY_AND_PRACTICE_OF_MODEM_Design.rar, modem.rar, briz.rar проверены:
+они содержат документы, а не модели MATLAB. В рабочую подборку не включены.
+Проверка не является полной распаковкой всех архивов FTP.
+URL источников, контрольные суммы, версии и ограничения: findings.json.
+Все результаты изолированы в research/electronix_20260930; существующие файлы проекта не менялись.

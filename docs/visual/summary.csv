@@ -1,0 +1,61 @@
+modem,case,payload_symbols,symbol_errors,SER,BER,matlab_runtime,matlab_repeat,mapper_blocks
+QAM64_2008_11_21,Clean channel,320,0,0.0,0.0,PASS,PASS,2
+QAM64_2008_11_21,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,2
+QAM64_2008_11_21,Variant stress channel,320,0,0.0,0.0,PASS,PASS,2
+bpsk_costas_2008_08_25,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+bpsk_costas_2008_08_25,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+bpsk_costas_2008_08_25,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+dqpsk_19_09_2006,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+dqpsk_19_09_2006,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+dqpsk_19_09_2006,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+gmsk_coherent_demodulation_2010_10_03,Clean channel,320,0,0.0,0.0,PASS,PASS,0
+gmsk_coherent_demodulation_2010_10_03,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,0
+gmsk_coherent_demodulation_2010_10_03,Variant stress channel,320,0,0.0,0.0,PASS,PASS,0
+msk_modulator_2008_06_22,Clean channel,320,0,0.0,0.0,PASS,PASS,0
+msk_modulator_2008_06_22,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,0
+msk_modulator_2008_06_22,Variant stress channel,320,0,0.0,0.0,PASS,PASS,0
+pi4_qpsk_8_sps_ff_sync_2021_05_27,Clean channel,320,0,0.0,0.0,PASS,PASS,0
+pi4_qpsk_8_sps_ff_sync_2021_05_27,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,0
+pi4_qpsk_8_sps_ff_sync_2021_05_27,Variant stress channel,320,0,0.0,0.0,PASS,PASS,0
+pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15,Clean channel,320,0,0.0,0.0,PASS,PASS,0
+pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,0
+pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15,Variant stress channel,320,0,0.0,0.0,PASS,PASS,0
+psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_demod_with_phase_noise,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_demod_with_phase_noise,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qpsk_demod_with_phase_noise,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_phase_noise_phase_sync_2009_04_12,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+qpsk_phase_noise_phase_sync_2009_04_12,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+qpsk_phase_noise_phase_sync_2009_04_12,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1
+simo_maximal_ratio_combining_2010_08_27,Clean channel,320,0,0.0,0.0,PASS,PASS,1
+simo_maximal_ratio_combining_2010_08_27,AWGN + carrier + delay,320,0,0.0,0.0,PASS,PASS,1
+simo_maximal_ratio_combining_2010_08_27,Variant stress channel,320,0,0.0,0.0,PASS,PASS,1

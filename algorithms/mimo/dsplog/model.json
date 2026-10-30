@@ -1,0 +1,49 @@
+{
+  "id": "mimo/dsplog",
+  "title": "MIMO and diversity",
+  "category": "mimo",
+  "path": "algorithms/mimo/dsplog",
+  "operations": [
+    "alamouti",
+    "mimo"
+  ],
+  "cases": [
+    "zero_forcing",
+    "mmse",
+    "alamouti"
+  ],
+  "limits": "Complex zero-forcing/MMSE spatial detection and Alamouti combining. Historical large Monte Carlo sweeps, SIC ordering and ISI/ZF demo parameters are not reproduced.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/india_dsplog/script_ber_2x2_alamouti_stbc_code_bpsk_rayleigh_channel.m",
+      "original": "algorithms/mimo/dsplog/original/script_ber_2x2_alamouti_stbc_code_bpsk_rayleigh_channel.m",
+      "sha256": "8897c5e6622f340dbb8a4ea359cadbb486ef465ad82a245929f1fc9f2887bf6f",
+      "bytes": 3109
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/india_dsplog/script_ber_bpsk_isi_zf_equalization.m",
+      "original": "algorithms/mimo/dsplog/original/script_ber_bpsk_isi_zf_equalization.m",
+      "sha256": "a1ff2b81ff6547be5e5ced33b4851289fe094513b58af5242b62448ebf02496c",
+      "bytes": 2281
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/india_dsplog/script_ber_mimo_mmse_sic_bpsk_rayleigh_channel.m",
+      "original": "algorithms/mimo/dsplog/original/script_ber_mimo_mmse_sic_bpsk_rayleigh_channel.m",
+      "sha256": "cc99b4d44944007be59b9dd1b1d29a7b3f8b53f3f3898eea0e01bac83a6e5b60",
+      "bytes": 5691
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/india_dsplog/script_ber_mimo_zf_bpsk_rayleigh_channel.m",
+      "original": "algorithms/mimo/dsplog/original/script_ber_mimo_zf_bpsk_rayleigh_channel.m",
+      "sha256": "bbb8368f9dd8c2daedf2f63f2dc47795fafad835fbcc098fea25d0656958d811",
+      "bytes": 3061
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

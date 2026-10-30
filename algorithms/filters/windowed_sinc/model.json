@@ -1,0 +1,110 @@
+{
+  "id": "filters/windowed_sinc",
+  "title": "FIR design and filtering",
+  "category": "filters",
+  "path": "algorithms/filters/windowed_sinc",
+  "operations": [
+    "fir",
+    "wsinc"
+  ],
+  "cases": [
+    "fir_impulse",
+    "fir_complex",
+    "hamming_lowpass",
+    "two_tone_filter"
+  ],
+  "limits": "Hamming-window low-pass design plus complex FIR filtering. The original automatic tap-search and full window family are outside the analogue contract.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/README.md",
+      "original": "algorithms/filters/windowed_sinc/original/README.md",
+      "sha256": "97107c298024d27d9edb9a481b1d618cc38cdf64ff182978dfb2dca85bb865a4",
+      "bytes": 13776
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/compare_filters.m",
+      "original": "algorithms/filters/windowed_sinc/original/compare_filters.m",
+      "sha256": "bb6520f72b5cb09f27a086dfba45b6a0779a4a16945716de24b5b17b5f8feb1f",
+      "bytes": 17841
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/find_ntaps.m",
+      "original": "algorithms/filters/windowed_sinc/original/find_ntaps.m",
+      "sha256": "1d23c3fbd3d5eb3e68c51b591ff00d8ca8f780094a8cf0a6a3edf0b0f541401a",
+      "bytes": 7528
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/images/example_1.png",
+      "original": "algorithms/filters/windowed_sinc/original/images/example_1.png",
+      "sha256": "424984cad0a8d9c205548fae51acf191533a60c4b56020a75990b3202f3d8e01",
+      "bytes": 37881
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/images/example_2.png",
+      "original": "algorithms/filters/windowed_sinc/original/images/example_2.png",
+      "sha256": "8d7bbe078c835b96cc3e68e7e6e00474658a0764e590b08df54530f785bed804",
+      "bytes": 44325
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/images/example_3.png",
+      "original": "algorithms/filters/windowed_sinc/original/images/example_3.png",
+      "sha256": "00176d75eec65710574cf10ba1a976ae0551def47466e74ec807760cdcb7127c",
+      "bytes": 32480
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/images/example_4.png",
+      "original": "algorithms/filters/windowed_sinc/original/images/example_4.png",
+      "sha256": "ee292f49b6fcb5ccba108058d01771d1fd09d58d66c4815d7a442a05d4d4f4db",
+      "bytes": 38489
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/images/example_5.png",
+      "original": "algorithms/filters/windowed_sinc/original/images/example_5.png",
+      "sha256": "d15daf084d21c6544fcf3f17f01c5cb9be02d2af1c1264a66d2f07ef04fe9074",
+      "bytes": 32124
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/images/example_6.png",
+      "original": "algorithms/filters/windowed_sinc/original/images/example_6.png",
+      "sha256": "bd1fff78805161581e1fc4e76b6a46e22bf0f3ff7efa13c9c90a21ce61dc76d2",
+      "bytes": 32480
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/plotres.m",
+      "original": "algorithms/filters/windowed_sinc/original/plotres.m",
+      "sha256": "c9c49f3f28f90b839fa9f78133e863dae2db097624166fa7dfa3e05870b434ba",
+      "bytes": 3553
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/pm_freqz.m",
+      "original": "algorithms/filters/windowed_sinc/original/pm_freqz.m",
+      "sha256": "8224550ca0c45e50fd0ab46df7bbb16de42ccfea72d6d3e72c98a2e778fb7707",
+      "bytes": 666
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/test_compare.m",
+      "original": "algorithms/filters/windowed_sinc/original/test_compare.m",
+      "sha256": "75b4942cedbcec389690993f1031a7cfc84936d74c6ff7d1ff43a6117311c6ec",
+      "bytes": 804
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/test_compare.txt",
+      "original": "algorithms/filters/windowed_sinc/original/test_compare.txt",
+      "sha256": "cb9ac4e6f8fd9d0908cc6ac8070aeb7dffc4cf26cbba920b1a85e43a775d259b",
+      "bytes": 2212
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/wsinc/wsinc.m",
+      "original": "algorithms/filters/windowed_sinc/original/wsinc.m",
+      "sha256": "0573ad01136ae89539ae18a5136ba47a05db02c767add01fb999fddab2997510",
+      "bytes": 5010
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

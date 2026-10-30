@@ -1,0 +1,88 @@
+{
+  "scope": "deterministic_characterization_not_accuracy_guarantee",
+  "seed": 99,
+  "profile_rng_order": "perQAM shared RNG paper_sinc thenfft_dirichlet",
+  "limitations": "FFT Dirichlet real-Cramer singlepilot is weak undernoise: frequent rejection and occasional wrongroots are reported, no production acquisition claim",
+  "profiles": [
+    {
+      "model": "paper_sinc",
+      "qam": 16,
+      "n": 16,
+      "frames": 32,
+      "snr_db": 25,
+      "cfo": 0.2,
+      "bounds": [
+        -0.8,
+        0.8
+      ],
+      "complex_residual_tolerance": 0.15,
+      "accepted": 21,
+      "rejected": 11,
+      "conditional_cfo_RMSE": 0.035915954625937045,
+      "conditional_uncorrected_MSE": 0.11093087703322321,
+      "conditional_corrected_MSE": 0.005933554174082677,
+      "conditional_uncorrected_SER": 0.28888888888888886,
+      "conditional_corrected_SER": 0.0
+    },
+    {
+      "model": "fft_dirichlet",
+      "qam": 16,
+      "n": 16,
+      "frames": 32,
+      "snr_db": 25,
+      "cfo": 0.2,
+      "bounds": [
+        -0.8,
+        0.8
+      ],
+      "complex_residual_tolerance": 0.15,
+      "accepted": 4,
+      "rejected": 28,
+      "conditional_cfo_RMSE": 0.49409057010124624,
+      "conditional_uncorrected_MSE": 0.42126462492168776,
+      "conditional_corrected_MSE": 0.3514699812057581,
+      "conditional_uncorrected_SER": 0.75,
+      "conditional_corrected_SER": 0.23333333333333334
+    },
+    {
+      "model": "paper_sinc",
+      "qam": 64,
+      "n": 16,
+      "frames": 32,
+      "snr_db": 25,
+      "cfo": 0.2,
+      "bounds": [
+        -0.8,
+        0.8
+      ],
+      "complex_residual_tolerance": 0.15,
+      "accepted": 23,
+      "rejected": 9,
+      "conditional_cfo_RMSE": 0.036048952264188784,
+      "conditional_uncorrected_MSE": 0.10637066719555277,
+      "conditional_corrected_MSE": 0.006066717784663204,
+      "conditional_uncorrected_SER": 0.7159420289855073,
+      "conditional_corrected_SER": 0.02608695652173913
+    },
+    {
+      "model": "fft_dirichlet",
+      "qam": 64,
+      "n": 16,
+      "frames": 32,
+      "snr_db": 25,
+      "cfo": 0.2,
+      "bounds": [
+        -0.8,
+        0.8
+      ],
+      "complex_residual_tolerance": 0.15,
+      "accepted": 3,
+      "rejected": 29,
+      "conditional_cfo_RMSE": 0.036816050105126556,
+      "conditional_uncorrected_MSE": 0.44806321964042456,
+      "conditional_corrected_MSE": 0.023480437503559395,
+      "conditional_uncorrected_SER": 0.9777777777777777,
+      "conditional_corrected_SER": 0.3111111111111111
+    }
+  ]
+}

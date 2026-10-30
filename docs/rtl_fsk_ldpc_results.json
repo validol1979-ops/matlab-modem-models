@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "synthesis_run": false,
+  "core_RTL_unchanged": true,
+  "streaming_suites": 15,
+  "streaming_result": "build/rtl/streaming/all_results.json",
+  "portable": {
+    "python_tests": 356,
+    "octave_modems": 24,
+    "frame_transactions": 96,
+    "result": "build/all_results.json"
+  },
+  "blocks": {
+    "fsk": {
+      "result": "build/rtl/fsk/all_results.json",
+      "result_sha256": "00ed6ccfdb43be51aca7c679e7a0683f88c13fb04fc42641619531f633f55702",
+      "records": 12,
+      "normal_runs": 60,
+      "old_vector_files_unchanged": 35,
+      "negative_logs": 4,
+      "bounds_rtl_verified": true
+    },
+    "ldpc": {
+      "result": "build/rtl/ldpc/all_results.json",
+      "result_sha256": "52753006044c966f08f89c87295dbe1bc31f0af31f30d58e7bbaa3fc23baeac7",
+      "records": 14,
+      "normal_runs": 70,
+      "old_vector_files_unchanged": 48,
+      "negative_logs": 8,
+      "bounds_rtl_verified": true,
+      "saturation_rtl_verified": true,
+      "stress": {
+        "v_positive_events": 57,
+        "post_positive_events": 127,
+        "post_negative_events": 105,
+        "v_evaluations": 675,
+        "post_evaluations": 324,
+        "stress_iterations": 20
+      }
+    }
+  },
+  "old_vector_files_unchanged": 83,
+  "native_agents": {
+    "pi": {
+      "status": "COMPLETE",
+      "elapsed_seconds": 256.0
+    },
+    "opencode": {
+      "status": "COMPLETE",
+      "elapsed_seconds": 228.0
+    },
+    "kilo": {
+      "status": "COMPLETE",
+      "elapsed_seconds": 146.0
+    }
+  },
+  "source_snapshot_sha256": "deea03761455db864f9a431f2d159a131f1b06fd1d3fada22ba7b080e0181da0"
+}

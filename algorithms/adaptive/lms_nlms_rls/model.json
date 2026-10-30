@@ -1,0 +1,80 @@
+{
+  "id": "adaptive/lms_nlms_rls",
+  "title": "Adaptive filters",
+  "category": "adaptive",
+  "path": "algorithms/adaptive/lms_nlms_rls",
+  "operations": [
+    "lms",
+    "nlms",
+    "rls"
+  ],
+  "cases": [
+    "lms",
+    "nlms",
+    "rls"
+  ],
+  "limits": "Complex LMS, NLMS and RLS system identification. Outputs include estimates, errors and final coefficients; real source-function comparisons are recorded separately.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/README.md",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/README.md",
+      "sha256": "c5a220d1f75bd3e1e93d96418a5cac2bbb88d1dd04fc7a770927530112be17f2",
+      "bytes": 944
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/demo1.m",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/demo1.m",
+      "sha256": "1cbafba8420679649bfc89a2916fe285497df13fcaede196af3a100648f1b9d3",
+      "bytes": 3141
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/demo2.m",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/demo2.m",
+      "sha256": "0930de2fb9a71ab92d62191a42fa8991fed941c83170ea3fda19505115dad261",
+      "bytes": 3206
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/demo3.m",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/demo3.m",
+      "sha256": "efce82adebfccb46d2737439bf86448dc5df643ae06633d1b934a2870525b006",
+      "bytes": 3135
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/handel.wav",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/handel.wav",
+      "sha256": "0a91ee1116b4e3a6e231a88cfc3f300b73e71af8b35d240a76c041bd327224c6",
+      "bytes": 146270
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/handel_echo.wav",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/handel_echo.wav",
+      "sha256": "fa154d1a70672742a7ea9b791591c818e1bcdced85a4a4f52ba1a634f27fb949",
+      "bytes": 146270
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/myLMS.m",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/myLMS.m",
+      "sha256": "4dbb1937bc67d158b09988b59fd2ac73379f422870941346e76d96ee8c6beded",
+      "bytes": 1199
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/myNLMS.m",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/myNLMS.m",
+      "sha256": "f740cca84b6df9efc0d6486c586503bd64221bfec5f5971f0264719fe032baa8",
+      "bytes": 1277
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/china_adaptive/myRLS.m",
+      "original": "algorithms/adaptive/lms_nlms_rls/original/myRLS.m",
+      "sha256": "8f552a820dd6c079f48481e5ec005fcca6216ec372c67546f984cd84c06b96a8",
+      "bytes": 1363
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

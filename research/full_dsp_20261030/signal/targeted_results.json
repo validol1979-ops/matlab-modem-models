@@ -1,0 +1,337 @@
+{
+  "scope": "targeted",
+  "result": "PASS",
+  "tests": 91,
+  "exit_status": 0,
+  "elapsed_seconds": 5.331,
+  "modules": 10,
+  "test_files": 13,
+  "tasks": {
+    "DSP-DDS": {
+      "modules": [
+        "common/python/ext_signal_core.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_core.py"
+      ],
+      "numerical_results": {
+        "targeted_unittest_tests": 9,
+        "result": "PASS",
+        "rom_max_error_lsb": 0.6949,
+        "coherent_sfdr_db": 130.34,
+        "agent": "pi Haiku via Qulab; files/tests completed, final commentary generation interrupted after results artifact.",
+        "sfdr_65536_phase_truncation_db": 72.18922215458855,
+        "scope": "targeted"
+      },
+      "limitations": [
+        "Python accepted-sample model; no cycles or synthesis claims.",
+        "Default12-bit phase LUT truncation yields about72dB SFDR on 65536-point coherent tone; aligned4096-point tone has amplitudequantizationfloor130dB."
+      ]
+    },
+    "DSP-HILBERT": {
+      "modules": [
+        "common/python/ext_signal_core.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_hilbert.py",
+        "tests/test_ext_signal_oracles.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 11,
+        "independent_extra_tests": 4,
+        "min_image_rejection_db_31": 54.9,
+        "min_image_rejection_db_63": 59.5,
+        "max_tone_fixed_error_lsb": 0.305,
+        "external_agent": "pi Qwen; coordinator corrected negative-image ratio test, delayed-I oracle, sampled-peak assumption, and negative rounding convention."
+      },
+      "limitations": [
+        "Hilbert finite FIR has transitions near DC/Nyquist and nonzero passband ripple.",
+        "Source family and delayed analytic convention are project derived. No hardware timing claims."
+      ]
+    },
+    "DSP-SOS": {
+      "modules": [
+        "common/python/ext_signal_sos.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_sos.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 8,
+        "max_fixed_scipy_rms_lsb": 0.7007954337801636,
+        "rms_by_lp_hp_sections": [
+          0.37369521131064437,
+          0.37081877109396155,
+          0.5064922661219409,
+          0.4969287993524362,
+          0.7007954337801636,
+          0.6916966717505967
+        ],
+        "near_unit_r": 0.995,
+        "zero_input_tail_max_lsb": 12,
+        "zero_input_tail_budget_lsb": 15,
+        "review": "audit_sos_opencode.json + audit_sos_closure.json",
+        "pole_point99_limit_cycle_lsb": 49
+      },
+      "limitations": [
+        "Models only, no cycle/synthesis claims.",
+        "Offline floating design/stability checks; fixed runtime uses declared integer arithmetic.",
+        "Per-section 18-bit feedback can sustain a bounded zero-input limit cycle; tested r=.995 conjugate resonator tail reported, not claimed zero for all stable systems."
+      ]
+    },
+    "DSP-FARROW": {
+      "modules": [
+        "common/python/ext_signal_farrow.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_farrow.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 13,
+        "max_fixed_float_error_lsb": 0.5,
+        "external_agent": "pi Haiku via Qulab; completed model and independent SciPy/Lagrange/integer tests"
+      },
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Causal Lagrange interpolation uses zero prehistory and needs ceil(t) sample; no anti-alias filter for downsampling.",
+        "Rate[1/16,16] quantized at configured16..32fractionbits, preserves nextscheduledtime when changed."
+      ]
+    },
+    "DSP-PSD": {
+      "modules": [
+        "common/python/ext_signal_psd.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_psd.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "profiles": "N32/128, K1/2/16, realonesided/DC/Nyquist/noise/complex, Hann/boxcar",
+        "fixed_tone_integrated_power_relative_budget": 0.001,
+        "fixed_hann_noise_l1_relative_budget": 0.002,
+        "max_hann_noise_l1_relative_error": 0.0006919150008841397
+      },
+      "limitations": [
+        "Models only; no timing claims.",
+        "Fixed PSD units rawcount²/Hz; caller can divide by chosen fullscale².",
+        "Symmetric Hann uses np.hanning; window restricted nonnegative<=1.",
+        "Averages are disjoint batches K1/2/16, no overlap/Welch detrending."
+      ]
+    },
+    "DSP-DCT": {
+      "modules": [
+        "common/python/ext_signal_dct.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_dct.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "max_fixed_decode_error_lsb": 1.0009883889752018
+      },
+      "limitations": [
+        "Models only, no cycle/synthesis claims.",
+        "Offline floating design/stability checks; fixed runtime uses declared integer arithmetic."
+      ]
+    },
+    "DSP-FFT-CONV": {
+      "modules": [
+        "common/python/ext_signal_spectral.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_spectral.py",
+        "tests/test_ext_signal_spectral_oracles.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "fixed_error_budget_lsb": 120,
+        "profiles": "N32/128,M1/7/N,bothmodes,complexrandominput,arbitrarychunks,fulltail,clipping",
+        "max_fixed_direct_error_lsb": 3.6778835193284256
+      },
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Runtime FFT stage arithmetic actualinteger fft_fixed, no final-output-only approximation.",
+        "Product/output/OLA clipping counted; FFTinternal24bit saturation follows fft_fixed and is not included in exposedcounter.",
+        "Filter L1gain/headroom caller responsibility; coefficient Q17quantization and twiddleQ16 documented."
+      ]
+    },
+    "MOD-AM": {
+      "modules": [
+        "common/python/ext_signal_am.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_am.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 17,
+        "external_agent": "pi DeepSeek viaQulab completedexit0; coordinator addedstableexpm1 coefficients andquantizedcutoffrejection",
+        "fixed_float_max_error_lsb": 1.4,
+        "expected_recovered_amplitude": 0.049029538,
+        "measured_float_peak": 0.049012635,
+        "measured_fixed_peak": 0.049015419,
+        "tx_clips": 0,
+        "rx_clips": 0,
+        "stall_regression": {
+          "case": "nonzero float/fixed demod output,3 rejected samples, unchangedstate and next accepted output vs unstalledcontrol",
+          "before_fix": "float returned0 instead of0.03775551170469672; fixedpassed",
+          "after_fix": "float andfixedPASS; AM17testsPASS",
+          "model_change": "float branch assigns self._held=float(self._lp), then returns self._held",
+          "negative_log_path": "build/full_dsp_20261030/signal/logs/am_stall_before_fix.log",
+          "negative_log_sha256": "c3bbf1defea09d7f79264390d341d455febeef4e4f6174847805c769825440e8",
+          "positive_log_path": "build/full_dsp_20261030/signal/logs/am_stall_after_fix.log",
+          "positive_log_sha256": "f9d1ab87b4be519bc3d20ffa333cff73acb426f3945451c553b45d8f333b59de"
+        }
+      },
+      "limitations": [
+        ".5headroom TXformula: amplitude=.5*(1+depth*m), not unitcarrier+potential2xovershoot.",
+        "RX removes DC by20Hzonepole then5kHzaudiolowpass, DCstartup ~16000samples for5tau defaultFs400k.",
+        "Fixedaudio[-131071,131071], IQfullsigned18 ordinarytuple; fixedQ30cutoffs must be representable.",
+        "SourcepracticalSDR defines AMenvelope/400k/5kfilter, preciseonepoledesign isproject-derived.",
+        "Numericalmodels only, no timing/synthesisclaims."
+      ]
+    },
+    "MOD-FM": {
+      "modules": [
+        "common/python/ext_signal_fm.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_fm.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 6,
+        "cordic_angle_budget_word_units": 20,
+        "fixed_emphasis_loopback_budget_lsb": 25,
+        "fs": 400000,
+        "deviation": 75000,
+        "tau_seconds": 7.5e-05,
+        "independent_review": "audit_fm_pi.json + audit_fm_closure.json (read-only, probesnotexecuted)",
+        "max_fixed_loopback_error_lsb": 3,
+        "max_cordic_error_word_units": 6
+      },
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Preemphasis clips when its inverse onepole exceeds normalizedaudio; clipping diagnostic exposed.",
+        "Discriminator zeroIQ clears previous/state, outputs0/validFalse; firstvalidsampleoutputs0.",
+        "FixedFs/deviation must be integral; DDS12bit phaseaddress limits modulationphaseprecision.",
+        "No approximate400/48 resampling; supplied same-rate audio/IQprofile.",
+        "FixedFs bounded1..2**30-1 tokeepdeclared80bitphase/discriminatorproducts valid."
+      ]
+    },
+    "MOD-SSB": {
+      "modules": [
+        "common/python/ext_signal_ssb.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_ssb.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 3,
+        "min_image_rejection_gate_db": 40,
+        "fixed_loopback_budget_lsb": 30,
+        "sidebands": [
+          "usb",
+          "lsb"
+        ],
+        "min_measured_fixed_image_rejection_db": 59.45473523397098
+      },
+      "limitations": [
+        "Python numerical models only, no RTL/vendor/timing claims.",
+        "Hilbertphasing formula project-derived; Laufer source documents SSBfamily only.",
+        "Coherentreceiver requires supplied carrierstep; no automaticCFO/phaserecovery.",
+        "FIR transitions nearDC/Nyquist; no factor2 analytic normalization."
+      ]
+    },
+    "DSP-DDC": {
+      "modules": [
+        "common/python/ext_signal_ddc.py"
+      ],
+      "tests": [
+        "tests/test_ext_signal_ddc.py"
+      ],
+      "numerical_results": {
+        "scope": "targeted",
+        "result": "PASS",
+        "tests": 4,
+        "tone_offsets_input_fs": [
+          0.002,
+          0.005,
+          0.008,
+          0.035,
+          0.045
+        ],
+        "gain_db": [
+          0.008532397792887541,
+          0.004623625352785197,
+          -0.00198624306946162,
+          null,
+          null
+        ],
+        "max_error_lsb": 8.920866397853613,
+        "stopband_conservative_upper_bound_db": -80
+      },
+      "limitations": [
+        "Accepted-sample model; no vendor/timing claims.",
+        "No implicit zero-tail flush; output count ceil(floor(N/10)/4). Reconfigure clears all stages.",
+        "Offline float coefficient design; independent float convolution oracle.",
+        "Both stoptones quantized tozero; only <=-80dB amplitude bound (1LSB/10000counts) is reported, not a -280dB analogclaim."
+      ]
+    }
+  },
+  "source_test_sha256": {
+    "common/python/ext_signal_am.py": "f38cc0cabe591962a62fe5952231aae1f2331d5ef41d575dda34a01bd41c803d",
+    "common/python/ext_signal_core.py": "cee46e4e47def673d6cd915bac2c7dd06e0bb4e516f5ce75934aab52cee5d3af",
+    "common/python/ext_signal_dct.py": "f65b63b87167da96c4a8d2a5f6230063546953a20c848fd44869a96a340ab9c4",
+    "common/python/ext_signal_ddc.py": "8a50d852b951ef81adbd74708582301d6652f739835ab46eae83267702b4bf8b",
+    "common/python/ext_signal_farrow.py": "d103527c61f15e3e3c3803ddc9c6548c5df7d2d02b4c156d07db3d3022d8febf",
+    "common/python/ext_signal_fm.py": "60f0a2c3d68b4b949b5848b1152fb0a687212fdb63155643625376416a99647a",
+    "common/python/ext_signal_psd.py": "461980fa5cd20e16f882af2f2d8d983b1d87ba79db53c6a7db4f6ee764825dde",
+    "common/python/ext_signal_sos.py": "68a1433866f804b1b6778952d153db8752d7045538aff9d67137dc58ad65852f",
+    "common/python/ext_signal_spectral.py": "ad1a3de57929e07a418dad8682f0351304c6c55af8d632e69e53a3cf1e5898a5",
+    "common/python/ext_signal_ssb.py": "581c449975c2317cf041d901ef6cb8f98588b0570e6234ab7ddc45ba1c8c24fe",
+    "tests/test_ext_signal_am.py": "7982cef056d09b8fe38b151ea1192b3be3fbc94762077089f12f415508b4a177",
+    "tests/test_ext_signal_core.py": "9d257bfa8195c75fb916ebb430d81b9d34f8b7237dc7ad99270cf4b76f2c5e73",
+    "tests/test_ext_signal_dct.py": "a2d0dad9609b564816dc67ae9b54718392c79283c110505c0f22be3f7aea87ee",
+    "tests/test_ext_signal_ddc.py": "08177d5ae5bbb432094ef999112ce18298c3e1139a4a36fd1375cd3499734429",
+    "tests/test_ext_signal_farrow.py": "4fccadd62464eee1211bcbc3b9b7ed68c56be8eab277390a43ffe605c0e49106",
+    "tests/test_ext_signal_fm.py": "962cc99b84cd7bfc0ddfe7d21c109b5fbc057c18dcf7feec761c1917f45d7921",
+    "tests/test_ext_signal_hilbert.py": "c4e633a893ff13c4beb319e3cb5158a2555f81bab64a021d5d0a276d662037bd",
+    "tests/test_ext_signal_oracles.py": "fb85271c0e5e93ed0eb2adad679dfbc3b778b1547eb1dbc51f21338aecb0e8a8",
+    "tests/test_ext_signal_psd.py": "52a6d1bf6b3fea45e39b9089e547e12805f6c671b2d39efd3dc07fb79fecc409",
+    "tests/test_ext_signal_sos.py": "02ab6486ebd52a5de1797cd13e18ba59c6c92ba6d803d003edb6280232d60c1c",
+    "tests/test_ext_signal_spectral.py": "7e6944d92bc3e22295c55cb59bad83248110f313263379db4b2329f9eefde6f9",
+    "tests/test_ext_signal_spectral_oracles.py": "9d29a2272d4ebae3d524d9834ba231650dcc8ec4d20339434a81e10bf89e452a",
+    "tests/test_ext_signal_ssb.py": "d7439f4e3fa4017fb6d86aacb5b7e2763b69c06477b846c2dfe02579fc4dfe60"
+  },
+  "validation": {
+    "command": "python -m unittest discover -s tests -p 'test_ext_signal*.py' -v",
+    "tests": 91,
+    "exit_status": 0,
+    "elapsed_seconds": 5.331,
+    "scope": "targeted group only; no global/RTL proof",
+    "log_path": "build/full_dsp_20261030/signal/logs/targeted_am_stall_fix.log",
+    "log_sha256": "7a94c649809069391a422b49d0c9dac58dd567f8cd30fafeddae309cdafd9003"
+  },
+  "external_agent_report": "research/full_dsp_20261030/signal/external_agents.json",
+  "blockers": []
+}

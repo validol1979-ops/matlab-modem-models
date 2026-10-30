@@ -1,0 +1,254 @@
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/rtl/tb/bpsk_rx_uvm_tb.sv"	2026-10-14 10:21:34.551049758 +0300
++++ b/rtl/tb/bpsk_rx_uvm_tb.sv	2026-10-14 10:53:09.843142301 +0300
+@@ -1,4 +1,4 @@
+-// Full UVM RX pilot: BPSK, QPSK_DIFF SIMO and PSK8_FB; compile-selected widths.
++// Full UVM RX pilot: every bpsk_rx PSK/QAM profile and QPSK_DIFF SIMO; compile-selected widths.
+ // Source controls change on negedges. Clocking inputs #1step describe the
+ // pre-edge handshake; the monitor never reads post-NBA values as accepted data.
+ `timescale 1ns/1ps
+@@ -17,6 +17,12 @@
+ `ifndef PILOT_TIMING_LOOP
+ `define PILOT_TIMING_LOOP 1
+ `endif
++`ifndef PILOT_PI4
++`define PILOT_PI4 0
++`endif
++`ifndef PILOT_EQUALIZER
++`define PILOT_EQUALIZER 0
++`endif
+ `ifndef PILOT_SIMO
+ `define PILOT_SIMO 0
+ `endif
+@@ -27,7 +33,7 @@
+ `else
+   localparam bit ACTIVE=1;
+ `endif
+-  localparam int ORDER=`PILOT_ORDER,LABEL_BITS=ORDER==8?3:ORDER==4?2:1,INDEX_BITS=LABEL_BITS;
++  localparam int ORDER=`PILOT_ORDER,LABEL_BITS=`PILOT_ORDER==8&&`PILOT_PI4?2:`PILOT_ORDER==64?6:`PILOT_ORDER==16?4:`PILOT_ORDER==8?3:`PILOT_ORDER==4?2:1,INDEX_BITS=`PILOT_ORDER==64?6:`PILOT_ORDER==16?4:`PILOT_ORDER==8?3:`PILOT_ORDER==4?2:1;
+   localparam bit SIMO=`PILOT_SIMO;
+   logic rst=ACTIVE,cfg_valid=0,cfg_last=0;
+   logic [LABEL_BITS-1:0] cfg_bit=0;
+@@ -73,7 +79,7 @@
+ `include "uvm_macros.svh"
+ package bpsk_rx_pilot_uvm_pkg;
+   import uvm_pkg::*;
+-  localparam int LABEL_BITS=`PILOT_ORDER==8?3:`PILOT_ORDER==4?2:1,ALPHABET=1<<LABEL_BITS;
++  localparam int LABEL_BITS=`PILOT_ORDER==8&&`PILOT_PI4?2:`PILOT_ORDER==64?6:`PILOT_ORDER==16?4:`PILOT_ORDER==8?3:`PILOT_ORDER==4?2:1,ALPHABET=1<<LABEL_BITS,INDEX_ALPHABET=1<<(`PILOT_ORDER==64?6:`PILOT_ORDER==16?4:`PILOT_ORDER==8?3:`PILOT_ORDER==4?2:1);
+   `uvm_analysis_imp_decl(_expected)
+   `uvm_analysis_imp_decl(_observed)
+   typedef enum {CONFIGURE,PARTIAL_CONFIG,FRAME,WARM_FRAME,RESET_DUT,OUTPUT_EVENT,ACQUIRE_EVENT,RESET_EVENT,GAIN_CONFIGURE,CONFIG_EVENT,GAIN_EVENT} item_kind_t;
+@@ -127,7 +133,7 @@
+         frame.symbols=symbols;frame.expected_payload_errors=original_errors[f];frame.golden=new[symbols];
+         for(int k=0;k<symbols;k++) begin
+           rc=$fscanf(fd,"%d %d %d %d %d %d %d %d %d %d",row.re,row.im,row.phase,row.frequency,row.gain,row.correction,row.index,row.label,row.last,row.truth);
+-          if(rc!=10||row.last!=longint'(k==symbols-1)||!(row.truth>=0&&row.truth<ALPHABET)||!(row.label>=0&&row.label<ALPHABET)||!(row.index>=0&&row.index<ALPHABET)) `uvm_fatal("INPUT","Malformed fixed trace/truth")
++          if(rc!=10||row.last!=longint'(k==symbols-1)||!(row.truth>=0&&row.truth<ALPHABET)||!(row.label>=0&&row.label<ALPHABET)||!(row.index>=0&&row.index<INDEX_ALPHABET)) `uvm_fatal("INPUT","Malformed fixed trace/truth")
+           frame.golden[k]=row;
+         end
+         frames.push_back(frame);
+@@ -548,7 +554,7 @@
+       .acquisition_valid(bus.acquisition_valid),.acquisition_confidence(bus.acquisition_confidence),.acquisition_delay(bus.acquisition_delay),.acquisition_frequency(bus.acquisition_frequency),
+       .acquisition_phase(bus.acquisition_phase),.acquisition_gain(bus.acquisition_gain),.acquisition_score(bus.acquisition_score));
+   end else begin:g_single
+-  bpsk_rx #(.RESET_ACTIVE(bus.ACTIVE),.TABLE_DIR(TABLE_DIR),.ORDER(`PILOT_ORDER),.AMPLITUDE(`PILOT_AMPLITUDE),.DIFFERENTIAL(`PILOT_DIFFERENTIAL),.FEEDFORWARD(`PILOT_FEEDFORWARD),.TIMING_LOOP(`PILOT_TIMING_LOOP)) dut(
++  bpsk_rx #(.RESET_ACTIVE(bus.ACTIVE),.TABLE_DIR(TABLE_DIR),.ORDER(`PILOT_ORDER),.AMPLITUDE(`PILOT_AMPLITUDE),.DIFFERENTIAL(`PILOT_DIFFERENTIAL),.FEEDFORWARD(`PILOT_FEEDFORWARD),.TIMING_LOOP(`PILOT_TIMING_LOOP),.PI4(`PILOT_PI4),.EQUALIZER(`PILOT_EQUALIZER)) dut(
+     .clk(clk),.rst(bus.rst),.cfg_valid(bus.cfg_valid),.cfg_bit(bus.cfg_bit),.cfg_last(bus.cfg_last),.cfg_count(bus.cfg_count),
+     .cfg_ready(bus.cfg_ready),.configured(bus.configured),.error(bus.error),
+     .s_valid(bus.s_valid),.s_last(bus.s_last),.s_re(bus.s_re),.s_im(bus.s_im),.s_ready(bus.s_ready),
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_bpsk_uvm_evidence.py"	2026-10-14 10:21:34.552049758 +0300
++++ b/tests/test_bpsk_uvm_evidence.py	2026-10-14 10:56:56.501153369 +0300
+@@ -175,7 +175,7 @@
+             receiver_vectors(legacy,frames=4,count=768,seed=19,profile=profile)
+             for file in legacy.glob('*.txt'):self.assertEqual(file.read_bytes(),(source/file.name).read_bytes())
+             self.assertEqual(model['parameters'],rtl_parameters(profile))
+-            self.assertEqual(model['label_bits'],2 if name=='qpsk_diff' else 3)
++            self.assertEqual(model['label_bits'],(profile.alphabet-1).bit_length());self.assertEqual(model['index_bits'],(profile.order-1).bit_length())
+             self.assertEqual(model['cfg_label_max'],profile.alphabet-1);self.assertEqual(model['decoded_label_max'],profile.alphabet-1)
+             rows=[list(map(int,row.split())) for row in (source/'warm_reset_expected.txt').read_text().splitlines()[1:]]
+             self.assertEqual(len(rows),769);self.assertEqual(rows[-1],[768,576,model['payload_errors'][3]])
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_uvm_floating_reference.py"	2026-10-14 10:21:34.553049758 +0300
++++ b/tests/test_uvm_floating_reference.py	2026-10-14 10:59:15.594160160 +0300
+@@ -26,16 +26,20 @@
+         cls.temporary=tempfile.TemporaryDirectory();cls.folder=Path(cls.temporary.name)
+         cls.models={'bpsk':prepare_vectors(cls.folder/'bpsk')}
+         for name,profile in RX_PROFILES.items():cls.models[name]=prepare_profile_vectors(cls.folder/name,profile)
+-        cls.alphabet=dict(bpsk=2,qpsk_diff=4,psk8_fb=8)
++        cls.alphabet=dict(bpsk=2,**{name:profile.alphabet for name,profile in RX_PROFILES.items()})
+     @classmethod
+     def tearDownClass(cls):cls.temporary.cleanup()
+ 
+     def test_original_reference_values_and_shapes(self):
+-        expected=dict(bpsk=[0,0,0,54],qpsk_diff=[0,0,16,308],psk8_fb=[0,0,0,408])
++        # Pinned measured float errors (frame3 is the noisy case); a change means the reference moved.
++        expected=dict(bpsk=54,qpsk=144,qpsk_half_diff=238,qpsk_axis_diff_ff=302,qpsk_axis=151,qpsk_diff=308,psk8_ff=435,psk8_fb=408,
++                      psk8_rotated_fb=420,pi4=378,qam16=493,qam16_eq=518,qam16_dfe=521,qam64=556)
++        self.assertEqual(set(expected),set(self.models))
+         for name,model in self.models.items():
+-            self.assertEqual(model['float_payload_errors'],expected[name]);self.assertEqual(model['float_payload_symbols'],[576]*4)
++            self.assertEqual(model['float_payload_errors'],[0,0,16 if name=='qpsk_diff' else 0,expected[name]]);self.assertEqual(model['float_payload_symbols'],[576]*4)
+             decisions=ref.floating_decisions(self.folder/name,name)
+             self.assertEqual(decisions.shape,(4,768));self.assertTrue(np.all((decisions>=0)&(decisions<self.alphabet[name])))
++            self.assertEqual(decisions.max(),self.alphabet[name]-1)
+             ref.validate_float_reference(self.folder/name,name)
+ 
+     def test_no_fixed_point_module_participates(self):
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tests/test_uvm_pilot_coverage.py"	2026-10-14 10:21:34.554049758 +0300
++++ b/tests/test_uvm_pilot_coverage.py	2026-10-14 10:57:19.459154490 +0300
+@@ -11,28 +11,29 @@
+ from run_tests import verified_bpsk_uvm_artifacts
+ 
+ 
++sys.path.insert(0,str(ROOT/'common/python'))
++import psk_fixed
++RX=[p.name for p in psk_fixed.PROFILES if p.name!='bpsk']
++
++
+ def coverage():
+-    records={}
+-    for profile,prefix,scenarios in (
+-            ('bpsk','',('stream','stalled','midreset','cfgreset')),
+-            ('bpsk_tx','tx_',('stream','gaps','stalled','midreset','outreset')),
+-            ('qpsk_diff','qpsk_diff_',('stream','stalled','midreset','cfgreset')),
+-            ('psk8_fb','psk8_fb_',('stream','stalled','midreset','cfgreset'))):
++    records={};floats={f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}
++    for profile,prefix,scenarios in [('bpsk_tx','tx_',('stream','gaps','stalled','midreset','outreset'))]+[
++            (name,'' if name=='bpsk' else name+'_',('stream','stalled','midreset','cfgreset')) for name in ['bpsk',*RX]]:
+         for scenario in scenarios:
+             for active in (1,0):
+                 records[f'{prefix}{scenario}_reset_{active}']=dict(profile=profile,scenario=scenario,reset_active=active)
+                 if profile!='bpsk_tx':records[f'{prefix}{scenario}_reset_{active}']['float_per_frame']=[dict(rtl_errors=3,float_errors=1,delta=2)]*4
+         if profile!='bpsk_tx':
+             for kind in ('decision','errorcount','denominator'):records[f'{prefix}validator_rejects_float_{kind}']=dict(rejected='digest')
+-    for prefix,controls in (
+-            ('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+-            ('tx_',{'numeric':'NUMERIC','s_valid_x':'PROTOCOL','s_ready_x':'PROTOCOL','m_valid_x':'PROTOCOL',
+-                    'm_ready_x':'PROTOCOL','data_x':'NUMERIC','held_data':'STALL'}),
+-            ('qpsk_diff_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                           'ready_x':'PROTOCOL','gain_ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+-            ('psk8_fb_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                        'ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}})):
+-        for name,tag in controls.items():
++    controls=[('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL',**floats}),
++              ('tx_',{'numeric':'NUMERIC','s_valid_x':'PROTOCOL','s_ready_x':'PROTOCOL','m_valid_x':'PROTOCOL',
++                      'm_ready_x':'PROTOCOL','data_x':'NUMERIC','held_data':'STALL'})]
++    for name in RX:
++        controls.append((name+'_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL','ready_x':'PROTOCOL',
++                                   'warm_ser':'SER',**floats,**({'gain_ready_x':'PROTOCOL'} if name=='qpsk_diff' else {})}))
++    for prefix,names in controls:
++        for name,tag in names.items():
+             for active in (1,0):records[f'{prefix}negative_{name}_reset_{active}']=dict(detected_tag=tag,returncode=13)
+     return records
+ 
+@@ -52,7 +53,8 @@
+             original=dict(finish(begin(),[log]),status='PASS',pilot='both',rx_profile_selection='all',records=coverage())
+             for fault in ('rx_only','tx_missing','rx_missing','wrong_scenario','reset_bool','wrong_profile',
+                           'negative_missing','wrong_tag','negative_rc0','negative_bool','no_artifacts','partial_profiles','qpsk_missing','psk_negative_missing',
+-                          'float_missing','float_delta','float_negative_missing','validator_missing'):
++                          'float_missing','float_delta','float_negative_missing','validator_missing',
++                          'qam64_missing','pi4_negative_missing'):
+                 data=copy.deepcopy(original)
+                 if fault=='rx_only':data['pilot']='rx'
+                 elif fault=='partial_profiles':data['rx_profile_selection']='bpsk'
+@@ -62,6 +64,8 @@
+                 elif fault=='float_delta':data['records']['midreset_reset_0']['float_per_frame'][3]=dict(rtl_errors=3,float_errors=1,delta=0)
+                 elif fault=='float_negative_missing':data['records'].pop('psk8_fb_negative_float_denominator_reset_0')
+                 elif fault=='validator_missing':data['records'].pop('validator_rejects_float_decision')
++                elif fault=='qam64_missing':data['records'].pop('qam64_stalled_reset_1')
++                elif fault=='pi4_negative_missing':data['records'].pop('pi4_negative_float_errorcount_reset_0')
+                 elif fault=='tx_missing':data['records'].pop('tx_outreset_reset_0')
+                 elif fault=='rx_missing':data['records'].pop('cfgreset_reset_1')
+                 elif fault=='wrong_scenario':data['records']['tx_stream_reset_0']['scenario']='stalled'
+@@ -75,4 +79,10 @@
+                 with self.subTest(fault=fault),self.assertRaises(RuntimeError):verified_bpsk_uvm_artifacts(data)
+ 
+ 
++    def test_parent_and_runner_require_every_shared_core_profile(self):
++        from run_tests import UVM_RX_PROFILES
++        from run_bpsk_uvm import RX_PROFILES
++        self.assertEqual(list(UVM_RX_PROFILES),RX);self.assertEqual(list(RX_PROFILES),RX);self.assertEqual(len(RX),13)
++
++
+ if __name__=='__main__':unittest.main()
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tools/run_bpsk_uvm.py"	2026-10-14 10:21:34.550049758 +0300
++++ b/tools/run_bpsk_uvm.py	2026-10-14 10:57:19.459154490 +0300
+@@ -123,7 +123,7 @@
+ 
+ 
+ from bpsk_cases import rtl_parameters,p as psk
+-RX_PROFILES={profile.name:profile for profile in (psk.QPSK_DIFF,psk.PSK8_FB)}
++RX_PROFILES={profile.name:profile for profile in psk.PROFILES if profile is not psk.BPSK}
+ PROFILE_MARKER=r'UVM PILOT PROFILE label_bits=(\d+) index_bits=(\d+) gaincfg=(\d+) cfg_max=(\d+) label_max=(\d+) index_max=(\d+)'
+ 
+ 
+@@ -198,7 +198,7 @@
+                 if rc:raise RuntimeError(f'Profile vlib failed rc{rc}: '+text[-2000:])
+             parameters=model['parameters']
+             defines=['+define+UVM_NO_DPI']+(['+define+RTL_RESET_LOW'] if active==0 else [])
+-            defines += [f'+define+PILOT_{param}={parameters[param]}' for param in ('ORDER','AMPLITUDE','DIFFERENTIAL','FEEDFORWARD','TIMING_LOOP')]
++            defines += [f'+define+PILOT_{param}={parameters[param]}' for param in ('ORDER','AMPLITUDE','DIFFERENTIAL','FEEDFORWARD','TIMING_LOOP','PI4','EQUALIZER')]
+             defines += [f'+define+PILOT_SIMO={int(model["simo"])}']
+             rc,text=run([bindir/'vlog','-64','-sv',*defines,f'+incdir+{uvm/"src"}',f'+incdir+{PILOT}',uvm/'src/uvm_pkg.sv',*SOURCES,ROOT/'rtl/tb/bpsk_rx_uvm_tb.sv'],work/'compile.log')
+             if rc or re.search(r'Warnings:\s*[1-9]|(?:Error|Warning):',text):raise RuntimeError(f'Profile compile failed/warned rc{rc}: '+text[-6000:])
+@@ -361,7 +361,7 @@
+                 bindir,uvm=questa_paths();records.update(run_profile_hdl(output,bindir,uvm,artifacts,selected))
+         if args.suite in ('hdl','all') and args.pilot in ('tx','both'):
+             bindir,uvm=questa_paths();records.update(run_tx_hdl(output,bindir,uvm,artifacts))
+-        write_json(target,dict(finish(evidence,artifacts),status='PASS',records=records,pilot=args.pilot,rx_profile_selection=args.profile,tx_configuration='NOT_APPLICABLE: BPSK_TX has no configuration ports',scope='Real UVM sequencer/driver/monitor/scoreboard around BPSK RX/TX, QPSK_DIFF SIMO RX and PSK8_FB RX pilots selected by CLI. Actual accepted outputs; fixed numeric traces plus immutable original payload error counts; actual RTL SER versus independent float receiver SER on the same Q15 pin waveform and payload interval, reported as measured deltas without a tuned budget. No coverage claim for other modems.'))
++        write_json(target,dict(finish(evidence,artifacts),status='PASS',records=records,pilot=args.pilot,rx_profile_selection=args.profile,tx_configuration='NOT_APPLICABLE: BPSK_TX has no configuration ports',scope='Real UVM sequencer/driver/monitor/scoreboard around BPSK RX/TX and every other bpsk_rx PSK/QAM profile (QPSK_DIFF as SIMO) selected by CLI. Actual accepted outputs; fixed numeric traces plus immutable original payload error counts; actual RTL SER versus independent float receiver SER on the same Q15 pin waveform and payload interval, reported as measured deltas without a tuned budget. No coverage claim for CPM/OQPSK modems or the section 5 DSP blocks.'))
+     except Exception as exc:
+         write_json(target,dict(evidence,status='FAIL',error=f'{type(exc).__name__}: {exc}'));raise
+     print('PASS BPSK UVM '+args.suite)
+--- "~/PROJECT_THEORY/\320\234\320\276\320\264\320\265\320\274\321\213/tools/run_tests.py"	2026-10-14 10:21:34.551049758 +0300
++++ b/tools/run_tests.py	2026-10-14 10:56:56.501153369 +0300
+@@ -23,6 +23,11 @@
+     return list(dict.fromkeys(artifacts))
+ 
+ 
++# Every non-BPSK profile of the shared bpsk_rx core has its own full UVM series.
++UVM_RX_PROFILES=('qpsk','qpsk_half_diff','qpsk_axis_diff_ff','qpsk_axis','qpsk_diff','psk8_ff','psk8_fb',
++                 'psk8_rotated_fb','pi4','qam16','qam16_eq','qam16_dfe','qam64')
++
++
+ def verified_bpsk_uvm_artifacts(data, root=ROOT):
+     """Require both complete RTL pilots before accepting their child artifacts."""
+     if not isinstance(data,dict) or data.get('pilot')!='both':
+@@ -31,11 +36,9 @@
+         raise RuntimeError('All registered RX UVM profiles are required')
+     records=data.get('records')
+     if not isinstance(records,dict):raise RuntimeError('Missing BPSK UVM records')
+-    for profile,prefix,scenarios in (
+-            ('bpsk','',('stream','stalled','midreset','cfgreset')),
+-            ('bpsk_tx','tx_',('stream','gaps','stalled','midreset','outreset')),
+-            ('qpsk_diff','qpsk_diff_',('stream','stalled','midreset','cfgreset')),
+-            ('psk8_fb','psk8_fb_',('stream','stalled','midreset','cfgreset'))):
++    rx=['bpsk',*UVM_RX_PROFILES]
++    for profile,prefix,scenarios in [('bpsk_tx','tx_',('stream','gaps','stalled','midreset','outreset'))]+[
++            (name,'' if name=='bpsk' else name+'_',('stream','stalled','midreset','cfgreset')) for name in rx]:
+         for scenario in scenarios:
+             for active in (1,0):
+                 record=records.get(f'{prefix}{scenario}_reset_{active}')
+@@ -54,15 +57,15 @@
+                 record=records.get(f'{prefix}validator_rejects_float_{kind}')
+                 if not isinstance(record,dict) or not record.get('rejected'):
+                     raise RuntimeError('Incomplete independent float validator negatives')
+-    for prefix,controls in (
+-            ('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+-            ('tx_',{'numeric':'NUMERIC','s_valid_x':'PROTOCOL','s_ready_x':'PROTOCOL',
+-                    'm_valid_x':'PROTOCOL','m_ready_x':'PROTOCOL','data_x':'NUMERIC','held_data':'STALL'}),
+-            ('qpsk_diff_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                           'ready_x':'PROTOCOL','gain_ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}}),
+-            ('psk8_fb_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL',
+-                        'ready_x':'PROTOCOL','warm_ser':'SER',**{f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}})):
+-        for name,tag in controls.items():
++    floats={f'float_{k}':'FLOAT_SER' for k in ('decision','errorcount','denominator')}
++    controls=[('',{'numeric':'NUMERIC','ser':'SER','valid_x':'PROTOCOL','ready_x':'PROTOCOL',**floats}),
++              ('tx_',{'numeric':'NUMERIC','s_valid_x':'PROTOCOL','s_ready_x':'PROTOCOL',
++                      'm_valid_x':'PROTOCOL','m_ready_x':'PROTOCOL','data_x':'NUMERIC','held_data':'STALL'})]
++    for name in UVM_RX_PROFILES:
++        controls.append((name+'_',{'numeric':'NUMERIC','ser':'SER','label_high_bit':'NUMERIC','valid_x':'PROTOCOL','ready_x':'PROTOCOL',
++                                   'warm_ser':'SER',**floats,**({'gain_ready_x':'PROTOCOL'} if name=='qpsk_diff' else {})}))
++    for prefix,names in controls:
++        for name,tag in names.items():
+             for active in (1,0):
+                 record=records.get(f'{prefix}negative_{name}_reset_{active}')
+                 if (not isinstance(record,dict) or record.get('detected_tag')!=tag

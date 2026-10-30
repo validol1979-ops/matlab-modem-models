@@ -1,0 +1,114 @@
+{
+  "id": "filters/oset",
+  "title": "Generic noise and interference filters",
+  "category": "filters",
+  "path": "algorithms/filters/oset",
+  "operations": [
+    "kalman",
+    "notch"
+  ],
+  "cases": [
+    "notch_interference",
+    "scalar_kalman"
+  ],
+  "limits": "Portable notch and scalar Kalman filtering examples. Full OSET biomedical/ARMA models and every selected helper are preserved for reference; these examples do not establish equivalence to all 13 source functions.",
+  "sources": [
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/LICENSE",
+      "original": "algorithms/filters/oset/original/LICENSE",
+      "sha256": "f362542b186cb0821249b861b51e7e53fe395bd9a870a53ac5b5a437ca4e7080",
+      "bytes": 1519
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/README.md",
+      "original": "algorithms/filters/oset/original/README.md",
+      "sha256": "b33fe677e41cf3f321d3ad5f3220bfc5a2bff1bf53c468911cd48141c5923a17",
+      "bytes": 2193
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/KFNotch.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/KFNotch.m",
+      "sha256": "71adda78a043db46cc5ee361461e5aaa0c7c9c405ff65778cca7815f32de5fc5",
+      "bytes": 6391
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/adaptive_filter.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/adaptive_filter.m",
+      "sha256": "b5f7b775b5825a44d8e9516ef28316ad7d4dcf46a309e2b352e699111c619e68",
+      "bytes": 1770
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/adaptive_filter_multi_lag.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/adaptive_filter_multi_lag.m",
+      "sha256": "980f7d35027cb9dded57cf06c1752d5f466cc3e0f36f582ec7221476e30e3159",
+      "bytes": 2600
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/arma_kalman_filter.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/arma_kalman_filter.m",
+      "sha256": "356f3187184842495e6b7bf2f336b2857d8feb425ad6826b5bcdd5a6e883ca31",
+      "bytes": 7671
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/bp_filter_complex_equiripple.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/bp_filter_complex_equiripple.m",
+      "sha256": "326e3e1b0738626dbd30b3b5bfa83d41969f9893a6f306e7a7bd316df1721568",
+      "bytes": 1838
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/bp_filter_dft_windowed.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/bp_filter_dft_windowed.m",
+      "sha256": "1c11b1417da0b2b3f8b0accc7c21c954f64c08826181e77daa2aef315c380bfa",
+      "bytes": 1916
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/conditional_median_filter.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/conditional_median_filter.m",
+      "sha256": "56eb8856cb7db4a5a888514ad2b0517e4e34862015d114e5edaa08dfd3b627c5",
+      "bytes": 3422
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/equalizer_filter_design.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/equalizer_filter_design.m",
+      "sha256": "ba99bd25e7c4e1cd25b812bf979724723ac33935b49e118ec840d650c4b34edb",
+      "bytes": 5815
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/lp_filter_zero_phase.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/lp_filter_zero_phase.m",
+      "sha256": "0d9a8e605cfda94c793f2f9b5acfff216b1cf6a79fa37c744cc027b00d003bdb",
+      "bytes": 1080
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/lp_filter_zero_phase_2nd.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/lp_filter_zero_phase_2nd.m",
+      "sha256": "1704a4b343913f6449baea75cd585446a0440c734ae400a1b95a78669a990079",
+      "bytes": 3145
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/notch_filter_cls.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/notch_filter_cls.m",
+      "sha256": "f32002ec3648b701d282907576da92ea9d23dd7828fab71441c219087d6deb1d",
+      "bytes": 2658
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/generic/rls.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/generic/rls.m",
+      "sha256": "f4d0ac144f45b661392c9b8df95328300cbdb28d21756f3ba0110c199be67d54",
+      "bytes": 1887
+    },
+    {
+      "source": "research/dsp_global_20260930/sources/iran_oset/matlab/tools/modeling/colored_noise_gen.m",
+      "original": "algorithms/filters/oset/original/matlab/tools/modeling/colored_noise_gen.m",
+      "sha256": "f719ddc178956c954fedcbeae2649b991697f991aadfe5f66d9eb3a8d929003c",
+      "bytes": 1898
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

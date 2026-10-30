@@ -1,0 +1,573 @@
+{
+  "status": "PASS",
+  "scope": "finite unbroken offered input; fixed-model scoreboard; no physical timing claim",
+  "models": {
+    "192": {
+      "frames": 4,
+      "symbols": 768,
+      "samples": 6299,
+      "payload_errors": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "768": {
+      "frames": 4,
+      "symbols": 3072,
+      "samples": 24731,
+      "payload_errors": [
+        0,
+        0,
+        0,
+        58
+      ]
+    },
+    "2048": {
+      "frames": 4,
+      "symbols": 8192,
+      "samples": 65691,
+      "payload_errors": [
+        0,
+        0,
+        0,
+        526
+      ]
+    }
+  },
+  "rows": [
+    {
+      "accepted": 6299,
+      "offered": 7370,
+      "blocked": 1071,
+      "tail_blocked": 96,
+      "other_blocked": 975,
+      "frames": 4,
+      "boundaries": 3,
+      "min_gap": 32,
+      "max_gap": 643,
+      "tail_checks": 128,
+      "state_counts": {
+        "wait": 0,
+        "acquire": 0,
+        "track": 973,
+        "retire": 2
+      },
+      "buffer_blocks": [
+        {
+          "frame": 2,
+          "buffer": 0,
+          "first": 3410,
+          "last": 3773,
+          "cycles": 364,
+          "release": 3774
+        },
+        {
+          "frame": 3,
+          "buffer": 1,
+          "first": 5386,
+          "last": 5996,
+          "cycles": 611,
+          "release": 5997
+        }
+      ],
+      "lifecycle_events": [
+        {
+          "cycle": 2893,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 3772,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 3773,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 5116,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 5995,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 5996,
+          "kind": "retire",
+          "buffer": 1
+        },
+        {
+          "cycle": 7339,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 8218,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 8219,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 9562,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 10441,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 10442,
+          "kind": "retire",
+          "buffer": 1
+        }
+      ],
+      "reset_active": 1,
+      "symbols_per_frame": 192
+    },
+    {
+      "accepted": 6299,
+      "offered": 7370,
+      "blocked": 1071,
+      "tail_blocked": 96,
+      "other_blocked": 975,
+      "frames": 4,
+      "boundaries": 3,
+      "min_gap": 32,
+      "max_gap": 643,
+      "tail_checks": 128,
+      "state_counts": {
+        "wait": 0,
+        "acquire": 0,
+        "track": 973,
+        "retire": 2
+      },
+      "buffer_blocks": [
+        {
+          "frame": 2,
+          "buffer": 0,
+          "first": 3410,
+          "last": 3773,
+          "cycles": 364,
+          "release": 3774
+        },
+        {
+          "frame": 3,
+          "buffer": 1,
+          "first": 5386,
+          "last": 5996,
+          "cycles": 611,
+          "release": 5997
+        }
+      ],
+      "lifecycle_events": [
+        {
+          "cycle": 2893,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 3772,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 3773,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 5116,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 5995,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 5996,
+          "kind": "retire",
+          "buffer": 1
+        },
+        {
+          "cycle": 7339,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 8218,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 8219,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 9562,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 10441,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 10442,
+          "kind": "retire",
+          "buffer": 1
+        }
+      ],
+      "reset_active": 0,
+      "symbols_per_frame": 192
+    },
+    {
+      "accepted": 24731,
+      "offered": 24827,
+      "blocked": 96,
+      "tail_blocked": 96,
+      "other_blocked": 0,
+      "frames": 4,
+      "boundaries": 3,
+      "min_gap": 32,
+      "max_gap": 32,
+      "tail_checks": 128,
+      "state_counts": {
+        "wait": 0,
+        "acquire": 0,
+        "track": 0,
+        "retire": 0
+      },
+      "buffer_blocks": [],
+      "lifecycle_events": [
+        {
+          "cycle": 2893,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 6398,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 6419,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 9105,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 12612,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 12634,
+          "kind": "retire",
+          "buffer": 1
+        },
+        {
+          "cycle": 15320,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 18832,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 18854,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 21540,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 25044,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 25066,
+          "kind": "retire",
+          "buffer": 1
+        }
+      ],
+      "reset_active": 1,
+      "symbols_per_frame": 768
+    },
+    {
+      "accepted": 24731,
+      "offered": 24827,
+      "blocked": 96,
+      "tail_blocked": 96,
+      "other_blocked": 0,
+      "frames": 4,
+      "boundaries": 3,
+      "min_gap": 32,
+      "max_gap": 32,
+      "tail_checks": 128,
+      "state_counts": {
+        "wait": 0,
+        "acquire": 0,
+        "track": 0,
+        "retire": 0
+      },
+      "buffer_blocks": [],
+      "lifecycle_events": [
+        {
+          "cycle": 2893,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 6398,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 6419,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 9105,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 12612,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 12634,
+          "kind": "retire",
+          "buffer": 1
+        },
+        {
+          "cycle": 15320,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 18832,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 18854,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 21540,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 25044,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 25066,
+          "kind": "retire",
+          "buffer": 1
+        }
+      ],
+      "reset_active": 0,
+      "symbols_per_frame": 768
+    },
+    {
+      "accepted": 65691,
+      "offered": 65787,
+      "blocked": 96,
+      "tail_blocked": 96,
+      "other_blocked": 0,
+      "frames": 4,
+      "boundaries": 3,
+      "min_gap": 32,
+      "max_gap": 32,
+      "tail_checks": 128,
+      "state_counts": {
+        "wait": 0,
+        "acquire": 0,
+        "track": 0,
+        "retire": 0
+      },
+      "buffer_blocks": [],
+      "lifecycle_events": [
+        {
+          "cycle": 2893,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 16638,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 16659,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 19345,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 33092,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 33114,
+          "kind": "retire",
+          "buffer": 1
+        },
+        {
+          "cycle": 35800,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 49552,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 49574,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 52260,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 66005,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 66026,
+          "kind": "retire",
+          "buffer": 1
+        }
+      ],
+      "reset_active": 1,
+      "symbols_per_frame": 2048
+    },
+    {
+      "accepted": 65691,
+      "offered": 65787,
+      "blocked": 96,
+      "tail_blocked": 96,
+      "other_blocked": 0,
+      "frames": 4,
+      "boundaries": 3,
+      "min_gap": 32,
+      "max_gap": 32,
+      "tail_checks": 128,
+      "state_counts": {
+        "wait": 0,
+        "acquire": 0,
+        "track": 0,
+        "retire": 0
+      },
+      "buffer_blocks": [],
+      "lifecycle_events": [
+        {
+          "cycle": 2893,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 16638,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 16659,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 19345,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 33092,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 33114,
+          "kind": "retire",
+          "buffer": 1
+        },
+        {
+          "cycle": 35800,
+          "kind": "acquisition_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 49552,
+          "kind": "tracking_done",
+          "buffer": 0
+        },
+        {
+          "cycle": 49574,
+          "kind": "retire",
+          "buffer": 0
+        },
+        {
+          "cycle": 52260,
+          "kind": "acquisition_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 66005,
+          "kind": "tracking_done",
+          "buffer": 1
+        },
+        {
+          "cycle": 66026,
+          "kind": "retire",
+          "buffer": 1
+        }
+      ],
+      "reset_active": 0,
+      "symbols_per_frame": 2048
+    }
+  ]
+}

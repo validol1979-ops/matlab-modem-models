@@ -1,0 +1,930 @@
+{
+  "models": [
+    {
+      "id": "modems/ofdm_awgn",
+      "title": "OFDM over AWGN",
+      "category": "modems",
+      "limits": "Independent complete block-OFDM analogue. Missing historical helpers are replaced by an explicit FFT/IFFT and cyclic-prefix contract; pilot placement and the original 48/64 carrier map are not reproduced.",
+      "source_files": 1,
+      "workspace": "../../modems/ofdm_awgn/README.md",
+      "views": [
+        {
+          "name": "2_qam_tx",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/modems__ofdm_awgn/2_qam_tx.png",
+          "svg": "algorithms/modems__ofdm_awgn/2_qam_tx.svg"
+        },
+        {
+          "name": "2_qam_rx",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 256,
+            "alphabet": 2,
+            "negative_control_detected": true
+          },
+          "png": "algorithms/modems__ofdm_awgn/2_qam_rx.png",
+          "svg": "algorithms/modems__ofdm_awgn/2_qam_rx.svg"
+        },
+        {
+          "name": "4_qam_tx",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/modems__ofdm_awgn/4_qam_tx.png",
+          "svg": "algorithms/modems__ofdm_awgn/4_qam_tx.svg"
+        },
+        {
+          "name": "4_qam_rx",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 256,
+            "alphabet": 4,
+            "negative_control_detected": true
+          },
+          "png": "algorithms/modems__ofdm_awgn/4_qam_rx.png",
+          "svg": "algorithms/modems__ofdm_awgn/4_qam_rx.svg"
+        },
+        {
+          "name": "16_qam_tx",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/modems__ofdm_awgn/16_qam_tx.png",
+          "svg": "algorithms/modems__ofdm_awgn/16_qam_tx.svg"
+        },
+        {
+          "name": "16_qam_rx",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 256,
+            "alphabet": 16,
+            "negative_control_detected": true
+          },
+          "png": "algorithms/modems__ofdm_awgn/16_qam_rx.png",
+          "svg": "algorithms/modems__ofdm_awgn/16_qam_rx.svg"
+        },
+        {
+          "name": "64_qam_tx",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/modems__ofdm_awgn/64_qam_tx.png",
+          "svg": "algorithms/modems__ofdm_awgn/64_qam_tx.svg"
+        },
+        {
+          "name": "64_qam_rx",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 256,
+            "alphabet": 64,
+            "negative_control_detected": true
+          },
+          "png": "algorithms/modems__ofdm_awgn/64_qam_rx.png",
+          "svg": "algorithms/modems__ofdm_awgn/64_qam_rx.svg"
+        }
+      ],
+      "operations": [
+        "ofdm_rx",
+        "ofdm_tx"
+      ]
+    },
+    {
+      "id": "modems/fsk_text",
+      "title": "Frequency-coded communication",
+      "category": "modems",
+      "limits": "Orthogonal four-FSK complex-baseband analogue. Source text/alphabet conventions, amplitude-coding and plotting exercises are preserved as references, not claimed equivalent.",
+      "source_files": 8,
+      "workspace": "../../modems/fsk_text/README.md",
+      "views": [
+        {
+          "name": "four_fsk_tx",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/modems__fsk_text/four_fsk_tx.png",
+          "svg": "algorithms/modems__fsk_text/four_fsk_tx.svg"
+        },
+        {
+          "name": "four_fsk_rx",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 48
+          },
+          "png": "algorithms/modems__fsk_text/four_fsk_rx.png",
+          "svg": "algorithms/modems__fsk_text/four_fsk_rx.svg"
+        }
+      ],
+      "operations": [
+        "fsk_rx",
+        "fsk_tx"
+      ]
+    },
+    {
+      "id": "synchronization/symbol_timing",
+      "title": "Carrier and symbol synchronization",
+      "category": "synchronization",
+      "limits": "Explicit Gardner PI timing loop and decision-directed QPSK Costas loop. The five original TED modes, all interpolators and MATLAB System Objects are not reproduced by this smaller contract.",
+      "source_files": 15,
+      "workspace": "../../algorithms/synchronization/symbol_timing/README.md",
+      "views": [
+        {
+          "name": "costas_tracking",
+          "kind": "portable",
+          "metrics": {
+            "uncorrected_mse": 3.1612611671398585,
+            "corrected_mse": 9.151302492695652e-08
+          },
+          "png": "algorithms/synchronization__symbol_timing/costas_tracking.png",
+          "svg": "algorithms/synchronization__symbol_timing/costas_tracking.svg"
+        },
+        {
+          "name": "gardner_tracking",
+          "kind": "portable",
+          "metrics": {
+            "uncorrected_mse": 0.012205505134651295,
+            "corrected_mse": 1.116938939141852e-05
+          },
+          "png": "algorithms/synchronization__symbol_timing/gardner_tracking.png",
+          "svg": "algorithms/synchronization__symbol_timing/gardner_tracking.svg"
+        }
+      ],
+      "operations": [
+        "costas",
+        "timing"
+      ]
+    },
+    {
+      "id": "channelizers/pfb_wola",
+      "title": "PFB and WOLA analysis banks",
+      "category": "channelizers",
+      "limits": "Two kernel names expose the same defined FIR/DFT analysis-bank transform, with decimation equal to or smaller than the channel count. Source startup indexing and optional FFTW MEX are not reproduced.",
+      "source_files": 14,
+      "workspace": "../../algorithms/channelizers/pfb_wola/README.md",
+      "views": [
+        {
+          "name": "pfb_decimation_4",
+          "kind": "portable",
+          "metrics": {
+            "desired_to_dc_leakage_db": 53.50441789859862
+          },
+          "png": "algorithms/channelizers__pfb_wola/pfb_decimation_4.png",
+          "svg": "algorithms/channelizers__pfb_wola/pfb_decimation_4.svg"
+        },
+        {
+          "name": "pfb_decimation_3",
+          "kind": "portable",
+          "metrics": {
+            "desired_to_dc_leakage_db": 55.78690682726734
+          },
+          "png": "algorithms/channelizers__pfb_wola/pfb_decimation_3.png",
+          "svg": "algorithms/channelizers__pfb_wola/pfb_decimation_3.svg"
+        },
+        {
+          "name": "wola_decimation_4",
+          "kind": "portable",
+          "metrics": {
+            "desired_to_dc_leakage_db": 53.50441789859862
+          },
+          "png": "algorithms/channelizers__pfb_wola/wola_decimation_4.png",
+          "svg": "algorithms/channelizers__pfb_wola/wola_decimation_4.svg"
+        },
+        {
+          "name": "wola_decimation_3",
+          "kind": "portable",
+          "metrics": {
+            "desired_to_dc_leakage_db": 55.78690682726734
+          },
+          "png": "algorithms/channelizers__pfb_wola/wola_decimation_3.png",
+          "svg": "algorithms/channelizers__pfb_wola/wola_decimation_3.svg"
+        }
+      ],
+      "operations": [
+        "pfb",
+        "wola"
+      ]
+    },
+    {
+      "id": "filters/windowed_sinc",
+      "title": "FIR design and filtering",
+      "category": "filters",
+      "limits": "Hamming-window low-pass design plus complex FIR filtering. The original automatic tap-search and full window family are outside the analogue contract.",
+      "source_files": 14,
+      "workspace": "../../algorithms/filters/windowed_sinc/README.md",
+      "views": [
+        {
+          "name": "fir_impulse",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/filters__windowed_sinc/fir_impulse.png",
+          "svg": "algorithms/filters__windowed_sinc/fir_impulse.svg"
+        },
+        {
+          "name": "fir_complex",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/filters__windowed_sinc/fir_complex.png",
+          "svg": "algorithms/filters__windowed_sinc/fir_complex.svg"
+        },
+        {
+          "name": "hamming_lowpass",
+          "kind": "portable",
+          "metrics": {
+            "stopband_peak_db": -60.30749070311349,
+            "dc_gain": 0.9999999999999999
+          },
+          "png": "algorithms/filters__windowed_sinc/hamming_lowpass.png",
+          "svg": "algorithms/filters__windowed_sinc/hamming_lowpass.svg"
+        },
+        {
+          "name": "two_tone_filter",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/filters__windowed_sinc/two_tone_filter.png",
+          "svg": "algorithms/filters__windowed_sinc/two_tone_filter.svg"
+        }
+      ],
+      "operations": [
+        "fir",
+        "wsinc"
+      ]
+    },
+    {
+      "id": "adaptive/lms_nlms_rls",
+      "title": "Adaptive filters",
+      "category": "adaptive",
+      "limits": "Complex LMS, NLMS and RLS system identification. Outputs include estimates, errors and final coefficients; real source-function comparisons are recorded separately.",
+      "source_files": 9,
+      "workspace": "../../algorithms/adaptive/lms_nlms_rls/README.md",
+      "views": [
+        {
+          "name": "lms",
+          "kind": "portable",
+          "metrics": {
+            "initial_mse": 0.15244633527395937,
+            "final_mse": 5.3301696543518836e-21,
+            "improvement_db": 194.5637595618969
+          },
+          "png": "algorithms/adaptive__lms_nlms_rls/lms.png",
+          "svg": "algorithms/adaptive__lms_nlms_rls/lms.svg"
+        },
+        {
+          "name": "nlms",
+          "kind": "portable",
+          "metrics": {
+            "initial_mse": 0.011525829467782897,
+            "final_mse": 5.726914437658119e-33,
+            "improvement_db": 280.6167218962077
+          },
+          "png": "algorithms/adaptive__lms_nlms_rls/nlms.png",
+          "svg": "algorithms/adaptive__lms_nlms_rls/nlms.svg"
+        },
+        {
+          "name": "rls",
+          "kind": "portable",
+          "metrics": {
+            "initial_mse": 0.0026954973256938866,
+            "final_mse": 1.6606700400098266e-11,
+            "improvement_db": 82.10355554614276
+          },
+          "png": "algorithms/adaptive__lms_nlms_rls/rls.png",
+          "svg": "algorithms/adaptive__lms_nlms_rls/rls.svg"
+        }
+      ],
+      "operations": [
+        "lms",
+        "nlms",
+        "rls"
+      ]
+    },
+    {
+      "id": "coding/ldpc",
+      "title": "LDPC coding",
+      "category": "coding",
+      "limits": "Generic systematic GF(2) encoder and SP/MS/NMS/OMS decoders. Portable regression uses an explicit short sparse code; the original (2016,1008) matrix is retained and original-length checks are reported separately.",
+      "source_files": 25,
+      "workspace": "../../algorithms/coding/ldpc/README.md",
+      "views": [
+        {
+          "name": "systematic_encode",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/coding__ldpc/systematic_encode.png",
+          "svg": "algorithms/coding__ldpc/systematic_encode.svg"
+        },
+        {
+          "name": "sum_product",
+          "kind": "portable",
+          "metrics": {
+            "uncoded_errors": 1,
+            "decoded_errors": 0,
+            "syndrome_weight": 0,
+            "negative_control_detected": true,
+            "rejected_mutations": [
+              "flipped_decoded_bit",
+              "bypassed_decoder"
+            ]
+          },
+          "png": "algorithms/coding__ldpc/sum_product.png",
+          "svg": "algorithms/coding__ldpc/sum_product.svg"
+        },
+        {
+          "name": "min_sum",
+          "kind": "portable",
+          "metrics": {
+            "uncoded_errors": 1,
+            "decoded_errors": 0,
+            "syndrome_weight": 0,
+            "negative_control_detected": true,
+            "rejected_mutations": [
+              "flipped_decoded_bit",
+              "bypassed_decoder"
+            ]
+          },
+          "png": "algorithms/coding__ldpc/min_sum.png",
+          "svg": "algorithms/coding__ldpc/min_sum.svg"
+        },
+        {
+          "name": "normalized_min_sum",
+          "kind": "portable",
+          "metrics": {
+            "uncoded_errors": 1,
+            "decoded_errors": 0,
+            "syndrome_weight": 0,
+            "negative_control_detected": true,
+            "rejected_mutations": [
+              "flipped_decoded_bit",
+              "bypassed_decoder"
+            ]
+          },
+          "png": "algorithms/coding__ldpc/normalized_min_sum.png",
+          "svg": "algorithms/coding__ldpc/normalized_min_sum.svg"
+        },
+        {
+          "name": "offset_min_sum",
+          "kind": "portable",
+          "metrics": {
+            "uncoded_errors": 1,
+            "decoded_errors": 0,
+            "syndrome_weight": 0,
+            "negative_control_detected": true,
+            "rejected_mutations": [
+              "flipped_decoded_bit",
+              "bypassed_decoder"
+            ]
+          },
+          "png": "algorithms/coding__ldpc/offset_min_sum.png",
+          "svg": "algorithms/coding__ldpc/offset_min_sum.svg"
+        }
+      ],
+      "operations": [
+        "gf2_encode",
+        "ldpc"
+      ]
+    },
+    {
+      "id": "filters/oset",
+      "title": "Generic noise and interference filters",
+      "category": "filters",
+      "limits": "Portable notch and scalar Kalman filtering examples. Full OSET biomedical/ARMA models and every selected helper are preserved for reference; these examples do not establish equivalence to all 13 source functions.",
+      "source_files": 15,
+      "workspace": "../../algorithms/filters/oset/README.md",
+      "views": [
+        {
+          "name": "notch_interference",
+          "kind": "portable",
+          "metrics": {
+            "residual_interference_amplitude": 0.0017548966293450773
+          },
+          "png": "algorithms/filters__oset/notch_interference.png",
+          "svg": "algorithms/filters__oset/notch_interference.svg"
+        },
+        {
+          "name": "scalar_kalman",
+          "kind": "portable",
+          "metrics": {
+            "input_mse": 0.20542512818391256,
+            "output_mse": 0.0032208049493364552
+          },
+          "png": "algorithms/filters__oset/scalar_kalman.png",
+          "svg": "algorithms/filters__oset/scalar_kalman.svg"
+        }
+      ],
+      "operations": [
+        "kalman",
+        "notch"
+      ]
+    },
+    {
+      "id": "mimo/dsplog",
+      "title": "MIMO and diversity",
+      "category": "mimo",
+      "limits": "Complex zero-forcing/MMSE spatial detection and Alamouti combining. Historical large Monte Carlo sweeps, SIC ordering and ISI/ZF demo parameters are not reproduced.",
+      "source_files": 4,
+      "workspace": "../../algorithms/mimo/dsplog/README.md",
+      "views": [
+        {
+          "name": "zero_forcing",
+          "kind": "portable",
+          "metrics": {
+            "bit_errors": 0,
+            "payload_bits": 256
+          },
+          "png": "algorithms/mimo__dsplog/zero_forcing.png",
+          "svg": "algorithms/mimo__dsplog/zero_forcing.svg"
+        },
+        {
+          "name": "mmse",
+          "kind": "portable",
+          "metrics": {
+            "bit_errors": 0,
+            "payload_bits": 256
+          },
+          "png": "algorithms/mimo__dsplog/mmse.png",
+          "svg": "algorithms/mimo__dsplog/mmse.svg"
+        },
+        {
+          "name": "alamouti",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/mimo__dsplog/alamouti.png",
+          "svg": "algorithms/mimo__dsplog/alamouti.svg"
+        }
+      ],
+      "operations": [
+        "alamouti",
+        "mimo"
+      ]
+    },
+    {
+      "id": "audio/stft",
+      "title": "STFT analysis and reconstruction",
+      "category": "audio",
+      "limits": "Complex full-spectrum STFT with sqrt-Hann window and normalized overlap-add. Original dual-window and frequency-decimation conventions differ; exact finite-frame reconstruction is tested.",
+      "source_files": 5,
+      "workspace": "../../algorithms/audio/stft/README.md",
+      "views": [
+        {
+          "name": "analysis",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/audio__stft/analysis.png",
+          "svg": "algorithms/audio__stft/analysis.svg"
+        },
+        {
+          "name": "reconstruction",
+          "kind": "portable",
+          "metrics": {
+            "reconstruction_tolerance": 2e-10
+          },
+          "png": "algorithms/audio__stft/reconstruction.png",
+          "svg": "algorithms/audio__stft/reconstruction.svg"
+        }
+      ],
+      "operations": [
+        "istft",
+        "stft"
+      ]
+    },
+    {
+      "id": "audio/omlsa",
+      "title": "Speech-preserving spectral gain",
+      "category": "audio",
+      "limits": "OM-LSA gain with decision-directed prior SNR and estimated speech presence. Noise is calibrated from a stated noise-only prefix; historical IMCRA noise tracking is not reproduced.",
+      "source_files": 1,
+      "workspace": "../../algorithms/audio/omlsa/README.md",
+      "views": [
+        {
+          "name": "calibrated_noise_reduction",
+          "kind": "portable",
+          "metrics": {
+            "input_mse": 0.100124380626581,
+            "output_mse": 0.022641199053570635,
+            "improvement_db": 6.456404196432603
+          },
+          "png": "algorithms/audio__omlsa/calibrated_noise_reduction.png",
+          "svg": "algorithms/audio__omlsa/calibrated_noise_reduction.svg"
+        }
+      ],
+      "operations": [
+        "omlsa"
+      ]
+    },
+    {
+      "id": "arrays/beamforming",
+      "title": "Array beamforming",
+      "category": "arrays",
+      "limits": "Delay-and-sum complex steering and spatial null test. The 188 book figure/helper files are catalogued together; this analogue does not reproduce every chapter or figure.",
+      "source_files": 191,
+      "workspace": "../../algorithms/arrays/beamforming/README.md",
+      "views": [
+        {
+          "name": "spatial_null",
+          "kind": "portable",
+          "metrics": {
+            "interferer_amplitude": 3.0,
+            "output_mse": 2.8231942053324104e-32
+          },
+          "png": "algorithms/arrays__beamforming/spatial_null.png",
+          "svg": "algorithms/arrays__beamforming/spatial_null.svg"
+        }
+      ],
+      "operations": [
+        "beamform"
+      ]
+    },
+    {
+      "id": "teaching/harger",
+      "title": "DSP teaching examples",
+      "category": "teaching",
+      "limits": "Analytic DFT/inverse-DFT and FIR impulse exercises. Other historical examples and Mathcad worksheets remain preserved source material, not separately converted modem models.",
+      "source_files": 115,
+      "workspace": "../../algorithms/teaching/harger/README.md",
+      "views": [
+        {
+          "name": "dft_single_bin",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/teaching__harger/dft_single_bin.png",
+          "svg": "algorithms/teaching__harger/dft_single_bin.svg"
+        },
+        {
+          "name": "inverse_dft",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/teaching__harger/inverse_dft.png",
+          "svg": "algorithms/teaching__harger/inverse_dft.svg"
+        },
+        {
+          "name": "filter_impulse",
+          "kind": "portable",
+          "metrics": {},
+          "png": "algorithms/teaching__harger/filter_impulse.png",
+          "svg": "algorithms/teaching__harger/filter_impulse.svg"
+        }
+      ],
+      "operations": [
+        "dft",
+        "fir"
+      ]
+    },
+    {
+      "id": "modems/oqpsk_2_sps_timing_recovery_2019_12_05",
+      "title": "oqpsk 2 sps timing recovery 2019 12 05",
+      "category": "modems",
+      "limits": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced.",
+      "source_files": 1,
+      "workspace": "../../modems/oqpsk_2_sps_timing_recovery_2019_12_05/README.md",
+      "views": [
+        {
+          "name": "Clean",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 0.0,
+            "frequency_cycles_per_sample": 2.1438527402425606e-23,
+            "parameters": {},
+            "case": "Clean channel"
+          },
+          "png": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/case_0.png",
+          "svg": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/case_0.svg"
+        },
+        {
+          "name": "Impaired",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 2.25,
+            "frequency_cycles_per_sample": 0.0001501037631622742,
+            "parameters": {
+              "snr_db": 28,
+              "gain": 0.65,
+              "phase": 0.38,
+              "frequency": 0.00015,
+              "delay": 2.25
+            },
+            "case": "AWGN + carrier + delay"
+          },
+          "png": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/case_1.png",
+          "svg": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/case_1.svg"
+        },
+        {
+          "name": "Stress",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 7.25,
+            "frequency_cycles_per_sample": -0.00030008154815567515,
+            "parameters": {
+              "snr_db": 32,
+              "gain": 1.3,
+              "phase": -0.9,
+              "frequency": -0.0003,
+              "delay": 7.25,
+              "echo": 0,
+              "drift": 0,
+              "phase_noise": 0
+            },
+            "case": "Stress channel"
+          },
+          "png": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/case_2.png",
+          "svg": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/case_2.svg"
+        },
+        {
+          "name": "Original MATLAB capture",
+          "kind": "original",
+          "metrics": {
+            "tx_monitor": "modulator",
+            "rx_monitor": "1_sps_clock_domain",
+            "captured_samples": 16385
+          },
+          "png": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/original_matlab.png",
+          "svg": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/original_matlab.svg"
+        }
+      ],
+      "operations": [
+        "oqpsk"
+      ]
+    },
+    {
+      "id": "modems/qpsk_8_sps_fb_sync_2020_11_25",
+      "title": "qpsk 8 sps fb sync 2020 11 25",
+      "category": "modems",
+      "limits": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced.",
+      "source_files": 1,
+      "workspace": "../../modems/qpsk_8_sps_fb_sync_2020_11_25/README.md",
+      "views": [
+        {
+          "name": "Clean",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 0.0,
+            "frequency_cycles_per_sample": -4.372174840824252e-09,
+            "parameters": {},
+            "case": "Clean channel"
+          },
+          "png": "modems/qpsk_8_sps_fb_sync_2020_11_25/case_0.png",
+          "svg": "modems/qpsk_8_sps_fb_sync_2020_11_25/case_0.svg"
+        },
+        {
+          "name": "Impaired",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 2.25,
+            "frequency_cycles_per_sample": 0.0001502985150116664,
+            "parameters": {
+              "snr_db": 28,
+              "gain": 0.65,
+              "phase": 0.38,
+              "frequency": 0.00015,
+              "delay": 2.25
+            },
+            "case": "AWGN + carrier + delay"
+          },
+          "png": "modems/qpsk_8_sps_fb_sync_2020_11_25/case_1.png",
+          "svg": "modems/qpsk_8_sps_fb_sync_2020_11_25/case_1.svg"
+        },
+        {
+          "name": "Stress",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 7.25,
+            "frequency_cycles_per_sample": -0.00029991643956809065,
+            "parameters": {
+              "snr_db": 32,
+              "gain": 1.3,
+              "phase": -0.9,
+              "frequency": -0.0003,
+              "delay": 7.25,
+              "echo": 0,
+              "drift": 0,
+              "phase_noise": 0
+            },
+            "case": "Stress channel"
+          },
+          "png": "modems/qpsk_8_sps_fb_sync_2020_11_25/case_2.png",
+          "svg": "modems/qpsk_8_sps_fb_sync_2020_11_25/case_2.svg"
+        },
+        {
+          "name": "Original MATLAB capture",
+          "kind": "original",
+          "metrics": {
+            "tx_monitor": "modulator",
+            "rx_monitor": "1_sps_clock_domain",
+            "captured_samples": 16385
+          },
+          "png": "modems/qpsk_8_sps_fb_sync_2020_11_25/original_matlab.png",
+          "svg": "modems/qpsk_8_sps_fb_sync_2020_11_25/original_matlab.svg"
+        }
+      ],
+      "operations": [
+        "psk"
+      ]
+    },
+    {
+      "id": "modems/qpsk_script_basic",
+      "title": "qpsk script basic",
+      "category": "modems",
+      "limits": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced.",
+      "source_files": 4,
+      "workspace": "../../modems/qpsk_script_basic/README.md",
+      "views": [
+        {
+          "name": "Clean",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 0.0,
+            "frequency_cycles_per_sample": -4.372174840824252e-09,
+            "parameters": {},
+            "case": "Clean channel"
+          },
+          "png": "modems/qpsk_script_basic/case_0.png",
+          "svg": "modems/qpsk_script_basic/case_0.svg"
+        },
+        {
+          "name": "Impaired",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 2.25,
+            "frequency_cycles_per_sample": 0.0001502985150116664,
+            "parameters": {
+              "snr_db": 28,
+              "gain": 0.65,
+              "phase": 0.38,
+              "frequency": 0.00015,
+              "delay": 2.25
+            },
+            "case": "AWGN + carrier + delay"
+          },
+          "png": "modems/qpsk_script_basic/case_1.png",
+          "svg": "modems/qpsk_script_basic/case_1.svg"
+        },
+        {
+          "name": "Stress",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 7.25,
+            "frequency_cycles_per_sample": -0.00029991643956809065,
+            "parameters": {
+              "snr_db": 32,
+              "gain": 1.3,
+              "phase": -0.9,
+              "frequency": -0.0003,
+              "delay": 7.25,
+              "echo": 0,
+              "drift": 0,
+              "phase_noise": 0
+            },
+            "case": "Stress channel"
+          },
+          "png": "modems/qpsk_script_basic/case_2.png",
+          "svg": "modems/qpsk_script_basic/case_2.svg"
+        }
+      ],
+      "operations": [
+        "psk"
+      ]
+    },
+    {
+      "id": "modems/qpsk_script_costas",
+      "title": "qpsk script costas",
+      "category": "modems",
+      "limits": "Portable algorithm model with a training preamble; original Simulink transients are not reproduced.",
+      "source_files": 4,
+      "workspace": "../../modems/qpsk_script_costas/README.md",
+      "views": [
+        {
+          "name": "Clean",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 0.0,
+            "frequency_cycles_per_sample": -4.372174840824252e-09,
+            "parameters": {},
+            "case": "Clean channel"
+          },
+          "png": "modems/qpsk_script_costas/case_0.png",
+          "svg": "modems/qpsk_script_costas/case_0.svg"
+        },
+        {
+          "name": "Impaired",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 2.25,
+            "frequency_cycles_per_sample": 0.0001502985150116664,
+            "parameters": {
+              "snr_db": 28,
+              "gain": 0.65,
+              "phase": 0.38,
+              "frequency": 0.00015,
+              "delay": 2.25
+            },
+            "case": "AWGN + carrier + delay"
+          },
+          "png": "modems/qpsk_script_costas/case_1.png",
+          "svg": "modems/qpsk_script_costas/case_1.svg"
+        },
+        {
+          "name": "Stress",
+          "kind": "portable",
+          "metrics": {
+            "symbol_errors": 0,
+            "payload_symbols": 320,
+            "ser": 0.0,
+            "bit_errors": 0,
+            "payload_bits": 640,
+            "ber": 0.0,
+            "delay_samples": 7.25,
+            "frequency_cycles_per_sample": -0.00029991643956809065,
+            "parameters": {
+              "snr_db": 32,
+              "gain": 1.3,
+              "phase": -0.9,
+              "frequency": -0.0003,
+              "delay": 7.25,
+              "echo": 0,
+              "drift": 0,
+              "phase_noise": 0
+            },
+            "case": "Stress channel"
+          },
+          "png": "modems/qpsk_script_costas/case_2.png",
+          "svg": "modems/qpsk_script_costas/case_2.svg"
+        }
+      ],
+      "operations": [
+        "psk"
+      ]
+    }
+  ],
+  "overview": {
+    "png": "overview.png",
+    "svg": "overview.svg"
+  },
+  "figures": 55,
+  "pdf_pages": 55,
+  "algorithm_cases": 40
+}

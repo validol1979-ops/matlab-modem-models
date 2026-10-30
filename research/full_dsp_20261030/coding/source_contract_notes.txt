@@ -1,0 +1,10 @@
+Model stages only; all evidence targeted/provisional until root global freeze.
+
+Viterbi active source K7 octal171,133, unlike README171,131. Source register MSB=current input, shifted right state. Input impulse with6zero tail serial output pairs:11,10,11,11,00,01,11. Bit-reversed internal state permissible only if emitted codeword unchanged.
+RS active source m8 primitive285(0x11d),n240,k210,check30,genstart0,rootspace1. Shortening removes leading zero information symbols, highest polynomial coefficient first.
+BCH active source m8 primitive369(0x171),n255,k223,d>=9,t4. Primitive differs from RS. Independently multiplying roots alpha^1..alpha^8 cyclotomic closure gives generator0x17e85b4ef, degree32 (coefficient0 atLSB).
+Polar source1024entry bits_addr_tab is most-reliable-first; initialN1024,K512 uses first512 in source order. Source behaviorencoder uses pureF tensor transform without extra finalbitreversal. Reliability table gets embedded withsourcehash; no runtime library path.
+PLS uses fixed64scrambleliteral, sourceindex0 is leftmostliteralchar.128labels=7bitencoderalphabet, not allstandardMODCODclaims. Sourcepi/2mapper alternates(1+j),(-1+j), scaledunitenergy; no continuousi^n4quadrantrotation.
+CCSDS source blocks1784/3568/7136/8920; rate1/6 outputs[a0,a1,a2,a3]constituent0 then[a1,a3]constituent1 eachsymbol including4independenttails. Exact16state recursive trellis andsourceaddressgenerator used. Initialpi1784=3,170,299,466.
+BTC source warns no shortening andpossible nonstandardbitorder. Project positionalHamming permutation explicit, noWiMAXconformance. SourcefastChase8candidates(8bits),16candidates(16bits), exclude correctioninsideleast-reliablelist toavoidduplicatewords. WeightedHamming min0,min1,max: ifbest/secondbitdifferent, ext=signbest*(min1-min0)-input; otherwise ext=signbest*(max-min0)/4. Sourcepositive1 softsign adaptedtoprojectpositive0. No claimthat thisfastChaseextrinsic equals exactper-bitMLposterior.
+Golay source systematiclow12data,high12parity via cB_TAB; g0xC75 source matrix/order retained. Chase16 on4leastreliablebits is boundedcandidate search; notglobalMLinallcases.

@@ -1,0 +1,48 @@
+{
+  "name": "simo_maximal_ratio_combining_2010_08_27",
+  "original_sha256": "fcec1dadd6c5ab3f092935b9f36c31475636c480f0bd59d6cbae2c7e2a08a4ec",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Compilation of model 'simo_maximal_ratio_combining_2010_08_27' failed while trying to resolve underspecified signal dimensions. ",
+  "migration": {
+    "source": "modems/simo_maximal_ratio_combining_2010_08_27/original/simo_maximal_ratio_combining_2010_08_27.mdl",
+    "original_sha256": "fcec1dadd6c5ab3f092935b9f36c31475636c480f0bd59d6cbae2c7e2a08a4ec",
+    "prepared_sha256": "fcec1dadd6c5ab3f092935b9f36c31475636c480f0bd59d6cbae2c7e2a08a4ec",
+    "changes": [],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [
+    {
+      "block": "simo_maximal_ratio_combining_2010_08_27/cubic_farrow_interpolator/in",
+      "parameter": "PortDimensions",
+      "value": "2"
+    },
+    {
+      "block": "simo_maximal_ratio_combining_2010_08_27/cubic_farrow_interpolator/mu",
+      "parameter": "PortDimensions",
+      "value": "1"
+    }
+  ],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.25,
+  "stop_time": 4096,
+  "requested_steps": 16384,
+  "signal_count": 33,
+  "finite": true,
+  "captured_values": 606418,
+  "capture_sha256": "4060a42d46911030cbbd012b6089778f4c464dd32cb5908f40b8661c573b6ea1",
+  "mapper_checks": [
+    {
+      "block": "simo_maximal_ratio_combining_2010_08_27/modulator/qpsk_data_mapper",
+      "samples": 4097,
+      "maximum_error": 0.0,
+      "covered_labels": 4,
+      "alphabet": 4,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

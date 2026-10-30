@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-30",
+  "tasks": {
+    "DSP-CIC-COMP": {
+      "model_stage": "PASS",
+      "rtl_stage": "not_started"
+    },
+    "DSP-RATIONAL": {
+      "model_stage": "PASS",
+      "rtl_stage": "not_started"
+    }
+  },
+  "combined_backlog_tasks": 44,
+  "model_stages_complete": 4,
+  "model_stages_open": 40,
+  "numeric_scope": {
+    "python_tests": 19,
+    "compensation_profiles": 12,
+    "cascade_output_words": 1872,
+    "rational_cases": 480,
+    "rational_numeric_cases": 960,
+    "rational_float_words": 38355,
+    "rational_fixed_words": 38355,
+    "negative_controls": [
+      {
+        "tag": "QUALITY",
+        "fault": "bypass compensation",
+        "rejected": true
+      },
+      {
+        "tag": "NUMERIC",
+        "fault": "corrupted rational output",
+        "rejected": true
+      }
+    ]
+  },
+  "lowpass_profile_count": 9,
+  "source": {
+    "path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+    "sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+    "compensation_file_pages": [
+      490,
+      491
+    ],
+    "rational_file_pages": [
+      242,
+      243,
+      244
+    ],
+    "access": "Original PDF text-layer excerpts supplied to agents, no OCR or source changes",
+    "prior_rag_catalog": "research/library_dsp_20261029/task_catalog.json"
+  },
+  "contract": "research/filter_models_20261030/contracts.txt",
+  "evidence": "docs/filter_models_20261030_results.json",
+  "review": "build/filter_model_agents_20261030/review_resolution.json",
+  "limits": [
+    "Accepted-sample mathematical models; no RTL, ready/valid cycle behavior or physical timing acceptance.",
+    "CIC compensation quality gates apply to the stated12 profiles on8193 frequency points.",
+    "Normalized CIC output is rounded to signed18 before Q17 FIR; full-scale transients can saturate.",
+    "Rational convention includes finalP-1 inserted zeros; scipy.upfirdn requires explicit length padding for comparison.",
+    "Prior result JSON files are historical source snapshots and are not relabeled for this revision."
+  ],
+  "registered_python_tests": 848,
+  "registered_modem_configurations": 24,
+  "isolated_checkout_verified": true,
+  "validated_at_utc": "2026-10-30T09:11:44.495038+00:00"
+}

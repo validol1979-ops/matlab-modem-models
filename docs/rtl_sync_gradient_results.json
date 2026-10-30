@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "synthesis_run": false,
+  "core_RTL_unchanged": true,
+  "streaming_suites": 15,
+  "streaming_result": "build/rtl/streaming/all_results.json",
+  "portable": {
+    "python_tests": 359,
+    "octave_modems": 24,
+    "frame_transactions": 96,
+    "result": "build/all_results.json"
+  },
+  "sync": {
+    "result": "build/rtl/sync/all_results.json",
+    "result_sha256": "fc3ab4684b70229d3fc098f28ed29411d235859a08aa82b80774bb7c6a229bf8",
+    "configurations": 4,
+    "records": 8,
+    "normal_runs": 40,
+    "old_text_vectors_unchanged": 36,
+    "scored_text_vectors_unchanged": 24,
+    "gradient_expected": {
+      "case0_reset_1": [
+        2100,
+        55,
+        70
+      ],
+      "case1_reset_1": [
+        160,
+        0,
+        1
+      ],
+      "case2_reset_1": [
+        120,
+        0,
+        0
+      ],
+      "case3_reset_1": [
+        100,
+        5,
+        9
+      ]
+    },
+    "negative_control_logs": 8,
+    "saturation_rtl_verified": true,
+    "bounds_rtl_verified": true
+  },
+  "native_agents": {
+    "pi": {
+      "status": "COMPLETE",
+      "reason": null,
+      "elapsed_seconds": 210.0
+    },
+    "opencode": {
+      "status": "STOPPED",
+      "reason": "deadline",
+      "elapsed_seconds": 420.1
+    },
+    "kilo": {
+      "status": "STOPPED",
+      "reason": "deadline",
+      "elapsed_seconds": 150.1
+    }
+  },
+  "source_snapshot_sha256": "b6e6443b57764f4d7255e5dd89f8298a959a859963bc842e4f4fb3db2914b2b3"
+}

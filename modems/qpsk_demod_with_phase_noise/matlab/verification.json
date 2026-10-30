@@ -1,0 +1,48 @@
+{
+  "name": "qpsk_demod_with_phase_noise",
+  "original_sha256": "f0257d476709cfc6d821a99d7b25060303fb9d0107a8461656318911444531d4",
+  "original_load": "PASS",
+  "original_compile": "PASS",
+  "original_error": "",
+  "migration": {
+    "source": "modems/qpsk_demod_with_phase_noise/original/costas_loop_qpsk_complex_realization.mdl",
+    "original_sha256": "f0257d476709cfc6d821a99d7b25060303fb9d0107a8461656318911444531d4",
+    "prepared_sha256": "f0257d476709cfc6d821a99d7b25060303fb9d0107a8461656318911444531d4",
+    "changes": [],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 1.388888888888889e-09,
+  "stop_time": 0.0003640888888888889,
+  "requested_steps": 262144,
+  "signal_count": 20,
+  "finite": true,
+  "captured_values": 1715054,
+  "capture_sha256": "0cd0793255f7904f8c495190fcba95e680c37eddcdcf432a55186507cb7caed5",
+  "mapper_checks": [
+    {
+      "block": "costas_loop_qpsk_complex_realization/source/M-PSK\nModulator\nBaseband",
+      "samples": 10923,
+      "maximum_error": 0.0,
+      "covered_labels": 4,
+      "alphabet": 4,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED",
+  "receiver_diagnostic": {
+    "status": "QUADRANT_OFFSET",
+    "raw_symbol_error_rate": 1.0,
+    "raw_errors": 10910,
+    "raw_compared_symbols": 10910,
+    "delay_symbols": 13,
+    "inferred_label_offset_modulo_4": 3,
+    "held_out_symbols": 5455,
+    "held_out_errors_after_offset": 0,
+    "explanation": "Raw decoding differs by a constant quadrant; the archived counter is unchanged. This diagnostic phase correction is not part of the original receiver."
+  }
+}

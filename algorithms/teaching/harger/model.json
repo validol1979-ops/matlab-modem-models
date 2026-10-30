@@ -1,0 +1,715 @@
+{
+  "id": "teaching/harger",
+  "title": "DSP teaching examples",
+  "category": "teaching",
+  "path": "algorithms/teaching/harger",
+  "operations": [
+    "dft",
+    "fir"
+  ],
+  "cases": [
+    "dft_single_bin",
+    "inverse_dft",
+    "filter_impulse"
+  ],
+  "limits": "Analytic DFT/inverse-DFT and FIR impulse exercises. Other historical examples and Mathcad worksheets remain preserved source material, not separately converted modem models.",
+  "sources": [
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420sad.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420sad.mcd",
+      "sha256": "19bd98c5337c69922c5232813eb50616d57affdd7b38d26ff7413ddfd9073930",
+      "bytes": 6617
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420sapd.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420sapd.mcd",
+      "sha256": "3fe3d66d428c88e18c6380bb9ee7174b7650fb8b9b73103f941ad692b132148e",
+      "bytes": 1875
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420scd.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420scd.mcd",
+      "sha256": "db73e38f00322d20d8e2e2fd9cb2296a6b8cd0114ebf71f87e26a7cdde544cfe",
+      "bytes": 1864
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420seq.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420seq.mcd",
+      "sha256": "aa9e847b9dffb6024c8b87399cdec2e0f8831b7fcd09592e522e6d03b5094d1d",
+      "bytes": 7978
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420seqa.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420seqa.mcd",
+      "sha256": "86af3e693e9499fcb42e0026e66464d66572e23b8839395148346a2a52c2ec6e",
+      "bytes": 7928
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420seqr.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420seqr.mcd",
+      "sha256": "29cfdf3c0e2e027cd7e25ad178167ea29f728dfbd039d814607e7fc9b544abd9",
+      "bytes": 8392
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420spd.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420spd.mcd",
+      "sha256": "2207ad71a4b882324009f99bad30eca8944b5989493e152bba0463871a11e285",
+      "bytes": 1781
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420sqd.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420sqd.mcd",
+      "sha256": "1cb198c00b27a323a639917d46fe59fec96cd100d37b1eadf875eae31ffc0658",
+      "bytes": 6356
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420squ.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420squ.mcd",
+      "sha256": "4e84ad21e65ed9e4313283f2a731fc071e5948e90540503add13090420ab4cd4",
+      "bytes": 4794
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420squm.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420squm.mcd",
+      "sha256": "9dfff0e3e875286b37352cdc02417cf11f6f1b7f2fe41554bc61fb6a3b078623",
+      "bytes": 4424
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/420squp.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/420squp.mcd",
+      "sha256": "f49fa1b1b6692be2cddd4b2fcd9f00538558ac688b832392cb0c5311e99a0793",
+      "bytes": 5388
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/bessel.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/bessel.mcd",
+      "sha256": "1a22b4fd10e8f8c38a0f07b4b96791a034439faa2a89d72eba02775fa26dc93b",
+      "bytes": 6771
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/cmnp_1.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/cmnp_1.mcd",
+      "sha256": "5f51af7d5306027aab0b7c356ff9013521944b0775c741ce27c736cb97ec8c4e",
+      "bytes": 17225
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/cmnp_3.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/cmnp_3.mcd",
+      "sha256": "fb9462ba30f77e553dca82f6170afd4f1d09453ef1772cfc8fc0d36f63ce7383",
+      "bytes": 20159
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/dsbsc_am.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/dsbsc_am.mcd",
+      "sha256": "7f059aef792cf9d13b0b2230f589b1980c8392133f5b31bc19c5b3e4a2bcebf3",
+      "bytes": 10313
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/dsbtc_am.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/dsbtc_am.mcd",
+      "sha256": "624157fed92c547061c91ec6722600e09d38f539907dec7f8b965a2f58103230",
+      "bytes": 20097
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/dsphowbk.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/dsphowbk.mcd",
+      "sha256": "1cfbbb24233c45dcc0784117d3f2f87b476c440acc2df5430f95a7f3a7e91774",
+      "bytes": 4779
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/fm2.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/fm2.mcd",
+      "sha256": "7aa497a2bbc37c7c84ed514dcd98f498d22d0b9be0307fc992409373dbbf2e12",
+      "bytes": 39700
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/fm2lim.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/fm2lim.mcd",
+      "sha256": "dfcb323f347c01e1754c8a905c8b7a56c9abe2b06219c34f3dd8190449baf381",
+      "bytes": 44816
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/fm_1.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/fm_1.mcd",
+      "sha256": "3c80418b87965a772df28f2cbc7371dc8341ce7a473ebe84b4da8a06647fc950",
+      "bytes": 12300
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/gib3_1.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/gib3_1.mcd",
+      "sha256": "455817eb3d98d6a0b1f9e7edbc37f9f071c52e0b134717dd48f0e110041d77bb",
+      "bytes": 16027
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/gib3_2.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/gib3_2.mcd",
+      "sha256": "8927ba0aed2a4f51fe02195f631da73329fbbed08e7d22ec6ca9c5fc2d324a18",
+      "bytes": 16696
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/gib3_27.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/gib3_27.mcd",
+      "sha256": "585037d13cf54de305cb56093b78d124a8af4846e5cbf6649f5e072c06a56a0a",
+      "bytes": 11962
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/gib3_3.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/gib3_3.mcd",
+      "sha256": "8845c2b75dae8ebe30e4b4c9ba645b4c62b0ce06e84bd4cd51b9b75dc3952d98",
+      "bytes": 13319
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/grpdelay.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/grpdelay.mcd",
+      "sha256": "932a953623733132630bca708b7726817e5a25644210db12ba552bc6f371cdc5",
+      "bytes": 7135
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/mnchstr.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/mnchstr.mcd",
+      "sha256": "9bf4436ba4580a97a71168e600424eae11367ca0685ad7fb66773320d8a80c36",
+      "bytes": 11960
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/mulaw.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/mulaw.mcd",
+      "sha256": "7c1a82c6dc4ccf1ea7c89b3c6d3e938c4473ba708000e08515d4df9fa3b3e033",
+      "bytes": 5200
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/pll_1.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/pll_1.mcd",
+      "sha256": "8e0d998338fc247c02131f1235ac3ab9a668df60d9763f017ee38bd30314ca65",
+      "bytes": 7157
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/psk.mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/psk.mcd",
+      "sha256": "6d1dbc2eb6ed14bff1867952b9cdc1ae9d25ddfa25ba71fdbd564b32df42baed",
+      "bytes": 22792
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Analog and Digital Communications/toc_com (table of contents).mcd",
+      "original": "algorithms/teaching/harger/original/Analog and Digital Communications/toc_com (table of contents).mcd",
+      "sha256": "4e6db2bb911c2039b46fc99311f10197aec082b57508a63c95f7b3a0a80b7216",
+      "bytes": 13998
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/1_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/1_bk.mcd",
+      "sha256": "b1a4de253236e61970716e3bfb9dfecf2e95ea522efac1dd75b6732918a37e8c",
+      "bytes": 137430
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/29_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/29_bk.mcd",
+      "sha256": "51137d5adf13596ccb5697822359b80e9900814eeeb02b93e5b8ffc63a930232",
+      "bytes": 90879
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/2_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/2_bk.mcd",
+      "sha256": "8f426afd636f1cfc533bc7e6fe3d22b0b0f4638a253212a84690c0e7d21bc495",
+      "bytes": 155220
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/firexa.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/firexa.mcd",
+      "sha256": "f19cfdc35144b92ec13b16be8482549c839e001f90e1fa4b53659b7a270dd980",
+      "bytes": 13898
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj18_2.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj18_2.mcd",
+      "sha256": "aead6ff88a2b8aa791327c1c59239501cac86aa5a4d7af9b182ded3cb6eebfea",
+      "bytes": 18545
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj1_2.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj1_2.mcd",
+      "sha256": "c3b17ff313faba04579437818caaea3e1868a1ab119567ca199ed9555b331d40",
+      "bytes": 10627
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj2_2.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj2_2.mcd",
+      "sha256": "83b306f32ce120aec725b47950c428b142738e2e20696d1e04c7ccc561cc097f",
+      "bytes": 38073
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj3_2.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj3_2.mcd",
+      "sha256": "bdf013361595910db90a1cb12b013d40d9783e80faa961c6e8ecfd55e57ab5c3",
+      "bytes": 19653
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj4_2.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj4_2.mcd",
+      "sha256": "a4c1bebfdc35770aee8c9fb96890a3abdd19c7a364603778b5af354df5bccb55",
+      "bytes": 78609
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj7_1.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj7_1.mcd",
+      "sha256": "9e9544d3c793d6a43c42aa739ebadd3c078e90dc119d769cd1863dafb670865a",
+      "bytes": 27897
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj8_1.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj8_1.mcd",
+      "sha256": "114aab32e05d4f0021d6d46e378d3f200a17753984e7c529e1d54d9329997701",
+      "bytes": 20987
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj8_2.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj8_2.mcd",
+      "sha256": "493d278b06f7ee03d8a85dd5e4b9e60ab1d2fff1964c3866309a39c370a66f9e",
+      "bytes": 13442
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/prj9_1.mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/prj9_1.mcd",
+      "sha256": "a0b980221f33702070f3c4549883fa04a7a6aaa7af641ccf820e2971fab02a45",
+      "bytes": 13141
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Digital Signal and Image Processing/toc_dsp (table of contents).mcd",
+      "original": "algorithms/teaching/harger/original/Digital Signal and Image Processing/toc_dsp (table of contents).mcd",
+      "sha256": "b0f28dcc9e38d82beddce833fbf0bb84c5f26f975a047224ae1c61fe55bf890f",
+      "bytes": 8396
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/31_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/31_bk.mcd",
+      "sha256": "da48e9cbaa7eecba5886708f37f9505a09bcb96e9aeca5c43db5c5619833f372",
+      "bytes": 80709
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/3_BK.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/3_BK.MCD",
+      "sha256": "e7feba6c538cd6b9d6245050324f4b5cf56217b32ee0030c4ba6282dd3ec610a",
+      "bytes": 77138
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/4_BK.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/4_BK.MCD",
+      "sha256": "da4733ba2cf21be21a4b2e7b5eaab7f6e3ccdded34fc04241320abc00d15f316",
+      "bytes": 177179
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/5_BK.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/5_BK.MCD",
+      "sha256": "3c80dd599876ef29bd76ff4e9a1838175f8c54b0af75724d46d5f792b0ec1c13",
+      "bytes": 76692
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/6_BK.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/6_BK.MCD",
+      "sha256": "b278b4c6fe27d673bf9e1b5af8a0243b4e7c520db5b8b9aeb6e007a99d08e584",
+      "bytes": 70527
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/7_BK.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/7_BK.MCD",
+      "sha256": "593467ab685038046302feb168cae8f8e28177dfb547e3c549d282c96c462ab9",
+      "bytes": 168045
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/Proj2_2.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/Proj2_2.mcd",
+      "sha256": "afb9ce699fc64cd86e39720da8e3553ef84da55039b1129bd660c210494513ef",
+      "bytes": 42063
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/cheetah.64",
+      "original": "algorithms/teaching/harger/original/Unsorted/cheetah.64",
+      "sha256": "b3d11a339d2558d222fd9347ee1e0854c6868a81814c0bfae418ae4c68795dba",
+      "bytes": 14567
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/chirp.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/chirp.mcd",
+      "sha256": "1adfd91e3bed17a83d933fdb5fc123f54c7a9c648160ab04276fef67b9ecf5ee",
+      "bytes": 7149
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex2_1.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex2_1.m",
+      "sha256": "f957a256f10ba8106235efd05aef5105cf0e08f28de406de5ebf1326c3686681",
+      "bytes": 400
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex2_2.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex2_2.m",
+      "sha256": "767fd4cc3462a0bd8da5a7429360020b476c43c87eeb9190b3c707d243569a4a",
+      "bytes": 268
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex2_3.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex2_3.m",
+      "sha256": "faa1f6cd199fc603675689563b17d2fcdf97aed6a711d3335e3bf5bd800b0fce",
+      "bytes": 1105
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex2_4.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex2_4.m",
+      "sha256": "d91301c664772f1aa9e7e535f7e77b526bfb72d86c301e509cab16194ce059be",
+      "bytes": 890
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex2_5.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex2_5.m",
+      "sha256": "df72c8dd45eb7727c483583eb6c0398ad07f4eabc89e4c4072856638ed2248c8",
+      "bytes": 1312
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex2_6.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex2_6.m",
+      "sha256": "c56e2206dc54960e443137fad5cc3a9c8e8c997954065099a90025712b6e041e",
+      "bytes": 1482
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex2_7.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex2_7.m",
+      "sha256": "839d063ade7b677b4299519dcb316635e3ebe167defd32818b6bde7e72858164",
+      "bytes": 1318
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex3_1.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex3_1.m",
+      "sha256": "27e5fe986dc5e281fa5a44c091fc52b2ee6dc05cc603b63562695cfcef781a1d",
+      "bytes": 493
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex3_5.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex3_5.m",
+      "sha256": "da143235636a9817eba21721902bfa2256518648f712f3e0b88a19c24353acc3",
+      "bytes": 374
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex3_6.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex3_6.m",
+      "sha256": "7f397f3fc3ac1e4663bc60ab0219ef80fb63526887f7e3fac80de12853ad7142",
+      "bytes": 1518
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex3_7.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex3_7.m",
+      "sha256": "19688f3d568b585baa1bd92dc760ebcd063bb7da96614112fc06e98f218f67ec",
+      "bytes": 1322
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex3_8.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex3_8.m",
+      "sha256": "a17a2bc7ff9c270b8cfbb50f9cd190e1840d4ff149f2f19c800d08de39b00268",
+      "bytes": 258
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex5_1.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex5_1.m",
+      "sha256": "3c382890cc1fb8f3ba65d631d10fd2d07625b98f3910f5000d53587cf21a218e",
+      "bytes": 533
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex5_2.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex5_2.m",
+      "sha256": "debec8ea4d4c85028a23ae3d9baae22fc4ecc759d370797eb22373423d9abf03",
+      "bytes": 595
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex5_3.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex5_3.m",
+      "sha256": "6136629a6817b24b2ade4e53f89c772566b2c8e3e8bf14f768bf039b414f63dc",
+      "bytes": 586
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex6_1.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex6_1.m",
+      "sha256": "127ee8be26e91d79c8c7e82a5a2b14fe7920783352d57d20642d8d3241f58e06",
+      "bytes": 1388
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex6_2.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex6_2.m",
+      "sha256": "bb15bdef8736da835b8141a0ee6783fa234975c0106aa2dd30d9b38f23b6a1fd",
+      "bytes": 1715
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex6_3.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex6_3.m",
+      "sha256": "957f3584cd3684312af45814c777e98a535b9e27ed55f5c61ef7b22e22557eb8",
+      "bytes": 1388
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex6_4.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex6_4.m",
+      "sha256": "a3a614e30b1508d5234d79d5f28588d83c2415e43a57329a8ccf40d1fade53a3",
+      "bytes": 1126
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex6_5.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex6_5.m",
+      "sha256": "f3ebe66dcbc3153c1123c3646971e7d29ce5572468c86bae613a25d98b6463ed",
+      "bytes": 2077
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex7_1.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex7_1.m",
+      "sha256": "9cf03ac3bc1ed5098d9863bf4efabf1eb826162a76c7fc8ed6b4cd6cc5ee0a5e",
+      "bytes": 620
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ex7_2.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/ex7_2.m",
+      "sha256": "f2a762e089bc815128f0aa0402dcf1c8f36c4c3d313384e1de30427514a7fcb0",
+      "bytes": 840
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/exm2_10_pgrm.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/exm2_10_pgrm.MCD",
+      "sha256": "0a887e7de7e99139cf880d0379cfebfa7e67ace57c44cf53f4013550f44002c7",
+      "bytes": 23371
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/face.64",
+      "original": "algorithms/teaching/harger/original/Unsorted/face.64",
+      "sha256": "d6579e9301d37d929e49ae00b428227d2681e32be812989952a476aec72e641f",
+      "bytes": 14808
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/fnlprj_1.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/fnlprj_1.MCD",
+      "sha256": "356bb774850ae1c70b2d62760a84bb6ed2fa678f107dd143267c9a515d4ce2d6",
+      "bytes": 167605
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/fnlprj_2.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/fnlprj_2.mcd",
+      "sha256": "39b2c78d88e735b7e7138ff7fc4ba61732ae9f348fe604cb152155bb0ae1357d",
+      "bytes": 58864
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/fnlprj_3.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/fnlprj_3.mcd",
+      "sha256": "9c57c0d99ad1c8f3b4679d98c223c93fede8ad875f0681f55fa88b103093e3c7",
+      "bytes": 46463
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/fnlprj_4.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/fnlprj_4.mcd",
+      "sha256": "bc900430a4567595b55c7734032fc3976c9564453253924840fb36eff2356f76",
+      "bytes": 88483
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/freqs.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/freqs.m",
+      "sha256": "a0f652c1cb390f3b021a3f43fcf7f49427b93e143ab62e5ebe5c506b716410a0",
+      "bytes": 1939
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/freqz.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/freqz.m",
+      "sha256": "56255e30b258ba0720d80a8994532bf3f35b7bb1df556240797d245afbfc8eda",
+      "bytes": 4979
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/fsk_dbit.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/fsk_dbit.mcd",
+      "sha256": "fab7eaabd0b276917e2aef2a56e6e349ab608b135cedd44ac677da4723f56935",
+      "bytes": 36595
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/gold128.prn",
+      "original": "algorithms/teaching/harger/original/Unsorted/gold128.prn",
+      "sha256": "44de673f216d010e4f6cc40ee954d891a075424d2332c59a247cbf1b227b2280",
+      "bytes": 131328
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/gold64.prn",
+      "original": "algorithms/teaching/harger/original/Unsorted/gold64.prn",
+      "sha256": "1f5fb4fba2e07c1756b41e4bf41ed817eb75c86a13e79e72cf62597c98457db1",
+      "bytes": 32896
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/intro_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/intro_bk.mcd",
+      "sha256": "bec4c215e3d156d21973e4a38faba699a4959e211132c9af2c99b5dfcfe180ae",
+      "bytes": 69220
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/jaguar.64",
+      "original": "algorithms/teaching/harger/original/Unsorted/jaguar.64",
+      "sha256": "764abbce892551c18d8ed2c83e8099bd8e2da3fa16742e7a6a950dc70a2e33e1",
+      "bytes": 13746
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/njk_prj4.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/njk_prj4.m",
+      "sha256": "a2f024c47ddfebbbb65d873e7107c0e2affdc79ecdb4e856f97a4463c6fd09e7",
+      "bytes": 3541
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/output.wav",
+      "original": "algorithms/teaching/harger/original/Unsorted/output.wav",
+      "sha256": "3af2eadf280261ad8709e3a2e57dd638eca70970e67949209ccadb4df658b85f",
+      "bytes": 66086
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/p2_21d.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/p2_21d.m",
+      "sha256": "2197674248fe429dd6dbf78465c0e8ccdb688efdac04e20c4ff68b7105a52295",
+      "bytes": 1106
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/p2_44a.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/p2_44a.m",
+      "sha256": "155102ded03479303133c4b5d865993627f1b9a1254949b0a6b32d7f33d8e2da",
+      "bytes": 848
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/p3_28b.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/p3_28b.m",
+      "sha256": "5456d7189ffde0077d99394a31ecbbff0108854f49fc54ae4786a7bdcc76997c",
+      "bytes": 647
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/phunwrap.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/phunwrap.mcd",
+      "sha256": "914adaab9f4951755cd1b162f47fdeea2df6c3d789b4dddc74b18bf6efbdcb1f",
+      "bytes": 5183
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/pref_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/pref_bk.mcd",
+      "sha256": "4df275cedbf9dbbb7c11a2c65f40c8bcbadf0ebfdf18079366dcfb40762e66d8",
+      "bytes": 2515
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/prj_1.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/prj_1.m",
+      "sha256": "80f5a5a462973378f3356901045442fb102319ca2a9055b4f6b3d8ef9f57a415",
+      "bytes": 1405
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/project 4.2 extended for 2-D images.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/project 4.2 extended for 2-D images.MCD",
+      "sha256": "68a895fe9dfefd37095050812fc9234407f11fa05f89168485f255aba66072be",
+      "bytes": 14861
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/project 7.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/project 7.MCD",
+      "sha256": "51547d8ecacb74780b166c5bba86938a4acc9ba312787e835f1ca668160fdbb4",
+      "bytes": 24818
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/project10_3.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/project10_3.mcd",
+      "sha256": "81e7006f8d5c6cb58de1a1928f9229c76582927bf01a4c5b10735fd450ef999e",
+      "bytes": 59638
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/project4.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/project4.mcd",
+      "sha256": "e7a28d3cb17579a86186a7923c6b229d1819b348272f84b139af55d7113baab0",
+      "bytes": 43709
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/pzk_plot.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/pzk_plot.m",
+      "sha256": "a36e59a1f58ba0f271190dfacd932a91a22eba1aebb5da6985168f3272c022f0",
+      "bytes": 832
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/pzk_plta.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/pzk_plta.m",
+      "sha256": "b247a81a31c9a8017398a69529acfd0d72654938a101bf8883944261438c88ee",
+      "bytes": 1082
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/rhm_prj5.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/rhm_prj5.m",
+      "sha256": "abc172b7923933bb3ef6040b99779141f8fb3ba3f1492d19b8b42d237e8239d8",
+      "bytes": 12164
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/ripple.wav",
+      "original": "algorithms/teaching/harger/original/Unsorted/ripple.wav",
+      "sha256": "d5c96aa623c981ca889132ed9c47b5db9796e6f60ab658296a132e55612ea5fa",
+      "bytes": 66086
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/rohhmpg.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/rohhmpg.mcd",
+      "sha256": "27be40a581b83e3195a0f0daecc5d9cdfda2a61a4b3657770c44eac64e1263e6",
+      "bytes": 6198
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/spectral.dat",
+      "original": "algorithms/teaching/harger/original/Unsorted/spectral.dat",
+      "sha256": "2dfed4eb0a736ea5f3ea3750a9ab83263710e93ff97f73d43afd52fa8bd6e948",
+      "bytes": 2050
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/synch.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/synch.m",
+      "sha256": "81a03b975bb3e31585613ca71f73dfeb0db4730e4ead3cbbffeaa7de100f9dd9",
+      "bytes": 303
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/text_img.60",
+      "original": "algorithms/teaching/harger/original/Unsorted/text_img.60",
+      "sha256": "0824079396915a9227eb9b1adbf02d34e4cca9c678230eee715256ef7b79433d",
+      "bytes": 28920
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/toc_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/toc_bk.mcd",
+      "sha256": "1a0e4b919d4cb6d31bb97a6bd5e18d72dc743f100b675394ff7a91c6b4633913",
+      "bytes": 8178
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/tpm_bk.mcd",
+      "original": "algorithms/teaching/harger/original/Unsorted/tpm_bk.mcd",
+      "sha256": "113616a5eac1668560231045758aeea29ba6871e50ab8a91b6596ce4581e33c6",
+      "bytes": 45427
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/tweeter.wav",
+      "original": "algorithms/teaching/harger/original/Unsorted/tweeter.wav",
+      "sha256": "c04c66505982dd5ecf2d7e833810ef415470d589ad565723b123b1785472b214",
+      "bytes": 66086
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/waterfal.96",
+      "original": "algorithms/teaching/harger/original/Unsorted/waterfal.96",
+      "sha256": "6ce06d1cd3ca58306dd3d9e61dc6ab7b62385816ca5b3896ea79a1a661b54d6e",
+      "bytes": 29566
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/waterfall.MCD",
+      "original": "algorithms/teaching/harger/original/Unsorted/waterfall.MCD",
+      "sha256": "ef667e6346dd8061019ea661fee338117469861a9ecfd6a889e4b80360e07ea7",
+      "bytes": 14706
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/woofer.wav",
+      "original": "algorithms/teaching/harger/original/Unsorted/woofer.wav",
+      "sha256": "bd3f5a2e44313d2e4de4391e0f955edd0bd7c5b9da842604f956e380a15594ca",
+      "bytes": 66086
+    },
+    {
+      "source": "research/electronix_20260930/support/harger/Unsorted/zplane.m",
+      "original": "algorithms/teaching/harger/original/Unsorted/zplane.m",
+      "sha256": "422339f202aa914dcca867ec6a4a495ad0de1589fa490052306c64cda95737fc",
+      "bytes": 4939
+    }
+  ],
+  "implementations": [
+    "Python",
+    "Octave",
+    "MATLAB",
+    "SystemVerilog"
+  ],
+  "verification": "UVM and numeric/analytic checks"
+}

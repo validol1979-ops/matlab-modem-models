@@ -1,0 +1,1134 @@
+[
+  {
+    "Output": "Magnitude and angle",
+    "SampleTime": "-1",
+    "source_line": 467
+  },
+  {
+    "Output": "Real and imag",
+    "SampleTime": "-1",
+    "source_line": 472
+  },
+  {
+    "NumInputs": "2",
+    "source_line": 477
+  },
+  {
+    "OutDataTypeMode": "Inherit via back propagation",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "ConvertRealWorld": "Real World Value (RWV)",
+    "RndMeth": "Zero",
+    "SampleTime": "-1",
+    "source_line": 484
+  },
+  {
+    "PulseType": "Sample based",
+    "TimeSource": "Use simulation time",
+    "Amplitude": "1",
+    "Period": "2",
+    "PulseWidth": "1",
+    "PhaseDelay": "0",
+    "SampleTime": "1",
+    "source_line": 495
+  },
+  {
+    "Format": "short",
+    "Decimation": "10",
+    "SampleTime": "-1",
+    "source_line": 506
+  },
+  {
+    "StatesWhenEnabling": "held",
+    "source_line": 513
+  },
+  {
+    "OutFrame": "Frame based",
+    "source_line": 519
+  },
+  {
+    "Gain": "1",
+    "Multiplication": "Element-wise(K.*u)",
+    "ParameterDataTypeMode": "Same as input",
+    "ParameterDataType": "sfix(16)",
+    "ParameterScalingMode": "Best Precision: Matrix-wise",
+    "ParameterScaling": "2^0",
+    "OutDataTypeMode": "Same as input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 523
+  },
+  {
+    "HitCrossingOffset": "0",
+    "HitCrossingDirection": "either",
+    "SampleTime": "-1",
+    "source_line": 542
+  },
+  {
+    "Port": "1",
+    "BusObject": "BusObject",
+    "PortDimensions": "-1",
+    "SampleTime": "-1",
+    "DataType": "auto",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "source_line": 550
+  },
+  {
+    "Operator": "exp",
+    "OutputSignalType": "auto",
+    "SampleTime": "-1",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "source_line": 570
+  },
+  {
+    "BlockType": "M-S-Function",
+    "FunctionName": "mlfile",
+    "source_line": 582
+  },
+  {
+    "Port": "1",
+    "BusObject": "BusObject",
+    "PortDimensions": "-1",
+    "SampleTime": "-1",
+    "DataType": "auto",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "SignalType": "auto",
+    "SamplingMode": "auto",
+    "OutputWhenDisabled": "held",
+    "InitialOutput": "[]",
+    "source_line": 586
+  },
+  {
+    "Inputs": "2",
+    "Multiplication": "Element-wise(.*)",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Zero",
+    "SampleTime": "-1",
+    "source_line": 602
+  },
+  {
+    "OutputDimensionality": "1-D array",
+    "OutputDimensions": "[1,1]",
+    "source_line": 615
+  },
+  {
+    "Operator": "floor",
+    "SampleTime": "-1",
+    "source_line": 620
+  },
+  {
+    "TickLabels": "OneTimeTick",
+    "ZoomMode": "on",
+    "Grid": "on",
+    "TimeRange": "auto",
+    "YMin": "-5",
+    "YMax": "5",
+    "SaveName": "ScopeData",
+    "MaxDataPoints": "5000",
+    "Decimation": "1",
+    "SampleTime": "-1",
+    "source_line": 625
+  },
+  {
+    "BlockType": "S-Function",
+    "FunctionName": "system",
+    "SFunctionModules": "''",
+    "PortCounts": "[]",
+    "source_line": 642
+  },
+  {
+    "Permissions": "ReadWrite",
+    "PermitHierarchicalResolution": "All",
+    "SystemSampleTime": "-1",
+    "RTWFcnNameOpts": "Auto",
+    "RTWFileNameOpts": "Auto",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "DataTypeOverride": "UseLocalSettings",
+    "MinMaxOverflowLogging": "UseLocalSettings",
+    "source_line": 648
+  },
+  {
+    "IconShape": "rectangular",
+    "Inputs": "++",
+    "OutDataTypeMode": "Same as first input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 666
+  },
+  {
+    "Criteria": "u2 >= Threshold",
+    "Threshold": "0",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "source_line": 679
+  },
+  {
+    "X0": "0",
+    "SampleTime": "1",
+    "RTWStateStorageClass": "Auto",
+    "source_line": 690
+  },
+  {
+    "Name": "AWGN\\nChannel",
+    "SourceBlock": "commchan3/AWGN\\nChannel",
+    "SourceType": "AWGN Channel",
+    "SystemSampleTime": "-1",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "seed": "67",
+    "noiseMode": "Signal to noise ratio  (Eb/No)",
+    "EbNodB": "13",
+    "EsNodB": "10",
+    "SNRdB": "10",
+    "bitsPerSym": "3",
+    "Ps": "0.01562",
+    "Tsym": "1",
+    "variance": "1",
+    "source_line": 732
+  },
+  {
+    "Name": "CIC1",
+    "RTWSystemCode": "Auto",
+    "source_line": 757
+  },
+  {
+    "Name": "in",
+    "IconDisplay": "Port number",
+    "source_line": 781
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "1/2^10",
+    "source_line": 787
+  },
+  {
+    "Name": "Integer Delay10",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "2^10",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 793
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 805
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 817
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 826
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 835
+  },
+  {
+    "Name": "Complex to\\nReal-Imag",
+    "Output": "Real and imag",
+    "source_line": 897
+  },
+  {
+    "Name": "Constant1",
+    "Orientation": "up",
+    "Value": "1",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 904
+  },
+  {
+    "Name": "Discrete-Time\\nScatter Plot\\nScope1",
+    "Tag": "ScatterPlot",
+    "SourceBlock": "commsink2/Discrete-Time\\nScatter Plot\\nScope",
+    "SourceType": "Discrete-Time Scatter Plot Scope",
+    "SystemSampleTime": "-1",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "sampPerSymb": "1",
+    "offsetEye": "0",
+    "numTraces": "1000",
+    "numNewFrames": "200",
+    "LineMarkers": ".",
+    "LineColors": "b",
+    "xMin": "-2",
+    "xMax": "2",
+    "yMin": "-2",
+    "yMax": "2",
+    "inphaseLabel": "In-phase Amplitude",
+    "quadratureLabel": "Quadrature Amplitude",
+    "FigPos": "[937 57 251 266]",
+    "figTitle": "Scatter Plot",
+    "numLinesMax": "8",
+    "block_type_": "scatter",
+    "source_line": 920
+  },
+  {
+    "Name": "Downsample2",
+    "SourceBlock": "dspsigops/Downsample",
+    "SourceType": "Downsample",
+    "N": "8",
+    "phase": "0",
+    "ic": "0",
+    "smode": "Allow multirate",
+    "fmode": "Maintain input frame size",
+    "source_line": 958
+  },
+  {
+    "Name": "Downsample3",
+    "SourceBlock": "dspsigops/Downsample",
+    "SourceType": "Downsample",
+    "N": "8",
+    "phase": "0",
+    "ic": "0",
+    "smode": "Allow multirate",
+    "fmode": "Maintain input frame size",
+    "source_line": 971
+  },
+  {
+    "Name": "FIR RRC Filter2",
+    "SourceBlock": "dspddes3/Digital FIR Raised\\nCosine Filter Design",
+    "SourceType": "Digital FIR Raised Cosine Filter Design",
+    "SystemSampleTime": "-1",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "filter_order": "32",
+    "upper_cutoff_freq": "1/8",
+    "rolloff_type": "Rolloff factor",
+    "transition_bw": "0.4",
+    "rolloff_factor": "1",
+    "window_type": "Boxcar",
+    "Rs": "5",
+    "Kbeta": "3.4",
+    "InitCond": "0",
+    "source_line": 984
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "8",
+    "source_line": 1011
+  },
+  {
+    "Name": "Integer Delay1",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1017
+  },
+  {
+    "Name": "Integer Delay10",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "8*2^4",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1029
+  },
+  {
+    "Name": "Integer Delay2",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "7",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1041
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "magnitude^2",
+    "source_line": 1053
+  },
+  {
+    "Name": "Modulator",
+    "RTWSystemCode": "Auto",
+    "source_line": 1060
+  },
+  {
+    "Name": "Data_Source1",
+    "RTWSystemCode": "Auto",
+    "source_line": 1084
+  },
+  {
+    "Name": "Constant",
+    "Value": "8",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1108
+  },
+  {
+    "Name": "Grey_encoder",
+    "InputValues": "[0:7]",
+    "OutputValues": "[0 1 3 2 6 7 5 4]",
+    "LookUpMeth": "Interpolation-Extrapolation",
+    "OutDataTypeMode": "Same as input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "LUTDesignTableMode": "Redesign Table",
+    "LUTDesignDataSource": "Block Dialog",
+    "LUTDesignFunctionName": "sqrt(x)",
+    "LUTDesignRelError": "0.01",
+    "LUTDesignAbsError": "1e-6",
+    "source_line": 1122
+  },
+  {
+    "Name": "Integer Delay2",
+    "Orientation": "left",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1143
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "mod",
+    "source_line": 1156
+  },
+  {
+    "Name": "Scope",
+    "NumInputPorts": "1",
+    "ZoomMode": "xonly",
+    "source_line": 1163
+  },
+  {
+    "Name": "Scrambler1",
+    "SourceBlock": "commsequence2/Scrambler",
+    "SourceType": "Scrambler",
+    "M": "8",
+    "poly": "[1 1 1 0 1]",
+    "ini_sta": "[0 1 2 3]",
+    "source_line": 1183
+  },
+  {
+    "Name": "Sum2",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 1194
+  },
+  {
+    "Name": "Unit Delay2",
+    "source_line": 1203
+  },
+  {
+    "Name": "constant",
+    "Value": "6",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1208
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 1222
+  },
+  {
+    "Name": "FIR RRC Filter",
+    "SourceBlock": "dspddes3/Digital FIR Raised\\nCosine Filter Design",
+    "SourceType": "Digital FIR Raised Cosine Filter Design",
+    "SystemSampleTime": "-1",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "filter_order": "32",
+    "upper_cutoff_freq": "1/8",
+    "rolloff_type": "Rolloff factor",
+    "transition_bw": "0.4",
+    "rolloff_factor": "1",
+    "window_type": "Boxcar",
+    "Rs": "5",
+    "Kbeta": "3.4",
+    "InitCond": "0",
+    "source_line": 1302
+  },
+  {
+    "Name": "Upsample",
+    "SourceBlock": "dspsigops/Upsample",
+    "SourceType": "Upsample",
+    "N": "8",
+    "phase": "0",
+    "ic": "0",
+    "mode": "Maintain input frame size",
+    "source_line": 1329
+  },
+  {
+    "Name": "data_mapper",
+    "SourceBlock": "commdigbbndpm2/M-PSK\\nModulator\\nBaseband",
+    "SourceType": "M-PSK Modulator Baseband",
+    "M": "8",
+    "InType": "Integer",
+    "Enc": "Binary",
+    "Ph": "0",
+    "numSamp": "1",
+    "source_line": 1341
+  },
+  {
+    "Name": "out1",
+    "IconDisplay": "Port number",
+    "source_line": 1354
+  },
+  {
+    "Name": "Phase/\\nFrequency\\nOffset",
+    "SourceBlock": "commrflib2/Phase//\\nFrequency\\nOffset",
+    "SourceType": "Phase/Frequency Offset",
+    "SystemSampleTime": "-1",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "freqOffset": "1/2^9",
+    "phaseOffset": "0",
+    "source_line": 1387
+  },
+  {
+    "Name": "Product",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1406
+  },
+  {
+    "Name": "Pulse\\nGenerator",
+    "Period": "512*8",
+    "PulseWidth": "256*8",
+    "SampleTime": "1/8",
+    "source_line": 1415
+  },
+  {
+    "Name": "Scope4",
+    "BackgroundColor": "darkGreen",
+    "NumInputPorts": "2",
+    "ZoomMode": "xonly",
+    "source_line": 1424
+  },
+  {
+    "Name": "Scope5",
+    "BackgroundColor": "darkGreen",
+    "NumInputPorts": "1",
+    "ZoomMode": "xonly",
+    "source_line": 1448
+  },
+  {
+    "Name": "one_sps_clock_domain",
+    "RTWSystemCode": "Auto",
+    "source_line": 1471
+  },
+  {
+    "Name": "In1",
+    "IconDisplay": "Port number",
+    "source_line": 1496
+  },
+  {
+    "Name": "Enable",
+    "source_line": 1502
+  },
+  {
+    "Name": "Constant1",
+    "Orientation": "up",
+    "Value": "8",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1508
+  },
+  {
+    "Name": "Descrambler1",
+    "SourceBlock": "commsequence2/Descrambler",
+    "SourceType": "Descrambler",
+    "M": "8",
+    "poly": "[1 1 1 0 1]",
+    "ini_sta": "[0 1 2 3]",
+    "source_line": 1524
+  },
+  {
+    "Name": "Gain1",
+    "Gain": "8/(2*pi)",
+    "source_line": 1535
+  },
+  {
+    "Name": "Grey_decoder1",
+    "InputValues": "[0:7]",
+    "OutputValues": "[0 1 3 2 7 6 4 5]",
+    "LookUpMeth": "Interpolation-Extrapolation",
+    "OutDataTypeMode": "Same as input",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^0",
+    "RndMeth": "Floor",
+    "SampleTime": "-1",
+    "LUTDesignTableMode": "Redesign Table",
+    "LUTDesignDataSource": "Block Dialog",
+    "LUTDesignFunctionName": "sqrt(x)",
+    "LUTDesignRelError": "0.01",
+    "LUTDesignAbsError": "1e-6",
+    "source_line": 1541
+  },
+  {
+    "Name": "Integer Delay10",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "2^4",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1562
+  },
+  {
+    "Name": "Integer Delay6",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1574
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "mod",
+    "source_line": 1586
+  },
+  {
+    "Name": "Product",
+    "OutDataTypeMode": "Inherit via internal rule",
+    "source_line": 1593
+  },
+  {
+    "Name": "Rounding\\nFunction1",
+    "Operator": "round",
+    "source_line": 1602
+  },
+  {
+    "Name": "Sum2",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 1608
+  },
+  {
+    "Name": "cordic",
+    "Output": "Angle",
+    "source_line": 1617
+  },
+  {
+    "Name": "phase_sync",
+    "RTWSystemCode": "Auto",
+    "source_line": 1624
+  },
+  {
+    "Name": "In1",
+    "IconDisplay": "Port number",
+    "source_line": 1648
+  },
+  {
+    "Name": "CIC1",
+    "RTWSystemCode": "Auto",
+    "source_line": 1654
+  },
+  {
+    "Name": "in",
+    "IconDisplay": "Port number",
+    "source_line": 1679
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "1/2^5",
+    "source_line": 1685
+  },
+  {
+    "Name": "Integer Delay10",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "2^5",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1691
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1703
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 1715
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 1724
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 1733
+  },
+  {
+    "Name": "Gain1",
+    "Gain": "8",
+    "source_line": 1795
+  },
+  {
+    "Name": "Gain2",
+    "Gain": "i",
+    "source_line": 1801
+  },
+  {
+    "Name": "Gain4",
+    "Gain": "-i",
+    "source_line": 1807
+  },
+  {
+    "Name": "Gain5",
+    "Gain": "1/8",
+    "source_line": 1813
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "source_line": 1819
+  },
+  {
+    "Name": "Math\\nFunction2",
+    "source_line": 1825
+  },
+  {
+    "Name": "cordic",
+    "Output": "Angle",
+    "source_line": 1831
+  },
+  {
+    "Name": "cordic1",
+    "Output": "Angle",
+    "source_line": 1838
+  },
+  {
+    "Name": "phase_unwrap",
+    "RTWSystemCode": "Auto",
+    "source_line": 1845
+  },
+  {
+    "Name": "in",
+    "IconDisplay": "Port number",
+    "source_line": 1870
+  },
+  {
+    "Name": "Constant1",
+    "Orientation": "up",
+    "Value": "pi",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1876
+  },
+  {
+    "Name": "Constant2",
+    "Orientation": "up",
+    "Value": "2*pi",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1892
+  },
+  {
+    "Name": "Constant3",
+    "Orientation": "up",
+    "Value": "pi/8",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1908
+  },
+  {
+    "Name": "Constant4",
+    "Orientation": "up",
+    "Value": "2*pi/8",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1924
+  },
+  {
+    "Name": "Constant5",
+    "Orientation": "up",
+    "Value": "pi",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1940
+  },
+  {
+    "Name": "Constant6",
+    "Orientation": "up",
+    "Value": "pi/8",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 1956
+  },
+  {
+    "Name": "Gain2",
+    "source_line": 1972
+  },
+  {
+    "Name": "Integer Delay4",
+    "Orientation": "left",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 1977
+  },
+  {
+    "Name": "Math\\nFunction1",
+    "Operator": "mod",
+    "source_line": 1990
+  },
+  {
+    "Name": "Math\\nFunction3",
+    "Operator": "mod",
+    "source_line": 1997
+  },
+  {
+    "Name": "Sum1",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2004
+  },
+  {
+    "Name": "Sum2",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 2013
+  },
+  {
+    "Name": "Sum3",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2022
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 2031
+  },
+  {
+    "Name": "Sum5",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 2040
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2049
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 2058
+  },
+  {
+    "Name": "Out1",
+    "IconDisplay": "Port number",
+    "source_line": 2187
+  },
+  {
+    "Name": "scatter",
+    "IconDisplay": "Port number",
+    "source_line": 2262
+  },
+  {
+    "Name": "data",
+    "Port": "2",
+    "IconDisplay": "Port number",
+    "source_line": 2269
+  },
+  {
+    "Name": "pocket_mode_on/off",
+    "SourceBlock": "simulink/Signal\\nRouting/Manual Switch",
+    "SourceType": "Manual Switch",
+    "SystemSampleTime": "-1",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "sw": "0",
+    "action": "0",
+    "source_line": 2388
+  },
+  {
+    "Name": "signal_power(Watts)",
+    "Decimation": "1",
+    "SampleTime": "2^10",
+    "source_line": 2406
+  },
+  {
+    "Name": "symbol_sync",
+    "RTWSystemCode": "Auto",
+    "source_line": 2415
+  },
+  {
+    "Name": "In1",
+    "IconDisplay": "Port number",
+    "source_line": 2439
+  },
+  {
+    "Name": "Abs",
+    "SampleTime": "-1",
+    "source_line": 2445
+  },
+  {
+    "Name": "CIC",
+    "RTWSystemCode": "Auto",
+    "source_line": 2453
+  },
+  {
+    "Name": "in",
+    "IconDisplay": "Port number",
+    "source_line": 2477
+  },
+  {
+    "Name": "Integer Delay10",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "8*2^5",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2483
+  },
+  {
+    "Name": "Integer Delay4",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "8",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2495
+  },
+  {
+    "Name": "Sum4",
+    "IconShape": "round",
+    "Inputs": "|++",
+    "source_line": 2507
+  },
+  {
+    "Name": "Sum6",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2516
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 2525
+  },
+  {
+    "Name": "FIR_filter",
+    "RTWSystemCode": "Auto",
+    "source_line": 2581
+  },
+  {
+    "Name": "in",
+    "IconDisplay": "Port number",
+    "source_line": 2605
+  },
+  {
+    "Name": "Buffer1",
+    "SourceBlock": "dspbuff3/Buffer",
+    "SourceType": "Buffer",
+    "N": "8",
+    "V": "7",
+    "ic": "0",
+    "source_line": 2611
+  },
+  {
+    "Name": "Dot Product",
+    "SourceBlock": "simulink/Math\\nOperations/Dot Product",
+    "SourceType": "Dot Product",
+    "OutputDataTypeScalingMode": "Inherit via internal rule",
+    "OutDataType": "sfix(16)",
+    "OutScaling": "2^-10",
+    "RndMeth": "Floor",
+    "source_line": 2622
+  },
+  {
+    "Name": "Flip",
+    "SourceBlock": "dspindex/Flip",
+    "SourceType": "Flip",
+    "dim": "Columns",
+    "source_line": 2637
+  },
+  {
+    "Name": "Frame Status\\nConversion",
+    "SourceBlock": "dspobslib/Frame Status\\nConversion",
+    "SourceType": "Frame Status Conversion",
+    "SystemSampleTime": "-1",
+    "RTWMemSecFuncInitTerm": "Inherit from model",
+    "RTWMemSecFuncExecute": "Inherit from model",
+    "RTWMemSecDataConstants": "Inherit from model",
+    "RTWMemSecDataInternal": "Inherit from model",
+    "RTWMemSecDataParameters": "Inherit from model",
+    "outframe": "Sample-based",
+    "source_line": 2646
+  },
+  {
+    "Name": "Gain",
+    "source_line": 2664
+  },
+  {
+    "Name": "Math\\nFunction",
+    "Operator": "conj",
+    "source_line": 2669
+  },
+  {
+    "Name": "impulse_response",
+    "Value": "sin([0:7]*2*pi/8)",
+    "SamplingMode": "Sample based",
+    "OutDataTypeMode": "Inherit from 'Constant value'",
+    "OutDataType": "sfix(16)",
+    "ConRadixGroup": "Use specified scaling",
+    "OutScaling": "2^0",
+    "SampleTime": "inf",
+    "FramePeriod": "inf",
+    "source_line": 2676
+  },
+  {
+    "Name": "out",
+    "IconDisplay": "Port number",
+    "source_line": 2690
+  },
+  {
+    "Name": "Hit \\nCrossing1",
+    "HitCrossingDirection": "rising",
+    "source_line": 2749
+  },
+  {
+    "Name": "Integer Delay2",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "8",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2756
+  },
+  {
+    "Name": "Integer Delay3",
+    "SourceBlock": "dspobslib/Integer Delay",
+    "SourceType": "Integer Delay",
+    "delay": "1",
+    "ic": "0",
+    "reset_popup": "None",
+    "source_line": 2768
+  },
+  {
+    "Name": "Sum1",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2780
+  },
+  {
+    "Name": "Sum2",
+    "IconShape": "round",
+    "Inputs": "|+-",
+    "source_line": 2789
+  },
+  {
+    "Name": "clock",
+    "IconDisplay": "Port number",
+    "source_line": 2798
+  }
+]

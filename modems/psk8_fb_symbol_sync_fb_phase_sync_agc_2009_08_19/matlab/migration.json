@@ -1,0 +1,18 @@
+{
+  "source": "modems/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19/original/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19.mdl",
+  "original_sha256": "f38534e72da61f4dcd3697fcf5c3e58946daf502710c2b92318020d4c746294e",
+  "prepared_sha256": "ae230bae5538bc250aec08ea042d32dded5f1b90d15bcf173bff538461943729",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    },
+    {
+      "old": "commdigbbndpm2/",
+      "new": "commdigbbndpm3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

@@ -1,0 +1,51 @@
+AM model results (ext_signal_am.py, test_ext_signal_am.py)
+
+1. Numeric contract implemented
+TX float : amp=0.5*(1+depth*m) in [0,1]; IQ=amp*DDS.value_float() at current phase;
+           phase advances exactly once per accepted sample.
+TX fixed : depthQ17=round(depth*2^17); amp=(131071+round(depthQ17*m/2^17))//2;
+           each component round_halfup(amp*iq_rom/131071), signed18 saturation;
+           m and IQ are signed18, audio accepted on [-131071,131071] (-131072 excluded).
+RX float : env=abs(IQ); dc+=beta*(env-dc); lp+=alpha*((env-dc)-lp); output lp.
+RX fixed : env=math.isqrt(I^2+Q^2); Q30 coefs; signed64 states with Q17 fraction;
+           sraw += (coefQ30*((inRaw<<17)-sraw)+2^29)>>30;
+           out=round_halfup(lpRaw,17) saturated signed18; input IQ pair must be a tuple.
+validation: config/sample/accept checked before any state change; stall and rejected
+           samples return the held output; reset clears phase/states/clip counters.
+
+Q30 alpha(cutoff=5000)=81104820
+Q30 beta(dc=20)    =337273
+one-pole gains (documented): DC=1.000000, 1 kHz=0.980591, 2 kHz=0.928515, 5 kHz=0.707288 (analog -3 dB point)
+DC startup time constant 5*tau_DC=15915 samples; tests discard the first 20000-40000 samples.
+
+2. Measured loopback (1000 Hz tone, depth 0.5, m=0.2, carrier 37 kHz, fs=400 kHz)
+expected recovery depth*m/2*|LPF(1k)| = 0.049029538
+float output peak        = 0.049012635 (ratio 0.999655)
+fixed output peak        = 0.049015419 (ratio 0.999712)
+fixed-vs-float error after startup: max 1.400 LSB, mean 0.536 LSB (budget <20 LSB)
+clipping counters: TX=0 RXout=0 RXstate=0
+
+3. Envelope invariance to carrier offset (same audio, depth 0.5, m=0.2)
+carrier   1000 Hz -> output envelope peak 0.049030409
+carrier  37000 Hz -> output envelope peak 0.049030409
+carrier 150000 Hz -> output envelope peak 0.049030409
+expected depth*m/2*|LPF(1k)| = 0.049029538; spread is at float rounding level.
+
+4. TX headroom (fixed, audio driven to both rails for 40000 samples)
+depth 0.0: max |IQ|=65535 (0.499996 FS), clip_count=0
+depth 0.5: max |IQ|=98303 (0.749998 FS), clip_count=0
+depth 1.0: max |IQ|=131071 (1.000000 FS), clip_count=0
+0.5 headroom keeps the full-depth carrier+sidebands at <= full scale; no saturation.
+
+5. Test suite (python -m unittest -v test_ext_signal_am.py): 16 tests, OK
+TX: float formula/ideal phasor and one-advance-per-accept; fixed integer amplitude
+    oracle; stall/reset; atomic invalid audio/depth/step/accept and atomic process();
+    depth 0/0.5/1 steady envelope <= full scale.
+RX: float one-pole reference; fixed first-sample state hand oracle and math.isqrt
+    envelope; ordinary-tuple contract, full signed18 rails, atomicity, stall, reset;
+    config validation 0<dc<lp<fs/2 and finite; loopback amplitude + DC startup discard;
+    20 LSB fixed/float budget at amplitude 0.2; depth 0/1 recovery; CFO invariance;
+    deterministic noise stream with range/state checks; full-rail clipping counter.
+
+No timing, throughput or Fmax claims are made. All fixed arithmetic is executed at
+runtime (no final-output-only quantization); DDS ROM/coefficient design is offline float.

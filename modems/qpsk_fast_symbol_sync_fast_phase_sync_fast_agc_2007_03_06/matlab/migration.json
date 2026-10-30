@@ -1,0 +1,18 @@
+{
+  "source": "modems/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06/original/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06.mdl",
+  "original_sha256": "e877698474eba4a9f2dc9e7628b84e13eafe88fcd701d0ee44baaaeb25e3f0ec",
+  "prepared_sha256": "2df1e1fc947e9e28cc102e5f6967f525b5f1be10657b207b5522c10d51ee4601",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    },
+    {
+      "old": "commdigbbndpm2/",
+      "new": "commdigbbndpm3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}

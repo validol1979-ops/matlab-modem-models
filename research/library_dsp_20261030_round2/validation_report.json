@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "Second-pass research/backlog provenance; not implementation acceptance",
+  "validated_at_utc": "2026-10-30T08:32:49.527948+00:00",
+  "additional_tasks": 15,
+  "combined_tasks": 44,
+  "model_stages_completed": 2,
+  "model_stages_remaining": 42,
+  "verified_source_files": 27,
+  "source_references": 37,
+  "selected_rag_references": 16,
+  "verified_rag_reads": 46,
+  "search_artifacts": 335,
+  "catalog_artifacts": 50,
+  "raw_json_artifacts": 631,
+  "incomplete_or_invalid_raw_artifacts": 172,
+  "new_todo_links_checked": 40,
+  "dependencies_acyclic": true,
+  "prior_cic_evidence_preserved": {
+    "status": "PASS",
+    "sources": 1485,
+    "artifacts": 36
+  },
+  "review_resolution": "research/library_dsp_20261030_round2/review_resolution.json",
+  "file_hashes": {
+    "research/library_dsp_20261030_round2/task_additions.json": "4759f0909f2a3a4d5d56ea95fd691e0761d9fe043c1020743dbf9ef2dbc16068",
+    "research/library_dsp_20261030_round2/rag_evidence.json": "01e8c136f683f0a19b5317b28ad35628e698701d4343a91fa640848ed1a12a02",
+    "research/library_dsp_20261030_round2/review_resolution.json": "3ad607f9ffd6b5366064e1cdb55674512551bf60070bb84006f61642d89fc9b1",
+    "docs/RTL_TODO.md": "a4449e8000370f6f9afa25a6ce279f6316454f612529a127cbfbc55c0728ac7f"
+  }
+}

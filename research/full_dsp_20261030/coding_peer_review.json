@@ -1,0 +1,14 @@
+{
+  "reviewer": "internal advanced_models subagent",
+  "mode": "read-only peer review and isolated probes",
+  "reviewed_modules": [
+    "common/python/ext_code_turbo.py",
+    "common/python/ext_code_btc.py"
+  ],
+  "finding": "finite1e308 overflowed before quantizer saturation in both models",
+  "fix": "exact Fraction scaling then documented nearest/even rounding and clipping; same overflow class fixed in Polar/PLS/Golay/Q8/TCM",
+  "root_regression": "tests/test_ext_code_quantization.py:5PASS; cross_models3PASS",
+  "other_checks": "BCJR fractional LLR/prior exhaustive posterior checks lengths4/5/6/8 PASS; alpha[t], beta[t+1], termination0, posterior factor1/2, exchange and stop reviewed",
+  "limits": "Valid codewords do not guarantee transmitted payload beyond correction capability; fixed metric saturation remains an approximation",
+  "frozen_files_changed_by_reviewer": false
+}

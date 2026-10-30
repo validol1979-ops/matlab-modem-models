@@ -1,0 +1,43 @@
+{
+  "name": "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10",
+  "original_sha256": "1131b6f59b4a82b4d45a84bced5ff319a30598a3a7f227ba209aa2330c8b33ce",
+  "original_load": "PASS",
+  "original_compile": "FAIL",
+  "original_error": "Failed to load library 'commchan2' referenced by 'qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10/AWGN Channel'.",
+  "migration": {
+    "source": "modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10/original/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10.mdl",
+    "original_sha256": "1131b6f59b4a82b4d45a84bced5ff319a30598a3a7f227ba209aa2330c8b33ce",
+    "prepared_sha256": "34704a1adb1e4f3bd48a99cdb6d12b7bad33774722865b74947f5d64b137bca7",
+    "changes": [
+      {
+        "old": "commchan2/",
+        "new": "commchan3/",
+        "count": 1
+      }
+    ],
+    "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+  },
+  "runtime_changes": [],
+  "runtime_status": "PASS",
+  "repeat_status": "PASS",
+  "solver": "FixedStepDiscrete",
+  "time_quantum": 0.125,
+  "stop_time": 2048,
+  "requested_steps": 16384,
+  "signal_count": 26,
+  "finite": true,
+  "captured_values": 309274,
+  "capture_sha256": "4b9538df76ee31628c70628f284f2e44b7233ae9c8700ed5f970865b95984f70",
+  "mapper_checks": [
+    {
+      "block": "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10/Modulator/data_mapper",
+      "samples": 2049,
+      "maximum_error": 0.0,
+      "covered_labels": 16,
+      "alphabet": 16,
+      "status": "PASS"
+    }
+  ],
+  "receiver_functional_status": "NOT_ESTABLISHED",
+  "full_equivalence": "NOT_ESTABLISHED"
+}

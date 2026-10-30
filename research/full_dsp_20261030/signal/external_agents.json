@@ -1,0 +1,116 @@
+{
+  "scope": "actual external agent invocations; no RTL/vendor compilation; full logs local build only",
+  "agents": [
+    {
+      "tool": "pi",
+      "provider": "Qulab/openwebui",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "observed_response_models": [
+        "anthropic/claude-haiku-5.5"
+      ],
+      "task": "DDS/Hilbert/SOS initial batch",
+      "exit_status": 0,
+      "result_scope": "incomplete: outputlength reasoning, no model files",
+      "log_path": "build/full_dsp_20261030/signal/logs/core_haiku.log",
+      "log_sha256": "8d7f80ca72e5296f3a9385c3f817633fa0c9d85c076572613ec62cfa7a339ffe"
+    },
+    {
+      "tool": "pi",
+      "provider": "Qulab/openwebui",
+      "model_id": "~deepseek/deepseek-v4-flash-latest",
+      "observed_response_models": [
+        "deepseek/deepseek-v4.1-flash-1017"
+      ],
+      "task": "DDS/Hilbert/SOS retry",
+      "exit_status": 130,
+      "result_scope": "interrupted after truncatedwrite due outputlength, no modelfiles",
+      "log_path": "build/full_dsp_20261030/signal/logs/core_deepseek.log",
+      "log_sha256": "4212ab9926810902dddb7828e41c55dafaf59e0776408a2f51825b6d733d50d6"
+    },
+    {
+      "tool": "pi",
+      "provider": "Qulab/openwebui",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "observed_response_models": [
+        "anthropic/claude-haiku-5.5"
+      ],
+      "task": "DSP-DDS implementation/test",
+      "exit_status": 130,
+      "result_scope": "model+tests+results written and8testsPASS; interrupted during final narrative; coordinator added9th phase-truncationtest",
+      "log_path": "build/full_dsp_20261030/signal/logs/dds_haiku.log",
+      "log_sha256": "597e2d1ae5a3bae40264acfcf173872437d0ac58b04b6feea110bf2cd9030dd8"
+    },
+    {
+      "tool": "pi",
+      "provider": "Qulab/openwebui",
+      "model_id": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "observed_response_models": [],
+      "task": "DSP-HILBERT implementation/test",
+      "exit_status": 130,
+      "result_scope": "model+tests written; partialinitialtestfailures, interrupted; coordinator corrected oracles andhalfup convention;11testsPASS",
+      "log_path": "build/full_dsp_20261030/signal/logs/hilbert_qwen.log",
+      "log_sha256": "5cd208ddb6b2ce4ba9ff25853f291f3501780b9a5b50964d5f607374ad78e21d"
+    },
+    {
+      "tool": "OpenCode",
+      "provider": "Qulab/openwebui",
+      "model_id": "openwebui/~anthropic/claude-haiku-latest",
+      "observed_response_models": [],
+      "task": "DSP-SOS independentreview",
+      "exit_status": 0,
+      "result_scope": "audit_sos_opencode.json written; coordinatorclosedissues in audit_sos_closure.json",
+      "log_path": "build/full_dsp_20261030/signal/logs/sos_opencode_review.log",
+      "log_sha256": "cd418e12743f2a76d4bb88f357d45ba13c58c882118ef7d34919df0a9dc68a7b"
+    },
+    {
+      "tool": "pi",
+      "provider": "Qulab/openwebui",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "observed_response_models": [
+        "anthropic/claude-haiku-5.5"
+      ],
+      "task": "DSP-FARROW implementation/test",
+      "exit_status": 0,
+      "result_scope": "model+independentSciPy/Lagrange/integer13testsPASS; coordinatorstrictflags/numpyintegerinputfix",
+      "log_path": "build/full_dsp_20261030/signal/logs/farrow_haiku.log",
+      "log_sha256": "d74ba766e73efb365cf25eb03fe327d6146a253c085bb42d1424688a52b4318b"
+    },
+    {
+      "tool": "pi",
+      "provider": "Qulab/openwebui",
+      "model_id": "~deepseek/deepseek-v4-flash-latest",
+      "observed_response_models": [
+        "deepseek/deepseek-v4.1-flash-1017"
+      ],
+      "task": "MOD-AM implementation/test",
+      "exit_status": 0,
+      "result_scope": "model+16testsPASS+results written; coordinatorexpm1/Q30representabilityvalidation",
+      "log_path": "build/full_dsp_20261030/signal/logs/am_deepseek.log",
+      "log_sha256": "0be67a0308e7f6098a121c1dca3dfcdacb9f167517ea39c135bf14ed63cc1b7f"
+    },
+    {
+      "tool": "OpenCode",
+      "provider": "Qulab/openwebui",
+      "model_id": "openwebui/~anthropic/claude-haiku-latest",
+      "observed_response_models": [],
+      "task": "FM/FFT-convolution review attempt",
+      "exit_status": 0,
+      "result_scope": "inconclusive: stopped on outputlength8192, no auditartifact; not counted as acceptedreview",
+      "log_path": "build/full_dsp_20261030/signal/logs/fm_fft_opencode_review.log",
+      "log_sha256": "cd89ed06e2309ec649bb5a8e1e158eacc7c37b02e59fafdff5d73835d4d3547b"
+    },
+    {
+      "tool": "pi",
+      "provider": "Qulab/openwebui",
+      "model_id": "~anthropic/claude-haiku-latest",
+      "observed_response_models": [
+        "anthropic/claude-haiku-5.5"
+      ],
+      "task": "MOD-FM shortindependentread-onlyreview",
+      "exit_status": 0,
+      "result_scope": "audit_fm_pi.json written; no probesexecuted, coordinatorclosure audit_fm_closure.json",
+      "log_path": "build/full_dsp_20261030/signal/logs/fm_pi_review.log",
+      "log_sha256": "5c0daca5213a85efa86676f82fc109023f310b7b5d186e50942a8270124e10da"
+    }
+  ]
+}

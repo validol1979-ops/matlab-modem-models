@@ -1,0 +1,905 @@
+{
+  "checked_at_utc": "2026-09-30T10:44:39.638472+00:00",
+  "scope": "Integrity/static review of both collections; MATLAB runtime checks of two Simulink models only.",
+  "process": {
+    "exit_code": 0,
+    "tty": true,
+    "headless": true,
+    "earlier_non_tty_exit_codes": [
+      129,
+      129
+    ],
+    "command": "tools/matlab.sh -nodisplay -batch \"addpath('tools'); matlab_check_research;\" -logfile build/research_review/matlab_headless.log",
+    "log_sha256": "30b7eb67e516320dd06654e48d2fc7e93198efc76fc0432bbd2d18d7494c98f3"
+  },
+  "tools": {
+    "tools/audit_research.py": "3d79c0a4781d4dea76f666e0354741e3701e84545facb47ace13bb52908f5bfd",
+    "tools/matlab_check_research.m": "22814e2ca689c3635a3196d0ddbca6743485f92ba20fee2deb474c26059981c9"
+  },
+  "integrity_report_sha256": "cf24c3ac81e52203321ddb27c0a940e5ebdd86df34c9ba43df544daaa80ac451",
+  "collections": [
+    {
+      "directory": "research/electronix_20260930",
+      "manifest_sha256": "4f2a01d6add4f97ff0d7e005510dc5f62024749cc4da907a70daa661d5ff735f",
+      "errors": [],
+      "existing_duplicates": [],
+      "zip_crc": [
+        {
+          "path": "archives/harger_communications_dsp.zip",
+          "members": 118,
+          "bad_member": null
+        },
+        {
+          "path": "archives/oqpsk_2_sps_timing_recovery_2019_12_05.zip",
+          "members": 1,
+          "bad_member": null
+        },
+        {
+          "path": "archives/qpsk_8_sps_fb_sync_2020_11_25.zip",
+          "members": 1,
+          "bad_member": null
+        }
+      ],
+      "file_extensions": {
+        ".60": 1,
+        ".64": 3,
+        ".96": 1,
+        ".csv": 1,
+        ".dat": 1,
+        ".json": 1,
+        ".m": 35,
+        ".mcd": 69,
+        ".mdl": 2,
+        ".prn": 2,
+        ".txt": 1,
+        ".wav": 4,
+        ".zip": 3
+      },
+      "status": "PASS",
+      "verified_file_count": 121
+    },
+    {
+      "directory": "research/dsp_global_20260930",
+      "manifest_sha256": "89b94736f6b97f5217cf58f8f95350d56f2474a46b6e85b29c73f96b944a714e",
+      "errors": [],
+      "existing_duplicates": [],
+      "zip_crc": [
+        {
+          "path": "archives/channelizer.zip",
+          "members": 17,
+          "bad_member": null
+        },
+        {
+          "path": "archives/china_adaptive.zip",
+          "members": 10,
+          "bad_member": null
+        },
+        {
+          "path": "archives/china_ldpc.zip",
+          "members": 29,
+          "bad_member": null
+        },
+        {
+          "path": "archives/israel_beamforming.zip",
+          "members": 192,
+          "bad_member": null
+        },
+        {
+          "path": "archives/israel_omlsa.zip",
+          "members": 1,
+          "bad_member": null
+        },
+        {
+          "path": "archives/israel_stft.zip",
+          "members": 5,
+          "bad_member": null
+        },
+        {
+          "path": "archives/timing.zip",
+          "members": 17,
+          "bad_member": null
+        },
+        {
+          "path": "archives/wsinc.zip",
+          "members": 16,
+          "bad_member": null
+        }
+      ],
+      "file_extensions": {
+        "": 3,
+        ".cc": 1,
+        ".csv": 2,
+        ".json": 1,
+        ".m": 257,
+        ".mat": 1,
+        ".md": 9,
+        ".mlx": 1,
+        ".pdf": 1,
+        ".png": 26,
+        ".txt": 3,
+        ".wav": 5,
+        ".zip": 8
+      },
+      "status": "PASS",
+      "verified_file_count": 314
+    }
+  ],
+  "matlab_models": [
+    {
+      "model": "oqpsk_2_sps_timing_recovery_2019_12_05",
+      "source": "research/electronix_20260930/models/oqpsk_2_sps_timing_recovery_2019_12_05.mdl",
+      "matlab_version": "9.9.0.1467703 (R2020b)",
+      "status": "PASS",
+      "load_status": "PASS",
+      "compile_status": "PASS",
+      "simulation_status": "PASS",
+      "repeat_status": "PASS",
+      "error_message": "",
+      "error_report": "",
+      "requested_steps": 16384,
+      "original_stop_time": "inf",
+      "solver": "FixedStepDiscrete",
+      "step_size": 0.25,
+      "stop_time": 4096,
+      "final_time": 4096,
+      "signals": [
+        {
+          "name": "trace_001",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/ NCO",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.7068909827315002,
+          "last_real": 0,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_002",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/ NCO",
+          "port": 2,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.5857774565687472,
+          "last_real": 0.2734864182089891,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_003",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/1_sps_clock_domain",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6591072732071914,
+          "last_real": 0.4964859712386813,
+          "last_imag": 0.47877141800899964
+        },
+        {
+          "name": "trace_004",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/1_sps_clock_domain",
+          "port": 2,
+          "samples": 8193,
+          "values": 16386,
+          "finite": true,
+          "rms": 0.7043828891203536,
+          "last_real": 1,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_005",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/1_sps_clock_domain",
+          "port": 3,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.9770420993800514,
+          "last_real": 1.0353083692334089,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_006",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/1_sps_clock_domain",
+          "port": 4,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.9999389704311171,
+          "last_real": -0.3976797533939908,
+          "last_imag": 0.917524285095765
+        },
+        {
+          "name": "trace_007",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/1_sps_clock_domain",
+          "port": 5,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.010079604876114758,
+          "last_real": 0.001307775356507262,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_008",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/AWGN Channel",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.9820483257479705,
+          "last_real": 0.46933961985213335,
+          "last_imag": -1.0889373815889711
+        },
+        {
+          "name": "trace_009",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Complex to Real-Imag",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6958381333297359,
+          "last_real": 0.46933961985213335,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_010",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Complex to Real-Imag",
+          "port": 2,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6929849971742392,
+          "last_real": -1.0889373815889711,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_011",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Complex to Real-Imag1",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.894719888482193,
+          "last_real": 0.6758014026263469,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_012",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Constant2",
+          "port": 1,
+          "samples": 1,
+          "values": 1,
+          "finite": true,
+          "rms": 5.05825747368159e-05,
+          "last_real": 5.05825747368159e-05,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_013",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Downsample",
+          "port": 1,
+          "samples": 4097,
+          "values": 4097,
+          "finite": true,
+          "rms": 0.6584475630182614,
+          "last_real": 0.4964859712386813,
+          "last_imag": 0.47877141800899964
+        },
+        {
+          "name": "trace_014",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Downsample1",
+          "port": 1,
+          "samples": 4097,
+          "values": 8194,
+          "finite": true,
+          "rms": 0.7041666155155604,
+          "last_real": 1,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_015",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Downsample2",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.9820483893926704,
+          "last_real": 0.469340689907693,
+          "last_imag": -1.088936275204439
+        },
+        {
+          "name": "trace_016",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Downsample3",
+          "port": 1,
+          "samples": 4097,
+          "values": 4097,
+          "finite": true,
+          "rms": 0.9998779520346953,
+          "last_real": -0.3976797533939908,
+          "last_imag": 0.917524285095765
+        },
+        {
+          "name": "trace_017",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Integer Delay1",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9820544362571337,
+          "last_real": 0.469340689907693,
+          "last_imag": -1.088936275204439
+        },
+        {
+          "name": "trace_018",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Integer Delay2",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.9769751466790105,
+          "last_real": 1.0353083692334089,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_019",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Integer Delay3",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6468986124729298,
+          "last_real": -0.39259310099140954,
+          "last_imag": -0.38091859420273894
+        },
+        {
+          "name": "trace_020",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Math Function",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 1.0890499720559619,
+          "last_real": 0.4622371120950466,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_021",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/NCO",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 1,
+          "last_real": 0.6758014026263469,
+          "last_imag": 0.7370837565760503
+        },
+        {
+          "name": "trace_022",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Phase// Frequency Offset",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9959740845160918,
+          "last_real": -0.11322780952079411,
+          "last_imag": 0.6703853930733943
+        },
+        {
+          "name": "trace_023",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/Product",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6469418617073791,
+          "last_real": 0.21668326632768736,
+          "last_imag": -0.6414897200171762
+        },
+        {
+          "name": "trace_024",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/channel_delay",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9821426442233298,
+          "last_real": -0.6867352975791694,
+          "last_imag": -0.5754770424433394
+        },
+        {
+          "name": "trace_025",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/cic",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9064531716314881,
+          "last_real": 0.9942126636679578,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_026",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/complex_saturation",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6469418617073791,
+          "last_real": 0.21668326632768736,
+          "last_imag": -0.6414897200171762
+        },
+        {
+          "name": "trace_027",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/delay_line_with_taps",
+          "port": 1,
+          "samples": 8193,
+          "values": 49158,
+          "finite": true,
+          "rms": 0.6468479009331131,
+          "last_real": -0.3865035206660494,
+          "last_imag": -0.35871296715174933
+        },
+        {
+          "name": "trace_028",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/delay_line_with_taps1",
+          "port": 1,
+          "samples": 8193,
+          "values": 49158,
+          "finite": true,
+          "rms": 0.6468119724392313,
+          "last_real": -0.6122758550359896,
+          "last_imag": -0.2070658519027259
+        },
+        {
+          "name": "trace_029",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/gain",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9959740845160918,
+          "last_real": -0.1942270628605241,
+          "last_imag": 0.6515465909262519
+        },
+        {
+          "name": "trace_030",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/gain1",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6943081663038149,
+          "last_real": 0.33182311123545827,
+          "last_imag": -0.7698787287834026
+        },
+        {
+          "name": "trace_031",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/gain2",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.0034949995643835663,
+          "last_real": 0.0026398492290091676,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_032",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/modulator",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.24899352112902295,
+          "last_real": -0.048556765715131026,
+          "last_imag": 0.16288664773156297
+        },
+        {
+          "name": "trace_033",
+          "block": "oqpsk_2_sps_timing_recovery_2019_12_05/square_root_raised_cosine_filter",
+          "port": 1,
+          "samples": 8193,
+          "values": 8193,
+          "finite": true,
+          "rms": 0.6588350607577496,
+          "last_real": 0.20929345571516036,
+          "last_imag": -0.6196122228705303
+        }
+      ],
+      "signal_count": 33,
+      "value_count": 426029,
+      "elapsed_seconds": 13.596357,
+      "source_sha256": "4a1bc1134b97fa0bf8705b0149d86bca1a5670ea0ec87ac4503654f1bc497b08",
+      "capture": {
+        "path": "build/research_review/oqpsk_2_sps_timing_recovery_2019_12_05/signals.mat",
+        "sha256": "dc700cd15e10c0368d586fb8170c4f9f7cb6a36d8e81f4771b1f3cd7ff851c7c"
+      },
+      "result_sha256": "11ae38cbe064c895f47f12cf3f8586bc8d3fbf327d297d4ef0959ed66c793a5a"
+    },
+    {
+      "model": "qpsk_8_sps_fb_sync_2020_11_25",
+      "source": "research/electronix_20260930/models/qpsk_8_sps_fb_sync_2020_11_25.mdl",
+      "matlab_version": "9.9.0.1467703 (R2020b)",
+      "status": "PASS",
+      "load_status": "PASS",
+      "compile_status": "PASS",
+      "simulation_status": "PASS",
+      "repeat_status": "PASS",
+      "error_message": "",
+      "error_report": "",
+      "requested_steps": 16384,
+      "original_stop_time": "inf",
+      "solver": "FixedStepDiscrete",
+      "step_size": 0.125,
+      "stop_time": 2048,
+      "final_time": 2048,
+      "signals": [
+        {
+          "name": "trace_001",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/ NCO",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.3534562768432816,
+          "last_real": 0,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_002",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/ NCO",
+          "port": 2,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.5473012168859884,
+          "last_real": 0.9677280064875537,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_003",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/1_sps_clock_domain",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.6109470115616932,
+          "last_real": 0.4991082620775613,
+          "last_imag": 0.49489511378016027
+        },
+        {
+          "name": "trace_004",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/1_sps_clock_domain",
+          "port": 2,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 2.815244693695909,
+          "last_real": 3,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_005",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/1_sps_clock_domain",
+          "port": 3,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.8857674084616318,
+          "last_real": 1.013044539332904,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_006",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/1_sps_clock_domain",
+          "port": 4,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.011866522146463823,
+          "last_real": 0.0057619716163408935,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_007",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/1_sps_clock_domain",
+          "port": 5,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9999694838187878,
+          "last_real": 0.20570841298592016,
+          "last_imag": -0.9786133295775273
+        },
+        {
+          "name": "trace_008",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/AWGN Channel",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9824198310360923,
+          "last_real": 0.6776037145435326,
+          "last_imag": 0.5897985085184247
+        },
+        {
+          "name": "trace_009",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Complex to Real-Imag",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.7007602461583673,
+          "last_real": 0.6776037145435326,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_010",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Complex to Real-Imag",
+          "port": 2,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.6885374367578355,
+          "last_real": 0.5897985085184247,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_011",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Complex to Real-Imag1",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.894719888482193,
+          "last_real": 0.6758014026263469,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_012",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Constant2",
+          "port": 1,
+          "samples": 1,
+          "values": 1,
+          "finite": true,
+          "rms": 5.05825747368159e-05,
+          "last_real": 5.05825747368159e-05,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_013",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Downsample",
+          "port": 1,
+          "samples": 2049,
+          "values": 2049,
+          "finite": true,
+          "rms": 0.6108808039322345,
+          "last_real": 0.4991082620775613,
+          "last_imag": 0.49489511378016027
+        },
+        {
+          "name": "trace_014",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Downsample1",
+          "port": 1,
+          "samples": 2049,
+          "values": 2049,
+          "finite": true,
+          "rms": 2.8138956598944924,
+          "last_real": 3,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_015",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Downsample2",
+          "port": 1,
+          "samples": 2049,
+          "values": 2049,
+          "finite": true,
+          "rms": 0.9997559487456029,
+          "last_real": 0.20570841298592016,
+          "last_imag": -0.9786133295775273
+        },
+        {
+          "name": "trace_016",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Integer Delay1",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9824199428925368,
+          "last_real": 0.6775900006158169,
+          "last_imag": 0.5898065631151328
+        },
+        {
+          "name": "trace_017",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Integer Delay2",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.8857320519337268,
+          "last_real": 1.013044539332904,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_018",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Integer Delay3",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.5878785434530108,
+          "last_real": -0.6162087595086934,
+          "last_imag": 0.4828901639197429
+        },
+        {
+          "name": "trace_019",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Math Function",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 1.0843661466926064,
+          "last_real": 1.1225077451578231,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_020",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/NCO",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 1,
+          "last_real": 0.6758014026263469,
+          "last_imag": 0.7370837565760503
+        },
+        {
+          "name": "trace_021",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Phase// Frequency Offset",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9826011033339122,
+          "last_real": 0.7777114765097537,
+          "last_imag": 0.6851967360794958
+        },
+        {
+          "name": "trace_022",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/Product",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.5879644258297643,
+          "last_real": -0.1263786481650357,
+          "last_imag": 0.4583447579047089
+        },
+        {
+          "name": "trace_023",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/channel_delay",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9826011033339122,
+          "last_real": 0.7314779000692959,
+          "last_imag": -0.7343499094704026
+        },
+        {
+          "name": "trace_024",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/cic",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9055610504496212,
+          "last_real": 0.995215727188061,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_025",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/complex_saturation",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.5879644258297643,
+          "last_real": -0.1263786481650357,
+          "last_imag": 0.4583447579047089
+        },
+        {
+          "name": "trace_026",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/delay_line_with_taps",
+          "port": 1,
+          "samples": 16385,
+          "values": 65540,
+          "finite": true,
+          "rms": 0.5879397080900474,
+          "last_real": -0.5019803250189485,
+          "last_imag": 0.5642501472013755
+        },
+        {
+          "name": "trace_027",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/delay_line_with_taps1",
+          "port": 1,
+          "samples": 16385,
+          "values": 65540,
+          "finite": true,
+          "rms": 0.5878299166450145,
+          "last_real": -0.8053651071492902,
+          "last_imag": 0.03082234492641521
+        },
+        {
+          "name": "trace_028",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/gain",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.9951865572969575,
+          "last_real": 0.856145761567582,
+          "last_imag": -0.6241171205051886
+        },
+        {
+          "name": "trace_029",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/gain1",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.6945708205425178,
+          "last_real": 0.47906582618227755,
+          "last_imag": 0.41698754552252626
+        },
+        {
+          "name": "trace_030",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/gain2",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.0034949995643835663,
+          "last_real": 0.0026398492290091676,
+          "last_imag": 0
+        },
+        {
+          "name": "trace_031",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/modulator",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.12439831966211969,
+          "last_real": 0.10701822019594776,
+          "last_imag": -0.07801464006314858
+        },
+        {
+          "name": "trace_032",
+          "block": "qpsk_8_sps_fb_sync_2020_11_25/square_root_raised_cosine_filter",
+          "port": 1,
+          "samples": 16385,
+          "values": 16385,
+          "finite": true,
+          "rms": 0.6604076886784562,
+          "last_real": -0.12475132460440169,
+          "last_imag": 0.45244284936033685
+        }
+      ],
+      "signal_count": 32,
+      "value_count": 563238,
+      "elapsed_seconds": 1.440085,
+      "source_sha256": "5f510030297f837ed73ac94bde43cbd8788c14df91e0f4d5dd0bbec244c92795",
+      "capture": {
+        "path": "build/research_review/qpsk_8_sps_fb_sync_2020_11_25/signals.mat",
+        "sha256": "cf9b9597e07137a59a3c42f6892ff93e2b4801cbaa702740506807668c2db5c2"
+      },
+      "result_sha256": "edf1c6b7ab83ebaa3154cd4438b82e33e2a85bed65c3c2e21b075e67e1ed91e5"
+    }
+  ],
+  "portable_workspace_count": 20,
+  "new_models_in_portable_regression": false,
+  "new_models_in_visual_atlas": false
+}

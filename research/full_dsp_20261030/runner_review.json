@@ -1,0 +1,19 @@
+{
+  "reviewer": "internal signal_models subagent",
+  "mode": "read-only review plus isolated tempfile probes",
+  "status": "PASS",
+  "positive_probes": 1,
+  "negative_probes": 8,
+  "negative_cases": [
+    "manifest mutation",
+    "TXT contract mutation",
+    "immutable plan mutation",
+    "NPZ fixture mutation",
+    "artifact file set addition",
+    "zero discovered tests",
+    "skipped test",
+    "expectedFailure"
+  ],
+  "limits": "Only runner guard behavior; no global numerical or clean-copy run by reviewer",
+  "frozen_models_changed": false
+}

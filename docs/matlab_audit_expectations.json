@@ -1,0 +1,82 @@
+{
+  "QAM64_2008_11_21": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "bpsk_costas_2008_08_25": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "dqpsk_19_09_2006": {
+    "compile_status": "FAIL",
+    "error_identifier": "MATLAB:MException:MultipleErrors"
+  },
+  "dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12": {
+    "compile_status": "FAIL",
+    "error_identifier": "MATLAB:MException:MultipleErrors"
+  },
+  "gmsk_coherent_demodulation_2010_10_03": {
+    "compile_status": "PASS",
+    "error_identifier": ""
+  },
+  "msk_modulator_2008_06_22": {
+    "compile_status": "PASS",
+    "error_identifier": ""
+  },
+  "pi4_qpsk_8_sps_ff_sync_2021_05_27": {
+    "compile_status": "PASS",
+    "error_identifier": ""
+  },
+  "pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15": {
+    "compile_status": "PASS",
+    "error_identifier": ""
+  },
+  "psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19": {
+    "compile_status": "FAIL",
+    "error_identifier": "MATLAB:MException:MultipleErrors"
+  },
+  "qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "qpsk_demod_with_phase_noise": {
+    "compile_status": "PASS",
+    "error_identifier": ""
+  },
+  "qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06": {
+    "compile_status": "FAIL",
+    "error_identifier": "MATLAB:MException:MultipleErrors"
+  },
+  "qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20": {
+    "compile_status": "FAIL",
+    "error_identifier": "MATLAB:MException:MultipleErrors"
+  },
+  "qpsk_phase_noise_phase_sync_2009_04_12": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Libraries:FailedToLoadLibraryForBlock"
+  },
+  "simo_maximal_ratio_combining_2010_08_27": {
+    "compile_status": "FAIL",
+    "error_identifier": "Simulink:Engine:DefaultDimsMightHaveCausedError"
+  }
+}

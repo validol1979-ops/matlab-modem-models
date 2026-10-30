@@ -1,0 +1,146 @@
+[
+  {
+    "name": "QAM64_2008_11_21",
+    "family": "qam",
+    "order": 64,
+    "config": "modems/QAM64_2008_11_21/config.json"
+  },
+  {
+    "name": "bpsk_costas_2008_08_25",
+    "family": "psk",
+    "order": 2,
+    "config": "modems/bpsk_costas_2008_08_25/config.json"
+  },
+  {
+    "name": "dqpsk_19_09_2006",
+    "family": "psk",
+    "order": 8,
+    "config": "modems/dqpsk_19_09_2006/config.json"
+  },
+  {
+    "name": "dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/dqpsk_ff_symbol_farrow_sync_fast_agc_2008_05_12/config.json"
+  },
+  {
+    "name": "gmsk_coherent_demodulation_2010_10_03",
+    "family": "gmsk",
+    "order": 2,
+    "config": "modems/gmsk_coherent_demodulation_2010_10_03/config.json"
+  },
+  {
+    "name": "msk_modulator_2008_06_22",
+    "family": "msk",
+    "order": 2,
+    "config": "modems/msk_modulator_2008_06_22/config.json"
+  },
+  {
+    "name": "oqpsk_2_sps_timing_recovery_2019_12_05",
+    "family": "oqpsk",
+    "order": 4,
+    "config": "modems/oqpsk_2_sps_timing_recovery_2019_12_05/config.json"
+  },
+  {
+    "name": "pi4_qpsk_8_sps_ff_sync_2021_05_27",
+    "family": "pi4",
+    "order": 4,
+    "config": "modems/pi4_qpsk_8_sps_ff_sync_2021_05_27/config.json"
+  },
+  {
+    "name": "pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15",
+    "family": "pi4",
+    "order": 4,
+    "config": "modems/pi4_qpsk_feedforward_4_power_phase_sync_2010_07_15/config.json"
+  },
+  {
+    "name": "psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15",
+    "family": "psk",
+    "order": 8,
+    "config": "modems/psk8_fast_ff_nda_symbol_sync_fast_ff_nda_phase_sync_2006_11_15/config.json"
+  },
+  {
+    "name": "psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19",
+    "family": "psk",
+    "order": 8,
+    "config": "modems/psk8_fb_symbol_sync_fb_phase_sync_agc_2009_08_19/config.json"
+  },
+  {
+    "name": "qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18",
+    "family": "qam",
+    "order": 16,
+    "config": "modems/qam_fb_gardner_symbol_farrow_sync_fb_phase_sync_agc_2007_06_18/config.json"
+  },
+  {
+    "name": "qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26",
+    "family": "qam",
+    "order": 16,
+    "config": "modems/qam_fb_symbol_sync_fb_phase_sync_agc_dfe_2007_07_26/config.json"
+  },
+  {
+    "name": "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10",
+    "family": "qam",
+    "order": 16,
+    "config": "modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_2007_07_10/config.json"
+  },
+  {
+    "name": "qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21",
+    "family": "qam",
+    "order": 16,
+    "config": "modems/qam_fb_symbol_sync_fb_phase_sync_agc_var_ch_delay_eq_2007_07_21/config.json"
+  },
+  {
+    "name": "qpsk_8_sps_fb_sync_2020_11_25",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_8_sps_fb_sync_2020_11_25/config.json"
+  },
+  {
+    "name": "qpsk_demod_with_phase_noise",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_demod_with_phase_noise/config.json"
+  },
+  {
+    "name": "qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_fast_symbol_sync_fast_phase_sync_fast_agc_2007_03_06/config.json"
+  },
+  {
+    "name": "qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_fb_symbol_sync_fb_phase_sync_agc_2008_05_15/config.json"
+  },
+  {
+    "name": "qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_ff_symbol_farrow_sync_ff_phase_sync_fast_agc_2007_05_20/config.json"
+  },
+  {
+    "name": "qpsk_phase_noise_phase_sync_2009_04_12",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_phase_noise_phase_sync_2009_04_12/config.json"
+  },
+  {
+    "name": "qpsk_script_basic",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_script_basic/config.json"
+  },
+  {
+    "name": "qpsk_script_costas",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/qpsk_script_costas/config.json"
+  },
+  {
+    "name": "simo_maximal_ratio_combining_2010_08_27",
+    "family": "psk",
+    "order": 4,
+    "config": "modems/simo_maximal_ratio_combining_2010_08_27/config.json"
+  }
+]

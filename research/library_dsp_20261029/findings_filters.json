@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "task": "Local-library DSP/filter/multirate expansion research; no implementation edits",
+  "library_root": "local-library/BYBLIOTEKA",
+  "raw_cli_directory": "build/library_dsp_rag_20261029/filters",
+  "rag_scope_note": "Only already imported documents searched. status reports partial library coverage; Harris PDF and verilog .v are direct-original readings, not indexed RAG evidence.",
+  "source_issues": [
+    {
+      "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/FPGA_Simple_SDR/FPGA_RADIO/cic1_fir_comp_coeff.m",
+      "lines": [
+        2,
+        20
+      ],
+      "note": "Altera-only generated-IP legal header: use as provenance/context, do not copy this implementation into dual-vendor project; derive portable compensator from independent CIC mathematics and cited book."
+    },
+    {
+      "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+      "note": "Direct text extraction only. Equations/tables require normal derivation/validation before implementation; printed page numbers are not used as file pages."
+    }
+  ],
+  "findings": [
+    {
+      "id": "DSP-CIC-DEC",
+      "title": "Параметризованный CIC-дециматор",
+      "priority": "high",
+      "deliverables": [
+        "rtl/common/cic_decimator.sv",
+        "common/python/cic_fixed.py",
+        "directed numerical/protocol runner"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/cic_decimator.v",
+          "document_id": null,
+          "original_lines": [
+            29,
+            75
+          ],
+          "excerpt": "Cascaded integrator-comb (CIC) Decimator",
+          "source_sha256": "96ca19baa5b914e1574a700e14719e3ae47cc34f2ff23bd62caca3fc6fdbbc86",
+          "note": "README was found through RAG catalog as id217fe4539512bba814b46a3fa6a45f5a27a3de3f6443e69b1c39c6ade6b89994, statusneeds_ocr/chunks0; this .v text was read directly and is not claimed indexed. MIT source, adapt and preserve attribution if reused.",
+          "source_size": 4819,
+          "source_mtime_ns": 1529524725000000000
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/tb/test_cic_decimator.py",
+          "document_id": null,
+          "original_lines": [
+            449,
+            478
+          ],
+          "excerpt": "def cic_decimate(y, N=2, M=1, R=2):",
+          "source_sha256": "4cefe602196df74ff4c3c4455ec7f763ae2f58fd52285cc514001ff73f4b169c",
+          "source_size": 11964,
+          "source_mtime_ns": 1529524725000000000
+        }
+      ],
+      "existing_neighbours_and_novelty": "В production rtl/common нет CIC; arxiv/cic_fir.m и CicFilter_show.m только исходные исследования. fir_runtime/PFB не заменяют безмножительный integrator-comb с иной частотой состояния.",
+      "proposed_project_spec": "Создать переносимый комплексный signed18 CIC N=1/2/3/5, M=1/2, runtime R=1..32. Задать ширину регистров по точному усилению (RM)^N; внутреннее wrap и выходное округление описать отдельно. R менять только между транзакциями; контракт TLAST для полной/неполной decimation-группы сделать явным, не менять готовые модемы.",
+      "acceptance_tests": [
+        "Независимый эталон: N каскадов boxcar FIR и downsample, а не копия integrator recurrence.",
+        "Impulse/DC/alternating/full signed rails/random для всех R,N,M; точный count и фазировка decimation.",
+        "Обе полярности reset, backpressure, reset в группе, отказ R=0/R>RMAX, отрицательные numeric/protocol controls."
+      ],
+      "dependencies": [],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-CIC-INT",
+      "title": "Параметризованный CIC-интерполятор",
+      "priority": "medium",
+      "deliverables": [
+        "rtl/common/cic_interpolator.sv",
+        "interpolation mode in common/python/cic_fixed.py"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/cic_interpolator.v",
+          "document_id": null,
+          "original_lines": [
+            29,
+            88
+          ],
+          "excerpt": "Cascaded integrator-comb (CIC) Interpolator",
+          "source_sha256": "27e0df96fee0676437fabb21a7a0c9226c9f0036bcf98d0d6ef3a372c84d6842",
+          "note": "README was found through RAG catalog as id217fe4539512bba814b46a3fa6a45f5a27a3de3f6443e69b1c39c6ade6b89994, statusneeds_ocr/chunks0; this .v text was read directly and is not claimed indexed. MIT source, adapt and preserve attribution if reused.",
+          "source_size": 4738,
+          "source_mtime_ns": 1529524725000000000
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/tb/test_cic_interpolator.py",
+          "document_id": null,
+          "original_lines": [
+            372,
+            399
+          ],
+          "excerpt": "def cic_interpolate(y, N=2, M=1, R=2):",
+          "source_sha256": "076f0b26b57e94539ed3772132a29150c419cf2e91a31f99f3d1180d56c74e65",
+          "source_size": 10467,
+          "source_mtime_ns": 1529524725000000000
+        }
+      ],
+      "existing_neighbours_and_novelty": "Нового production CIC-интерполятора нет. TX RRC/FIR формируют модемную волну, но не являются общим rate-change CIC с runtime R.",
+      "proposed_project_spec": "Реализовать comb на входной частоте и integrator на выходной, N/M/R как у дециматора. На каждый принятый вход выдавать ровно R выходов, TLAST только на последнем выходе последнего входа; остановленный выход удерживает весь фазовый цикл. Выходной gain (RM)^N/R и минимальные ширины доказать отдельно от decimator.",
+      "acceptance_tests": [
+        "Независимое zero-insert + boxcar convolution, без общего алгоритма с DUT.",
+        "R=1 и предельный R, N1/2/3/5 M1/2, impulse/DC/rails; проверить R×input_count.",
+        "Пауза на каждом из R phases, reset в середине expansion и новый кадр без reset."
+      ],
+      "dependencies": [
+        "DSP-CIC-DEC"
+      ],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-DDS",
+      "title": "Общий NCO/DDS с непрерывной фазой и runtime phase-step",
+      "priority": "medium",
+      "deliverables": [
+        "rtl/common/phase_accumulator.sv",
+        "rtl/common/dds_iq.sv",
+        "common/python/dds_fixed.py"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/phase_accumulator.v",
+          "document_id": null,
+          "original_lines": [
+            30,
+            86
+          ],
+          "excerpt": "Phase accumulator",
+          "source_sha256": "c6541d318b549dfa8be86754e4c1ad93e702205b660e38ca7d0f0d72686fa375",
+          "note": "README was found through RAG catalog as id217fe4539512bba814b46a3fa6a45f5a27a3de3f6443e69b1c39c6ade6b89994, statusneeds_ocr/chunks0; this .v text was read directly and is not claimed indexed. MIT source, adapt and preserve attribution if reused.",
+          "source_size": 2683,
+          "source_mtime_ns": 1529524725000000000
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/sine_dds.v",
+          "document_id": null,
+          "original_lines": [
+            32,
+            105
+          ],
+          "excerpt": "parameter PHASE_WIDTH = 32,",
+          "source_sha256": "ab9f74a259d88b2f82d14557bff35742ec5fe6e7f686967001fa8ad88e49af42",
+          "note": "README was found through RAG catalog as id217fe4539512bba814b46a3fa6a45f5a27a3de3f6443e69b1c39c6ade6b89994, statusneeds_ocr/chunks0; this .v text was read directly and is not claimed indexed. MIT source, adapt and preserve attribution if reused.",
+          "source_size": 3277,
+          "source_mtime_ns": 1529524725000000000
+        }
+      ],
+      "existing_neighbours_and_novelty": "В fsk_tx уже есть внутренний NCO с reset фазы на символ и cos ROM; bpsk_rotate принимает готовую фазу. Новая работа — выделенный общий continuous-phase DDS с явной конфигурацией и timing contract; арифметику/ROM переиспользовать.",
+      "proposed_project_spec": "32-bit phase/step, signed18 I/Q от общей ROM, атомарные phase-load/step-update и documented приоритет при одновременном sample/config. Фазу продвигать на принятый/порождаемый отсчёт по одному согласованному handshake contract; при backpressure не пропускать и не повторять фазы. Старые fsk_tx и Costas контракты сохранить.",
+      "acceptance_tests": [
+        "Побитный accumulator/table oracle, независимый float sinusoid для квантования и SFDR report.",
+        "step=0, wrap через 2^32, отрицательная частота как unsigned step, четверть оборота I/Q.",
+        "Изменение step/phase на границе stalled output, held-valid и обе reset polarities."
+      ],
+      "dependencies": [],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-CIC-COMP",
+      "title": "Синтез коэффициентов CIC-droop compensation и проверяемый каскад CIC+FIR",
+      "priority": "high",
+      "deliverables": [
+        "tools/cic_compensation.py",
+        "CIC/FIR combined fixed reference and response report"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 490,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            1849,
+            2781
+          ],
+          "excerpt": "12.8 Compensation of CIC Main-Lobe Droop",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_490_1849.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 491,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            1304,
+            2397
+          ],
+          "excerpt": "properly offset and scaled cosine.",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_491_1304.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        },
+        {
+          "provenance": "indexed",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/FPGA_Simple_SDR/FPGA_RADIO/cic1_fir_comp_coeff_a.txt",
+          "document_id": "5a73c17160818a983350b66eeded380969203e0d269e65a816cde73efdce020a",
+          "part": 1,
+          "char_range": [
+            0,
+            165
+          ],
+          "excerpt": "32767",
+          "verified_against_stored_text": true,
+          "note": "Historical 31-tap coefficient fixture only; does not by itself specify a generic compensator.",
+          "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_sdrcomp.json",
+          "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_sdrcomp_coeff.json",
+          "source_sha256": "5a73c17160818a983350b66eeded380969203e0d269e65a816cde73efdce020a",
+          "source_size": 165,
+          "source_mtime_ns": 1385140758000000000
+        }
+      ],
+      "existing_neighbours_and_novelty": "fir_runtime уже готов; не создавать ещё один общий FIR. Новизна — генератор reciprocal-mainlobe response, гарантии ширин/normalization и спектральная проверка CIC+FIR. arxiv/cic_fir.m сохраняет исходный offline prototype.",
+      "proposed_project_spec": "Независимо вывести точный CIC frequency response, синтезировать компенсационные FIR coefficients под заданные N/M/R, passband и ripple; явно нормировать DC gain и учитывать coefficient quantization. Начальный matrix R=4/10/32, N=3/5 M=1, FIR31/63 taps. Экспорт в существующий fir_runtime, не переносить vendor IP.",
+      "acceptance_tests": [
+        "Проверить аналитический DC limit и нули CIC без деления0/0.",
+        "Сравнить compensated/uncompensated passband ripple, stopband alias leakage и quantized vs floating response.",
+        "Сквозная RTL CIC+existing FIR numerical проверка, full rails и reset/backpressure."
+      ],
+      "dependencies": [
+        "DSP-CIC-DEC"
+      ],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-RATIONAL",
+      "title": "Общий полифазный преобразователь частоты P/Q",
+      "priority": "high",
+      "deliverables": [
+        "rtl/common/rational_resampler.sv",
+        "common/python/resampler_fixed.py"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 242,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            52,
+            1652
+          ],
+          "excerpt": "7.4 Rational Ratio Resampling",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_242_52.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 243,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            2384,
+            2513
+          ],
+          "excerpt": "The indexing process is shown in Table 7.2",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_243_2384.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        }
+      ],
+      "existing_neighbours_and_novelty": "pfb_analysis — analysis filter bank с bins, а bpsk_samples — адресуемая cubic выборка для синхронизации. Generic один-вход/один-выход time-series rational converter с phase accumulator отсутствует.",
+      "proposed_project_spec": "P/Q coprime runtime config между кадрами; polyphase FIR coefficients в ROM/RAM, phase accumulator Q modP с input advance на overflow. Первые режимы 5/3,3/5,12/5,1/2,2/1. Зафиксировать startup group delay, end-tail policy и точное число выходов; не вычислять выбрасываемые intermediate samples.",
+      "acceptance_tests": [
+        "Эталон upsample-by-P → FIR convolution → downsample-by-Q с полной, отдельно заданной фазировкой.",
+        "Сверить последовательность commutator5/3 (0,3,1,4,2), counts для коротких/неполных кадров, impulse/DC/tones.",
+        "Многократный frame restart, pauses на phase wrap, coefficient config rejection и обе reset polarities."
+      ],
+      "dependencies": [],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-FARROW",
+      "title": "Farrow-конвертер с произвольной дробной задержкой и меняющимся rate",
+      "priority": "medium",
+      "deliverables": [
+        "rtl/common/farrow_resampler.sv",
+        "Farrow variant in common/python/resampler_fixed.py"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 259,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            385,
+            1985
+          ],
+          "excerpt": "7.6 Farrow Filter",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_259_385.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 268,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            64,
+            1664
+          ],
+          "excerpt": "7.6 Farrow Filter",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_268_64.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 270,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            117,
+            1717
+          ],
+          "excerpt": "Table 7.3 Polynomial filter for output at ∆.",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_270_117.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        }
+      ],
+      "existing_neighbours_and_novelty": "bpsk_samples уже делает 4-point cubic interpolation по ROM для модемного адреса. Новое ТЗ — общий streaming arbitrary-rate scheduler и polynomial-bank Farrow степени3/4, не переименование существующего cubic kernel.",
+      "proposed_project_spec": "Реализовать polynomial filter-bank + Horner evaluator и явный input-time accumulator (integer+fraction) для каждого output. Начать с degree3/4, настраиваемые коэффициенты и frac≥16bits; атомарное изменение phase-step между заданными boundaries. Коэффициенты заново вычислять из интерполяционной задачи; округлённые книжные таблицы не считать bit-exact golden.",
+      "acceptance_tests": [
+        "Независимая evaluation полиномов/float fractional interpolation, constant/ramp/полиномы до степени P.",
+        "Δ=0,Δ→1, перенос integer index, меняющийся input/output ratio и pause на переносе.",
+        "Тональная amplitude/phase error и alias response vs coefficient quantization; обе reset polarities."
+      ],
+      "dependencies": [
+        "DSP-RATIONAL"
+      ],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-HILBERT",
+      "title": "Потоковый Hilbert/analytic-signal real→I/Q",
+      "priority": "medium",
+      "deliverables": [
+        "rtl/common/hilbert_analytic.sv",
+        "common/python/hilbert_fixed.py"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 286,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            1459,
+            2320
+          ],
+          "excerpt": "8.5 Hilbert Transform Band-Pass Filter",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_286_1459.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        },
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 287,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            1599,
+            2190
+          ],
+          "excerpt": "8.5.1 Applying the Hilbert Transform Filter",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_287_1599.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        }
+      ],
+      "existing_neighbours_and_novelty": "FIR/PFB/complex arithmetic есть, но real→analytic Hilbert block с согласованной задержкой I и Q отсутствует; эта операция не равна complex FFT или готовому modem rotator.",
+      "proposed_project_spec": "Нечётный antisymmetric FIR для Hilbert Q и задержанная real I, общий ready/valid; сначала taps31/63 и unity-rate, затем optional decimate2 как отдельный режим. Согласовать factor2 convention аналитического сигнала, group delay и краевые DC/Nyquist.",
+      "acceptance_tests": [
+        "Impulse/sine/cosine, Q phase ±π/2 и точная задержка I.",
+        "Измерить подавление отрицательных частот и passband gain на комплексном spectrum; независимо сверить с ideal frequency-domain analytic reference.",
+        "Reset/backpressure/frame restart; mirrored coefficients и пределы signed18."
+      ],
+      "dependencies": [],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-SOS",
+      "title": "Общий IIR biquad и каскад SOS с конфигурируемыми коэффициентами",
+      "priority": "high",
+      "deliverables": [
+        "rtl/common/biquad_sos.sv",
+        "common/python/biquad_fixed.py",
+        "offline stable-coefficient validator"
+      ],
+      "sources": [
+        {
+          "provenance": "indexed",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+          "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "part": 23,
+          "position": "EPUB spine 23: OEBPS/xhtml/chapter14.xhtml",
+          "char_range": [
+            3353,
+            3386
+          ],
+          "excerpt": "14.3 Cascade (Series) Realization",
+          "verified_against_stored_text": true,
+          "text_origin": "raw; not visually verified against original",
+          "source_state": "metadata_unchanged",
+          "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_sos.json",
+          "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_cascade.json",
+          "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "source_size": 9221616,
+          "source_mtime_ns": 1646398878000000000
+        },
+        {
+          "provenance": "indexed",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+          "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "part": 23,
+          "position": "EPUB spine 23: OEBPS/xhtml/chapter14.xhtml",
+          "char_range": [
+            3005,
+            3066
+          ],
+          "excerpt": "The direct-form II realization of the second-order IIR filter",
+          "verified_against_stored_text": true,
+          "text_origin": "raw; not visually verified against original",
+          "source_state": "metadata_unchanged",
+          "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_sos.json",
+          "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_cascade.json",
+          "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "source_size": 9221616,
+          "source_mtime_ns": 1646398878000000000
+        }
+      ],
+      "existing_neighbours_and_novelty": "notch_iir — специализированный режектор, kalman_scalar — отдельная recurrence. Универсального cascaded SOS b0,b1,b2,a1,a2 с scale persection и общим fixed contract нет.",
+      "proposed_project_spec": "Начать с direct-formII (или явно equivalent transposed form), 1/2/4 SOS sections; signed18 input, задаваемая coefficient precision/state guard widths. Проверять устойчивость после квантования, задать perstage saturation и reset/state persistence; коэффициенты менять только при пустом тракте.",
+      "acceptance_tests": [
+        "Independent scipy.signal.sosfilt/difference equation, raw stage/state integer checks.",
+        "Butterworth low/highpass, resonator near unit circle, impulse/step/DC/rails; deliberate unstable-config rejection.",
+        "Limit-cycle/zero-input decay characterization, both resets and backpressure without lost recursive updates."
+      ],
+      "dependencies": [],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-PSD",
+      "title": "Нормированный periodogram/PSD поверх существующего FFT",
+      "priority": "medium",
+      "deliverables": [
+        "rtl/common/fft_power_spectrum.sv",
+        "common/python/psd_fixed.py",
+        "PSD scaling/Parseval report"
+      ],
+      "sources": [
+        {
+          "provenance": "indexed",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+          "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "part": 17,
+          "position": "EPUB spine 17: OEBPS/xhtml/chapter8.xhtml",
+          "char_range": [
+            8474,
+            8543
+          ],
+          "excerpt": "8.3 Power Spectral Density Using Square Magnitude and Autocorrelation",
+          "verified_against_stored_text": true,
+          "text_origin": "raw; not visually verified against original",
+          "source_state": "metadata_unchanged",
+          "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_psd.json",
+          "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_autocorrelation.json",
+          "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "source_size": 9221616,
+          "source_mtime_ns": 1646398878000000000
+        },
+        {
+          "provenance": "indexed",
+          "source_path": "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub",
+          "document_id": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "part": 17,
+          "position": "EPUB spine 17: OEBPS/xhtml/chapter8.xhtml",
+          "char_range": [
+            9364,
+            9383
+          ],
+          "excerpt": "px1=abs(fft(x).^2);",
+          "verified_against_stored_text": true,
+          "text_origin": "raw; not visually verified against original",
+          "source_state": "metadata_unchanged",
+          "raw_read_artifact": "build/library_dsp_rag_20261029/filters/read_abood_psd.json",
+          "raw_search_artifact": "build/library_dsp_rag_20261029/filters/search_abood_autocorrelation.json",
+          "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+          "source_size": 9221616,
+          "source_mtime_ns": 1646398878000000000
+        }
+      ],
+      "existing_neighbours_and_novelty": "fft_r2sdf и STFT уже готовы, но power bins/physical PSD normalization и averaging по frames не выделены в проверенный блок. Повторный FFT не нужен.",
+      "proposed_project_spec": "Взять production FFT/window frontend; вычислять Re²+Im² с точной полной шириной и задокументированным восстановлением FFT-stage scaling. Нормировка PSD по Fs·Σwindow², отдельный contract one-/two-sided spectrum (DC/Nyquist не удваивать), optional average K frames. Книжный demo не использовать как готовый нормированный PSD oracle: его plotting/normalization упрощены.",
+      "acceptance_tests": [
+        "Parseval sum-of-bins против входной мощности, coherent tone amplitude, impulse, white-noise statistics.",
+        "Independent NumPy FFT periodogram с теми же Fs/window/counts; integers checked before divide/round.",
+        "Frame averaging K=1/2/16, accumulator range, pause/TLAST/reset and bin identity."
+      ],
+      "dependencies": [],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    },
+    {
+      "id": "DSP-DDC",
+      "title": "Составной цифровой down-converter DDS→CIC→2 half-band",
+      "priority": "later integration",
+      "deliverables": [
+        "rtl/common/ddc.sv",
+        "common/python/ddc_fixed.py",
+        "end-to-end multirate rate/FIFO budget"
+      ],
+      "sources": [
+        {
+          "provenance": "direct-original",
+          "source_path": "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf",
+          "document_id": null,
+          "file_page": 533,
+          "extraction": "pdftotext -layout; existing text, no OCR; PDF printed pagination not used",
+          "extraction_char_range": [
+            680,
+            2280
+          ],
+          "excerpt": "Standard digital down converter with CIC and half-band filters.",
+          "raw_context_artifact": "build/library_dsp_rag_20261029/filters/harris_533_680.json",
+          "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+          "source_size": 27930222,
+          "source_mtime_ns": 1697707381836721600
+        }
+      ],
+      "existing_neighbours_and_novelty": "Внутренние modem mixers и PFB есть, но отдельного ADC-real→decimated-complex DDC front-end с согласованными multirate interfaces нет. Это integration task, использующий новые CIC/DDS и existing FIR.",
+      "proposed_project_spec": "После компонентной приёмки собрать portable real18→complex18 DDC: quadrature DDS mixer, CIC N5 R10, compensating decimate2 FIR и второй decimate2 FIR; baseline total40:1 (при100MHz моделируемый выход2.5Mcomplex/s). Физические100MHz не заявлять до синтеза; отдельно задать pass/stopband и допустимый mixer/normalization gain.",
+      "acceptance_tests": [
+        "Multi-tone input вокруг IF, показать перенос desired tone к baseband, image/alias suppression и gain.",
+        "Каждый intermediate поток сверить с независимой float и fixed chain; exact transfer counts40:1 и phase continuity.",
+        "Вычислить actual service/burst/FIFO budgets при backpressure; reset и переконфигурация только на documented drain boundary."
+      ],
+      "dependencies": [
+        "DSP-CIC-DEC",
+        "DSP-DDS",
+        "DSP-CIC-COMP",
+        "DSP-RATIONAL"
+      ],
+      "requirement_status": "Proposed engineering baseline inferred from the cited algorithm; no new implementation or acceptance claimed."
+    }
+  ],
+  "source_files": {
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/cic_decimator.v": {
+      "source_sha256": "96ca19baa5b914e1574a700e14719e3ae47cc34f2ff23bd62caca3fc6fdbbc86",
+      "source_size": 4819,
+      "source_mtime_ns": 1529524725000000000
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/tb/test_cic_decimator.py": {
+      "source_sha256": "4cefe602196df74ff4c3c4455ec7f763ae2f58fd52285cc514001ff73f4b169c",
+      "source_size": 11964,
+      "source_mtime_ns": 1529524725000000000
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/cic_interpolator.v": {
+      "source_sha256": "27e0df96fee0676437fabb21a7a0c9226c9f0036bcf98d0d6ef3a372c84d6842",
+      "source_size": 4738,
+      "source_mtime_ns": 1529524725000000000
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/tb/test_cic_interpolator.py": {
+      "source_sha256": "076f0b26b57e94539ed3772132a29150c419cf2e91a31f99f3d1180d56c74e65",
+      "source_size": 10467,
+      "source_mtime_ns": 1529524725000000000
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/phase_accumulator.v": {
+      "source_sha256": "c6541d318b549dfa8be86754e4c1ad93e702205b660e38ca7d0f0d72686fa375",
+      "source_size": 2683,
+      "source_mtime_ns": 1529524725000000000
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/verilog-dsp-master/rtl/sine_dds.v": {
+      "source_sha256": "ab9f74a259d88b2f82d14557bff35742ec5fe6e7f686967001fa8ad88e49af42",
+      "source_size": 3277,
+      "source_mtime_ns": 1529524725000000000
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/DSP/Harris_Multirate_Signal_Processing_for_Com_Sys_2021.pdf": {
+      "source_sha256": "0b7bc01e2d2e185131b9b655675c0908d479d4f23c24b38b79d025ef748ae845",
+      "source_size": 27930222,
+      "source_mtime_ns": 1697707381836721600
+    },
+    "local-library/BYBLIOTEKA/Book/02 Электроника, связь и автоматизация/Электроника/FPGA/FPGA_Simple_SDR/FPGA_RADIO/cic1_fir_comp_coeff_a.txt": {
+      "source_sha256": "5a73c17160818a983350b66eeded380969203e0d269e65a816cde73efdce020a",
+      "source_size": 165,
+      "source_mtime_ns": 1385140758000000000
+    },
+    "local-library/BYBLIOTEKA/Book/03 Математика, данные и искусственный интеллект/Математика/Samir I. Abood - Digital Signal Processing_ A Primer with MATLAB®-CRC Press (2020).epub": {
+      "source_sha256": "c36215f31a4a32d1e6789382180deef48adfa2295e9967ca12e1b82a824ca679",
+      "source_size": 9221616,
+      "source_mtime_ns": 1646398878000000000
+    }
+  }
+}

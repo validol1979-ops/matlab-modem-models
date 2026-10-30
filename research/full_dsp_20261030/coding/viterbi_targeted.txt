@@ -1,0 +1,14 @@
+test_exhaustive_ml (test_ext_code_trellis.TestTrellis.test_exhaustive_ml) ... ok
+test_impulse_golden (test_ext_code_trellis.TestTrellis.test_impulse_golden) ... ok
+test_noiseless_300 (test_ext_code_trellis.TestTrellis.test_noiseless_300) ... ok
+test_noisy_300_is_ml (test_ext_code_trellis.TestTrellis.test_noisy_300_is_ml) ... ok
+test_oracle_match (test_ext_code_trellis.TestTrellis.test_oracle_match) ... ok
+test_quant_clip_and_round (test_ext_code_trellis.TestTrellis.test_quant_clip_and_round) ... ok
+test_tails_and_trace (test_ext_code_trellis.TestTrellis.test_tails_and_trace) ... ok
+test_validation (test_ext_code_trellis.TestTrellis.test_validation) ... ok
+test_zero_llr_ties_to_zero (test_ext_code_trellis.TestTrellis.test_zero_llr_ties_to_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.057s
+
+OK

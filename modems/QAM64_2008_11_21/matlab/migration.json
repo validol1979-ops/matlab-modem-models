@@ -1,0 +1,13 @@
+{
+  "source": "modems/QAM64_2008_11_21/original/QAM64_2008_11_21.mdl",
+  "original_sha256": "95e9b2b8ea25b7df2b48f2befdc9c3fd8717a85beb14abe36194dad04957186b",
+  "prepared_sha256": "3182f1311a5096130574b5b4cca66479fc5f119fb833be9ef4783ba47f2433b9",
+  "changes": [
+    {
+      "old": "commchan2/",
+      "new": "commchan3/",
+      "count": 1
+    }
+  ],
+  "caveat": "Library migration is not proof of equivalence to the historical MATLAB release."
+}
